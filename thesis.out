@@ -3,30 +3,40 @@
 \BOOKMARK [0][]{Abstract.0}{Abstract}{}% 3
 \BOOKMARK [0][]{Acknowledgement.0}{Acknowledgement}{}% 4
 \BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 5
-\BOOKMARK [1][]{section*.8}{1.1 Introduction of General}{chapter.1}% 6
-\BOOKMARK [1][]{section*.9}{1.2 Current}{chapter.1}% 7
-\BOOKMARK [1][]{section*.10}{1.3 Proposed}{chapter.1}% 8
+\BOOKMARK [1][]{section*.8}{1.1 The Camera Imaging Pipeline}{chapter.1}% 6
+\BOOKMARK [1][]{section*.9}{1.2 The Image Noise}{chapter.1}% 7
+\BOOKMARK [1][]{section*.10}{1.3 The Proposed Methods}{chapter.1}% 8
 \BOOKMARK [1][]{section*.11}{1.4 Thesis Structure}{chapter.1}% 9
 \BOOKMARK [0][]{chapter.2}{2 Literature Review}{}% 10
-\BOOKMARK [1][]{section*.13}{2.1 System}{chapter.2}% 11
-\BOOKMARK [1][]{section*.14}{2.2 Feature Extraction}{chapter.2}% 12
-\BOOKMARK [0][]{chapter.3}{3 System}{}% 13
+\BOOKMARK [1][]{section*.13}{2.1 Synthetic Grayscale Image Denoising}{chapter.2}% 11
+\BOOKMARK [1][]{section*.14}{2.2 Realistic Color Image Denoising}{chapter.2}% 12
+\BOOKMARK [0][]{chapter.3}{3 External Non-local Self-Similarity Prior for Additive White Gaussian Noise}{}% 13
 \BOOKMARK [1][]{section*.16}{3.1 Introduction}{chapter.3}% 14
 \BOOKMARK [1][]{section*.19}{3.2 System Design}{chapter.3}% 15
 \BOOKMARK [1][]{section*.20}{3.3 Demo System}{chapter.3}% 16
 \BOOKMARK [1][]{section*.21}{3.4 Calibration}{chapter.3}% 17
 \BOOKMARK [1][]{section*.22}{3.5 Conclusion}{chapter.3}% 18
-\BOOKMARK [0][]{chapter.4}{4 Feature Extraction}{}% 19
-\BOOKMARK [1][]{section*.24}{4.1 Introduction}{chapter.4}% 20
-\BOOKMARK [1][]{section*.25}{4.2 Related Work}{chapter.4}% 21
-\BOOKMARK [1][]{section*.26}{4.3 Method}{chapter.4}% 22
-\BOOKMARK [1][]{section*.27}{4.4 Experimental Results}{chapter.4}% 23
-\BOOKMARK [1][]{section*.28}{4.5 Summary}{chapter.4}% 24
-\BOOKMARK [0][]{chapter.5}{5 Real-time}{}% 25
-\BOOKMARK [1][]{section*.30}{5.1 Introduction}{chapter.5}% 26
-\BOOKMARK [1][]{section*.31}{5.2 Related Work}{chapter.5}% 27
-\BOOKMARK [1][]{section*.32}{5.3 Summary}{chapter.5}% 28
-\BOOKMARK [0][]{chapter.6}{6 Conclusions}{}% 29
-\BOOKMARK [1][]{section*.34}{6.1 Section 1}{chapter.6}% 30
-\BOOKMARK [1][]{section*.35}{6.2 Section 2}{chapter.6}% 31
-\BOOKMARK [1][]{section*.36}{6.3 Future Work}{chapter.6}% 32
+\BOOKMARK [0][]{chapter.4}{4 External Prior Guided Internal Prior Learning for Real Noisy Image Denoising}{}% 19
+\BOOKMARK [1][]{section*.24}{4.1 Learning External Nonlocal Self-Similarity Priors}{chapter.4}% 20
+\BOOKMARK [1][]{section*.27}{4.2 System Design}{chapter.4}% 21
+\BOOKMARK [1][]{section*.28}{4.3 Demo System}{chapter.4}% 22
+\BOOKMARK [1][]{section*.29}{4.4 Calibration}{chapter.4}% 23
+\BOOKMARK [1][]{section*.30}{4.5 Conclusion}{chapter.4}% 24
+\BOOKMARK [0][]{chapter.5}{5 Internal Nonlocal Self-Similarity Prior for Real Color Image Denoising: A Low Rank based Method}{}% 25
+\BOOKMARK [1][]{section*.32}{5.1 Introduction}{chapter.5}% 26
+\BOOKMARK [1][]{section*.33}{5.2 Related Work}{chapter.5}% 27
+\BOOKMARK [1][]{section*.34}{5.3 Method}{chapter.5}% 28
+\BOOKMARK [1][]{section*.35}{5.4 Experimental Results}{chapter.5}% 29
+\BOOKMARK [1][]{section*.36}{5.5 Summary}{chapter.5}% 30
+\BOOKMARK [0][]{chapter.6}{6 Internal Nonlocal Self-Similarity Prior for Real Color Image Denoising: A Sparse Coding based ethod}{}% 31
+\BOOKMARK [1][]{section*.38}{6.1 Introduction}{chapter.6}% 32
+\BOOKMARK [1][]{section*.39}{6.2 Related Work}{chapter.6}% 33
+\BOOKMARK [1][]{section*.40}{6.3 Summary}{chapter.6}% 34
+\BOOKMARK [0][]{chapter.7}{7 A Large Real Noisy Image Dataset, with A Comprehensive Evaluation of State-of-the-arts}{}% 35
+\BOOKMARK [1][]{section*.42}{7.1 Introduction}{chapter.7}% 36
+\BOOKMARK [1][]{section*.43}{7.2 Related Work}{chapter.7}% 37
+\BOOKMARK [1][]{section*.44}{7.3 Summary}{chapter.7}% 38
+\BOOKMARK [0][]{chapter.8}{8 Conclusions}{}% 39
+\BOOKMARK [1][]{section*.46}{8.1 Section 1}{chapter.8}% 40
+\BOOKMARK [1][]{section*.47}{8.2 Section 2}{chapter.8}% 41
+\BOOKMARK [1][]{section*.48}{8.3 Future Work}{chapter.8}% 42
