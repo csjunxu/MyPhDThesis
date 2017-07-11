@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 JUL 2017 19:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 JUL 2017 19:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1486,17 +1486,23 @@ LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <75> not available
 (Font)              Font shape `T1/pbk/l/it' tried instead on input line 7.
 
 
-LaTeX Warning: Reference `sec:2review' on page 1 undefined on input line 33.
+LaTeX Warning: Citation 'browneccv2016' on page 1 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'crosschannel' on page 1 undefined on input line 15.
+
+[1
+
+
+]
+
+LaTeX Warning: Reference `sec:2review' on page 2 undefined on input line 33.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[1
-
-
-]
 
 LaTeX Warning: Reference `sec:3external' on page 2 undefined on input line 39.
 
@@ -1633,13 +1639,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
  ) 
 Here is how much of TeX's memory you used:
- 19108 strings out of 493091
- 309214 string characters out of 6134517
+ 19213 strings out of 493091
+ 311118 string characters out of 6134517
  772193 words of memory out of 5000000
- 22045 multiletter control sequences out of 15000+600000
+ 22150 multiletter control sequences out of 15000+600000
  97036 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,13n,106p,966b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,13n,106p,1171b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{c:/So
 ftware/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software/texlive
 /2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Software/texlive/2015/texmf-d
@@ -1652,7 +1658,7 @@ e1/public/tex-gyre/qhvb.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/pu
 blic/tex-gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/boo
 kman/ubkli8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/
 uhvr8a.pfb>
-Output written on thesis.pdf (36 pages, 179574 bytes).
+Output written on thesis.pdf (36 pages, 180438 bytes).
 PDF statistics:
  505 PDF objects out of 1000 (max. 8388607)
  451 compressed objects within 5 object streams
