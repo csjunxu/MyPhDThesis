@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 JUL 2017 10:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 JUL 2017 10:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1484,18 +1484,42 @@ LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <75> not available
 (Font)              Font shape `T1/pbk/l/n' tried instead on input line 7.
 LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <75> not available
 (Font)              Font shape `T1/pbk/l/it' tried instead on input line 7.
- [1
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
 
 
-] [2])
-(./content/chapter-2literaturereview.tex [3] [4
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
 
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+[1
+
+
+]) (./content/chapter-2literaturereview.tex [2]
 chapter 2.
-) (./content/chapter-3external.tex [5] [6]
+) (./content/chapter-3external.tex [3
+
+
+] [4]
 chapter 3.
-<gfx/Clean-Thesis-Figure.pdf, id=345, 1297.44722pt x 256.89075pt>
+<gfx/Clean-Thesis-Figure.pdf, id=336, 1297.44722pt x 256.89075pt>
 File: gfx/Clean-Thesis-Figure.pdf Graphic file (type pdf)
 
 <use gfx/Clean-Thesis-Figure.pdf>
@@ -1503,7 +1527,7 @@ Package pdftex.def Info: gfx/Clean-Thesis-Figure.pdf used on input line 14.
 (pdftex.def)             Requested size: 395.45181pt x 78.29863pt.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 15.
- [7
+ [5
 
 
  <./gfx/Clean-Thesis-Figure.pdf>]
@@ -1515,8 +1539,8 @@ Package pdftex.def Info: gfx/Clean-Thesis-Figure.pdf used on input line 24.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8])
-(./content/chapter-4guided.tex [9] [10
+ [6])
+(./content/chapter-4guided.tex [7] [8
 
 
 ]
@@ -1525,7 +1549,7 @@ File: gfx/Clean-Thesis-Figure.pdf Graphic file (type pdf)
 <use gfx/Clean-Thesis-Figure.pdf>
 Package pdftex.def Info: gfx/Clean-Thesis-Figure.pdf used on input line 14.
 (pdftex.def)             Requested size: 395.45181pt x 78.29863pt.
- [11]
+ [9]
 File: gfx/Clean-Thesis-Figure.pdf Graphic file (type pdf)
  <use gfx/Clean-Thesis-Figure.pdf>
 Package pdftex.def Info: gfx/Clean-Thesis-Figure.pdf used on input line 24.
@@ -1533,8 +1557,8 @@ Package pdftex.def Info: gfx/Clean-Thesis-Figure.pdf used on input line 24.
 
 Underfull \vbox (badness 5847) has occurred while \output is active []
 
- [12])
-(./content/chapter-5internallr.tex [13] [14
+ [10])
+(./content/chapter-5internallr.tex [11] [12
 
 
 ]
@@ -1542,8 +1566,8 @@ chapter 5.
 
 Underfull \vbox (badness 1400) has occurred while \output is active []
 
- [15]
-[16]) (./content/chapter-6internalsc.tex [17] [18
+ [13]
+[14]) (./content/chapter-6internalsc.tex [15] [16
 
 
 ]
@@ -1551,22 +1575,22 @@ chapter 6.
 
 Underfull \vbox (badness 1400) has occurred while \output is active []
 
- [19])
-(./content/chapter-7dataset.tex [20]
+ [17])
+(./content/chapter-7dataset.tex [18]
 chapter 7.
-[21
+[19
 
 
-]) (./content/chapter-8conclusions.tex [22]
+]) (./content/chapter-8conclusions.tex [20]
 chapter 8.
 
 Underfull \vbox (badness 2809) has occurred while \output is active []
 
- [23
+ [21
 
 
 ])
-[24]
+[22]
 
 LaTeX Warning: Empty bibliography on input line 150.
 
@@ -1601,8 +1625,8 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
  ) 
 Here is how much of TeX's memory you used:
- 19096 strings out of 493091
- 309098 string characters out of 6134517
+ 19094 strings out of 493091
+ 309084 string characters out of 6134517
  772193 words of memory out of 5000000
  22043 multiletter control sequences out of 15000+600000
  95996 words of font info for 112 fonts, out of 8000000 for 9000
@@ -1620,10 +1644,10 @@ e1/public/tex-gyre/qhvb.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/pu
 blic/tex-gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/boo
 kman/ubkli8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/
 uhvr8a.pfb>
-Output written on thesis.pdf (38 pages, 179202 bytes).
+Output written on thesis.pdf (36 pages, 176768 bytes).
 PDF statistics:
- 518 PDF objects out of 1000 (max. 8388607)
- 462 compressed objects within 5 object streams
- 129 named destinations out of 1000 (max. 500000)
+ 507 PDF objects out of 1000 (max. 8388607)
+ 453 compressed objects within 5 object streams
+ 127 named destinations out of 1000 (max. 500000)
  35670 words of extra memory for PDF output out of 35830 (max. 10000000)
 
