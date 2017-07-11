@@ -20,14 +20,10 @@ The cameras capture the images and store as raw image formats. During the camera
 
 In image denoising community, the most commonly studied noise is the additive white Gaussian noise, which is used to model the independent noise in the raw images. The AWGN noise is described as a Gaussian distribution $\mathcal{N}(0,\sigma^{2})$, which means that the noise is Gaussian distributed with $0$ mean and $\sigma$ standard deviation. Most of methods are focus on this type of noise since it is a good testing bed for many other image restoration problems such as super-resolution, deblurring, inpainting, etc.
 
+However, the realistic noise in real-world natural images captured by cameras are much more complex than the synthetic AWGN noise being widely studied. The major reason is that, during the imaging pipeline, the noise will be generated. The key reason of noise generation is unstable measurement from the discrete nature of light and the thermal agitation. The major sources of noise generated during the imaging pipeline are the random noise , the spatial non-uniformity, and quantization noise. The random noise includes photon shot noise, dark current, and readout noise. The spatial non-uniformity noise includes the fixed pattern noise (PRNU, DCNU), CCD/CMOS specific noise. 
 
 
-During the imaging pipeline, the noise will be generated. The key reason of noise generation is unstable measurement from the discrete nature of light and the thermal agitation. 
-
-The major sources of noise generated during the imaging pipeline are the random noise , the spatial non-uniformity, and quantization noise. The random noise includes photon shot noise, dark current, and readout noise. The spatial non-uniformity noise includes the fixed pattern noise (PRNU, DCNU), CCD/CMOS specific noise. 
-
-
-A simplified model including various noise sources (for each pixel):
+A simplified model including various noise sources (for each pixel) can be approximately defined as follows:
 \begin{equation}
 \bm{P} = f((g_{cv}(\bm{C}+\bm{D})+\bm{N}_{reset})g_{out}+\bm{N}_{out})+\bm{Q}.
 \end{equation}
