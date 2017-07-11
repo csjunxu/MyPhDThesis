@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 JUL 2017 22:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 JUL 2017 23:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1169,9 +1169,6 @@ File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 )
 (./thesis.aux
 
-LaTeX Warning: Label `sec:system' multiply defined.
-
-
 LaTeX Warning: Label `sec:system:intro' multiply defined.
 
 
@@ -1191,9 +1188,6 @@ LaTeX Warning: Label `sec:system:calibration' multiply defined.
 
 
 LaTeX Warning: Label `sec:system:conclusion' multiply defined.
-
-
-LaTeX Warning: Label `sec:real' multiply defined.
 
 
 LaTeX Warning: Label `sec:real:intro' multiply defined.
@@ -1514,16 +1508,9 @@ LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 41.
 Underfull \vbox (badness 1112) has occurred while \output is active []
 
  [2]
-
-LaTeX Warning: Reference `sec:2review' on page 3 undefined on input line 54.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
-
-
-LaTeX Warning: Reference `sec:3external' on page 3 undefined on input line 60.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
@@ -1548,6 +1535,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
 ) (./content/chapter-2literaturereview.tex [4]
 chapter 2.
 ) (./content/chapter-3external.tex [5
@@ -1555,7 +1547,7 @@ chapter 2.
 
 ] [6]
 chapter 3.
-<gfx/Clean-Thesis-Figure.pdf, id=349, 1297.44722pt x 256.89075pt>
+<gfx/Clean-Thesis-Figure.pdf, id=354, 1297.44722pt x 256.89075pt>
 File: gfx/Clean-Thesis-Figure.pdf Graphic file (type pdf)
 
 <use gfx/Clean-Thesis-Figure.pdf>
@@ -1662,7 +1654,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
  19350 strings out of 493091
- 312631 string characters out of 6134517
+ 312639 string characters out of 6134517
  773230 words of memory out of 5000000
  22241 multiletter control sequences out of 15000+600000
  110698 words of font info for 151 fonts, out of 8000000 for 9000
@@ -1688,10 +1680,10 @@ e1/public/lm/lmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public
 gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkl
 i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
 b>
-Output written on thesis.pdf (38 pages, 239864 bytes).
+Output written on thesis.pdf (38 pages, 239898 bytes).
 PDF statistics:
- 544 PDF objects out of 1000 (max. 8388607)
- 482 compressed objects within 5 object streams
+ 547 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
  130 named destinations out of 1000 (max. 500000)
  37206 words of extra memory for PDF output out of 42996 (max. 10000000)
 
