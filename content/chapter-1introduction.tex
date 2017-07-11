@@ -38,6 +38,9 @@ $\bm{N}_{out}$ is the readout noise,
 $f$ is the camera response function, usually a linear function before attaining a saturation threshold,
 $\bm{Q}$ is the quantization error happened during rounding to interger values. The quantization noise is normally negligible compared to the readout noise.
 
+Though can be approximated as Gaussian or Poisson distribution, these noise sources will be largely changed to be more complex during the in-camera imaging pipeline, which has been analyzed in \cite{crosschannel}. Hence, the real-world noise is much more complex than the traditional additive white Gaussian noise, and should be paid more attention.
+
+
 \section{The Proposed Methods}
 \label{sec:intro:new}
 
