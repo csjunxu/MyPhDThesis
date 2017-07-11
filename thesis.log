@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 JUL 2017 10:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 JUL 2017 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1485,41 +1485,49 @@ LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <75> not available
 LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <75> not available
 (Font)              Font shape `T1/pbk/l/it' tried instead on input line 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
+LaTeX Warning: Reference `sec:2review' on page 1 undefined on input line 33.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
 [1
 
 
-]) (./content/chapter-2literaturereview.tex [2]
+]
+
+LaTeX Warning: Reference `sec:3external' on page 2 undefined on input line 39.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+) (./content/chapter-2literaturereview.tex [2]
 chapter 2.
 ) (./content/chapter-3external.tex [3
 
 
 ] [4]
 chapter 3.
-<gfx/Clean-Thesis-Figure.pdf, id=336, 1297.44722pt x 256.89075pt>
+<gfx/Clean-Thesis-Figure.pdf, id=333, 1297.44722pt x 256.89075pt>
 File: gfx/Clean-Thesis-Figure.pdf Graphic file (type pdf)
 
 <use gfx/Clean-Thesis-Figure.pdf>
@@ -1625,13 +1633,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
  ) 
 Here is how much of TeX's memory you used:
- 19094 strings out of 493091
- 309084 string characters out of 6134517
+ 19108 strings out of 493091
+ 309214 string characters out of 6134517
  772193 words of memory out of 5000000
- 22043 multiletter control sequences out of 15000+600000
- 95996 words of font info for 112 fonts, out of 8000000 for 9000
+ 22045 multiletter control sequences out of 15000+600000
+ 97036 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,12n,106p,966b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,13n,106p,966b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{c:/So
 ftware/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software/texlive
 /2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Software/texlive/2015/texmf-d
@@ -1644,10 +1652,10 @@ e1/public/tex-gyre/qhvb.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/pu
 blic/tex-gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/boo
 kman/ubkli8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/
 uhvr8a.pfb>
-Output written on thesis.pdf (36 pages, 176768 bytes).
+Output written on thesis.pdf (36 pages, 179574 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
- 453 compressed objects within 5 object streams
+ 505 PDF objects out of 1000 (max. 8388607)
+ 451 compressed objects within 5 object streams
  127 named destinations out of 1000 (max. 500000)
  35670 words of extra memory for PDF output out of 35830 (max. 10000000)
 
