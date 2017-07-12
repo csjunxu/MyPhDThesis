@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  12 JUL 2017 23:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  12 JUL 2017 23:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1487,32 +1487,38 @@ LaTeX Warning: Citation 'crosschannel' on page 1 undefined on input line 15.
 LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 41.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+
+Underfull \vbox (badness 1210) has occurred while \output is active []
+
+ [4]
 Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
@@ -1644,13 +1650,13 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 19364 strings out of 493091
- 312758 string characters out of 6134517
+ 19367 strings out of 493091
+ 312782 string characters out of 6134517
  773230 words of memory out of 5000000
  22241 multiletter control sequences out of 15000+600000
- 111738 words of font info for 159 fonts, out of 8000000 for 9000
+ 111998 words of font info for 161 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,13n,106p,1899b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,13n,106p,1205b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software
 /texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Software/texlive/
 2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Software/texlive/2015/texmf-di
