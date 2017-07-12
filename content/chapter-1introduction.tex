@@ -7,7 +7,7 @@
 %\cleanchapterquote{"Mens cujusque is est Quisque" – "Mind Makes the Man"}{Samuel Pepys}{}
 
 
-Nowadays, cameras are becoming more and more widely used in many aspects of human lifes such as taking pictures, medical analysis, security monitoring and control, etc. The camera imaging pipelines are of particular importance since it is the key step of transforming the real scenes into the pictures or videos. However, during the imaging process, the noise is unavoidable to be generated due to many reasons.
+Nowadays, cameras are becoming more and more widely used in many aspects of human lifes such as taking pictures, medical analysis, security monitoring and control, etc. The camera imaging pipelines are of particular importance since it is the key step of transforming the real scenes into the images or videos. However, during the imaging process, the noise is unavoidablely generated due to many reasons.
 
 \section{The Camera Imaging Pipeline}
 \label{sec:intro:general}
@@ -39,6 +39,8 @@ $f$ is the camera response function, usually a linear function before attaining 
 $\bm{Q}$ is the quantization error happened during rounding to interger values. The quantization noise is normally negligible compared to the readout noise.
 
 Though can be approximated as Gaussian or Poisson distribution, these noise sources will be largely changed to be more complex during the in-camera imaging pipeline, which has been analyzed in \cite{crosschannel}. Hence, the real-world noise is much more complex than the traditional additive white Gaussian noise, and should be paid more attention.
+
+In order to obtain good images while still maintaining the structures and details of the captured scene, image denoising is a good choice. In this thesis, I will present my work on image denoising, including synthetic noisy images and real noisy images. Note that the realistic noise in real color noisy images are much more complex than the usually synthetic additive white Gaussian noise (AWGN). This is because that during the camera imaging pipeline, the noise generated will be modified to be more complex than the noise in the raw sensor data. Hence, in this thesis, we pay more attention to the realistic noise generated during the camera imaging pipeline. 
 
 
 \section{The Proposed Methods}
