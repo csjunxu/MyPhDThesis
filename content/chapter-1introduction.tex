@@ -52,7 +52,15 @@ Firstly, we propose a method for denoising synthetic AWGN noise, from which we c
 
 Basing on the success on the synthetic noise removal, we propose to exploit the power of the NSS priors in natural images to deal with the complex realistic noise in real-world noisy images. Specifically, we propose three methods exploiting the NSS priors of natural images for real noisy image denoising, which can be introduced as follows.
 
-The first method is to utilize the external natural images to learn a NSS prior, which is then applied into the denoising task of input synthetic noisy image degraded by AWGN noise. The second method is to make use of power of external natural images, and then use the external NSS priors to guide the learning of the internal NSS priors of the input real noisy images. The third method is to fully utilize the internal NSS prior and make use of low rank models to exploit the NSS property of the input real noisy images. The fourth method is to use the sparse coding based method with additional weighting scheme to regard the local noise in real noisy images as a Gaussian and the prior is used to deal with the real noisy image. Finally, we construct a big real noisy images captured by widely used commercial cameras, on which we evaluate the existing image denoising methods as well as our proposed methods in this thesis. 
+In the first method, we propose to learn the NSS prior from the external natural images, and then apply the learned external prior to guide the learning of the internal NSS prior of the input real noisy image. The experiments on two commonly used datasets and a new one we constructed to implement the shortage of existing datasets, demonstrate that the proposed method can achieve better performance than existing color image denoising methods such as CBM3D \cite{cbm3d}, the state-of-the-art Gaussian noise removal methods \cite{bm3d,mlp,csr}, and the real noisy image denoising methdos \cite{} including a commercial software Neat Image \cite{neatimage}, which is embeded into the famous PhotoShop CS for image processing tasks.
+
+
+The second method is to fully utilize the internal NSS prior and make use of low rank models to exploit the NSS property of the input real noisy images. 
+
+
+The third method is to use the sparse coding based method with additional weighting scheme to regard the local noise in real noisy images as a Gaussian and the prior is used to deal with the real noisy image.
+
+Finally, to make my thesis more comprehensive, I construct a large benchmark of real noisy images captured by different types of famous commercial cameras, on which I also evaluate the image denoising methods mentioned above and the proposed methods in this thesis. 
 
 
 
