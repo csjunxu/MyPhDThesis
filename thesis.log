@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 JUL 2017 23:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  12 JUL 2017 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1473,31 +1473,13 @@ LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <12> not available
 ]
 (./content/chapter-1introduction.tex
 chapter 1.
-LaTeX Font Info:    Try loading font information for T1+pbk on input line 7.
-(c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/t1pbk.fd
-File: t1pbk.fd 2001/06/04 font definitions for T1/pbk.
-)
-LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <11> not available
-(Font)              Font shape `T1/pbk/l/n' tried instead on input line 7.
-Package microtype Info: Loading generic settings for font family
-(microtype)             `pbk' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <75> not available
-(Font)              Font shape `T1/pbk/l/n' tried instead on input line 7.
-LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <75> not available
-(Font)              Font shape `T1/pbk/l/it' tried instead on input line 7.
-
 
 LaTeX Warning: Citation 'browneccv2016' on page 1 undefined on input line 15.
 
 
 LaTeX Warning: Citation 'crosschannel' on page 1 undefined on input line 15.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+[1
 
 
 ]
@@ -1505,7 +1487,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 41.
 
 
-Underfull \vbox (badness 1112) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
 Underfull \hbox (badness 10000) in paragraph at lines 54--55
@@ -1513,14 +1495,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
 
-Underfull \vbox (badness 3250) has occurred while \output is active []
-
- [3]
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
@@ -1542,7 +1524,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
 ) (./content/chapter-2literaturereview.tex [4]
 chapter 2.
-) (./content/chapter-3external.tex [5
+LaTeX Font Info:    Try loading font information for T1+pbk on input line 6.
+(c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/t1pbk.fd
+File: t1pbk.fd 2001/06/04 font definitions for T1/pbk.
+)
+LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <11> not available
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 6.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `pbk' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <75> not available
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 6.
+LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <75> not available
+(Font)              Font shape `T1/pbk/l/it' tried instead on input line 6.
+)
+(./content/chapter-3external.tex [5
 
 
 ] [6]
@@ -1659,12 +1656,12 @@ Here is how much of TeX's memory you used:
  22241 multiletter control sequences out of 15000+600000
  110698 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,12n,106p,1911b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Sof
-tware/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Software/texlive
-/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Software/texlive/2015/tex
-mf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc}{c:/Software/texlive/2015/texmf-dist/
-fonts/enc/dvips/base/8r.enc}{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvip
+ 65i,13n,106p,1911b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software
+/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Software/texlive/
+2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Software/texlive/2015/texmf-di
+st/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Software/texlive/2015/texmf-dist/fonts/
+enc/dvips/tex-gyre/q-ec.enc}{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvip
 s/lm/lm-ec.enc}<c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charte
 r/bchb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/
 bchbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/b
@@ -1680,7 +1677,7 @@ e1/public/lm/lmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public
 gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkl
 i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
 b>
-Output written on thesis.pdf (38 pages, 239898 bytes).
+Output written on thesis.pdf (38 pages, 240171 bytes).
 PDF statistics:
  547 PDF objects out of 1000 (max. 8388607)
  485 compressed objects within 5 object streams
