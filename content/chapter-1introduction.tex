@@ -50,15 +50,14 @@ This thesis is made up of several work I have done during my study, in which I f
 
 Firstly, we propose a method for denoising synthetic AWGN noise, from which we can study the performance of the nonlocal self-similarity priors of natural images. In fact, we propose to learn the external NSS priors and apply the learned model on denoising AWGN noise. The proposed method achieves state-of-the-art performance on AWGN denoising on both effectiveness and efficiency. 
 
-Basing on the success on the synthetic noise removal, we propose to exploit the power of the NSS priors in natural images to deal with the complex realistic noise in real-world noisy images. Specifically, we propose three methods exploiting the NSS priors of natural images for real noisy image denoising, which can be introduced as follows.
+Basing on the success on the synthetic noise removal, I propose to exploit the power of the NSS priors in natural images to deal with the complex realistic noise in real-world noisy images. Specifically, we propose three methods exploiting the NSS priors of natural images for real noisy image denoising, which can be introduced as follows.
 
-In the first method, we propose to learn the NSS prior from the external natural images, and then apply the learned external prior to guide the learning of the internal NSS prior of the input real noisy image. The experiments on two commonly used datasets and a new one we constructed to implement the shortage of existing datasets, demonstrate that the proposed method can achieve better performance than existing color image denoising methods such as CBM3D \cite{cbm3d}, the state-of-the-art Gaussian noise removal methods \cite{bm3d,mlp,csr}, and the real noisy image denoising methdos \cite{} including a commercial software Neat Image \cite{neatimage}, which is embeded into the famous PhotoShop CS for image processing tasks.
-
-
-The second method is to fully utilize the internal NSS prior and make use of low rank models to exploit the NSS property of the input real noisy images. 
+In the first method, I propose to learn the NSS prior from the external natural images, and then apply the learned external prior to guide the learning of the internal NSS prior of the input real noisy image. The experiments on two commonly used datasets and a new one we constructed to implement the shortage of existing datasets, demonstrate that the proposed method can achieve better performance than existing color image denoising methods such as CBM3D \cite{cbm3d}, the state-of-the-art Gaussian noise removal methods \cite{bm3d,mlp,csr}, and the real noisy image denoising methdos \cite{} including a commercial software Neat Image \cite{neatimage}, which is embeded into the famous PhotoShop CS for image processing tasks.
 
 
-The third method is to use the sparse coding based method with additional weighting scheme to regard the local noise in real noisy images as a Gaussian and the prior is used to deal with the real noisy image.
+In the second method, I propose to employ the low rank model describe fully the the internal NSS prior, basing on the observed fact that the similar image patches can be contanated as a matrix of low rank. Different from the previous work, I extend the WNNM model and apply it to multi-channel version to make it feasible for color image denoising. 
+
+In the third method,  is to use the sparse coding based method with additional weighting scheme to regard the local noise in real noisy images as a Gaussian and the prior is used to deal with the real noisy image.
 
 Finally, to make my thesis more comprehensive, I construct a large benchmark of real noisy images captured by different types of famous commercial cameras, on which I also evaluate the image denoising methods mentioned above and the proposed methods in this thesis. 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  12 JUL 2017 23:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  12 JUL 2017 23:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1502,40 +1502,40 @@ LaTeX Warning: Citation 'csr' on page 3 undefined on input line 55.
 
 LaTeX Warning: Citation 'neatimage' on page 3 undefined on input line 55.
 
-
-Underfull \vbox (badness 6477) has occurred while \output is active []
-
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \vbox (badness 3407) has occurred while \output is active []
+
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-[5]) (./content/chapter-2literaturereview.tex [6]
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+) (./content/chapter-2literaturereview.tex [6]
 chapter 2.
 LaTeX Font Info:    Try loading font information for T1+pbk on input line 6.
 (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/t1pbk.fd
@@ -1663,11 +1663,11 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 19376 strings out of 493091
- 312857 string characters out of 6134517
+ 19373 strings out of 493091
+ 312830 string characters out of 6134517
  773230 words of memory out of 5000000
  22241 multiletter control sequences out of 15000+600000
- 112778 words of font info for 167 fonts, out of 8000000 for 9000
+ 112518 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,13n,106p,1171b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software
@@ -1690,7 +1690,7 @@ e1/public/lm/lmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public
 gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkl
 i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
 b>
-Output written on thesis.pdf (40 pages, 245654 bytes).
+Output written on thesis.pdf (40 pages, 245842 bytes).
 PDF statistics:
  555 PDF objects out of 1000 (max. 8388607)
  491 compressed objects within 5 object streams
