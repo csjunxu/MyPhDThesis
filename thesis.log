@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 AUG 2017 11:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 AUG 2017 20:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1474,12 +1474,6 @@ LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <12> not available
 (./content/chapter-1introduction.tex
 chapter 1.
 
-LaTeX Warning: Citation 'browneccv2016' on page 1 undefined on input line 15.
-
-
-LaTeX Warning: Citation 'crosschannel' on page 1 undefined on input line 15.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
@@ -1490,7 +1484,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 41.
 
 
-Underfull \vbox (badness 1112) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
 
@@ -1508,12 +1502,15 @@ LaTeX Warning: Citation 'csr' on page 3 undefined on input line 55.
 
 LaTeX Warning: Citation 'neatimage' on page 3 undefined on input line 55.
 
-[3]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
 Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-[4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
@@ -1524,6 +1521,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
  []
 
 
+Underfull \vbox (badness 3189) has occurred while \output is active []
+
+ [4]
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
@@ -1534,14 +1534,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
  []
 
 
-Underfull \vbox (badness 6978) has occurred while \output is active []
-
- [5]
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-) (./content/chapter-2literaturereview.tex [6]
+[5]) (./content/chapter-2literaturereview.tex [6]
 chapter 2.
 LaTeX Font Info:    Try loading font information for T1+pbk on input line 6.
 (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/t1pbk.fd
@@ -1563,7 +1560,7 @@ LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <75> not available
 
 ] [8]
 chapter 3.
-<gfx/Clean-Thesis-Figure.pdf, id=362, 1297.44722pt x 256.89075pt>
+<gfx/Clean-Thesis-Figure.pdf, id=361, 1297.44722pt x 256.89075pt>
 File: gfx/Clean-Thesis-Figure.pdf Graphic file (type pdf)
 
 <use gfx/Clean-Thesis-Figure.pdf>
@@ -1649,9 +1646,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
 (./thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 96DAA00423C92502FCD5E852D03A1B2A;2928.
 
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 96DAA00423C92502FCD5E852D03A1B2A;2928
+(rerunfilecheck)             After:  F1D0581C0579B940A072049F1BD8146C;2851.
 
 LaTeX Warning: There were undefined references.
 
@@ -1669,37 +1672,51 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 19382 strings out of 493091
- 312911 string characters out of 6134517
+ 19373 strings out of 493091
+ 312851 string characters out of 6134517
  773230 words of memory out of 5000000
  22241 multiletter control sequences out of 15000+600000
- 113298 words of font info for 171 fonts, out of 8000000 for 9000
+ 112258 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,13n,106p,1171b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software
-/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Software/texlive/
-2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Software/texlive/2015/texmf-di
-st/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Software/texlive/2015/texmf-dist/fonts/
-enc/dvips/tex-gyre/q-ec.enc}{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvip
-s/lm/lm-ec.enc}<c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charte
-r/bchb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/
-bchbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/b
-chr8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/bch
-ri8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi12.pfb>
-<c:/Software/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Softwa
-re/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmib10.pfb><c:/Software/texli
-ve/2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Software/texlive/2015/te
-xmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Software/texlive/2015/texmf-dist/fo
-nts/type1/public/lm/lmssbx10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/typ
-e1/public/lm/lmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public
-/tex-gyre/qhvb.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/tex-
-gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkl
-i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
-b>
-Output written on thesis.pdf (40 pages, 246134 bytes).
+ 65i,13n,106p,1137b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.caption.26} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.18} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.48} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.24} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.16} has been referenced but does not exist
+, replaced by a fixed one
+
+{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software/t
+exlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Software/texlive/20
+15/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Software/texlive/2015/texmf-dist
+/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Software/texlive/2015/texmf-dist/fonts/en
+c/dvips/tex-gyre/q-ec.enc}{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/
+lm/lm-ec.enc}<c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/
+bchb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/bc
+hbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/bch
+r8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/bitstrea/charter/bchri
+8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c
+:/Software/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Software
+/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmib10.pfb><c:/Software/texlive
+/2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Software/texlive/2015/texm
+f-dist/fonts/type1/public/lm/lmr8.pfb><c:/Software/texlive/2015/texmf-dist/font
+s/type1/public/lm/lmssbx10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1
+/public/lm/lmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/t
+ex-gyre/qhvb.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/tex-gy
+re/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkli8
+a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on thesis.pdf (40 pages, 245233 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 491 compressed objects within 5 object streams
- 132 named destinations out of 1000 (max. 500000)
+ 559 PDF objects out of 1000 (max. 8388607)
+ 495 compressed objects within 5 object streams
+ 135 named destinations out of 1000 (max. 500000)
  37206 words of extra memory for PDF output out of 42996 (max. 10000000)
 
