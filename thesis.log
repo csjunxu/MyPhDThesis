@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 AUG 2017 20:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 AUG 2017 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1473,72 +1473,67 @@ LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <12> not available
 ]
 (./content/chapter-1introduction.tex
 chapter 1.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+[1
 
 
 ]
 
-LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 41.
+LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 42.
+
+[2]
+
+LaTeX Warning: Citation 'cbm3d' on page 3 undefined on input line 58.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-
-LaTeX Warning: Citation 'cbm3d' on page 3 undefined on input line 55.
+LaTeX Warning: Citation 'bm3d' on page 3 undefined on input line 58.
 
 
-LaTeX Warning: Citation 'bm3d' on page 3 undefined on input line 55.
+LaTeX Warning: Citation 'mlp' on page 3 undefined on input line 58.
 
 
-LaTeX Warning: Citation 'mlp' on page 3 undefined on input line 55.
+LaTeX Warning: Citation 'csr' on page 3 undefined on input line 58.
 
 
-LaTeX Warning: Citation 'csr' on page 3 undefined on input line 55.
+LaTeX Warning: Citation 'neatimage' on page 3 undefined on input line 58.
 
 
-LaTeX Warning: Citation 'neatimage' on page 3 undefined on input line 55.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4156) has occurred while \output is active []
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 
-Underfull \vbox (badness 3189) has occurred while \output is active []
-
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \vbox (badness 5667) has occurred while \output is active []
 
- []
-
-[5]) (./content/chapter-2literaturereview.tex [6]
+ [5])
+(./content/chapter-2literaturereview.tex [6]
 chapter 2.
 LaTeX Font Info:    Try loading font information for T1+pbk on input line 6.
 (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/t1pbk.fd
@@ -1560,7 +1555,7 @@ LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <75> not available
 
 ] [8]
 chapter 3.
-<gfx/Clean-Thesis-Figure.pdf, id=361, 1297.44722pt x 256.89075pt>
+<gfx/Clean-Thesis-Figure.pdf, id=357, 1297.44722pt x 256.89075pt>
 File: gfx/Clean-Thesis-Figure.pdf Graphic file (type pdf)
 
 <use gfx/Clean-Thesis-Figure.pdf>
@@ -1653,8 +1648,8 @@ Package rerunfilecheck Warning: File `thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 96DAA00423C92502FCD5E852D03A1B2A;2928
-(rerunfilecheck)             After:  F1D0581C0579B940A072049F1BD8146C;2851.
+(rerunfilecheck)             Before: F1D0581C0579B940A072049F1BD8146C;2851
+(rerunfilecheck)             After:  389FA483EC4DD22C2D860887A6C9E94C;2937.
 
 LaTeX Warning: There were undefined references.
 
@@ -1672,26 +1667,23 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 19373 strings out of 493091
- 312851 string characters out of 6134517
+ 19372 strings out of 493091
+ 312830 string characters out of 6134517
  773230 words of memory out of 5000000
- 22241 multiletter control sequences out of 15000+600000
+ 22239 multiletter control sequences out of 15000+600000
  112258 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,13n,106p,1137b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.caption.26} has been referenced but does n
+ 65i,13n,106p,1137b,1917s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.caption.24} has been referenced but does n
 ot exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.caption.18} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.16} has been referenced but does not
  exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{section*.48} has been referenced but does not exist
+pdfTeX warning (dest): name{section*.26} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{section*.24} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.16} has been referenced but does not exist
+pdfTeX warning (dest): name{section*.18} has been referenced but does not exist
 , replaced by a fixed one
 
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software/t
@@ -1713,10 +1705,10 @@ s/type1/public/lm/lmssbx10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1
 ex-gyre/qhvb.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public/tex-gy
 re/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkli8
 a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on thesis.pdf (40 pages, 245233 bytes).
+Output written on thesis.pdf (40 pages, 245554 bytes).
 PDF statistics:
- 559 PDF objects out of 1000 (max. 8388607)
- 495 compressed objects within 5 object streams
- 135 named destinations out of 1000 (max. 500000)
- 37206 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 492 compressed objects within 5 object streams
+ 136 named destinations out of 1000 (max. 500000)
+ 37198 words of extra memory for PDF output out of 42996 (max. 10000000)
 
