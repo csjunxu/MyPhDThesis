@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 AUG 2017 10:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 AUG 2017 12:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1723,11 +1723,11 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 20012 strings out of 493091
- 320523 string characters out of 6134517
+ 20018 strings out of 493091
+ 320571 string characters out of 6134517
  783642 words of memory out of 5000000
  22854 multiletter control sequences out of 15000+600000
- 120135 words of font info for 172 fonts, out of 8000000 for 9000
+ 120655 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,17n,106p,1137b,1905s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software
@@ -1750,7 +1750,7 @@ e1/public/lm/lmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public
 gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkl
 i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
 b>
-Output written on thesis.pdf (42 pages, 249320 bytes).
+Output written on thesis.pdf (42 pages, 249317 bytes).
 PDF statistics:
  565 PDF objects out of 1000 (max. 8388607)
  499 compressed objects within 5 object streams
