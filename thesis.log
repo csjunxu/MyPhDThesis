@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 AUG 2017 09:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 AUG 2017 10:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1478,54 +1478,54 @@ chapter 1.
 
 ]
 
-LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 42.
+LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 41.
 
 [2]
 
-LaTeX Warning: Citation 'cbm3d' on page 3 undefined on input line 59.
+LaTeX Warning: Citation 'cbm3d' on page 3 undefined on input line 58.
 
 
-LaTeX Warning: Citation 'bm3d' on page 3 undefined on input line 59.
+LaTeX Warning: Citation 'bm3d' on page 3 undefined on input line 58.
 
 
-LaTeX Warning: Citation 'mlp' on page 3 undefined on input line 59.
+LaTeX Warning: Citation 'mlp' on page 3 undefined on input line 58.
 
 
-LaTeX Warning: Citation 'csr' on page 3 undefined on input line 59.
+LaTeX Warning: Citation 'csr' on page 3 undefined on input line 58.
 
 
-LaTeX Warning: Citation 'neatimage' on page 3 undefined on input line 59.
+LaTeX Warning: Citation 'neatimage' on page 3 undefined on input line 58.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
@@ -1657,11 +1657,11 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 19369 strings out of 493091
- 312787 string characters out of 6134517
+ 19372 strings out of 493091
+ 312814 string characters out of 6134517
  773230 words of memory out of 5000000
  22240 multiletter control sequences out of 15000+600000
- 112258 words of font info for 163 fonts, out of 8000000 for 9000
+ 112518 words of font info for 165 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,13n,106p,1137b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software
@@ -1684,7 +1684,7 @@ e1/public/lm/lmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public
 gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkl
 i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
 b>
-Output written on thesis.pdf (40 pages, 245604 bytes).
+Output written on thesis.pdf (40 pages, 245629 bytes).
 PDF statistics:
  555 PDF objects out of 1000 (max. 8388607)
  491 compressed objects within 5 object streams
