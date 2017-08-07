@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 AUG 2017 10:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 AUG 2017 10:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1484,23 +1484,23 @@ File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 
 LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 45.
 
-[2]
+[2] [3]
 
-LaTeX Warning: Citation 'cbm3d' on page 3 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'bm3d' on page 3 undefined on input line 62.
+LaTeX Warning: Citation 'cbm3d' on page 4 undefined on input line 62.
 
 
-LaTeX Warning: Citation 'mlp' on page 3 undefined on input line 62.
+LaTeX Warning: Citation 'bm3d' on page 4 undefined on input line 62.
 
 
-LaTeX Warning: Citation 'csr' on page 3 undefined on input line 62.
+LaTeX Warning: Citation 'mlp' on page 4 undefined on input line 62.
 
 
-LaTeX Warning: Citation 'neatimage' on page 3 undefined on input line 62.
+LaTeX Warning: Citation 'csr' on page 4 undefined on input line 62.
 
-[3]
+
+LaTeX Warning: Citation 'neatimage' on page 4 undefined on input line 62.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
@@ -1520,7 +1520,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
-[5]
+
+Underfull \vbox (badness 1210) has occurred while \output is active []
+
+ [5]
 Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
@@ -1685,7 +1688,7 @@ e1/public/lm/lmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public
 gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkl
 i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
 b>
-Output written on thesis.pdf (40 pages, 245882 bytes).
+Output written on thesis.pdf (40 pages, 245969 bytes).
 PDF statistics:
  555 PDF objects out of 1000 (max. 8388607)
  491 compressed objects within 5 object streams
