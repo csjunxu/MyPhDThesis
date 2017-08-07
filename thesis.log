@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 AUG 2017 10:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 AUG 2017 10:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1146,13 +1146,13 @@ Package tocloft Info: The document has chapter divisions on input line 44.
 ))
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 76.
+(hyperref)                removing `\\' on input line 77.
 
-Package hyperref Info: Option `plainpages' set `false' on input line 76.
-Package hyperref Info: Option `colorlinks' set `false' on input line 76.
-Package hyperref Info: Option `breaklinks' set `true' on input line 76.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 76.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 76.
+Package hyperref Info: Option `plainpages' set `false' on input line 77.
+Package hyperref Info: Option `colorlinks' set `false' on input line 77.
+Package hyperref Info: Option `breaklinks' set `true' on input line 77.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 77.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 77.
 (c:/Software/texlive/2015/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
@@ -1160,6 +1160,65 @@ Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldsymbols=\mathgroup6
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
+)
+(c:/Software/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip105
+
+For additional information on amsmath, use the `?' option.
+(c:/Software/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks24
+\ex@=\dimen132
+))
+(c:/Software/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+LaTeX Info: Redefining \boldsymbol on input line 39.
+\pmbraise@=\dimen133
+)
+(c:/Software/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count282
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count283
+\leftroot@=\count284
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count285
+\DOTSCASE@=\count286
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen134
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count287
+\c@MaxMatrixCols=\count288
+\dotsspace@=\muskip11
+\c@parentequation=\count289
+\dspbrk@lvl=\count290
+\tag@help=\toks25
+\row@=\count291
+\column@=\count292
+\maxfields@=\count293
+\andhelp@=\toks26
+\eqnshift@=\dimen135
+\alignsep@=\dimen136
+\tagshift@=\dimen137
+\tagwidth@=\dimen138
+\totwidth@=\dimen139
+\lineht@=\dimen140
+\@envbody=\toks27
+\multlinegap=\skip106
+\multlinetaggap=\skip107
+\mathdisplay@stack=\toks28
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -1201,46 +1260,46 @@ LaTeX Warning: Label `sec:real:summary' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 87.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 88.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 88.
  (c:/Software/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Try loading font information for T1+bch on input line 87.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Try loading font information for T1+bch on input line 88.
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 )
 (c:/Software/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count282
-\scratchdimen=\dimen132
-\scratchbox=\box29
-\nofMPsegments=\count283
-\nofMParguments=\count284
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count285
-\MPscratchDim=\dimen133
-\MPnumerator=\count286
-\makeMPintoPDFobject=\count287
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count294
+\scratchdimen=\dimen141
+\scratchbox=\box31
+\nofMPsegments=\count295
+\nofMParguments=\count296
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count297
+\MPscratchDim=\dimen142
+\MPnumerator=\count298
+\makeMPintoPDFobject=\count299
+\everyMPtoPDFconversion=\toks30
 )
-LaTeX Info: Redefining \microtypecontext on input line 87.
+LaTeX Info: Redefining \microtypecontext on input line 88.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1269,8 +1328,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 87.
+\AtBeginShipoutBox=\box32
+Package hyperref Info: Link coloring OFF on input line 88.
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1278,11 +1337,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (c:/Software/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count288
+\c@section@level=\count300
 )
-LaTeX Info: Redefining \ref on input line 87.
-LaTeX Info: Redefining \pageref on input line 87.
-LaTeX Info: Redefining \nameref on input line 87.
+LaTeX Info: Redefining \ref on input line 88.
+LaTeX Info: Redefining \pageref on input line 88.
+LaTeX Info: Redefining \nameref on input line 88.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write4
@@ -1338,10 +1397,10 @@ Package biblatex Warning: Data encoding is 'utf8'.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' not found.
 No file thesis.bbl.
-Package biblatex Info: Reference section=0 on input line 87.
-Package biblatex Info: Reference segment=0 on input line 87.
-Package scrbase Info: activating english \figurename on input line 94.
-Package scrbase Info: activating english \tablename on input line 95.
+Package biblatex Info: Reference section=0 on input line 88.
+Package biblatex Info: Reference segment=0 on input line 88.
+Package scrbase Info: activating english \figurename on input line 95.
+Package scrbase Info: activating english \tablename on input line 96.
 
 Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              You should note, that in 1994 font command `\it' has
@@ -1354,7 +1413,7 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 (scrreprt)              Note also, that KOMA-Script will remove the definition
 (scrreprt)              of `\it' anytime until release of about version 3.20.
 (scrreprt)              But for now, KOMA-Script will replace deprecated `\it'
-(scrreprt)              by `\normalfont \itshape ' on input line 107.
+(scrreprt)              by `\normalfont \itshape ' on input line 108.
 
 [1
 
@@ -1363,7 +1422,7 @@ Class scrreprt Warning: Usage of deprecated font command `\it'!
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 112.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 113.
  (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
@@ -1371,7 +1430,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 112.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 113.
 
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -1381,30 +1440,30 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 112.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 113.
 
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 112
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 113
 .
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 112
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 113
 .
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 112.
+(Font)              <12> on input line 113.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 112.
+(Font)              <8> on input line 113.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 112.
+(Font)              <6> on input line 113.
 
 (./content/abstract.tex
 LaTeX Font Info:    Try loading font information for T1+qhv on input line 4.
@@ -1433,7 +1492,7 @@ Package microtype Info: Loading generic settings for font family
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 121.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 122.
 
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/lm/t1lmss.fd
@@ -1444,7 +1503,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <24.88> not available
-(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 121.
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 122.
  (./thesis.toc
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <12> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 5.
@@ -1477,63 +1536,72 @@ chapter 1.
 
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+bch on input line 33.
+LaTeX Font Info:    Try loading font information for TS1+bch on input line 34.
  (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
-)
+) [2]
 
-LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 45.
-
-[2] [3]
-
-LaTeX Warning: Citation 'cbm3d' on page 4 undefined on input line 62.
+LaTeX Warning: Citation 'crosschannel' on page 3 undefined on input line 59.
 
 
-LaTeX Warning: Citation 'bm3d' on page 4 undefined on input line 62.
+Underfull \vbox (badness 7907) has occurred while \output is active []
+
+ [3]
+
+LaTeX Warning: Citation 'cbm3d' on page 4 undefined on input line 76.
 
 
-LaTeX Warning: Citation 'mlp' on page 4 undefined on input line 62.
+LaTeX Warning: Citation 'bm3d' on page 4 undefined on input line 76.
 
 
-LaTeX Warning: Citation 'csr' on page 4 undefined on input line 62.
+LaTeX Warning: Citation 'mlp' on page 4 undefined on input line 76.
 
 
-LaTeX Warning: Citation 'neatimage' on page 4 undefined on input line 62.
+LaTeX Warning: Citation 'csr' on page 4 undefined on input line 76.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
+LaTeX Warning: Citation 'neatimage' on page 4 undefined on input line 76.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \vbox (badness 1210) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+
+Underfull \vbox (badness 3189) has occurred while \output is active []
 
  [5]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-) (./content/chapter-2literaturereview.tex [6]
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+[6]) (./content/chapter-2literaturereview.tex [7] [8
+
+
+]
 chapter 2.
 LaTeX Font Info:    Try loading font information for T1+pbk on input line 6.
 (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/t1pbk.fd
@@ -1550,12 +1618,9 @@ LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <75> not available
 LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <75> not available
 (Font)              Font shape `T1/pbk/l/it' tried instead on input line 6.
 )
-(./content/chapter-3external.tex [7
-
-
-] [8]
+(./content/chapter-3external.tex [9] [10]
 chapter 3.
-<gfx/Clean-Thesis-Figure.pdf, id=362, 1297.44722pt x 256.89075pt>
+<gfx/Clean-Thesis-Figure.pdf, id=371, 1297.44722pt x 256.89075pt>
 File: gfx/Clean-Thesis-Figure.pdf Graphic file (type pdf)
 
 <use gfx/Clean-Thesis-Figure.pdf>
@@ -1563,7 +1628,7 @@ Package pdftex.def Info: gfx/Clean-Thesis-Figure.pdf used on input line 14.
 (pdftex.def)             Requested size: 395.45181pt x 78.29863pt.
 LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10.95> not available
 (Font)              Font shape `T1/lmss/bx/n' tried instead on input line 15.
- [9
+ [11
 
 
  <./gfx/Clean-Thesis-Figure.pdf>]
@@ -1575,8 +1640,8 @@ Package pdftex.def Info: gfx/Clean-Thesis-Figure.pdf used on input line 24.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10])
-(./content/chapter-4guided.tex [11] [12
+ [12])
+(./content/chapter-4guided.tex [13] [14
 
 
 ]
@@ -1585,7 +1650,7 @@ File: gfx/Clean-Thesis-Figure.pdf Graphic file (type pdf)
 <use gfx/Clean-Thesis-Figure.pdf>
 Package pdftex.def Info: gfx/Clean-Thesis-Figure.pdf used on input line 14.
 (pdftex.def)             Requested size: 395.45181pt x 78.29863pt.
- [13]
+ [15]
 File: gfx/Clean-Thesis-Figure.pdf Graphic file (type pdf)
  <use gfx/Clean-Thesis-Figure.pdf>
 Package pdftex.def Info: gfx/Clean-Thesis-Figure.pdf used on input line 24.
@@ -1593,8 +1658,8 @@ Package pdftex.def Info: gfx/Clean-Thesis-Figure.pdf used on input line 24.
 
 Underfull \vbox (badness 5847) has occurred while \output is active []
 
- [14])
-(./content/chapter-5internallr.tex [15] [16
+ [16])
+(./content/chapter-5internallr.tex [17] [18
 
 
 ]
@@ -1602,8 +1667,8 @@ chapter 5.
 
 Underfull \vbox (badness 1400) has occurred while \output is active []
 
- [17]
-[18]) (./content/chapter-6internalsc.tex [19] [20
+ [19]
+[20]) (./content/chapter-6internalsc.tex [21] [22
 
 
 ]
@@ -1611,36 +1676,36 @@ chapter 6.
 
 Underfull \vbox (badness 1400) has occurred while \output is active []
 
- [21])
-(./content/chapter-7dataset.tex [22]
+ [23])
+(./content/chapter-7dataset.tex [24]
 chapter 7.
-[23
+[25
 
 
-]) (./content/chapter-8conclusions.tex [24]
+]) (./content/chapter-8conclusions.tex [26]
 chapter 8.
 
 Underfull \vbox (badness 2809) has occurred while \output is active []
 
- [25
+ [27
 
 
 ])
-[26]
-
-LaTeX Warning: Empty bibliography on input line 156.
-
-
-Package biblatex Warning: Type 'online' not found on input line 157.
-
+[28]
 
 LaTeX Warning: Empty bibliography on input line 157.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+
+Package biblatex Warning: Type 'online' not found on input line 158.
+
+
+LaTeX Warning: Empty bibliography on input line 158.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
 (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 389FA483EC4DD22C2D860887A6C9E94C;2937.
 
@@ -1658,16 +1723,16 @@ Package biblatex Warning: Please (re)run BibTeX on the file(s):
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 19403 strings out of 493091
- 313302 string characters out of 6134517
- 773230 words of memory out of 5000000
- 22270 multiletter control sequences out of 15000+600000
- 112575 words of font info for 164 fonts, out of 8000000 for 9000
+ 20009 strings out of 493091
+ 320496 string characters out of 6134517
+ 783642 words of memory out of 5000000
+ 22854 multiletter control sequences out of 15000+600000
+ 119875 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,13n,106p,1137b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,17n,106p,1137b,1905s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software
 /texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Software/texlive/2015
 /texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Software/texlive/2015/texmf-di
@@ -1688,10 +1753,10 @@ e1/public/lm/lmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public
 gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkl
 i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
 b>
-Output written on thesis.pdf (40 pages, 245969 bytes).
+Output written on thesis.pdf (42 pages, 249236 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 491 compressed objects within 5 object streams
- 132 named destinations out of 1000 (max. 500000)
- 37718 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 565 PDF objects out of 1000 (max. 8388607)
+ 499 compressed objects within 5 object streams
+ 135 named destinations out of 1000 (max. 500000)
+ 39766 words of extra memory for PDF output out of 42996 (max. 10000000)
 

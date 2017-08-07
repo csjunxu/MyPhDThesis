@@ -12,68 +12,68 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Thesis Structure}{5}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Literature Review}{7}{chapter.2}
+\contentsline {chapter}{\numberline {2}Literature Review}{9}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Synthetic Grayscale Image Denoising}{7}{section*.13}
+\contentsline {section}{\numberline {2.1}Synthetic Grayscale Image Denoising}{9}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Realistic Color Image Denoising}{7}{section*.14}
+\contentsline {section}{\numberline {2.2}Realistic Color Image Denoising}{9}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}External Non-local Self-Similarity Prior for Additive White Gaussian Noise}{9}{chapter.3}
+\contentsline {chapter}{\numberline {3}External Non-local Self-Similarity Prior for Additive White Gaussian Noise}{11}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Introduction}{9}{section*.16}
+\contentsline {section}{\numberline {3.1}Introduction}{11}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}System Design}{10}{section*.19}
+\contentsline {section}{\numberline {3.2}System Design}{12}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Demo System}{11}{section*.20}
+\contentsline {section}{\numberline {3.3}Demo System}{13}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Calibration}{11}{section*.21}
+\contentsline {section}{\numberline {3.4}Calibration}{13}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Conclusion}{11}{section*.22}
+\contentsline {section}{\numberline {3.5}Conclusion}{13}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}External Prior Guided Internal Prior Learning for Real Noisy Image Denoising}{13}{chapter.4}
+\contentsline {chapter}{\numberline {4}External Prior Guided Internal Prior Learning for Real Noisy Image Denoising}{15}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Learning External Nonlocal Self-Similarity Priors}{13}{section*.24}
+\contentsline {section}{\numberline {4.1}Learning External Nonlocal Self-Similarity Priors}{15}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}System Design}{14}{section*.27}
+\contentsline {section}{\numberline {4.2}System Design}{16}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Demo System}{15}{section*.28}
+\contentsline {section}{\numberline {4.3}Demo System}{17}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Calibration}{15}{section*.29}
+\contentsline {section}{\numberline {4.4}Calibration}{17}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Conclusion}{15}{section*.30}
+\contentsline {section}{\numberline {4.5}Conclusion}{17}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Internal Nonlocal Self-Similarity Prior for Real Color Image Denoising: A Low Rank based Method}{17}{chapter.5}
+\contentsline {chapter}{\numberline {5}Internal Nonlocal Self-Similarity Prior for Real Color Image Denoising: A Low Rank based Method}{19}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Introduction}{17}{section*.32}
+\contentsline {section}{\numberline {5.1}Introduction}{19}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Related Work}{18}{section*.33}
+\contentsline {section}{\numberline {5.2}Related Work}{20}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Method}{18}{section*.34}
+\contentsline {section}{\numberline {5.3}Method}{20}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Experimental Results}{18}{section*.35}
+\contentsline {section}{\numberline {5.4}Experimental Results}{20}{section*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Summary}{19}{section*.36}
+\contentsline {section}{\numberline {5.5}Summary}{21}{section*.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Internal Nonlocal Self-Similarity Prior for Real Color Image Denoising: A Sparse Coding based ethod}{21}{chapter.6}
+\contentsline {chapter}{\numberline {6}Internal Nonlocal Self-Similarity Prior for Real Color Image Denoising: A Sparse Coding based ethod}{23}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Introduction}{21}{section*.38}
+\contentsline {section}{\numberline {6.1}Introduction}{23}{section*.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Related Work}{22}{section*.39}
+\contentsline {section}{\numberline {6.2}Related Work}{24}{section*.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Summary}{22}{section*.40}
+\contentsline {section}{\numberline {6.3}Summary}{24}{section*.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}A Large Real Noisy Image Dataset, with A Comprehensive Evaluation of State-of-the-arts}{23}{chapter.7}
+\contentsline {chapter}{\numberline {7}A Large Real Noisy Image Dataset, with A Comprehensive Evaluation of State-of-the-arts}{25}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Introduction}{23}{section*.42}
+\contentsline {section}{\numberline {7.1}Introduction}{25}{section*.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Related Work}{24}{section*.43}
+\contentsline {section}{\numberline {7.2}Related Work}{26}{section*.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Summary}{24}{section*.44}
+\contentsline {section}{\numberline {7.3}Summary}{26}{section*.44}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Conclusions}{25}{chapter.8}
+\contentsline {chapter}{\numberline {8}Conclusions}{27}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Section 1}{25}{section*.46}
+\contentsline {section}{\numberline {8.1}Section 1}{27}{section*.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Section 2}{25}{section*.47}
+\contentsline {section}{\numberline {8.2}Section 2}{27}{section*.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Future Work}{26}{section*.48}
+\contentsline {section}{\numberline {8.3}Future Work}{28}{section*.48}
