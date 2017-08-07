@@ -19,9 +19,9 @@ Nowadays, CCD or CMOS cameras are becoming more and more important in many aspec
 \section{The Image Noise}
 \label{sec:intro:current}
 
-In image denoising community, the most commonly studied noise is the additive white Gaussian noise, which is used to model the independent noise in the raw images. The AWGN noise is described as a Gaussian distribution $\mathcal{N}(0,\sigma^{2})$, which means that the noise is Gaussian distributed with $0$ mean and $\sigma$ standard deviation. Most of methods are focus on this type of noise since it is a good testing bed for many other image restoration problems such as super-resolution, deblurring, inpainting, etc.
+The realistic noise are very complex in real photography images captured by the camera sensors. One major reason is that the noise is unable to be explicitly modeled by some definitive probabilistic distributions. Often the sRGB images we look at the screen have been processed via the camera imaging pipeline, during which the noise will be changed and be much more complex than its initial status. 
 
-However, the realistic noise in real-world natural images captured by cameras are much more complex than the synthetic AWGN noise being widely studied. The major reason is that, during the imaging pipeline, the noise will be generated. The key reason of noise generation is unstable measurement from the discrete nature of light and the thermal agitation. The major sources of noise generated during the imaging pipeline are the random noise , the spatial non-uniformity, and quantization noise. The random noise includes photon shot noise, dark current, and readout noise. The spatial non-uniformity noise includes the fixed pattern noise (PRNU, DCNU), CCD/CMOS specific noise. 
+The key reason of noise generation is unstable measurement from the discrete nature of light and the thermal agitation. The major sources of noise generated during the imaging pipeline are the random noise , the spatial non-uniformity, and quantization noise. The random noise includes photon shot noise, dark current, and readout noise. The spatial non-uniformity noise includes the fixed pattern noise (PRNU, DCNU), CCD/CMOS specific noise. 
 
 
 A simplified model including various noise sources (for each pixel) can be approximately defined as follows:
@@ -43,6 +43,7 @@ Though can be approximated as Gaussian or Poisson distribution, these noise sour
 
 In order to obtain good images while still maintaining the structures and details of the captured scene, image denoising is a good choice. In this thesis, I will present my work on image denoising, including synthetic noisy images and real noisy images. Note that the realistic noise in real color noisy images are much more complex than the usually synthetic additive white Gaussian noise (AWGN). This is because that during the camera imaging pipeline, the noise generated will be modified to be more complex than the noise in the raw sensor data. Hence, in this thesis, we pay more attention to the realistic noise generated during the camera imaging pipeline. 
 
+In image denoising community, the most commonly studied noise is the additive white Gaussian noise, which is used to model the independent noise in the raw images. The AWGN noise is described as a Gaussian distribution $\mathcal{N}(0,\sigma^{2})$, which means that the noise is Gaussian distributed with $0$ mean and $\sigma$ standard deviation. Most of methods are focus on this type of noise since it is a good testing bed for many other image restoration problems such as super-resolution, deblurring, inpainting, etc.
 
 \section{Problem Formulation: Image Denoising}
 
