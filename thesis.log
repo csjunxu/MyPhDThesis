@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 AUG 2017 10:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 AUG 2017 10:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1477,59 +1477,60 @@ chapter 1.
 
 
 ]
+LaTeX Font Info:    Try loading font information for TS1+bch on input line 33.
+ (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/ts1bch.fd
+File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
+)
 
-LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 41.
+LaTeX Warning: Citation 'crosschannel' on page 2 undefined on input line 45.
 
 [2]
 
-LaTeX Warning: Citation 'cbm3d' on page 3 undefined on input line 58.
+LaTeX Warning: Citation 'cbm3d' on page 3 undefined on input line 62.
 
 
-LaTeX Warning: Citation 'bm3d' on page 3 undefined on input line 58.
+LaTeX Warning: Citation 'bm3d' on page 3 undefined on input line 62.
 
 
-LaTeX Warning: Citation 'mlp' on page 3 undefined on input line 58.
+LaTeX Warning: Citation 'mlp' on page 3 undefined on input line 62.
 
 
-LaTeX Warning: Citation 'csr' on page 3 undefined on input line 58.
+LaTeX Warning: Citation 'csr' on page 3 undefined on input line 62.
 
 
-LaTeX Warning: Citation 'neatimage' on page 3 undefined on input line 58.
+LaTeX Warning: Citation 'neatimage' on page 3 undefined on input line 62.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
-[5]) (./content/chapter-2literaturereview.tex [6]
+) (./content/chapter-2literaturereview.tex [6]
 chapter 2.
 LaTeX Font Info:    Try loading font information for T1+pbk on input line 6.
 (c:/Software/texlive/2015/texmf-dist/tex/latex/psnfss/t1pbk.fd
@@ -1657,11 +1658,11 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 19372 strings out of 493091
- 312814 string characters out of 6134517
+ 19403 strings out of 493091
+ 313302 string characters out of 6134517
  773230 words of memory out of 5000000
- 22240 multiletter control sequences out of 15000+600000
- 112518 words of font info for 165 fonts, out of 8000000 for 9000
+ 22270 multiletter control sequences out of 15000+600000
+ 112575 words of font info for 164 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,13n,106p,1137b,1897s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/Software
@@ -1684,10 +1685,10 @@ e1/public/lm/lmsy10.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/public
 gyre/qhvr.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/bookman/ubkl
 i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pf
 b>
-Output written on thesis.pdf (40 pages, 245629 bytes).
+Output written on thesis.pdf (40 pages, 245882 bytes).
 PDF statistics:
  555 PDF objects out of 1000 (max. 8388607)
  491 compressed objects within 5 object streams
  132 named destinations out of 1000 (max. 500000)
- 37206 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 37718 words of extra memory for PDF output out of 42996 (max. 10000000)
 
