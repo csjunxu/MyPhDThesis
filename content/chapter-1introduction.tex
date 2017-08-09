@@ -55,11 +55,33 @@ After some merging and simplifying, the acquisition model of the signal can be f
 \end{equation}
 where $g = g_{cv}g_{out}$ is the overall camera gain factor, $\lambda=\textbf{C}+\textbf{D}$ is \# of electrons in pixel capacitor and also Poisson distributed, since ``Sum of Independent Poisson Random Variables is also Poisson'', and $N_{R}=g_{out}\textbf{N}_{reset}+\textbf{N}_{out}$ is the overall readout noise and also Gaussian distributed, since ``Sum of Independent Gaussian Random Variables is also Gaussian''. In summary, the overall noise before the camera imaging pipeline can be modeled by a mixed Poisson and Gaussian distribution \cite{}. Unfortunately, the realistic noise will become very complex after being processed during the camera imaging pipeline \cite{crosschannel}. This makes the image denoising an important and challenging task.
 
-In order to obtain good images while still maintaining the structures and details of the captured scene, image denoising is a good choice. In this thesis, I will present my work on image denoising, including synthetic noisy images and real noisy images. Note that the realistic noise in real color noisy images are much more complex than the usually synthetic additive white Gaussian noise (AWGN). This is because that during the camera imaging pipeline, the noise generated will be modified to be more complex than the noise in the raw sensor data. Hence, in this thesis, we pay more attention to the realistic noise generated during the camera imaging pipeline. 
+In order to obtain images of good quality while still maintaining the structures and details of the captured scenes, image denoising is an essential step. In this thesis, I will present my work on image denoising, in which we focus on synthetic additive white Gaussian noise (AWGN) and the realistic noise in real-world images. The AWGN noise is described as a Gaussian distribution $\mathcal{N}(0,\sigma^{2})$, which means that the noise is Gaussian distributed with $0$ mean and $\sigma$ standard deviation. Most of existing methods focus on processing AWGN noise since it is a perfect testing bed for evaluating the proposed methods as well as other image restoration problems such as image super-resolution, deblurring, inpainting, etc.
 
-In image denoising community, the most commonly studied noise is the additive white Gaussian noise, which is used to model the independent noise in the raw images. The AWGN noise is described as a Gaussian distribution $\mathcal{N}(0,\sigma^{2})$, which means that the noise is Gaussian distributed with $0$ mean and $\sigma$ standard deviation. Most of methods are focus on this type of noise since it is a good testing bed for many other image restoration problems such as super-resolution, deblurring, inpainting, etc.
+\section{Image Denoising}
 
-\section{Problem Formulation: Image Denoising}
+In general, image denoising aims to recover the latent clean image $\bm{x}$ from the observed noisy image $\bm{y}=\bm{x}+\bm{n}$, where $\bm{n}$ is assumed to be the additive noise. $\bm{n}$ is often assumed to be synthetic additive white Gaussian noise, or the realistic noise in real-world images. Image denoising can be viewed as a regression problem, in which a \textsl{plausible} clean image can be obtained from the infinite number of possible candidates. The word \textsl{plausible} means that the denoised image should look like the noisy image but without the noise component. 
+
+Image denoising would be very hard if we do not employ any prior information on it. The reason is that we do not know what exactly the latent clean image is without the prior information of the clean image. Hence, it is meaningful to exploit the most \textsl{plausible} image under some prior information. The most commonly used prior information in image denoising community is the Bayesian rule, which is also known as maximum A-posterior (MAP) property. Under the MAP framework, the most \textsl{plausible} latent clean image is the one which has the maximum Bayesian probability given the given noisy version. The posteriro probability can be measured by some existing evaluation methods which I will introduce in the following sections. In fact, the probability or measurements can measure the closeness of the latent clean image to the given noisy image. The closeness is usually measured by the $\ell_{2}$ norm of the difference between the two images mentioned above. There are many latent clean images with the same $\ell_{2}$ norm distance with the given noisy image. But some images in the circle are more \textsl{plausible} than the others due to the aspects of less artifacts, better structural preservation, and less remaining noise, etc. 
+
+
+\section{Evaluating Denoising Performance}
+
+In order to achieve the maximum Bayesian probability, we need calculate the measurements of goodness for the denoised images. A natural problem is, how to measure the quality of the denoised image? It is very important to find better answer to this question. In fact, the research of image quality accessment is to find good algorithms to measure the quality of images under different situations and applications including image denoising. 
+
+A initial understanding is that the answer to the above question is largely depends on the situations we face when we perform image denoising experiments. When we perform synthetic experiments on additive white Gaussian nosie (AWGN), we usually already have the original clean image, the noisy image is generated by adding synthetic AWGN noise to the clean image. Then we can directly measure the quality of the denoised image by some existing image quality assessment (IQA) metrics. When we do not have the clean image provided as ``ground truth'', a possible and final solution is to measure the image quality by relying on human subjective evaluation. The IQA metrics can be roughly divided into two major directions: 1) full reference IQA; and 2) no reference IQA. Full reference IQA metrics are based on the assumption that the true underlying image is available in order to compute a measure, while no reference IQA metrics perform quality assessments without the reference image since the true underlying image is not available. 
+
+We mentioned previously that the it is corresponding to the $\ell_{2}$ norm or equally mean square error (MSE) which is used to measure the distance between the denoised image and the given noisy image. In fact, the MSE measure is closely related to the famous peak signal to noise ratio (PSNR) metric. PSNR is the most commonly used full reference IQA metric for many image restoration tasks including denoising. The definition of PSNR can be formulated as follows (for 8-bit image):
+\begin{equation}
+\text{PSNR}
+=
+20\text{log}_{10}
+(\frac{2^{8}}{\text{RMSE}(\bm{x},\bm{y})}),
+\end{equation}
+where $\text{RMSE}(\bm{x},\bm{y})$ refers to the root mean square error defined as $\text{RMSE}=\sqrt{\frac{1}{NM}\sum_{i=1}^{N}\sum_{j=1}^{M}(\bm{x}_{ij}-\bm{y}_{ij})^{2}}$.
+
+
+
+
 
 \section{The Proposed Methods}
 \label{sec:intro:new}
