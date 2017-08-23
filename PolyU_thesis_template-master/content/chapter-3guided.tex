@@ -668,13 +668,76 @@ To demonstrate the advantages of external prior guided internal prior learning, 
 We compare the three methods on the 60 cropped images from \cite{crosschannel2016}.\ The average PSNR and run time are listed in Table \ref{tab1}.\ The best results are highlighted in bold.\ It can be seen that ``Guided Internal" method achieves better PSNR than both ``External" and ``Internal" methods. In addition, the ``Internal" method is very slow because it involves online GMM learning, while the ``Guided Internal" method is only a little slower than the ``External" method.\ Figs. \ref{fig6} and \ref{fig7} show the denoised images of two noisy images by the three methods.\ One can see that the  ``External" method is good at recovering large-scale structures (see Fig. \ref{fig6}) while the ``Internal" method is good at recovering fine-scale textures (see Fig. \ref{fig7}).\ By utilizing external priors to guide the internal prior learning, our proposed method can effectively recover both the large-scale structures and fine-scale textures. 
 
 %------------------------------------------------------------------------------------
-
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_dog.png}
+		\caption{Noisy}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_BM3DPoisson_dog.png}
+		\caption{GAT-BM3D}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_BM3D_dog.png}
+\caption{CBM3D}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_dog.png}
+\caption{WNNM}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_dog.png}
+\caption{CSF}
+    \end{subfigure}
+\hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_dog.png}
+		\caption{TNRD}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_dog.png}
+		\caption{DnCNN}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_NI_dog.png}
+\caption{NI}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_NC_dog.png}
+\caption{NC}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_dog.png}
+\caption{Ours}
+    \end{subfigure}
+    \caption{Denoised images of the real noisy image ``Dog'' \cite{ncwebsite} by different methods. The images are better to be zoomed in on screen.}
+    \label{fig7}
+\end{figure}
 
 
 
 \subsection{Comparison with State-of-the-Art Denoising Methods}
 
-\textbf{Comparison methods.}
+\textbf{Comparison methods}.
 We compare the proposed method with state-of-the-art image denoising methods, including GAT-BM3D \cite{Makitalo2013Optimal}, CBM3D \cite{cbm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, DnCNN \cite{zhang2017beyond}, CSF \cite{csf}, TNRD \cite{chen2015learning}, Noise Clinic (NC) \cite{noiseclinic,ncwebsite}, Cross-Channel (CC) \cite{crosschannel2016}, and Neat Image (NI) \cite{neatimage}.\ Among these methods, GAT-BM3D \cite{Makitalo2013Optimal} is a state-of-the-art Poisson noise reduction method.\ The method CBM3D \cite{cbm3d} is a state-of-the-art method for color image denoising and the noise on color images is assumed to be additive white Gaussian.\ The methods of WNNM, MLP, DnCNN, CSF, and TNRD are state-of-the-art Gaussian noise removal methods for grayscale images, and we apply them to each channel of color images for denoising. NC is a blind image denoising method, and NI is a set of commercial software for image denoising, which has been embedded into Photoshop and Corel PaintShop. The code of CC is not released but its results on the 15 cropped images are available at \cite{crosschannel2016}. Therefore, we only compare with it on the 15 cropped images in dataset 2 from \cite{crosschannel2016}. 
 
 \textbf{Noise level of comparison methods.} 
