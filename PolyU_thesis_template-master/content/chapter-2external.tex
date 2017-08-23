@@ -210,71 +210,6 @@ In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each
 %-------------------------------------------------------------------------
 \section{Experiments}
 In this section, we perform image denoising experiments on 20 widely used natural images (shown in Fig. \ref{fig5}). More experiments on the Berkeley Segmentation Data Set \cite{bsds} can be found in the supplementary file. As a common experimental setting in literature, additive white Gaussian noise with zero mean and standard deviation $\sigma$ is added to the image to test the performance of competing denoising methods. We call our method \textsl{PG Prior based Denoising} (PGPD) in the following experiments. The Matlab source code of our PGPD algorithm can be downloaded at \url{http://www4.comp.polyu.edu.hk/~cslzhang/code/PGPD.zip}.
-\begin{figure}[t]
-\centering
-\subfigure{
-\includegraphics[width=10mm]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/airfield.png}}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/airplane.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/baboon.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/barbara.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/boat.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/cameraman.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/carhouse.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/couple.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/elaine.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/hat.png}
-}
-\subfigure{
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/hill.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/house.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/lake.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/leaves.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/lena.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/man.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/monarch.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/paint.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/peppers.png}
-}
-\subfigure{
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/zelda.png}
-}
-\caption{The 20 widely used test images.}
-\label{fig5}
-\end{figure}
 
 \subsection{Implementation Details}
 Our proposed PGPD method contains two stages, the prior learning stage and the denoising stage. In the PG-GMM learning stage, there are 4 parameters: $p$, $M$, $W$ and $K$. The patch size ($p\times p$) is set as $p = 6$ for $0 < \sigma \le 20$, $p = 7$ for $20 < \sigma \le 30$, $p = 8$ for $30 < \sigma \le 50$, and $p=9$ for $50 < \sigma \le 100$. The window size ($W$) for PG searching is set to $W = 31$. The number ($M$) of patches in a PG is set to $M=10$. The number ($K$) of Gaussian components is set to $K=64$ for $p=6$ and $K=32$ otherwise. We extracted about one million PGs from the Kodak PhotoCD Dataset to train the PG-GMM. 
@@ -294,7 +229,7 @@ We evaluate the competing methods from three aspects: PSNR, Speed, and Visual Qu
 \textbf{Visual Quality}. Considering that human subjects are the ultimate judge of the image quality, the visual quality of denoised images is also critical to evaluate a denoising algorithm. Fig. \ref{fig6} and Fig. \ref{fig7} show the denoised images of \textsl{Airplane} and \textsl{Cameraman} by the competing methods, respectively. Due to the page limit, the results of PPD are not shown here, and more visual comparisons can be found in the supplementary file.\ We can see that BM3D tends to over-smooth the image, while EPLL, LSSC, NCSR and WNNM are likely to generate artifacts when noise is high. Owe to the learned NSS prior, the proposed PGPD method is more robust against artifacts, and it preserves edge and texture areas much better than the other methods. For example, in image \textsl{Airplane}, PGPD reconstructs the numbers ``01568'' more clearly than all the other methods including WNNM. In image \textsl{Cameraman}, PGPD recoveries more faithfully the fine structures of the camera area. 
 
 In summary, the proposed PGPD method demonstrates powerful denoising ability quantitatively and qualitatively, and it is highly efficient.
-\begin{table*}[t]
+\begin{table}[t]
 \caption{PSNR(dB) results of different denoising algorithms on 20 natural images.}
 \label{tab1}
 \begin{center}
@@ -447,8 +382,8 @@ Images&\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&\te
 \hline
 \end{tabular}
 \end{center}
-\end{table*}
-\begin{table*}
+\end{table}
+\begin{table}
 \caption{Average run time (seconds) with standard deviation of different methods on images of size $256\times 256$ and $512\times 512$. BM3D uses parallelization and is implemented with compiled C++ mex-function while the other methods are implemented in Matlab.}
 \label{tab2}
 \scriptsize
@@ -514,106 +449,8 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 \hline
 \end{tabular}
 \end{center}
-\end{table*}
-\begin{figure*}
-\centering
-\subfigure{
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_airplane.png}}
-{\footnotesize (a) Ground Truth}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_airplane_50.png}}
-{\footnotesize (b) Noisy Image (PSNR: 14.16dB)}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_BM3D_50_airplane.png}}
-{\footnotesize (c) BM3D (PSNR: 28.24dB)}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_LSSC_50_airplane.png}}
-{\footnotesize (d) LSSC (PSNR: 28.15dB)}
-\end{minipage}
-}
-\subfigure{
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_EPLL_50_airplane.png}}
-{\footnotesize (e) EPLL (PSNR: 28.19dB)}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_NCSR_50_airplane.png}}
-{\footnotesize (f) NCSR (PSNR: 28.18dB)}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_WNNM_50_airplane.png}}
-{\footnotesize (g) WNNM (PSNR: 28.55dB)}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_our_50_airplane.png}}
-{\footnotesize (h) PGPD (PSNR: 28.38dB)}
-\end{minipage}
-}
-\caption{Denoised images of \textsl{Airplane} by different methods (the standard deviation of noise is $\sigma=50$).}
-\label{fig6}
-\end{figure*}
-%-------------------------------------------------------------------------------------
-\begin{figure*}
-\centering
-\subfigure{
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_cameraman.png}}
-{\footnotesize (a) Ground Truth}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_cameraman_75.png}}
-{\footnotesize (b) Noisy Image (PSNR: 10.60dB)}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_BM3D_75_cameraman.png}}
-{\footnotesize (c) BM3D (PSNR: 24.33dB)}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_LSSC_75_cameraman.png}}
-{\footnotesize (d) LSSC (PSNR: 24.41dB)}
-\end{minipage}
-}
-\subfigure{
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_EPLL_75_cameraman.png}}
-{\footnotesize (e) EPLL (PSNR: 24.29dB)}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_NCSR_75_cameraman.png}}
-{\footnotesize (f) NCSR (PSNR: 24.22dB)}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_WNNM_75_cameraman.png}}
-{\footnotesize (g) WNNM (PSNR: 24.55dB)}
-\end{minipage}
-\begin{minipage}[t]{0.244\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_our_75_cameraman.png}}
-{\footnotesize (h) PGPD (PSNR: 24.64dB)}
-\end{minipage}
-}
-\caption{Denoised images of \textsl{Cameraman} by different methods (the standard deviation of noise is $\sigma=75$).}
-\label{fig7}
-\end{figure*}
+\end{table}
+
 
 \section{Conclusion}
 How to learn explicit models of nonlocal self-similarity (NSS) prior for image restoration is an open problem, and we made a good attempt on this by lifting the patch based image modeling to patch group (PG) based image modeling. A PG is a group of similar patches in an image region. After group mean subtraction, a PG can naturally represent the NSS variations of natural images. A PG based Gaussian Mixture Model (PG-GMM) learning algorithm was developed to learned the NSS prior from natural images, and an associated weighted sparse coding algorithm was developed for high performance image denoising. The so-called \textsl{PG Prior based Denoising} (PGPD) algorithm not only achieves highly competitive PSNR results with state-of-the-art denoising methods, but also is highly efficient and preserves better the image edges and textures. The proposed method can be extended to other image processing tasks such as deblurring and super-resolution.
