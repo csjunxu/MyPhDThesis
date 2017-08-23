@@ -759,55 +759,67 @@ Fig.\ \ref{f3} shows the denoised images of ``Dog'' by the competing methods.\ I
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_kodim08_1.png}
-		\caption{Clean Red Channel}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_Noisy_dog.png}
+		\caption{Noisy}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_Noisy_nSig402030_kodim08_1.png}
-		\caption{Noisy Red Channel}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_BM3D_dog.png}
+		\caption{CBM3D}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_kodim08_2.png}
-\caption{Clean Green Channel}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_MLP_dog.png}
+\caption{MLP}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_Noisy_nSig402030_kodim08_2.png}
-\caption{Noisy Green Channel}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_TRD_dog.png}
+\caption{TNRD}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_WNNMJ_nSig402030_lambda1_kodim08_1.png}
-\caption{Denoised Red by WNNM}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_NI_dog.png}
+\caption{NI}
     \end{subfigure}
 \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_CWNNM_ADMM_nSig402030_kodim08_1.png}
-		\caption{Denoised Red by MC-WNNM}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_NC_dog.png}
+		\caption{NC}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_WNNMJ_nSig402030_lambda1_kodim08_2.png}
-		\caption{Denoised Green by WNNM}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_WNNM_dog.png}
+		\caption{WNNM-1}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_CWNNM_ADMM_nSig402030_kodim08_2.png}
-\caption{Denoised Green by MC-WNNM}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_WNNMJ_dog.png}
+		\caption{WNNM-2}
     \end{subfigure}
-    \caption{The Red and Green channels of the image ``kodim08'' from the Kodak PhotoCD Dataset, its synthetic noisy version, and the images recovered by the concatenated WNNM and the proposed MC-WNNM methods.}
-    \label{fig1}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_WNNM_ADMM_dog.png}
+		\caption{WNNM-3}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_CWNNM_ADMM_NL_dog.png}
+		\caption{MC-WNNM}
+    \end{subfigure}
+    \caption{Denoised images of the real noisy image ``Dog'' \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are 16.8, 17.0, and 16.6, respectively.\ The images are better to be zoomed in on screen.}
+    \label{fig3}
 \end{figure}
 
 
@@ -913,57 +925,70 @@ Camera Settings
 \end{center}
 \end{table}
 
+
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_kodim08_1.png}
-		\caption{Clean Red Channel}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_Noisy_d800_iso1600_2.png}
+		\caption{Noisy 35.71}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_Noisy_nSig402030_kodim08_1.png}
-		\caption{Noisy Red Channel}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_CBM3D_CC15_d800_iso1600_2.png}
+		\caption{CBM3D 37.76}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_kodim08_2.png}
-\caption{Clean Green Channel}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_TRD_CC15_d800_iso1600_2.png}
+\caption{TNRD 40.52}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_Noisy_nSig402030_kodim08_2.png}
-\caption{Noisy Green Channel}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_WNNMJ_nSig402030_lambda1_kodim08_1.png}
-\caption{Denoised Red by WNNM}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_NI_CC15_d800_iso1600_2.png}
+\caption{NI 38.42}
     \end{subfigure}
 \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_CWNNM_ADMM_nSig402030_kodim08_1.png}
-		\caption{Denoised Red by MC-WNNM}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_NC_CC15_d800_iso1600_2.png}
+		\caption{NC 38.65}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_WNNMJ_nSig402030_lambda1_kodim08_2.png}
-		\caption{Denoised Green by WNNM}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_CC_d800_iso1600_2.png}
+		\caption{CC 40.36}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/br_CWNNM_ADMM_nSig402030_kodim08_2.png}
-\caption{Denoised Green by MC-WNNM}
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_WNNMJ_CC15_d800_iso1600_2.png}
+		\caption{WNNM-2 41.24}
     \end{subfigure}
-    \caption{The Red and Green channels of the image ``kodim08'' from the Kodak PhotoCD Dataset, its synthetic noisy version, and the images recovered by the concatenated WNNM and the proposed MC-WNNM methods.}
-    \label{fig1}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_WNNM_ADMM_NL_CC15_d800_iso1600_2.png}
+		\caption{WNNM-3 40.81}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_CWNNM_ADMM_NL_CC15_d800_iso1600_2.png}
+		\caption{MC-WNNM \textbf{41.43}}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_d800_iso1600_2.png}
+		\caption{Mean Image}
+    \end{subfigure}
+    \caption{Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Nikon D800 ISO=1600 2'' \cite{crosschannel2016} by different methods.\ The estimated noise levels of R, G, and B channels are 1.3, 1.1, and 1.4, respectively.\ The images are better to be zoomed in on screen.}
+    \label{fig4}
 \end{figure}
 
 \quad As described at the beginning of Section 4.3, there is a mean image for each noisy image in dataset \cite{crosschannel2016}, and those mean images can be roughly taken as ``ground truth'' for quantitative evaluation of denoising algorithms.
