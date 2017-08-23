@@ -730,7 +730,7 @@ We compare the three methods on the 60 cropped images from \cite{crosschannel201
 \caption{Ours}
     \end{subfigure}
     \caption{Denoised images of the real noisy image ``Dog'' \cite{ncwebsite} by different methods. The images are better to be zoomed in on screen.}
-    \label{fig7}
+    \label{fig8}
 \end{figure}
 
 
@@ -868,6 +868,74 @@ Similar to dataset 2 \cite{crosschannel2016}, there is a ``ground truth'' image 
 
 \textbf{Comparison on speed.}
 Efficiency is an important aspect to evaluate the efficiency of algorithms. We compare the speed of all competing methods except for CC. All experiments are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-5930K CPU of 3.5GHz and 32GB RAM. The average running time (second) of the compared methods on the 100 real noisy images is shown in Table V. The least average running time are highlighted in bold. One can easily see that the commercial software Neat Image (NI) is the fastest method with highly optimized code. For a $512\times512$ image, NI costs about 0.6 second. The other methods cost from 5.2 (TNRD) to 152.2 (WNNM) seconds, while the proposed method costs about 24.1 seconds. It should be noted that GAT-BM3D, CBM3D, TNRD, and NC are implemented with compiled C++ mex-function and with parallelization, while WNNM, MLP, CSF, DnCNN, and the proposed method are implemented purely in Matlab. 
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_5dmark3_iso3200_1_real.png}
+		\caption{Noisy 37.00}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_CBM3D_5dmark3_iso3200_1_real.png}
+		\caption{CBM3D39.76}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_5dmark3_iso3200_1_real.png}
+\caption{WNNM 37.51}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_5dmark3_iso3200_1_real.png}
+\caption{TNRD 39.51}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_5dmark3_iso3200_1_real.png}
+\caption{DnCNN 37.26}
+    \end{subfigure}
+\hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_NI_5dmark3_iso3200_1_real.png}
+		\caption{NI 37.68}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_NC_5dmark3_iso3200_1_real.png}
+		\caption{NC 38.76}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_CCNoise_5dmark3_iso3200_1.png}
+\caption{CC 38.37}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_5dmark3_iso3200_1.png}
+\caption{Ours \textbf{40.50}}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_5dmark3_iso3200_1_real.png}
+\caption{Mean Image}
+    \end{subfigure}
+    \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 5D Mark 3 ISO 3200 1'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
+    \label{fig9}
+\end{figure}
+
+
 
 
 \begin{table*}\vspace{-4mm}
