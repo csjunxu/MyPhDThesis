@@ -35,62 +35,61 @@ barbu2009training,csf}, which learn denoising models from pairs of clean and noi
  
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}
-	   \caption{Noisy: 33.30}
+	   \caption{Noisy 33.30}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{images/guided/resize_br_CBM3D_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}
-		\caption{CBM3D: 34.55}
+		\caption{CBM3D34.55}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}
-		\caption{WNNM: 35.85}
+		\caption{WNNM35.85}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}
-		\caption{CSF: 35.39}
+		\caption{CSF 35.39}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}
-		\caption{TNRD: 35.97}
+		\caption{TNRD 35.97}
     \end{subfigure}
     \hfill
-
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}
-	   \caption{DnCNN: 34.14}
+	   \caption{DnCNN34.14}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{images/guided/resize_br_NI_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}
-		\caption{NI: 34.39}
+		\caption{NI 34.39}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{images/guided/resize_br_NC_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}
-		\caption{NC: 35.33}
+		\caption{NC 35.33}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}
-		\caption{Ours: \textbf{37.49}}
+		\caption{Ours \textbf{37.49}}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[t]{0.2\textwidth}
+    \begin{subfigure}[t]{0.19\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}
 		\caption{Mean Image}
@@ -111,7 +110,7 @@ This work aims to develop a new paradigm for real noisy image denoising. Differe
 \label{fig2}
 \centering
 \captionsetup{justification=centering,margin=0.1cm}
-\includegraphics[width=0.65\linewidth]{images/guided/Flowchart.jpg}
+\includegraphics[width=0.8\linewidth]{images/guided/Flowchart.jpg}
 \centering
 \caption{Flowchart of the proposed external prior guided internal prior learning and denoising framework.}
 \end{figure}
@@ -422,6 +421,62 @@ Since the image size is very large (about $7000\times5000$) and the 11 scenes sh
 \textbf{Dataset 3.} The scenes of dataset 2 are mostly printed photos, and they cannot represent realistic objects and scenes with different reflectance properties. To remedy the limitation of dataset 2, we construct another dataset which contains images of 10 different scenes captured by Canon 80D and Sony A7II cameras under more ISO settings. The ISO settings in our dataset are 800, 1600, 3200, 6400, 12800 while those of dataset 2 are 1600, 3200, 6400. Similar to dataset 2, each scene was captured 500 shots, and the mean image of these 500 shots can be used a kind of ground-truth to evaluate the denoising algorithms. Fig. \ref{fig5} shows some cropped images of the scenes in our dataset. One can see that the images contain a lot of different realistic objects with varying colors, shapes, materials, etc. 
 
 Our dataset provides real noisy images of realistic objects with different ISO settings. It can be used to more fairly evaluate the performance of different real noisy image denoising methods. Consider that the image resolution is very high (about $4000\times4000$), for the convenience of experimental studies, we cropped 100 (10 for each scene) smaller images (of size $512\times512$) from it to perform experiments. The whole dataset will be made publically available with the publication of this paper.
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}
+    \end{subfigure}
+    \caption{Some samples cropped from real noisy images of Dataset 1 \cite{ncwebsite}.}
+    \label{fig3}
+\end{figure}
 
 
 
