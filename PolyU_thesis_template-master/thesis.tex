@@ -76,15 +76,27 @@
 
 
 \usepackage{bm,amsmath,amssymb,amsthm}
+\makeatletter
+\newtheorem*{rep@theorem}{\rep@title}
+\newcommand{\newreptheorem}[2]{%
+\newenvironment{rep#1}[1]{%
+ \def\rep@title{#2 \ref{##1}}%
+ \begin{rep@theorem}}%
+ {\end{rep@theorem}}}
+\makeatother
+
 \usepackage{caption}
 \usepackage{subcaption}
 \DeclareMathOperator*{\argmin}{arg\,min}
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{conj}[theorem]{Conjecture}
+\newreptheorem{theorem}{Theorem}
+\newreptheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newreptheorem{corollary}{Corollary}
 \usepackage{multirow}
 \usepackage{arydshln}
-
 
 
 
