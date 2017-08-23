@@ -6,12 +6,12 @@
 %\cleanchapterquote{Innovation distinguishes between a leader and a follower.}{Steve Jobs}{(CEO Apple Inc.)}
 
 \section{Introduction}
-%\begin{figure}
-%\centering
-%\includegraphics[width=0.74\linewidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/flowchart2.png}
-%\caption{Flowchart of the proposed patch group based prior learning and image denoising framework.}
-%\label{fig1}
-%\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=0.74\linewidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/flowchart2.png}
+\caption{Flowchart of the proposed patch group based prior learning and image denoising framework.}
+\label{fig1}
+\end{figure}
 
 As a classical problem in low level vision, image denoising has been extensively studied, yet it is still an active topic for that it provides an ideal test bed for image modeling techniques. In general, image denoising aims to recover the clean image $\bm{x}$ from its noisy observation $\bm{y} = \bm{x} + \bm{v}$, where $\bm{v}$ is assumed to be additive white Gaussian noise.\ A variety of image denoising methods have been developed in past decades, including filtering based methods \cite{Tomasi1998}, diffusion based methods \cite{PeronaMalik1990}, total variation based methods \cite{rudin1992nonlinear,osher2005iterative}, wavelet/curvelet based methods \cite{softthresholding,bayesshrink,curvelet}, sparse representation based methods \cite{ksvd,lssc,ncsr}, nonlocal self-similarity based methods \cite{nlm,bm3d,nnm,wnnm}, etc.
 
@@ -26,7 +26,6 @@ Though NSS has demonstrated its great success in image denoising, in most existi
 With the above considerations, in this work we propose to learn explicit NSS models from natural images, and apply the learned prior models to noisy images for high performance denoising. The flowchart of the proposed method is illustrated in Fig.\ \ref{fig1}.\ In the learning stage, we extract millions of patch groups (PG) from a set of clean natural images.\ A PG is formed by grouping the similar patches to a local patch in a large enough neighborhood.\ A PG based GMM (PG-GMM) learning algorithm is developed to learn the NSS prior for the PGs. In the denoising stage, the learned PG-GMM will provide dictionaries as well as regularization parameters, and a simple weighted sparse coding model is developed for image denoising.\ Our extensive experiments validated that the proposed PG prior based denoising method outperforms many state-of-the-art algorithms quantitatively (in PSNR) while being much more efficient. More importantly, it delivers the best qualitative denoising results with finer details and less artifacts, owe to the NSS prior learned from clean natural images.   
 
 %-------------------------------------------------------------------------
-\vspace{-0.1in}
 \section{Patch Group Based Prior Modeling of Nonlocal Self-Similarity}
 Image nonlocal self-similarity (NSS) has been widely adopted in patch based image denoising and other image restoration tasks \cite{nlm,bm3d,lssc,ncsr,wnnm}.\ Despite the great success of NSS in image restoration, most of the existing works exploit the NSS only from the degraded image.\ Usually, for a given patch in the degraded image, its nonlocal similar patches are collected, and then the nonlocal means \cite{nlm}, or 3D transforms \cite{bm3d}, or some regularization terms \cite{lssc,ncsr,wnnm,srcolor} can be introduced for image restoration. However, how to learn the NSS prior from clean natural images and apply it to image restoration is still an open problem. In this work, we make the first attempt on this problem, and develop a patch group (PG) based NSS prior learning scheme.  
 \subsection{Patch Group and Group Mean Subtraction}
@@ -48,10 +47,8 @@ The PGs $\{\bm{\overline{X}}_{n}\}$ contain a rich amount of NSS information of 
 \begin{figure}
 \centering
 \centering
-\includegraphics[width=0.7\linewidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/2pgs.png}
-\vspace{-0.05in}
+\includegraphics[width=0.7\linewidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/2pgs.png}
 \caption{Different patch groups (PG) share similar PG variations.}
-\vspace{-0.15in}
 \label{fig2}
 \end{figure}
 
@@ -85,11 +82,9 @@ The calculations of $\pi_{k}=\frac{1}{N}\sum_{n=1}^{N}\gamma_{nk}$ are similar t
 By alternating between the E-step and the M-step, the model parameters will be updated iteratively, and the update in each iteration can guarantee to increase the value of the log-likelihood function (\ref{equ5}), and the EM algorithm will converge \cite{Bishop,emconvergence}. Fig. \ref{fig3} shows the convergence curve of the proposed PG-GMM algorithm by using the Kodak PhotoCD Dataset (\url{http://r0k.us/graphics/kodak/}) for training.
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.75\linewidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/cvgc.png}
-\vspace{-0.05in}
+\includegraphics[width=0.75\linewidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/cvgc.png}
 \caption{The convergence curve of log-likelihood in PG-GMM training on the Kodak PhotoCD Dataset.
 }
-\vspace{-0.2in}
 \label{fig3}
 \end{figure}
 
@@ -104,16 +99,13 @@ Second, as can be seen in Eq.\ (\ref{equ9}), the mean vector of each Gaussian co
 
 Third, due to reduction of possible patterns in PG-GMM and the reduced number of variables to learn, we do not need to set a large number of Gaussian components in PG-GMM learning. For example, in EPLL \cite{epll}, 200 Gaussian components are learned to achieve competing denoising performance with BM3D \cite{bm3d}, while in PG-GMM learning only 32 Gaussian components are enough to outperform BM3D (please refer to the experimental section for details).
 %-------------------------------------------------------------------------
-\vspace{-0.2in}
 \section{Image Denoising by Patch Group Priors}
 \subsection{Denoising Model}
 Given a noisy image $\bm{y}$, like in the PG-GMM learning stage, for each local patch we search for its similar patches in a window centered on it to form a PG, denoted by $\bm{Y} = \{\bm{y}_{1},...,\bm{y}_{M}\}$. Then the group mean of $\bm{Y}$, denoted by $\bm{\mu}_{y}$, is calculated and subtracted from each patch, leading to the mean subtracted PG $\bm{\overline{Y}}$. We can write $\bm{\overline{Y}}$ as $\bm{\overline{Y}}=\bm{\overline{X}}+\bm{V}$, where $\bm{\overline{X}}$ is the corresponding clean PG and $\bm{V}$ contains the corrupted noise. The problem then turns to how to recover $\bm{\overline{X}}$ from $\bm{\overline{Y}}$ by using the learned PG-GMM priors. Note that the mean $\bm{\mu}_{y}$ of $\bm{\overline{Y}}$  is very close to the mean of $\bm{\overline{X}}$ since the mean vector of noise $\bm{V}$ is nearly zero.\ $\bm{\mu}_{y}$ will be added back to the denoised PG to obtain the denoised image. 
-\vspace{-0.1in}
+
 \subsubsection{Gaussian Component Selection}
 For each $\bm{\overline{Y}}$, we select the most suitable Gaussian component to it from the trained PG-GMM. As in \cite{epll}, suppose that the variance of Gaussian white noise corrupted in the image is $\sigma^{2}$, the covariance matrix of the $k$th component will become $\bm{\Sigma}_{k}+\sigma^{2}\bm{I}$, where $\bm{I}$ is the identity matrix. The selection can be done by checking the posterior probability that $\bm{\overline{Y}}$ belongs to the $k$th Gaussian component:
 \begin{equation}\label{equ8}
-\setlength{\abovedisplayskip}{3pt}
-\setlength{\belowdisplayskip}{4pt}
 P(k|\bm{\overline{Y}})=\frac{\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{y}}_{m}|\bm{0},\bm{\Sigma}_{k}+\sigma^{2}\bm{I})}{\sum_{l=1}^{K}\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{y}}_{m}|\bm{0},\bm{\Sigma}_{l}+\sigma^{2}\bm{I})}.
 \end{equation}
 Taking log-likelihood of (\ref{equ8}), we have
@@ -123,76 +115,57 @@ Taking log-likelihood of (\ref{equ8}), we have
 \ln P(k|\bm{\overline{Y}}) = \sum\nolimits_{m=1}^{M}\ln\mathcal{N}(\bm{\overline{y}}_{m}|\bm{0},\bm{\Sigma}_{k}+\sigma^{2})-\ln{C}
 \end{equation}
 where $C$ is the denominator in Eq. (\ref{equ9}) and it is the same for all components. Finally, the component with the highest probability $\ln P(k|\bm{\overline{Y}})$ is selected to process $\bm{\overline{Y}}$.
-\vspace{-0.1in}
+
+
 \subsubsection{Weighted Sparse Coding with Closed-Form Solution}
 Suppose that the $k$th Gaussian component is selected for PG $\bm{\overline{Y}}$. For notation simplicity, we remove the subscript $k$ and denote by $\bm{\Sigma}$ the covariance matrix of this component. In PG-GMM, the PGs actually represent the variations of the similar patches in a group, and these variations are assigned to the same Gaussian distribution. By singular value decomposition (SVD), $\bm{\Sigma}$ can be factorized as
 \begin{equation}\label{equ10}
-\setlength{\abovedisplayskip}{3pt}
-\setlength{\belowdisplayskip}{3pt}
 \bm{\Sigma} = \bm{D}\bm{\Lambda}\bm{D}^{T},
 \end{equation}
 where $\bm{D}$ is an orthonormal matrix composed by the eigenvectors of $\bm{\Sigma}$ and $\bm{\Lambda}$ is the diagonal matrix of eigenvalues. With PG-GMM, the eigenvectors  in $\bm{D}$ capture the statistical structures of NSS variations in natural images, while the eigenvalues in $\bm{\Lambda}$ represent the significance of these eigenvectors. Fig.\ 4 shows the eigenvectors for 3 Gaussian components. It can be seen that these eigenvectors encode the possible variations of the PGs. For one Gaussian component, the first eigenvector represents its largest variation, while the last eigenvector represents its smallest variation. For different Gaussian components, we can see that their eigenvectors (with the same index) are very different. Hence, $\bm{D}$ can be used to represent the structural variations of the PGs in that component.
 \begin{figure}[t]
 \centering
-\includegraphics[width=1\linewidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/dics.png}
-\vspace{-0.1in}
+\includegraphics[width=1\linewidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/dics.png}
 \caption{Eigenvectors of 3 Gaussian components from the learned PG-GMM, sorted by the values of corresponding eigenvalues.}
-\vspace{-0.2in}
 \label{fig4}
 \end{figure}
 
 For each patch $\bm{\overline{y}}_{m}$ in the PG $\bm{\overline{Y}}$, we propose to use $\bm{D}$ as the dictionary to sparsely encode $\bm{\overline{y}}_{m}$ as $\bm{\overline{y}}_{m}=\bm{D}\bm{\alpha}+\bm{v}$, where $\bm{\alpha}$ is the vector of sparse coding coefficients and $\bm{v}$ is the corrupted noise. Meanwhile, we propose to introduce a weighting vector $\bm{w}$ to weight the coding vector $\bm{\alpha}$ (we will see in (\ref{equ16}) that $\bm{w}$ is related to the eigenvalues in $\bm{\Lambda}$), resulting in the following simple but highly effective weighted sparse coding model:
 \begin{equation}\label{equ11}
-\setlength{\abovedisplayskip}{3pt}
-\setlength{\belowdisplayskip}{3pt}
 \min_{\bm{\alpha}}{\|\bm{\overline{y}}_{m}-\bm{D}\bm{\alpha}\|_{2}^{2}+\|\bm{w}^{T}\bm{\alpha}\|_{1}}.
 \end{equation}
 
 From the viewpoint of Maximum A-Posterior (MAP) estimation, the optimal solution of (\ref{equ11}) is $\hat{\bm{\alpha}} = \arg\max\nolimits_{\bm{\alpha}}\ln P(\bm{\alpha}|\bm{\overline{y}}_{m})$. By Bayes' formula, it is equivalent to
 \begin{equation}\label{equ12}
-\setlength{\abovedisplayskip}{3pt}
-\setlength{\belowdisplayskip}{3pt}
 \hat{\bm{\alpha}} = \arg\max\nolimits_{\bm{\alpha}}\{\ln P(\bm{\overline{y}}_{m}|\bm{\alpha})+\ln P(\bm{\alpha})\}.
 \end{equation}
 The log-likelihood term $\ln P(\bm{\overline{y}}_{m}|\bm{\alpha})$ is characterized by the statistics of noise $\bm{v}$, which is assumed to be white Gaussian with standard deviation $\sigma$. Hence, we have
 \begin{equation}\label{equ13}
-\setlength{\abovedisplayskip}{3pt}
-\setlength{\belowdisplayskip}{3pt}
 P(\bm{\overline{y}}_{m}|\bm{\alpha}) = \frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\|\bm{\overline{y}}_{m}-\bm{D}\bm{\alpha}\|_{2}^{2}).
 \end{equation}
 We assume that the sparse coding coefficients in $\bm{\alpha}$ follow i.i.d.\ Laplacian distribution.\ More specifically, for entry $\bm{\alpha}_{i}$, which is the coding coefficient of patch $\bm{\overline{y}}_{m}$ over the $i$th eigenvector in $\bm{D}$, we assume that it follows distribution $\frac{c}{\sqrt{2}\bm{\lambda}_{i}}\exp(-c\sqrt{2}|\bm{\alpha}_{i}|/\bm{\lambda}_{i})$, where $\bm{\lambda}_{i}=\bm{\Lambda}_{i}^{1/2}$ and $c$ is a constant. Note that we adjust the scale factor of the distribution by (square root of) the $i$th eigenvalue $\bm{\Lambda}_{i}$. This is because the larger the eigenvalue $\bm{\Lambda}_{i}$ is, the more important the $i$th eigenvector in $\bm{D}$ is, and hence the distribution of the coding coefficients over this eigenvector should have a longer tail (i.e., less sparse). Finally, we have
 \begin{equation}\label{equ14}
-\setlength{\abovedisplayskip}{3pt}
-\setlength{\belowdisplayskip}{4pt}
 P(\bm{\alpha})=\prod\nolimits_{i=1}^{p^{2}}\frac{c}{\sqrt{2}\bm{\lambda}_{i}}\exp(-\frac{c\sqrt{2}|\bm{\alpha}_{i}|}{\bm{\lambda}_{i}}).
 \end{equation}
 Putting (\ref{equ13}) and (\ref{equ14}) into (\ref{equ12}), we have
 \begin{equation}\label{equ15}
-\setlength{\abovedisplayskip}{3pt}
-\setlength{\belowdisplayskip}{4pt}
 \hat{\bm{\alpha}}=\arg\min\nolimits_{\bm{\alpha}}\|\bm{\overline{y}}_{m}-\bm{D}\bm{\alpha}\|_{2}^{2}+\sum_{i=1}^{p^{2}}\frac{c*2\sqrt{2}\sigma^{2}}{\bm{\lambda}_{i}}|\bm{\alpha}_{i}|.
 \end{equation}
 By comparing (\ref{equ15}) with (\ref{equ11}), we can see that the $i$th entry of the weighting vector $\bm{w}$ should be
 \begin{equation}\label{equ16}
-\setlength{\abovedisplayskip}{3pt}
-\setlength{\belowdisplayskip}{3pt}
 \bm{w}_{i} = c*2\sqrt{2}\sigma^{2}/(\bm{\lambda}_{i}+\varepsilon),
 \end{equation}
 where $\varepsilon$ is a small positive number to avoid dividing by zero.
 
 With $\bm{w}$ determined by (\ref{equ16}), let's see what the solution of (\ref{equ11}) should be. Since the dictionary $\bm{D}$ is orthonormal, it is not difficult to find out that (\ref{equ11}) has a closed-form solution (detailed derivation can be found in the supplementary material):
 \begin{equation}\label{equ17}
-\setlength{\abovedisplayskip}{3pt}
-\setlength{\belowdisplayskip}{4pt}
 \hat{\bm{\alpha}}= \text{sgn}(\bm{D^{T}\overline{y}}_{m})\odot \text{max}(|\bm{D^{T}\overline{y}}_{m}|-\bm{w}/2,0),
 \end{equation}
 where $\text{sgn}(\bullet)$ is the sign function, $\odot$ means element-wise multiplication, and $|\bm{D^{T}\overline{y}}_{m}|$ is the absolute value of each entry of vector $|\bm{D^{T}\overline{y}}_{m}|$. The closed-form solution makes our weighted sparse coding process very efficient. 
-\vspace{-0.05in}
 \subsection{Denoising Algorithm}
 With the solution $\hat{\bm{\alpha}}$ in (\ref{equ17}), the clean patch in a PG can be estimated as $\hat{\bm{x}}_{m}=\bm{D}\hat{\bm{\alpha}}+\bm{\mu}_{y}$. Then the clean image $\hat{\bm{x}}$ can be reconstructed by aggregating all the estimated PGs. In practice, we could perform the above denoising procedures for several iterations for better denoising outputs. In iteration $t$, we use the iterative regularization strategy \cite{osher2005iterative} to add back to the recovered image $\hat{\bm{x}}^{(t-1)}$ some estimation residual in iteration $t-1$. The standard deviation of noise in iteration $t$ is adjusted as $\sigma^{(t)} = \eta*\sqrt{\sigma^{2}-\|\bm{y}-\bm{y}^{(t-1)}\|_{2}^{2}}$, where $\eta$ is a constant. The proposed denoising algorithm is summarized in Algorithm 1 (Alg. 1).
 
 In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each PG. Then the computational cost for Gaussian component selection is $O(p^{6}NMK)$.\ The cost for iterative regularization and noise estimation is negligible. The cost for closed-form weighted sparse coding is $O(p^{4}NM)$. Suppose that there are $T$ iterations, the overall complexity of our denoising algorithm is $O(p^{6}NMKT)$.
-\vspace{-0.05in}
 \begin{table}
 \label{alg1}
 \begin{tabular}{l}
@@ -232,95 +205,85 @@ In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each
 \\
 \textbf{Output:} The recovered image $\hat{\bm{x}}^{(IteNum)}$.\\
 \hline
-\end{tabular}\vspace{-0.15in}
+\end{tabular}
 \end{table}
 %-------------------------------------------------------------------------
 \section{Experiments}
 In this section, we perform image denoising experiments on 20 widely used natural images (shown in Fig. \ref{fig5}). More experiments on the Berkeley Segmentation Data Set \cite{bsds} can be found in the supplementary file. As a common experimental setting in literature, additive white Gaussian noise with zero mean and standard deviation $\sigma$ is added to the image to test the performance of competing denoising methods. We call our method \textsl{PG Prior based Denoising} (PGPD) in the following experiments. The Matlab source code of our PGPD algorithm can be downloaded at \url{http://www4.comp.polyu.edu.hk/~cslzhang/code/PGPD.zip}.
 \begin{figure}[t]
-\vspace{-0.1in}
 \centering
 \subfigure{
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/airfield.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/airplane.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/baboon.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/barbara.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/boat.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/cameraman.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/carhouse.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/couple.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/elaine.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/hat.png}
-\end{minipage}
-}\vspace{-0.14in}
-\setlength{\floatsep}{5pt plus 1.0pt minus 2.0pt}
+\includegraphics[width=10mm]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/airfield.png}}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/airplane.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/baboon.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/barbara.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/boat.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/cameraman.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/carhouse.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/couple.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/elaine.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/hat.png}
+}
 \subfigure{
 \begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/hill.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/house.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/lake.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/leaves.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/lena.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/man.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/monarch.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/paint.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/peppers.png}
-\end{minipage}
-\begin{minipage}{0.042\textwidth}
-\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/20images/zelda.png}
-\end{minipage}
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/hill.png}
 }
-\vspace{-0.1in}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/house.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/lake.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/leaves.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/lena.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/man.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/monarch.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/paint.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/peppers.png}
+}
+\subfigure{
+\includegraphics[width=1.06\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/20images/zelda.png}
+}
 \caption{The 20 widely used test images.}
-\vspace{-0.25in}
 \label{fig5}
 \end{figure}
-\vspace{-0.1in}
+
 \subsection{Implementation Details}
 Our proposed PGPD method contains two stages, the prior learning stage and the denoising stage. In the PG-GMM learning stage, there are 4 parameters: $p$, $M$, $W$ and $K$. The patch size ($p\times p$) is set as $p = 6$ for $0 < \sigma \le 20$, $p = 7$ for $20 < \sigma \le 30$, $p = 8$ for $30 < \sigma \le 50$, and $p=9$ for $50 < \sigma \le 100$. The window size ($W$) for PG searching is set to $W = 31$. The number ($M$) of patches in a PG is set to $M=10$. The number ($K$) of Gaussian components is set to $K=64$ for $p=6$ and $K=32$ otherwise. We extracted about one million PGs from the Kodak PhotoCD Dataset to train the PG-GMM. 
 
 In the denoising stage, there are 3 parameters:\ $c$, $\delta$, and $\eta$.\ In our implementation, ($c$, $\delta$, $\eta$) are set to $(0.33,0.10,0.79)$, $(0.29,0.09,0.73)$, $(0.19,0.08,0.89)$, $(0.15,0.07,0.98)$, $(0.12,0.06,1.05)$, $(0.09,0.05,1.15)$, $(0.06,0.05,1.30)$ when $\sigma=10,20,30,40,50,75,100$, respectively. In addition, on all noise levels we stop Algorithm 1 in 4 iterations.
-\vspace{-0.05in}
 \subsection{Comparison Methods}
 We compare the proposed PGPD algorithm with BM3D \cite{bm3d}, EPLL \cite{epll}, LSSC \cite{lssc}, NCSR \cite{ncsr}, and WNNM \cite{wnnm}, which represent the state-of-the-arts of modern image denoising techniques and all of them exploit image NSS. The source codes of all competing algorithms are downloaded from the authors' websites and we use the default parameter settings.  
 
 To more clearly demonstrate the effectiveness of PG based NSS prior learning, we also compare with an extreme case of PGPD, i.e., letting $M=1$ in the PG-GMM learning stage\footnote{Since there is only 1 patch in the PG, the group mean vector cannot be subtracted and we subtract the mean value of the patch from it.}. Clearly, this reduces to a patch based prior learning scheme and no NSS prior will be learned. We call this extreme case as \textsl{Patch Prior based Denoising} (PPD).  The number of Gaussian components in PPD is set to 64, and the weighted sparse coding framework in it is the same as that in PGPD. All the other parameters in PPD are tuned to achieve its best performance.
-\vspace{-0.05in}
 \subsection{Results and Discussions}
 We evaluate the competing methods from three aspects: PSNR, Speed, and Visual Quality.
 
@@ -331,7 +294,6 @@ We evaluate the competing methods from three aspects: PSNR, Speed, and Visual Qu
 \textbf{Visual Quality}. Considering that human subjects are the ultimate judge of the image quality, the visual quality of denoised images is also critical to evaluate a denoising algorithm. Fig. \ref{fig6} and Fig. \ref{fig7} show the denoised images of \textsl{Airplane} and \textsl{Cameraman} by the competing methods, respectively. Due to the page limit, the results of PPD are not shown here, and more visual comparisons can be found in the supplementary file.\ We can see that BM3D tends to over-smooth the image, while EPLL, LSSC, NCSR and WNNM are likely to generate artifacts when noise is high. Owe to the learned NSS prior, the proposed PGPD method is more robust against artifacts, and it preserves edge and texture areas much better than the other methods. For example, in image \textsl{Airplane}, PGPD reconstructs the numbers ``01568'' more clearly than all the other methods including WNNM. In image \textsl{Cameraman}, PGPD recoveries more faithfully the fine structures of the camera area. 
 
 In summary, the proposed PGPD method demonstrates powerful denoising ability quantitatively and qualitatively, and it is highly efficient.
-\vspace{-0.2in}
 \begin{table*}[t]
 \caption{PSNR(dB) results of different denoising algorithms on 20 natural images.}
 \label{tab1}
@@ -486,11 +448,8 @@ Images&\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&\te
 \end{tabular}
 \end{center}
 \end{table*}
-\vspace{-0.1in}
 \begin{table*}
-\vspace{-0.15in}
 \caption{Average run time (seconds) with standard deviation of different methods on images of size $256\times 256$ and $512\times 512$. BM3D uses parallelization and is implemented with compiled C++ mex-function while the other methods are implemented in Matlab.}
-\vspace{-0.13in}
 \label{tab2}
 \scriptsize
 \begin{center}
@@ -554,113 +513,107 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 \\
 \hline
 \end{tabular}
-\end{center}\vspace{-0.26in}
+\end{center}
 \end{table*}
 \begin{figure*}
 \centering
 \subfigure{
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_airplane.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_airplane.png}}
 {\footnotesize (a) Ground Truth}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_airplane_50.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_airplane_50.png}}
 {\footnotesize (b) Noisy Image (PSNR: 14.16dB)}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_BM3D_50_airplane.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_BM3D_50_airplane.png}}
 {\footnotesize (c) BM3D (PSNR: 28.24dB)}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_LSSC_50_airplane.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_LSSC_50_airplane.png}}
 {\footnotesize (d) LSSC (PSNR: 28.15dB)}
 \end{minipage}
-}\vspace{-0.12in}
-\vspace{-0.03in}
+}
 \subfigure{
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_EPLL_50_airplane.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_EPLL_50_airplane.png}}
 {\footnotesize (e) EPLL (PSNR: 28.19dB)}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_NCSR_50_airplane.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_NCSR_50_airplane.png}}
 {\footnotesize (f) NCSR (PSNR: 28.18dB)}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_WNNM_50_airplane.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_WNNM_50_airplane.png}}
 {\footnotesize (g) WNNM (PSNR: 28.55dB)}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_our_50_airplane.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_our_50_airplane.png}}
 {\footnotesize (h) PGPD (PSNR: 28.38dB)}
 \end{minipage}
 }
 \caption{Denoised images of \textsl{Airplane} by different methods (the standard deviation of noise is $\sigma=50$).}
-\vspace{-0.05in}
 \label{fig6}
 \end{figure*}
 %-------------------------------------------------------------------------------------
 \begin{figure*}
-\vspace{-0.02in}
 \centering
 \subfigure{
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_cameraman.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_cameraman.png}}
 {\footnotesize (a) Ground Truth}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_cameraman_75.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_cameraman_75.png}}
 {\footnotesize (b) Noisy Image (PSNR: 10.60dB)}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_BM3D_75_cameraman.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_BM3D_75_cameraman.png}}
 {\footnotesize (c) BM3D (PSNR: 24.33dB)}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_LSSC_75_cameraman.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_LSSC_75_cameraman.png}}
 {\footnotesize (d) LSSC (PSNR: 24.41dB)}
 \end{minipage}
-}\vspace{-0.12in}
-\vspace{-0.03in}
+}
 \subfigure{
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_EPLL_75_cameraman.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_EPLL_75_cameraman.png}}
 {\footnotesize (e) EPLL (PSNR: 24.29dB)}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_NCSR_75_cameraman.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_NCSR_75_cameraman.png}}
 {\footnotesize (f) NCSR (PSNR: 24.22dB)}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_WNNM_75_cameraman.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_WNNM_75_cameraman.png}}
 {\footnotesize (g) WNNM (PSNR: 24.55dB)}
 \end{minipage}
 \begin{minipage}[t]{0.244\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/br_our_75_cameraman.png}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/br_our_75_cameraman.png}}
 {\footnotesize (h) PGPD (PSNR: 24.64dB)}
 \end{minipage}
 }
 \caption{Denoised images of \textsl{Cameraman} by different methods (the standard deviation of noise is $\sigma=75$).}
-\vspace{-0.18in}
 \label{fig7}
 \end{figure*}
+
 \section{Conclusion}
-\vspace{-0.03in}
 How to learn explicit models of nonlocal self-similarity (NSS) prior for image restoration is an open problem, and we made a good attempt on this by lifting the patch based image modeling to patch group (PG) based image modeling. A PG is a group of similar patches in an image region. After group mean subtraction, a PG can naturally represent the NSS variations of natural images. A PG based Gaussian Mixture Model (PG-GMM) learning algorithm was developed to learned the NSS prior from natural images, and an associated weighted sparse coding algorithm was developed for high performance image denoising. The so-called \textsl{PG Prior based Denoising} (PGPD) algorithm not only achieves highly competitive PSNR results with state-of-the-art denoising methods, but also is highly efficient and preserves better the image edges and textures. The proposed method can be extended to other image processing tasks such as deblurring and super-resolution.
-\vspace{-0.25in}
