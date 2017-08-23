@@ -1,50 +1,25 @@
-% !TEX root = ../thesis.tex
-%
-\chapter{External Non-local Self-Similarity Prior for Additive White Gaussian Noise}
-\label{sec:external}
-
-%\cleanchapterquote{Innovation distinguishes between a leader and a follower.}{Steve Jobs}{(CEO Apple Inc.)}
-
-\section{Introduction}
-%\begin{figure}
-%\centering
-%\includegraphics[width=0.74\linewidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/flowchart2.png}
-%\caption{Flowchart of the proposed patch group based prior learning and image denoising framework.}
-%\label{fig1}
-%\end{figure}
-
-As a classical problem in low level vision, image denoising has been extensively studied, yet it is still an active topic for that it provides an ideal test bed for image modeling techniques. In general, image denoising aims to recover the clean image $\bm{x}$ from its noisy observation $\bm{y} = \bm{x} + \bm{v}$, where $\bm{v}$ is assumed to be additive white Gaussian noise.\ A variety of image denoising methods have been developed in past decades, including filtering based methods \cite{Tomasi1998}, diffusion based methods \cite{PeronaMalik1990}, total variation based methods \cite{rudin1992nonlinear,osher2005iterative}, wavelet/curvelet based methods \cite{softthresholding,bayesshrink,curvelet}, sparse representation based methods \cite{ksvd,lssc,ncsr}, nonlocal self-similarity based methods \cite{nlm,bm3d,nnm,wnnm}, etc.
-
-Image modeling plays a central role in image denoising. By modeling the wavelet transform coefficients as Laplacian distributions, many wavelet shrinkage based denoising methods such as the classical soft-thresholding \cite{softthresholding} have been proposed.\ Chang et al. modeled the wavelet transform coefficients as generalized Gaussian distribution, and proposed the BayesShrink \cite{bayesshrink} algorithm.\ By considering the correlation of wavelet coefficients across scales, Portilla et al.  \cite{blsgsm} proposed to use Gaussian Scale Mixtures for image modeling and achieved promising denoising performance. It is widely accepted that natural image gradients exhibit heavy-tailed distributions \cite{weiss}, and the total variation (TV) based methods \cite{rudin1992nonlinear,osher2005iterative} actually assume Laplacian distributions of image gradients for denoising. The Fields of Experts (FoE) \cite{foe} proposed by Roth and Black models the filtering responses with Student's t-distribution to learn filters through Markov Random Field (MRF) \cite{Bishop}. Recently, Schmidt and Roth proposed the cascade of shrinkage fields (CSF) to perform denoising efficiently \cite{csf}.
-
-Instead of modeling the image statistics in some transformed domain (e.g., gradient domain, wavelet domain or filtering response domain), another popular approach is to model the image priors on patches. One representative is the sparse representation based scheme which encodes an image patch as a linear combination of a few atoms selected from a dictionary \cite{olshausen1996emergence,olshausen1997sparse,ksvd}. The dictionary can be chosen from the off-the-shelf dictionaries (e.g., wavelets and curvelets), or it can be learned from natural image patches.\ The seminal work of K-SVD \cite{ksvdtsp,ksvd} has demonstrated promising denoising performance by dictionary learning, which has yet been extended and successfully used in various image processing and computer vision applications \cite{srcolor,srcvpr,lcksvd}. By viewing image patches as samples of a multivariate variable vector and considering that natural images are non-Gaussian, Zoran and Weiss \cite{epll,gmmnips} and Yu et al.  \cite{ple} used Gaussian Mixture Model (GMM) to model image patches, and achieved state-of-the-art denoising and image restoration results, respectively.
-
-Natural images often have many repetitive local patterns, and a local patch can have many similar patches to it across the whole image.\ The so-called nonlocal self-similarity (NSS) prior is among the most successful priors for image restoration.\ The nonlocal means \cite{nlm} and nonlocal regularization \cite{nlr} methods improve much the image denoising performance over the conventional local self-similarity based methods. Dabov et al. \cite{bm3d} constructed 3D cubes of nonlocal similar patches and conducted collaborative filtering in the sparse 3D transform domain.\ The so-called BM3D algorithm has become a benchmark in image denoising. Mairal et al. \cite{lssc} proposed the LSSC algorithm to exploit NSS via group sparse coding.\ The NSP \cite{nsp} method fits the singular values of NSS patch matrix by Laplacian distribution.\ Dong et al. \cite{ncsr} unified NSS and local sparse coding into the so-called NCSR framework, which shows powerful image restoration capability. By assuming that the matrix of nonlocal similar patches has a low rank structure, the low-rank minimization based methods \cite{nnm,wnnm} have also achieved very competitive denoising results. 
-
-Though NSS has demonstrated its great success in image denoising, in most existing methods only the NSS of noisy input image is used for denoising.\ For example, in BM3D \cite{bm3d} the nonlocal similar patches of a noisy image are collected as a cube for collaborative filtering. In NCSR \cite{ncsr}, the nonlocal means are subtracted in the sparse domain to regularize the sparse coding of noisy patches. In WNNM \cite{wnnm}, the low-rank regularization is enforced to recover the latent structure of the matrix of noisy patches. We argue that, however, such utilizations of NSS are not effective enough because they neglect the NSS of clean natural images, which can be pre-learned for use in the denoising stage. \ To the best of our knowledge, unfortunately, so far there is not an explicit NSS prior model learned from natural images for image restoration. 
-
-With the above considerations, in this work we propose to learn explicit NSS models from natural images, and apply the learned prior models to noisy images for high performance denoising. The flowchart of the proposed method is illustrated in Fig.\ \ref{fig1}.\ In the learning stage, we extract millions of patch groups (PG) from a set of clean natural images.\ A PG is formed by grouping the similar patches to a local patch in a large enough neighborhood.\ A PG based GMM (PG-GMM) learning algorithm is developed to learn the NSS prior for the PGs. In the denoising stage, the learned PG-GMM will provide dictionaries as well as regularization parameters, and a simple weighted sparse coding model is developed for image denoising.\ Our extensive experiments validated that the proposed PG prior based denoising method outperforms many state-of-the-art algorithms quantitatively (in PSNR) while being much more efficient. More importantly, it delivers the best qualitative denoising results with finer details and less artifacts, owe to the NSS prior learned from clean natural images.   
-
 %-------------------------------------------------------------------------
 \vspace{-0.1in}
 \section{Patch Group Based Prior Modeling of Nonlocal Self-Similarity}
 Image nonlocal self-similarity (NSS) has been widely adopted in patch based image denoising and other image restoration tasks \cite{nlm,bm3d,lssc,ncsr,wnnm}.\ Despite the great success of NSS in image restoration, most of the existing works exploit the NSS only from the degraded image.\ Usually, for a given patch in the degraded image, its nonlocal similar patches are collected, and then the nonlocal means \cite{nlm}, or 3D transforms \cite{bm3d}, or some regularization terms \cite{lssc,ncsr,wnnm,srcolor} can be introduced for image restoration. However, how to learn the NSS prior from clean natural images and apply it to image restoration is still an open problem. In this work, we make the first attempt on this problem, and develop a patch group (PG) based NSS prior learning scheme.  
 \subsection{Patch Group and Group Mean Subtraction}
-For each local patch (size: $p\times p$) of a given clean image, we can find the first $M$ most similar nonlocal patches to it across the whole image. In practice, this can be done by Euclidean distance based block matching in a large enough local window of size $W\times W$. A PG is formed by grouping the $M$ similar patches, denoted by $\{\bm{x}_{m}\}_{m=1}^{M}$, where $\bm{x}_{m}\in \mathbb{R}^{p^{2}\times1}$ is a patch vector. The mean vector of this PG is $\bm{\mu}=\frac{1}{M}\sum_{m=1}^{M}\bm{x}_{m}$, and $\bm{\overline{x}}_{m}=\bm{x}_{m}-\bm{\mu}$ is the group mean subtracted patch vector. We call
-\begin{equation}
-\label{equ1}
-\overline{\bm{X}}\triangleq \{\overline{\bm{x}}_{m}\}, m=1,...,M
+For each local patch (size: $p\times p$) of a given clean image, we can find the first $M$ most similar nonlocal patches to it across the whole image. In practice, this can be done by Euclidean distance based block matching in a large enough local window of size $W\times W$. A PG is formed by grouping the $M$ similar patches, denoted by $\{\mathbf{x}_{m}\}_{m=1}^{M}$, where $\mathbf{x}_{m}\in \mathbb{R}^{p^{2}\times1}$ is a patch vector. The mean vector of this PG is $\boldsymbol{\upmu}=\frac{1}{M}\sum_{m=1}^{M}\mathbf{x}_{m}$, and $\mathbf{\overline{x}}_{m}=\mathbf{x}_{m}-\boldsymbol{\upmu}$ is the group mean subtracted patch vector. We call
+\begin{equation}\label{equ1}
+\setlength{\abovedisplayskip}{2pt}
+\setlength{\belowdisplayskip}{2pt}
+\mathbf{\overline{X}}\triangleq \{\mathbf{\overline{x}}_{m}\}, m=1,...,M
 \end{equation}
 the group mean subtracted PG, and it will be used to learn the NSS prior in our work. 
 
 In Fig.\ \ref{fig2}, we show two different PGs, their group means, and the PGs after mean subtraction.\ One can see that before mean subtraction, the two PGs have very different local structures.\ After mean subtraction, the two PGs will have very similar variations.\ This greatly facilitates the prior learning because the possible number of patterns is reduced, while the training samples of each pattern are increased. We will discuss further the benefits of mean subtraction and the associated prior model learning in Section 2.4.   
 \subsection{PG-GMM Learning}
 From a given set of natural images, we can extract $N$ PGs, and we denote one PG as
-\begin{equation}
-\label{equ2}
-\overline{\bm{X}}_{n}\triangleq \{\overline{\bm{x}}_{n,m}\}_{m=1}^{M}, n=1,...,N.
+\begin{equation}\label{equ2}
+\setlength{\abovedisplayskip}{2pt}
+\setlength{\belowdisplayskip}{2pt}
+\mathbf{\overline{X}}_{n}\triangleq \{\mathbf{\overline{x}}_{n,m}\}_{m=1}^{M}, n=1,...,N.
 \end{equation}
-The PGs $\{\bm{\overline{X}}_{n}\}$ contain a rich amount of NSS information of natural images, and the problem turns to how to learn explicit prior models from $\{\bm{\overline{X}}_{n}\}$. Considering that Gaussian Mixture Model (GMM) has been successfully used to model the image patch priors in EPLL \cite{epll} and PLE \cite{ple}, we propose to extend patch based GMM to patch group based GMM (PG-GMM) for NSS prior learning.
+The PGs $\{\mathbf{\overline{X}}_{n}\}$ contain a rich amount of NSS information of natural images, and the problem turns to how to learn explicit prior models from $\{\mathbf{\overline{X}}_{n}\}$. Considering that Gaussian Mixture Model (GMM) has been successfully used to model the image patch priors in EPLL \cite{epll} and PLE \cite{ple}, we propose to extend patch based GMM to patch group based GMM (PG-GMM) for NSS prior learning.
 \begin{figure}
 \centering
 \centering
@@ -55,30 +30,37 @@ The PGs $\{\bm{\overline{X}}_{n}\}$ contain a rich amount of NSS information of 
 \label{fig2}
 \end{figure}
 
-With PG-GMM, we aim to learn a set of $K$ Gaussians $\{\mathcal{N}(\bm{\mu}_{k},\bm{\Sigma}_{k})\}$ from $N$ training PGs $\{\bm{\overline{X}}_{n}\}$, while requiring that all the $M$ patches $\{\bm{\overline{x}}_{n,m}\}$  in PG $\bm{\overline{X}}_{n}$ belong to the same Gaussian component and assume that the patches in the PG are independently sampled. Note that such an assumption is commonly used in patch based image modeling \cite{ksvd,lssc}. Then, the likelihood of $\{\bm{\overline{X}}_{n}\}$ can be calculated as
-\begin{equation}
-\label{equ3}
-P(\bm{\overline{X}}_{n})  = \sum\nolimits_{k=1}^{K}\pi_{k}\prod\nolimits_{m=1}^{M}\mathcal{N}(\bm{\overline{x}}_{n,m}|\bm{\mu}_{k},\bm{\Sigma}_{k}).
+With PG-GMM, we aim to learn a set of $K$ Gaussians $\{\mathcal{N}(\boldsymbol{\upmu}_{k},\mathbf{\Sigma}_{k})\}$ from $N$ training PGs $\{\mathbf{\overline{X}}_{n}\}$, while requiring that all the $M$ patches $\{\mathbf{\overline{x}}_{n,m}\}$  in PG $\mathbf{\overline{X}}_{n}$ belong to the same Gaussian component and assume that the patches in the PG are independently sampled. Note that such an assumption is commonly used in patch based image modeling \cite{ksvd,lssc}. Then, the likelihood of $\{\mathbf{\overline{X}}_{n}\}$ can be calculated as
+\begin{equation}\label{equ3}
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+P(\mathbf{\overline{X}}_{n})  = \sum\nolimits_{k=1}^{K}\pi_{k}\prod\nolimits_{m=1}^{M}\mathcal{N}(\mathbf{\overline{x}}_{n,m}|\boldsymbol{\upmu}_{k},\mathbf{\Sigma}_{k}).
 \end{equation}
-By assuming that all the PGs are independently sampled, the overall objective likelihood function is $\mathcal{L} = \prod_{n=1}^{N}P(\bm{\overline{X}}_{n})$. Taking the log of it, we maximize the following objective function for PG-GMM learning
-\begin{equation}
-\label{equ4}
+By assuming that all the PGs are independently sampled, the overall objective likelihood function is $\mathcal{L} = \prod_{n=1}^{N}P(\mathbf{\overline{X}}_{n})$. Taking the log of it, we maximize the following objective function for PG-GMM learning
+\begin{equation}\label{equ4}
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
 \begin{split}
-\ln\mathcal{L}=\sum_{n=1}^{N} \ln(\sum_{k=1}^{K}\pi_{k}\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{x}}_{n,m}|\bm{\mu}_{k},\bm{\Sigma}_{k})).
+\ln\mathcal{L}=\sum_{n=1}^{N} \ln(\sum_{k=1}^{K}\pi_{k}\prod_{m=1}^{M}\mathcal{N}(\mathbf{\overline{x}}_{n,m}|\boldsymbol{\upmu}_{k},\mathbf{\Sigma}_{k})).
 \end{split}
 \end{equation}
 
-As in GMM learning \cite{Bishop}, we introduce hidden variables $\{\Delta_{nk}|n=1,...,N;k=1,...,K\}$ to optimize (\ref{equ4}). If PG $\bm{\overline{X}}_{n}$ belongs to the $k$th component, $\Delta_{nk}=1$; and $\Delta_{nk}=0$ otherwise. Then the EM algorithm \cite{em} can be used to optimize (\ref{equ4}) via two alternative steps. In the E-Step, by the Bayes' formula, the expected value of $\Delta_{nk}$ is
+As in GMM learning \cite{Bishop}, we introduce hidden variables $\{\Delta_{nk}|n=1,...,N;k=1,...,K\}$ to optimize (\ref{equ4}). If PG $\mathbf{\overline{X}}_{n}$ belongs to the $k$th component, $\Delta_{nk}=1$; and $\Delta_{nk}=0$ otherwise. Then the EM algorithm \cite{em} can be used to optimize (\ref{equ4}) via two alternative steps. In the E-Step, by the Bayes' formula, the expected value of $\Delta_{nk}$ is
 \begin{equation}\label{equ5}
-\gamma_{nk}=\frac{\pi_{k}\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{x}}_{n,m}|\bm{\mu}_{k},\bm{\Sigma}_{k})}{\sum_{l=1}^{K}\pi_{l}\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{x}}_{n,m}|\bm{\mu}_{l},\bm{\Sigma}_{l})}.
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\gamma_{nk}=\frac{\pi_{k}\prod_{m=1}^{M}\mathcal{N}(\mathbf{\overline{x}}_{n,m}|\boldsymbol{\upmu}_{k},\mathbf{\Sigma}_{k})}{\sum_{l=1}^{K}\pi_{l}\prod_{m=1}^{M}\mathcal{N}(\mathbf{\overline{x}}_{n,m}|\boldsymbol{\upmu}_{l},\mathbf{\Sigma}_{l})}.
 \end{equation}
-In the M-step, since for each PG $\bm{\overline{X}}_{n}$, $\sum_{m=1}^{M}\bm{\overline{x}}_{n,m}=\bm{0}$, we have
-\begin{equation}
-\label{equ6}
-\bm{\mu}_{k} = \frac{\sum_{n=1}^{N}\gamma_{nk}\sum_{m=1}^{M}\bm{\overline{x}}_{n,m}}{\sum_{n=1}^{N}\gamma_{nk}}=\bm{0},
+In the M-step, since for each PG $\mathbf{\overline{X}}_{n}$, $\sum_{m=1}^{M}\mathbf{\overline{x}}_{n,m}=\mathbf{0}$, we have
+\begin{equation}\label{equ6}
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\boldsymbol{\upmu}_{k} = \frac{\sum_{n=1}^{N}\gamma_{nk}\sum_{m=1}^{M}\mathbf{\overline{x}}_{n,m}}{\sum_{n=1}^{N}\gamma_{nk}}=\mathbf{0},
 \end{equation}
 \begin{equation}\label{equ7}
-\bm{\Sigma}_{k} = \frac{\sum_{n=1}^{N}\gamma_{nk}\sum_{m=1}^{M}\bm{\overline{x}}_{n,m}\bm{\overline{x}}_{n,m}^{T}}{\sum_{n=1}^{N}\gamma_{nk}}.
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+\mathbf{\Sigma}_{k} = \frac{\sum_{n=1}^{N}\gamma_{nk}\sum_{m=1}^{M}\mathbf{\overline{x}}_{n,m}\mathbf{\overline{x}}_{n,m}^{T}}{\sum_{n=1}^{N}\gamma_{nk}}.
 \end{equation}
 The calculations of $\pi_{k}=\frac{1}{N}\sum_{n=1}^{N}\gamma_{nk}$ are similar to \cite{Bishop}.
 
@@ -107,31 +89,31 @@ Third, due to reduction of possible patterns in PG-GMM and the reduced number of
 \vspace{-0.2in}
 \section{Image Denoising by Patch Group Priors}
 \subsection{Denoising Model}
-Given a noisy image $\bm{y}$, like in the PG-GMM learning stage, for each local patch we search for its similar patches in a window centered on it to form a PG, denoted by $\bm{Y} = \{\bm{y}_{1},...,\bm{y}_{M}\}$. Then the group mean of $\bm{Y}$, denoted by $\bm{\mu}_{y}$, is calculated and subtracted from each patch, leading to the mean subtracted PG $\bm{\overline{Y}}$. We can write $\bm{\overline{Y}}$ as $\bm{\overline{Y}}=\bm{\overline{X}}+\bm{V}$, where $\bm{\overline{X}}$ is the corresponding clean PG and $\bm{V}$ contains the corrupted noise. The problem then turns to how to recover $\bm{\overline{X}}$ from $\bm{\overline{Y}}$ by using the learned PG-GMM priors. Note that the mean $\bm{\mu}_{y}$ of $\bm{\overline{Y}}$  is very close to the mean of $\bm{\overline{X}}$ since the mean vector of noise $\bm{V}$ is nearly zero.\ $\bm{\mu}_{y}$ will be added back to the denoised PG to obtain the denoised image. 
+Given a noisy image $\mathbf{y}$, like in the PG-GMM learning stage, for each local patch we search for its similar patches in a window centered on it to form a PG, denoted by $\mathbf{Y} = \{\mathbf{y}_{1},...,\mathbf{y}_{M}\}$. Then the group mean of $\mathbf{Y}$, denoted by $\boldsymbol{\upmu}_{y}$, is calculated and subtracted from each patch, leading to the mean subtracted PG $\mathbf{\overline{Y}}$. We can write $\mathbf{\overline{Y}}$ as $\mathbf{\overline{Y}}=\mathbf{\overline{X}}+\mathbf{V}$, where $\mathbf{\overline{X}}$ is the corresponding clean PG and $\mathbf{V}$ contains the corrupted noise. The problem then turns to how to recover $\mathbf{\overline{X}}$ from $\mathbf{\overline{Y}}$ by using the learned PG-GMM priors. Note that the mean $\boldsymbol{\upmu}_{y}$ of $\mathbf{\overline{Y}}$  is very close to the mean of $\mathbf{\overline{X}}$ since the mean vector of noise $\mathbf{V}$ is nearly zero.\ $\boldsymbol{\upmu}_{y}$ will be added back to the denoised PG to obtain the denoised image. 
 \vspace{-0.1in}
 \subsubsection{Gaussian Component Selection}
-For each $\bm{\overline{Y}}$, we select the most suitable Gaussian component to it from the trained PG-GMM. As in \cite{epll}, suppose that the variance of Gaussian white noise corrupted in the image is $\sigma^{2}$, the covariance matrix of the $k$th component will become $\bm{\Sigma}_{k}+\sigma^{2}\bm{I}$, where $\bm{I}$ is the identity matrix. The selection can be done by checking the posterior probability that $\bm{\overline{Y}}$ belongs to the $k$th Gaussian component:
+For each $\mathbf{\overline{Y}}$, we select the most suitable Gaussian component to it from the trained PG-GMM. As in \cite{epll}, suppose that the variance of Gaussian white noise corrupted in the image is $\sigma^{2}$, the covariance matrix of the $k$th component will become $\mathbf{\Sigma}_{k}+\sigma^{2}\mathbf{I}$, where $\mathbf{I}$ is the identity matrix. The selection can be done by checking the posterior probability that $\mathbf{\overline{Y}}$ belongs to the $k$th Gaussian component:
 \begin{equation}\label{equ8}
 \setlength{\abovedisplayskip}{3pt}
 \setlength{\belowdisplayskip}{4pt}
-P(k|\bm{\overline{Y}})=\frac{\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{y}}_{m}|\bm{0},\bm{\Sigma}_{k}+\sigma^{2}\bm{I})}{\sum_{l=1}^{K}\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{y}}_{m}|\bm{0},\bm{\Sigma}_{l}+\sigma^{2}\bm{I})}.
+P(k|\mathbf{\overline{Y}})=\frac{\prod_{m=1}^{M}\mathcal{N}(\mathbf{\overline{y}}_{m}|\mathbf{0},\mathbf{\Sigma}_{k}+\sigma^{2}\mathbf{I})}{\sum_{l=1}^{K}\prod_{m=1}^{M}\mathcal{N}(\mathbf{\overline{y}}_{m}|\mathbf{0},\mathbf{\Sigma}_{l}+\sigma^{2}\mathbf{I})}.
 \end{equation}
 Taking log-likelihood of (\ref{equ8}), we have
 \begin{equation}\label{equ9}
 \setlength{\abovedisplayskip}{3pt}
 \setlength{\belowdisplayskip}{3pt}
-\ln P(k|\bm{\overline{Y}}) = \sum\nolimits_{m=1}^{M}\ln\mathcal{N}(\bm{\overline{y}}_{m}|\bm{0},\bm{\Sigma}_{k}+\sigma^{2})-\ln{C}
+\ln P(k|\mathbf{\overline{Y}}) = \sum\nolimits_{m=1}^{M}\ln\mathcal{N}(\mathbf{\overline{y}}_{m}|\mathbf{0},\mathbf{\Sigma}_{k}+\sigma^{2})-\ln{C}
 \end{equation}
-where $C$ is the denominator in Eq. (\ref{equ9}) and it is the same for all components. Finally, the component with the highest probability $\ln P(k|\bm{\overline{Y}})$ is selected to process $\bm{\overline{Y}}$.
+where $C$ is the denominator in Eq. (\ref{equ9}) and it is the same for all components. Finally, the component with the highest probability $\ln P(k|\mathbf{\overline{Y}})$ is selected to process $\mathbf{\overline{Y}}$.
 \vspace{-0.1in}
 \subsubsection{Weighted Sparse Coding with Closed-Form Solution}
-Suppose that the $k$th Gaussian component is selected for PG $\bm{\overline{Y}}$. For notation simplicity, we remove the subscript $k$ and denote by $\bm{\Sigma}$ the covariance matrix of this component. In PG-GMM, the PGs actually represent the variations of the similar patches in a group, and these variations are assigned to the same Gaussian distribution. By singular value decomposition (SVD), $\bm{\Sigma}$ can be factorized as
+Suppose that the $k$th Gaussian component is selected for PG $\mathbf{\overline{Y}}$. For notation simplicity, we remove the subscript $k$ and denote by $\mathbf{\Sigma}$ the covariance matrix of this component. In PG-GMM, the PGs actually represent the variations of the similar patches in a group, and these variations are assigned to the same Gaussian distribution. By singular value decomposition (SVD), $\mathbf{\Sigma}$ can be factorized as
 \begin{equation}\label{equ10}
 \setlength{\abovedisplayskip}{3pt}
 \setlength{\belowdisplayskip}{3pt}
-\bm{\Sigma} = \bm{D}\bm{\Lambda}\bm{D}^{T},
+\mathbf{\Sigma} = \mathbf{D}\mathbf{\Lambda}\mathbf{D}^{T},
 \end{equation}
-where $\bm{D}$ is an orthonormal matrix composed by the eigenvectors of $\bm{\Sigma}$ and $\bm{\Lambda}$ is the diagonal matrix of eigenvalues. With PG-GMM, the eigenvectors  in $\bm{D}$ capture the statistical structures of NSS variations in natural images, while the eigenvalues in $\bm{\Lambda}$ represent the significance of these eigenvectors. Fig.\ 4 shows the eigenvectors for 3 Gaussian components. It can be seen that these eigenvectors encode the possible variations of the PGs. For one Gaussian component, the first eigenvector represents its largest variation, while the last eigenvector represents its smallest variation. For different Gaussian components, we can see that their eigenvectors (with the same index) are very different. Hence, $\bm{D}$ can be used to represent the structural variations of the PGs in that component.
+where $\mathbf{D}$ is an orthonormal matrix composed by the eigenvectors of $\mathbf{\Sigma}$ and $\mathbf{\Lambda}$ is the diagonal matrix of eigenvalues. With PG-GMM, the eigenvectors  in $\mathbf{D}$ capture the statistical structures of NSS variations in natural images, while the eigenvalues in $\mathbf{\Lambda}$ represent the significance of these eigenvectors. Fig.\ 4 shows the eigenvectors for 3 Gaussian components. It can be seen that these eigenvectors encode the possible variations of the PGs. For one Gaussian component, the first eigenvector represents its largest variation, while the last eigenvector represents its smallest variation. For different Gaussian components, we can see that their eigenvectors (with the same index) are very different. Hence, $\mathbf{D}$ can be used to represent the structural variations of the PGs in that component.
 \begin{figure}[t]
 \centering
 \includegraphics[width=1\linewidth]{C:/Users/csjunxu/Desktop/JunXu/My_Paper/2015 ICCV_PGPD/PGPD_ICCV2015Paper/20150914 ICCVfinal/img/dics.png}
@@ -141,55 +123,55 @@ where $\bm{D}$ is an orthonormal matrix composed by the eigenvectors of $\bm{\Si
 \label{fig4}
 \end{figure}
 
-For each patch $\bm{\overline{y}}_{m}$ in the PG $\bm{\overline{Y}}$, we propose to use $\bm{D}$ as the dictionary to sparsely encode $\bm{\overline{y}}_{m}$ as $\bm{\overline{y}}_{m}=\bm{D}\bm{\alpha}+\bm{v}$, where $\bm{\alpha}$ is the vector of sparse coding coefficients and $\bm{v}$ is the corrupted noise. Meanwhile, we propose to introduce a weighting vector $\bm{w}$ to weight the coding vector $\bm{\alpha}$ (we will see in (\ref{equ16}) that $\bm{w}$ is related to the eigenvalues in $\bm{\Lambda}$), resulting in the following simple but highly effective weighted sparse coding model:
+For each patch $\mathbf{\overline{y}}_{m}$ in the PG $\mathbf{\overline{Y}}$, we propose to use $\mathbf{D}$ as the dictionary to sparsely encode $\mathbf{\overline{y}}_{m}$ as $\mathbf{\overline{y}}_{m}=\mathbf{D}\boldsymbol{\upalpha}+\mathbf{v}$, where $\boldsymbol{\upalpha}$ is the vector of sparse coding coefficients and $\mathbf{v}$ is the corrupted noise. Meanwhile, we propose to introduce a weighting vector $\mathbf{w}$ to weight the coding vector $\boldsymbol{\upalpha}$ (we will see in (\ref{equ16}) that $\mathbf{w}$ is related to the eigenvalues in $\mathbf{\Lambda}$), resulting in the following simple but highly effective weighted sparse coding model:
 \begin{equation}\label{equ11}
 \setlength{\abovedisplayskip}{3pt}
 \setlength{\belowdisplayskip}{3pt}
-\min_{\bm{\alpha}}{\|\bm{\overline{y}}_{m}-\bm{D}\bm{\alpha}\|_{2}^{2}+\|\bm{w}^{T}\bm{\alpha}\|_{1}}.
+\min_{\boldsymbol{\upalpha}}{\|\mathbf{\overline{y}}_{m}-\mathbf{D}\boldsymbol{\upalpha}\|_{2}^{2}+\|\mathbf{w}^{T}\boldsymbol{\upalpha}\|_{1}}.
 \end{equation}
 
-From the viewpoint of Maximum A-Posterior (MAP) estimation, the optimal solution of (\ref{equ11}) is $\hat{\bm{\alpha}} = \arg\max\nolimits_{\bm{\alpha}}\ln P(\bm{\alpha}|\bm{\overline{y}}_{m})$. By Bayes' formula, it is equivalent to
+From the viewpoint of Maximum A-Posterior (MAP) estimation, the optimal solution of (\ref{equ11}) is $\hat{\boldsymbol{\upalpha}} = \arg\max\nolimits_{\boldsymbol{\upalpha}}\ln P(\boldsymbol{\upalpha}|\mathbf{\overline{y}}_{m})$. By Bayes' formula, it is equivalent to
 \begin{equation}\label{equ12}
 \setlength{\abovedisplayskip}{3pt}
 \setlength{\belowdisplayskip}{3pt}
-\hat{\bm{\alpha}} = \arg\max\nolimits_{\bm{\alpha}}\{\ln P(\bm{\overline{y}}_{m}|\bm{\alpha})+\ln P(\bm{\alpha})\}.
+\hat{\boldsymbol{\upalpha}} = \arg\max\nolimits_{\boldsymbol{\upalpha}}\{\ln P(\mathbf{\overline{y}}_{m}|\boldsymbol{\upalpha})+\ln P(\boldsymbol{\upalpha})\}.
 \end{equation}
-The log-likelihood term $\ln P(\bm{\overline{y}}_{m}|\bm{\alpha})$ is characterized by the statistics of noise $\bm{v}$, which is assumed to be white Gaussian with standard deviation $\sigma$. Hence, we have
+The log-likelihood term $\ln P(\mathbf{\overline{y}}_{m}|\boldsymbol{\upalpha})$ is characterized by the statistics of noise $\mathbf{v}$, which is assumed to be white Gaussian with standard deviation $\sigma$. Hence, we have
 \begin{equation}\label{equ13}
 \setlength{\abovedisplayskip}{3pt}
 \setlength{\belowdisplayskip}{3pt}
-P(\bm{\overline{y}}_{m}|\bm{\alpha}) = \frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\|\bm{\overline{y}}_{m}-\bm{D}\bm{\alpha}\|_{2}^{2}).
+P(\mathbf{\overline{y}}_{m}|\boldsymbol{\upalpha}) = \frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\|\mathbf{\overline{y}}_{m}-\mathbf{D}\boldsymbol{\upalpha}\|_{2}^{2}).
 \end{equation}
-We assume that the sparse coding coefficients in $\bm{\alpha}$ follow i.i.d.\ Laplacian distribution.\ More specifically, for entry $\bm{\alpha}_{i}$, which is the coding coefficient of patch $\bm{\overline{y}}_{m}$ over the $i$th eigenvector in $\bm{D}$, we assume that it follows distribution $\frac{c}{\sqrt{2}\bm{\lambda}_{i}}\exp(-c\sqrt{2}|\bm{\alpha}_{i}|/\bm{\lambda}_{i})$, where $\bm{\lambda}_{i}=\bm{\Lambda}_{i}^{1/2}$ and $c$ is a constant. Note that we adjust the scale factor of the distribution by (square root of) the $i$th eigenvalue $\bm{\Lambda}_{i}$. This is because the larger the eigenvalue $\bm{\Lambda}_{i}$ is, the more important the $i$th eigenvector in $\bm{D}$ is, and hence the distribution of the coding coefficients over this eigenvector should have a longer tail (i.e., less sparse). Finally, we have
+We assume that the sparse coding coefficients in $\boldsymbol{\upalpha}$ follow i.i.d.\ Laplacian distribution.\ More specifically, for entry $\boldsymbol{\upalpha}_{i}$, which is the coding coefficient of patch $\mathbf{\overline{y}}_{m}$ over the $i$th eigenvector in $\mathbf{D}$, we assume that it follows distribution $\frac{c}{\sqrt{2}\mathbf{\lambda}_{i}}\exp(-c\sqrt{2}|\boldsymbol{\upalpha}_{i}|/\mathbf{\lambda}_{i})$, where $\mathbf{\lambda}_{i}=\mathbf{\Lambda}_{i}^{1/2}$ and $c$ is a constant. Note that we adjust the scale factor of the distribution by (square root of) the $i$th eigenvalue $\mathbf{\Lambda}_{i}$. This is because the larger the eigenvalue $\mathbf{\Lambda}_{i}$ is, the more important the $i$th eigenvector in $\mathbf{D}$ is, and hence the distribution of the coding coefficients over this eigenvector should have a longer tail (i.e., less sparse). Finally, we have
 \begin{equation}\label{equ14}
 \setlength{\abovedisplayskip}{3pt}
 \setlength{\belowdisplayskip}{4pt}
-P(\bm{\alpha})=\prod\nolimits_{i=1}^{p^{2}}\frac{c}{\sqrt{2}\bm{\lambda}_{i}}\exp(-\frac{c\sqrt{2}|\bm{\alpha}_{i}|}{\bm{\lambda}_{i}}).
+P(\boldsymbol{\upalpha})=\prod\nolimits_{i=1}^{p^{2}}\frac{c}{\sqrt{2}\mathbf{\lambda}_{i}}\exp(-\frac{c\sqrt{2}|\boldsymbol{\upalpha}_{i}|}{\mathbf{\lambda}_{i}}).
 \end{equation}
 Putting (\ref{equ13}) and (\ref{equ14}) into (\ref{equ12}), we have
 \begin{equation}\label{equ15}
 \setlength{\abovedisplayskip}{3pt}
 \setlength{\belowdisplayskip}{4pt}
-\hat{\bm{\alpha}}=\arg\min\nolimits_{\bm{\alpha}}\|\bm{\overline{y}}_{m}-\bm{D}\bm{\alpha}\|_{2}^{2}+\sum_{i=1}^{p^{2}}\frac{c*2\sqrt{2}\sigma^{2}}{\bm{\lambda}_{i}}|\bm{\alpha}_{i}|.
+\hat{\boldsymbol{\upalpha}}=\arg\min\nolimits_{\boldsymbol{\upalpha}}\|\mathbf{\overline{y}}_{m}-\mathbf{D}\boldsymbol{\upalpha}\|_{2}^{2}+\sum_{i=1}^{p^{2}}\frac{c*2\sqrt{2}\sigma^{2}}{\mathbf{\lambda}_{i}}|\boldsymbol{\upalpha}_{i}|.
 \end{equation}
-By comparing (\ref{equ15}) with (\ref{equ11}), we can see that the $i$th entry of the weighting vector $\bm{w}$ should be
+By comparing (\ref{equ15}) with (\ref{equ11}), we can see that the $i$th entry of the weighting vector $\mathbf{w}$ should be
 \begin{equation}\label{equ16}
 \setlength{\abovedisplayskip}{3pt}
 \setlength{\belowdisplayskip}{3pt}
-\bm{w}_{i} = c*2\sqrt{2}\sigma^{2}/(\bm{\lambda}_{i}+\varepsilon),
+\mathbf{w}_{i} = c*2\sqrt{2}\sigma^{2}/(\mathbf{\lambda}_{i}+\varepsilon),
 \end{equation}
 where $\varepsilon$ is a small positive number to avoid dividing by zero.
 
-With $\bm{w}$ determined by (\ref{equ16}), let's see what the solution of (\ref{equ11}) should be. Since the dictionary $\bm{D}$ is orthonormal, it is not difficult to find out that (\ref{equ11}) has a closed-form solution (detailed derivation can be found in the supplementary material):
+With $\mathbf{w}$ determined by (\ref{equ16}), let's see what the solution of (\ref{equ11}) should be. Since the dictionary $\mathbf{D}$ is orthonormal, it is not difficult to find out that (\ref{equ11}) has a closed-form solution (detailed derivation can be found in the supplementary material):
 \begin{equation}\label{equ17}
 \setlength{\abovedisplayskip}{3pt}
 \setlength{\belowdisplayskip}{4pt}
-\hat{\bm{\alpha}}= \text{sgn}(\bm{D^{T}\overline{y}}_{m})\odot \text{max}(|\bm{D^{T}\overline{y}}_{m}|-\bm{w}/2,0),
+\hat{\boldsymbol{\upalpha}}= \text{sgn}(\mathbf{D^{T}\overline{y}}_{m})\odot \text{max}(|\mathbf{D^{T}\overline{y}}_{m}|-\mathbf{w}/2,0),
 \end{equation}
-where $\text{sgn}(\bullet)$ is the sign function, $\odot$ means element-wise multiplication, and $|\bm{D^{T}\overline{y}}_{m}|$ is the absolute value of each entry of vector $|\bm{D^{T}\overline{y}}_{m}|$. The closed-form solution makes our weighted sparse coding process very efficient. 
+where $\text{sgn}(\bullet)$ is the sign function, $\odot$ means element-wise multiplication, and $|\mathbf{D^{T}\overline{y}}_{m}|$ is the absolute value of each entry of vector $|\mathbf{D^{T}\overline{y}}_{m}|$. The closed-form solution makes our weighted sparse coding process very efficient. 
 \vspace{-0.05in}
 \subsection{Denoising Algorithm}
-With the solution $\hat{\bm{\alpha}}$ in (\ref{equ17}), the clean patch in a PG can be estimated as $\hat{\bm{x}}_{m}=\bm{D}\hat{\bm{\alpha}}+\bm{\mu}_{y}$. Then the clean image $\hat{\bm{x}}$ can be reconstructed by aggregating all the estimated PGs. In practice, we could perform the above denoising procedures for several iterations for better denoising outputs. In iteration $t$, we use the iterative regularization strategy \cite{osher2005iterative} to add back to the recovered image $\hat{\bm{x}}^{(t-1)}$ some estimation residual in iteration $t-1$. The standard deviation of noise in iteration $t$ is adjusted as $\sigma^{(t)} = \eta*\sqrt{\sigma^{2}-\|\bm{y}-\bm{y}^{(t-1)}\|_{2}^{2}}$, where $\eta$ is a constant. The proposed denoising algorithm is summarized in Algorithm 1 (Alg. 1).
+With the solution $\hat{\boldsymbol{\upalpha}}$ in (\ref{equ17}), the clean patch in a PG can be estimated as $\hat{\mathbf{x}}_{m}=\mathbf{D}\hat{\boldsymbol{\upalpha}}+\boldsymbol{\upmu}_{y}$. Then the clean image $\hat{\mathbf{x}}$ can be reconstructed by aggregating all the estimated PGs. In practice, we could perform the above denoising procedures for several iterations for better denoising outputs. In iteration $t$, we use the iterative regularization strategy \cite{osher2005iterative} to add back to the recovered image $\hat{\mathbf{x}}^{(t-1)}$ some estimation residual in iteration $t-1$. The standard deviation of noise in iteration $t$ is adjusted as $\sigma^{(t)} = \eta*\sqrt{\sigma^{2}-\|\mathbf{y}-\mathbf{y}^{(t-1)}\|_{2}^{2}}$, where $\eta$ is a constant. The proposed denoising algorithm is summarized in Algorithm 1 (Alg. 1).
 
 In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each PG. Then the computational cost for Gaussian component selection is $O(p^{6}NMK)$.\ The cost for iterative regularization and noise estimation is negligible. The cost for closed-form weighted sparse coding is $O(p^{4}NM)$. Suppose that there are $T$ iterations, the overall complexity of our denoising algorithm is $O(p^{6}NMKT)$.
 \vspace{-0.05in}
@@ -200,37 +182,37 @@ In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each
 \textbf{Alg. 1}: Patch Group Prior based Denoising (PGPD)
 \\
 \hline
-\textbf{Input:} Noisy image $\bm{y}$, PG-GMM model
+\textbf{Input:} Noisy image $\mathbf{y}$, PG-GMM model
 \\
-1. Initialization: $\hat{\bm{x}}^{(0)}=\bm{y},\bm{y}^{(0)}=\bm{y}$;
+1. Initialization: $\hat{\mathbf{x}}^{(0)}=\mathbf{y},\mathbf{y}^{(0)}=\mathbf{y}$;
 \\
 \textbf{for} $t = 1:IteNum$ \textbf{do}
 \\
 2. Iterative Regularization:
 \\
-\quad\quad\quad $\bm{y}^{(t)}=\hat{\bm{x}}^{(t-1)}+\delta(\bm{y}-\bm{y}^{(t-1)})$;
+\quad\quad\quad $\mathbf{y}^{(t)}=\hat{\mathbf{x}}^{(t-1)}+\delta(\mathbf{y}-\mathbf{y}^{(t-1)})$;
 \\
 3. Estimate the standard deviation of noise;
 \\
-\quad\textbf{for} each PG $\bm{Y}$ \textbf{do}
+\quad\textbf{for} each PG $\mathbf{Y}$ \textbf{do}
 \\
-4.\quad Calculate group mean $\bm{\mu}_{y}$ and form PG $\bm{\overline{Y}}$;
+4.\quad Calculate group mean $\boldsymbol{\upmu}_{y}$ and form PG $\mathbf{\overline{Y}}$;
 \\
 5.\quad Gaussian component selection via (\ref{equ9});
 \\
 6.\quad Denoising by Weighted Sparse Coding (\ref{equ15});
 \\
-7.\quad Recover each patch in this PG via $\hat{\bm{x}}_{m}=\bm{D}\hat{\bm{\alpha}}+\bm{\mu}_{y}$;
+7.\quad Recover each patch in this PG via $\hat{\mathbf{x}}_{m}=\mathbf{D}\hat{\boldsymbol{\upalpha}}+\boldsymbol{\upmu}_{y}$;
 \\
 \quad\textbf{end for}
 \\
 8. Aggregate the recovered PGs to form the recovered
 \\
-\quad image $\hat{\bm{x}}^{(t)}$;
+\quad image $\hat{\mathbf{x}}^{(t)}$;
 \\
 \textbf{end for}
 \\
-\textbf{Output:} The recovered image $\hat{\bm{x}}^{(IteNum)}$.\\
+\textbf{Output:} The recovered image $\hat{\mathbf{x}}^{(IteNum)}$.\\
 \hline
 \end{tabular}\vspace{-0.15in}
 \end{table}
