@@ -8,7 +8,7 @@
 \section{Introduction}
 \begin{figure}
 \centering
-\includegraphics[width=0.74\linewidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/flowchart2.png}
+\includegraphics[width=0.74\linewidth]{images/pgpd/flowchart2.png}
 \caption{Flowchart of the proposed patch group based prior learning and image denoising framework.}
 \label{fig1}
 \end{figure}
@@ -47,7 +47,7 @@ The PGs $\{\bm{\overline{X}}_{n}\}$ contain a rich amount of NSS information of 
 \begin{figure}
 \centering
 \centering
-\includegraphics[width=0.7\linewidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/2pgs.png}
+\includegraphics[width=0.7\linewidth]{images/pgpd/2pgs.png}
 \caption{Different patch groups (PG) share similar PG variations.}
 \label{fig2}
 \end{figure}
@@ -82,7 +82,7 @@ The calculations of $\pi_{k}=\frac{1}{N}\sum_{n=1}^{N}\gamma_{nk}$ are similar t
 By alternating between the E-step and the M-step, the model parameters will be updated iteratively, and the update in each iteration can guarantee to increase the value of the log-likelihood function (\ref{equ5}), and the EM algorithm will converge \cite{Bishop,emconvergence}. Fig. \ref{fig3} shows the convergence curve of the proposed PG-GMM algorithm by using the Kodak PhotoCD Dataset (\url{http://r0k.us/graphics/kodak/}) for training.
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.75\linewidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/cvgc.png}
+\includegraphics[width=0.75\linewidth]{images/pgpd/cvgc.png}
 \caption{The convergence curve of log-likelihood in PG-GMM training on the Kodak PhotoCD Dataset.
 }
 \label{fig3}
@@ -125,7 +125,7 @@ Suppose that the $k$th Gaussian component is selected for PG $\bm{\overline{Y}}$
 where $\bm{D}$ is an orthonormal matrix composed by the eigenvectors of $\bm{\Sigma}$ and $\bm{\Lambda}$ is the diagonal matrix of eigenvalues. With PG-GMM, the eigenvectors  in $\bm{D}$ capture the statistical structures of NSS variations in natural images, while the eigenvalues in $\bm{\Lambda}$ represent the significance of these eigenvectors. Fig.\ 4 shows the eigenvectors for 3 Gaussian components. It can be seen that these eigenvectors encode the possible variations of the PGs. For one Gaussian component, the first eigenvector represents its largest variation, while the last eigenvector represents its smallest variation. For different Gaussian components, we can see that their eigenvectors (with the same index) are very different. Hence, $\bm{D}$ can be used to represent the structural variations of the PGs in that component.
 \begin{figure}[t]
 \centering
-\includegraphics[width=1\linewidth]{C:/Users/csjunxu/Desktop/JunXu/MyPaper/2015 ICCV PGPD/PGPDICCV2015Paper/20150914 ICCVfinal/img/dics.png}
+\includegraphics[width=1\linewidth]{images/pgpd/dics.png}
 \caption{Eigenvectors of 3 Gaussian components from the learned PG-GMM, sorted by the values of corresponding eigenvalues.}
 \label{fig4}
 \end{figure}
@@ -210,6 +210,112 @@ In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each
 %-------------------------------------------------------------------------
 \section{Experiments}
 In this section, we perform image denoising experiments on 20 widely used natural images (shown in Fig. \ref{fig5}). More experiments on the Berkeley Segmentation Data Set \cite{bsds} can be found in the supplementary file. As a common experimental setting in literature, additive white Gaussian noise with zero mean and standard deviation $\sigma$ is added to the image to test the performance of competing denoising methods. We call our method \textsl{PG Prior based Denoising} (PGPD) in the following experiments. The Matlab source code of our PGPD algorithm can be downloaded at \url{http://www4.comp.polyu.edu.hk/~cslzhang/code/PGPD.zip}.
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/airfield.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/airplane.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/baboon.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/barbara.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/boat.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/cameraman.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/carhouse.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/couple.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/elaine.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/hat.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/hill.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/house.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/lake.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/leaves.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/lena.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/man.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/monarch.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/paint.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/peppers.png}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.09\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/zelda.png}
+    \end{subfigure}
+    \caption{The 20 widely used test images.}
+    \label{fig5}
+\end{figure}
+
 
 \subsection{Implementation Details}
 Our proposed PGPD method contains two stages, the prior learning stage and the denoising stage. In the PG-GMM learning stage, there are 4 parameters: $p$, $M$, $W$ and $K$. The patch size ($p\times p$) is set as $p = 6$ for $0 < \sigma \le 20$, $p = 7$ for $20 < \sigma \le 30$, $p = 8$ for $30 < \sigma \le 50$, and $p=9$ for $50 < \sigma \le 100$. The window size ($W$) for PG searching is set to $W = 31$. The number ($M$) of patches in a PG is set to $M=10$. The number ($K$) of Gaussian components is set to $K=64$ for $p=6$ and $K=32$ otherwise. We extracted about one million PGs from the Kodak PhotoCD Dataset to train the PG-GMM. 
@@ -450,6 +556,61 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 \end{tabular}
 \end{center}
 \end{table}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/br_airplane.png}
+	   \caption{Ground Truth}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/br_airplane_50.png}
+		\caption{Noisy (PSNR: 14.16dB)}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/br_BM3D_50_airplane.png}
+		\caption{BM3D (PSNR: 28.24dB)}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/br_LSSC_50_airplane.png}
+		\caption{LSSC (PSNR: 28.15dB)}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/br_EPLL_50_airplane.png}
+		\caption{EPLL (PSNR: 28.19dB)}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/br_NCSR_50_airplane.png}
+		\caption{NCSR (PSNR: 28.18dB)}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/br_WNNM_50_airplane.png}
+		\caption{WNNM (PSNR: 28.55dB)}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.2\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/br_our_50_airplane.png}
+		\caption{PGPD (PSNR: 28.38dB}
+    \end{subfigure}
+    \caption{Denoised images of \textsl{Airplane} by different methods (the standard deviation of noise is $\sigma=50$).}
+    \label{fig6}
+\end{figure}
+
+
 
 
 \section{Conclusion}
