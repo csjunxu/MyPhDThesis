@@ -56,7 +56,58 @@ In this paper, we present an effective multi-channel image denoising algorithm, 
 
 \subsection{\parbox[t]{10cm}{The Multi-channel Weighted Nuclear Norm \\Minimization Model}}
 
-
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/br_kodim08_1.png}
+		\caption{Clean Red Channel}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/br_Noisy_nSig402030_kodim08_1.png}
+		\caption{Noisy Red Channel}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/br_kodim08_2.png}
+\caption{Clean Green Channel}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/br_Noisy_nSig402030_kodim08_2.png}
+\caption{Noisy Green Channel}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/br_WNNMJ_nSig402030_lambda1_kodim08_1.png}
+\caption{Denoised Red by WNNM}
+    \end{subfigure}
+\hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/br_CWNNM_ADMM_nSig402030_kodim08_1.png}
+		\caption{Denoised Red by MC-WNNM}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/br_WNNMJ_nSig402030_lambda1_kodim08_2.png}
+		\caption{Denoised Green by WNNM}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/br_CWNNM_ADMM_nSig402030_kodim08_2.png}
+\caption{Denoised Green by MC-WNNM}
+    \end{subfigure}
+    \caption{The Red and Green channels of the image ``kodim08'' from the Kodak PhotoCD Dataset, its synthetic noisy version, and the images recovered by the concatenated WNNM and the proposed MC-WNNM methods.}
+    \label{fig1}
+\end{figure}
 
 The color image denoising problem is to recover the clean image $\mathbf{x}_{c}$ from its noisy version $\mathbf{y}_{c}=\mathbf{x}_{c}+\mathbf{n}_{c}$, where $c=\{r, g, b\}$ is the index of R, G, B channels and $\mathbf{n}_{c}$ is the noise in the $c$ channel.\ Patch based image denoising \cite{foe,ksvd,bm3d,lssc,epll,ncsr,mlp,csf,wnnm,pgpd,chen2015learning,dncnn} has achieved a great success in the last decade.\ Given a noisy color image $\mathbf{y}_{c}$, each local patch of size $p\times p \times 3$ is extracted and stretched to a patch vector, denoted by $\mathbf{y}=[\mathbf{y}_{r}^{\top}\ \mathbf{y}_{g}^{\top}\ \mathbf{y}_{b}^{\top}]^{\top}\in\mathbb{R}^{3p^{2}}$, where $\mathbf{y}_{r}, \mathbf{y}_{g}, \mathbf{y}_{b}\in\mathbb{R}^{p^{2}}$ are the corresponding patches in R, G, B channels.\ For each local patch $\mathbf{y}$, we search the $M$ most similar patches to it (including $\mathbf{y}$ itself) by Euclidean distance in a relatively large local window around it.\ By stacking the $M$ similar patches column by column, we form a noisy patch matrix $\mathbf{Y}=\mathbf{X}+\mathbf{N}\in\mathbb{R}^{3p^{2}\times M}$, where $\mathbf{X}$ and $\mathbf{N}$ are the corresponding clean and noise patch matrices.
 
