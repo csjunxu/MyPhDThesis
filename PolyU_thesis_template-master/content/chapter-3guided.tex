@@ -1041,7 +1041,8 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 
 
 \begin{table}\vspace{-4mm}
-\small
+\begin{adjustwidth}{-2cm}{}
+\scriptsize
 \caption{Average PSNR(dB) results of different methods on 60 real noisy images cropped from \cite{crosschannel2016}.}
 \vspace{-4mm}
 \label{tab3}
@@ -1068,12 +1069,14 @@ PSNR
 \hline
 \end{tabular}
 \end{center}
+\end{adjustwidth}
 \end{table}
 
 In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 60 real noisy images cropped from \cite{crosschannel2016}.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth", with which the PSNR and SSIM can be computed.\ The average SSIM results of GAT-BM3D \cite{Makitalo2013Optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{chen2015learning}, DnCNN \cite{zhang2017beyond}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, and the proposed method are listed in Table \ref{tab2} (CC is not compared since the code of \cite{crosschannel2016} is not available).\ As can be seen from Figures \ref{fig5}-\ref{fig6}, our proposed method achieves better performance than the competing methods.
 
 \begin{table}[htpb]
-\small
+\begin{adjustwidth}{-2cm}{}
+\scriptsize
 \caption{Average SSIM \cite{ssim} results of different methods on 60 real noisy images cropped from \cite{crosschannel2016}.}
 \label{tab2}
 \begin{center}
@@ -1099,13 +1102,15 @@ SSIM
 \hline
 \end{tabular}
 \end{center}
+\end{adjustwidth}
 \end{table}
 
 
 
 
 \begin{table}\vspace{-4mm}
-\small
+\begin{adjustwidth}{-2cm}{}
+\scriptsize
 \caption{Average PSNR(dB) results of different methods on 100 real noisy images cropped from our new dataset.}
 \vspace{-4mm}
 \label{tab4}
@@ -1132,13 +1137,15 @@ PSNR
 \hline
 \end{tabular}
 \end{center}
+\end{adjustwidth}
 \end{table}
 
 In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 100 real noisy images cropped from the new dataset we constructed.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth", with which the PSNR and SSIM can be computed.\ The average SSIM results of GAT-BM3D \cite{Makitalo2013Optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{chen2015learning}, DnCNN \cite{zhang2017beyond}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, and the proposed method are listed in Table \ref{tab3} (CC is not compared since the code of \cite{crosschannel2016} is not available).\ As can be seen from Figures \ref{fig7}-\ref{fig8}, our proposed method achieves better performance than the competing methods.
 
 
 \begin{table}[htpb]
-\small
+\begin{adjustwidth}{-2cm}{}
+\scriptsize
 \caption{Average SSIM \cite{ssim} results of different methods on 100 real noisy images cropped from our new dataset.}
 \label{tab3}
 \begin{center}
@@ -1164,12 +1171,14 @@ SSIM
 \hline
 \end{tabular}
 \end{center}
+\end{adjustwidth}
 \end{table}
 
 
 
 \begin{table}\vspace{-4mm}
-\small
+\begin{adjustwidth}{-2cm}{}
+\scriptsize
 \caption{Average Speed (sec.) results of different methods on 100 real noisy images cropped from our new dataset.}
 \vspace{-4mm}
 \label{tab5}
@@ -1196,6 +1205,7 @@ Time
 \hline
 \end{tabular}
 \end{center}
+\end{adjustwidth}
 \end{table}
 
 
