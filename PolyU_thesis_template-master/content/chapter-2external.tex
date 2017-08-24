@@ -1093,5 +1093,66 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
 \end{center}
 \end{table}
 
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/200img/br_3063.jpg}
+	   \caption{Ground Truth}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/200img/br_30_3063.jpg}
+		\caption{Noisy: 18.59}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/200img/br_BM3D_30_3063.jpg}
+		\caption{BM3D: 32.49}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/200img/br_EPLL_30_3063.jpg}
+		\caption{LSSC: 32.52}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/200img/br_NCSR_30_3063.jpg}
+		\caption{EPLL: 32.709}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/200img/br_WNNM_30_3063.jpg}
+		\caption{NCSR: 32.39}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/200img/br_our_30_3063.jpg}
+		\caption{WNNM: 32.77}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/pgpd/200img/br_our_30_3063.jpg}
+		\caption{PGPD: 32.52}
+    \end{subfigure}
+    \caption{Denoised images and PSNR (dB) results of \textsl{3063} by different methods (the standard deviation of noise is $\sigma=30$).}
+    \label{fig7}
+\end{figure}
+
+
+
+
+
+
+
+
 \section{Conclusion}
 How to learn explicit models of nonlocal self-similarity (NSS) prior for image restoration is an open problem, and we made a good attempt on this by lifting the patch based image modeling to patch group (PG) based image modeling. A PG is a group of similar patches in an image region. After group mean subtraction, a PG can naturally represent the NSS variations of natural images. A PG based Gaussian Mixture Model (PG-GMM) learning algorithm was developed to learned the NSS prior from natural images, and an associated weighted sparse coding algorithm was developed for high performance image denoising. The so-called \textsl{PG Prior based Denoising} (PGPD) algorithm not only achieves highly competitive PSNR results with state-of-the-art denoising methods, but also is highly efficient and preserves better the image edges and textures. The proposed method can be extended to other image processing tasks such as deblurring and super-resolution.
