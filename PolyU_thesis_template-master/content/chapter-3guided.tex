@@ -767,8 +767,9 @@ Time & | &  \textbf{21.19}  & 312.67 & 22.26
 Since there is no ``ground truth" for the real noisy images in  dataset 1 \cite{ncwebsite}, we only compare the visual quality of the denoised images by different methods. (Note that method CC \cite{crosschannel2016} is not compared since its code is not available. The result of MLP is not shown here due to the limit of space.) Fig. \ref{fig8} show the denoised images of ``Dog''. It can be seen that CBM3D and WNNM tend to over-smooth much the image while remaining some noise caused color artifacts.\ DnCNN and TNRD are likely to remain many noise-caused color artifacts across the whole image. These results demonstrate that the methods designed with Gaussian noise model are not effective for real noise removal.\ Though NC and NI methods are specifically developed for real noisy images, their performance on noise removal is not very satisfactory.\ In comparison, our proposed method recovers much better the structures and textures (such as the eye area in ``Dog'') than the other competing methods.\ More visual comparisons can be found in the supplementary file.
 
 
-\begin{table*}\vspace{-4mm}
+\begin{table}\vspace{-4mm}
 \scriptsize
+\begin{adjustwidth}{-2cm}{}
 \caption{PSNR(dB) results of different methods on 15 cropped real noisy images used in \cite{crosschannel2016}.}
 \vspace{-4mm}
 \label{tab2}
@@ -852,7 +853,8 @@ Average
 \end{tabular}
 \end{center}
 \vspace{-3mm}
-\end{table*}
+\end{adjustwidth}
+\end{table}
 
 \textbf{Results on dataset 2.}
 As described in section 4.2, there is a mean image for each of the 11 scenes used in dataset 2 \cite{crosschannel2016}, and those mean images can be roughly taken as ``ground truth" images for quantitative evaluation of denoising algorithms. We firstly perform quantitative comparison on the 15 cropped images used in \cite{crosschannel2016}. The PSNR results of GAT-BM3D, CBM3D, WNNM, MLP, CSF, TNRD, DnCNN, NC, NI and CC are listed in Table II (The results of CC are copied from the original paper \cite{crosschannel2016}). The best PSNR results of each image are highlighted in bold. One can see that on 8 out of the 15 images, our method achieves the best PSNR values. CC achieves the best PSNR on 3 of the 15 images. It should be noted that in the CC method, a specific model is trained for each camera and camera setting, while our method uses the same model for all images. On average, our proposed method has 0.27dB PSNR improvements over the second best method CC and much higher PSNR gains over other competing methods. The method GAT-BM3D does not work well on most images. This is because real world noise is much more complex than Poisson. 
@@ -936,7 +938,7 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 
 
 
-\begin{table*}\vspace{-4mm}
+\begin{table}\vspace{-4mm}
 \small
 \caption{Average PSNR(dB) results of different methods on 60 real noisy images cropped from \cite{crosschannel2016}.}
 \vspace{-4mm}
@@ -964,11 +966,11 @@ PSNR
 \hline
 \end{tabular}
 \end{center}
-\end{table*}
+\end{table}
 
 
 
-\begin{table*}\vspace{-4mm}
+\begin{table}\vspace{-4mm}
 \small
 \caption{Average PSNR(dB) results of different methods on 100 real noisy images cropped from our new dataset.}
 \vspace{-4mm}
@@ -996,9 +998,9 @@ PSNR
 \hline
 \end{tabular}
 \end{center}
-\end{table*}
+\end{table}
 
-\begin{table*}\vspace{-4mm}
+\begin{table}\vspace{-4mm}
 \small
 \caption{Average Speed (sec.) results of different methods on 100 real noisy images cropped from our new dataset.}
 \vspace{-4mm}
@@ -1026,7 +1028,7 @@ Time
 \hline
 \end{tabular}
 \end{center}
-\end{table*}
+\end{table}
 
 
 %------------------------------------------------------------------------------------
