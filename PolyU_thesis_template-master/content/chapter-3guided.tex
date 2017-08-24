@@ -856,6 +856,108 @@ Average
 \end{adjustwidth}
 \end{table}
 
+
+In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 15 cropped real noisy images used in \cite{crosschannel2016}.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR and SSIM \cite{ssim} can be computed.\  The average SSIM results of GAT-BM3D \cite{Makitalo2013Optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{chen2015learning}, DnCNN \cite{zhang2017beyond}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, CC \cite{crosschannel2016}, and the proposed method are listed in Table \ref{tab1}. As can be seen from Figures \ref{fig3}-\ref{fig4}, our proposed method achieves better performance than the the competing methods.
+
+\begin{table}[htpb]
+\begin{adjustwidth}{-2cm}{}
+\caption{SSIM \cite{ssim} results of different methods on 15 cropped real noisy images used in \cite{crosschannel2016}.}
+\vspace{-3mm}
+\label{tab1}
+\scriptsize
+\begin{center}
+\renewcommand\arraystretch{1}
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+Camera Settings
+&
+\textbf{GAT-BM3D}
+&
+\textbf{CBM3D}
+&
+\textbf{WNNM}
+&
+\textbf{MLP}
+&
+\textbf{CSF}
+&
+\textbf{TNRD}
+&
+\textbf{DnCNN}
+&
+\textbf{NI}
+& 
+\textbf{NC}
+& 
+\textbf{CC} 
+&
+\textbf{Ours} 
+\\
+\hline
+\multirow{3}{*}{\small{Canon 5D Mark III}} 
+& 0.9126 & 0.9778 & 0.9673 & 0.9695 & 0.9434 & 0.9742 & 0.9389 & 0.9600 & 0.9689 & 0.9678 & \textbf{0.9813}
+\\ 
+\cdashline{2-11} 
+\multirow{3}{*}{ISO = 3200}   
+& 0.8427 & 0.9552 & 0.9210 & 0.9458 & 0.9011 & 0.9491 & 0.8989 & 0.9308 & 0.9427 & 0.9359 & \textbf{0.9572}
+\\ 
+\cdashline{2-11}    
+& 0.8017 & \textbf{0.9660} & 0.9110 & 0.9599 & 0.9037 & 0.9617 & 0.9182 & 0.9463 & 0.9476 & 0.9478 &  0.9643
+\\
+\hline
+\multirow{3}{*}{Nikon D600} 
+& 0.7845 & 0.9330 & 0.9281 & 0.9481 & 0.8792 & 0.9494 & 0.9123 & 0.9413 & 0.9497 & 0.9484 &  \textbf{0.9535}
+\\ 
+\cdashline{2-11} 
+\multirow{3}{*}{ISO = 3200}   
+& 0.9028 & 0.9168 & 0.9432 & 0.9469 & 0.9261 & \textbf{0.9499} & 0.8932 & 0.9251 & 0.9398 & 0.9293 &  0.9461
+\\ 
+\cdashline{2-11}    
+& \textbf{0.9806} & 0.9313 & 0.9737 & 0.9726 & 0.9763 & 0.9742 & 0.8708 & 0.9481 & 0.9588 & 0.9799 &  0.9683
+\\
+\hline
+\multirow{3}{*}{Nikon D800} 
+& 0.8791 & 0.9339 & 0.9417 & 0.9543 & 0.9148 & 0.9572 & 0.9060 & 0.9506 & 0.9533 & 0.9575 &  \textbf{0.9620}
+\\ 
+\cdashline{2-11} 
+\multirow{3}{*}{ISO = 1600}   
+& 0.9534 & 0.9383 & 0.9748 & 0.9743 & 0.9674 & 0.9774 & 0.8943 & 0.9615 & 0.9591 & 0.9767 &  \textbf{0.9779}
+\\ 
+\cdashline{2-11}    
+& 0.8795 & 0.9277 & 0.9311 & 0.9354 & 0.9035 & 0.9410 & 0.8735 & 0.9229 & 0.9406 & 0.9427 &  \textbf{0.9531}
+\\
+\hline
+\multirow{3}{*}{Nikon D800} 
+& 0.9526 & 0.8866 & \textbf{0.9656} & 0.9533 & 0.9654 & 0.9569 & 0.8463 & 0.9101 & 0.9466 & 0.9637 &  0.9613
+\\ 
+\cdashline{2-11} 
+\multirow{3}{*}{ISO = 3200}   
+& 0.9078 & 0.8928 & 0.9416 & 0.9381 & 0.9354 & 0.9394 & 0.8755 & 0.9194 & 0.9309 & 0.9477 &  \textbf{0.9521}
+\\ 
+\cdashline{2-11}    
+& 0.9707 & 0.8430 & 0.9664 & 0.9548 & \textbf{0.9712} & 0.9576 & 0.7204 & 0.9001 & 0.9070 & 0.9544 &  0.9512
+\\ 
+\hline
+\multirow{3}{*}{Nikon D800} 
+& 0.8909 & 0.7952 & 0.9188 & 0.8914 & \textbf{0.9259} & 0.8966 & 0.7847 & 0.7781 & 0.9024 & 0.9206 &  0.8958
+\\ 
+\cdashline{2-11} 
+\multirow{3}{*}{ISO = 6400}   
+& 0.8328 & 0.8613 & 0.9050 & 0.9137 & 0.9127 & 0.9142 & 0.8259 & 0.8649 & 0.9141 & \textbf{0.9369} &  0.9238
+\\ 
+\cdashline{2-11}    
+& 0.7773 & 0.8363 & 0.8818 & 0.8958 & 0.8494 & 0.8960 & 0.7936 & 0.8295 & 0.8847 & \textbf{0.9118} & 0.9089
+\\
+\hline
+Average
+& 0.8846 & 0.9063 & 0.9381 & 0.9436 & 0.9250 & 0.9463 & 0.8635 & 0.9126 & 0.9364 & 0.9481 & \textbf{0.9504}
+\\
+\hline
+\end{tabular}
+\end{center}
+\end{adjustwidth}
+\end{table}
+
 \textbf{Results on dataset 2.}
 As described in section 4.2, there is a mean image for each of the 11 scenes used in dataset 2 \cite{crosschannel2016}, and those mean images can be roughly taken as ``ground truth" images for quantitative evaluation of denoising algorithms. We firstly perform quantitative comparison on the 15 cropped images used in \cite{crosschannel2016}. The PSNR results of GAT-BM3D, CBM3D, WNNM, MLP, CSF, TNRD, DnCNN, NC, NI and CC are listed in Table II (The results of CC are copied from the original paper \cite{crosschannel2016}). The best PSNR results of each image are highlighted in bold. One can see that on 8 out of the 15 images, our method achieves the best PSNR values. CC achieves the best PSNR on 3 of the 15 images. It should be noted that in the CC method, a specific model is trained for each camera and camera setting, while our method uses the same model for all images. On average, our proposed method has 0.27dB PSNR improvements over the second best method CC and much higher PSNR gains over other competing methods. The method GAT-BM3D does not work well on most images. This is because real world noise is much more complex than Poisson. 
 
@@ -967,6 +1069,38 @@ PSNR
 \end{tabular}
 \end{center}
 \end{table}
+
+In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 60 real noisy images cropped from \cite{crosschannel2016}.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth", with which the PSNR and SSIM can be computed.\ The average SSIM results of GAT-BM3D \cite{Makitalo2013Optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{chen2015learning}, DnCNN \cite{zhang2017beyond}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, and the proposed method are listed in Table \ref{tab2} (CC is not compared since the code of \cite{crosschannel2016} is not available).\ As can be seen from Figures \ref{fig5}-\ref{fig6}, our proposed method achieves better performance than the competing methods.
+
+\begin{table}[htpb]
+\small
+\caption{Average SSIM \cite{ssim} results of different methods on 60 real noisy images cropped from \cite{crosschannel2016}.}
+\label{tab2}
+\begin{center}
+\renewcommand\arraystretch{1}
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|}
+\hline
+Methods
+&\textbf{GAT-BM3D}
+&\textbf{CBM3D}
+&\textbf{WNNM}
+&\textbf{MLP}
+&\textbf{CSF} 
+&\textbf{TNRD} 
+&\textbf{DnCNN}
+&\textbf{NI} 
+&\textbf{NC} 
+&\textbf{Ours} 
+\\
+\hline
+SSIM  
+& 0.9331 & 0.9251 & 0.9633 & 0.9653 & 0.9598 & 0.9670 & 0.8873 & 0.9241 & 0.9514 & \textbf{0.9691}
+\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
 
 
 
