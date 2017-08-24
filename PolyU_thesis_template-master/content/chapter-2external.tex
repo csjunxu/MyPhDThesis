@@ -325,6 +325,7 @@ In the denoising stage, there are 3 parameters:\ $c$, $\delta$, and $\eta$.\ In 
 \subsection{Comparison with Patch Prior based Denoising}
 In this section, we compare the PSNR and visual quality of denoised images by the \textsl{Patch Prior based Denoising} (PPD) method and the \textsl{Patch Group Prior based Denoising} (PGPD) method. As can be seen from Table \ref{tab1} and Figures \ref{fig1}-\ref{fig4}, PGPD is much better than PPD both quantitatively and qualitatively. This validates the effectiveness of our learned PG based NSS prior. In the following sections, we will omit the results of the PPD method.
 \begin{table}
+\begin{adjustwidth}{-3cm}{}
 \scriptsize
 \caption{PSNR(dB) results of PPD and PGPD on the 20 natural images.}
 \label{tab1}
@@ -405,8 +406,8 @@ Zelda&35.50&35.51    &32.21&32.21  & 30.35 &30.43   &29.07 &29.23   & 28.06& 28.
 \\
 \hline
 \end{tabular}
-\end{table}\vspace{-0.1in}
-
+\end{adjustwidth}
+\end{table}
 
 \begin{figure}
     \centering
@@ -526,9 +527,6 @@ Zelda&35.50&35.51    &32.21&32.21  & 30.35 &30.43   &29.07 &29.23   & 28.06& 28.
     \caption{Denoised images and PSNR (dB) results of \textsl{Cameraman} by the PPD method and PGPD method (the standard deviation of noise is $\sigma=75$).}
     \label{fig6}
 \end{figure}
-
-
-
 
 
 \subsection{Comparison With the State-of-the-art Methods}
