@@ -563,8 +563,7 @@ We compare the proposed TWSC method with CBM3D \cite{cbm3d}, WNNM \cite{wnnm}, T
 
 \begin{center}
 \renewcommand\arraystretch{1}
-%\scriptsize
-\huge
+\scriptsize
 \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}ccccccccccc}
 \hline
 Metric
@@ -596,75 +595,127 @@ SSIM & 0.9063 & 0.9381 & 0.9463 & 0.8635 & 0.9126 & 0.9364 & 0.9481 & 0.9516 & \
 \hline
 \end{tabular*}
 \end{center}
-
 \end{table}
+
+
 \begin{figure}
     \centering
     \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_Noisy_dog.png}
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_Noisy_dog.png}
 		\caption{Noisy}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_BM3D_dog.png}
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_CBM3D_dog.png}
 		\caption{CBM3D}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_MLP_dog.png}
-\caption{MLP}
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_WNNM_dog.png}
+\caption{WNNM}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_TRD_dog.png}
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_TRD_dog.png}
 \caption{TNRD}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_NI_dog.png}
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_DnCNN_dog.png}
+\caption{DnCNN}
+    \end{subfigure}
+\hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_NI_dog.png}
 \caption{NI}
     \end{subfigure}
 \hfill
     \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_NC_dog.png}
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_NC_dog.png}
 		\caption{NC}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.19\textwidth}
         \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_WNNM_dog.png}
-		\caption{WNNM-1}
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_TWSC_dog.png}
+		\caption{TWSC}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_WNNMJ_dog.png}
-		\caption{WNNM-2}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_WNNM_ADMM_dog.png}
-		\caption{WNNM-3}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/resize_br_CWNNM_ADMM_NL_dog.png}
-		\caption{MC-WNNM}
-    \end{subfigure}
-    \caption{Denoised images of the real noisy image ``Dog'' \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are 16.8, 17.0, and 16.6, respectively.\ The images are better to be zoomed in on screen.}
+    \caption{Denoised images of the real noisy image \textsl{Dog} \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are 16.8, 17.0, and 16.6, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig3}
 \end{figure}
 
 
-
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_Mean_5dmark3_iso3200_1_real.png}
+		\caption{Mean Image}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_Noisy_5dmark3_iso3200_1_real.png}
+		\caption{Noisy 37.00}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_CBM3D_5dmark3_iso3200_1_real.png}
+		\caption{CBM3D 39.72}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_WNNM_5dmark3_iso3200_1_real.png}
+\caption{WNNM 37.48}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_TRD_5dmark3_iso3200_1_real.png}
+\caption{TNRD 39.46}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_DnCNN_5dmark3_iso3200_1_real.png}
+\caption{DnCNN 37.26}
+    \end{subfigure}
+\hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_NI_5dmark3_iso3200_1_real.png}
+\caption{NI 37.68}
+    \end{subfigure}
+\hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_NC_5dmark3_iso3200_1_real.png}
+		\caption{NC 38.76}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_CCNoise_5dmark3_iso3200_1.png}
+		\caption{CC 38.37}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/twsc/resize_br_TWSC_5dmark3_iso3200_1.png}
+		\caption{TWSC \textbf{40.75}}
+    \end{subfigure}
+    \caption{Denoised images and PSNR (dB) results of the real noisy image \textsl{Canon 5D Mark 3 ISO 3200 1} \cite{crosschannel2016} by different methods.\ The images are better to be zoomed in on screen.}
+    \label{fig3}
+\end{figure}
 
 
 \section{Conclusion}
