@@ -544,13 +544,85 @@ We evaluate the competing methods from three aspects: PSNR, Speed, and Visual Qu
 
 In summary, the proposed PGPD method demonstrates powerful denoising ability quantitatively and qualitatively, and it is highly efficient.
 \begin{table}[t]
-\caption{PSNR(dB) results of different denoising algorithms on 20 natural images.}
 \begin{adjustwidth}{-3cm}{}
+\caption{PSNR(dB) results of different denoising algorithms on 20 natural images.}
 \label{tab1}
 \begin{center}
 \renewcommand\arraystretch{1.0}
 \scriptsize
 \begin{tabular}{|c||c|c|c|c|c|c|c||c|c|c|c|c|c|c|}
+\hline
+&\multicolumn{7}{c||}{ $\sigma = 30$}&\multicolumn{7}{c|}{ $\sigma = 40$}
+\\
+\hline
+\hline
+Images&\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&\textbf{PPD}&\textbf{PGPD}
+&\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&\textbf{PPD}&\textbf{PGPD} 
+\\
+\hline
+Airfield& 26.41 & 26.68 & 26.52  &  26.36  & 26.67 &26.33  & 26.46     & 25.10 &  25.51  & 25.36 & 25.07 & 25.48&25.20 & 25.30 
+\\
+\hline
+Airplane&  30.71  & 30.62  &  30.68  &  30.70 & 30.97 &30.62 &  30.80    & 29.20 & 29.21  & 29.28 & 29.28 & 29.58&29.21&29.44
+\\
+\hline
+ Baboon & 24.57   & 24.78  & 24.70   & 24.63  & 24.85&24.54 & 24.63   &  23.11 &  23.51  & 23.35 & 23.28 & 23.58 & 23.23&23.39   
+\\
+\hline 
+ Barbara & 29.81  & 29.60 & 27.64 & 29.62 & 30.31& 27.97 & 29.38   &  27.99 & 28.17 & 26.06 & 28.20 &28.76 & 26.29 & 27.97
+\\
+\hline
+ Boat & 29.12  & 29.06  & 28.97 & 28.94 & 29.24& 28.80 &  29.05   &  27.74& 27.77  &  27.72 & 27.65 &27.96  &27.51 & 27.82    
+\\
+\hline
+ C. Man& 28.64 & 28.63 & 28.40  & 28.58 & 28.80& 28.25& 28.53     & 27.18& 27.34  & 27.10 &27.12  &27.47 & 27.05& 27.33
+\\
+\hline
+ Carhouse& 28.78 & 28.79   & 28.70    & 28.72 & 28.94 &28.62 & 28.80   & 27.38 &  27.49 & 27.38 & 27.40 & 27.58 & 27.29&27.51
+\\
+\hline
+ Couple & 28.87  & 28.76  & 28.69 & 28.57 & 28.98& 28.54 & 28.84    & 27.48 & 27.41 &  27.34  & 27.24 & 27.62 & 27.16 & 27.53   
+\\
+\hline
+ Elaine& 30.45 & 30.54 & 30.26   &  30.26  & 30.46&30.24& 30.37    &29.52 & 29.55 & 29.46 & 29.59 & 29.60&29.42&29.62   
+\\
+\hline
+ Hat& 29.37 & 29.22  & 29.22   &  29.16  & 29.44  & 29.05  &29.31    & 27.74 & 27.60 &  27.73  &  27.66 & 27.85 &27.43&27.90   
+\\
+\hline
+ Hill & 29.16 & 29.09 & 28.94 & 28.97 & 29.25 &28.85 & 29.09    & 27.99 & 28.00 & 27.86 & 27.83 & 28.12 &27.76 & 28.06 
+\\
+\hline
+ House& 32.09 & 32.40  & 31.48  & 32.07 & 32.52& 31.62& 32.24    & 30.65  & 31.10 & 30.20 & 30.80  & 31.31&30.32 &31.02    
+\\
+\hline
+ Lake   & 28.34 & 28.36  & 28.41   & 28.31   &  28.59&28.30 &28.38    & 26.98  & 27.13 &27.19  & 26.99 &27.34&27.03 & 27.15  
+\\
+\hline
+ Leaves & 27.81 & 27.65& 27.36 & 28.14 & 28.60&27.51 &27.99     & 25.69 & 26.04 & 25.80 &26.24 & 26.95& 25.88 & 26.29  
+\\
+\hline
+ Lena& 31.26 & 31.18  & 30.98 &  31.06& 31.43 &30.98 &31.27     & 29.86& 29.91 & 29.69& 29.92 & 30.11&29.67 &30.10   
+\\
+\hline
+ Man& 28.86 & 28.87 & 28.87 & 28.78 & 29.00& 28.72 & 28.86    & 27.65  & 27.64 & 27.68& 27.54 &27.80 &27.53 & 27.73     
+\\
+\hline
+ Monarch& 28.36 & 28.20 & 28.50 & 28.46 & 28.91& 28.27&28.49    &   26.72  & 26.87 &27.05  & 26.85 & 27.47&26.81 &27.02    
+\\
+\hline
+ Paint & 28.29 & 28.29 & 28.45  &  28.10  & 28.58&28.39 &28.42    &  26.69 &  26.77 & 27.00  & 26.50 & 27.10& 26.88 & 26.94 
+\\
+\hline
+ Peppers & 31.26 & 31.17 & 31.10 & 31.11  & 31.38 &31.13 & 31.25   &   29.97  & 30.00&  29.93 &  30.07 & 30.18&29.95  & 30.18    
+\\
+\hline
+ Zelda & 30.45 & 30.27  & 30.44  &  30.16  & 30.48& 30.35 &30.43    & 29.10&28.91 &29.18  & 28.94 & 29.12&29.07 &29.23   
+\\
+\hline
+ \textbf{Average} &  29.13 & 29.11  &  28.92 & 29.03  & 29.37 & 28.85 & 29.13   &27.69&27.80 & 27.62& 27.71&28.05 &27.53&27.88     
+\\
+\hline
 \hline
 &\multicolumn{7}{c||}{ $\sigma = 30$}&\multicolumn{7}{c|}{ $\sigma = 40$}
 \\
@@ -699,6 +771,7 @@ Images&\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&\te
 \end{center}
 \end{adjustwidth}
 \end{table}
+
 
 \begin{table}
 \caption{Average run time (seconds) with standard deviation of different methods on images of size $256\times 256$ and $512\times 512$. BM3D uses parallelization and is implemented with compiled C++ mex-function while the other methods are implemented in Matlab.}
