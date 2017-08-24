@@ -1134,6 +1134,40 @@ PSNR
 \end{center}
 \end{table}
 
+In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 100 real noisy images cropped from the new dataset we constructed.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth", with which the PSNR and SSIM can be computed.\ The average SSIM results of GAT-BM3D \cite{Makitalo2013Optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{chen2015learning}, DnCNN \cite{zhang2017beyond}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, and the proposed method are listed in Table \ref{tab3} (CC is not compared since the code of \cite{crosschannel2016} is not available).\ As can be seen from Figures \ref{fig7}-\ref{fig8}, our proposed method achieves better performance than the competing methods.
+
+
+\begin{table}[htpb]
+\small
+\caption{Average SSIM \cite{ssim} results of different methods on 100 real noisy images cropped from our new dataset.}
+\label{tab3}
+\begin{center}
+\renewcommand\arraystretch{1}
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|}
+\hline
+Methods
+&\textbf{GAT-BM3D}
+&\textbf{CBM3D}
+&\textbf{WNNM}
+&\textbf{MLP}
+&\textbf{CSF} 
+&\textbf{TNRD} 
+&\textbf{DnCNN}
+&\textbf{NI} 
+&\textbf{NC} 
+&\textbf{Ours} 
+\\
+\hline
+SSIM  
+& 0.8881 & 0.9494 & 0.9290 & 0.9453 & 0.9398 & 0.9486 & 0.8852 & 0.9190 & 0.9356 & \textbf{0.9529}
+\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
 \begin{table}\vspace{-4mm}
 \small
 \caption{Average Speed (sec.) results of different methods on 100 real noisy images cropped from our new dataset.}
