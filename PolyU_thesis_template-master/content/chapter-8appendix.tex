@@ -1,21 +1,261 @@
 % !TEX root = ../thesis.tex
 %
-\chapter{Conclusions}
-\label{sec:conclusions}
+\chapter{Appendix}
+\label{sec:appendix}
 
-\blindtext
+\section{Closed-Form Solution of the Weighted Sparse Coding Problem (\ref{equ7})}
 
-\section{Section 1}
-\label{sec:conclusions:sec1}
+For notation simplicity, we ignore the indices $n,m,t$ in problem (\ref{equ7}).\ It turns into the following weighted sparse coding problem:
+\vspace{-5mm}
+\begin{equation}\label{equ14}
+\vspace{-2mm}
+\min\nolimits_{\bm{\alpha}}\|\mathbf{y}-\bm{D}\bm{\alpha}\|_{2}^{2}+\sum\nolimits_{j=1}^{3p^2}\lambda_{j}|\bm{\alpha}_{j}|.
+\end{equation}
+Since $\bm{D}$ is an orthogonal matrix, problem (\ref{equ14}) is equivalent to:
+\vspace{-2mm}
+\begin{equation}\label{equ15}
+\vspace{-2mm}
+\min\nolimits_{\bm{\alpha}}\|\bm{D}^{T}\mathbf{y}-\bm{\alpha}\|_{2}^{2}+\sum\nolimits_{j=1}^{3p^2}\lambda_{j}|\bm{\alpha}_{j}|.
+\end{equation}
+For simplicity, we denote $\mathbf{z} = \mathbf{D^{T}y}$.\ Here we have $\lambda_{j}>0$, $j=1,...,3p^2$, then problem (\ref{equ15}) can be written as:
+\vspace{-2mm}
+\begin{equation}\label{equ16}
+\vspace{-2mm}
+\min\nolimits_{\boldsymbol{\alpha}}\sum\nolimits_{j=1}^{3p^2}((\mathbf{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|).
+\end{equation}
+The problem (\ref{equ16}) is separable w.r.t. each $\bm{\alpha}_{j}$ and hence can be simplified to $3p^2$ independent scalar minimization problems:
+\vspace{-2mm}
+\begin{equation}\label{equ17}
+\vspace{-2mm}
+\min\nolimits_{\bm{\alpha}_{j}}(\mathbf{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|,
+\end{equation}
+where $j=1,...,3p^2$. Taking derivative of $\boldsymbol{\alpha}_{j}$ in problem (\ref{equ17}) and setting the derivative to be zero. There are two cases for the solution.
 
-\blindtext
+(a) If $\bm{\alpha}_{j}\ge 0$, we have 
+$
+2(\bm{\alpha}_{j}-\mathbf{z}_{j})+\lambda_{j}=0,
+$ and the solution is
+$
+\hat{\bm{\alpha}}_{j}=\mathbf{z}_{j}-\frac{\lambda_{j}}{2} \ge 0.
+$
+So $\mathbf{z}_{j}\ge\frac{\lambda_{j}}{2}> 0$, and the solution $\hat{\bm{\alpha}}_{j}$ can be written as
+$
+\hat{\bm{\alpha}}_{j}=\text{sgn}(\mathbf{z}_{j})*(|\mathbf{z}_{j}|-\frac{\lambda_{j}}{2}),
+$
+where $\text{sgn}(\bullet)$ is the sign function. 
 
-\section{Section 2}
-\label{sec:conclusions:sec2}
+(b) If $\bm{\alpha}_{j}< 0$, we have
+$
+2(\bm{\alpha}_{j}-\mathbf{z}_{j})-\lambda_{j}=0
+$
+and the solution is
+$
+\hat{\bm{\alpha}}_{j}=\mathbf{z}_{j}+\frac{\lambda_{j}}{2} < 0.
+$
+So $\mathbf{z}_{j}<-\frac{\lambda_{j}}{2}< 0$, and the solution $\hat{\bm{\alpha}}_{j}$ can be written as
+$
+\hat{\bm{\alpha}}_{j}=\text{sgn}(\mathbf{z}_{j})*(-\mathbf{z}_{j}-\frac{\lambda_{j}}{2})=\text{sgn}(\mathbf{z}_{j})*(|\mathbf{z}_{j}|-\frac{\lambda_{j}}{2}).
+$
 
-\blindtext
+In summary, we have the final solution of the weighted sparse coding problem (\ref{equ14}) as:
+\vspace{-1mm}
+\begin{equation}\label{equ18}\vspace{-1mm}
+\hat{\bm{\alpha}}= \text{sgn}(\mathbf{D^{T}y})\odot \text{max}(|\mathbf{D^{T}y}|-\bm{\lambda},0),
+\end{equation}
+where $\bm{\lambda} = \frac{1}{2}[\lambda_{1},\lambda_{2},...,\lambda_{3p^2}]^{\top}$ is the vector of regularization parameter and $\odot$ means element-wise multiplication.
 
-\section{Future Work}
-\label{sec:conclusions:future}
+\section{Proof of the Theorem \ref{th1}}
 
-\blindtext
+Let $\mathcal{A}\in \mathbb{R}^{(3p^2-r)\times M},\mathcal{Y}\in \mathbb{R}^{3p^2\times M}$ be two given data matrices. Denote by $\mathcal{E}\in\mathbb{R}^{3p^2\times r}$ the external subdictionary and $\mathcal{D}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ the internal subdictionary. For simplicity, we assume $3p^2\ge M$. The problem in \textbf{Theorem \ref{th1}} is as follows:
+\begin{equation}\label{equ19}
+\begin{split}
+\hat{\mathcal{D}}
+=
+&
+\arg\min\nolimits_{\mathcal{D}}\|\mathcal{Y}-\mathcal{D}\mathcal{A}\|_{F}^{2}
+\\
+&
+\text{s.t.}
+\quad
+\mathcal{D}^{\top}\mathcal{D} = \bm{I}_{(3p^2-r)\times (3p^2-r)}, \mathcal{E}^{\top}\mathcal{D} = \bm{0}_{r\times (3p^2-r)}.
+\end{split}
+\end{equation} 
+
+\begin{proof}
+We firstly prove the necessary condition.
+Since $\mathcal{D}^{\top}\mathcal{D} = \bm{I}_{(3p^2-r)\times (3p^2-r)}$, we have
+\begin{equation}\label{equ20}
+\begin{split}
+\hat{\mathcal{D}}
+&
+=
+\arg\min\nolimits_{\mathcal{D}}\|\mathcal{Y}-\mathcal{D}\mathcal{A}\|_{F}^{2}
+=
+\arg\max\nolimits_{\mathcal{D}}\text{Tr}(\mathcal{A}\mathcal{Y}^{\top}\mathcal{D})
+\\
+&
+\text{s.t.}
+\quad
+\mathcal{D}^{\top}\mathcal{D} = \bm{I}_{(3p^2-r)\times (3p^2-r)}, \mathcal{E}^{\top}\mathcal{D} = \bm{0}_{r\times (3p^2-r)}.
+\end{split}
+\end{equation}
+The Lagrange function is
+$
+\mathcal{L}
+=
+\text{Tr}(\mathcal{A}\mathcal{Y}^{\top}\mathcal{D})
+-
+\text{Tr}(\Gamma_{1}(\mathcal{D}^{\top}\mathcal{D} - \bm{I}_{(3p^2-r)\times (3p^2-r)}))
+-
+\text{Tr}(\Gamma_{2}(\mathcal{D}^{\top}\mathcal{E}))
+$,
+where $\Gamma_{1}$ and $\Gamma_{2}$ are the Lagrange multipliers. Take the derivative of $\mathcal{L}$ w.r.t. $\mathcal{D}$ and set it to be matrix $\bm{0}$ of conformal dimensions, we can get
+\begin{equation}\label{equ21}
+\partial\mathcal{L}/\partial\mathcal{D} 
+=
+\mathcal{Y}\mathcal{A}^{\top}
+-
+\mathcal{D}(\Gamma_{1}+\Gamma_{1}^{\top})
+-
+\mathcal{E}\Gamma_{2}^{\top}
+=
+\bm{0}_{3p^2\times (3p^2-r)}.
+\end{equation}
+Since $\mathcal{D}^{\top}\mathcal{D}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$ and $\mathcal{E}^{\top}\mathcal{D} = \bm{0}_{3p^2\times (3p^2-r)}$, by left multiplying both sides of the Eq. (\ref{equ22}) by $\mathcal{E}^{\top}$, we have 
+\begin{equation}\label{equ22}
+\mathcal{E}^{\top}\mathcal{Y}\mathcal{A}^{\top}
+=
+\Gamma_{2}^{\top}.
+\end{equation}
+Put the Eq. (\ref{equ22}) back into Eq. (\ref{equ21}), we have 
+\begin{equation}\label{equ23}
+(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}
+=
+\mathcal{D}(\Gamma_{1}+\Gamma_{1}^{\top}).
+\end{equation}
+Right multiplying both sides of Eq. (\ref{equ23}) by $\mathcal{D}^{\top}$, we have
+\begin{equation}\label{equ24}
+(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top}
+=
+\mathcal{D}(\Gamma_{1}+\Gamma_{1}^{\top})\mathcal{D}^{\top}
+.
+\end{equation}
+This shows that $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top}$ is a symmetric matrix of order $3p^2\times 3p^2$. Then we perform economy (or reduced) singular value decomposition (SVD)  \cite{eckart1936approximation} on $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}=\mathcal{U}\Sigma\mathcal{V}^{\top}$,
+there is
+\begin{equation}\label{equ25}
+(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top}
+=
+\mathcal{U}\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top}
+=
+\mathcal{D}\mathcal{V}\Sigma\mathcal{U}^{\top}.
+\end{equation}
+Hence, we have $\mathcal{U}=\mathcal{D}\mathcal{V}$, or equivalently $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$. The necessary condition is proved. 
+
+Now we prove the sufficient condition. If $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$, then $\hat{\mathcal{D}}^{\top}\hat{\mathcal{D}}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$. To prove $\mathcal{E}^{\top}\hat{\mathcal{D}}=\bm{0}_{3p^2\times (3p^2-r)}$, we left multiply both sides of Eq. (\ref{equ25}) by $\mathcal{E}^{\top}$ and have  
+$
+\bm{0}_{3p^2\times (3p^2-r)}
+=
+\mathcal{E}^{\top}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\hat{\mathcal{D}}^{\top}
+=
+\mathcal{E}^{\top}\mathcal{U}\Sigma\mathcal{V}^{\top}\hat{\mathcal{D}}^{\top}
+=
+\mathcal{E}^{\top}\mathcal{U}\Sigma\mathcal{U}^{\top}
+$
+.
+It means that $\mathcal{E}^{\top}\mathcal{U}\Sigma\mathcal{U}^{\top}=\bm{0}_{3p^2\times 3p^2}$. This only happens when $\mathcal{E}^{\top}\mathcal{U}=\bm{0}_{3p^2\times (3p^2-r)}$ since $\text{rank}(\Sigma)=3p^2-r$ and $\mathcal{U}\Sigma\mathcal{U}^{\top}$ is positive definite. Then $\mathcal{E}^{\top}\hat{\mathcal{D}}=\mathcal{E}^{\top}\mathcal{U}\mathcal{V}^{\top}=\bm{0}_{3p^2\times (3p^2-r)}$. 
+
+Finally we prove that $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ is the solution of
+\begin{equation}\label{equ26}
+\begin{split}
+\hat{\mathcal{D}}
+=
+\arg\min\nolimits_{\mathcal{D}}
+\|\mathcal{Y}-\mathcal{D}\mathcal{A}\|_{F}^{2}
+=
+\arg\max\nolimits_{\mathcal{D}}
+\text{Tr}(\mathcal{Y}^{\top}\mathcal{D}\mathcal{A}).
+\end{split}
+\end{equation}
+Note that by cyclic perturbation which retains the trace unchanged and due to $\mathcal{E}^{\top}\hat{\mathcal{D}}=\bm{0}_{3p^2\times (3p^2-r)}$, we have 
+$
+\text{Tr}(\mathcal{Y}^{\top}\hat{\mathcal{D}}\mathcal{A})
+=
+\text{Tr}(\mathcal{Y}\mathcal{A}^{\top}\hat{\mathcal{D}}^{\top})
+=
+\text{Tr}((\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\hat{\mathcal{D}}^{\top})
+=
+\text{Tr}(\mathcal{U}\Sigma\mathcal{V}^{\top}\mathcal{V}\mathcal{U}^{\top})
+=
+\text{Tr}(\Sigma).
+$
+For every $\mathcal{D}$ satisfying that $\mathcal{D}^{\top}\mathcal{D} = \bm{I}_{(3p^2-r)\times (3p^2-r)}$, $\mathcal{E}^{\top}\mathcal{D} = \bm{0}_{3p^2\times (3p^2-r)}$, we have 
+$
+\text{Tr}(\mathcal{Y}^{\top}\mathcal{D}\mathcal{A})
+=
+\text{Tr}((\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top})
+=
+\text{Tr}(\mathcal{U}\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top})
+=
+\text{Tr}(\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top}\mathcal{U})
+$.
+By using a generalization version \cite{TenBerge1983} of the Kristof's Theorem \cite{Kristof1970515}, we have $\text{Tr}(\mathcal{Y}^{\top}\mathcal{D}\mathcal{A})
+=
+\text{Tr}(\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top}\mathcal{U})
+\le
+\text{Tr}(\Sigma)
+.
+$
+The equality is obtained at 
+$\mathcal{V}^{\top}\mathcal{D}^{\top}\mathcal{U}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$, i.e., $\mathcal{D}=\mathcal{U}\mathcal{V}^{\top}=\hat{\mathcal{D}}$. This completes the proof.
+\end{proof}
+
+\section{Proof of the Theorem \ref{th2}}
+
+Before we prove the Theorem \ref{th2}, we need firstly prove the following Lemma 1.
+
+\emph{Lemma 1}: Let $\mathcal{E}\in\mathbb{R}^{3p^2\times r}$ be an orthogonal matrix with $\mathcal{E}^{\top}\mathcal{E}=\bm{I}_{r\times r}$, then $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\ge 3p^2-r$.
+
+\begin{proof} Since $\text{rank}(\mathcal{E}\mathcal{E}^{\top})\le\min\{\text{rank}(\mathcal{E}),\text{rank}(\mathcal{E}^{\top})\}=r$ and $\text{rank}(\mathcal{E}\mathcal{E}^{\top})\ge\text{rank}(\mathcal{E})+\text{rank}(\mathcal{E}^{\top})-r=2r-r=r$ by Sylvester's inequality, we have $\text{rank}(\mathcal{E}\mathcal{E}^{\top})=r$. Then, $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\ge\text{rank}(\bm{I}_{3p^2\times 3p^2})-\text{rank}(\mathcal{E}\mathcal{E}^{\top})\ge 3p^2-r$. 
+\end{proof}
+
+The $\text{rank}(\Sigma)$ ($\Sigma$ is defined in Theorem \ref{th1}) depends on $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})$, $\text{rank}(\mathcal{Y})$ and $\text{rank}(\mathcal{A})$. Note that $\text{rank}(\mathcal{Y})\ge M$ and $\text{rank}(\mathcal{A})\ge \min\{3p^2,M\}$ and $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\ge 3p^2-r$. Hence, $\text{rank}(\Sigma)\le\min\{3p^2-r,M\}$.
+
+Now we prove the Theorem \ref{th2}:
+\begin{proof} 
+a) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ is nonsingular, i.e., $\text{rank}(\Sigma)=3p^2-r$, $\Sigma$ may have distinct or multiple non-zero singular values. In the SVD \cite{eckart1936approximation} of $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}
+=
+\mathcal{U}\Sigma\mathcal{V}^{\top}$, the singular vectors in $\mathcal{U}$ and $\mathcal{V}$
+can be determined up to orientation. Hence, we can reformulate it as 
+\begin{equation}\label{equ27}
+(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}
+=
+\mathcal{U}^{*}\mathcal{K}_{u}\Sigma\mathcal{K}_{v}(\mathcal{V}^{*})^{\top},
+\end{equation}
+where $\mathcal{U}^{*}\in \mathbb{R}^{3p^2\times (3p^2-r)}$ and $\mathcal{V}^{*}\in \mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ are arbitrarily orientated singular vectors of $\mathcal{U}$ and $\mathcal{V}$, respectively. The $\mathcal{K}_{u}$ and $\mathcal{K}_{v}$ are diagonal matrices with $+1$ or $-1$ as diagonal elements in arbitrary distribution. $\Sigma\in \mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ is a diagonal matrix with singular values in non-increasing order, i.e., $\Sigma_{11}\ge\Sigma_{22}\ge...\ge\Sigma_{(3p^2-r)(3p^2-r)}\ge0$. If we fix $\mathcal{K}_{u}$, then $\mathcal{K}_{v}$ is uniquely determined to meet the above requirements of $\Sigma$. If the orientations of the singular vectors of $\mathcal{U}^{*}$ are fixed, then $\mathcal{U}=\mathcal{U}^{*}\mathcal{K}_{u}$ is determined, so do the orientations of the singular vectors of $\mathcal{V}^{*}$ and $\mathcal{V}^{\top}=\mathcal{K}_{v}(\mathcal{V}^{*})^{\top}$. In this case, the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}=\mathcal{U}^{*}\mathcal{K}_{u}\mathcal{K}_{v}(\mathcal{V}^{*})^{\top}$ is unique. When $\Sigma$ has multiple singular values, the unique solution of $\hat{\mathcal{D}}$ can be proved in a similar way. 
+
+b) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ is singular, i.e.,  $0\le \text{rank}(\Sigma)< 3p^2-r$, and $\Sigma$ has $3p^2-r-\text{rank}(\Sigma)$ (at least one) zero singular values. The discussion in a) can still be applied to the singular vectors corresponding to the nonzero singular values, and the production of these singular vectors in $\mathcal{U}$ and $\mathcal{V}$ is still unique. However, the singular vectors corresponding to the zero singular values could be in arbitrary orientations as long as they satisfy the conditions of $\mathcal{U}^{\top}\mathcal{U}=\mathcal{V}^{\top}\mathcal{V}=\mathcal{V}\mathcal{V}^{\top}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$. Since $\mathcal{U}\in \mathbb{R}^{3p^2\times (3p^2-r)}$, $\mathcal{U}\mathcal{U}^{\top}$ no longer equals to the identity matrix of order $3p^2\times 3p^2$. From Eq. (\ref{equ25}), we have
+\begin{equation}\label{equ28}
+\mathcal{U}\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top}
+=
+\mathcal{D}\mathcal{V}\Sigma\mathcal{U}^{\top}
+\vspace{-2mm}
+\end{equation}
+Right multiplying both sides of Eq.\ (\ref{equ28}) by $\mathcal{D}\mathcal{V}$ and left multiplying each side by $\mathcal{U}^{\top}$, we have
+\vspace{-2mm}
+\begin{equation}\label{equ29}
+\Sigma
+=
+\mathcal{U}^{\top}\mathcal{D}\mathcal{V}\Sigma\mathcal{U}^{\top}\mathcal{D}\mathcal{V}
+\vspace{-2mm}
+\end{equation}
+Hence, $\Delta=\mathcal{U}^{\top}\mathcal{D}\mathcal{V}\in\mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ is a diagonal matrix, the diagonal elements of which are 
+\vspace{-1mm}
+\begin{displaymath}
+\Delta_{ii}= \left\{ \begin{array}{ll}
+1 & \textrm{if $1\le i\le \text{rank}(\Sigma)$};\\
+\pm 1 & \textrm{if $\text{rank}(\Sigma)< i \le 3p^2-r$}.\\
+\end{array} \right.
+\vspace{-1mm}
+\end{displaymath}
+Thus, we have $\mathcal{D}=\mathcal{U}\Delta\mathcal{V}^{\top}$. That is, if $\text{rank}(\Sigma)<3p^2-r$, once we get the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ in problem (\ref{equ19}), $\mathcal{D}=\mathcal{U}\Delta\mathcal{V}^{\top}$ with suitable $\Delta$ is also the solution of problem (\ref{equ19}). In fact, the number of solutions $\hat{\mathcal{D}}$ for problem (\ref{equ19}) is $2^{3p^2-r-\text{rank}(\Sigma)}$ given fixed $\mathcal{U}$ and $\mathcal{V}$.
+\end{proof}
