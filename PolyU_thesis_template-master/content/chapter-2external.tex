@@ -544,9 +544,9 @@ We evaluate the competing methods from three aspects: PSNR, Speed, and Visual Qu
 
 In summary, the proposed PGPD method demonstrates powerful denoising ability quantitatively and qualitatively, and it is highly efficient.
 \begin{table}[t]
+\begin{adjustwidth}{-3cm}{}
 \caption{PSNR(dB) results of different denoising algorithms on 20 natural images.}
 \label{tab1}
-\begin{adjustwidth}{-3cm}{}
 \begin{center}
 \renewcommand\arraystretch{1.0}
 \scriptsize
@@ -949,7 +949,44 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
     \label{fig7}
 \end{figure}
 
+\section{Results on the Berkeley Segmentation Data Set}
+In this section, we give the denoising results (PSNR and visual quality) on the Berkeley Segmentation Data Set \cite{bsds}. This dataset contains 500 images of size $321\times481$. Since EPLL is trained on the 300 images in the training set and validation set, we use the 200 images in the testing set for comparison. 
 
+From Table \ref{tab3}, we can see that EPLL is comparable to BM3D and LSSC on the 200 test images. Though the proposed PGPD is trained on the Kodak PhotoCD dataset, in which the images have different resolution and statistics from the images in the Berkeley Segmentation Data Set, it still shows superiority over EPLL and other methods. In Figures \ref{fig15}-\ref{fig24}, we compare the visual quality of the denoised images by the competing methods. For better visualization, the presented images are cropped to size of $321\times 321$.
+\begin{table}
+\caption{Average PSNR(dB) results of different denoising algorithms on the 200 test images of the Berkeley Segmentation Data Set.}\vspace{-0.1in}
+\label{tab3}
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|c|}
+\hline
+Noise&\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&\textbf{PGPD}
+\\
+\hline
+\hline
+$\sigma=10$&33.62 &33.75&33.64 & 33.68& 33.88 &33.60
+\\
+\hline
+$\sigma=20$& 29.86&30.02& 29.96 &29.89 & 30.11&  29.89 
+\\
+\hline
+$\sigma=30$&27.93 &28.05 &28.00 &27.92 &28.17 &27.96  
+\\
+\hline
+$\sigma=40$&26.58 &26.75&26.71 &26.58 & 26.88 & 26.73 
+\\
+\hline
+$\sigma=50$&25.71 &25.80 &25.77 &25.65 &25.96  & 25.82 
+\\
+\hline
+$\sigma=75$&24.22 &24.18 &24.18 & 24.04 &24.42  & 24.30
+\\
+\hline
+$\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
+\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
 \section{Conclusion}
 How to learn explicit models of nonlocal self-similarity (NSS) prior for image restoration is an open problem, and we made a good attempt on this by lifting the patch based image modeling to patch group (PG) based image modeling. A PG is a group of similar patches in an image region. After group mean subtraction, a PG can naturally represent the NSS variations of natural images. A PG based Gaussian Mixture Model (PG-GMM) learning algorithm was developed to learned the NSS prior from natural images, and an associated weighted sparse coding algorithm was developed for high performance image denoising. The so-called \textsl{PG Prior based Denoising} (PGPD) algorithm not only achieves highly competitive PSNR results with state-of-the-art denoising methods, but also is highly efficient and preserves better the image edges and textures. The proposed method can be extended to other image processing tasks such as deblurring and super-resolution.
