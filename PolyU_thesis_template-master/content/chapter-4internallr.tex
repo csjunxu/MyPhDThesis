@@ -980,6 +980,75 @@ Image\#
 \end{center}
 \end{table}
 
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_Noisy_nSig402030_kodim01.png}
+		\caption{Noisy 18.44}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_kodim01.png}
+		\caption{Clean}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_CBM3D_nSig402030_kodim01.png}
+		\caption{CBM3D 25.24}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_MLP_nSig402030_kodim01.png}
+\caption{MLP 25.70}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_TNRD_nSig402030_kodim01.png}
+\caption{TNRD 25.74}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_NC_nSig402030_kodim01.png}
+		\caption{NC 24.90}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_WNNMCW_nSig402030_kodim01.png}
+		\caption{WNNM-1 26.01}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_WNNMJ_nSig402030_kodim01.png}
+		\caption{WNNM-2 25.95}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_WNNM_ADMM_nSig402030_kodim01.png}
+		\caption{WNNM-3 25.58}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_CWNNM_ADMM_nSig402030_kodim01.png}
+		\caption{MC-WNNM \textbf{26.66}}
+    \end{subfigure}
+    \caption{Denoised images and PSNR (dB) results of different methods on the image ``kodim01'' degraded by AWGN with different standard deviations of $\sigma_{r}=40, \sigma_{g}=20, \sigma_{b}=30$ on R, G, B channels, respectively. The images are better to be zoomed in on screen.}
+    \label{fig3}
+\end{figure}
+
+
+
+
+
 \subsection{Experiments on Real Noisy Color Images}
 
 We evaluate the proposed method on two real noisy color image datasets, where the images were captured under indoor or outdoor lighting conditions by different types of cameras and camera settings.\ For WNNM-3 and MC-WNNM, the initial penalty parameter is set as $\rho_{0}=8$ and $\rho_{0}=6$, respectively.\ The number of iterations in Algorithm 2 is set as $K_{2}=2$.
