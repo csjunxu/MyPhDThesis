@@ -2153,6 +2153,74 @@ Camera Settings
     \label{fig4}
 \end{figure}
 
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_Noisy_d800_iso6400_2.png}
+		\caption{Noisy 29.97}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso6400_2.png}
+		\caption{CBM3D 31.22}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_TRD_CC15_d800_iso6400_2.png}
+\caption{TNRD 32.33}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_NI_CC15_d800_iso6400_2.png}
+\caption{NI 32.13}
+    \end{subfigure}
+\hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_NC_CC15_d800_iso6400_2.png}
+		\caption{NC 32.38}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_CC_d800_iso6400_2.png}
+		\caption{CC 33.21}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.png}
+		\caption{WNNM-2 33.61}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6400_2.png}
+		\caption{WNNM-3 33.43}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso6400_2.png}
+		\caption{MC-WNNM \textbf{33.95}}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.19\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_d800_iso6400_2.png}
+		\caption{Mean Image}
+    \end{subfigure}
+    \caption{Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Nikon D800 ISO=6400 2'' \cite{crosschannel2016} by different methods.\ The estimated noise levels of R, G, and B channels are 2.4, 2.1, and 1.8, respectively.\ The images are better to be zoomed in on screen.}
+    \label{fig4}
+\end{figure}
+
+
 \quad As described at the beginning of Section 4.3, there is a mean image for each noisy image in dataset \cite{crosschannel2016}, and those mean images can be roughly taken as ``ground truth'' for quantitative evaluation of denoising algorithms.
 
 The results on PSNR and averaged computational time by competing methods (including CC \cite{crosschannel2016} whose results are copied from \cite{crosschannel2016}) are listed in Table \ref{t2}.\ For methods MLP \cite{mlp} and TNRD \cite{chen2015learning}, both of them achieve the best results when setting the noise level of the trained models at $\sigma=10$.\ The highest PSNR results are highlighted in bold.\ On average, MC-WNNM achieves 1.94dB, 0.44dB, 0.59dB improvements over the three WNNM methods, and significantly outperforms other competing method, including CC \cite{crosschannel2016}.\ On 10 out of the 15 images, the proposed MC-WNNM achieves the highest PSNR values, while WNNM-2 achieves the highest PSNR results on 3 of 15 images.\ It should be noted that in the CC method \cite{crosschannel2016}, a specific model is trained for each camera and camera setting, while the other methods uses the same model for all cases. 
