@@ -3,22 +3,13 @@
 \chapter{A Large Real Noisy Image Dataset, with A Comprehensive Evaluation of State-of-the-arts}
 \label{sec:dataset}
 
-\cleanchapterquote{Users do not care about what is inside the box, as long as the box does what they need done.}{Jef Raskin}{about Human Computer Interfaces}
-
-\blindtext
-
 \section{Introduction}
-\label{sec:real:intro}
 
-\blindtext
+As we have presented in the previous chapters, the image denoising task is very differetn when dealing with real noisy images when compared to the synthetic additive white Gaussian noise (AWGN). This is due to that the realistic noise is signal dependent while the AWGN noise is independent of the signals. Another key reason is that in-camera imaging pipeline will make the noise much more complex when compared with that in the raw image data.
 
-\section{Related Work}
-\label{sec:real:related}
+Another issue about the real noisy image denoising is that the images with realistic noise has no ideal ground truth, i.e., the noise-free image. Hence, the objective evaluation about the image quality on the images denoised by existing methods should be nearly impossible. However, the image quality assessment by subjectiva evaluation would be very biased due to the limited number of subjectives in the evaluation experiments and the control of the experimental process. The missing of ground truth will be very problematic we have no objective measurements to evaluate the image quality of the images denoised by different methods. 
 
-\blindtext
+In order to address the challenge of missing ground truth of the realistic noisy images, we propose to construct a dataset for realistic photographs with reasonble noise-free ground truth images. Our basic idea is inspired by the paper of \cite{crosschannel}, in which a small dataset is set up for analysising the properties of realistic noise.
 
 
-\section{Summary}
-\label{sec:real:summary}
-
-\blindtext
+ 
