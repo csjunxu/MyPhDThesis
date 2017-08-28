@@ -5,6 +5,10 @@
 
 \section{Introduction}
 
+The statistical peorperties of realistic noise has been thoroughly studied for CCD and CMOS image sensors. The realistic noise related to the CCD or CMOS sensors could be divided into five major sources, including photon shot noise, dark current, fixed pattern noise, readout noise, and quantization noise, etc.
+
+The shot noise is one inevitable source of noise and induced by the stochastic arrival process of photons to the sensor. This can be modeled by Possion distribution. This type of noise is proportional to the mean intensity of the specific pixel and is not stationary across the whole image. The dark current and fixed pattern noise are from the electronics within the sensor chip, while the readout noise and quantization noise are from discretization.
+
 As we have presented in the previous chapters, the image denoising task is very differetn when dealing with real noisy images when compared to the synthetic additive white Gaussian noise (AWGN). This is due to that the realistic noise is signal dependent while the AWGN noise is independent of the signals. Another key reason is that in-camera imaging pipeline will make the noise much more complex when compared with that in the raw image data.
 
 Another issue about the real noisy image denoising is that the images with realistic noise has no ideal ground truth, i.e., the noise-free image. Hence, the objective evaluation about the image quality on the images denoised by existing methods should be nearly impossible. However, the image quality assessment by subjectiva evaluation would be very biased due to the limited number of subjectives in the evaluation experiments and the control of the experimental process. The missing of ground truth will be very problematic we have no objective measurements to evaluate the image quality of the images denoised by different methods. 
@@ -14,7 +18,7 @@ In order to address the challenge of missing ground truth of the realistic noisy
 
 \section{Related Work}
 
-The statistical peorperties of realistic noise has been thoroughly studied for CCD and CMOS image sensors. The realistic noise related to the CCD or CMOS sensors could be divided into five major sources. The first one is the shot noise. This inevitable source of noise is induced by the stochastic arrival process of photons to the sensor. which is termed shot noise and could be modeled as Possion distribution.
+
 
 
 
