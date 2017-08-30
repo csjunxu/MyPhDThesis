@@ -31,8 +31,13 @@ The second work in this direction is proposed in the \cite{crosschannel}, in whi
 The third work in this direction is recently proposed in the \cite{dndnoise}. The proposed DND benchmark for denoising algorithms consists of 50 scenes selected from their captured images. In order to obviate the unrealistic setting by developing a methodology for benchmarking denoising techniques on real photographs. The authors in \cite{dndnoise} capture pairs of images with different ISO values and appropriately adjusted exposure times, where the nearly noise-free low-ISO image serves as reference. To derive the ground truth, careful post-processing is needed. They correct spatial misalignment, cope with inaccuracies in the exposure parameters through a linear intensity transform based on a novel heteroscedastic Tobit regression model, and remove residual low-frequency bias that stems, e.g., from minor illumination changes. They then capture a novel benchmark dataset, the Darmstadt Noise Dataset (DND), with consumer cameras of differing sensor sizes. One interesting finding is that various recent techniques that perform well on synthetic noise are clearly outperformed by BM3D on photographs with real noise. This benchmark delineates realistic evaluation scenarios that deviate strongly from those commonly used in the scientific literature.
 
 
-
 \section{Dataset Construction}
+
+In order to construct a more suitable dataset for comparison on the existing denoising methods, we need a new dataset which can eliminate the problem mentioned above. The camera we use are the Canon 5D, Nikon D800, Olympus, and Sony A7II. The brands are more versatile than the above mentioned three datasets. In addition, we use the raw data of mobile phone. 
+
+There are several problems hindering us from touching the raw data of mobile phone. The first one is that most mobile phones do not support the raw data output. Even the raw data of  iPhone is processed before being output, not the original one. Here, we use the raw data of the iPhone and process it for the final RGB images. The second problem is that it is hard to capture the static image with hundreds of repetition with mobile phone. The solution is that we can use apple watch to remote control the iPhone for image capturing. 
+
+The format of our captured images are raw data and JPEG images with uncompressed process. For each scene, we capture it for 500 times, just as \cite{crosschannel} did. The focus is set by firstly automatic and then mannually when capturing the images. We capture the images indoor with normal lighting condition, dark lighting condition, and the outdoor normal lighting condition.
 
 
 \section{Analysis and Discussion}
