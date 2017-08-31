@@ -39,8 +39,70 @@ There are several problems hindering us from touching the raw data of mobile pho
 
 The format of our captured images are raw data and JPEG images with uncompressed process. For each scene, we capture it for 500 times, just as \cite{crosschannel2016} did. The focus is set by firstly automatic and then mannually when capturing the images. We capture the images indoor with normal lighting condition, dark lighting condition, and the outdoor normal lighting condition. The scenes we capture are also versaltile. The objects in our scene are objects like books, pens, bottles, and boxes, joys, etc. The places include the corner of building s, classrooms, the caffe rooms, and the outdoor places.
 
-
 The camera settings are very important when we capture the realistic noisy images. In general, the smaller shutter, the darker the captured images, when we fix the other conditions, and vice versa. Similarly, the smaller ISO, the darker the captured images, when we fix the other conditions, and vice versa. In order to speed up the capturing process (shorten the capturing duration), the shutter should be set sa smaller as possible. In this case, the captured images would also be in least influenced by the environment. The shutter of the Sony A7II camera is between 1/80000 second to 30 seconds. Given suitable aperture and ISO, it is possible to capture images with normal illuminations when we set the shutter between 1/100 second and 1 second. The aperture could be set as any value only if it is in the reasonable region . The aperture of the Sony camera is between F3.5 and F22. Setting the aperture between F3.5 and F15 can help obtain the images with normal illumination under the fixed and suitable shutter and ISO. In our capturing process, we fixed the shutter and aperture to be in suitable and reasonable region, and tune the ISO values according to the reasonable region of the camera. In general, the noise level would be higher when the ISO is higher. It is helpful to the quantization and quantitation analysis if we set the ISO values from a low value to a high value with fixed gap.
+
+To analysis how ISO, shutter, and aperture influence the content and illumination of the captured images, we perform some initial experiments. In Figure 1, we show some images captured with different camera settings. 
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/dataset/200_3.5_1-60.jpg}
+	   \caption{200,3.5,1/60}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/dataset/200_6.7_1-60.jpg}
+		\caption{200,6.7,1/60}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/dataset/200_6.7_1-8.jpg}
+		\caption{200,6.7,1/8}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/dataset/400_6.7_1-60.jpg}
+		\caption{400,6.7,1/60}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/dataset/1600_6.7_1-60.jpg}
+		\caption{1600,6.7,1/60}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/dataset/3200_6.7_1-60.jpg}
+		\caption{3200,6.7,1/60}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/dataset/6400_6.7_1-60.jpg}
+		\caption{6400,6.7,1/60}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/dataset/6400_6.7_1-350.jpg}
+		\caption{6400,6.7,1/350}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.24\textwidth}
+        \centering
+        \includegraphics[width=1\textwidth]{images/dataset/6400_16_1-60.jpg}
+		\caption{6400,16,1/60}
+    \end{subfigure}
+    \caption{Captured Images with the Sony A7 II camera under different (ISO, Shutter, Aperture) settings.}
+    \label{fig6}
+\end{figure}
+
+
 
 
 \section{Analysis and Discussion}
