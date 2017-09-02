@@ -18,9 +18,7 @@ Nowadays, CCD or CMOS cameras are becoming more and more important in many aspec
 \section{The Image Noise Formulation}
 \label{sec:intro:current}
 
-The realistic noise are very complex in real photography images captured by the camera sensors. One major reason is that the noise is unable to be explicitly modeled by some definitive probabilistic distributions. Often the sRGB images we look at the screen have been processed via the camera imaging pipeline, during which the noise will be much more complex than its initial status. 
-
-The noise are generated mainly due to the discrete nature of light and the thermal agitation, which will cause unstable measurement in camera sensors. The major types of noise generated during the imaging pipeline are the random noise, the spatial non-uniformity noise, and quantization noise. The random noise includes photon shot noise, dark current, and readout noise. The spatial non-uniformity noise includes the fixed pattern noise (PRNU, DCNU), CCD/CMOS specific noise. 
+Due to the discrete nature of light and the thermal agitation, the camera sensors will cause inaccurate measurement in camera sensors. The inaccurate measurement is also called image noise. The types of image noise generated during the imaging pipeline are mainly the random noise, the spatial non-uniformity noise, and quantization noise. The random noise includes photon shot noise, dark current, and readout noise. The spatial non-uniformity noise includes the fixed pattern noise (PRNU, DCNU), CCD/CMOS specific noise. During the camera imaging pipeline, the noise will be furtherly made complex than those in the raw images.
 
 To better describe the noise quantitatively, we provide a simplified signal acquisition model \cite{} including various noise sources (for each pixel) as follows:
 \begin{equation}
