@@ -55,7 +55,7 @@ To test the ability of denoising methods, in image denoising community, the most
 
 \section{Image Denoising}
 
-Based on the above analysis, image denoising is an essential step for recovering better image quality. In most literature, the AWGN noise is described as a Gaussian distribution $\mathcal{N}(0,\sigma^{2})$, where $0$ is the mean of the Gaussian distribution and $\sigma$ is the standard deviation (std). Most of existing denoising methods focus on dealing with AWGN noise since it is a perfect testing bed for evaluating the proposed methods as well as other image restoration problems such as image super-resolution, deblurring, inpainting, etc.
+Image denoising is a classical yet fundamental problem for image quality enhancement in computer vision and photography. In literature, most of the existing algorithms are designed for dealing with the additive white Gaussian noise (AWGN), which is described as a Gaussian distribution $\mathcal{N}(0,\sigma^{2})$. The AWGN noise is a perfect testing bed for evaluating the image resotration methods for image super-resolution, deblurring, inpainting, etc.
 
 In general, image denoising aims to recover the latent clean image $\bm{x}$ from the observed noisy image $\bm{y}=\bm{x}+\bm{n}$, where $\bm{n}$ is assumed to be the additive noise. $\bm{n}$ is often assumed to be synthetic additive white Gaussian noise, or the realistic noise in real-world images. Image denoising can be viewed as a regression problem, in which a \textsl{plausible} clean image can be obtained from the infinite number of possible candidates. The word \textsl{plausible} means that the denoised image should look like the noisy image but without the noise component. 
 
