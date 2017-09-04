@@ -12,7 +12,7 @@ Nowadays, CCD or CMOS cameras are becoming more and more important in many aspec
 %\section{The Camera Imaging Pipeline}
 %\label{sec:intro:general}
 
-%The cameras capture the images and store as raw image formats. During the camera imaging pipeline, the photons are transformed into electronics by the photodiode in the camera sensor. The original sensor arrat (also called color filter array, or CFA) contains red, green, and blue channels, and these incomplete channels are transformed into the final RGB files via the raw converter. The camera imaging pipeline includes multiple stages such as reading raw image, black light subtraction, lens correction, demosaicing, noise reduction, white balancing, gamma curve, final color space conversion, etc \cite{browneccv2016}. Basically, a camera imaging pipeline includes demosaicing, white balancing and color space transform, gamut mapping, tone mapping, and JPEG compression \cite{crosschannel}. However, different cameras have varying structures and camera parameters, and hence resulting different imaging effects. Recently, there also exists learning based imaging pipelines which directly learn the  natural image priors from the RGB and raw images pairs.
+%The cameras capture the images and store as raw image formats. During the camera imaging pipeline, the photons are transformed into electronics by the photodiode in the camera sensor. The original sensor arrat (also called color filter array, or CFA) contains red, green, and blue channels, and these incomplete channels are transformed into the final RGB files via the raw converter. The camera imaging pipeline includes multiple stages such as reading raw image, black light subtraction, lens correction, demosaicing, noise reduction, white balancing, gamma curve, final color space conversion, etc \cite{browneccv2016}. Basically, a camera imaging pipeline includes demosaicing, white balancing and color space transform, gamut mapping, tone mapping, and JPEG compression \cite{crosschannel2016}. However, different cameras have varying structures and camera parameters, and hence resulting different imaging effects. Recently, there also exists learning based imaging pipelines which directly learn the  natural image priors from the RGB and raw images pairs.
 
 
 \section{The Image Noise Formulation}
@@ -25,7 +25,7 @@ To better analysis the property of the realistic noise quantitatively, we provid
 \label{e11}
 \bm{P} = f((g_{cv}(\bm{C}+\bm{D})+\bm{N}_{reset})g_{out}+\bm{N}_{out})+\bm{Q}.
 \end{equation}
-The above equation is explained in details: 
+The above equation is explained in details as follows: 
 \begin{itemize}
 \item $\bm{P}$ is the raw pixel value;
 \item $f$ is the camera response function, usually a linear function before attaining a saturation threshold;
@@ -37,7 +37,7 @@ The above equation is explained in details:
 \item $g_{cv}$ is the equivalent capacitance (EC) of the photo-diode and the gain factor during charge to voltage conversion;
 \item $g_{out}$ is the gain factor during voltage to pixel value conversion (readout).
 \end{itemize}
-After some merging and simplifying, the acquisition model of the signal can be formulated as follows:
+After some merging and simplifying, the signal acquisition model \ref{e11} can be formulated as follows:
 \begin{equation}
 \label{e12}
 \begin{split}
@@ -49,9 +49,9 @@ After some merging and simplifying, the acquisition model of the signal can be f
 &=f(g\lambda+N_{R})+\textbf{Q},
 \end{split}
 \end{equation}
-where $g = g_{cv}g_{out}$ is the overall camera gain factor, $\lambda=\textbf{C}+\textbf{D}$ is \# of electrons in pixel capacitor and also Poisson distributed, since ``Sum of Independent Poisson Random Variables is also Poisson'', and $N_{R}=g_{out}\textbf{N}_{reset}+\textbf{N}_{out}$ is the overall readout noise and also Gaussian distributed, since ``Sum of Independent Gaussian Random Variables is also Gaussian''. In summary, the overall noise before the camera imaging pipeline can be modeled by a mixed Poisson and Gaussian distribution \cite{}. Unfortunately, the realistic noise will become very complex after being processed during the camera imaging pipeline \cite{crosschannel}. This makes the image denoising an important and challenging task. 
+where $g = g_{cv}g_{out}$ is the overall camera gain factor, $\lambda=\textbf{C}+\textbf{D}$ is number of electrons in pixel capacitor, and $N_{R}=g_{out}\textbf{N}_{reset}+\textbf{N}_{out}$ is the overall readout noise. In summary, the overall noise before the camera imaging pipeline can be modeled by a mixed Poisson and Gaussian distribution \cite{Foipractical}. Unfortunately, the realistic noise will become much more complex after being processed in the camera imaging pipeline \cite{crosschannel2016}. This makes the image denoising an important and challenging task. 
 
-To make the problem easier, in image denoising community, the most common tested noise is additive white Gaussian noise (AWGN) \cite{ksvd}. In AWGN degraded image, each pixel is corrupted by a random value following Gaussian distribution with zero mean and a certain standard deviation (std). Note that for each pixel, the std of the Gaussian distribution is the same, and for all the pixels, the noise values are sampled independently. The AWGN noise is similar to the read-out noise in digital cameras.
+To test the ability of denoising methods, in image denoising community, the most common tested noise is additive white Gaussian noise (AWGN) \cite{bm3d,ksvd}. The images with AWGN noise are corrupted by random values following Gaussian distribution with zero mean and a certain standard deviation (std). Note that for each pixel, the std of the Gaussian distribution is the same, and for all the pixels, the noise values are sampled independently. The AWGN noise is similar to the read-out noise in digital cameras.
 
 In order to obtain images of good quality while still maintaining the structures and details of the captured scenes, image denoising is an essential step. In this thesis, I will present my work on image denoising, in which we focus on synthetic additive white Gaussian noise (AWGN) and the realistic noise in real-world images. The AWGN noise is described as a Gaussian distribution $\mathcal{N}(0,\sigma^{2})$, which means that the noise is Gaussian distributed with $0$ mean and $\sigma$ standard deviation. Most of existing methods focus on processing AWGN noise since it is a perfect testing bed for evaluating the proposed methods as well as other image restoration problems such as image super-resolution, deblurring, inpainting, etc.
 
