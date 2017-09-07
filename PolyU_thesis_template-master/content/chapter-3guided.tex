@@ -3,11 +3,8 @@
 \chapter{External Prior Guided Internal Prior Learning for Real Noisy Image Denoising}
 \label{sec:guided}
 
-
-
 \section{Learning External Nonlocal Self-Similarity Priors}
 \label{sec:system:intro}
-
 
 Image denoising is a crucial and indispensable step to improve image quality in digital imaging systems. In particular, with the decrease of size of CMOS/CCD sensors, image is more easily to be corrupted by noise and hence denoising is becoming increasingly important for high resolution imaging. The problem of image denoising has been extensively studied in literature and numerous image denoising methods
 \cite{bayesshrink,curvelet,ksvd,lssc,ncsr,bm3d,cbm3d,
@@ -21,7 +18,7 @@ ncwebsite,Zhu_2016_CVPR,crosschannel2016,neatimage}
 have been proposed in the past decades. Most of existing denoising methods focus on the scenario of additive white Gaussian noise (AWGN) 
 \cite{bayesshrink,curvelet,ksvd,lssc,ncsr,bm3d,cbm3d,
 zhou2012nonparametric,Tomasi1998,blsgsm,nlm,nlbayes,wnnm,pgpd,foe,epll,
-mlp,xie2012image,dncnn,barbu2009training,csf,chen2015learning}, where the observed noisy image $\mathbf{y}$ is modeled as the addition of clean image $\mathbf{x}$ and AWGN $\mathbf{n}$, i.e., $\mathbf{y}=\mathbf{x}+\mathbf{n}$. There are also methods proposed for removing Poisson noise \cite{Fadili,salmon2014}, mixed Poisson and Gaussian noise \cite{Foipractical,Luisier,Makitalo2013Optimal,Montagner}, mixed Gaussian and impulse noise \cite{jiang2014mixed,Hu2016,xuaccv2016}, and realistic noise in real photography \cite{fullyblind,rabie2005robust,Liu2008,almapg,Zhu_2016_CVPR,noiseclinic,
+mlp,xie2012image,dncnn,barbu2009training,csf,chen2015learning}, where the observed noisy image $\mathbf{y}$ is modeled as the addition of clean image $\mathbf{x}$ and AWGN $\mathbf{n}$, i.e., $\mathbf{y}=\mathbf{x}+\mathbf{n}$. There are also methods proposed for removing Poisson noise \cite{Fadili,salmon2014}, mixed Poisson and Gaussian noise \cite{Foipractical,Luisier,makitalo2013optimal,Montagner}, mixed Gaussian and impulse noise \cite{jiang2014mixed,Hu2016,xuaccv2016}, and realistic noise in real photography \cite{fullyblind,rabie2005robust,Liu2008,almapg,Zhu_2016_CVPR,noiseclinic,
 ncwebsite,crosschannel2016,neatimage}.
 
 Natural images have many properties, such as sparsity and nonlocal self-similarity, which can be employed as useful priors for designing image denoising methods. Based on the facts that natural images will be sparsely distributed in some transformed domain, wavelet \cite{bayesshrink} and curvelet \cite{curvelet} transforms have been widely adopted for image denoising. The sparse representation based methods \cite{ksvd,lssc,ncsr,bm3d,cbm3d,
