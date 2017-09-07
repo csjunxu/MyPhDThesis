@@ -296,17 +296,17 @@ Besides, if $\text{rank}(\Sigma)=3p^2-r$, $\hat{\mathcal{D}} = \mathcal{U}\mathc
 \end{theorem}
 
 
-The proof of the Theorem \ref{th1} can be found in Appendix B. Though the problem (\ref{equ3-9}) has a closed-form solution by SVD \cite{eckart1936approximation}, the uniqueness of solution cannot be guaranteed since the matrices $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ as well as $\mathcal{U}$ and $\mathcal{V}$ may be reduced to matrices of lower rank. Hence, we also analyze the uniqueness of the solution $\hat{\mathcal{D}}$ by the following Theorem \ref{th2}, whose proof can be found in Appendix C.
+The proof of the Theorem \ref{th3-1} can be found in Appendix B. Though the problem (\ref{equ3-9}) has a closed-form solution by SVD \cite{eckart1936approximation}, the uniqueness of solution cannot be guaranteed since the matrices $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ as well as $\mathcal{U}$ and $\mathcal{V}$ may be reduced to matrices of lower rank. Hence, we also analyze the uniqueness of the solution $\hat{\mathcal{D}}$ by the following Theorem \ref{th3-2}, whose proof can be found in Appendix C.
 
 \begin{theorem}
-\label{th2}
+\label{th3-2}
 (a) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ is nonsingular, i.e., $\text{rank}(\Sigma)=3p^2-r$, then the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ is unique; (b) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ is singular, i.e., $0\le\text{rank}(\bm{\Sigma})< 3p^2-r$, then the number of possible solutions of $\hat{\mathcal{D}}$ is $2^{3p^2-r-\text{rank}(\bm{\Sigma})}$ for fixed $\mathcal{U}$ and $\mathcal{V}$.
 \end{theorem}
 
 The above alternative updating steps are repeated until the number of iterations exceeds a preset threshold. In each step, the energy value of the objective function (\ref{equ3-5}) is decreased and we empirically found that the proposed model usually converges in 10 iterations. We summarize the procedures in Algorithm 1.
 
 
-\begin{table}\label{alg1}\vspace{3mm}
+\begin{table}\label{alg3-1}\vspace{3mm}
 \begin{tabular}{l}
 \hline
 \textbf{Algorithm 1}: External Prior Guided Internal Prior Learning
@@ -406,14 +406,14 @@ In the second stage, we set $r = 54$ (the number of atoms in the external sub-di
 
 We evaluate the proposed method on three real noisy image datasets, where the images were captured under indoor or outdoor lighting conditions by different types of cameras and camera settings. 
 
-\textbf{Dataset 1.} The first dataset is provided in \cite{ncwebsite}, which includes 20 real noisy images collected under uncontrolled outdoor environment.\ Fig. \ref{fig3} shows some sample images of this dataset.\ Since there is no ``ground truth" of the noisy images, the objective measures such as PSNR cannot be computed on this dataset. 
+\textbf{Dataset 1.} The first dataset is provided in \cite{ncwebsite}, which includes 20 real noisy images collected under uncontrolled outdoor environment.\ Fig. \ref{fig3-3} shows some sample images of this dataset.\ Since there is no ``ground truth" of the noisy images, the objective measures such as PSNR cannot be computed on this dataset. 
 
 \textbf{Dataset 2.} The second dataset is provided in \cite{crosschannel2016}, which includes noisy images of 11 static scenes.\ The noisy images were collected under controlled indoor environment.\ Each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth", with which the PSNR can be computed. 
 
-Since the image size is very large (about $7000\times5000$) and the 11 scenes share repetitive contents, the authors of \cite{crosschannel2016} cropped 15 smaller images (of size $512\times512$) to perform experiments.\ In order to evaluate the proposed methods more comprehensively, we cropped 60 images of size $500\times500$ from the dataset for experiments. Some samples are shown in Fig. \ref{fig4}.\ Note that our cropped 60 images and the 15 cropped images by the authors of \cite{crosschannel2016} are from different shots.
+Since the image size is very large (about $7000\times5000$) and the 11 scenes share repetitive contents, the authors of \cite{crosschannel2016} cropped 15 smaller images (of size $512\times512$) to perform experiments.\ In order to evaluate the proposed methods more comprehensively, we cropped 60 images of size $500\times500$ from the dataset for experiments. Some samples are shown in Fig. \ref{fig3-4}.\ Note that our cropped 60 images and the 15 cropped images by the authors of \cite{crosschannel2016} are from different shots.
 
 
-\textbf{Dataset 3.} The scenes of dataset 2 are mostly printed photos, and they cannot represent realistic objects and scenes with different reflectance properties. To remedy the limitation of dataset 2, we construct another dataset which contains images of 10 different scenes captured by Canon 80D and Sony A7II cameras under more ISO settings. The ISO settings in our dataset are 800, 1600, 3200, 6400, 12800 while those of dataset 2 are 1600, 3200, 6400. Similar to dataset 2, each scene was captured 500 shots, and the mean image of these 500 shots can be used a kind of ground-truth to evaluate the denoising algorithms. Fig. \ref{fig5} shows some cropped images of the scenes in our dataset. One can see that the images contain a lot of different realistic objects with varying colors, shapes, materials, etc. 
+\textbf{Dataset 3.} The scenes of dataset 2 are mostly printed photos, and they cannot represent realistic objects and scenes with different reflectance properties. To remedy the limitation of dataset 2, we construct another dataset which contains images of 10 different scenes captured by Canon 80D and Sony A7II cameras under more ISO settings. The ISO settings in our dataset are 800, 1600, 3200, 6400, 12800 while those of dataset 2 are 1600, 3200, 6400. Similar to dataset 2, each scene was captured 500 shots, and the mean image of these 500 shots can be used a kind of ground-truth to evaluate the denoising algorithms. Fig. \ref{fig3-5} shows some cropped images of the scenes in our dataset. One can see that the images contain a lot of different realistic objects with varying colors, shapes, materials, etc. 
 
 Our dataset provides real noisy images of realistic objects with different ISO settings. It can be used to more fairly evaluate the performance of different real noisy image denoising methods. Consider that the image resolution is very high (about $4000\times4000$), for the convenience of experimental studies, we cropped 100 (10 for each scene) smaller images (of size $512\times512$) from it to perform experiments. The whole dataset will be made publically available with the publication of this paper.
 
@@ -470,7 +470,7 @@ Our dataset provides real noisy images of realistic objects with different ISO s
         \includegraphics[width=1\textwidth]{images/guided/resize_woman.png}
     \end{subfigure}
     \caption{Some samples cropped from real noisy images of Dataset 1 \cite{ncwebsite}.}
-    \label{fig3}
+    \label{fig3-3}
 \end{figure}
 
 \begin{figure}
@@ -525,7 +525,7 @@ Our dataset provides real noisy images of realistic objects with different ISO s
         \includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_3200_A2_80.png}
     \end{subfigure}
     \caption{Some samples cropped from real noisy images of Dataset 2 \cite{crosschannel2016}.}
-    \label{fig4}
+    \label{fig3-4}
 \end{figure}
 
 \begin{figure}
@@ -580,7 +580,7 @@ Our dataset provides real noisy images of realistic objects with different ISO s
         \includegraphics[width=1\textwidth]{images/guided/SONY_A7II_ISO12800_DSC02383_part8.JPG}
     \end{subfigure}
     \caption{Some samples cropped from our dataset (Dataset 3).}
-    \label{fig5}
+    \label{fig3-5}
 \end{figure}
 
 
@@ -616,7 +616,7 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \caption{Mean Image}
     \end{subfigure}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 C1'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
-    \label{fig6}
+    \label{fig3-6}
 \end{figure}
 
 
@@ -652,7 +652,7 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \caption{Mean Image}
     \end{subfigure}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 C1'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
-    \label{fig7}
+    \label{fig3-7}
 \end{figure}
 
 
@@ -660,7 +660,7 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 
 To demonstrate the advantages of external prior guided internal prior learning, we perform real noisy image denoising by using external priors only (denoted by ``External"), internal priors only (denoted by ``Internal"), and the proposed guided internal priors (denoted by ``Guided Internal"), respectively.\ For the ``External" method, we utilize the full external dictionaries (i.e., $r=108$ in Eq.\ (\ref{equ3-5})) for denoising.\ For the ``Internal" method, the overall framework is similar to the method of \cite{ncsr}.\ A GMM model (with $K = 32$ Gaussians) is directly learned from the PGs extracted from the given noisy image without using any external data, and then the internal orthogonal dictionaries are obtained via Eq.\ (\ref{equ3-2}) to perform denoising.\ All parameters of the ``External" and ``Internal" methods are tuned to achieve their best performance. 
 
-We compare the three methods on the 60 cropped images from \cite{crosschannel2016}.\ The average PSNR and run time are listed in Table \ref{tab1}.\ The best results are highlighted in bold.\ It can be seen that ``Guided Internal" method achieves better PSNR than both ``External" and ``Internal" methods. In addition, the ``Internal" method is very slow because it involves online GMM learning, while the ``Guided Internal" method is only a little slower than the ``External" method.\ Figs. \ref{fig6} and \ref{fig7} show the denoised images of two noisy images by the three methods.\ One can see that the  ``External" method is good at recovering large-scale structures (see Fig. \ref{fig6}) while the ``Internal" method is good at recovering fine-scale textures (see Fig. \ref{fig7}).\ By utilizing external priors to guide the internal prior learning, our proposed method can effectively recover both the large-scale structures and fine-scale textures. 
+We compare the three methods on the 60 cropped images from \cite{crosschannel2016}.\ The average PSNR and run time are listed in Table \ref{tab1}.\ The best results are highlighted in bold.\ It can be seen that ``Guided Internal" method achieves better PSNR than both ``External" and ``Internal" methods. In addition, the ``Internal" method is very slow because it involves online GMM learning, while the ``Guided Internal" method is only a little slower than the ``External" method.\ Figs. \ref{fig3-6} and \ref{fig3-7} show the denoised images of two noisy images by the three methods.\ One can see that the  ``External" method is good at recovering large-scale structures (see Fig. \ref{fig3-6}) while the ``Internal" method is good at recovering fine-scale textures (see Fig. \ref{fig3-7}).\ By utilizing external priors to guide the internal prior learning, our proposed method can effectively recover both the large-scale structures and fine-scale textures. 
 
 %------------------------------------------------------------------------------------
 \begin{figure}
