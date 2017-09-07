@@ -10,7 +10,7 @@
 \centering
 \includegraphics[width=0.74\linewidth]{images/pgpd/flowchart2.png}
 \caption{Flowchart of the proposed patch group based prior learning and image denoising framework.}
-\label{fig1}
+\label{fig2-1}
 \end{figure}
 
 Image denoising is a classical problem in low level vision and has been extensively studied for several decades. Image denoising is still an active topic for that it not only serves as a baseline problem for other image resotration problems, but also provides an ideal test bed for image modeling techniques. In general, image denoising aims to recover the clean image $\bm{x}$ from its noisy observation $\bm{y} = \bm{x} + \bm{v}$, where $\bm{v}$ is assumed to be additive white Gaussian noise.\ A variety of image denoising methods have been developed in past decades, including filtering based methods \cite{Tomasi1998}, diffusion based methods \cite{PeronaMalik1990}, total variation based methods \cite{rudin1992nonlinear,osher2005iterative}, wavelet/curvelet based methods \cite{softthresholding,bayesshrink,curvelet}, sparse representation based methods \cite{ksvd,lssc,ncsr}, nonlocal self-similarity based methods \cite{nlm,bm3d,nnm,wnnm}, etc.
@@ -23,7 +23,7 @@ Natural images often have many repetitive local patterns, and a local patch can 
 
 Though NSS has demonstrated its great success in image denoising, in most existing methods only the NSS of noisy input image is used for denoising.\ For example, in BM3D \cite{bm3d} the nonlocal similar patches of a noisy image are collected as a cube for collaborative filtering. In NCSR \cite{ncsr}, the nonlocal means are subtracted in the sparse domain to regularize the sparse coding of noisy patches. In WNNM \cite{wnnm}, the low-rank regularization is enforced to recover the latent structure of the matrix of noisy patches. We argue that, however, such utilizations of NSS are not effective enough because they neglect the NSS of clean natural images, which can be pre-learned for use in the denoising stage. \ To the best of our knowledge, unfortunately, so far there is not an explicit NSS prior model learned from natural images for image restoration. 
 
-With the above considerations, in this work we propose to learn explicit NSS models from natural images, and apply the learned prior models to noisy images for high performance denoising. The flowchart of the proposed method is illustrated in Fig.\ \ref{fig1}.\ In the learning stage, we extract millions of patch groups (PG) from a set of clean natural images.\ A PG is formed by grouping the similar patches to a local patch in a large enough neighborhood.\ A PG based GMM (PG-GMM) learning algorithm is developed to learn the NSS prior for the PGs. In the denoising stage, the learned PG-GMM will provide dictionaries as well as regularization parameters, and a simple weighted sparse coding model is developed for image denoising.\ Our extensive experiments validated that the proposed PG prior based denoising method outperforms many state-of-the-art algorithms quantitatively (in PSNR) while being much more efficient. More importantly, it delivers the best qualitative denoising results with finer details and less artifacts, owe to the NSS prior learned from clean natural images.   
+With the above considerations, in this work we propose to learn explicit NSS models from natural images, and apply the learned prior models to noisy images for high performance denoising. The flowchart of the proposed method is illustrated in Fig.\ \ref{fig2-1}.\ In the learning stage, we extract millions of patch groups (PG) from a set of clean natural images.\ A PG is formed by grouping the similar patches to a local patch in a large enough neighborhood.\ A PG based GMM (PG-GMM) learning algorithm is developed to learn the NSS prior for the PGs. In the denoising stage, the learned PG-GMM will provide dictionaries as well as regularization parameters, and a simple weighted sparse coding model is developed for image denoising.\ Our extensive experiments validated that the proposed PG prior based denoising method outperforms many state-of-the-art algorithms quantitatively (in PSNR) while being much more efficient. More importantly, it delivers the best qualitative denoising results with finer details and less artifacts, owe to the NSS prior learned from clean natural images.   
 
 %-------------------------------------------------------------------------
 \section{Patch Group Based Prior Modeling of Nonlocal Self-Similarity}
@@ -31,16 +31,16 @@ Image nonlocal self-similarity (NSS) has been widely adopted in patch based imag
 \subsection{Patch Group and Group Mean Subtraction}
 For each local patch (size: $p\times p$) of a given clean image, we can find the first $M$ most similar nonlocal patches to it across the whole image. In practice, this can be done by Euclidean distance based block matching in a large enough local window of size $W\times W$. A PG is formed by grouping the $M$ similar patches, denoted by $\{\bm{x}_{m}\}_{m=1}^{M}$, where $\bm{x}_{m}\in \mathbb{R}^{p^{2}\times1}$ is a patch vector. The mean vector of this PG is $\bm{\mu}=\frac{1}{M}\sum_{m=1}^{M}\bm{x}_{m}$, and $\bm{\overline{x}}_{m}=\bm{x}_{m}-\bm{\mu}$ is the group mean subtracted patch vector. We call
 \begin{equation}
-\label{equ1}
+\label{equ2-1}
 \overline{\bm{X}}\triangleq \{\overline{\bm{x}}_{m}\}, m=1,...,M
 \end{equation}
 the group mean subtracted PG, and it will be used to learn the NSS prior in our work. 
 
-In Fig.\ \ref{fig2}, we show two different PGs, their group means, and the PGs after mean subtraction.\ One can see that before mean subtraction, the two PGs have very different local structures.\ After mean subtraction, the two PGs will have very similar variations.\ This greatly facilitates the prior learning because the possible number of patterns is reduced, while the training samples of each pattern are increased. We will discuss further the benefits of mean subtraction and the associated prior model learning in Section 2.4.   
+In Fig.\ \ref{fig2-2}, we show two different PGs, their group means, and the PGs after mean subtraction.\ One can see that before mean subtraction, the two PGs have very different local structures.\ After mean subtraction, the two PGs will have very similar variations.\ This greatly facilitates the prior learning because the possible number of patterns is reduced, while the training samples of each pattern are increased. We will discuss further the benefits of mean subtraction and the associated prior model learning in Section 2.4.   
 \subsection{PG-GMM Learning}
 From a given set of natural images, we can extract $N$ PGs, and we denote one PG as
 \begin{equation}
-\label{equ2}
+\label{equ2-2}
 \overline{\bm{X}}_{n}\triangleq \{\overline{\bm{x}}_{n,m}\}_{m=1}^{M}, n=1,...,N.
 \end{equation}
 The PGs $\{\bm{\overline{X}}_{n}\}$ contain a rich amount of NSS information of natural images, and the problem turns to how to learn explicit prior models from $\{\bm{\overline{X}}_{n}\}$. Considering that Gaussian Mixture Model (GMM) has been successfully used to model the image patch priors in EPLL \cite{epll} and PLE \cite{ple}, we propose to extend patch based GMM to patch group based GMM (PG-GMM) for NSS prior learning.
@@ -49,43 +49,45 @@ The PGs $\{\bm{\overline{X}}_{n}\}$ contain a rich amount of NSS information of 
 \centering
 \includegraphics[width=0.7\linewidth]{images/pgpd/2pgs.png}
 \caption{Different patch groups (PG) share similar PG variations.}
-\label{fig2}
+\label{fig2-2}
 \end{figure}
 
 With PG-GMM, we aim to learn a set of $K$ Gaussians $\{\mathcal{N}(\bm{\mu}_{k},\bm{\Sigma}_{k})\}$ from $N$ training PGs $\{\bm{\overline{X}}_{n}\}$, while requiring that all the $M$ patches $\{\bm{\overline{x}}_{n,m}\}$  in PG $\bm{\overline{X}}_{n}$ belong to the same Gaussian component and assume that the patches in the PG are independently sampled. Note that such an assumption is commonly used in patch based image modeling \cite{ksvd,lssc}. Then, the likelihood of $\{\bm{\overline{X}}_{n}\}$ can be calculated as
 \begin{equation}
-\label{equ3}
+\label{equ2-3}
 P(\bm{\overline{X}}_{n})  = \sum\nolimits_{k=1}^{K}\pi_{k}\prod\nolimits_{m=1}^{M}\mathcal{N}(\bm{\overline{x}}_{n,m}|\bm{\mu}_{k},\bm{\Sigma}_{k}).
 \end{equation}
 By assuming that all the PGs are independently sampled, the overall objective likelihood function is $\mathcal{L} = \prod_{n=1}^{N}P(\bm{\overline{X}}_{n})$. Taking the log of it, we maximize the following objective function for PG-GMM learning
 \begin{equation}
-\label{equ4}
+\label{equ2-4}
 \begin{split}
 \ln\mathcal{L}=\sum_{n=1}^{N} \ln(\sum_{k=1}^{K}\pi_{k}\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{x}}_{n,m}|\bm{\mu}_{k},\bm{\Sigma}_{k})).
 \end{split}
 \end{equation}
 
-As in GMM learning \cite{Bishop}, we introduce hidden variables $\{\Delta_{nk}|n=1,...,N;k=1,...,K\}$ to optimize (\ref{equ4}). If PG $\bm{\overline{X}}_{n}$ belongs to the $k$th component, $\Delta_{nk}=1$; and $\Delta_{nk}=0$ otherwise. Then the EM algorithm \cite{em} can be used to optimize (\ref{equ4}) via two alternative steps. In the E-Step, by the Bayes' formula, the expected value of $\Delta_{nk}$ is
-\begin{equation}\label{equ5}
+As in GMM learning \cite{Bishop}, we introduce hidden variables $\{\Delta_{nk}|n=1,...,N;k=1,...,K\}$ to optimize (\ref{equ2-4}). If PG $\bm{\overline{X}}_{n}$ belongs to the $k$th component, $\Delta_{nk}=1$; and $\Delta_{nk}=0$ otherwise. Then the EM algorithm \cite{em} can be used to optimize (\ref{equ2-4}) via two alternative steps. In the E-Step, by the Bayes' formula, the expected value of $\Delta_{nk}$ is
+\begin{equation}
+\label{equ2-5}
 \gamma_{nk}=\frac{\pi_{k}\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{x}}_{n,m}|\bm{\mu}_{k},\bm{\Sigma}_{k})}{\sum_{l=1}^{K}\pi_{l}\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{x}}_{n,m}|\bm{\mu}_{l},\bm{\Sigma}_{l})}.
 \end{equation}
 In the M-step, since for each PG $\bm{\overline{X}}_{n}$, $\sum_{m=1}^{M}\bm{\overline{x}}_{n,m}=\bm{0}$, we have
 \begin{equation}
-\label{equ6}
+\label{equ2-6}
 \bm{\mu}_{k} = \frac{\sum_{n=1}^{N}\gamma_{nk}\sum_{m=1}^{M}\bm{\overline{x}}_{n,m}}{\sum_{n=1}^{N}\gamma_{nk}}=\bm{0},
 \end{equation}
-\begin{equation}\label{equ7}
+\begin{equation}
+\label{equ2-7}
 \bm{\Sigma}_{k} = \frac{\sum_{n=1}^{N}\gamma_{nk}\sum_{m=1}^{M}\bm{\overline{x}}_{n,m}\bm{\overline{x}}_{n,m}^{T}}{\sum_{n=1}^{N}\gamma_{nk}}.
 \end{equation}
 The calculations of $\pi_{k}=\frac{1}{N}\sum_{n=1}^{N}\gamma_{nk}$ are similar to \cite{Bishop}.
 
-By alternating between the E-step and the M-step, the model parameters will be updated iteratively, and the update in each iteration can guarantee to increase the value of the log-likelihood function (\ref{equ5}), and the EM algorithm will converge \cite{Bishop,emconvergence}. Fig. \ref{fig3} shows the convergence curve of the proposed PG-GMM algorithm by using the Kodak PhotoCD Dataset (\url{http://r0k.us/graphics/kodak/}) for training.
+By alternating between the E-step and the M-step, the model parameters will be updated iteratively, and the update in each iteration can guarantee to increase the value of the log-likelihood function (\ref{equ2-5}), and the EM algorithm will converge \cite{Bishop,emconvergence}. Fig. \ref{fig2-3} shows the convergence curve of the proposed PG-GMM algorithm by using the Kodak PhotoCD Dataset (\url{http://r0k.us/graphics/kodak/}) for training.
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.75\linewidth]{images/pgpd/cvgc.png}
 \caption{The convergence curve of log-likelihood in PG-GMM training on the Kodak PhotoCD Dataset.
 }
-\label{fig3}
+\label{fig2-3}
 \end{figure}
 
 \subsection{Complexity Analysis}
@@ -93,9 +95,9 @@ In the training stage, there are $N$ PGs, each of which has $M$ patches, and hen
 \subsection{Discussions}
 GMM has been used for patch based image prior learning and achieved promising results, e.g., EPLL \cite{epll} and PLE \cite{ple}. In this paper, we extend the patch based image prior learning to PG based prior learning to model the NSS information.\ The developed PG-GMM method has some important advantages over the patch based GMM method.
 
-First, in patch based GMM, the mean value of each patch is subtracted before learning the Gaussian components. This is to remove the DC (direct current) of each patch but will not change the essential structure of a patch. However, in PG-GMM the mean vector of all patches in a group is calculated and subtracted from each patch, and hence the structure of each patch is changed. As a result, many patches which originally have different local patterns may become similar after group mean subtraction (please refer to Fig. \ref{fig2} for an example). This makes the PG-GMM learning process easier and more stable. 
+First, in patch based GMM, the mean value of each patch is subtracted before learning the Gaussian components. This is to remove the DC (direct current) of each patch but will not change the essential structure of a patch. However, in PG-GMM the mean vector of all patches in a group is calculated and subtracted from each patch, and hence the structure of each patch is changed. As a result, many patches which originally have different local patterns may become similar after group mean subtraction (please refer to Fig. \ref{fig2-2} for an example). This makes the PG-GMM learning process easier and more stable. 
 
-Second, as can be seen in Eq.\ (\ref{equ9}), the mean vector of each Gaussian component in PG-GMM is naturally a zero vector.\ This implies that we only need to learn the covariance matrix of each component without considering its mean. However, in patch based GMM \cite{epll}, the mean vectors of Gaussians can only be forced to zero and there is no theoretical guarantee for this.
+Second, as can be seen in Eq.\ (\ref{equ2-9}), the mean vector of each Gaussian component in PG-GMM is naturally a zero vector.\ This implies that we only need to learn the covariance matrix of each component without considering its mean. However, in patch based GMM \cite{epll}, the mean vectors of Gaussians can only be forced to zero and there is no theoretical guarantee for this.
 
 Third, due to reduction of possible patterns in PG-GMM and the reduced number of variables to learn, we do not need to set a large number of Gaussian components in PG-GMM learning. For example, in EPLL \cite{epll}, 200 Gaussian components are learned to achieve competing denoising performance with BM3D \cite{bm3d}, while in PG-GMM learning only 32 Gaussian components are enough to outperform BM3D (please refer to the experimental section for details).
 %-------------------------------------------------------------------------
@@ -105,65 +107,70 @@ Given a noisy image $\bm{y}$, like in the PG-GMM learning stage, for each local 
 
 \subsubsection{Gaussian Component Selection}
 For each $\bm{\overline{Y}}$, we select the most suitable Gaussian component to it from the trained PG-GMM. As in \cite{epll}, suppose that the variance of Gaussian white noise corrupted in the image is $\sigma^{2}$, the covariance matrix of the $k$th component will become $\bm{\Sigma}_{k}+\sigma^{2}\bm{I}$, where $\bm{I}$ is the identity matrix. The selection can be done by checking the posterior probability that $\bm{\overline{Y}}$ belongs to the $k$th Gaussian component:
-\begin{equation}\label{equ8}
+\begin{equation}
+\label{equ2-8}
 P(k|\bm{\overline{Y}})=\frac{\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{y}}_{m}|\bm{0},\bm{\Sigma}_{k}+\sigma^{2}\bm{I})}{\sum_{l=1}^{K}\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{y}}_{m}|\bm{0},\bm{\Sigma}_{l}+\sigma^{2}\bm{I})}.
 \end{equation}
-Taking log-likelihood of (\ref{equ8}), we have
-\begin{equation}\label{equ9}
-\setlength{\abovedisplayskip}{3pt}
-\setlength{\belowdisplayskip}{3pt}
+Taking log-likelihood of (\ref{equ2-8}), we have
+\begin{equation}
+\label{equ2-9}
 \ln P(k|\bm{\overline{Y}}) = \sum\nolimits_{m=1}^{M}\ln\mathcal{N}(\bm{\overline{y}}_{m}|\bm{0},\bm{\Sigma}_{k}+\sigma^{2})-\ln{C}
 \end{equation}
-where $C$ is the denominator in Eq. (\ref{equ9}) and it is the same for all components. Finally, the component with the highest probability $\ln P(k|\bm{\overline{Y}})$ is selected to process $\bm{\overline{Y}}$.
+where $C$ is the denominator in Eq. (\ref{equ2-9}) and it is the same for all components. Finally, the component with the highest probability $\ln P(k|\bm{\overline{Y}})$ is selected to process $\bm{\overline{Y}}$.
 
 
 \subsubsection{Weighted Sparse Coding with Closed-Form Solution}
 Suppose that the $k$th Gaussian component is selected for PG $\bm{\overline{Y}}$. For notation simplicity, we remove the subscript $k$ and denote by $\bm{\Sigma}$ the covariance matrix of this component. In PG-GMM, the PGs actually represent the variations of the similar patches in a group, and these variations are assigned to the same Gaussian distribution. By singular value decomposition (SVD), $\bm{\Sigma}$ can be factorized as
-\begin{equation}\label{equ10}
+\begin{equation}
+\label{equ2-10}
 \bm{\Sigma} = \bm{D}\bm{\Lambda}\bm{D}^{T},
 \end{equation}
-where $\bm{D}$ is an orthonormal matrix composed by the eigenvectors of $\bm{\Sigma}$ and $\bm{\Lambda}$ is the diagonal matrix of eigenvalues. With PG-GMM, the eigenvectors  in $\bm{D}$ capture the statistical structures of NSS variations in natural images, while the eigenvalues in $\bm{\Lambda}$ represent the significance of these eigenvectors. Fig.\ 4 shows the eigenvectors for 3 Gaussian components. It can be seen that these eigenvectors encode the possible variations of the PGs. For one Gaussian component, the first eigenvector represents its largest variation, while the last eigenvector represents its smallest variation. For different Gaussian components, we can see that their eigenvectors (with the same index) are very different. Hence, $\bm{D}$ can be used to represent the structural variations of the PGs in that component.
+where $\bm{D}$ is an orthonormal matrix composed by the eigenvectors of $\bm{\Sigma}$ and $\bm{\Lambda}$ is the diagonal matrix of eigenvalues. With PG-GMM, the eigenvectors  in $\bm{D}$ capture the statistical structures of NSS variations in natural images, while the eigenvalues in $\bm{\Lambda}$ represent the significance of these eigenvectors. Fig.\ \ref{fig2-4} shows the eigenvectors for 3 Gaussian components. It can be seen that these eigenvectors encode the possible variations of the PGs. For one Gaussian component, the first eigenvector represents its largest variation, while the last eigenvector represents its smallest variation. For different Gaussian components, we can see that their eigenvectors (with the same index) are very different. Hence, $\bm{D}$ can be used to represent the structural variations of the PGs in that component.
 \begin{figure}[t]
 \centering
 \includegraphics[width=1\linewidth]{images/pgpd/dics.png}
 \caption{Eigenvectors of 3 Gaussian components from the learned PG-GMM, sorted by the values of corresponding eigenvalues.}
-\label{fig4}
+\label{fig2-4}
 \end{figure}
 
-For each patch $\bm{\overline{y}}_{m}$ in the PG $\bm{\overline{Y}}$, we propose to use $\bm{D}$ as the dictionary to sparsely encode $\bm{\overline{y}}_{m}$ as $\bm{\overline{y}}_{m}=\bm{D}\bm{\alpha}+\bm{v}$, where $\bm{\alpha}$ is the vector of sparse coding coefficients and $\bm{v}$ is the corrupted noise. Meanwhile, we propose to introduce a weighting vector $\bm{w}$ to weight the coding vector $\bm{\alpha}$ (we will see in (\ref{equ16}) that $\bm{w}$ is related to the eigenvalues in $\bm{\Lambda}$), resulting in the following simple but highly effective weighted sparse coding model:
-\begin{equation}\label{equ11}
+For each patch $\bm{\overline{y}}_{m}$ in the PG $\bm{\overline{Y}}$, we propose to use $\bm{D}$ as the dictionary to sparsely encode $\bm{\overline{y}}_{m}$ as $\bm{\overline{y}}_{m}=\bm{D}\bm{\alpha}+\bm{v}$, where $\bm{\alpha}$ is the vector of sparse coding coefficients and $\bm{v}$ is the corrupted noise. Meanwhile, we propose to introduce a weighting vector $\bm{w}$ to weight the coding vector $\bm{\alpha}$ (we will see in (\ref{equ2-16}) that $\bm{w}$ is related to the eigenvalues in $\bm{\Lambda}$), resulting in the following simple but highly effective weighted sparse coding model:
+\begin{equation}
+\label{equ2-11}
 \min_{\bm{\alpha}}{\|\bm{\overline{y}}_{m}-\bm{D}\bm{\alpha}\|_{2}^{2}+\|\bm{w}^{T}\bm{\alpha}\|_{1}}.
 \end{equation}
 
 From the viewpoint of Maximum A-Posterior (MAP) estimation, the optimal solution of (\ref{equ11}) is $\hat{\bm{\alpha}} = \arg\max\nolimits_{\bm{\alpha}}\ln P(\bm{\alpha}|\bm{\overline{y}}_{m})$. By Bayes' formula, it is equivalent to
-\begin{equation}\label{equ12}
+\begin{equation}
+\label{equ2-12}
 \hat{\bm{\alpha}} = \arg\max\nolimits_{\bm{\alpha}}\{\ln P(\bm{\overline{y}}_{m}|\bm{\alpha})+\ln P(\bm{\alpha})\}.
 \end{equation}
 The log-likelihood term $\ln P(\bm{\overline{y}}_{m}|\bm{\alpha})$ is characterized by the statistics of noise $\bm{v}$, which is assumed to be white Gaussian with standard deviation $\sigma$. Hence, we have
-\begin{equation}\label{equ13}
+\begin{equation}
+\label{equ2-13}
 P(\bm{\overline{y}}_{m}|\bm{\alpha}) = \frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\|\bm{\overline{y}}_{m}-\bm{D}\bm{\alpha}\|_{2}^{2}).
 \end{equation}
 We assume that the sparse coding coefficients in $\bm{\alpha}$ follow i.i.d.\ Laplacian distribution.\ More specifically, for entry $\bm{\alpha}_{i}$, which is the coding coefficient of patch $\bm{\overline{y}}_{m}$ over the $i$th eigenvector in $\bm{D}$, we assume that it follows distribution $\frac{c}{\sqrt{2}\bm{\lambda}_{i}}\exp(-c\sqrt{2}|\bm{\alpha}_{i}|/\bm{\lambda}_{i})$, where $\bm{\lambda}_{i}=\bm{\Lambda}_{i}^{1/2}$ and $c$ is a constant. Note that we adjust the scale factor of the distribution by (square root of) the $i$th eigenvalue $\bm{\Lambda}_{i}$. This is because the larger the eigenvalue $\bm{\Lambda}_{i}$ is, the more important the $i$th eigenvector in $\bm{D}$ is, and hence the distribution of the coding coefficients over this eigenvector should have a longer tail (i.e., less sparse). Finally, we have
-\begin{equation}\label{equ14}
+\begin{equation}
+\label{equ2-14}
 P(\bm{\alpha})=\prod\nolimits_{i=1}^{p^{2}}\frac{c}{\sqrt{2}\bm{\lambda}_{i}}\exp(-\frac{c\sqrt{2}|\bm{\alpha}_{i}|}{\bm{\lambda}_{i}}).
 \end{equation}
-Putting (\ref{equ13}) and (\ref{equ14}) into (\ref{equ12}), we have
-\begin{equation}\label{equ15}
+Putting (\ref{equ2-13}) and (\ref{equ2-14}) into (\ref{equ2-12}), we have
+\begin{equation}\label{equ2-15}
 \hat{\bm{\alpha}}=\arg\min\nolimits_{\bm{\alpha}}\|\bm{\overline{y}}_{m}-\bm{D}\bm{\alpha}\|_{2}^{2}+\sum_{i=1}^{p^{2}}\frac{c*2\sqrt{2}\sigma^{2}}{\bm{\lambda}_{i}}|\bm{\alpha}_{i}|.
 \end{equation}
-By comparing (\ref{equ15}) with (\ref{equ11}), we can see that the $i$th entry of the weighting vector $\bm{w}$ should be
-\begin{equation}\label{equ16}
+By comparing (\ref{equ2-15}) with (\ref{equ2-11}), we can see that the $i$th entry of the weighting vector $\bm{w}$ should be
+\begin{equation}\label{equ2-16}
 \bm{w}_{i} = c*2\sqrt{2}\sigma^{2}/(\bm{\lambda}_{i}+\varepsilon),
 \end{equation}
 where $\varepsilon$ is a small positive number to avoid dividing by zero.
 
-With $\bm{w}$ determined by (\ref{equ16}), let's see what the solution of (\ref{equ11}) should be. Since the dictionary $\bm{D}$ is orthonormal, it is not difficult to find out that (\ref{equ11}) has a closed-form solution (detailed derivation can be found in the supplementary material):
-\begin{equation}\label{equ17}
+With $\bm{w}$ determined by (\ref{equ2-16}), let's see what the solution of (\ref{equ2-11}) should be. Since the dictionary $\bm{D}$ is orthonormal, it is not difficult to find out that (\ref{equ2-11}) has a closed-form solution (detailed derivation can be found in the supplementary material):
+\begin{equation}\label{equ2-17}
 \hat{\bm{\alpha}}= \text{sgn}(\bm{D^{T}\overline{y}}_{m})\odot \text{max}(|\bm{D^{T}\overline{y}}_{m}|-\bm{w}/2,0),
 \end{equation}
 where $\text{sgn}(\bullet)$ is the sign function, $\odot$ means element-wise multiplication, and $|\bm{D^{T}\overline{y}}_{m}|$ is the absolute value of each entry of vector $|\bm{D^{T}\overline{y}}_{m}|$. The closed-form solution makes our weighted sparse coding process very efficient. 
 \subsection{Denoising Algorithm}
-With the solution $\hat{\bm{\alpha}}$ in (\ref{equ17}), the clean patch in a PG can be estimated as $\hat{\bm{x}}_{m}=\bm{D}\hat{\bm{\alpha}}+\bm{\mu}_{y}$. Then the clean image $\hat{\bm{x}}$ can be reconstructed by aggregating all the estimated PGs. In practice, we could perform the above denoising procedures for several iterations for better denoising outputs. In iteration $t$, we use the iterative regularization strategy \cite{osher2005iterative} to add back to the recovered image $\hat{\bm{x}}^{(t-1)}$ some estimation residual in iteration $t-1$. The standard deviation of noise in iteration $t$ is adjusted as $\sigma^{(t)} = \eta*\sqrt{\sigma^{2}-\|\bm{y}-\bm{y}^{(t-1)}\|_{2}^{2}}$, where $\eta$ is a constant. The proposed denoising algorithm is summarized in Algorithm 1 (Alg. 1).
+With the solution $\hat{\bm{\alpha}}$ in (\ref{equ2-17}), the clean patch in a PG can be estimated as $\hat{\bm{x}}_{m}=\bm{D}\hat{\bm{\alpha}}+\bm{\mu}_{y}$. Then the clean image $\hat{\bm{x}}$ can be reconstructed by aggregating all the estimated PGs. In practice, we could perform the above denoising procedures for several iterations for better denoising outputs. In iteration $t$, we use the iterative regularization strategy \cite{osher2005iterative} to add back to the recovered image $\hat{\bm{x}}^{(t-1)}$ some estimation residual in iteration $t-1$. The standard deviation of noise in iteration $t$ is adjusted as $\sigma^{(t)} = \eta*\sqrt{\sigma^{2}-\|\bm{y}-\bm{y}^{(t-1)}\|_{2}^{2}}$, where $\eta$ is a constant. The proposed denoising algorithm is summarized in Algorithm 1 (Alg. 1).
 
 In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each PG. Then the computational cost for Gaussian component selection is $O(p^{6}NMK)$.\ The cost for iterative regularization and noise estimation is negligible. The cost for closed-form weighted sparse coding is $O(p^{4}NM)$. Suppose that there are $T$ iterations, the overall complexity of our denoising algorithm is $O(p^{6}NMKT)$.
 \begin{table}
@@ -209,7 +216,7 @@ In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each
 \end{table}
 %-------------------------------------------------------------------------
 \section{Experiments}
-In this section, we perform image denoising experiments on 20 widely used natural images (shown in Fig. \ref{fig5}). More experiments on the Berkeley Segmentation Data Set \cite{bsds} can be found in the supplementary file. As a common experimental setting in literature, additive white Gaussian noise with zero mean and standard deviation $\sigma$ is added to the image to test the performance of competing denoising methods. We call our method \textsl{PG Prior based Denoising} (PGPD) in the following experiments. The Matlab source code of our PGPD algorithm can be downloaded at \url{http://www4.comp.polyu.edu.hk/~cslzhang/code/PGPD.zip}.
+In this section, we perform image denoising experiments on 20 widely used natural images (shown in Fig. \ref{fig2-5}). More experiments on the Berkeley Segmentation Data Set \cite{bsds} can be found in the supplementary file. As a common experimental setting in literature, additive white Gaussian noise with zero mean and standard deviation $\sigma$ is added to the image to test the performance of competing denoising methods. We call our method \textsl{PG Prior based Denoising} (PGPD) in the following experiments. The Matlab source code of our PGPD algorithm can be downloaded at \url{http://www4.comp.polyu.edu.hk/~cslzhang/code/PGPD.zip}.
 
 \begin{figure}
     \centering
@@ -313,7 +320,7 @@ In this section, we perform image denoising experiments on 20 widely used natura
         \includegraphics[width=1\textwidth]{images/pgpd/zelda.png}
     \end{subfigure}
     \caption{The 20 widely used test images.}
-    \label{fig5}
+    \label{fig2-5}
 \end{figure}
 
 
@@ -323,12 +330,12 @@ Our proposed PGPD method contains two stages, the prior learning stage and the d
 In the denoising stage, there are 3 parameters:\ $c$, $\delta$, and $\eta$.\ In our implementation, ($c$, $\delta$, $\eta$) are set to $(0.33,0.10,0.79)$, $(0.29,0.09,0.73)$, $(0.19,0.08,0.89)$, $(0.15,0.07,0.98)$, $(0.12,0.06,1.05)$, $(0.09,0.05,1.15)$, $(0.06,0.05,1.30)$ when $\sigma=10,20,30,40,50,75,100$, respectively. In addition, on all noise levels we stop Algorithm 1 in 4 iterations.
 
 \subsection{Comparison with Patch Prior based Denoising}
-In this section, we compare the PSNR and visual quality of denoised images by the \textsl{Patch Prior based Denoising} (PPD) method and the \textsl{Patch Group Prior based Denoising} (PGPD) method. As can be seen from Table \ref{tab1} and Figures \ref{fig1}-\ref{fig4}, PGPD is much better than PPD both quantitatively and qualitatively. This validates the effectiveness of our learned PG based NSS prior. In the following sections, we will omit the results of the PPD method.
+In this section, we compare the PSNR and visual quality of denoised images by the \textsl{Patch Prior based Denoising} (PPD) method and the \textsl{Patch Group Prior based Denoising} (PGPD) method. As can be seen from Table \ref{tab2-1} and Figures \ref{fig2-6}-\ref{fig2-9}, PGPD is much better than PPD both quantitatively and qualitatively. This validates the effectiveness of our learned PG based NSS prior. In the following sections, we will omit the results of the PPD method.
 \begin{table}
 \begin{adjustwidth}{-3cm}{}
 \scriptsize
 \caption{PSNR(dB) results of PPD and PGPD on the 20 natural images.}
-\label{tab1}
+\label{tab2-1}
 \centering
 \begin{tabular}{|c||c|c||c|c||c|c||c|c||c|c||c|c||c|c|}
 \hline
@@ -435,7 +442,7 @@ Zelda&35.50&35.51    &32.21&32.21  & 30.35 &30.43   &29.07 &29.23   & 28.06& 28.
 		\caption{PGPD: 29.09}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{Hill} by the PPD method and PGPD method (the standard deviation of noise is $\sigma=30$).}
-    \label{fig6}
+    \label{fig2-6}
 \end{figure}
 
 
@@ -465,7 +472,7 @@ Zelda&35.50&35.51    &32.21&32.21  & 30.35 &30.43   &29.07 &29.23   & 28.06& 28.
 		\caption{PGPD: 31.02}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{House} by the PPD method and PGPD method (the standard deviation of noise is $\sigma=40$).}
-    \label{fig6}
+    \label{fig2-7}
 \end{figure}
 
 
@@ -495,7 +502,7 @@ Zelda&35.50&35.51    &32.21&32.21  & 30.35 &30.43   &29.07 &29.23   & 28.06& 28.
 		\caption{PGPD: 26.81}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{Barbara} by the PPD method and PGPD method (the standard deviation of noise is $\sigma=50$).}
-    \label{fig6}
+    \label{fig2-8}
 \end{figure}
 
 
@@ -525,7 +532,7 @@ Zelda&35.50&35.51    &32.21&32.21  & 30.35 &30.43   &29.07 &29.23   & 28.06& 28.
 		\caption{PGPD:24.64}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{Cameraman} by the PPD method and PGPD method (the standard deviation of noise is $\sigma=75$).}
-    \label{fig6}
+    \label{fig2-9}
 \end{figure}
 
 
@@ -536,17 +543,17 @@ To more clearly demonstrate the effectiveness of PG based NSS prior learning, we
 \subsection{Results and Discussions}
 We evaluate the competing methods from three aspects: PSNR, Speed, and Visual Quality.
 
-\textbf{PSNR}. In Table \ref{tab1}, we present the PSNR results on four noise levels $\sigma=30,40,50,75$. The results on noise levels $\sigma=10,20,100$ can be found in the supplementary material. From Table \ref{tab1}, we have several observations. Firstly, PGPD achieves much better PSNR results than PPD. The improvements are 0.24$\sim$0.52dB on average. This clearly demonstrates the effectiveness of PG-GMM in NSS prior learning. Secondly, PGPD has higher PSNR values than BM3D, LSSC, EPLL and NCSR, and is only slightly inferior to WNNM. However, PGPD is much more efficient than WNNM (see next paragraph). This validates the strong ability of PG based NSS prior in image denoising. 
+\textbf{PSNR}. In Table \ref{tab2-2}, we present the PSNR results on four noise levels $\sigma=30,40,50,75$. The results on noise levels $\sigma=10,20,100$ can be found in the supplementary material. From Table \ref{tab2-2}, we have several observations. Firstly, PGPD achieves much better PSNR results than PPD. The improvements are 0.24$\sim$0.52dB on average. This clearly demonstrates the effectiveness of PG-GMM in NSS prior learning. Secondly, PGPD has higher PSNR values than BM3D, LSSC, EPLL and NCSR, and is only slightly inferior to WNNM. However, PGPD is much more efficient than WNNM (see next paragraph). This validates the strong ability of PG based NSS prior in image denoising. 
 
-\textbf{Speed}. Efficiency is another important factor to evaluate an algorithm. We then compare the speed of all competing methods. All experiments are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-4770K CPU of 3.50GHz and 12.0 GB RAM. The run time (s) of competing methods on the test images is shown in Table \ref{tab2}.\ One can easily see that BM3D is the fastest method. The proposed PGPD is the second fastest, and it is much faster than the other methods. For a $256\times256$ image, BM3D costs about 0.8s while PGPD costs about 10s. However, please note that BM3D is implemented with compiled C++ mex-function and with parallelization, while PGPD is implemented purely in Matlab. EPLL is about 4 times slower than PGPD. Both LSSC and NCSR are very slow since they need to train online dictionary.\ Though WNNM has the highest PSNR, it suffers from huge computational cost due to the many online SVD operations. It is 10$\sim$16 times slower than PGPD. 
+\textbf{Speed}. Efficiency is another important factor to evaluate an algorithm. We then compare the speed of all competing methods. All experiments are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-4770K CPU of 3.50GHz and 12.0 GB RAM. The run time (s) of competing methods on the test images is shown in Table \ref{tab2-3}.\ One can easily see that BM3D is the fastest method. The proposed PGPD is the second fastest, and it is much faster than the other methods. For a $256\times256$ image, BM3D costs about 0.8s while PGPD costs about 10s. However, please note that BM3D is implemented with compiled C++ mex-function and with parallelization, while PGPD is implemented purely in Matlab. EPLL is about 4 times slower than PGPD. Both LSSC and NCSR are very slow since they need to train online dictionary.\ Though WNNM has the highest PSNR, it suffers from huge computational cost due to the many online SVD operations. It is 10$\sim$16 times slower than PGPD. 
 
-\textbf{Visual Quality}. Considering that human subjects are the ultimate judge of the image quality, the visual quality of denoised images is also critical to evaluate a denoising algorithm. Fig. \ref{fig6} and Fig. \ref{fig7} show the denoised images of \textsl{Airplane} and \textsl{Cameraman} by the competing methods, respectively. Due to the page limit, the results of PPD are not shown here, and more visual comparisons can be found in the supplementary file.\ We can see that BM3D tends to over-smooth the image, while EPLL, LSSC, NCSR and WNNM are likely to generate artifacts when noise is high. Owe to the learned NSS prior, the proposed PGPD method is more robust against artifacts, and it preserves edge and texture areas much better than the other methods. For example, in image \textsl{Airplane}, PGPD reconstructs the numbers ``01568'' more clearly than all the other methods including WNNM. In image \textsl{Cameraman}, PGPD recoveries more faithfully the fine structures of the camera area. 
+\textbf{Visual Quality}. Considering that human subjects are the ultimate judge of the image quality, the visual quality of denoised images is also critical to evaluate a denoising algorithm. In Figures \ref{fig2-10} to \ref{fig2-13}, we show some visual quality comparisons on different testing images. For example, Fig. \ref{fig2-12} and Fig. \ref{fig2-13} show the denoised images of \textsl{Airplane} and \textsl{Cameraman} by the competing methods, respectively. Due to the page limit, the results of PPD are not shown here, and more visual comparisons can be found in the supplementary file.\ We can see that BM3D tends to over-smooth the image, while EPLL, LSSC, NCSR and WNNM are likely to generate artifacts when noise is high. Owe to the learned NSS prior, the proposed PGPD method is more robust against artifacts, and it preserves edge and texture areas much better than the other methods. For example, in image \textsl{Airplane}, PGPD reconstructs the numbers ``01568'' more clearly than all the other methods including WNNM. In image \textsl{Cameraman}, PGPD recoveries more faithfully the fine structures of the camera area. 
 
 In summary, the proposed PGPD method demonstrates powerful denoising ability quantitatively and qualitatively, and it is highly efficient.
 \begin{table}[t]
 \begin{adjustwidth}{-2cm}{}
 \caption{PSNR(dB) results of different denoising algorithms on 20 natural images.}
-\label{tab1}
+\label{tab2-2}
 \begin{center}
 \renewcommand\arraystretch{1.0}
 \scriptsize
@@ -776,7 +783,7 @@ Images&\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&\te
 \begin{table}
 \begin{adjustwidth}{-2cm}{}
 \caption{Average run time (seconds) with standard deviation of different methods on images of size $256\times 256$ and $512\times 512$. BM3D uses parallelization and is implemented with compiled C++ mex-function while the other methods are implemented in Matlab.}
-\label{tab2}
+\label{tab2-3}
 \scriptsize
 \begin{center}
 \begin{tabular}{|c||c|c|c|c|c|c|c|}
@@ -893,7 +900,7 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 		\caption{PGPD: 28.84}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{Couple} by different methods (the standard deviation of noise is $\sigma=30$).}
-    \label{fig6}
+    \label{fig2-10}
 \end{figure}
 
 \begin{figure}
@@ -946,7 +953,7 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 		\caption{PGPD: 31.02}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{House} by different methods (the standard deviation of noise is $\sigma=40$).}
-    \label{fig6}
+    \label{fig2-11}
 \end{figure}
 
 \begin{figure}
@@ -999,7 +1006,7 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 		\caption{PGPD: 28.38}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{Airplane} by different methods (the standard deviation of noise is $\sigma=50$).}
-    \label{fig6}
+    \label{fig2-12}
 \end{figure}
 
 
@@ -1053,16 +1060,16 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 		\caption{PGPD: 24.64}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{Cameraman} by different methods (the standard deviation of noise is $\sigma=75$).}
-    \label{fig7}
+    \label{fig2-13}
 \end{figure}
 
 \section{Results on the Berkeley Segmentation Data Set}
 In this section, we give the denoising results (PSNR and visual quality) on the Berkeley Segmentation Data Set \cite{bsds}. This dataset contains 500 images of size $321\times481$. Since EPLL is trained on the 300 images in the training set and validation set, we use the 200 images in the testing set for comparison. 
 
-From Table \ref{tab3}, we can see that EPLL is comparable to BM3D and LSSC on the 200 test images. Though the proposed PGPD is trained on the Kodak PhotoCD dataset, in which the images have different resolution and statistics from the images in the Berkeley Segmentation Data Set, it still shows superiority over EPLL and other methods. In Figures \ref{fig15}-\ref{fig24}, we compare the visual quality of the denoised images by the competing methods. For better visualization, the presented images are cropped to size of $321\times 321$.
+From Table \ref{tab2-4}, we can see that EPLL is comparable to BM3D and LSSC on the 200 test images. Though the proposed PGPD is trained on the Kodak PhotoCD dataset, in which the images have different resolution and statistics from the images in the Berkeley Segmentation Data Set, it still shows superiority over EPLL and other methods. In Figures \ref{fig2-14}-\ref{fig2-17}, we compare the visual quality of the denoised images by the competing methods. For better visualization, the presented images are cropped to size of $321\times 321$.
 \begin{table}
-\caption{Average PSNR(dB) results of different denoising algorithms on the 200 test images of the Berkeley Segmentation Data Set.}\vspace{-0.1in}
-\label{tab3}
+\caption{Average PSNR(dB) results of different denoising algorithms on the 200 test images of the Berkeley Segmentation Data Set.}
+\label{tab2-4}
 \begin{center}
 \begin{tabular}{|c||c|c|c|c|c|c|}
 \hline
@@ -1146,7 +1153,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
 		\caption{PGPD: 32.52}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{3063} by different methods (the standard deviation of noise is $\sigma=30$).}
-    \label{fig7}
+    \label{fig2-14}
 \end{figure}
 
 
@@ -1200,7 +1207,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
 		\caption{PGPD: 28.39}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{29030} by different methods (the standard deviation of noise is $\sigma=40$).}
-    \label{fig7}
+    \label{fig2-15}
 \end{figure}
 
 \begin{figure}
@@ -1253,7 +1260,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
 		\caption{PGPD: 24.69}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{258089} by different methods (the standard deviation of noise is $\sigma=50$).}
-    \label{fig7}
+    \label{fig2-16}
 \end{figure}
 
 \begin{figure}
@@ -1306,7 +1313,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
 		\caption{PGPD: 25.42}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of \textsl{5096} by different methods (the standard deviation of noise is $\sigma=75$).}
-    \label{fig7}
+    \label{fig2-17}
 \end{figure}
 
 
