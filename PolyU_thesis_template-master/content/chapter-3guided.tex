@@ -90,19 +90,19 @@ barbu2009training,csf}, which learn denoising models from pairs of clean and noi
 		\caption{Mean Image}
     \end{subfigure}
     \caption{Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 3200 A3" \cite{crosschannel2016} by different methods.\ The scene was shot 500 times with the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR index can be computed. The images are better viewed by zooming in on screen.}
-    \label{fig1}
+    \label{fig3-1}
 \end{figure}
 
 Most of the above mentioned methods focus on AWGN removal, however, the assumption of AWGN is too ideal to be true for real-world noisy images, where the noise is much more complex and varies with different scenes, cameras and camera settings (ISO, shutter speed, and aperture, etc.) \cite{crosschannel2016,healey1994radiometric}. As a result, many denoising methods in literature, including those learning based methods, become less effective when applied to real-world noisy images. Fig. \ref{fig1} shows an example, where we apply some representative and state-of-the-art denoising methods, including CBM3D \cite{cbm3d}, WNNM \cite{wnnm}, DnCNN \cite{dncnn}, CSF \cite{csf}, and TNRD \cite{chen2015learning} to a real noisy image (captured by a Nikon D800 camera with ISO is 3200) provided in \cite{crosschannel2016}. One can see that these methods either remain much the noise or over-smooth the image details.
 
 There have been a few methods \cite{fullyblind,rabie2005robust,Liu2008,almapg,crosschannel2016,Zhu_2016_CVPR,noiseclinic,ncwebsite} and software toolboxes \cite{neatimage} developed for real noisy image denoising. Almost all of these methods follow a two-stage framework: first estimate the parameters of the noise model (usually assumed to be Gaussian or mixture of Gaussians (MoG)), and then perform denoising with the estimated noise model. However, the noise in real noisy images is very complex and is hard to be modeled by explicit distributions such as Gaussian and MoG. According to \cite{healey1994radiometric}, the noise corrupted in the in-camera imaging process \cite{tsin2001statistical,NewInCamera,crosschannel2016,karaimer_brown_ECCV_2016} is signal dependent and comes from five main sources: photon shot, fixed pattern, dark current, readout, and quantization noise. The existing methods \cite{fullyblind,rabie2005robust,Liu2008,almapg,crosschannel2016,Zhu_2016_CVPR,noiseclinic,
-ncwebsite,neatimage} mentioned above may not perform well on real noisy image denoising tasks. Fig. \ref{fig1} also shows the denoising results of two real noisy image denoising methods, Noise Clinic \cite{noiseclinic,ncwebsite} and Neat Image \cite{neatimage}. One can see that these two methods still generate much noise caused artifacts. 
+ncwebsite,neatimage} mentioned above may not perform well on real noisy image denoising tasks. Fig. \ref{fig3-1} also shows the denoising results of two real noisy image denoising methods, Noise Clinic \cite{noiseclinic,ncwebsite} and Neat Image \cite{neatimage}. One can see that these two methods still generate much noise caused artifacts. 
 
-This work aims to develop a new paradigm for real noisy image denoising. Different from existing real noisy image denoising methods \cite{fullyblind,rabie2005robust,Liu2008,almapg,crosschannel2016,Zhu_2016_CVPR,noiseclinic,ncwebsite}  which focus on noise modeling, we focus on image prior learning. We argue that with a strong and adaptive prior learning scheme, robust denoising performance on real noisy images can still be obtained.  To achieve this goal, we propose to first learn image priors from external clean images, and then employ the learned external priors to guide the learning of internal priors from the given noisy image. The flowchart of the proposed method is illustrated in Fig. 2. We first extract millions of patch groups (PGs) from a set of high quality natural images, with which a Gaussian Mixture Model (GMM) is learned as the external image prior. The learned GMM prior model is used to cluster the PGs extracted from the given noisy image, and then an external-internal hybrid orthogonal dictionary is learned as the final prior for each cluster, with which the denoising can be readily performed by weighted sparse coding with closed form solution. Our proposed denoising method is simple and efficient, yet our extensive experiments on real noisy images demonstrate its better denoising performance than the current state-of-the-arts.
+This work aims to develop a new paradigm for real noisy image denoising. Different from existing real noisy image denoising methods \cite{fullyblind,rabie2005robust,Liu2008,almapg,crosschannel2016,Zhu_2016_CVPR,noiseclinic,ncwebsite}  which focus on noise modeling, we focus on image prior learning. We argue that with a strong and adaptive prior learning scheme, robust denoising performance on real noisy images can still be obtained.  To achieve this goal, we propose to first learn image priors from external clean images, and then employ the learned external priors to guide the learning of internal priors from the given noisy image. The flowchart of the proposed method is illustrated in Fig. \ref{fig3-2}. We first extract millions of patch groups (PGs) from a set of high quality natural images, with which a Gaussian Mixture Model (GMM) is learned as the external image prior. The learned GMM prior model is used to cluster the PGs extracted from the given noisy image, and then an external-internal hybrid orthogonal dictionary is learned as the final prior for each cluster, with which the denoising can be readily performed by weighted sparse coding with closed form solution. Our proposed denoising method is simple and efficient, yet our extensive experiments on real noisy images demonstrate its better denoising performance than the current state-of-the-arts.
 
 
 \begin{figure}
-\label{fig2}
+\label{fig3-2}
 \centering
 \captionsetup{justification=centering,margin=0.1cm}
 \includegraphics[width=0.8\linewidth]{images/guided/Flowchart.jpg}
@@ -145,7 +145,7 @@ The nonlocal self-similarity based patch group (PG) prior learning \cite{pgpd} h
 
 Assume that a number of $L$ PGs are extracted from a set of external natural images, and the $l$-th PG is $\mathbf{\overline{X}}_{l}\triangleq \{\mathbf{\overline{x}}_{l,m}\}_{m=1}^{M}, l=1,...,L$.\ A Gaussian Mixture Model (GMM) is learned to model the PG prior.\ The overall log-likelihood function is
 \vspace{-2mm}
-\begin{equation}\label{equ1}
+\begin{equation}\label{equ3-1}
 \vspace{-2mm}
 \begin{split}
 \ln\mathcal{L}=\sum_{l=1}^{L} \ln(\sum_{k=1}^{K}\pi_{k}\prod_{m=1}^{M}\mathcal{N}(\mathbf{\overline{x}}_{l,m}|\bm{\mu}_{k},\bm{\Sigma}_{k})).
@@ -155,7 +155,7 @@ The learning process is similar to the GMM learning in \cite{pgpd,epll}.\ Finall
 
 To better describe the subspace of each Gaussian component, we perform singular value decomposition (SVD) \cite{eckart1936approximation} on the covariance matrix:
 \vspace{-2mm}
-\begin{equation}\label{equ2}
+\begin{equation}\label{equ3-2}
 \vspace{-2mm}
 \bm{\Sigma}_{k}=\bm{U}_{k}\bm{S}_{k}\bm{U}_{k}^{\top}.
 \end{equation}
@@ -172,7 +172,7 @@ Given a real noisy image $\mathbf{y}$, we extract $N$ (overlapped) local patches
 
 The external GMM prior models $\{\mathcal{N}(\bm{0},\bm{\Sigma}_{k})\}_{k=1}^{K}$ basically characterize the subspaces of natural high quality PGs.\ Therefore, we project each noisy PG $\bm{\overline{Y}}_{n}$ into the subspaces of $\{\mathcal{N}(\bm{0},\bm{\Sigma}_{k})\}_{k=1}^{K}$ and assign it to the most suitable subspace based on the posterior probability:
 \vspace{-2mm}
-\begin{equation}\label{equ3}
+\begin{equation}\label{equ3-3}
 \vspace{-2mm}
 P(k|\bm{\overline{Y}}_{n})=\frac{\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{y}}_{n,m}|\bm{0},\bm{\Sigma}_{k})}{\sum_{l=1}^{K}\prod_{m=1}^{M}\mathcal{N}(\bm{\overline{y}}_{n,m}|\bm{0},\bm{\Sigma}_{l})}
 \end{equation}
@@ -187,7 +187,7 @@ We let the orthogonal dictionary $\bm{D}_{k}$ be
 \vspace{-2mm}
 \begin{equation}
 \vspace{-2mm}
-\label{equ4}
+\label{equ3-4}
 \bm{D}_{k}\triangleq[\bm{D}_{k,\text{E}}\ \bm{D}_{k,\text{I}}]\in \mathbb{R}^{3p^2\times 3p^2},
 \end{equation}
 where $\bm{D}_{k,\text{E}}=\bm{U}_{k}(:,1:r)\in\mathbb{R}^{3p^2\times r}$ is the external sub-dictionary and it includes the first $r$ most important eigenvectors of $\bm{U}_{k}$, and the internal sub-dictionary $\bm{D}_{k,\text{I}}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ is to be adaptively learned from the noisy PGs $\{\bm{\overline{Y}}_{k_{n}}\}_{n=1}^{N_{k}}$.\ The rationale to design $\bm{D}_{k}$ as a hybrid dictionary is as follows.\ The external sub-dictionary $\bm{D}_{k,\text{E}}$ is pre-trained from external clean data, and it represents the $k$-th latent subspace of natural images, which is helpful to reconstruct the common latent structures of images. However, $\bm{D}_{k,\text{E}}$ is general to all images but not adaptive to the given noisy image.\ Some fine-scale details specific to the given image may not be well characterized by $\bm{D}_{k,\text{E}}$. Therefore, we learn an internal sub-dictionary $\bm{D}_{k,\text{I}}$ to supplement $\bm{D}_{k,\text{E}}$.\ In other words, $\bm{D}_{k,\text{I}}$ is to reveal the latent subspace adaptive to the input noisy image, which cannot be effectively represented by $\bm{D}_{k,\text{E}}$. 
@@ -195,7 +195,7 @@ where $\bm{D}_{k,\text{E}}=\bm{U}_{k}(:,1:r)\in\mathbb{R}^{3p^2\times r}$ is the
 For notation simplicity, in the following development we ignore the subspace index $k$ for $\bm{\overline{Y}}_{k_{n}}$ and $\bm{D}_{k}$, etc.\ The learning of hybrid orthogonal dictionary $\bm{D}$ is performed under the following weighted sparse coding
 framework:
 \vspace{-2mm}
-\begin{equation}\label{equ5}
+\begin{equation}\label{equ3-5}
 \vspace{-2mm}
 \begin{split}
 \min_{\bm{D}_{\text{I}},\{\bm{\alpha}_{n,m}\}}
@@ -209,35 +209,35 @@ framework:
 \end{equation}
 where $\bm{I}$ is the $3p^{2}$ dimensional identity matrix, $\bm{\alpha}_{n,m}$ is the sparse coding vector of the $m$-th patch $\bm{\overline{y}}_{n,m}$ in the $n$-th PG $\bm{\overline{Y}}_{n}$ and $\bm{\alpha}_{n,m,j}$ is the $j$-th element of $\bm{\alpha}_{n,m}$. $\lambda_{j}$ is the $j$-th regularization parameter defined as
 \vspace{-2mm}
-\begin{equation}\label{equ6}
+\begin{equation}\label{equ3-6}
 \vspace{-2mm}
 \lambda_{j} = \lambda/(\sqrt{\bm{S}_{k}(j)}+\varepsilon),
 \end{equation}
-where $\bm{S}_{k}(j)$ is the $j$-th singular value of diagonal singular value matrix $\bm{S}_{k}$ (please refer to Eq.\ (\ref{equ2})) and $\varepsilon$ is a small positive number to avoid zero denominator.\ Note that $\bm{D}_{\text{E}}=\bm{U}_{k}$ if $r=3p^{2}$ and $\bm{D}_{\text{E}}=\emptyset$ if $r=0$.
+where $\bm{S}_{k}(j)$ is the $j$-th singular value of diagonal singular value matrix $\bm{S}_{k}$ (please refer to Eq.\ (\ref{equ3-2})) and $\varepsilon$ is a small positive number to avoid zero denominator.\ Note that $\bm{D}_{\text{E}}=\bm{U}_{k}$ if $r=3p^{2}$ and $\bm{D}_{\text{E}}=\emptyset$ if $r=0$.
 
-In the dictionary learning model (\ref{equ5}), we use the $\ell_{2}$ norm to model the representation residual of PGs. This is because the patches in those PGs have similar content, and we assume that the noise therein will have similar statistics, which can be roughly modeled as locally Gaussian. On the other hand, this will make the dictionary learning much easier to solve. We employ an alternating iterative approach to solve the optimization problem (\ref{equ5}). Specifically, we initialize the orthogonal dictionary as $\bm{D}^{(0)}=\bm{U}_{k}$ and for $t=0,1, ...,T-1$, and alternatively update $\bm{\alpha}_{n,m}$ and $\bm{D}_{\text{I}}$ as follows.
+In the dictionary learning model (\ref{equ3-5}), we use the $\ell_{2}$ norm to model the representation residual of PGs. This is because the patches in those PGs have similar content, and we assume that the noise therein will have similar statistics, which can be roughly modeled as locally Gaussian. On the other hand, this will make the dictionary learning much easier to solve. We employ an alternating iterative approach to solve the optimization problem (\ref{equ3-5}). Specifically, we initialize the orthogonal dictionary as $\bm{D}^{(0)}=\bm{U}_{k}$ and for $t=0,1, ...,T-1$, and alternatively update $\bm{\alpha}_{n,m}$ and $\bm{D}_{\text{I}}$ as follows.
 
 \vspace{2mm}
 \textbf{Updating Sparse Coding Coefficients}: Given the orthogonal dictionary $\bm{D}^{(t)}$, we update each sparse coding vector $\bm{\alpha}_{n,m}$ by solving
 \vspace{-2mm}
-\begin{equation}\label{equ7}
+\begin{equation}\label{equ3-7}
 \vspace{-2mm}
 \begin{split}
 \bm{\alpha}_{n,m}^{(t+1)}:=\argmin_{\bm{\alpha}_{n,m}}
 \|\bm{\overline{y}}_{n,m}-\bm{D}^{(t)}\bm{\alpha}_{n,m}\|_{2}^{2}+\sum_{j=1}^{3p^{2}}\lambda_{j}|\bm{\alpha}_{n,m,j}|.
 \end{split}
 \end{equation}
-Since dictionary $\bm{D}^{(t)}$ is orthogonal, the problems (\ref{equ7}) has a closed-form solution
+Since dictionary $\bm{D}^{(t)}$ is orthogonal, the problems (\ref{equ3-7}) has a closed-form solution
 \vspace{-2mm}
-\begin{equation}\label{equ8}
+\begin{equation}\label{equ3-8}
 \bm{\alpha}_{n,m}^{(t+1)}= \text{sgn}((\bm{D}^{(t)})^{\top}\bm{\overline{y}}_{n,m})\odot \text{max}(|(\bm{D}^{(t)})^{\top}\bm{\overline{y}}_{n,m}|-\bm{\lambda},\bm{0}),
 \end{equation}
-where $\bm{\lambda} = \frac{1}{2}[\lambda_{1},\lambda_{2},...,\lambda_{3p^2}]^{\top}$ is the vector of regularization parameter, $\text{sgn}(\bullet)$ is the sign function and $\odot$ means element-wise multiplication.\ The detailed derivation of Eq. (\ref{equ8}) can be found in Appendix A.
+where $\bm{\lambda} = \frac{1}{2}[\lambda_{1},\lambda_{2},...,\lambda_{3p^2}]^{\top}$ is the vector of regularization parameter, $\text{sgn}(\bullet)$ is the sign function and $\odot$ means element-wise multiplication.\ The detailed derivation of Eq. (\ref{equ3-8}) can be found in Appendix A.
  
 \vspace{2mm}
 \textbf{Updating Internal Sub-dictionary}: Given the sparse coding vectors $\{\bm{\alpha}_{n,m}^{(t+1)}\}$, we update the internal sub-dictionary by solving
 \vspace{-2mm}
-\begin{equation}\label{equ9}
+\begin{equation}\label{equ3-9}
 \begin{split}
 \bm{D}_{\text{I}}^{(t+1)}
 :
@@ -259,21 +259,21 @@ where $\bm{\lambda} = \frac{1}{2}[\lambda_{1},\lambda_{2},...,\lambda_{3p^2}]^{\
 [\bm{D}_{\text{E}}\ \bm{D}_{\text{I}}],\ \bm{D}_{\text{I}}^{\top}\bm{D}_{\text{I}} = \bm{I}_{(3p^2-r)},\ \bm{D}_{\text{E}}^{\top}\bm{D}_{\text{I}} = \bm{0},
 \end{split}
 \end{equation}
-where $\textbf{A}^{(t+1)}=[\bm{\alpha}_{1,1}^{(t+1)},...,\bm{\alpha}_{1,M}^{(t)},...,\bm{\alpha}_{N,1}^{(t+1)},...,\bm{\alpha}_{N,M}^{(t+1)}]$ and $\bm{I}_{(3p^2-r)}$ is the $(3p^2-r)$ dimensional identity matrix.\ The sparse coefficients matrix can be written as $\bm{A}^{(t+1)}=[(\bm{A}_{\text{E}}^{(t+1)})^{\top}\ (\bm{A}_{\text{I}}^{(t+1)})^{\top}]^{\top}$ where the external part $\bm{A}_{\text{E}}^{(t+1)}\in\mathbb{R}^{r\times NM}$ and the internal part $\bm{A}_{\text{I}}^{(t+1)}\in\mathbb{R}^{(3p^2-r)\times NM}$ represent the coding coefficients of $\bm{Y}$ over external sub-dictionary $\bm{D}_{\text{E}}$ and internal sub-dictionary $\bm{D}_{\text{I}}^{(t)}$, respectively.\ According to the following Theorem \ref{th1}, by setting $\mathcal{Y}=\bm{\overline{Y}}_{n}-\bm{D}_{\text{E}}\bm{A}_{\text{E}}^{(t+1)},\mathcal{E}=\bm{D}_{\text{E}},\mathcal{D}=\bm{D}_{\text{I}},\mathcal{A}=\bm{A}_{\text{I}}$, the problem (\ref{equ9}) has a closed-form solution $\bm{D}_{\text{I}}^{(t+1)}=\bm{U}_{\text{I}}\bm{V}_{\text{I}}^{\top}$, where $\bm{U}_{\text{I}}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ and $\bm{V}_{\text{I}}\in\mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ are the orthogonal matrices obtained by the following SVD \cite{eckart1936approximation}
+where $\textbf{A}^{(t+1)}=[\bm{\alpha}_{1,1}^{(t+1)},...,\bm{\alpha}_{1,M}^{(t)},...,\bm{\alpha}_{N,1}^{(t+1)},...,\bm{\alpha}_{N,M}^{(t+1)}]$ and $\bm{I}_{(3p^2-r)}$ is the $(3p^2-r)$ dimensional identity matrix.\ The sparse coefficients matrix can be written as $\bm{A}^{(t+1)}=[(\bm{A}_{\text{E}}^{(t+1)})^{\top}\ (\bm{A}_{\text{I}}^{(t+1)})^{\top}]^{\top}$ where the external part $\bm{A}_{\text{E}}^{(t+1)}\in\mathbb{R}^{r\times NM}$ and the internal part $\bm{A}_{\text{I}}^{(t+1)}\in\mathbb{R}^{(3p^2-r)\times NM}$ represent the coding coefficients of $\bm{Y}$ over external sub-dictionary $\bm{D}_{\text{E}}$ and internal sub-dictionary $\bm{D}_{\text{I}}^{(t)}$, respectively.\ According to the following Theorem \ref{th1}, by setting $\mathcal{Y}=\bm{\overline{Y}}_{n}-\bm{D}_{\text{E}}\bm{A}_{\text{E}}^{(t+1)},\mathcal{E}=\bm{D}_{\text{E}},\mathcal{D}=\bm{D}_{\text{I}},\mathcal{A}=\bm{A}_{\text{I}}$, the problem (\ref{equ3-9}) has a closed-form solution $\bm{D}_{\text{I}}^{(t+1)}=\bm{U}_{\text{I}}\bm{V}_{\text{I}}^{\top}$, where $\bm{U}_{\text{I}}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ and $\bm{V}_{\text{I}}\in\mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ are the orthogonal matrices obtained by the following SVD \cite{eckart1936approximation}
 \vspace{-1mm}
-\begin{equation}\label{equ10}
+\begin{equation}\label{equ3-10}
 \vspace{-1mm}
 (\bm{I}-\bm{D}_{\text{E}}\bm{D}_{\text{E}}^{\top})\bm{Y}(\bm{A}_{\text{I}}^{(t+1)})^{\top}
 =
 \bm{U}_{\text{I}}\bm{S}_{\text{I}}\bm{V}_{\text{I}}^{\top}.
 \end{equation}
 The orthogonality of internal sub-dictionary $\bm{D}_{\text{I}}^{(t+1)}$ can be checked by 
-$(\bm{D}_{\text{I}}^{(t+1)})^{\top}(\bm{D}_{\text{I}}^{(t+1)})=\bm{V}_{\text{I}}\bm{U}_{\text{I}}^{\top}\bm{U}_{\text{I}}\bm{V}_{\text{I}}^{\top}=\bm{I}_{(3p^2-r)}$.\ In fact, the Theorem \ref{th1} provides a sufficient and necessary condition to guarantee the existence of the closed-form solution for the internal sub-dictionary of the problem (\ref{equ9}).
+$(\bm{D}_{\text{I}}^{(t+1)})^{\top}(\bm{D}_{\text{I}}^{(t+1)})=\bm{V}_{\text{I}}\bm{U}_{\text{I}}^{\top}\bm{U}_{\text{I}}\bm{V}_{\text{I}}^{\top}=\bm{I}_{(3p^2-r)}$.\ In fact, the Theorem \ref{th1} provides a sufficient and necessary condition to guarantee the existence of the closed-form solution for the internal sub-dictionary of the problem (\ref{equ3-9}).
 
 \begin{theorem}
 \label{th1}
 Let $\mathcal{A}\in \mathbb{R}^{(3p^2-r)\times M}$, $\mathcal{Y}\in \mathbb{R}^{3p^2\times M}$ be two given data matrices. $\mathcal{E}\in\mathbb{R}^{3p^2\times r}$ is a given matrix satisfying $\mathcal{E}^{\top}\mathcal{E}=\bm{I}_{r\times r}$, then $\hat{\mathcal{D}} = \mathcal{U}\mathcal{V}^{\top}$ is the necessary condition of
-\begin{equation}\label{equ11}
+\begin{equation}\label{equ3-11}
 \begin{split}
 \hat{\mathcal{D}}
 =
@@ -289,21 +289,21 @@ Let $\mathcal{A}\in \mathbb{R}^{(3p^2-r)\times M}$, $\mathcal{Y}\in \mathbb{R}^{
 \end{split}
 \end{equation}
 where $\mathcal{U}\in \mathbb{R}^{3p^2\times (3p^2-r)}$ and $\mathcal{V}\in \mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ are the orthogonal matrices obtained by performing economy (a.k.a. reduced) SVD  \cite{eckart1936approximation}:
-\begin{equation}\label{equ12}
+\begin{equation}\label{equ3-12}
 (\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top} = \mathcal{U}\Sigma\mathcal{V}^{\top}
 \end{equation}
-Besides, if $\text{rank}(\Sigma)=3p^2-r$, $\hat{\mathcal{D}} = \mathcal{U}\mathcal{V}^{\top}$ is also the sufficient condition of problem (\ref{equ11}). 
+Besides, if $\text{rank}(\Sigma)=3p^2-r$, $\hat{\mathcal{D}} = \mathcal{U}\mathcal{V}^{\top}$ is also the sufficient condition of problem (\ref{equ3-11}). 
 \end{theorem}
 
 
-The proof of the Theorem \ref{th1} can be found in Appendix B. Though the problem (\ref{equ9}) has a closed-form solution by SVD \cite{eckart1936approximation}, the uniqueness of solution cannot be guaranteed since the matrices $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ as well as $\mathcal{U}$ and $\mathcal{V}$ may be reduced to matrices of lower rank. Hence, we also analyze the uniqueness of the solution $\hat{\mathcal{D}}$ by the following Theorem \ref{th2}, whose proof can be found in Appendix C.
+The proof of the Theorem \ref{th1} can be found in Appendix B. Though the problem (\ref{equ3-9}) has a closed-form solution by SVD \cite{eckart1936approximation}, the uniqueness of solution cannot be guaranteed since the matrices $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ as well as $\mathcal{U}$ and $\mathcal{V}$ may be reduced to matrices of lower rank. Hence, we also analyze the uniqueness of the solution $\hat{\mathcal{D}}$ by the following Theorem \ref{th2}, whose proof can be found in Appendix C.
 
 \begin{theorem}
 \label{th2}
 (a) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ is nonsingular, i.e., $\text{rank}(\Sigma)=3p^2-r$, then the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ is unique; (b) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ is singular, i.e., $0\le\text{rank}(\bm{\Sigma})< 3p^2-r$, then the number of possible solutions of $\hat{\mathcal{D}}$ is $2^{3p^2-r-\text{rank}(\bm{\Sigma})}$ for fixed $\mathcal{U}$ and $\mathcal{V}$.
 \end{theorem}
 
-The above alternative updating steps are repeated until the number of iterations exceeds a preset threshold. In each step, the energy value of the objective function (\ref{equ5}) is decreased and we empirically found that the proposed model usually converges in 10 iterations. We summarize the procedures in Algorithm 1.
+The above alternative updating steps are repeated until the number of iterations exceeds a preset threshold. In each step, the energy value of the objective function (\ref{equ3-5}) is decreased and we empirically found that the proposed model usually converges in 10 iterations. We summarize the procedures in Algorithm 1.
 
 
 \begin{table}\label{alg1}\vspace{3mm}
@@ -314,13 +314,13 @@ The above alternative updating steps are repeated until the number of iterations
 \hline
 \textbf{Input:} Matrices $\bm{\overline{Y}}_{n}$, external sub-dictionary $\bm{D}_{\text{E}}$, parameter vector $\bm{\lambda}$
 \\
-\textbf{Initialization:} initialize $\bm{D}^{(0)}=\bm{U}_{k}$ by Eq. (\ref{equ2});
+\textbf{Initialization:} initialize $\bm{D}^{(0)}=\bm{U}_{k}$ by Eq. (\ref{equ3-2});
 \\
 \textbf{for} $t=0,1, ...,T-1$ \textbf{do}
 \\
-1. Update $\bm{\alpha}_{n,m}^{(t+1)}$ by Eq.\ (\ref{equ7});
+1. Update $\bm{\alpha}_{n,m}^{(t+1)}$ by Eq.\ (\ref{equ3-7});
 \\
-2. Update $\bm{D}_{\text{I}}^{(t+1)}$ by Eq.\ (\ref{equ9});
+2. Update $\bm{D}_{\text{I}}^{(t+1)}$ by Eq.\ (\ref{equ3-9});
 \\
 \textbf{end for}
 \\
@@ -334,9 +334,9 @@ The above alternative updating steps are repeated until the number of iterations
 
 \subsection{The Denoising Algorithm}
 
-The denoising of the given noisy image $\mathbf{y}$ can be simultaneously done with the guided internal sub-dictionary learning process. Once we obtain the solutions of sparse coding vectors $\{\hat{\bm{\alpha}}_{n,m}^{(T)}\}$ in Eq.\ (\ref{equ8}) and the orthogonal dictionary $\bm{D}^{(T)} = [\bm{D}_{\text{E}}\ \bm{D}_{\text{I}}^{(T)}]$ in Eq.\ (\ref{equ9}), the latent clean patch $\hat{\mathbf{y}}_{n,m}$ of the $m$-th noisy patch in PG $\bm{Y}_{n}$ is reconstructed as
+The denoising of the given noisy image $\mathbf{y}$ can be simultaneously done with the guided internal sub-dictionary learning process. Once we obtain the solutions of sparse coding vectors $\{\hat{\bm{\alpha}}_{n,m}^{(T)}\}$ in Eq.\ (\ref{equ3-8}) and the orthogonal dictionary $\bm{D}^{(T)} = [\bm{D}_{\text{E}}\ \bm{D}_{\text{I}}^{(T)}]$ in Eq.\ (\ref{equ3-9}), the latent clean patch $\hat{\mathbf{y}}_{n,m}$ of the $m$-th noisy patch in PG $\bm{Y}_{n}$ is reconstructed as
 \vspace{-2mm}
-\begin{equation}\label{equ13}
+\begin{equation}\label{equ3-13}
 \vspace{-2mm}
 \hat{\mathbf{y}}_{n,m}=\bm{D}^{(T)}\hat{\bm{\alpha}}_{n,m}^{(T)}+\bm{\mu}_{n},
 \end{equation}
@@ -344,7 +344,7 @@ where $\bm{\mu}_{n}$ is the group mean of $\bm{Y}_{n}$. The latent clean image i
 
 \vspace{3mm}
 \begin{table}[htpb]
-\label{alg2}
+\label{alg3-2}
 \begin{tabular}{l}
 \hline
 \textbf{Algorithm 2}: External Prior Guided Internal Prior Learning for Real 
@@ -366,7 +366,7 @@ where $\bm{\mu}_{n}$ is the group mean of $\bm{Y}_{n}$. The latent clean image i
 \\
 2.\quad Calculate group mean $\bm{\mu}_{n}$ and form mean subtracted PG $\bm{\overline{Y}}_{n}$;
 \\
-3.\quad Subspace clustering via Eq. (\ref{equ3});
+3.\quad Subspace clustering via Eq. (\ref{equ3-3});
 \\
 \quad\textbf{end for}
 \\
@@ -376,9 +376,9 @@ where $\bm{\mu}_{n}$ is the group mean of $\bm{Y}_{n}$. The latent clean image i
 \\
 4.\quad External PG prior guided internal orthogonal dictionary learning by
 \\
-\quad \ \ \ solving Eq. (\ref{equ5});
+\quad \ \ \ solving Eq. (\ref{equ3-5});
 \\
-5.\quad Recover each patch in all PGs via Eq. (\ref{equ13});
+5.\quad Recover each patch in all PGs via Eq. (\ref{equ3-13});
 \\
 \quad\textbf{end for}
 \\
@@ -400,7 +400,7 @@ where $\bm{\mu}_{n}$ is the group mean of $\bm{Y}_{n}$. The latent clean image i
 
 Our proposed method has two main stages: the external prior learning stage and the external prior guided internal prior learning stage.\ In the first stage, we set $p = 6$ (the patch size), $M = 10$ (the number of similar patches in a PG), $W = 31$ (the window size for PG searching) and $K = 32$ (the number of Gaussian components in GMM).\ We learn the external GMM prior with 3.6 million PGs extracted from the Kodak PhotoCD Dataset (\url{http://r0k.us/graphics/kodak/}), which includes 24 high quality color images. 
 
-In the second stage, we set $r = 54$ (the number of atoms in the external sub-dictionaries); that is, we let the external sub-dictionaries have the same number of atoms as the internal sub-dictionaries to be learned.\ Our experiments show that setting $r$ between 27 and 81 will lead to very similar results.\ For other parameters, we set $\lambda=0.001$ (the sparse regularization parameter), $T = 2$ (the number of iterations for solving problem (\ref{equ5})), and $IteNum = 4$ (the number of iterations for Alg. 2).\ All parameters of our method are fixed to all experiments, which are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-5930K CPU of 3.5GHz and 32GB RAM.
+In the second stage, we set $r = 54$ (the number of atoms in the external sub-dictionaries); that is, we let the external sub-dictionaries have the same number of atoms as the internal sub-dictionaries to be learned.\ Our experiments show that setting $r$ between 27 and 81 will lead to very similar results.\ For other parameters, we set $\lambda=0.001$ (the sparse regularization parameter), $T = 2$ (the number of iterations for solving problem (\ref{equ3-5})), and $IteNum = 4$ (the number of iterations for Alg. 2).\ All parameters of our method are fixed to all experiments, which are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-5930K CPU of 3.5GHz and 32GB RAM.
 
 \subsection{The Testing Datasets}
 
@@ -658,7 +658,7 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 
 \subsection{Comparison among external, internal and guided internal priors}
 
-To demonstrate the advantages of external prior guided internal prior learning, we perform real noisy image denoising by using external priors only (denoted by ``External"), internal priors only (denoted by ``Internal"), and the proposed guided internal priors (denoted by ``Guided Internal"), respectively.\ For the ``External" method, we utilize the full external dictionaries (i.e., $r=108$ in Eq.\ (\ref{equ5})) for denoising.\ For the ``Internal" method, the overall framework is similar to the method of \cite{ncsr}.\ A GMM model (with $K = 32$ Gaussians) is directly learned from the PGs extracted from the given noisy image without using any external data, and then the internal orthogonal dictionaries are obtained via Eq.\ (\ref{equ2}) to perform denoising.\ All parameters of the ``External" and ``Internal" methods are tuned to achieve their best performance. 
+To demonstrate the advantages of external prior guided internal prior learning, we perform real noisy image denoising by using external priors only (denoted by ``External"), internal priors only (denoted by ``Internal"), and the proposed guided internal priors (denoted by ``Guided Internal"), respectively.\ For the ``External" method, we utilize the full external dictionaries (i.e., $r=108$ in Eq.\ (\ref{equ3-5})) for denoising.\ For the ``Internal" method, the overall framework is similar to the method of \cite{ncsr}.\ A GMM model (with $K = 32$ Gaussians) is directly learned from the PGs extracted from the given noisy image without using any external data, and then the internal orthogonal dictionaries are obtained via Eq.\ (\ref{equ3-2}) to perform denoising.\ All parameters of the ``External" and ``Internal" methods are tuned to achieve their best performance. 
 
 We compare the three methods on the 60 cropped images from \cite{crosschannel2016}.\ The average PSNR and run time are listed in Table \ref{tab1}.\ The best results are highlighted in bold.\ It can be seen that ``Guided Internal" method achieves better PSNR than both ``External" and ``Internal" methods. In addition, the ``Internal" method is very slow because it involves online GMM learning, while the ``Guided Internal" method is only a little slower than the ``External" method.\ Figs. \ref{fig6} and \ref{fig7} show the denoised images of two noisy images by the three methods.\ One can see that the  ``External" method is good at recovering large-scale structures (see Fig. \ref{fig6}) while the ``Internal" method is good at recovering fine-scale textures (see Fig. \ref{fig7}).\ By utilizing external priors to guide the internal prior learning, our proposed method can effectively recover both the large-scale structures and fine-scale textures. 
 
