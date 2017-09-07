@@ -486,10 +486,7 @@ Given a noisy color image $\mathbf{y}_{c}$, suppose that we have extracted $N$ l
 \\
 3.\quad Search non-local similar patches $\mathbf{Y}_{j}$;
 \\
-4.\quad Apply the MC-WNNM model (\ref{e10}) to $\mathbf{Y}_{j}$ and
-\\
-\quad \quad 
-obtain the estimated $\mathbf{X}_{j}$;
+4.\quad Apply the MC-WNNM model (\ref{e10}) to $\mathbf{Y}_{j}$ and obtain the estimated $\mathbf{X}_{j}$;
 \\
 \quad\textbf{end for}
 \\
@@ -624,10 +621,10 @@ We first compare MC-WNNM with the competing denoising methods \cite{cbm3d,mlp,ch
 
 The PSNR results by competing methods are listed in Tables \ref{tab4-1}-\ref{tab4-3} on these images when the noise standard deviations are $\sigma_{r}=40, \sigma_{g}=20, \sigma_{b}=30$ in Table \ref{tab4-1}, $\sigma_{r}=30, \sigma_{g}=10, \sigma_{b}=50$ in Table \ref{tab4-2} and $\sigma_{r}=5, \sigma_{g}=30, \sigma_{b}=15$ in Table \ref{tab4-3}, respectively. While the best PSNR result for each image is highlighted in bold, one can see that on all the 24 images, our method achieves the highest PSNR values among the competing methods.\ We can see that in all these cases, the proposed MC-WNNM achieves better performance than the other competing methods. For example, in Table \ref{tab4-1}, the proposed MC-WNNM achieves on average 0.47dB, 0.48dB and 1.09dB improvements over WNNM-1, WNNM-2 and WNNM-3, respectively. In Figures \ref{fig4-1}-\ref{fig4-6}, we give the visual comparisons of the denoised images by different methods.
 
-\begin{table*}
+\begin{table}
 \caption{PSNR(dB) results of different denoising methods on the Kodak PhotoCD dataset.}
+\begin{adjustwidth}{-1cm}{}
 \label{tab4-1}
-\label{taba}
 \begin{center}
 \renewcommand\arraystretch{1.0}
 %\footnotesize
@@ -739,7 +736,8 @@ Image\#
 \hline
 \end{tabular}
 \end{center}
-\end{table*}
+\end{adjustwidth}
+\end{table}
 
 \begin{table}
 \caption{PSNR(dB) results of different denoising methods on the Kodak PhotoCD dataset.}
