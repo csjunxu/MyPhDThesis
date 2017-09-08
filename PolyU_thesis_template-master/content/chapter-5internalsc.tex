@@ -33,7 +33,7 @@ Denote by $\bm{y}_{c}=\bm{x}_{c}+\bm{n}_{c}$ the noisy observation of the clean 
 
 Suppose that we have a dictionary $\bm{D}=[\bm{D}_{r}^{\top}\ \bm{D}_{g}^{\top}\ \bm{D}_{b}^{\top}]^{\top}$, where $\bm{D}_{c}$ is the sub-dictionary corresponding to channel $c$.\ Under the sparse coding (SC) framework \cite{lasso}, the sparse code matrix of $\bm{Y}$ over $\bm{D}$ can be obtained by
 \begin{equation}
-\label{e1}
+\label{equ5-1}
 \hat{\bm{C}}
 =
 \arg\min\nolimits_{\bm{C}}
@@ -44,15 +44,15 @@ Suppose that we have a dictionary $\bm{D}=[\bm{D}_{r}^{\top}\ \bm{D}_{g}^{\top}\
 where $\lambda$ is the regularization parameter. Once $\hat{\bm{C}}$ is computed,
 the latent clean patch matrix $\hat{\bm{X}}$ can be estimated as $\hat{\bm{X}}=\bm{D}\hat{\bm{C}}$.\ In this paper, we use an adaptive dictionary to the given data matrix $\bm{Y}$. The dictionary $\bm{D}$ can be obtained by applying SVD to $\bm{Y}$ as 
 \begin{equation}
-\label{e2}
+\label{equ5-2}
 \bm{Y} =\bm{D}\bm{S}\bm{V}^{\top}.
 \end{equation}
 % $\bm{Y}_{c} =\bm{D}_{c}\bm{S}_{c}\bm{V}_{c}^{\top}$ for $c\in\{r,g,b\}$.
-Though SC based methods \cite{ksvd,lssc,ncsr} have achieved promising performance in removing additive white Gaussian noise (AWGN), their performance is very limited when dealing with realistic noise in real-world images. The reason is that the realistic noise is non-Gaussian, varies locally and across channels, which cannot be characterized well by the Frobenious norm in model (\ref{e1}).  
+Though SC based methods \cite{ksvd,lssc,ncsr} have achieved promising performance in removing additive white Gaussian noise (AWGN), their performance is very limited when dealing with realistic noise in real-world images. The reason is that the realistic noise is non-Gaussian, varies locally and across channels, which cannot be characterized well by the Frobenious norm in model (\ref{equ5-1}).  
 
-To account for the varying statistics of the realistic noise in different channels and different patches, we introduce two weight matrices $\bm{W}_{1}\in\mathbb{R}^{3p^2\times3p^2}$ and $\bm{W}_{2}\in\mathbb{R}^{M\times M}$ to characterize the SC residual ($\bm{Y}-\bm{D}\bm{C}$) in the data term of Eq.\ (\ref{e1}). Besides, to better characterize the sparse priors of the natural images, we introduce a third weight matrix $\bm{W}_{3}$, which is related to the distribution of the sparse coefficients matrix $\bm{C}$, into the regularization term of Eq.\ (\ref{e1}). Finally, the proposed trilateral weighted sparse coding (TWSC) model is formulated as follows:
+To account for the varying statistics of the realistic noise in different channels and different patches, we introduce two weight matrices $\bm{W}_{1}\in\mathbb{R}^{3p^2\times3p^2}$ and $\bm{W}_{2}\in\mathbb{R}^{M\times M}$ to characterize the SC residual ($\bm{Y}-\bm{D}\bm{C}$) in the data term of Eq.\ (\ref{equ5-1}). Besides, to better characterize the sparse priors of the natural images, we introduce a third weight matrix $\bm{W}_{3}$, which is related to the distribution of the sparse coefficients matrix $\bm{C}$, into the regularization term of Eq.\ (\ref{equ5-1}). Finally, the proposed trilateral weighted sparse coding (TWSC) model is formulated as follows:
 \begin{equation}
-\label{e3}
+\label{equ5-3}
 \min\nolimits_{\bm{C}}\|\bm{W}_{1}(\bm{Y}-\bm{D}\bm{C})\bm{W}_{2}\|_{F}^{2}
 +
 \|\bm{W}_{3}^{-1}\bm{C}\|_{1}.
@@ -65,7 +65,7 @@ All the three weight matrices are diagonal matrices and have clear physical mean
 We determine the weight matrices $\bm{W}_{1},\bm{W}_{2},\bm{W}_{3}$ by employing the MAP estimation:
 
 \begin{equation}
-\label{e4}
+\label{equ5-4}
 \hat{\bm{C}} 
 =
 \arg\max\nolimits_{\bm{C}}\ln P(\bm{C}|\bm{Y})
@@ -76,7 +76,7 @@ The log-likelihood term $\ln P(\bm{Y}|\bm{C})$ is characterized by the
 statistics of noise or residual.\ According to \cite{Leungtip}, it can be assumed that the noise is independently and identically distributed (i.i.d.) in each channel and each patch with Gaussian distribution. We denote by $\sigma_{c}$ the standard deviation (std) of noise in channel $c$, $c\in\{r,g,b\}$, and denote by $\sigma_{m}$ the std of noise in a color patch $m$, $m\in\{1,...,M\}$. Denote by $\sigma_{cm}$ the noise std of sub-patch $m$ in channel $c$. Then we have:
 
 \begin{equation}
-\label{e5}
+\label{equ5-5}
 P(\bm{Y}|\bm{C}) 
 = 
 \prod\nolimits_{c\in\{r, g, b\}}
@@ -90,10 +90,9 @@ $
 $
 and updated as $\sigma_{m}=\sqrt{\sigma^2-\|\bm{y}_{m}-\bm{x}_{m}\|_{2}^{2}}$, where $\bm{y}_{m}$ is the $m$th image patch in $\bm{Y}$, and $\bm{x}_{m}=\bm{D}\bm{c}_{m}$ is the $m$th image patch recovered in previous iteration (refer to Algorithm 2 in next section).\
 
-We assume that each column $\bm{c}_{m}$ of coefficients matrix $\bm{C}$ follows i.i.d. Laplacian distribution. Specifically, for each entry $\bm{c}_{m}^{i}$, which is the coding coefficient of the $m$th patch over the $i$th atom of dictionary $\bm{D}$, we assume that it follows distribution  $(2\bm{S}_{i})^{-1}\exp(-\bm{S}_{i}^{-1}|\bm{c}_{m}^{i}|)$, where $\bm{S}_{i}$ is the $i$th element of the diagonal singular value matrix $\bm{S}$ in Eq.\ (\ref{e2}). Note that we set the scale factor of the distribution as the inverse of the $i$th singular value $\bm{S}_{i}$. This is because the larger the singular value $\bm{S}_{i}$ is, the more important the $i$th singular vector in $\bm{D}$ should be, and hence the distribution of the coding coefficients over this singular vector should have stronger regularization with less sparse distribution. The prior term in Eq.\ (\ref{e4}) becomes
-
+We assume that each column $\bm{c}_{m}$ of coefficients matrix $\bm{C}$ follows i.i.d. Laplacian distribution. Specifically, for each entry $\bm{c}_{m}^{i}$, which is the coding coefficient of the $m$th patch over the $i$th atom of dictionary $\bm{D}$, we assume that it follows distribution  $(2\bm{S}_{i})^{-1}\exp(-\bm{S}_{i}^{-1}|\bm{c}_{m}^{i}|)$, where $\bm{S}_{i}$ is the $i$th element of the diagonal singular value matrix $\bm{S}$ in Eq.\ (\ref{equ5-2}). Note that we set the scale factor of the distribution as the inverse of the $i$th singular value $\bm{S}_{i}$. This is because the larger the singular value $\bm{S}_{i}$ is, the more important the $i$th singular vector in $\bm{D}$ should be, and hence the distribution of the coding coefficients over this singular vector should have stronger regularization with less sparse distribution. The prior term in Eq.\ (\ref{equ5-4}) becomes
 \begin{equation}
-\label{e6}
+\label{equ5-6}
 P(\bm{C})
 =
 \prod\nolimits_{m=1}^{M}
@@ -102,7 +101,7 @@ P(\bm{C})
 \end{equation}
 
 
-Put (\ref{e6}) and (\ref{e5}) into (\ref{e4}) and consider the log-linear model $\sigma_{cm}=\sigma_{c}^{l_{1}}\sigma_{m}^{l_{2}}$, we have
+Put (\ref{equ5-6}) and (\ref{equ5-5}) into (\ref{equ5-4}) and consider the log-linear model $\sigma_{cm}=\sigma_{c}^{l_{1}}\sigma_{m}^{l_{2}}$, we have
 
 \begin{equation}
 \label{e7}
