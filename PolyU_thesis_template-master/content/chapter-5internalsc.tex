@@ -104,7 +104,7 @@ P(\bm{C})
 Put (\ref{equ5-6}) and (\ref{equ5-5}) into (\ref{equ5-4}) and consider the log-linear model $\sigma_{cm}=\sigma_{c}^{l_{1}}\sigma_{m}^{l_{2}}$, we have
 
 \begin{equation}
-\label{e7}
+\label{equ5-7}
 \begin{split}
 \hat{\bm{C}}
 &
@@ -132,7 +132,7 @@ Put (\ref{equ5-6}) and (\ref{equ5-5}) into (\ref{equ5-4}) and consider the log-l
 \end{equation}
 where
 \begin{equation}
-\label{e8}
+\label{equ5-8}
 \bm{W}_{1}
 =
 \text{diag}(\sigma_{r}^{-l_{1}}\bm{I}_{p^2},\sigma_{g}^{-l_{1}}\bm{I}_{p^2},\sigma_{b}^{-l_{1}}\bm{I}_{p^2})
@@ -152,18 +152,18 @@ and $\bm{I}_{p^2}$ is the $p^{2}$ dimensional identity matrix. We can see that t
 
 \subsection{Model Optimization}
 
-Letting $\bm{C}^{*}=\bm{W}_{3}^{-1}\bm{C}$, we can transfer the weight matrix $\bm{W}_{3}$ into the data term of (\ref{e3}). Thus, the TWSC model (\ref{e3}) is reformulated as 
+Letting $\bm{C}^{*}=\bm{W}_{3}^{-1}\bm{C}$, we can transfer the weight matrix $\bm{W}_{3}$ into the data term of (\ref{equ5-3}). Thus, the TWSC model (\ref{equ5-3}) is reformulated as 
 \begin{equation}
-\label{e9}
+\label{equ5-9}
 \min\nolimits_{\bm{C}^{*}}\|\bm{W}_{1}(\bm{Y}-\bm{D}\bm{W}_{3}\bm{C}^{*})\bm{W}_{2}\|_{F}^{2}
 +
 \|\bm{C}^{*}\|_{1}.
 \end{equation}
 To make the notation simple, we remove the superscript $*$ in $\bm{C}^{*}$ and still use $\bm{C}$ in the following development.
 
-Since the problem (\ref{e9}) is convex, we can obtain its globally optimal solution. We employ the variable splitting method \cite{Eckstein1992} to solve it.\ By introducing an augmented variable $\bm{Z}$, the problem (\ref{e9}) is reformulated as a linear equality-constrained problem with two variables $\bm{C}$ and $\bm{Z}$:
+Since the problem (\ref{equ5-9}) is convex, we can obtain its globally optimal solution. We employ the variable splitting method \cite{Eckstein1992} to solve it.\ By introducing an augmented variable $\bm{Z}$, the problem (\ref{equ5-9}) is reformulated as a linear equality-constrained problem with two variables $\bm{C}$ and $\bm{Z}$:
 \begin{equation}
-\label{e10}
+\label{equ5-10}
 \min\nolimits_{\bm{C},\bm{Z}}\|\bm{W}_{1}(\bm{Y}-\bm{D}\bm{W}_{3}\bm{C})\bm{W}_{2}\|_{F}^{2}
 +
 \|\bm{Z}\|_{1}
@@ -172,9 +172,9 @@ Since the problem (\ref{e9}) is convex, we can obtain its globally optimal solut
 \quad
 \bm{C}=\bm{Z}.
 \end{equation}
-Since the objective function is separable w.r.t. the two variables, the problem (\ref{e10}) can be solved under the alternating direction method of multipliers (ADMM) \cite{admm} framework.\ The augmented Lagrangian function is:
+Since the objective function is separable w.r.t. the two variables, the problem (\ref{equ5-10}) can be solved under the alternating direction method of multipliers (ADMM) \cite{admm} framework.\ The augmented Lagrangian function is:
 \begin{equation}
-\label{e11}
+\label{equ5-11}
 \begin{split}
 \mathcal{L}(\bm{C},\bm{Z},\bm{\Delta},\rho)
 =
@@ -191,11 +191,10 @@ Since the objective function is separable w.r.t. the two variables, the problem 
 \end{split}
 \end{equation}
 where $\bm{\Delta}$ is the augmented Lagrangian multiplier and $\rho>0$ is the penalty parameter.\ We initialize the matrix variables $\bm{C}_{0}$, $\bm{Z}_{0}$, and $\bm{\Delta}_{0}$ to be comfortable zero matrix and $\rho_{0}>0$.\ Denote by ($\bm{C}_{k}, \bm{Z}_{k}$) and $\bm{\Delta}_{k}$ the optimization variables and Lagrange multiplier at iteration $k$ ($k=0,1,2,...$), respectively.\ By taking derivatives of the Lagrangian function $\mathcal{L}$ w.r.t. $\bm{C}$ and $\bm{Z}$ and setting the derivatives to be zeros, we can alternatively update the variables as follows:
-\vspace{2mm}
 \\
 (1) \textbf{Update $\bm{C}$ by fixing $\bm{Z}$ and $\bm{\Delta}$}:
 \begin{equation}
-\label{e12}
+\label{equ5-12}
 \bm{C}_{k+1}
 =
 \arg\min\nolimits_{\bm{C}}
@@ -205,16 +204,16 @@ where $\bm{\Delta}$ is the augmented Lagrangian multiplier and $\rho>0$ is the p
 \end{equation}
 This is a two-sided weighted least squares regression problem with the solution satisfying that
 \begin{equation}
-\label{e13}
+\label{equ5-13}
 \bm{A}\bm{C}_{k+1}
 +
 \bm{C}_{k+1}\bm{B}_{k}
 =
 \bm{E}_{k},
 \end{equation}
-where $\bm{A}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{D}\bm{W}_{3}$, $\bm{B}_{k}=\frac{\rho_{k}}{2}(\bm{W}_{2}\bm{W}_{2}^{\top})^{-1}$, and $\bm{E}_{k}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{Y}+(\frac{\rho_{k}}{2}\bm{Z}_{k} -\frac{1}{2}\bm{\Delta}_{k})(\bm{W}_{2}\bm{W}_{2}^{\top})^{-1}$. Eq.\ (\ref{e13}) is a standard Sylvester equation (SE) which has a unique solution if and only if $\sigma(\bm{A})\cap\sigma(-\bm{B}_{k})=\emptyset$, where $\sigma(\bm{F})$ denotes the spectrum, i.e., the set of eigenvalues, of the matrix $\bm{F}$ \cite{simoncini2016computational}. We can rewrite the SE (\ref{e13}) as 
+where $\bm{A}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{D}\bm{W}_{3}$, $\bm{B}_{k}=\frac{\rho_{k}}{2}(\bm{W}_{2}\bm{W}_{2}^{\top})^{-1}$, and $\bm{E}_{k}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{Y}+(\frac{\rho_{k}}{2}\bm{Z}_{k} -\frac{1}{2}\bm{\Delta}_{k})(\bm{W}_{2}\bm{W}_{2}^{\top})^{-1}$. Eq.\ (\ref{equ5-13}) is a standard Sylvester equation (SE) which has a unique solution if and only if $\sigma(\bm{A})\cap\sigma(-\bm{B}_{k})=\emptyset$, where $\sigma(\bm{F})$ denotes the spectrum, i.e., the set of eigenvalues, of the matrix $\bm{F}$ \cite{simoncini2016computational}. We can rewrite the SE (\ref{equ5-13}) as 
 \begin{equation}
-\label{e14}
+\label{equ5-14}
 (\bm{I}_{M}\otimes\bm{A}
 +
 \bm{B}_{k}^{\top}\otimes\bm{I}_{3p^2})\text{vec}(\bm{C}_{k+1})
@@ -223,11 +222,10 @@ where $\bm{A}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{D}\bm
 \end{equation}
 and the solution $\bm{C}_{k+1}$ (if existed) can be obtained via $\bm{C}_{k+1}=\text{vec}^{-1}(\text{vec}(\bm{C}_{k+1}))$, where $\text{vec}^{-1}(\bullet)$ is the inverse of the vec-operator $\text{vec}(\bullet)$.
 Detailed theoretical analysis on the existence of the unique solution is given in Section 3.
-\vspace{1mm}
 \\
 (2) \textbf{Update $\bm{Z}$ by fixing $\bm{C}$ and $\bm{\Delta}$}:
 \begin{equation}
-\label{e15}
+\label{equ5-15}
 \bm{Z}_{k+1}
 =
 \arg\min\nolimits_{\bm{Z}}\frac{\rho_{k}}{2}
@@ -237,32 +235,30 @@ Detailed theoretical analysis on the existence of the unique solution is given i
 \end{equation}
 This problem has a closed-form solution as 
 \begin{equation}
-\label{e16}
+\label{equ5-16}
 \bm{Z}_{k+1}
 =
 \mathcal{S}_{\rho_{k}^{-1}}(\bm{C}_{k+1}+\rho_{k}^{-1}\bm{\Delta}_{k}),
 \end{equation}
 where $\mathcal{S}_{\lambda}(x) = \text{sign}(x)\max(x-\lambda, 0)$ is the soft-thresholding operator.
-\vspace{1mm}
 \\
 (3) \textbf{Update $\bm{\Delta}$ by fixing $\bm{X}$ and $\bm{Z}$}:
 \begin{equation}
-\label{e17}
+\label{equ5-17}
 \bm{\Delta}_{k+1}
 =
 \bm{\Delta}_{k} + \rho_{k}(\bm{C}_{k+1}-\bm{Z}_{k+1}).
 \end{equation}
 (4) \textbf{Update $\rho$}: $\rho_{k+1}= \mu*\rho_{k}$, where $\mu>1$.
-\vspace{1mm}
 
-The above alternative updating steps are repeated until the convergence condition is satisfied or the number of iterations exceeds a preset threshold $K_{1}$.\ The ADMM algorithm converges when $\|\bm{C}_{k+1}-\bm{Z}_{k+1}\|_{F}\le \text{Tol}$, $\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}\le \text{Tol}$, and $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}\le \text{Tol}$ are simultaneously satisfied, where $\text{Tol}>0$ is a small tolerance number.\ We summarize the updating procedures in Algorithm 1.\ The convergence analysis of Algorithm 1 is given in Theorem \ref{th1}.\ Note that here we employ an unbounded sequence of $\{\rho_{k}\}$, i.e., $\lim_{k \to \infty} \rho_{k}=+\infty$, to make sure that Algorithm 1 converges. 
+The above alternative updating steps are repeated until the convergence condition is satisfied or the number of iterations exceeds a preset threshold $K_{1}$.\ The ADMM algorithm converges when $\|\bm{C}_{k+1}-\bm{Z}_{k+1}\|_{F}\le \text{Tol}$, $\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}\le \text{Tol}$, and $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}\le \text{Tol}$ are simultaneously satisfied, where $\text{Tol}>0$ is a small tolerance number.\ We summarize the updating procedures in Algorithm 1.\ The convergence analysis of Algorithm 1 is given in Theorem \ref{th5-1}.\ Note that here we employ an unbounded sequence of $\{\rho_{k}\}$, i.e., $\lim_{k \to \infty} \rho_{k}=+\infty$, to make sure that Algorithm 1 converges. In fact, since the optimization problem (\ref{equ5-10}) is convex, it is naturally convergent under the ADMM \cite{admm} framework.
 
 
 \subsection{Convergence Analysis}
 
 
 \begin{theorem}
-\label{th1}
+\label{th5-1}
 Given $\rho_{k+1}=\mu\rho_{k}$ ($\rho_{0}>0$) for $k\ge0$ and $\mu>1$, the sequences $\{\bm{C}_{k}\}$ and $\{\bm{Z}_{k}\}$ generated in Algorithm 1 satisfy:
 \begin{align}
 &
@@ -293,14 +289,14 @@ Given $\rho_{k+1}=\mu\rho_{k}$ ($\rho_{0}>0$) for $k\ge0$ and $\mu>1$, the seque
 \lim_{k \to +\infty} \|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0.
 \end{align}
 \end{theorem}
-The proof of Theorem \ref{th1} can be found in the supplementary file.\ Though Theorem \ref{th1} could not directly guarantee $\lim_{k \to +\infty}\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}=0$ and $\lim_{k \to +\infty}\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0$, it is empirically found that both $\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}$ and $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}$ will approach to $0$ simultaneously in all our tests. In Figure \ref{f1}, we can see that the maximal errors in $|\bm{C}_{k+1}-\bm{Z}_{k+1}|,|\bm{C}_{k+1}-\bm{C}_{k}|,|\bm{Z}_{k+1}-\bm{Z}_{k}|$ approach to $0$ simultaneously  in 50 iterations.
+The proof of Theorem \ref{th1} can be found in the supplementary file.\ Though Theorem \ref{th5-1} could not directly guarantee $\lim_{k \to +\infty}\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}=0$ and $\lim_{k \to +\infty}\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0$, it is empirically found that both $\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}$ and $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}$ will approach to $0$ simultaneously in all our tests. In Figure \ref{f1}, we can see that the maximal errors in $|\bm{C}_{k+1}-\bm{Z}_{k+1}|,|\bm{C}_{k+1}-\bm{C}_{k}|,|\bm{Z}_{k+1}-\bm{Z}_{k}|$ approach to $0$ simultaneously in 50 iterations.
 
 
 \begin{table}[htb]
-    \centering
-        \begin{tabular}{l}
+\centering
+\begin{tabular}{l}
 \hline
-\textbf{Algorithm 1}: Solve Eq.\ (\ref{e10}) via ADMM
+\textbf{Algorithm 1}: Solve Eq.\ (\ref{equ5-10}) via ADMM
 \\
 \hline
 \textbf{Input:} $\bm{Y},\bm{W}_{1},\bm{W}_{2},\bm{W}_{3}$, $\mu$, $\text{Tol}$, $K_{1}$;
@@ -314,9 +310,9 @@ $\rho_{0}>0$, \text{T} = \text{False}, $k=0$;
 \\
 \textbf{While} (\text{T} == \text{false}) \textbf{do}
 \\
-1. Update $\bm{C}_{k+1}$ by solving Eq.\ (\ref{e13});
+1. Update $\bm{C}_{k+1}$ by solving Eq.\ (\ref{equ5-13});
 \\
-2. Update $\bm{Z}_{k+1}$ by soft thresholding (\ref{e16});
+2. Update $\bm{Z}_{k+1}$ by soft thresholding (\ref{equ5-16});
 \\
 3. Update $\bm{\Delta}_{k+1}$ as
 \\
@@ -366,7 +362,7 @@ $;
 \\
 3.\quad Search nonlocal similar patches $\bm{Y}_{j}$;
 \\
-4.\quad Apply the TWSC model (\ref{e3}) to $\bm{Y}_{j}$ and
+4.\quad Apply the TWSC model (\ref{equ5-3}) to $\bm{Y}_{j}$ and
 \\
 \quad \quad 
 obtain the estimated $\bm{X}_{j}=\bm{D}\bm{C}$;
@@ -389,7 +385,7 @@ obtain the estimated $\bm{X}_{j}=\bm{D}\bm{C}$;
 \raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/LinearScaleConvergence.pdf}}
 \vspace{-83mm}
 \caption{The convergence curves of maximal errors in entries of $|\bm{C}_{k+1}-\bm{Z}_{k+1}|$ (blue line), $|\bm{C}_{k+1}-\bm{C}_{k}|$ (red line), and $|\bm{Z}_{k+1}-\bm{Z}_{k}|$ (yellow line). The test image is ``Barbara''.}
-\label{f1}
+\label{fig5-1}
 \end{figure}
 
 \subsection{The Denoising Algorithm}
@@ -397,18 +393,18 @@ obtain the estimated $\bm{X}_{j}=\bm{D}\bm{C}$;
 Given a noisy image $\bm{y}_{c}$, suppose that we have extracted $N$ local patches $\{\bm{y}_{j}\}_{j=1}^{N}$ and their similar patches.\ Then $N$ noisy patch matrices $\{\bm{Y}_{j}\}_{j=1}^{N}$ can be formed to estimate the clean matrices $\{\bm{X}_{j}\}_{j=1}^{N}$.\ The patches in matrices $\{\bm{X}_{j}\}_{j=1}^{N}$ are aggregated to form the denoised  image $\hat{\bm{x}}_{c}$.\ To obtain better denoising results, we perform the above denoising procedures for several iterations.\ The proposed TWSC based robust image denoising algorithm is summarized in Algorithm 2.
 
 
-\section{Existence and Faster Solution of Sylvester Equation (\ref{e13})}
+\section{Existence and Faster Solution of Sylvester Equation (\ref{equ5-13})}
 
 
-The solution of the Sylvester equation (SE) (\ref{e13}) does not always exist, though the solution is unique if it exists. Besides, solving SE (\ref{e13}) is usually computationally expensive in high dimensional cases. In this section, we provide a sufficient condition to guarantee the existence of the solution to SE (\ref{e13}), as well as a faster solution of (\ref{e13}) to save the computational cost of Algorithms 1 and 2. 
+The solution of the Sylvester equation (SE) (\ref{equ5-13}) does not always exist, though the solution is unique if it exists. Besides, solving SE (\ref{equ5-13}) is usually computationally expensive in high dimensional cases. In this section, we provide a sufficient condition to guarantee the existence of the solution to SE (\ref{equ5-13}), as well as a faster solution of (\ref{equ5-13}) to save the computational cost of Algorithms 1 and 2. 
 
 
 \subsection{Existence of the Unique Solution}
 
-Before we prove the existence of unique solution of Eq.\ (\ref{e13}), we first introduce the following theorem. 
+Before we prove the existence of unique solution of Eq.\ (\ref{equ5-13}), we first introduce the following theorem. 
 
 \begin{theorem}
-\label{th2}
+\label{th5-2}
 Assume that $\bm{A}\in\mathbb{R}^{3p^2\times 3p^2}$, $\bm{B}\in\mathbb{R}^{M\times M}$ are both symmetric and positive semi-definite matrices. If at least one of $\bm{A}, \bm{B}$ is positive definite, the Sylvester equation $\bm{A}\bm{C}
 +
 \bm{C}\bm{B}
@@ -416,22 +412,22 @@ Assume that $\bm{A}\in\mathbb{R}^{3p^2\times 3p^2}$, $\bm{B}\in\mathbb{R}^{M\tim
 \bm{E}$ has a unique solution for $\bm{C}\in \mathbb{R}^{3p^2\times M}$.
 \end{theorem}
 
-The proof of Theorem \ref{th2} can be found in the supplementary file. We then have the following corollary.
+The proof of Theorem \ref{th5-2} can be found in the supplementary file. We then have the following corollary.
 
 \begin{corollary}
-The Sylvester equation (\ref{e13}) has a unique solution.
+The Sylvester equation (\ref{equ5-13}) has a unique solution.
 \end{corollary}
 
 \begin{proof}
-Since $\bm{A},\bm{B}_{k}$ in (\ref{e13}) are both symmetric and positive definite matrices, according to Theorem \ref{th2}, the SE (\ref{e13}) has a unique solution. 
+Since $\bm{A},\bm{B}_{k}$ in (\ref{equ5-13}) are both symmetric and positive definite matrices, according to Theorem \ref{th5-2}, the SE (\ref{equ5-13}) has a unique solution. 
 \end{proof}
 
 
-\subsection{Faster Solution of the Sylvester Equation (\ref{e13})}
+\subsection{Faster Solution of the Sylvester Equation (\ref{equ5-13})}
 
-The solution (\ref{e14}) of the SE (\ref{e13}) is typically obtained by the Bartels-Stewart algorithm \cite{Bartels1972}. This algorithm firstly employs a QR factorization \cite{GolubMatrix}, implemented via Gram-Schmidt process, to decompose the matrices $\bm{A}$ and $\bm{B}_{k}$ into Schur forms, and then solves the obtained triangular system by the back-substitution method \cite{bareiss1968sylvester}. However, since the matrices $\bm{I}_{M}\otimes\bm{A}$ and $\bm{B}_{k}^{\top}\otimes\bm{I}_{3p^2}$ are of $3p^2M\times 3p^2M$ dimensions, it is very computationally expensive ($\mathcal{O}(p^6M^3)$) to calculate their QR factorization to obtain the Schur forms. By exploiting the specific properties of our problem, we provide a faster while exact solution for the SE (\ref{e13}).
+The solution (\ref{equ5-14}) of the SE (\ref{equ5-13}) is typically obtained by the Bartels-Stewart algorithm \cite{Bartels1972}. This algorithm firstly employs a QR factorization \cite{GolubMatrix}, implemented via Gram-Schmidt process, to decompose the matrices $\bm{A}$ and $\bm{B}_{k}$ into Schur forms, and then solves the obtained triangular system by the back-substitution method \cite{bareiss1968sylvester}. However, since the matrices $\bm{I}_{M}\otimes\bm{A}$ and $\bm{B}_{k}^{\top}\otimes\bm{I}_{3p^2}$ are of $3p^2M\times 3p^2M$ dimensions, it is very computationally expensive ($\mathcal{O}(p^6M^3)$) to calculate their QR factorization to obtain the Schur forms. By exploiting the specific properties of our problem, we provide a faster while exact solution for the SE (\ref{equ5-13}).
 
-Since the matrices $\bm{A},\bm{B}_{k}$ in (\ref{e13}) are symmetric and positive definite, the matrix $\bm{A}$ can be eigen-decomposed as $\bm{A}=\bm{U}_{\bm{A}}\bm{\Sigma}_{\bm{A}}\bm{U}_{\bm{A}}^{\top}$, with computational cost of $\mathcal{O}(p^6)$. Left multiply both sides of the SE (\ref{e13}) by $\bm{U}_{\bm{A}}^{\top}$, we can get
+Since the matrices $\bm{A},\bm{B}_{k}$ in (\ref{equ5-13}) are symmetric and positive definite, the matrix $\bm{A}$ can be eigen-decomposed as $\bm{A}=\bm{U}_{\bm{A}}\bm{\Sigma}_{\bm{A}}\bm{U}_{\bm{A}}^{\top}$, with computational cost of $\mathcal{O}(p^6)$. Left multiply both sides of the SE (\ref{equ5-13}) by $\bm{U}_{\bm{A}}^{\top}$, we can get
 $
 \bm{\Sigma}_{A}\bm{U}_{\bm{A}}^{\top}\bm{C}_{k+1}
 +
@@ -455,12 +451,12 @@ $(\bm{I}_{M}\otimes\bm{\Sigma}_{\bm{A}}
 $
 \bm{C}_{k+1}=\bm{U}_{\bm{A}}\text{vec}^{-1}(\text{vec}(\bm{U}_{\bm{A}}^{\top}\bm{C}_{k+1}))
 $.
-By this way, the complexity for solving the SE (\ref{e13}) is reduced from $\mathcal{O}(p^6M^3)$ to $\mathcal{O}(\max(p^6,p^2M))$, which is a huge computational saving.
+By this way, the complexity for solving the SE (\ref{equ5-13}) is reduced from $\mathcal{O}(p^6M^3)$ to $\mathcal{O}(\max(p^6,p^2M))$, which is a huge computational saving.
 
 
 \section{Experiments}
 
-To validate the effectiveness of our proposed TWSC scheme, we apply it to both synthetic AWGN corrupted images and realistic noisy images. To better demonstrate the roles of the weights in our model, we compare with a baseline method, in which the weights $\bm{W}_{1},\bm{W}_{2}$ are set to comfortable identity matrices, while the matrix $\bm{W}_{3}$ is set as in (\ref{e8}). We call this baseline the weighted sparse coding (WSC) method.
+To validate the effectiveness of our proposed TWSC scheme, we apply it to both synthetic AWGN corrupted images and realistic noisy images. To better demonstrate the roles of the weights in our model, we compare with a baseline method, in which the weights $\bm{W}_{1},\bm{W}_{2}$ are set to comfortable identity matrices, while the matrix $\bm{W}_{3}$ is set as in (\ref{equ5-8}). We call this baseline the weighted sparse coding (WSC) method.
 
 \textbf{Implementation Details}. We empirically set the parameter $\rho_{0}=0.5$ and $\mu=1.1$. The maximum number of iteration is set as $K_{1}=100$. The window size for similar patch searching is set as $60\times60$. For parameters $p,M,K_{2}$, we set $p=7,M=70,K_{2}=8$ for $0<\sigma\le20$; $p=8,M=90,K_{2}=12$ for $20<\sigma\le40$; $p=8,M=120,K_{2}=12$ for $40<\sigma\le60$; $p=9,M=140,K_{2}=14$ for $60<\sigma\le100$. All parameters are fixed in our experiments, which are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-5930K CPU of 3.5GHz and 32GB RAM. It takes about 240 seconds to process a real noisy image of size $512\times512\times3$.
 
@@ -469,14 +465,14 @@ To validate the effectiveness of our proposed TWSC scheme, we apply it to both s
 
 We first compare the proposed TWSC with the state-of-the-art AWGN denoising methods such as BM3D \cite{bm3d}, LSSC \cite{lssc}, NCSR \cite{ncsr}, WNNM \cite{wnnm}, TNRD \cite{chen2015learning}, and DnCNN \cite{dncnn} on 20 gray level images commonly used in \cite{bm3d}. Since TNRD and DnCNN are discriminative learning based methods, we retrain the two methods for noise standard deviations $5\sim100$ with a gap of $5$ by using the source codes provided by the authors. The noisy images are generated by adding AWGN to each image with $\sigma=20,40,60,80,100$, respectively. Note that in this experiment the weight matrix $\bm{W}_{1}=\bm{I}_{p^2}$ is an identity matrix because the input images are gray level.
 
-The averaged PSNR and SSIM \cite{ssim} results are listed in Table \ref{t1}.\ One can see that the proposed TWSC is only a little inferior to TNRD and DnCNN when $\sigma\le40$. Note that TNRD and DnCNN are trained on external and synthetic clean and noisy image pairs, which is unfair for comparison since TWSC only utilizes the tested noisy image. Besides, one can see that the proposed TWSC model works much better than the baseline method WSC, which proves that the weight matrix $\bm{W}_{2}$ can characterize better the noise statistics in local image patches. Due to limited space, we leave the visual comparisons of different methods in the supplementary file.
+The averaged PSNR and SSIM \cite{ssim} results are listed in Table \ref{tab5-1}.\ One can see that the proposed TWSC is only a little inferior to TNRD and DnCNN when $\sigma\le40$. Note that TNRD and DnCNN are trained on external and synthetic clean and noisy image pairs, which is unfair for comparison since TWSC only utilizes the tested noisy image. Besides, one can see that the proposed TWSC model works much better than the baseline method WSC, which proves that the weight matrix $\bm{W}_{2}$ can characterize better the noise statistics in local image patches. Due to limited space, we leave the visual comparisons of different methods in the supplementary file.
 
-In this section, we provide more comparisons of the competing methods on the 20 widely used images (listed in Fig. \ref{f1}) in Figures \ref{f4}--\ref{f8}. The compared methods include BM3D \cite{bm3d}, LSSC \cite{lssc}, NCSR \cite{ncsr}, WNNM \cite{wnnm}, TNRD \cite{chen2015learning}, DnCNN \cite{dncnn}, and the baseline method WSC described in the main paper.
+In this section, we provide more comparisons of the competing methods on the 20 widely used images (listed in Fig. \ref{fig5-1}) in Figures \ref{fig5-4}--\ref{fig5-8}. The compared methods include BM3D \cite{bm3d}, LSSC \cite{lssc}, NCSR \cite{ncsr}, WNNM \cite{wnnm}, TNRD \cite{chen2015learning}, DnCNN \cite{dncnn}, and the baseline method WSC described in the main paper.
  
 \begin{table}[hbp]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on 20 gray level images corrupted by AWGN noise.}
 \scriptsize
-\label{t1}
+\label{tab5-1}
 \begin{center}
 \renewcommand\arraystretch{1.2}
 \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cccccccccc}
@@ -898,19 +894,18 @@ We evaluate the proposed method on two real noisy image datasets, where the imag
 
 We compare the proposed TWSC method with CBM3D \cite{cbm3d}, WNNM \cite{wnnm}, TNRD \cite{chen2015learning}, DnCNN \cite{dncnn}, the commercial software Neat Image (NI) \cite{neatimage}, the state-of-the-art real image denoising methods ``Noise Clinic'' (NC) \cite{noiseclinic} and CC \cite{crosschannel2016}. Since WNNM and TNRD are designed for gray level images, we applied them to each channel of real noisy images. The input noise stds $\sigma_{c}$ ($c\in\{r,g,b\}$) for WNNM are estimated by a noise estimation method \cite{Chen2015ICCV}. TNRD achieves its best results when setting the noise std of the trained models at $\sigma_{c}=10$. The methods of CBM3D and DnCNN can directly deal with color images, and the input noise std is set as $\sigma=\sqrt{(\sigma_{r}^{2}+\sigma_{g}^{2}+\sigma_{b}^{2})/3}$.\ Due to limited space, we do not compare with the baseline method WSC on visual quality.
 
-\textbf{Results on Dataset 1}. Fig. \ref{fig2} show the denoised images of ``Dog''. (The method CC \cite{crosschannel2016} is not compared since its code is not available.) One can see that CBM3D and WNNM tend to over-smooth the image.\ DnCNN, TNRD and NI remain many noise-caused color artifacts across the whole image. NC is better than other methods except the proposed TWSC. These results demonstrate that the methods designed for AWGN are not effective for realistic noise removal.\ Though NC and NI methods are specifically developed for real noisy images, their performance is not satisfactory.\ In comparison, the proposed TWSC works much better in removing the noise while maintaining the details (see the zoom-in window in ``Dog'') than the other competing methods.\ More visual comparisons can be found in the supplementary file.
+\textbf{Results on Dataset 1}. Fig. \ref{fig5-2} show the denoised images of ``Dog''. (The method CC \cite{crosschannel2016} is not compared since its code is not available.) One can see that CBM3D and WNNM tend to over-smooth the image.\ DnCNN, TNRD and NI remain many noise-caused color artifacts across the whole image. NC is better than other methods except the proposed TWSC. These results demonstrate that the methods designed for AWGN are not effective for realistic noise removal.\ Though NC and NI methods are specifically developed for real noisy images, their performance is not satisfactory.\ In comparison, the proposed TWSC works much better in removing the noise while maintaining the details (see the zoom-in window in ``Dog'') than the other competing methods.\ More visual comparisons can be found in the supplementary file.
 
-In this section, we give more comparisons of the competing denoising methods on the dataset \cite{ncwebsite}.\ Fig.\ \ref{f2} shows 10 sample images of this dataset. The real noisy images in dataset \cite{ncwebsite} have no ``ground truth'' images and hence we only compare the visual quality of the denoised images by different methods.\ The compared methods include CBM3D \cite{cbm3d}, WNNM, TNRD, DnCNN, NI \cite{neatimage}, and NC \cite{noiseclinic}. As can be seen from Figures \ref{f9}--\ref{f11}, our proposed method performs better than the competing methods.
+In this section, we give more comparisons of the competing denoising methods on the dataset \cite{ncwebsite}.\ Fig.\ \ref{fig5-2} shows 10 sample images of this dataset. The real noisy images in dataset \cite{ncwebsite} have no ``ground truth'' images and hence we only compare the visual quality of the denoised images by different methods.\ The compared methods include CBM3D \cite{cbm3d}, WNNM, TNRD, DnCNN, NI \cite{neatimage}, and NC \cite{noiseclinic}. As can be seen from Figures \ref{fig5-9}--\ref{fig5-11}, our proposed method performs better than the competing methods.
 
-\textbf{Results on Dataset 2}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{t3}. One can see that the proposed TWSC is much better than other competing methods, including CC and the baseline method WSC. Fig. \ref{fig3} shows the denoised images of a scene captured by Canon 5D Mark 3 at ISO = 3200. One can see that the proposed TWSC method results in not only higher PSNR and SSIM measures, but also much better visual quality than the other denoising methods.
+\textbf{Results on Dataset 2}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{tab5-3}. One can see that the proposed TWSC is much better than other competing methods, including CC and the baseline method WSC. Fig. \ref{fig5-3} shows the denoised images of a scene captured by Canon 5D Mark 3 at ISO = 3200. One can see that the proposed TWSC method results in not only higher PSNR and SSIM measures, but also much better visual quality than the other denoising methods.
 
-In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 15 cropped real noisy images (listed in Fig. \ref{f3}) used in \cite{crosschannel2016}.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR and SSIM \cite{ssim} can be computed.\  The compared methods include CBM3D, WNNM, TNRD, DnCNN, NI, NC, and CC \cite{crosschannel2016}. As can be seen from Figures \ref{f12}--\ref{f15}, our proposed TWSC method achieves better performance than the the competing methods.
+In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 15 cropped real noisy images (listed in Fig. \ref{fig5-3}) used in \cite{crosschannel2016}.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR and SSIM \cite{ssim} can be computed.\  The compared methods include CBM3D, WNNM, TNRD, DnCNN, NI, NC, and CC \cite{crosschannel2016}. As can be seen from Figures \ref{fig5-12}--\ref{fig5-15}, our proposed TWSC method achieves better performance than the the competing methods.
 
 
 \begin{table}[hbp]
 \caption{Average results on PSNR(dB) and SSIM of different denoising methods on 15 cropped real noisy images used in \cite{crosschannel2016}.}
-\label{t3}
-
+\label{tab5-3}
 \begin{center}
 \renewcommand\arraystretch{1}
 \scriptsize
