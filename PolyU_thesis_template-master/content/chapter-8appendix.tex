@@ -25,7 +25,7 @@ The problem (\ref{equ16}) is separable w.r.t. each $\bm{\alpha}_{j}$ and hence c
 \label{equ8-4}
 \min\nolimits_{\bm{\alpha}_{j}}(\bm{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|,
 \end{equation}
-where $j=1,...,3p^2$. Taking derivative of $\bm{\alpha}_{j}$ in problem (\ref{equ17}) and setting the derivative to be zero. There are two cases for the solution.
+where $j=1,...,3p^2$. Taking derivative of $\bm{\alpha}_{j}$ in problem (\ref{equ2-11}) and setting the derivative to be zero. There are two cases for the solution.
 
 (a) If $\bm{\alpha}_{j}\ge 0$, we have 
 $
@@ -53,14 +53,14 @@ $
 \hat{\bm{\alpha}}_{j}=\text{sgn}(\bm{z}_{j})*(-\bm{z}_{j}-\frac{\lambda_{j}}{2})=\text{sgn}(\bm{z}_{j})*(|\bm{z}_{j}|-\frac{\lambda_{j}}{2}).
 $
 
-In summary, we have the final solution of the weighted sparse coding problem (\ref{equ14}) as:
-\vspace{-1mm}
-\begin{equation}\label{equ18}\vspace{-1mm}
+In summary, we have the final solution of the weighted sparse coding problem (\ref{equ8-1}) as:
+\begin{equation}
+\label{equ8-5}
 \hat{\bm{\alpha}}= \text{sgn}(\bm{D^{T}y})\odot \text{max}(|\bm{D^{T}y}|-\bm{\lambda},0),
 \end{equation}
 where $\bm{\lambda} = \frac{1}{2}[\lambda_{1},\lambda_{2},...,\lambda_{3p^2}]^{\top}$ is the vector of regularization parameter and $\odot$ means element-wise multiplication.
 
-\section{Proof of the Theorem \ref{th1}}
+\section{Proof of the Theorem \ref{th3-1}}
 
 Let $\mathcal{A}\in \mathbb{R}^{(3p^2-r)\times M},\mathcal{Y}\in \mathbb{R}^{3p^2\times M}$ be two given data matrices. Denote by $\mathcal{E}\in\mathbb{R}^{3p^2\times r}$ the external subdictionary and $\mathcal{D}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ the internal subdictionary. For simplicity, we assume $3p^2\ge M$. The problem in \textbf{Theorem \ref{th1}} is as follows:
 \begin{equation}\label{equ19}
