@@ -63,7 +63,8 @@ where $\bm{\lambda} = \frac{1}{2}[\lambda_{1},\lambda_{2},...,\lambda_{3p^2}]^{\
 \section{Proof of the Theorem \ref{th3-1}}
 
 Let $\mathcal{A}\in \mathbb{R}^{(3p^2-r)\times M},\mathcal{Y}\in \mathbb{R}^{3p^2\times M}$ be two given data matrices. Denote by $\mathcal{E}\in\mathbb{R}^{3p^2\times r}$ the external subdictionary and $\mathcal{D}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ the internal subdictionary. For simplicity, we assume $3p^2\ge M$. The problem in \textbf{Theorem \ref{th1}} is as follows:
-\begin{equation}\label{equ19}
+\begin{equation}
+\label{equ8-6}
 \begin{split}
 \hat{\mathcal{D}}
 =
@@ -80,7 +81,8 @@ Let $\mathcal{A}\in \mathbb{R}^{(3p^2-r)\times M},\mathcal{Y}\in \mathbb{R}^{3p^
 \begin{proof}
 We firstly prove the necessary condition.
 Since $\mathcal{D}^{\top}\mathcal{D} = \bm{I}_{(3p^2-r)\times (3p^2-r)}$, we have
-\begin{equation}\label{equ20}
+\begin{equation}
+\label{equ8-7}
 \begin{split}
 \hat{\mathcal{D}}
 &
@@ -106,7 +108,8 @@ $
 \text{Tr}(\Gamma_{2}(\mathcal{D}^{\top}\mathcal{E}))
 $,
 where $\Gamma_{1}$ and $\Gamma_{2}$ are the Lagrange multipliers. Take the derivative of $\mathcal{L}$ w.r.t. $\mathcal{D}$ and set it to be matrix $\bm{0}$ of conformal dimensions, we can get
-\begin{equation}\label{equ21}
+\begin{equation}
+\label{equ8-8}
 \partial\mathcal{L}/\partial\mathcal{D} 
 =
 \mathcal{Y}\mathcal{A}^{\top}
@@ -117,20 +120,23 @@ where $\Gamma_{1}$ and $\Gamma_{2}$ are the Lagrange multipliers. Take the deriv
 =
 \bm{0}_{3p^2\times (3p^2-r)}.
 \end{equation}
-Since $\mathcal{D}^{\top}\mathcal{D}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$ and $\mathcal{E}^{\top}\mathcal{D} = \bm{0}_{3p^2\times (3p^2-r)}$, by left multiplying both sides of the Eq. (\ref{equ22}) by $\mathcal{E}^{\top}$, we have 
-\begin{equation}\label{equ22}
+Since $\mathcal{D}^{\top}\mathcal{D}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$ and $\mathcal{E}^{\top}\mathcal{D} = \bm{0}_{3p^2\times (3p^2-r)}$, by left multiplying both sides of the Eq. (\ref{equ8-8}) by $\mathcal{E}^{\top}$, we have 
+\begin{equation}
+\label{equ8-9}
 \mathcal{E}^{\top}\mathcal{Y}\mathcal{A}^{\top}
 =
 \Gamma_{2}^{\top}.
 \end{equation}
-Put the Eq. (\ref{equ22}) back into Eq. (\ref{equ21}), we have 
-\begin{equation}\label{equ23}
+Put the Eq. (\ref{equ8-9}) back into Eq. (\ref{equ8-8}), we have 
+\begin{equation}
+\label{equ8-10}
 (\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}
 =
 \mathcal{D}(\Gamma_{1}+\Gamma_{1}^{\top}).
 \end{equation}
-Right multiplying both sides of Eq. (\ref{equ23}) by $\mathcal{D}^{\top}$, we have
-\begin{equation}\label{equ24}
+Right multiplying both sides of Eq. (\ref{equ8-10}) by $\mathcal{D}^{\top}$, we have
+\begin{equation}
+\label{equ8-11}
 (\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top}
 =
 \mathcal{D}(\Gamma_{1}+\Gamma_{1}^{\top})\mathcal{D}^{\top}
@@ -138,7 +144,8 @@ Right multiplying both sides of Eq. (\ref{equ23}) by $\mathcal{D}^{\top}$, we ha
 \end{equation}
 This shows that $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top}$ is a symmetric matrix of order $3p^2\times 3p^2$. Then we perform economy (or reduced) singular value decomposition (SVD)  \cite{eckart1936approximation} on $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}=\mathcal{U}\Sigma\mathcal{V}^{\top}$,
 there is
-\begin{equation}\label{equ25}
+\begin{equation}
+\label{equ8-12}
 (\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top}
 =
 \mathcal{U}\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top}
@@ -147,7 +154,7 @@ there is
 \end{equation}
 Hence, we have $\mathcal{U}=\mathcal{D}\mathcal{V}$, or equivalently $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$. The necessary condition is proved. 
 
-Now we prove the sufficient condition. If $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$, then $\hat{\mathcal{D}}^{\top}\hat{\mathcal{D}}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$. To prove $\mathcal{E}^{\top}\hat{\mathcal{D}}=\bm{0}_{3p^2\times (3p^2-r)}$, we left multiply both sides of Eq. (\ref{equ25}) by $\mathcal{E}^{\top}$ and have  
+Now we prove the sufficient condition. If $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$, then $\hat{\mathcal{D}}^{\top}\hat{\mathcal{D}}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$. To prove $\mathcal{E}^{\top}\hat{\mathcal{D}}=\bm{0}_{3p^2\times (3p^2-r)}$, we left multiply both sides of Eq. (\ref{equ8-12}) by $\mathcal{E}^{\top}$ and have  
 $
 \bm{0}_{3p^2\times (3p^2-r)}
 =
@@ -161,7 +168,8 @@ $
 It means that $\mathcal{E}^{\top}\mathcal{U}\Sigma\mathcal{U}^{\top}=\bm{0}_{3p^2\times 3p^2}$. This only happens when $\mathcal{E}^{\top}\mathcal{U}=\bm{0}_{3p^2\times (3p^2-r)}$ since $\text{rank}(\Sigma)=3p^2-r$ and $\mathcal{U}\Sigma\mathcal{U}^{\top}$ is positive definite. Then $\mathcal{E}^{\top}\hat{\mathcal{D}}=\mathcal{E}^{\top}\mathcal{U}\mathcal{V}^{\top}=\bm{0}_{3p^2\times (3p^2-r)}$. 
 
 Finally we prove that $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ is the solution of
-\begin{equation}\label{equ26}
+\begin{equation}
+\label{equ8-13}
 \begin{split}
 \hat{\mathcal{D}}
 =
@@ -205,40 +213,40 @@ The equality is obtained at
 $\mathcal{V}^{\top}\mathcal{D}^{\top}\mathcal{U}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$, i.e., $\mathcal{D}=\mathcal{U}\mathcal{V}^{\top}=\hat{\mathcal{D}}$. This completes the proof.
 \end{proof}
 
-\section{Proof of the Theorem \ref{th2}}
+\section{Proof of the Theorem \ref{th3-2}}
 
-Before we prove the Theorem \ref{th2}, we need firstly prove the following Lemma 1.
+Before we prove the Theorem \ref{th3-2}, we need firstly prove the following Lemma 1.
 
 \emph{Lemma 1}: Let $\mathcal{E}\in\mathbb{R}^{3p^2\times r}$ be an orthogonal matrix with $\mathcal{E}^{\top}\mathcal{E}=\bm{I}_{r\times r}$, then $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\ge 3p^2-r$.
 
 \begin{proof} Since $\text{rank}(\mathcal{E}\mathcal{E}^{\top})\le\min\{\text{rank}(\mathcal{E}),\text{rank}(\mathcal{E}^{\top})\}=r$ and $\text{rank}(\mathcal{E}\mathcal{E}^{\top})\ge\text{rank}(\mathcal{E})+\text{rank}(\mathcal{E}^{\top})-r=2r-r=r$ by Sylvester's inequality, we have $\text{rank}(\mathcal{E}\mathcal{E}^{\top})=r$. Then, $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\ge\text{rank}(\bm{I}_{3p^2\times 3p^2})-\text{rank}(\mathcal{E}\mathcal{E}^{\top})\ge 3p^2-r$. 
 \end{proof}
 
-The $\text{rank}(\Sigma)$ ($\Sigma$ is defined in Theorem \ref{th1}) depends on $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})$, $\text{rank}(\mathcal{Y})$ and $\text{rank}(\mathcal{A})$. Note that $\text{rank}(\mathcal{Y})\ge M$ and $\text{rank}(\mathcal{A})\ge \min\{3p^2,M\}$ and $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\ge 3p^2-r$. Hence, $\text{rank}(\Sigma)\le\min\{3p^2-r,M\}$.
+The $\text{rank}(\Sigma)$ ($\Sigma$ is defined in Theorem \ref{th3-1}) depends on $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})$, $\text{rank}(\mathcal{Y})$ and $\text{rank}(\mathcal{A})$. Note that $\text{rank}(\mathcal{Y})\ge M$ and $\text{rank}(\mathcal{A})\ge \min\{3p^2,M\}$ and $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\ge 3p^2-r$. Hence, $\text{rank}(\Sigma)\le\min\{3p^2-r,M\}$.
 
-Now we prove the Theorem \ref{th2}:
+Now we prove the Theorem \ref{th3-2}:
 \begin{proof} 
 a) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ is nonsingular, i.e., $\text{rank}(\Sigma)=3p^2-r$, $\Sigma$ may have distinct or multiple non-zero singular values. In the SVD \cite{eckart1936approximation} of $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}
 =
 \mathcal{U}\Sigma\mathcal{V}^{\top}$, the singular vectors in $\mathcal{U}$ and $\mathcal{V}$
 can be determined up to orientation. Hence, we can reformulate it as 
-\begin{equation}\label{equ27}
+\begin{equation}\label{equ8-14}
 (\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}
 =
 \mathcal{U}^{*}\mathcal{K}_{u}\Sigma\mathcal{K}_{v}(\mathcal{V}^{*})^{\top},
 \end{equation}
 where $\mathcal{U}^{*}\in \mathbb{R}^{3p^2\times (3p^2-r)}$ and $\mathcal{V}^{*}\in \mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ are arbitrarily orientated singular vectors of $\mathcal{U}$ and $\mathcal{V}$, respectively. The $\mathcal{K}_{u}$ and $\mathcal{K}_{v}$ are diagonal matrices with $+1$ or $-1$ as diagonal elements in arbitrary distribution. $\Sigma\in \mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ is a diagonal matrix with singular values in non-increasing order, i.e., $\Sigma_{11}\ge\Sigma_{22}\ge...\ge\Sigma_{(3p^2-r)(3p^2-r)}\ge0$. If we fix $\mathcal{K}_{u}$, then $\mathcal{K}_{v}$ is uniquely determined to meet the above requirements of $\Sigma$. If the orientations of the singular vectors of $\mathcal{U}^{*}$ are fixed, then $\mathcal{U}=\mathcal{U}^{*}\mathcal{K}_{u}$ is determined, so do the orientations of the singular vectors of $\mathcal{V}^{*}$ and $\mathcal{V}^{\top}=\mathcal{K}_{v}(\mathcal{V}^{*})^{\top}$. In this case, the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}=\mathcal{U}^{*}\mathcal{K}_{u}\mathcal{K}_{v}(\mathcal{V}^{*})^{\top}$ is unique. When $\Sigma$ has multiple singular values, the unique solution of $\hat{\mathcal{D}}$ can be proved in a similar way. 
 
-b) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ is singular, i.e.,  $0\le \text{rank}(\Sigma)< 3p^2-r$, and $\Sigma$ has $3p^2-r-\text{rank}(\Sigma)$ (at least one) zero singular values. The discussion in a) can still be applied to the singular vectors corresponding to the nonzero singular values, and the production of these singular vectors in $\mathcal{U}$ and $\mathcal{V}$ is still unique. However, the singular vectors corresponding to the zero singular values could be in arbitrary orientations as long as they satisfy the conditions of $\mathcal{U}^{\top}\mathcal{U}=\mathcal{V}^{\top}\mathcal{V}=\mathcal{V}\mathcal{V}^{\top}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$. Since $\mathcal{U}\in \mathbb{R}^{3p^2\times (3p^2-r)}$, $\mathcal{U}\mathcal{U}^{\top}$ no longer equals to the identity matrix of order $3p^2\times 3p^2$. From Eq. (\ref{equ25}), we have
-\begin{equation}\label{equ28}
+b) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ is singular, i.e.,  $0\le \text{rank}(\Sigma)< 3p^2-r$, and $\Sigma$ has $3p^2-r-\text{rank}(\Sigma)$ (at least one) zero singular values. The discussion in a) can still be applied to the singular vectors corresponding to the nonzero singular values, and the production of these singular vectors in $\mathcal{U}$ and $\mathcal{V}$ is still unique. However, the singular vectors corresponding to the zero singular values could be in arbitrary orientations as long as they satisfy the conditions of $\mathcal{U}^{\top}\mathcal{U}=\mathcal{V}^{\top}\mathcal{V}=\mathcal{V}\mathcal{V}^{\top}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$. Since $\mathcal{U}\in \mathbb{R}^{3p^2\times (3p^2-r)}$, $\mathcal{U}\mathcal{U}^{\top}$ no longer equals to the identity matrix of order $3p^2\times 3p^2$. From Eq. (\ref{equ8-12}), we have
+\begin{equation}
+\label{equ8-15}
 \mathcal{U}\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top}
 =
 \mathcal{D}\mathcal{V}\Sigma\mathcal{U}^{\top}
 \vspace{-2mm}
 \end{equation}
-Right multiplying both sides of Eq.\ (\ref{equ28}) by $\mathcal{D}\mathcal{V}$ and left multiplying each side by $\mathcal{U}^{\top}$, we have
-\vspace{-2mm}
-\begin{equation}\label{equ29}
+Right multiplying both sides of Eq.\ (\ref{equ8-15}) by $\mathcal{D}\mathcal{V}$ and left multiplying each side by $\mathcal{U}^{\top}$, we have
+\begin{equation}\label{equ8-16}
 \Sigma
 =
 \mathcal{U}^{\top}\mathcal{D}\mathcal{V}\Sigma\mathcal{U}^{\top}\mathcal{D}\mathcal{V}
@@ -253,12 +261,12 @@ Hence, $\Delta=\mathcal{U}^{\top}\mathcal{D}\mathcal{V}\in\mathbb{R}^{(3p^2-r)\t
 \end{array} \right.
 \vspace{-1mm}
 \end{displaymath}
-Thus, we have $\mathcal{D}=\mathcal{U}\Delta\mathcal{V}^{\top}$. That is, if $\text{rank}(\Sigma)<3p^2-r$, once we get the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ in problem (\ref{equ19}), $\mathcal{D}=\mathcal{U}\Delta\mathcal{V}^{\top}$ with suitable $\Delta$ is also the solution of problem (\ref{equ19}). In fact, the number of solutions $\hat{\mathcal{D}}$ for problem (\ref{equ19}) is $2^{3p^2-r-\text{rank}(\Sigma)}$ given fixed $\mathcal{U}$ and $\mathcal{V}$.
+Thus, we have $\mathcal{D}=\mathcal{U}\Delta\mathcal{V}^{\top}$. That is, if $\text{rank}(\Sigma)<3p^2-r$, once we get the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ in problem (\ref{equ3-11}), $\mathcal{D}=\mathcal{U}\Delta\mathcal{V}^{\top}$ with suitable $\Delta$ is also the solution of problem (\ref{equ3-11}). In fact, the number of solutions $\hat{\mathcal{D}}$ for problem (\ref{equ3-11}) is $2^{3p^2-r-\text{rank}(\Sigma)}$ given fixed $\mathcal{U}$ and $\mathcal{V}$.
 \end{proof}
 
 
 
-\section{Proof of Theorem 1.}
+\section{Proof of Theorem \ref{th4-1}}
 \begin{theorem}
 Assume that the weights in $\bm{w}$ are in a non-descending order, the sequence $\{\bm{X}_{k}\}$, $\{\bm{Z}_{k}\}$, and $\{\bm{A}_{k}\}$ generated in Algorithm 1 satisfy:
 \begin{equation}
@@ -462,6 +470,7 @@ both $\{\bm{W}(\bm{Y}-\bm{X}_{k})\}$ and $\{\bm{Z}_{k}\}$ are upper bounded, and
 the sequence $\{\bm{X}_{k}\}$ is bounded by the Cauchy-Schwarz inequality and triangle inequality.
 We can obtain that 
 \begin{equation}
+\label{equ8-30}
 \lim_{k \to \infty} 
 \|\bm{X}_{k+1}-\bm{Z}_{k+1}\|_{F}
 =
@@ -609,9 +618,8 @@ where $\bm{U}_{k-1}\bm{\Sigma}_{k-1}\bm{V}_{k-1}^{\top}$ is the SVD of the matri
 \end{proof}
 
 
-\section{Proofs of Theorem 1 and Theorem 2}
+\section{Proofs of Theorem \ref{th5-1} and Theorem \ref{th5-2}}
 \begin{theorem}
-\label{th1}
 Given $\rho_{k+1}=\mu\rho_{k}$ ($\rho_{0}>0$) for $k\ge0$ and $\mu>1$, the sequences $\{\bm{C}_{k}\}$ and $\{\bm{Z}_{k}\}$ generated in Algorithm 1 satisfy:
 \begin{align}
 &
@@ -645,7 +653,7 @@ Given $\rho_{k+1}=\mu\rho_{k}$ ($\rho_{0}>0$) for $k\ge0$ and $\mu>1$, the seque
 \vspace{-6mm}
 \begin{proof}
 $ $\newline
-1.\ Firstly, we prove that the sequence $\{\bm{\Delta}_{k}\}$ generated by Algorithm 1 is upper bounded. Denote by $\bm{T}_{k}=\bm{C}_{k+1}+\rho_{k}^{-1}\bm{\Delta}_{k}$ in the $(k+1)$-th iteration. According to Eq. (16) in the main paper, we have $\bm{Z}_{k+1}=\mathcal{S}_{\frac{1}{2\rho_{k}}}(\bm{T}_{k})$. 
+1.\ Firstly, we prove that the sequence $\{\bm{\Delta}_{k}\}$ generated by Algorithm 1 is upper bounded. Denote by $\bm{T}_{k}=\bm{C}_{k+1}+\rho_{k}^{-1}\bm{\Delta}_{k}$ in the $(k+1)$-th iteration. According to Eq. (\ref{5-16}) in the main paper, we have $\bm{Z}_{k+1}=\mathcal{S}_{\frac{1}{2\rho_{k}}}(\bm{T}_{k})$. 
 Then we have 
 \begin{align}
 \|
@@ -828,6 +836,7 @@ both $\{\bm{W}_{1}(\bm{Y}-\bm{D}\bm{W}_{3}\bm{C}_{k})\bm{W}_{2}\}$ and $\{\bm{Z}
 the sequence $\{\bm{C}_{k}\}$ is bounded by the Cauchy-Schwarz inequality and triangle inequality.
 We can obtain that 
 \begin{equation}
+\label{equa8-54}
 \lim_{k \to +\infty} 
 \|\bm{C}_{k+1}-\bm{Z}_{k+1}\|_{F}
 =
@@ -847,9 +856,9 @@ as
 $k \to +\infty$
 and the equation (a) is proved.
 
-4. Now we prove the equation (b). Denote by $\bm{A}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{D}\bm{W}_{3}$, $\bm{B}=\frac{1}{2}(\bm{W}_{2}\bm{W}_{2}^{\top})^{-1}$, and $\bm{E}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{Y}$, and $\bm{F}_{k}=\rho_{k}(\bm{Z}_{k} -\frac{1}{\rho_{k}}\bm{\Delta}_{k})\bm{B}$. According to the Eq. (13) in the main paper, we have
+4. Now we prove the equation (b). Denote by $\bm{A}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{D}\bm{W}_{3}$, $\bm{B}=\frac{1}{2}(\bm{W}_{2}\bm{W}_{2}^{\top})^{-1}$, and $\bm{E}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{Y}$, and $\bm{F}_{k}=\rho_{k}(\bm{Z}_{k} -\frac{1}{\rho_{k}}\bm{\Delta}_{k})\bm{B}$. According to the Eq. (\ref{equ5-13}) in the main paper, we have
 \begin{equation}
-\label{e13}
+\label{equa8-55}
 \bm{A}\bm{C}_{k+1}
 +
 \rho_{k}\bm{C}_{k+1}\bm{B}
@@ -859,7 +868,7 @@ and the equation (a) is proved.
 \bm{F}_{k},
 \end{equation}
 \begin{equation}
-\label{e13}
+\label{equa8-56}
 \bm{A}\bm{C}_{k}
 +
 \rho_{k-1}\bm{C}_{k}\bm{B}
@@ -868,10 +877,10 @@ and the equation (a) is proved.
 +
 \bm{F}_{k-1}.
 \end{equation}
-By calculating the difference between the Eq. (18) and Eq. (19), we have
+By calculating the difference between the Eq. (\ref{equa8-56}) and Eq. (\ref{equa8-55}), we have
 \begin{equation}
 \begin{split}
-\label{e13}
+\label{equa8-57}
 &
 \bm{A}
 (\bm{C}_{k+1} - \bm{C}_{k})
@@ -917,7 +926,7 @@ By calculating the difference between the Eq. (18) and Eq. (19), we have
 \end{equation}
 This equation can be transformed into the following Sylvester equation 
 \begin{equation}
-\label{e13}
+\label{equa8-58}
 (\bm{I}_{n}\otimes\mathbf{A}
 +
 \rho_{k}\bm{B}^{\top}\otimes\mathbf{I}_{m})\text{vec}(\bm{C}_{k+1} - \bm{C}_{k})
@@ -926,6 +935,7 @@ This equation can be transformed into the following Sylvester equation
 \end{equation}
 Since $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=\mathcal{O}(\rho_{k}^{-1})$ as $k \to +\infty$, there exist constants $N\in\mathbb{Z}$ and $c\in\mathbb{R}_{+}$ such that,
 \begin{equation}
+\label{equa8-59}
 \rho_{k}\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}
 \le
 c
@@ -936,7 +946,7 @@ k>N.
 \end{equation}
 Note that $\lim_{k \to +\infty}\rho_{k}=0$ and the solution of the above Sylvester equation is
 \begin{equation}
-\label{e13}
+\label{equa8-60}
 \text{vec}(\bm{C}_{k+1} - \bm{C}_{k})
 =
 (\bm{I}_{n}\otimes\mathbf{A}
@@ -992,6 +1002,7 @@ $\lim_{k \to +\infty}
 \|_{F}=0$ 
 and 
 \begin{equation}
+\label{equa8-64}
 \lim_{k \to +\infty} 
 \|
 \bm{C}_{k+1}-\bm{C}_{k}
@@ -1075,7 +1086,6 @@ That is the end of the proof.
 
 
 \begin{theorem}
-\label{th2}
 Assume that $\bm{A}\in\mathbb{R}^{3p^2\times 3p^2}$, $\bm{B}\in\mathbb{R}^{M\times M}$ are both symmetric and positive semi-definite matrices. If at least one of $\bm{A}, \bm{B}$ is positive definite, the Sylvester equation $\bm{A}\bm{C}
 +
 \bm{C}\bm{B}
