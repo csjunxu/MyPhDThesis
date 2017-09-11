@@ -139,7 +139,7 @@ For each patch $\bm{\overline{y}}_{m}$ in the PG $\bm{\overline{Y}}$, we propose
 \min_{\bm{\alpha}}{\|\bm{\overline{y}}_{m}-\bm{D}\bm{\alpha}\|_{2}^{2}+\|\bm{w}^{T}\bm{\alpha}\|_{1}}.
 \end{equation}
 
-From the viewpoint of Maximum A-Posterior (MAP) estimation, the optimal solution of (\ref{equ11}) is $\hat{\bm{\alpha}} = \arg\max\nolimits_{\bm{\alpha}}\ln P(\bm{\alpha}|\bm{\overline{y}}_{m})$. By Bayes' formula, it is equivalent to
+From the viewpoint of Maximum A-Posterior (MAP) estimation, the optimal solution of (\ref{equ2-11}) is $\hat{\bm{\alpha}} = \arg\max\nolimits_{\bm{\alpha}}\ln P(\bm{\alpha}|\bm{\overline{y}}_{m})$. By Bayes' formula, it is equivalent to
 \begin{equation}
 \label{equ2-12}
 \hat{\bm{\alpha}} = \arg\max\nolimits_{\bm{\alpha}}\{\ln P(\bm{\overline{y}}_{m}|\bm{\alpha})+\ln P(\bm{\alpha})\}.
@@ -164,7 +164,7 @@ By comparing (\ref{equ2-15}) with (\ref{equ2-11}), we can see that the $i$th ent
 \end{equation}
 where $\varepsilon$ is a small positive number to avoid dividing by zero.
 
-With $\bm{w}$ determined by (\ref{equ2-16}), let's see what the solution of (\ref{equ2-11}) should be. Since the dictionary $\bm{D}$ is orthonormal, it is not difficult to find out that (\ref{equ2-11}) has a closed-form solution (detailed derivation can be found in the supplementary material):
+With $\bm{w}$ determined by (\ref{equ2-16}), let's see what the solution of (\ref{equ2-11}) should be. Since the dictionary $\bm{D}$ is orthonormal, it is not difficult to find out that (\ref{equ2-11}) has a closed-form solution (detailed derivation can be found in the Appendix \ref{sec:appendix}):
 \begin{equation}\label{equ2-17}
 \hat{\bm{\alpha}}= \text{sgn}(\bm{D^{T}\overline{y}}_{m})\odot \text{max}(|\bm{D^{T}\overline{y}}_{m}|-\bm{w}/2,0),
 \end{equation}

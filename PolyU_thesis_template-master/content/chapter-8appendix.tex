@@ -3,64 +3,60 @@
 \chapter{Appendix}
 \label{sec:appendix}
 
-\section{Closed-Form Solution of the Weighted Sparse Coding Problem (\ref{equ7})}
+\section{Closed-Form Solution of the Weighted Sparse Coding Problem}
 
 For notation simplicity, we ignore the indices $n,m,t$ in problem (\ref{equ7}).\ It turns into the following weighted sparse coding problem:
-\vspace{-5mm}
-\begin{equation}\label{equ14}
-\vspace{-2mm}
-\min\nolimits_{\bm{\alpha}}\|\mathbf{y}-\bm{D}\bm{\alpha}\|_{2}^{2}+\sum\nolimits_{j=1}^{3p^2}\lambda_{j}|\bm{\alpha}_{j}|.
+\begin{equation}
+\label{equ8-1}
+\min\nolimits_{\bm{\alpha}}\|\bm{y}-\bm{D}\bm{\alpha}\|_{2}^{2}+\sum\nolimits_{j=1}^{3p^2}\lambda_{j}|\bm{\alpha}_{j}|.
 \end{equation}
 Since $\bm{D}$ is an orthogonal matrix, problem (\ref{equ14}) is equivalent to:
-\vspace{-2mm}
-\begin{equation}\label{equ15}
-\vspace{-2mm}
-\min\nolimits_{\bm{\alpha}}\|\bm{D}^{T}\mathbf{y}-\bm{\alpha}\|_{2}^{2}+\sum\nolimits_{j=1}^{3p^2}\lambda_{j}|\bm{\alpha}_{j}|.
+\begin{equation}
+\label{equ8-2}
+\min\nolimits_{\bm{\alpha}}\|\bm{D}^{T}\bm{y}-\bm{\alpha}\|_{2}^{2}+\sum\nolimits_{j=1}^{3p^2}\lambda_{j}|\bm{\alpha}_{j}|.
 \end{equation}
-For simplicity, we denote $\mathbf{z} = \mathbf{D^{T}y}$.\ Here we have $\lambda_{j}>0$, $j=1,...,3p^2$, then problem (\ref{equ15}) can be written as:
-\vspace{-2mm}
-\begin{equation}\label{equ16}
-\vspace{-2mm}
-\min\nolimits_{\boldsymbol{\alpha}}\sum\nolimits_{j=1}^{3p^2}((\mathbf{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|).
+For simplicity, we denote $\bm{z} = \bm{D^{T}y}$.\ Here we have $\lambda_{j}>0$, $j=1,...,3p^2$, then problem (\ref{equ15}) can be written as:
+\begin{equation}
+\label{equ8-3}
+\min\nolimits_{\boldsymbol{\alpha}}\sum\nolimits_{j=1}^{3p^2}((\bm{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|).
 \end{equation}
 The problem (\ref{equ16}) is separable w.r.t. each $\bm{\alpha}_{j}$ and hence can be simplified to $3p^2$ independent scalar minimization problems:
-\vspace{-2mm}
-\begin{equation}\label{equ17}
-\vspace{-2mm}
-\min\nolimits_{\bm{\alpha}_{j}}(\mathbf{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|,
+\begin{equation}
+\label{equ8-4}
+\min\nolimits_{\bm{\alpha}_{j}}(\bm{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|,
 \end{equation}
-where $j=1,...,3p^2$. Taking derivative of $\boldsymbol{\alpha}_{j}$ in problem (\ref{equ17}) and setting the derivative to be zero. There are two cases for the solution.
+where $j=1,...,3p^2$. Taking derivative of $\bm{\alpha}_{j}$ in problem (\ref{equ17}) and setting the derivative to be zero. There are two cases for the solution.
 
 (a) If $\bm{\alpha}_{j}\ge 0$, we have 
 $
-2(\bm{\alpha}_{j}-\mathbf{z}_{j})+\lambda_{j}=0,
+2(\bm{\alpha}_{j}-\bm{z}_{j})+\lambda_{j}=0,
 $ and the solution is
 $
-\hat{\bm{\alpha}}_{j}=\mathbf{z}_{j}-\frac{\lambda_{j}}{2} \ge 0.
+\hat{\bm{\alpha}}_{j}=\bm{z}_{j}-\frac{\lambda_{j}}{2} \ge 0.
 $
-So $\mathbf{z}_{j}\ge\frac{\lambda_{j}}{2}> 0$, and the solution $\hat{\bm{\alpha}}_{j}$ can be written as
+So $\bm{z}_{j}\ge\frac{\lambda_{j}}{2}> 0$, and the solution $\hat{\bm{\alpha}}_{j}$ can be written as
 $
-\hat{\bm{\alpha}}_{j}=\text{sgn}(\mathbf{z}_{j})*(|\mathbf{z}_{j}|-\frac{\lambda_{j}}{2}),
+\hat{\bm{\alpha}}_{j}=\text{sgn}(\bm{z}_{j})*(|\bm{z}_{j}|-\frac{\lambda_{j}}{2}),
 $
 where $\text{sgn}(\bullet)$ is the sign function. 
 
 (b) If $\bm{\alpha}_{j}< 0$, we have
 $
-2(\bm{\alpha}_{j}-\mathbf{z}_{j})-\lambda_{j}=0
+2(\bm{\alpha}_{j}-\bm{z}_{j})-\lambda_{j}=0
 $
 and the solution is
 $
-\hat{\bm{\alpha}}_{j}=\mathbf{z}_{j}+\frac{\lambda_{j}}{2} < 0.
+\hat{\bm{\alpha}}_{j}=\bm{z}_{j}+\frac{\lambda_{j}}{2} < 0.
 $
-So $\mathbf{z}_{j}<-\frac{\lambda_{j}}{2}< 0$, and the solution $\hat{\bm{\alpha}}_{j}$ can be written as
+So $\bm{z}_{j}<-\frac{\lambda_{j}}{2}< 0$, and the solution $\hat{\bm{\alpha}}_{j}$ can be written as
 $
-\hat{\bm{\alpha}}_{j}=\text{sgn}(\mathbf{z}_{j})*(-\mathbf{z}_{j}-\frac{\lambda_{j}}{2})=\text{sgn}(\mathbf{z}_{j})*(|\mathbf{z}_{j}|-\frac{\lambda_{j}}{2}).
+\hat{\bm{\alpha}}_{j}=\text{sgn}(\bm{z}_{j})*(-\bm{z}_{j}-\frac{\lambda_{j}}{2})=\text{sgn}(\bm{z}_{j})*(|\bm{z}_{j}|-\frac{\lambda_{j}}{2}).
 $
 
 In summary, we have the final solution of the weighted sparse coding problem (\ref{equ14}) as:
 \vspace{-1mm}
 \begin{equation}\label{equ18}\vspace{-1mm}
-\hat{\bm{\alpha}}= \text{sgn}(\mathbf{D^{T}y})\odot \text{max}(|\mathbf{D^{T}y}|-\bm{\lambda},0),
+\hat{\bm{\alpha}}= \text{sgn}(\bm{D^{T}y})\odot \text{max}(|\bm{D^{T}y}|-\bm{\lambda},0),
 \end{equation}
 where $\bm{\lambda} = \frac{1}{2}[\lambda_{1},\lambda_{2},...,\lambda_{3p^2}]^{\top}$ is the vector of regularization parameter and $\odot$ means element-wise multiplication.
 
