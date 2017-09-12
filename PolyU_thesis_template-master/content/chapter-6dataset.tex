@@ -33,6 +33,8 @@ The third work in this direction is recently proposed in the \cite{dnd2017}. In 
 
 \section{Dataset Construction}
 
+\subsection{Preliminary Analysis}
+
 In order to take more comprehensive comparison on the existing denoising methods, we propose to construct a new dataset which eliminates the problem mentioned above. The camera we use are the Canon 5D, Nikon D800, Olympus, and Sony A7II. The brands are more versatile than the above mentioned three datasets. In addition, we use the raw data of mobile phone. 
 
 There are several problems hindering us from touching the raw data of mobile phone. The first one is that most mobile phones do not support the raw data output. Even the raw data of  iPhone is processed before being output, not the original one. Here, we use the raw data of the iPhone and process it for the final RGB images. The second problem is that it is hard to capture the static image with hundreds of repetition with mobile phone. The solution is that we can use apple watch to remote control the iPhone for image capturing. 
@@ -105,22 +107,17 @@ Given fixed amount of exposure and aperture, enhancing the camera sensitivity wi
     \label{fig6-1}
 \end{figure}
 
+
+\subsection{The Proposed Dataset}
+To alleviate the limitations of the previous dataset, we propose to further construct a new dataset which are: 1) contains more camera brands with more realistic noise sources;  2) capture the images with more camera settings; 3) capture more realistic scenes with real objects; 4) capture both the raw data and sRGB data for comparison analysis on the noise.
+
+
+
 In Figure \ref{fig6-2}, we show some results of 
 
 
 
-
-\section{Analysis and Discussion}
-
-
-
-
-
 \section{Experiments}
-
-
-
-
 
 
 
