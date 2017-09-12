@@ -187,8 +187,7 @@ In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each
 \textbf{for} $t = 1:IteNum$ \textbf{do}
 \\
 2. Iterative Regularization:
-\\
-\quad\quad\quad $\bm{y}^{(t)}=\hat{\bm{x}}^{(t-1)}+\delta(\bm{y}-\bm{y}^{(t-1)})$;
+$\bm{y}^{(t)}=\hat{\bm{x}}^{(t-1)}+\delta(\bm{y}-\bm{y}^{(t-1)})$;
 \\
 3. Estimate the standard deviation of noise;
 \\
@@ -204,9 +203,7 @@ In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each
 \\
 \quad\textbf{end for}
 \\
-8. Aggregate the recovered PGs to form the recovered
-\\
-\quad image $\hat{\bm{x}}^{(t)}$;
+8. Aggregate the recovered PGs to form the recovered image $\hat{\bm{x}}^{(t)}$;
 \\
 \textbf{end for}
 \\

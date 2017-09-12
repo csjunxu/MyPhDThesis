@@ -5,7 +5,7 @@
 
 \section{Closed-Form Solution of the Weighted Sparse Coding Problem}
 
-For notation simplicity, we ignore the indices $n,m,t$ in problem (\ref{equ7}).\ It turns into the following weighted sparse coding problem:
+For notation simplicity, we ignore the indices $n,m,t$ in problem (\ref{equ2-}).\ It turns into the following weighted sparse coding problem:
 \begin{equation}
 \label{equ8-1}
 \min\nolimits_{\bm{\alpha}}\|\bm{y}-\bm{D}\bm{\alpha}\|_{2}^{2}+\sum\nolimits_{j=1}^{3p^2}\lambda_{j}|\bm{\alpha}_{j}|.
@@ -20,7 +20,7 @@ For simplicity, we denote $\bm{z} = \bm{D^{T}y}$.\ Here we have $\lambda_{j}>0$,
 \label{equ8-3}
 \min\nolimits_{\boldsymbol{\alpha}}\sum\nolimits_{j=1}^{3p^2}((\bm{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|).
 \end{equation}
-The problem (\ref{equ16}) is separable w.r.t. each $\bm{\alpha}_{j}$ and hence can be simplified to $3p^2$ independent scalar minimization problems:
+The problem (\ref{equ8-1}) is separable w.r.t. each $\bm{\alpha}_{j}$ and hence can be simplified to $3p^2$ independent scalar minimization problems:
 \begin{equation}
 \label{equ8-4}
 \min\nolimits_{\bm{\alpha}_{j}}(\bm{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|,
