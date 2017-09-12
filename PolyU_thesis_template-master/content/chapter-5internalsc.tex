@@ -249,7 +249,7 @@ where $\mathcal{S}_{\lambda}(x) = \text{sign}(x)\max(x-\lambda, 0)$ is the soft-
 =
 \bm{\Delta}_{k} + \rho_{k}(\bm{C}_{k+1}-\bm{Z}_{k+1}).
 \end{equation}
-(4) \textbf{Update $\rho$}: $\rho_{k+1}= \mu*\rho_{k}$, where $\mu>1$.
+(4) \textbf{Update $\rho$}: $\rho_{k+1}= \mu\rho_{k}$, where $\mu>1$.
 
 The above alternative updating steps are repeated until the convergence condition is satisfied or the number of iterations exceeds a preset threshold $K_{1}$.\ The ADMM algorithm converges when $\|\bm{C}_{k+1}-\bm{Z}_{k+1}\|_{F}\le \text{Tol}$, $\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}\le \text{Tol}$, and $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}\le \text{Tol}$ are simultaneously satisfied, where $\text{Tol}>0$ is a small tolerance number.\ We summarize the updating procedures in Algorithm 1.\ The convergence analysis of Algorithm 1 is given in Theorem \ref{th5-1}.\ Note that here we employ an unbounded sequence of $\{\rho_{k}\}$, i.e., $\lim_{k \to \infty} \rho_{k}=+\infty$, to make sure that Algorithm 1 converges. In fact, since the optimization problem (\ref{equ5-10}) is convex, it is naturally convergent under the ADMM \cite{admm} framework.
 
@@ -289,7 +289,7 @@ Given $\rho_{k+1}=\mu\rho_{k}$ ($\rho_{0}>0$) for $k\ge0$ and $\mu>1$, the seque
 \lim_{k \to +\infty} \|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0.
 \end{align}
 \end{theorem}
-The proof of Theorem \ref{th5-1} can be found in the supplementary file.\ Though Theorem \ref{th5-1} could not directly guarantee $\lim_{k \to +\infty}\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}=0$ and $\lim_{k \to +\infty}\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0$, it is empirically found that both $\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}$ and $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}$ will approach to $0$ simultaneously in all our tests. In Figure \ref{f1}, we can see that the maximal errors in $|\bm{C}_{k+1}-\bm{Z}_{k+1}|,|\bm{C}_{k+1}-\bm{C}_{k}|,|\bm{Z}_{k+1}-\bm{Z}_{k}|$ approach to $0$ simultaneously in 50 iterations.
+The proof of Theorem \ref{th5-1} can be found in the supplementary file.\ Though Theorem \ref{th5-1} could not directly guarantee $\lim_{k \to +\infty}\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}=0$ and $\lim_{k \to +\infty}\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0$, it is empirically found that both $\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}$ and $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}$ will approach to $0$ simultaneously in all our tests. In Figure \ref{fig5-1}, we can see that the maximal errors in $|\bm{C}_{k+1}-\bm{Z}_{k+1}|,|\bm{C}_{k+1}-\bm{C}_{k}|,|\bm{Z}_{k+1}-\bm{Z}_{k}|$ approach to $0$ simultaneously in 50 iterations.
 
 
 \begin{table}[htb]
