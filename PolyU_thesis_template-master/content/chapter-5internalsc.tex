@@ -289,7 +289,7 @@ Given $\rho_{k+1}=\mu\rho_{k}$ ($\rho_{0}>0$) for $k\ge0$ and $\mu>1$, the seque
 \lim_{k \to +\infty} \|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0.
 \end{align}
 \end{theorem}
-The proof of Theorem \ref{th1} can be found in the supplementary file.\ Though Theorem \ref{th5-1} could not directly guarantee $\lim_{k \to +\infty}\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}=0$ and $\lim_{k \to +\infty}\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0$, it is empirically found that both $\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}$ and $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}$ will approach to $0$ simultaneously in all our tests. In Figure \ref{f1}, we can see that the maximal errors in $|\bm{C}_{k+1}-\bm{Z}_{k+1}|,|\bm{C}_{k+1}-\bm{C}_{k}|,|\bm{Z}_{k+1}-\bm{Z}_{k}|$ approach to $0$ simultaneously in 50 iterations.
+The proof of Theorem \ref{th5-1} can be found in the supplementary file.\ Though Theorem \ref{th5-1} could not directly guarantee $\lim_{k \to +\infty}\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}=0$ and $\lim_{k \to +\infty}\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0$, it is empirically found that both $\|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}$ and $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}$ will approach to $0$ simultaneously in all our tests. In Figure \ref{f1}, we can see that the maximal errors in $|\bm{C}_{k+1}-\bm{Z}_{k+1}|,|\bm{C}_{k+1}-\bm{C}_{k}|,|\bm{Z}_{k+1}-\bm{Z}_{k}|$ approach to $0$ simultaneously in 50 iterations.
 
 
 \begin{table}[htb]
@@ -301,12 +301,7 @@ The proof of Theorem \ref{th1} can be found in the supplementary file.\ Though T
 \hline
 \textbf{Input:} $\bm{Y},\bm{W}_{1},\bm{W}_{2},\bm{W}_{3}$, $\mu$, $\text{Tol}$, $K_{1}$;
 \\
-\textbf{Initialization:} $\bm{C}_{0}=\bm{Z}_{0}=\bm{\Delta}_{0}=\bm{0}$, 
-\\
-\qquad
-\qquad
-\qquad
-$\rho_{0}>0$, \text{T} = \text{False}, $k=0$; 
+\textbf{Initialization:} $\bm{C}_{0}=\bm{Z}_{0}=\bm{\Delta}_{0}=\bm{0}$, $\rho_{0}>0$, \text{T} = \text{False}, $k=0$; 
 \\
 \textbf{While} (\text{T} == \text{false}) \textbf{do}
 \\
@@ -315,8 +310,6 @@ $\rho_{0}>0$, \text{T} = \text{False}, $k=0$;
 2. Update $\bm{Z}_{k+1}$ by soft thresholding (\ref{equ5-16});
 \\
 3. Update $\bm{\Delta}_{k+1}$ as
-\\
-\qquad
 $
 \bm{\Delta}_{k+1}
 =
@@ -362,10 +355,7 @@ $;
 \\
 3.\quad Search nonlocal similar patches $\bm{Y}_{j}$;
 \\
-4.\quad Apply the TWSC model (\ref{equ5-3}) to $\bm{Y}_{j}$ and
-\\
-\quad \quad 
-obtain the estimated $\bm{X}_{j}=\bm{D}\bm{C}$;
+4.\quad Apply the TWSC model (\ref{equ5-3}) to $\bm{Y}_{j}$ and obtain the estimated $\bm{X}_{j}=\bm{D}\bm{C}$;
 \\
 \quad\textbf{end for}
 \\
