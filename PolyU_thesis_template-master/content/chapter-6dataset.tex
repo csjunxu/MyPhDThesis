@@ -144,26 +144,8 @@ In Figure \ref{fig6-2}, we show some samples of the realistic noisy images we ca
 
 \section{Conclusion}
 
-To benchmark denoising algorithms on real photographs,
-we introduced an acquisition procedure based on pairs of
-images of the same scene, captured with different analog
-gains and exposure time. While in theory the per-pixel
-mean intensity should stay constant, in practice we encountered
-residual errors. To derive ground-truth data, we proposed
-and evaluated a procedure for handling residual errors
-stemming from inaccurate gain and exposure time changes,
-relying on a novel heteroscedastic Tobit regression model.
-We also correct for lighting changes in a transformed space,
-as well as spatial misalignments. Our experiments showed
-the efficacy of this post-processing on simulated data, as
-well as its necessity on real photographs. We will make
-our novel ground-truth dataset of real photographs publicly
-available as a benchmark. We used it for evaluating various
-denoising algorithms and observed that BM3D continues to
-outperform recent denoising methods on real photographs,
-which is in contrast to findings on previously considered
-synthetic settings. More generally, our analysis revealed
-that the common scientific practice for evaluating denoising
+To benchmark denoising algorithms on real photographs, we introduced an acquisition procedure based on pairs of images of the same scene, captured with different analog
+gains and exposure time. While in theory the per-pixel mean intensity should stay constant, in practice we encountered residual errors. To derive ground-truth data, we proposed and evaluated a procedure for handling residual errors stemming from inaccurate gain and exposure time changes, relying on a novel heteroscedastic Tobit regression model. We also correct for lighting changes in a transformed space, as well as spatial misalignments. Our experiments showed the efficacy of this post-processing on simulated data, as well as its necessity on real photographs. We will make our novel ground-truth dataset of real photographs publicly available as a benchmark. We used it for evaluating various denoising algorithms and observed that BM3D continues to outperform recent denoising methods on real photographs, which is in contrast to findings on previously considered synthetic settings. More generally, our analysis revealed that the common scientific practice for evaluating denoising
 techniques has rather limited relevance for realistic settings.
 
 
