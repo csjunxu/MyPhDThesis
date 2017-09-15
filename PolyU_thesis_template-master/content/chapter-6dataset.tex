@@ -129,7 +129,9 @@ In Figure \ref{fig6-2}, we show some samples of the realistic noisy images we ca
 
 \section{Experiments}
 
-To better illustrate the effectiveness of existing image denising methods, we apply the competing methods on the proposed new dataset. Since many existing methods are very slow in denoising large images (megapixel level), we crop 10 bounding boxes of $512\times512$ pixels from each image in our dataset, yielding overall 1000 test images. These images share very small overlap at contents.
+To better illustrate the effectiveness of existing image denising methods, we apply the competing methods on the proposed new dataset. Since many existing methods are very slow in denoising large images (megapixel level), we crop 10 bounding boxes of $512\times512$ pixels from each image in our dataset, yielding overall 1000 test images. These images share very small (less than $10\%$) overlap at contents.
+
+The compared image denoising methods include the famous BM3D \cite{bm3d}, K-SVD \cite{ksvd}, LSSC \cite{lssc}, Expected Patch Log Likelihood (EPLL) \cite{EPLL}, multi-layer perception (MLP) \cite{mlp}, Nonlocally Centralized Sparse Representations (NCSR) \cite{ncsr}, Cascades of Shrinkage Fileds (CSF) \cite{csf}, Trainable Nonlinear Reactive Diffusion (TNRD) \cite{trd}, the residual network based method DnCNN \cite{dncnn}, the ``Noise Clinic'' method \cite{nc}, the commercial software Neat Image \cite{neatimage}, and our proposed methods PGPD \cite{pgpd}, guided image denoising \cite{guided}, Multi-channel Weighted Nuclear Norm Minimization (MCWNNM) \cite{mcwnnm}, the Trilateral Weighted Sparse Coding (TWSC) \cite{twsc}
 
 
 
