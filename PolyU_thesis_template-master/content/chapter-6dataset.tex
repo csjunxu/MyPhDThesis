@@ -152,7 +152,10 @@ In summary, we capture totqally 40 different scenes by using 5 different cameras
 
 
 \textbf{Experimental Results and Discussion.}
-The experimental results are listed in Table \ref{tab6-1}
+The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-1}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the realistic noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being infoerior than the methods designed for realistic nosiy images.
+
+
+
 \begin{table}[hbp]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset.}
 \scriptsize
@@ -180,10 +183,10 @@ Metric
 \textbf{CSF}
 \\
 \hline
-PSNR &  &  &  &  &  &  &  & 
+PSNR & 37.40 &  &  &  &  &  & 38.07 & 
 \\
 \hline
-SSIM &  &  &  &  &  &  &  & 
+SSIM & 0.9526 &  &  &  &  &  & 0.9615 & 
 \\
 \hline
 Metric
@@ -205,10 +208,10 @@ Metric
 \textbf{TWSC}
 \\
 \hline
-PSNR &  &  &  &  &  &  &  & 
+PSNR & 38.17 &  &  &  &  &  &  & 
 \\
 \hline
-SSIM &  &  &  &  &  &  &  & 
+SSIM & 0.9640 &  &  &  &  &  &  & 
 \\
 \hline
 \end{tabular*}
@@ -220,7 +223,11 @@ SSIM &  &  &  &  &  &  &  &
 
 \section{Conclusion}
 
-To benchmark denoising algorithms on real photographs, we construct a new dataset which contains comprehensive realistic noisy images of different natural scenes. In the proposed new dataset, we take more analysis on the camera brands, camera settings, more comprehensive realistic scenes, and ``Ground Truth'' image generation, etc. We take comprehensive study on the denoising experimental results by evaluating the existing state-of-the-art denoising methods with our proposed methods. The results demonstrate that the proposed methods are more robust to the existing competing methods on the newly constructed dataset. Our experiments also show the efficacy of our proposed TWSC method. We will make our novel ground-truth dataset of real photographs publicly available as a benchmark. What's more, our analysis reveals that the common scientific practice for evaluating the image denoising methods has rather limited relevance for realistic settings, which need huge potential as well as demand for future research.
+To evaluate the existing denoising algorithms on real photographs and further promote new emerging algorithms for processing realistic noise, we construct a novel dataset which contains comprehensive realistic noisy images of different natural scenes. These images are captured by different cameras under different camera settings. I first select the baseline image by computing the average image. Then I delete the images which are not in consistant illumiance with the baseline image. Finally, I delete the images which are in misalignment with the baseline images. The whole process are reasonable with rational operations. I use the 500 images which are close to the baseline image on illuminance. 
+
+
+
+ We take comprehensive study on the denoising experimental results by evaluating the existing state-of-the-art denoising methods with our proposed methods. The results demonstrate that the proposed methods are more robust to the existing competing methods on the newly constructed dataset. Our experiments also show the efficacy of our proposed TWSC method. We will make our novel ground-truth dataset of real photographs publicly available as a benchmark. What's more, our analysis reveals that the common scientific practice for evaluating the image denoising methods has rather limited relevance for realistic settings, which need huge potential as well as demand for future research.
 
 
 
