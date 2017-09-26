@@ -14,7 +14,7 @@ In the second work, I proposed to extend the proposed patch group prior to reali
 
 In the third work, I proposed a multi-channel model for real color image denoising. The multi-channel scheme helps to consider the different noise statistics in different channels of the sRGB images. Since the weighted nuclear norm minimization (WNNM) model has already achieved state-of-the-art performance on the AWGN noise removal, I extended the WNNM model and the proposed Multi-channel WNNM (MCWNNM) model achieved state-of-the-art performance on both synthetic and real color image denoising problems. 
 
-In the fourth work, I proposed to consider the fact that the noise is different in each local region of the 
+In the fourth work, I proposed to consider the fact that the noise statistics in different local region of the noisy image. To consider the different noise levels of local region, we introduced two weighting matirces related to the noise statistics of different channels and patches. The proposed trilateral sparse coding scheme can be solved by variable splitting method, and the overall model can be solved alternatively under the famous ADMM framework. The convergence of the ADMM algorithm can be guaranteed since the overall model is convex.
 
 
 
