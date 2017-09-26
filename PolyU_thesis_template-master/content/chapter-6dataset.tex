@@ -333,7 +333,7 @@ Since the images we captured are in very large size, we crop 100 smaller parts f
 \textbf{Experimental Results and Discussion.}
 The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-1}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the realistic noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being infoerior than the methods designed for realistic nosiy images.
 
-Some visual comparisons are listed in Figures \ref{fig6-1}-\ref{fig6-10}, from which one can see that our proposed TWSC method removes the noise while still maintains the details. This is because that the TWSC considers different noise levels for each local patch as well as each channel. Hence, the TWSC can adaptively process each local region of the noisy images according to the noise level in that region. This property makes the proposed TWSC method more flexible than the other state-of-the-art image denoising methods.
+Some visual comparisons are listed in Figures \ref{fig6-3}-\ref{fig6-10}, from which one can see that our proposed TWSC method removes the noise while still maintains the details. This is because that the TWSC considers different noise levels for each local patch as well as each channel. Hence, the TWSC can adaptively process each local region of the noisy images according to the noise level in that region. This property makes the proposed TWSC method more flexible than the other state-of-the-art image denoising methods.
 
 \begin{table}[hbp]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset.}
