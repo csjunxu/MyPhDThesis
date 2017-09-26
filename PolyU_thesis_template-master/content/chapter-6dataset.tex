@@ -337,8 +337,6 @@ Some visual comparisons are listed in Figures \ref{fig6-4}-\ref{fig6-13}, from w
 
 Contrast to the proposed methods, the traditional denoising methods (e.g., LSSC, EPLL, NCSR, WNNM, and PGPD) designed for grey scale image would generate artifacts since they process each channel of the RGB image individually \cite{srcolor}. They cannot deal with the images which have different noise statistics in different channels as well as different local region. Hence, these methods would fail to process the realistic noisy images captured from real-world scenes. On the other hand, the discriminative based methods (e.g., MLP, CSF, TNRD, and DnCNN) are trained on paired clean and noisy images. These methods are largely depends on the training dataset they used in training, and would fail to achieve good performance when the noise in the testing images is different from the noise in the training images.
 
-
-
 \begin{table}[hbp]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset.}
 \scriptsize
