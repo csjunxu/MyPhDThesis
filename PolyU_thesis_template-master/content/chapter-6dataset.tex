@@ -152,7 +152,69 @@ In summary, we capture totqally 40 different scenes by using 5 different cameras
 
 
 \textbf{Experimental Results and Discussion.}
+The experimental results are listed in Table \ef{tab6-1}
+\begin{table}[hbp]
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset.}
+\scriptsize
+\label{tab6-1}
+\begin{center}
+\renewcommand\arraystretch{1.2}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}ccccccccc}
+\hline
+Metric
+&
+\textbf{CBM3D}
+&
+\textbf{KSVD}
+&
+\textbf{LSSC}
+&
+\textbf{EPLL}
+&
+\textbf{NCSR}
+&
+\textbf{WNNM}
+&
+\textbf{MLP}
+&
+\textbf{CSF}
 
+\\
+\hline
+\multirow{2}{*}{20}
+& PSNR & 30.95 & 30.95 & 30.95 & 31.20 & 31.30 & 31.36 &  30.90  &  31.15 
+\\
+\cline{2-10}
+& SSIM & 0.8552  & 0.8561 & 0.8536 & 0.8580 & 0.8602 & 0.8631 &  0.8484 & 0.8581
+\\
+\hline
+Metric
+&
+\textbf{TNRD}
+&
+\textbf{DnCNN}
+&
+\textbf{NC}
+&
+\textbf{NI}
+&
+\textbf{PGPD}
+&
+\textbf{Guided}
+&
+\textbf{MCWNNM}
+&
+\textbf{TWSC}
+\multirow{2}{*}{100}
+& PSNR & 23.78 & 23.59 & 23.49 & 24.03 & 22.56 & 17.07 &  23.62 & 24.06
+\\
+\cline{2-10}
+& SSIM & 0.6336 & 0.6299  & 0.6388 & 0.6455 & 0.4766 & 0.2367 & 0.6371  & 0.6538
+\\
+\hline
+\end{tabular*}
+\end{center}
+\end{table}
 
 
 
