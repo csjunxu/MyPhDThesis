@@ -16,10 +16,11 @@ In the third work, I proposed a multi-channel model for real color image denoisi
 
 In the fourth work, I proposed to consider the fact that the noise statistics in different local region of the noisy image. To consider the different noise levels of local region, we introduced two weighting matirces related to the noise statistics of different channels and patches. The proposed trilateral sparse coding scheme can be solved by variable splitting method, and the overall model can be solved alternatively under the famous ADMM framework. The convergence of the ADMM algorithm can be guaranteed since the overall model is convex.
 
-
+In the final work, I constructed a novel realistic noisy image dataset. In the proposed dataset, I collect 40 images of diffrent scenes. To generate the ``ground truth'' clean images, I captured each scene for over 500 (around 1000) times. For each scene, I sorted the images according to the averaged illuminance. The image lying in the middle of the sorting is regarded as the baseline image. Then I delete the images which are darker or brighter than the baseline images. I also remove the images which are misaligned to the baseline image. I select 500 images in the finally remained images. The constrcuted dataset is called PolyU Realistic Image dataset. I evaluate the existing denoising methods and the proposed methods introduced previously. The experimental results demonstrated that the proposed TWSC method achieved better denoising performance than the other state-of-the-art methods due to the reason of considering the different noise statistics in different local region as well as different channels.
 
 
 
 \section{Future Work}
 \label{sec:conclusions:future}
 
+In the future work, I will study how the constructed dataset can be used to train a discriminative learning based denoising methods. I will also consider how to apply the proposed models to other image restoration tasks such as image super-resolution and image deblurring.
