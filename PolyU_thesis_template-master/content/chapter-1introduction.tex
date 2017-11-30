@@ -106,10 +106,16 @@ During the last decade, a few methods have been proposed for real color image de
 Despite the success of these methods, they have many limitations. On one hand, as suggested in \cite{Liu2008,noiseclinic}, Gaussian noise, assumed by \cite{fullyblind,rabie2005robust,Liu2008}, may be inflexible for more complex noise in real images. Hence, better approximation to the noise could bring better image denoising performance \cite{Liu2008,noiseclinic}. Based on these observations, it is still needed to design an robust and effective model for blind image denoising. Few assumption and no parameter tuning would bring extra points.
 
 
-\section{Contribution}
+\section{Contribution and Thesis Organization}
 \label{sec:intro:new}
+\begin{figure}
+\centering
+\includegraphics[width=0.74\linewidth]{images/ThesisOrganization.pdf}
+\caption{Thesis organization.}
+\label{fig1-1}
+\end{figure}
 
-This thesis is mainly consisted of five projects I have done during my PhD study, during which I focus on designing new and better image denoising algorithms, aiming at proposing cutting-edge techniques for image denoising and image modeling. 
+This thesis is mainly consisted of five projects I have done during my PhD study, during which I focus on designing new and better image denoising algorithms, aiming at proposing cutting-edge techniques for image denoising and image modeling. The organization of the thesis is illustrated in Figure 1.1.
 
 \textbf{In the first work}, I propose to learn the external NSS priors and apply the learned model on denoising AWGN noise. This is very different to the previous methods, which can be divided into three types: exploiting internal patch prior based methods \cite{ksvd,ple}, exploiting internal NSS prior based methods \cite{bm3d,lssc,ncsr,wnnm}, and learning external patch prior based methods \cite{epll}. The proposed method achieves state-of-the-art performance on AWGN denoising on both effectiveness and efficiency. Basing on the success on the synthetic noise removal, I propose to exploit the power of the NSS priors in natural images to deal with the complex realistic noise in real-world noisy images. Specifically, we propose three methods exploiting the NSS priors of natural images for real noisy image denoising, which can be introduced as follows.
 
