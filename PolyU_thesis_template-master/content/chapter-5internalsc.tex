@@ -3,6 +3,9 @@
 \chapter{A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising}
 \label{sec:internalsc}
 
+
+\section{Introduction}
+
 Image denoising aims to recover the clean image $\bm{x}$ from its noisy observation $\bm{y}=\bm{x}+\bm{n}$, where $\bm{n}$ is the corrupted noise. The denoising problem has been extensively studied in computer vision and machine learning, and numerous statistical image modeling and learning methods have been proposed in the past decades \cite{ksvd,bm3d,cbm3d,lssc,ncsr,wnnm,epll,pgpd,mlp,csf,tnrd,dncnn,
 Liu2008,noiseclinic,Zhu_2016_CVPR,crosschannel2016,neatimage}. Most of the existing methods \cite{ksvd,bm3d,cbm3d,lssc,ncsr,wnnm,epll,pgpd,mlp,csf,tnrd,dncnn} focus on additive white Gaussian noise (AWGN), which can be categorized into dictionary learning based methods \cite{ksvd}, nonlocal self-similarity based methods \cite{bm3d,cbm3d,lssc,ncsr,wnnm}, sparsity based methods \cite{ksvd,bm3d,cbm3d,lssc,ncsr}, low-rankness based methods \cite{wnnm}, generative learning based methods \cite{epll,pgpd}, and discriminative learning based methods \cite{mlp,csf,tnrd,dncnn}. However, the realistic noise in real-world images is much more complex than AWGN \cite{crosschannel2016} and varies with different cameras and camera settings (such as ISO, shutter speed, and aperture, etc.). Though have shown promising performance on AWGN noise removal, the above methods \cite{ksvd,bm3d,cbm3d,lssc,ncsr,wnnm,epll,pgpd,mlp,csf,tnrd,dncnn} will become much less effective when dealing with complex realistic noise.
 
