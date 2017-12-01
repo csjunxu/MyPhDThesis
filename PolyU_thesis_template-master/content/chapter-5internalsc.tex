@@ -460,7 +460,7 @@ We first compare the proposed TWSC with the state-of-the-art AWGN denoising meth
 
 The averaged PSNR and SSIM \cite{ssim} results are listed in Table \ref{tab5-1}.\ One can see that the proposed TWSC is only a little inferior to TNRD and DnCNN when $\sigma\le40$. Note that TNRD and DnCNN are trained on external and synthetic clean and noisy image pairs, which is unfair for comparison since TWSC only utilizes the tested noisy image. Besides, one can see that the proposed TWSC model works much better than the baseline method WSC, which proves that the weight matrix $\bm{W}_{2}$ can characterize better the noise statistics in local image patches. Due to limited space, we leave the visual comparisons of different methods in the supplementary file.
 
-In this section, we provide more comparisons of the competing methods on the 20 widely used images (listed in Fig. \ref{fig2-5}) in Figures \ref{fig5-2}--\ref{fig5-6}. The compared methods include BM3D \cite{bm3d}, LSSC \cite{lssc}, NCSR \cite{ncsr}, WNNM \cite{wnnm}, TNRD \cite{tnrd}, DnCNN \cite{dncnn}, and the baseline method WSC described in the main paper.
+In this section, we provide more comparisons of the competing methods on the 20 widely used images (listed in Fig. \ref{fig2-5}) in Figures \ref{fig5-2}--\ref{fig5-6}. The compared methods include BM3D \cite{bm3d}, LSSC \cite{lssc}, NCSR \cite{ncsr}, WNNM \cite{wnnm}, TNRD \cite{tnrd}, DnCNN \cite{dncnn}, and the baseline method WSC.
  
 \begin{table}[hbp]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on 20 gray level images corrupted by AWGN noise.}
