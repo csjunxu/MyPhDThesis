@@ -17,7 +17,7 @@ In this work, we construct a large dataset including the realistic images with r
 
 Currently, there are several work focus on benchmarking the denoising methods on real-world noisy images \cite{RENOIR2014,crosschannel2016,dnd2017}.
 
-As far as we know, the RENOIR dataset \cite{RENOIR2014} is the first dataset on real-world noisy images with ``ground truth'' noise-free images. It relies on taking sets of images of a static scene with different ISO values. However, the post-processing is less refined. Image pairs appear to exhibit spatial misalignment, the intensity transform does not model heteroscedastic noise, and low-frequency bias is not removed. In \cite{RENOIR2014}, experiments have been evaluated to validate that ignoring these sources of error significantly
+As far as we know, the RENOIR dataset \cite{RENOIR2014} is the first dataset on real-world noisy images with ``ground truth'' noise-free images. The cameras used in this dataset are Canon Rebel T3i, Canon S90, and Xiaomi T3i. The authors takes sets of images of a static scene with different ISO values. However, the post-processing is less refined. Image pairs appear to exhibit spatial misalignment, the intensity transform does not model heteroscedastic noise, and low-frequency bias is not removed. In \cite{RENOIR2014}, experiments have been evaluated to validate that ignoring these sources of error significantly
 affects the realism of the dataset. It is often useful to measure the noise characteristics of a sensor at a certain ISO level. \cite{RENOIR2014} proposes to illuminate the sensor with approximately constant irradiation and subsequently aggregates intensity measurements spatially. This is repeated for different irradiation levels to capture the intensity dependence of the noise. \cite{RENOIR2014} propose a less tedious capture protocol similar to ours, where multiple exposures of a static scene are used to aggregate the measurements at every pixel site temporally. The detailed description of this dataset is listed in Table \ref{tab6-1}. 
 
 \begin{table}[ht!]
@@ -44,13 +44,13 @@ ISO
 Exposure Time (s)
 \\
 \hline
-Nikon D700 & 100  & 1/1.3  & 3.2k & 1/40
-\\
-\hline
-Canon S90 & 100  & 3.2  & 640, 3.2k & auto
+Canon S90 & 100  & 3.2  & 640, 1k & Auto
 \\
 \hline   
-Canon T3i & 100 & Auto  & 3.2k, 6.4k & auto
+Canon T3i & 100 & Auto  & 3.2k, 6.4k & Auto
+\\
+\hline
+Xiaomi Mi3 & 100  & Auto  & 1.6k, 3.2k & Auto
 \\
 \hline
 \end{tabular*}
