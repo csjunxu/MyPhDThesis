@@ -13,7 +13,6 @@ Recently, several work have been proposed to fill in the gap of missing correspo
 
 In this work, we construct a large dataset including the realistic images with reasonably obtained corresponding ``ground truth'' images. The basic idea is to capture the same and unchanged scene for many (e.g., 500) times and compute their mean image, which can be roughly taken as the ``ground truth'' image for the real-world noisy images. The rational behind the activity is that for each pixel, the noise on it is generated randomly larger or smaller than the true pixel value, and taking the same pixel many times and compute the average value will approximate the truth pixel value and alleviate the randomness of the capturing process. Our experiments indicate that ignoring these sources of error will significantly affects the realism of the dataset. Moreover, the images in the dataset \cite{crosschannel2016} are based on $8$-bit demosaiced images while we work with untainted linear raw intensities.
 
-
 \section{Existing Datasets}
 
 Currently, there are several work focus on benchmarking the denoising methods on real-world noisy images \cite{RENOIR2014,crosschannel2016,dnd2017}.
@@ -30,24 +29,28 @@ affects the realism of the dataset. It is often useful to measure the noise char
 \renewcommand\arraystretch{1.2}
 \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}ccccc}
 \hline
+&\multicolumn{2}{c}{``Ground Truth''}
+&\multicolumn{2}{c}{Noisy Images}
+\\
+\hline
 Camera
 &
-\# img.
+ISO
 &
-Sensor size (mm)
-&
-Res. (Mpix)
+Exposure Time (s)
 &
 ISO
+&
+Exposure Time (s)
 \\
 \hline
-Nikon & 100  & $36\times24$  & 36.3  & 100-25.6k
+Nikon & 100  & 1/1.3  & 3200 & 1/40
 \\
 \hline
-S90 & 13  & $17.3\times13$  & 16.1  & 200-25.6k 
+S90 & 100  & 3.2  & 640, 3200 & auto
 \\
 \hline   
-T3i IV & 12 & $13.2\times8.8$  & 20.1  & 125-8k 
+T3i & 100 & Auto  & 3200, 6400 & auto
 \\
 \hline
 \end{tabular*}
