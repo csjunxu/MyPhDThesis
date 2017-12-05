@@ -25,8 +25,9 @@ The work of \cite{crosschannel2016} is the second work in this direction, in whi
 
 The work of \cite{dnd2017} is the third work along this direction. In contrast, \cite{dnd2017} employs the Tobit regression which allows to estimate the parameters of the noise process by having access to just two images. In order to obviate the unrealistic setting by developing a methodology for benchmarking denoising techniques on real photographs, the authors in \cite{dnd2017} capture 50 different pairs of images with different ISO settings and exposure time, in which the image captured with high ISO with shorter exposure time is taken as the real-world noisy image, while the image captured with low ISO with longer exposure time is roughly taken as the ``ground truth'' image. To derive better ``ground truth'', careful post-processing is designed in \cite{dnd2017}. The authors correct spatial misalignment, cope with the inaccuracies in the exposure parameters through a linear intensity transform based on a novel heteroscedastic Tobit regression model, and remove residual low-frequency bias that stems from minor illumination changes, etc. The proposed dataset is called the Darmstadt Noise Dataset (DND) \cite{dnd2017}, in which the cameras used for capturing the dataset include the Sony A7R, Olympus E-M10, Sony RX100 IV, and Huawei Nexus 6P. One interesting finding is that various recent techniques that perform well on synthetic noise are clearly outperformed by BM3D \cite{bm3d} on realistic photographs. This benchmark delineates realistic evaluation scenarios that deviate strongly from those commonly used in the scientific literature. The detailed description of this dataset is listed in Table \ref{tab6-2}. The authors of \cite{dnd2017} extract the linear raw intensities from the captured images using the free software \textsl{Dcraw}, and then normalize the image intensities to the range of $[0, 1]$ by scaling with the black and white level.
 
-\begin{table*}[ht!]
+\begin{table}[ht!]
 \caption{Cameras used for capturing the dataset \cite{dnd2017}.}
+\vspace{-5mm}
 \label{tab6-2}
 \begin{center}
 \small
@@ -44,21 +45,21 @@ Res. (Mpix)
 ISO
 \\
 \hline
-Sony A7R &   &   &   &  
+Sony A7R & 13  & $36\times24$  & 36.3  & 100-25.6k
 \\
 \hline
-Olympus E-M10 &   &   &   &  
+Olympus E-M10 & 13  & $17.3\times13$  & 16.1  & 200-25.6k 
 \\
 \hline   
-Sony RX100 IV &   &   &   &  
+Sony RX100 IV & 12 & $13.2\times8.8$  & 20.1  & 125-8k 
 \\
 \hline   
-Huawei Nexus 6P &   &   &   &  
+Huawei Nexus 6P & 12 & $6.17\times4.55$  & 12.3  & 100-6.4k 
 \\
 \hline
 \end{tabular*}
 \end{center}
-\end{table*}
+\end{table}
 
 
 \section{The Proposed Dataset}
