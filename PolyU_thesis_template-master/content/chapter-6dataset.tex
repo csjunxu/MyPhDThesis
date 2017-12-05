@@ -44,13 +44,13 @@ ISO
 Exposure Time (s)
 \\
 \hline
-Nikon & 100  & 1/1.3  & 3.2k & 1/40
+Nikon D700 & 100  & 1/1.3  & 3.2k & 1/40
 \\
 \hline
-S90 & 100  & 3.2  & 640, 3.2k & auto
+Canon S90 & 100  & 3.2  & 640, 3.2k & auto
 \\
 \hline   
-T3i & 100 & Auto  & 3.2k, 6.4k & auto
+Canon T3i & 100 & Auto  & 3.2k, 6.4k & auto
 \\
 \hline
 \end{tabular*}
@@ -142,7 +142,7 @@ Huawei Nexus 6P & 12 & $6.17\times4.55$  & 12.3  & 100-6.4k
 \subsection{Motivation}
 As discussed previously, existing real-world noisy image datasets \cite{RENOIR2014,crosschannel2016,dnd2017} have several limitations in evaluating existing and future image denoising methods. These limitations include camera brands, camera settings, and captured scenes, etc.
 
-\textbf{Limited Camera Brands}: The RENOIR dataset \cite{RENOIR2014} contains only the Canon camera (T3i and S90) and the mobile brand Xiaomi Mi3 for image collection. This dataset only contains one camera brand and one mobile brand. The dataset in \cite{crosschannel2016} contains two camera brands including Canon (5D) and Nikon (D600 and D800). The DND dataset \cite{dnd2017} employs cameras of Sony (A7R and RX100 IV),  Olympus (E-M10), and Huawei (Nexus 6P).
+\textbf{Limited Camera Brands}: The RENOIR dataset \cite{RENOIR2014} contains the Canon (T3i and S90) and the Nikon D700 for image collection. This dataset only contains one camera brand and one mobile brand. The dataset in \cite{crosschannel2016} contains two camera brands including Canon (5D) and Nikon (D600 and D800). The DND dataset \cite{dnd2017} employs cameras of Sony (A7R and RX100 IV),  Olympus (E-M10), and Huawei (Nexus 6P).
 
 \textbf{Limited Camera Settings}: In the RENOIR dataset \cite{RENOIR2014}, the reference images are all captured when the ISO=100. The ISO in noisy images are set as follows:  for Xiaomi Mi3, the ISO is set as 1600 or 3200; for Canon S90, the ISO is set as 640 or 1000; for Canon T3i, the ISO is set as 3200 or 6400. For all the cases except for the reference image of Canon S90, the exposure time are set as automatic. For Canon S90, the exposure time is set as 3.2 seconds. In the dataset \cite{crosschannel2016}, three different ISOs (e.g., 1600, 3200, and 6400) are employed when capturing images with Nikon D800, while ISO=3200 is utilized for Canon 5D and Nikon D600. The DND dataset \cite{dnd2017} contains ISOs of large range. The ranges of ISO are $100\sim25600$ for Sony A7R, $200\sim25600$ for Olympus E-M10, $125-8000$ for Sony RX100 IV, and $100\sim6400$ for Huawei Nexus 6P, respectively. 
 
