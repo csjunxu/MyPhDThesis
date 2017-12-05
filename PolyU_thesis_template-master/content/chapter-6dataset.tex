@@ -25,6 +25,77 @@ The work of \cite{crosschannel2016} is the second work in this direction, in whi
 
 The work of \cite{dnd2017} is the third work along this direction. In contrast, \cite{dnd2017} employs the Tobit regression which allows to estimate the parameters of the noise process by having access to just two images. In order to obviate the unrealistic setting by developing a methodology for benchmarking denoising techniques on real photographs, the authors in \cite{dnd2017} capture 50 different pairs of images with different ISO settings and exposure time, in which the image captured with high ISO with shorter exposure time is taken as the real-world noisy image, while the image captured with low ISO with longer exposure time is roughly taken as the ``ground truth'' image. To derive better ``ground truth'', careful post-processing is designed in \cite{dnd2017}. The authors correct spatial misalignment, cope with the inaccuracies in the exposure parameters through a linear intensity transform based on a novel heteroscedastic Tobit regression model, and remove residual low-frequency bias that stems from minor illumination changes, etc. The proposed dataset is called the Darmstadt Noise Dataset (DND) \cite{dnd2017}, in which the cameras used for capturing the dataset include the Sony A7R, Olympus E-M10, Sony RX100 IV, and Huawei Nexus 6P. One interesting finding is that various recent techniques that perform well on synthetic noise are clearly outperformed by BM3D \cite{bm3d} on realistic photographs. This benchmark delineates realistic evaluation scenarios that deviate strongly from those commonly used in the scientific literature. The detailed description of this dataset is listed in Table \ref{\tab6-2}. The authors of \cite{dnd2017} extract the linear raw intensities from the captured images using the free software \textsl{Dcraw}, and then normalize the image intensities to the range of $[0, 1]$ by scaling with the black and white level.
 
+\begin{table*}[ht!]
+\vspace{-3mm}
+\caption{Cameras used for capturing the dataset \cite{dnd2017}.}
+\vspace{-6mm}
+\label{tab6-2}
+\begin{center}
+\small
+\renewcommand\arraystretch{1.2}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cccccccccc}
+\Xhline{1pt}
+$\sigma_{n}$
+&
+Camera
+&
+\textbf{BM3D-SAPCA}
+&
+\textbf{LSSC}
+&
+\textbf{NCSR}
+&
+\textbf{WNNM}
+&
+\textbf{TNRD}
+&
+\textbf{DnCNN}
+&
+\textbf{WSC}
+&
+\textbf{TWSC}
+\\
+\Xhline{1pt}
+\multirow{2}{*}{20}
+& PSNR & 31.19 & 30.95 & 30.95 & 31.20 & 31.30 & 31.36 & 30.90 & 31.15 
+\\
+%\cline{2-10}
+& SSIM & 0.8601 & 0.8561 & 0.8536 & 0.8580 & 0.8602 & 0.8631 & 0.8484 & 0.8581
+\\
+\hline
+\multirow{2}{*}{40}
+& PSNR & 28.01 & 27.80 & 27.71 & 28.03 & 28.09 & 28.19 & 27.71 &  28.06
+\\
+%\cline{2-10}
+& SSIM & 0.7815 & 0.7750  & 0.7717 & 0.7784 & 0.7824 & 0.7877 & 0.7682 &  0.7833
+\\
+\hline   
+\multirow{2}{*}{60}
+& PSNR & 26.09 & 25.83 & 25.82 & 26.25 & 26.14 & 26.35 & 25.93 & 26.28
+\\
+%\cline{2-10}
+& SSIM & 0.7214 & 0.7086 & 0.7163 & 0.7249 & 0.7203 & 0.7307 & 0.7142 & 0.7309
+\\
+\hline   
+\multirow{2}{*}{80}
+& PSNR & 24.57 & 24.55 & 24.50 & 25.01 & 24.44 & 24.60 & 24.67 & 25.03
+\\
+%\cline{2-10}
+& SSIM & 0.6558 & 0.6624 & 0.6738 & 0.6838 & 0.6528 & 0.6516 & 0.6727 & 0.6891
+\\
+\hline   
+\multirow{2}{*}{100}
+& PSNR & 23.48 & 23.59 & 23.49 & 24.03 & 22.56 & 22.07 & 23.62 & 24.06
+\\
+%\cline{2-10}
+& SSIM & 0.6107 & 0.6299 & 0.6388 & 0.6455 & 0.4766 & 0.4367 & 0.6371 & 0.6538
+\\
+\Xhline{1pt}
+\end{tabular*}
+\vspace{-6mm}
+\end{center}
+\end{table*}
+
 
 \section{The Proposed Dataset}
 
