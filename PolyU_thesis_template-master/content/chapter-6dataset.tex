@@ -241,54 +241,9 @@ We first remove the images with unalignment with carefully subjective evaluation
 
 \subsection{Summary of the Dataset}
 
-\textbf{Examples of The Proposed Dataset:} In Figure \ref{fig6-2}, we show some samples of the real-world noisy images we captured in our new dataset. From which we can see that the scenes we captured are much more complex and comprehensive than the previous datasets. For example, we captured the scenes from different types of classrooms, various types of indoor scenes, and versaitile objects under fixed lighting conditions, etc. These scenes are largely different from the scenes of previous datasets. We choose images those look typically for daily photograpy, or those including regions which we believe to be challenging for the image denoising methods. 
+In our newly constructed dataset, we capture 40 different scenes with comprehensive contents with various object categories. In Figure \ref{fig6-2}, we show some samples of the real-world noisy images we captured in our new dataset. From which we can see that the scenes we captured are much more complex and comprehensive than the previous datasets. For example, we captured the scenes from different types of classrooms, various types of indoor scenes, and versaitile objects under fixed lighting conditions, etc. These scenes are largely different from the scenes of previous datasets. We choose images those look typically for daily photograpy, or those including regions which we believe to be challenging for the image denoising methods. 
 
-Since the images we captured are in very large size, we crop 100 smaller parts from the 40 scenes to evaluated the existing image denoising methods. Some examples of the cropped parts and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-3}. One can see that the cropped parts can represente the captured images in the whole dataset. Besides, one can see ththe ``ground truth'' image parts are clearly demonstrate the noise is removed from the corresponding cropped image parts. Hence, it is reasonable to emply this newly constructed dataset for evaluating the image denoising methods.
-
-\begin{table}[ht!]
-\caption{Cameras and camera settings for capturing the our new dataset.}
-\vspace{-5mm}
-\label{tab6-4}
-\begin{center}
-\small
-\renewcommand\arraystretch{1.2}
-\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}c|cc|cc|cc}
-\hline
-\multirow{2}{*}{Camera}
-&
-\multirow{2}{*}{Sensor size (mm)}
-&
-\multirow{2}{*}{\# img.}
-&
-\multicolumn{2}{c|}{``Ground Truth''}
-&
-\multicolumn{2}{c}{Noisy Images}
-\\
-&
-&
-&
-ISO
-&
-Time (s)
-&
-ISO
-&
-Time (s)
-\\
-\hline
-Canon S90 & $7.4\times5.6$ & 40 & 100  & 3.2  & 640, 1k & Auto 
-\\
-\hline   
-Canon T3i & $22.3\times14.9$ & 40 & 100 & Auto  & 3.2k, 6.4k & Auto
-\\
-\hline
-Xiaomi Mi3 & $4.69\times3.52$ & 40 & 100  & Auto  & 1.6k, 3.2k & Auto
-\\
-\hline
-\end{tabular*}
-\end{center}
-\end{table}
-
+Since the images we captured are very large, we crop 100 smaller parts from the 40 scenes to evaluated the existing image denoising methods. Some examples of the cropped parts and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-3}. One can see that the cropped parts can represente the captured images in the whole dataset. Besides, one can see ththe ``ground truth'' image parts are clearly demonstrate the noise is removed from the corresponding cropped image parts. Hence, it is reasonable to emply this newly constructed dataset for evaluating the image denoising methods. 
 
 \begin{figure}
     \centering
@@ -466,6 +421,51 @@ Xiaomi Mi3 & $4.69\times3.52$ & 40 & 100  & Auto  & 1.6k, 3.2k & Auto
     \label{fig6-3}
 \end{figure}
 
+The detailed description on cameras and camera settings are listed in Table \ref{tab6-4}. One can see that in our dataset, 
+
+\begin{table}[ht!]
+\caption{Cameras and camera settings for capturing the our new dataset.}
+\vspace{-5mm}
+\label{tab6-4}
+\begin{center}
+\small
+\renewcommand\arraystretch{1.2}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}c|cc|cc|cc}
+\hline
+\multirow{2}{*}{Camera}
+&
+\multirow{2}{*}{Sensor size (mm)}
+&
+\multirow{2}{*}{\# img.}
+&
+\multicolumn{2}{c|}{``Ground Truth''}
+&
+\multicolumn{2}{c}{Noisy Images}
+\\
+&
+&
+&
+ISO
+&
+Time (s)
+&
+ISO
+&
+Time (s)
+\\
+\hline
+Canon S90 & $7.4\times5.6$ & 40 & 100  & 3.2  & 640, 1k & Auto 
+\\
+\hline   
+Canon T3i & $22.3\times14.9$ & 40 & 100 & Auto  & 3.2k, 6.4k & Auto
+\\
+\hline
+Xiaomi Mi3 & $4.69\times3.52$ & 40 & 100  & Auto  & 1.6k, 3.2k & Auto
+\\
+\hline
+\end{tabular*}
+\end{center}
+\end{table}
 
 
 \section{Experiments}
