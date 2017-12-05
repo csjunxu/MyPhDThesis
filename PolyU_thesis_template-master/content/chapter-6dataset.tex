@@ -243,6 +243,8 @@ We first remove the images with unalignment with carefully subjective evaluation
 
 \textbf{Examples of The Proposed Dataset:} In Figure \ref{fig6-2}, we show some samples of the real-world noisy images we captured in our new dataset. From which we can see that the scenes we captured are much more complex and comprehensive than the previous datasets. For example, we captured the scenes from different types of classrooms, various types of indoor scenes, and versaitile objects under fixed lighting conditions, etc. These scenes are largely different from the scenes of previous datasets. We choose images those look typically for daily photograpy, or those including regions which we believe to be challenging for the image denoising methods. 
 
+Since the images we captured are in very large size, we crop 100 smaller parts from the 40 scenes to evaluated the existing image denoising methods. Some examples of the cropped parts and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-3}. One can see that the cropped parts can represente the captured images in the whole dataset. Besides, one can see ththe ``ground truth'' image parts are clearly demonstrate the noise is removed from the corresponding cropped image parts. Hence, it is reasonable to emply this newly constructed dataset for evaluating the image denoising methods.
+
 \begin{table}[ht!]
 \caption{Cameras and camera settings for capturing the our new dataset.}
 \vspace{-5mm}
@@ -287,7 +289,6 @@ Xiaomi Mi3 & $4.69\times3.52$ & 40 & 100  & Auto  & 1.6k, 3.2k & Auto
 \end{center}
 \end{table}
 
-Since the images we captured are in very large size, we crop 100 smaller parts from the 40 scenes to evaluated the existing image denoising methods. Some examples of the cropped parts and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-3}. One can see that the cropped parts can represente the captured images in the whole dataset. Besides, one can see ththe ``ground truth'' image parts are clearly demonstrate the noise is removed from the corresponding cropped image parts. Hence, it is reasonable to emply this newly constructed dataset for evaluating the image denoising methods.
 
 \begin{figure}
     \centering
