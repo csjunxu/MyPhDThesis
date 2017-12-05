@@ -223,11 +223,13 @@ Given fixed shutter speed and aperture, enhancing the camera sensitivity will ge
 
 \subsection{The Construction Process}
 
-To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}, we propose to further construct a new dataset which are: 1) contains more camera brands; 2) contain more carefully designed camera settings; 3) capture more real-world scenes with realistic objects; 4) capture both the raw data and sRGB data for comparison analysis on the noise. In the following we will discuss each advantages in detail.
+To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}, we propose to further construct a new dataset which are: 1) contains more camera brands; 2) contain more carefully designed camera settings; 3) capture more real-world scenes with realistic objects; 4) capture both the raw data and sRGB data for comparison analysis on the noise. In the following we will discuss each advantages in details.
 
-\textbf{More Camera Brands}: In our dataset, we choose three most commonly used camera brands, including Canon (5D), Nikon (D800), and Sony (A7II), to capture our real-world noisy images. According to a recent survey \cite{commoncamera}, the three camera brands occupy 48 of 50 most commonly used camera-lens combinations. The other two positions are from the camera brands of Fujifilm and Olympus. Hence, we believe that our dataset is more representive than the previous datasets.
+\textbf{More Camera Brands}: In our dataset, we choose three most commonly used camera brands, including Canon (5D), Nikon (D800), and Sony (A7II), to capture our real-world noisy images. According to a recent survey \cite{commoncamera}, the three camera brands occupy 48 of 50 most commonly used camera-lens combinations. Hence, we believe that our dataset is more comprehensive than the previous datasets.
 
-\textbf{More Camera Settings}: In our newly constructed dataset, we capture images with 5 different ISOs with each camera, e.g., 800, 1600, 3200, 6400, 12800, and 25600. Besides, we take deep analysis on the shutter speed and aperture, and finally choose the most suitable camera setting. With the increasing of the ISO, the noise levels will also increase at the same scene we capture. Hence, our dataset is more comprehensive at the noise levels the the previous datasets. To make the images captured with ISO=25600 more naturally, we set the shutter speed to 1/320 second and aperture to F10.0. 
+% The other two positions are from the camera brands of Fujifilm and Olympus.
+
+\textbf{More Camera Settings}: In our newly constructed dataset, for each camera we capture images with 6 different ISOs with carefully tuned shutter speed and apeture, e.g., 800, 1,600, 3,200, 6,400, 12,800, and 25,600. Besides, we take deep analysis on the shutter speed and aperture, and finally choose the most suitable camera setting. With the increasing of the ISO, the noise levels will also increase at the same scene we capture. Hence, our dataset is more comprehensive at the noise levels the the previous datasets. To make the images captured with ISO=25600 more naturally, we set the shutter speed to 1/320 second and aperture to F10.0. 
 
 \textbf{More Captured Scenes}: In our dataset, we captured 
 
