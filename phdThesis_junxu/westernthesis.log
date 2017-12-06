@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 16:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -900,13 +900,6 @@ Package natbib Warning: Citation `ncwebsite' on page x undefined on input line
 59.
 
 [10]
-
-LaTeX Warning: Reference `equ5-13' on page 132 undefined on input line 69.
-
-
-LaTeX Warning: Reference `equ5-13' on page 134 undefined on input line 71.
-
-
 Underfull \vbox (badness 1152) has occurred while \output is active []
 
  [11])
@@ -10920,6 +10913,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [167]) [168]
 No file westernthesis.bnd.
 (./westernthesis.bbl
+Underfull \hbox (badness 5147) in paragraph at lines 4--7
+[]\OT1/txr/m/n/12 The most com-monly used camera-lens com-bi-na-tions.  $\OT1/t
+xtt/m/n/12 https : / /
+ []
+
+Missing character: There is no â in font txr!
+Missing character: There is no € in font txr!
+Missing character: There is no ™ in font txr!
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [169
@@ -10938,6 +10940,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [173]
+Missing character: There is no Ã in font txr!
+Missing character: There is no ¼ in font txr!
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [174]
@@ -10955,22 +10960,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [178]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [179]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [180]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [181]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [182])
+ [179])
 
 Package natbib Warning: There were undefined citations.
 
-[183] (./westernthesis.aux (./acknowledgement.aux) (./chapter1.aux)
+[180] (./westernthesis.aux (./acknowledgement.aux) (./chapter1.aux)
 (./chapter2.aux) (./chapter3.aux) (./chapter4.aux) (./chapter5.aux)
-(./chapter6.aux))
+(./chapter6.aux)
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
 
 LaTeX Warning: There were undefined references.
 
@@ -10979,13 +10980,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9933 strings out of 493091
- 230548 string characters out of 6134517
+ 9908 strings out of 493091
+ 228540 string characters out of 6134517
  295434 words of memory out of 5000000
- 12625 multiletter control sequences out of 15000+600000
+ 12600 multiletter control sequences out of 15000+600000
  87715 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,20n,38p,5322b,692s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,20n,38p,5322b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Software
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Sof
 tware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c
@@ -11002,10 +11003,10 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on westernthesis.pdf (207 pages, 46624915 bytes).
+Output written on westernthesis.pdf (204 pages, 46621984 bytes).
 PDF statistics:
- 1357 PDF objects out of 1440 (max. 8388607)
- 530 compressed objects within 6 object streams
+ 1347 PDF objects out of 1440 (max. 8388607)
+ 523 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  2761 words of extra memory for PDF output out of 10000 (max. 10000000)
 

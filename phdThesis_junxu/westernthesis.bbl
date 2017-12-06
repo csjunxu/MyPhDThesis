@@ -1,707 +1,598 @@
 \begin{thebibliography}{100}
 
-\bibitem{Achlioptas_JCSS_2003}
-D.~Achlioptas.
-\newblock Database-friendly random projections: Johnson-lindenstrauss with
-  binary coins.
-\newblock {\em Journal of Computer and System Sciences}, 66(4):671--687, 2003.
+\bibitem{commoncamera}
+The most commonly used camera-lens combinations.
+\newblock \url{https://explorecams.com/stats/top/models}.
+\newblock Accessed: 2017-09-11.
 
-\bibitem{Adam_CVPR_2006}
-A.~Adam, E.~Rivlin, and I.~Shimshoni.
-\newblock Robust fragments-based tracking using the integral histogram.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 798--805, 2006.
+\bibitem{neatimage}
+Neatlab ABSoft.
+\newblock Neat {I}mage.
+\newblock \url{https://ni.neatvideo.com/home}.
 
-\bibitem{Ahonen_PAMI_2006}
-T.~Ahonen, A.~Hadid, and M.~Pietikainen.
-\newblock Face description with local binary patterns: Application to face
-  recognition.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  28(12):2037--2041, 2006.
-
-\bibitem{ahonen2006face}
-Timo Ahonen, Abdenour Hadid, and Matti Pietikainen.
-\newblock Face description with local binary patterns: Application to face
-  recognition.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  28(12):2037--2041, 2006.
-
-\bibitem{allili2007object}
-Mohand~Sa{\i}d Allili and Djemel Ziou.
-\newblock Object of interest segmentation and tracking by using feature
-  selection and active contours.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1--8. IEEE, 2007.
-
-\bibitem{Avidan_PAMI_2004}
-S.~Avidan.
-\newblock Support vector tracking.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  26(8):1064--1072, 2004.
-
-\bibitem{avidan2004support}
-Shai Avidan.
-\newblock Support vector tracking.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  26(8):1064--1072, 2004.
-
-\bibitem{avidan2007ensemble}
-Shai Avidan.
-\newblock Ensemble tracking.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  29(2):261--271, 2007.
-
-\bibitem{Babenko_pami_2011}
-B.~Babenko, M.H. Yang, and S.~Belongie.
-\newblock Robust object tracking with online multiple instance learning.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  33(8):1619--1632, 2011.
-
-\bibitem{bao2012real}
-C.~Bao, Y.~Wu, H.~Ling, and H.~Ji.
-\newblock Real time robust l1 tracker using accelerated proximal gradient
-  approach.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1830--1837, 2012.
-
-\bibitem{Baraniuk_CA_2008}
-R.~Baraniuk, M.~Davenport, R.~DeVore, and M.~Wakin.
-\newblock A simple proof of the restricted isometry property for random
-  matrices.
-\newblock {\em Constructive Approximation}, 28(3):253--263, 2008.
-
-\bibitem{baraniuk2007compressive}
-R.G. Baraniuk.
-\newblock Compressive sensing.
-\newblock {\em IEEE Signal Processing Magazine}, 24(4):118--121, 2007.
-
-\bibitem{bay2008speeded}
-H.~Bay, A.~Ess, T.~Tuytelaars, and L.~Van~Gool.
-\newblock Speeded-up robust features (surf).
-\newblock {\em Computer Vision and Image Understanding}, 110(3):346--359, 2008.
-
-\bibitem{belongie2002shape}
-Serge Belongie, Jitendra Malik, and Jan Puzicha.
-\newblock Shape matching and object recognition using shape contexts.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  24(4):509--522, 2002.
-
-\bibitem{Bingham_KDD_2001}
-E.~Bingham and H.~Mannila.
-\newblock Random projection in dimensionality reduction: applications to image
-  and text data.
-\newblock In {\em International Conference on Knowledge Discovery and Data
-  Mining}, pages 245--250, 2001.
-
-\bibitem{bishop2006pattern}
-Christopher~M Bishop et~al.
-\newblock {\em Pattern recognition and machine learning}, volume~1.
-\newblock springer New York, 2006.
-
-\bibitem{Black_IJCV_1998}
-M.J. Black and A.D. Jepson.
-\newblock Eigentracking: Robust matching and tracking of articulated objects
-  using a view-based representation.
-\newblock {\em International Journal of Computer Vision}, 26(1):63--84, 1998.
-
-\bibitem{bolme2010visual}
-David~S Bolme, J~Ross Beveridge, Bruce~A Draper, and Yui~Man Lui.
-\newblock Visual object tracking using adaptive correlation filters.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 2544--2550, 2010.
-
-\bibitem{bolme2009average}
-David~S Bolme, Bruce~A Draper, and J~Ross Beveridge.
-\newblock Average of synthetic exact filters.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 2105--2112, 2009.
-
-\bibitem{bradski1998real}
-Gary~R Bradski.
-\newblock Real time face and object tracking as a component of a perceptual
-  user interface.
-\newblock In {\em IEEE Workshop on Applications of Computer Vision}, pages
-  214--219. IEEE, 1998.
-
-\bibitem{Candes_IT_2005}
-E.J. Candes and T.~Tao.
-\newblock Decoding by linear programming.
-\newblock {\em IEEE Transactions on Information Theory}, 51(12):4203--4215,
-  2005.
-
-\bibitem{Candes_IT_2006}
-E.J. Candes and T.~Tao.
-\newblock Near-optimal signal recovery from random projections: Universal
-  encoding strategies?
-\newblock {\em IEEE Transactions on Information Theory}, 52(12):5406--5425,
+\bibitem{ksvdtsp}
+M.~Aharon, M.~Elad, and A.~Bruckstein.
+\newblock The {K-SVD}: An algorithm for designing overcomplete dictionaries for
+  sparse representation.
+\newblock {\em IEEE Transactions on Signal Processing}, 54(11):4311--4322,
   2006.
 
-\bibitem{cehovin2013robust}
-Luka Cehovin, Matej Kristan, and Ale{\v{s}} Leonardis.
-\newblock Robust visual tracking using an adaptive coupled-layer visual model.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  35(4):941--953, 2013.
+\bibitem{RENOIR2014}
+Josue Anaya and Adrian Barbu.
+\newblock Renoir - a dataset for real low-light noise image reduction.
+\newblock {\em arXiv preprint arXiv:1409.8230}, 2014.
 
-\bibitem{chen2006miles}
-Yixin Chen, Jinbo Bi, and James~Z Wang.
-\newblock Miles: Multiple-instance learning via embedded instance selection.
+\bibitem{bsds}
+P.~Arbelaez, M.~Maire, C.~Fowlkes, and J.~Malik.
+\newblock Contour detection and hierarchical image segmentation.
+\newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, 33(5):898--916, 2011.
+
+\bibitem{EMVA1288}
+European Machine~Vision Association.
+\newblock Emva standard 1288: Standard for characterization of image sensors
+  and cameras.
+\newblock 2012.
+
+\bibitem{barbu2009training}
+Adrian Barbu.
+\newblock Training an active random field for real-time image denoising.
+\newblock {\em IEEE Transactions on Image Processing}, 18(11):2451--2462, 2009.
+
+\bibitem{bareiss1968sylvester}
+E.~Bareiss.
+\newblock Sylvester’s identity and multistep integer-preserving gaussian
+  elimination.
+\newblock {\em Mathematics of computation}, 22(103):565--578, 1968.
+
+\bibitem{Bartels1972}
+R.~H. Bartels and G.~W. Stewart.
+\newblock Solution of the matrix equation {AX + XB = C}.
+\newblock {\em Commun. ACM}, 15(9):820--826, 1972.
+
+\bibitem{Bishop}
+C.~M. Bishop.
+\newblock {\em Pattern recognition and machine learning}.
+\newblock New York: Springer, 2006.
+
+\bibitem{admm}
+S.~Boyd, N.~Parikh, E.~Chu, B.~Peleato, and J.~Eckstein.
+\newblock Distributed optimization and statistical learning via the alternating
+  direction method of multipliers.
+\newblock {\em Found. Trends Mach. Learn.}, 3(1):1--122, January 2011.
+
+\bibitem{nlm}
+A.~Buades, B.~Coll, and J.~M. Morel.
+\newblock A non-local algorithm for image denoising.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 60--65, 2005.
+
+\bibitem{mlp}
+H.~C. Burger, C.~J. Schuler, and S.~Harmeling.
+\newblock Image denoising: Can plain neural networks compete with {BM3D}?
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 2392--2399, 2012.
+
+\bibitem{cai2010singular}
+J.~Cai, E.~J. Cand{\`e}s, and Z.~Shen.
+\newblock A singular value thresholding algorithm for matrix completion.
+\newblock {\em SIAM Journal on Optimization}, 20(4):1956--1982, 2010.
+
+\bibitem{bayesshrink}
+S.~G. Chang, B.~Yu, and M.~Vetterli.
+\newblock Adaptive wavelet thresholding for image denoising and compression.
+\newblock {\em Image Processing, IEEE Transactions on}, 9(9):1532--1546, 2000.
+
+\bibitem{external}
+Fei Chen, Lei Zhang, and Huimin Yu.
+\newblock External patch prior guided internal clustering for image denoising.
+\newblock {\em Proceedings of the IEEE international conference on computer
+  vision}, pages 603--611, 2015.
+
+\bibitem{Chen2015ICCV}
+G.~Chen, F.~Zhu, and A.~H. Pheng.
+\newblock An efficient statistical method for image noise level estimation.
+\newblock {\em IEEE International Conference on Computer Vision (ICCV)},
+  December 2015.
+
+\bibitem{tnrd}
+Y.~Chen, W.~Yu, and T.~Pock.
+\newblock On learning optimized reaction diffusion processes for effective
+  image restoration.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 5261--5269, 2015.
+
+\bibitem{courant1943}
+R.~Courant.
+\newblock Variational methods for the solution of problems of equilibrium and
+  vibrations.
+\newblock {\em Bull. Amer. Math. Soc.}, 49(1):1--23, 1943.
+
+\bibitem{cbm3d}
+K.~Dabov, A.~Foi, V.~Katkovnik, and K.~Egiazarian.
+\newblock Color image denoising via sparse 3{D} collaborative filtering with
+  grouping constraint in luminance-chrominance space.
+\newblock {\em IEEE International Conference on Image Processing (ICIP)}, pages
+  313--316, 2007.
+
+\bibitem{bm3d}
+K.~Dabov, A.~Foi, V.~Katkovnik, and K.~Egiazarian.
+\newblock Image denoising by sparse 3-{D} transform-domain collaborative
+  filtering.
+\newblock {\em IEEE Transactions on Image Processing}, 16(8):2080--2095, 2007.
+
+\bibitem{em}
+A.~P. Dempster, N.~M. Laird, and D.~B. Rubin.
+\newblock Maximum likelihood from incomplete data via the {EM} algorithm.
+\newblock {\em Journal of the Royal Statistical Society. Series B
+  (methodological)}, pages 1--38, 1977.
+
+\bibitem{ncsr}
+W.~Dong, L.~Zhang, G.~Shi, and X.~Li.
+\newblock Nonlocally centralized sparse representation for image restoration.
+\newblock {\em IEEE Transactions on Image Processing}, 22(4):1620--1630, 2013.
+
+\bibitem{softthresholding}
+D.~L. Donoho.
+\newblock De-noising by soft-thresholding.
+\newblock {\em IEEE Trans. Inf. Theory}, 41(3):613--627, 1995.
+
+\bibitem{donoho2001uncertainty}
+D.~L. Donoho and X.~Huo.
+\newblock Uncertainty principles and ideal atomic decomposition.
+\newblock {\em IEEE Transactions on Information Theory}, 47(7):2845--2862,
+  2001.
+
+\bibitem{eckart1936approximation}
+C.~Eckart and G.~Young.
+\newblock The approximation of one matrix by another of lower rank.
+\newblock {\em Psychometrika}, 1(3):211--218, 1936.
+
+\bibitem{Eckstein1992}
+J.~Eckstein and D.~P. Bertsekas.
+\newblock On the {D}ouglas--{R}achford splitting method and the proximal point
+  algorithm for maximal monotone operators.
+\newblock {\em Mathematical Programming}, 55(1):293--318, 1992.
+
+\bibitem{ksvd}
+M.~Elad and M.~Aharon.
+\newblock Image denoising via sparse and redundant representations over learned
+  dictionaries.
+\newblock {\em IEEE Transactions on Image Processing}, 15(12):3736--3745, 2006.
+
+\bibitem{noisemeasurement}
+A.~Foi, S.~Alenius, V.~Katkovnik, and K.~Egiazarian.
+\newblock Noise measurement for raw-data of digital imaging sensors by
+  automatic segmentation of nonuniform targets.
+\newblock {\em IEEE Sensors Journal}, 7(10):1456--1461, 2007.
+
+\bibitem{Foipractical}
+A.~Foi, M.~Trimeche, V.~Katkovnik, and K.~Egiazarian.
+\newblock Practical poissonian-gaussian noise modeling and fitting for
+  single-image raw-data.
+\newblock {\em IEEE Transactions on Image Processing}, 17(10):1737--1754, 2008.
+
+\bibitem{GolubMatrix}
+G.~Golub and C.~Van~Loan.
+\newblock {\em Matrix Computations (3rd Ed.)}.
+\newblock Johns Hopkins University Press, 1996.
+
+\bibitem{almapg}
+Z.~Gong, Z.~Shen, and K.-C. Toh.
+\newblock Image restoration with mixed or unknown noises.
+\newblock {\em Multiscale Modeling \& Simulation}, 12(2):458--487, 2014.
+
+\bibitem{wnnmijcv}
+S.~Gu, Q.~Xie, D.~Meng, W.~Zuo, X.~Feng, and L.~Zhang.
+\newblock Weighted nuclear norm minimization and its applications to low level
+  vision.
+\newblock {\em International Journal of Computer Vision}, pages 1--26, 2016.
+
+\bibitem{wnnm}
+S.~Gu, L.~Zhang, W.~Zuo, and X.~Feng.
+\newblock Weighted nuclear norm minimization with application to image
+  denoising.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 2862--2869, 2014.
+
+\bibitem{residualnetwork}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pages 770--778, 2016.
+
+\bibitem{healey1994radiometric}
+G.~E Healey and R.~Kondepudy.
+\newblock Radiometric {CCD} camera calibration and noise estimation.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  16(3):267--276, 1994.
+
+\bibitem{nearcor}
+N.~J. Higham.
+\newblock Computing the nearest correlation matrix: a problem from finance.
+\newblock {\em IMA Journal of Numerical Analysis}, 22(3):329, 2002.
+
+\bibitem{Hu2016}
+Haijuan Hu, Bing Li, and Quansheng Liu.
+\newblock Removing mixture of gaussian and impulse noise by patch-based
+  weighted means.
+\newblock {\em Journal of Scientific Computing}, 67(1):103--129, 2016.
+
+\bibitem{huber2011robust}
+P.~J. Huber.
+\newblock {\em Robust statistics}.
+\newblock Springer, 2011.
+
+\bibitem{nnm}
+H.~Ji, C.~Liu, Z.~Shen, and Y.~Xu.
+\newblock Robust video denoising using low rank matrix completion.
+\newblock {\em CVPR}, pages 1791--1798, 2010.
+
+\bibitem{jiang2014mixed}
+Jielin Jiang, Lei Zhang, and Jian Yang.
+\newblock Mixed noise removal by weighted encoding with sparse nonlocal
+  regularization.
+\newblock {\em IEEE transactions on image processing}, 23(6):2651--2662, 2014.
+
+\bibitem{lcksvd}
+Z.~Jiang, Z.~Lin, and L.~S. Davis.
+\newblock Label consistent k-svd: Learning a discriminative dictionary for
+  recognition.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  35(11):2651--2664, 2013.
+
+\bibitem{karaimer_brown_ECCV_2016}
+H.~C. Karaimer and M.~S. Brown.
+\newblock A software platform for manipulating the camera imaging pipeline.
+\newblock {\em European Conference on Computer Vision (ECCV)}, October 2016.
+
+\bibitem{kervrann2007bayesian}
+C.~Kervrann, J.~Boulanger, and P.~Coup{\'e}.
+\newblock Bayesian non-local means filter, image redundancy and adaptive
+  dictionaries for noise removal.
+\newblock {\em International Conference on Scale Space and Variational Methods
+  in Computer Vision}, pages 520--532, 2007.
+
+\bibitem{NewInCamera}
+S.~J. Kim, H.~T. Lin, Z.~Lu, S.~Süsstrunk, S.~Lin, and M.~S. Brown.
+\newblock A new in-camera imaging model for color computer vision and its
+  application.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  34(12):2289--2302, 2012.
+
+\bibitem{nlbayes}
+M.~Lebrun, A.~Buades, and J.~M. Morel.
+\newblock A nonlocal {B}ayesian image denoising algorithm.
+\newblock {\em SIAM Journal on Imaging Sciences}, 6(3):1665--1688, 2013.
+
+\bibitem{ncwebsite}
+M.~Lebrun, M.~Colom, and J.~M. Morel.
+\newblock The noise clinic: a blind image denoising algorithm.
+\newblock \url{http://www.ipol.im/pub/art/2015/125/}.
+\newblock Accessed 01 28, 2015.
+
+\bibitem{noiseclinic}
+M.~Lebrun, M.~Colom, and J.-M. Morel.
+\newblock Multiscale image blind denoising.
+\newblock {\em IEEE Transactions on Image Processing}, 24(10):3149--3161, 2015.
+
+\bibitem{Leungtip}
+B.~Leung, G.~Jeon, and E.~Dubois.
+\newblock Least-squares luma-chroma demultiplexing algorithm for bayer
+  demosaicking.
+\newblock {\em IEEE Transactions on Image Processing}, 20(7):1885--1894, 2011.
+
+\bibitem{Liu2008}
+C.~Liu, R.~Szeliski, S.~Bing Kang, C.~L. Zitnick, and W.~T. Freeman.
+\newblock Automatic estimation and removal of noise from a single image.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  30(2):299--314, 2008.
+
+\bibitem{noiselevel}
+X.~Liu, M.~Tanaka, and M.~Okutomi.
+\newblock Single-image noise level estimation for blind denoising.
+\newblock {\em IEEE Transactions on Image Processing}, 22(12):5226--5237, 2013.
+
+\bibitem{liupractical}
+X.~Liu, M.~Tanaka, and M.~Okutomi.
+\newblock Practical signal-dependent noise parameter estimation from a single
+  noisy image.
+\newblock {\em IEEE Transactions on Image Processing}, 23(10):4361--4371, 2014.
+
+\bibitem{Luisier}
+F.~Luisier, T.~Blu, and M.~Unser.
+\newblock Image denoising in mixed {P}oisson-{G}aussian noise.
+\newblock {\em IEEE Transactions on Image Processing}, 20(3):696--708, 2011.
+
+\bibitem{tid}
+Enming Luo, Stanley~H Chan, and Truong~Q Nguyen.
+\newblock Adaptive image denoising by targeted databases.
+\newblock {\em IEEE Transactions on Image Processing}, 24(7):2167--2181, 2015.
+
+\bibitem{lssc}
+J.~Mairal, F.~Bach, J.~Ponce, G.~Sapiro, and A.~Zisserman.
+\newblock Non-local sparse models for image restoration.
+\newblock {\em IEEE International Conference on Computer Vision (ICCV)}, pages
+  2272--2279, 2009.
+
+\bibitem{srcolor}
+J.~Mairal, M.~Elad, and G.~Sapiro.
+\newblock Sparse representation for color image restoration.
+\newblock {\em IEEE Transactions on Image Processing,}, 17(1):53--69, 2008.
+
+\bibitem{mairal2008sparse}
+J.~Mairal, M.~Elad, and G.~Sapiro.
+\newblock Sparse representation for color image restoration.
+\newblock {\em IEEE Transactions on Image Processing}, 17(1):53--69, 2008.
+
+\bibitem{makitalo2013optimal}
+M.~Makitalo and A.~Foi.
+\newblock Optimal inversion of the generalized anscombe transformation for
+  poisson-gaussian noise.
+\newblock {\em IEEE Transactions on Image Processing}, 22(1):91--103, 2013.
+
+\bibitem{glm}
+P.~McCullagh.
+\newblock Generalized linear models.
+\newblock {\em European Journal of Operational Research}, 16(3):285--292, 1984.
+
+\bibitem{moldovan2006denoising}
+Teodor~Mihai Moldovan, Stefan Roth, and Michael~J Black.
+\newblock Denoising archival films using a learned bayesian model.
+\newblock In {\em Image Processing, 2006 IEEE International Conference on},
+  pages 2641--2644. IEEE, 2006.
+
+\bibitem{Montagner}
+Y.~Le Montagner, E.~D. Angelini, and J.~C. Olivo-Marin.
+\newblock An unbiased risk estimator for image denoising in the presence of
+  mixed poisson-gaussian noise.
+\newblock {\em IEEE Transactions on Image Processing}, 23(3):1255--1268, 2014.
+
+\bibitem{biqi}
+Anush~Krishna Moorthy and Alan~Conrad Bovik.
+\newblock A two-step framework for constructing blind image quality indices.
+\newblock {\em IEEE Signal processing letters}, 17(5):513--516, 2010.
+
+\bibitem{combexin}
+I.~Mosseri, M.~Zontak, and M.~Irani.
+\newblock Combining the power of internal and external denoising.
+\newblock {\em IEEE International Conference on Computational Photography
+  (ICCP)}, pages 1--9, 2013.
+
+\bibitem{crosschannel2016}
+S.~Nam, Y.~Hwang, Y.~Matsushita, and S.~J. Kim.
+\newblock A holistic approach to cross-channel image noise modeling and its
+  application to image denoising.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 1683--1691, 2016.
+
+\bibitem{olshausen1996emergence}
+B.~A. Olshausen and D.~J. Field.
+\newblock Emergence of simple-cell receptive field properties by learning a
+  sparse code for natural images.
+\newblock {\em Nature}, 381(6583):607--609, 1996.
+
+\bibitem{olshausen1997sparse}
+B.~A. Olshausen and D.~J. Field.
+\newblock Sparse coding with an overcomplete basis set: {A} strategy employed
+  by {V1}?
+\newblock {\em Vision research}, 37(23):3311--3325, 1997.
+
+\bibitem{osher2005iterative}
+S.~Osher, M.~Burger, D.~Goldfarb, J.~Xu, and W.~Yin.
+\newblock An iterative regularization method for total variation-based image
+  restoration.
+\newblock {\em Multiscale Modeling \& Simulation}, 4(2):460--489, 2005.
+
+\bibitem{PeronaMalik1990}
+P.~Perona and J.~Malik.
+\newblock Scale-space and edge detection using anisotropic diffusion.
 \newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
-  on}, 28(12):1931--1947, 2006.
-
-\bibitem{collins2003mean}
-Robert~T Collins.
-\newblock Mean-shift blob tracking through scale space.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, volume~2, pages II--234, 2003.
-
-\bibitem{Collins_pami_2005}
-R.T. Collins, Y.~Liu, and M.~Leordeanu.
-\newblock Online selection of discriminative tracking features.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  27(10):1631--1643, 2005.
-
-\bibitem{Comaniciu_PAMI_2003}
-D.~Comaniciu, V.~Ramesh, and P.~Meer.
-\newblock Kernel-based object tracking.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  25(5):564--577, 2003.
-
-\bibitem{cover2012elements}
-Thomas~M Cover and Joy~A Thomas.
-\newblock {\em Elements of information theory}.
-\newblock Wiley-interscience, 2012.
-
-\bibitem{dalal2005histograms}
-Navneet Dalal and Bill Triggs.
-\newblock Histograms of oriented gradients for human detection.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, volume~1, pages 886--893. IEEE, 2005.
-
-\bibitem{Diaconis_AnnSt_1984}
-P.~Diaconis and D.~Freedman.
-\newblock Asymptotics of graphical projection pursuit.
-\newblock {\em The Annals of Statistics}, pages 793--815, 1984.
-
-\bibitem{dietterich1997solving}
-Thomas~G Dietterich, Richard~H Lathrop, and Tom{\'a}s Lozano-P{\'e}rez.
-\newblock Solving the multiple instance problem with axis-parallel rectangles.
-\newblock {\em Artificial Intelligence}, 89(1):31--71, 1997.
-
-\bibitem{dinh2011context}
-Thang~Ba Dinh, Nam Vo, and G{\'e}rard Medioni.
-\newblock Context tracker: Exploring supporters and distracters in
-  unconstrained environments.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1177--1184, 2011.
-
-\bibitem{divvala2009empirical}
-Santosh~K Divvala, Derek Hoiem, James~H Hays, Alexei~A Efros, and Martial
-  Hebert.
-\newblock An empirical study of context in object detection.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1271--1278, 2009.
-
-\bibitem{Donoho_IT_2006}
-D.L. Donoho.
-\newblock Compressed sensing.
-\newblock {\em IEEE Transactions on Information Theory}, 52(4):1289--1306,
-  2006.
-
-\bibitem{dore2008online}
-A.~Dore, M.~Asadi, and C.~Regazzoni.
-\newblock Online discriminative feature selection in a bayesian framework using
-  shape and appearance.
-\newblock In {\em The Eighth International Workshop on Visual
-  Surveillance-VS2008}, 2008.
-
-\bibitem{duda2001pattern}
-Richard~O Duda, Peter~E Hart, and David~G Stork.
-\newblock Pattern classification, 2nd edition.
-\newblock {\em New York: Wiley-Interscience}, 2001.
-
-\bibitem{elgammal2003probabilistic}
-Ahmed Elgammal, Ramani Duraiswami, and Larry~S Davis.
-\newblock Probabilistic tracking in joint feature-spatial spaces.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, volume~1, pages I--781. IEEE, 2003.
-
-\bibitem{Everingham_ijcv_2010}
-M.~Everingham, L.~Gool, C.~Williams, J.~Winn, and A.~Zisserman.
-\newblock The pascal visual object class (voc)challenge.
-\newblock {\em International Journal of Computer Vision}, 88(2):303--338, 2010.
-
-\bibitem{everingham2010pascal}
-Mark Everingham, Luc Van~Gool, Christopher~KI Williams, John Winn, and Andrew
-  Zisserman.
-\newblock The pascal visual object classes (voc) challenge.
-\newblock {\em International journal of computer vision}, 88(2):303--338, 2010.
-
-\bibitem{friedman2000additive}
-Jerome Friedman, Trevor Hastie, and Robert Tibshirani.
-\newblock Additive logistic regression: a statistical view of boosting (with
-  discussion and a rejoinder by the authors).
-\newblock {\em The annals of statistics}, 28(2):337--407, 2000.
-
-\bibitem{friedman2001greedy}
-Jerome~H Friedman.
-\newblock Greedy function approximation: a gradient boosting machine.(english
-  summary).
-\newblock {\em Ann. Statist}, 29(5):1189--1232, 2001.
-
-\bibitem{Grabner_BMVC_2006}
-H.~Grabner, M.~Grabner, and H.~Bischof.
-\newblock Real-time tracking via on-line boosting.
-\newblock In {\em Proceedings of British Machine Vision Conference}, pages
-  47--56, 2006.
-
-\bibitem{Grabner_ECCV_2008}
-H.~Grabner, C.~Leistner, and H.~Bischof.
-\newblock Semi-supervised on-line boosting for robust tracking.
-\newblock In {\em Proceedings of European Conference on Computer Vision}, pages
-  234--247, 2008.
-
-\bibitem{grabner2010tracking}
-Helmut Grabner, Jiri Matas, Luc Van~Gool, and Philippe Cattin.
-\newblock Tracking the invisible: Learning where the object might be.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1285--1292, 2010.
-
-\bibitem{chen2004probabilistic}
-T.~Liu H.~Chen and C.~Fuh.
-\newblock Probabilistic tracking with adaptive feature selection.
-\newblock In {\em International Conference on Pattern Recognition}, volume~2,
-  pages 736--739. IEEE, 2004.
-
-\bibitem{Hare_ICCV_2011}
-S.~Hare, A.~Saffari, and P.H.S. Torr.
-\newblock Struck: Structured output tracking with kernels.
-\newblock In {\em Proceedings of the IEEE International Conference on Computer
-  Vision}, pages 263--270, 2011.
-
-\bibitem{henriques2012circulant}
-J.F. Henriques, R.~Caseiro, P.~Martins, and J.~Batista.
-\newblock Exploiting the circulant structure of tracking-by-detection with
-  kernels.
-\newblock In {\em Proceedings of European Conference on Computer Vision}, pages
-  702--715, 2012.
-
-\bibitem{Ho_CVPR_2004}
-J.~Ho, K.C. Lee, M.H. Yang, and D.~Kriegman.
-\newblock Visual tracking using learned linear subspaces.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, volume~1, pages I--782, 2004.
-
-\bibitem{horn1990matrix}
-Roger~A Horn and Charles~R Johnson.
-\newblock {\em Matrix analysis}.
-\newblock Cambridge university press, 1990.
-
-\bibitem{isard1998condensation}
-Michael Isard and Andrew Blake.
-\newblock Condensation-conditional density propagation for visual tracking.
-\newblock {\em International journal of computer vision}, 29(1):5--28, 1998.
-
-\bibitem{Jepson_pami_2003}
-A.D. Jepson, D.J. Fleet, and T.F. El-Maraghi.
-\newblock Robust online appearance models for visual tracking.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  25(10):1296--1311, 2003.
-
-\bibitem{jia2012visual}
-Xu~Jia, Huchuan Lu, and Ming-Hsuan Yang.
-\newblock Visual tracking via adaptive structural local sparse appearance
-  model.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1822--1829. IEEE, 2012.
-
-\bibitem{Kalal_CVPR_2010}
-Z.~Kalal, J.~Matas, and K.~Mikolajczyk.
-\newblock Pn learning: Bootstrapping binary classifiers by structural
-  constraints.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 49--56, 2010.
-
-\bibitem{kalman1960new}
-Rudolph~Emil Kalman et~al.
-\newblock A new approach to linear filtering and prediction problems.
-\newblock {\em Journal of basic Engineering}, 82(1):35--45, 1960.
-
-\bibitem{Kwon_CVPR_2010}
-J.~Kwon and K.~Lee.
-\newblock Visual tracking decomposition.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1269--1276, 2010.
-
-\bibitem{kwon2008tracking}
-Junseok Kwon and Kyoung~Mu Lee.
-\newblock Tracking of abrupt motion using wang-landau monte carlo estimation.
-\newblock In {\em Proceedings of European Conference on Computer Vision}, pages
-  387--400. Springer, 2008.
-
-\bibitem{kwon2009tracking}
-Junseok Kwon and Kyoung~Mu Lee.
-\newblock Tracking of a non-rigid object via patch-based dynamic appearance
-  modeling and adaptive basin hopping monte carlo sampling.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1208--1215. IEEE, 2009.
-
-\bibitem{kwon2011tracking}
-Junseok Kwon and Kyoung~Mu Lee.
-\newblock Tracking by sampling trackers.
-\newblock In {\em Proceedings of the IEEE International Conference on Computer
-  Vision}, pages 1195--1202. IEEE, 2011.
-
-\bibitem{Black_ICCV01}
-Fernando~De la~Torre and Michael~J. Black.
-\newblock Robust principal component analysis for computer vision.
-\newblock In {\em Proceedings of the IEEE International Conference on Computer
-  Vision}, pages 362--369, 2001.
-
-\bibitem{leistner2010miforests}
-Christian Leistner, Amir Saffari, and Horst Bischof.
-\newblock Miforests: multiple-instance learning with randomized trees.
-\newblock In {\em Proceedings of European Conference on Computer Vision}, pages
-  29--42. 2010.
-
-\bibitem{Leonardis_CVIU_2000}
-A.~Leonardis and H.~Bischof.
-\newblock Robust recognition using eigenimages.
-\newblock {\em Computer Vision and Image Understanding}, 78(1):99--118, 2000.
-
-\bibitem{Li_CVPR_2011}
-H.~Li, C.~Shen, and Q.~Shi.
-\newblock Real-time visual tracking using compressive sensing.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1305--1312, 2011.
-
-\bibitem{Li_KDD_2006}
-P.~Li, T.J. Hastie, and K.W. Church.
-\newblock Very sparse random projections.
-\newblock In {\em International Conference on Knowledge Discovery and Data
-  Mining}, pages 287--296, 2006.
-
-\bibitem{Li_PAMI_2004}
-S.Z. Li and Z.Q. Zhang.
-\newblock Floatboost learning and statistical face detection.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  26(9):1112--1123, 2004.
-
-\bibitem{li2013survey}
-Xi~Li, Weiming Hu, Chunhua Shen, Zhongfei Zhang, Anthony Dick, and Anton
-  van~den Hengel.
-\newblock A survey of appearance models in visual object tracking.
-\newblock {\em arXiv preprint arXiv:1303.4803}, 2013.
-
-\bibitem{li2007robust}
-Xi~Li, Weiming Hu, Zhongfei Zhang, Xiaoqin Zhang, and Guan Luo.
-\newblock Robust visual tracking based on incremental tensor subspace learning.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1--8. IEEE, 2007.
-
-\bibitem{li2008visual}
-Xi~Li, Weiming Hu, Zhongfei Zhang, Xiaoqin Zhang, Mingliang Zhu, and Jian
-  Cheng.
-\newblock Visual tracking via incremental log-euclidean riemannian subspace
-  learning.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1--8. IEEE, 2008.
-
-\bibitem{liang2006online}
-D.~Liang, Q.~Huang, W.~Gao, and H.~Yao.
-\newblock Online selection of discriminative features using bayes error rate
-  for visual tracking.
-\newblock pages 547--555, 2006.
-
-\bibitem{liao2005logistic}
-Xuejun Liao, Ya~Xue, and Lawrence Carin.
-\newblock Logistic regression with an auxiliary data source.
-\newblock In {\em International Conference on Machine Learning}, pages
-  505--512. ACM, 2005.
-
-\bibitem{lin2007hierarchical}
-Zhe Lin, Larry~S Davis, David Doermann, and Daniel DeMenthon.
-\newblock Hierarchical part-template matching for human detection and
-  segmentation.
-\newblock In {\em Proceedings of the IEEE International Conference on Computer
-  Vision}, pages 1--8. IEEE, 2007.
-
-\bibitem{Liu_PAMI_2012}
-L.~Liu and P.~Fieguth.
-\newblock Texture classification from random features.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  34(3):574--586, 2012.
-
-\bibitem{liu2007gradient}
-Xiaoming Liu and Ting Yu.
-\newblock Gradient feature selection for online boosting.
-\newblock In {\em Proceedings of the IEEE International Conference on Computer
-  Vision}, pages 1--8. IEEE, 2007.
-
-\bibitem{lowe2004distinctive}
-D.G. Lowe.
-\newblock Distinctive image features from scale-invariant keypoints.
-\newblock {\em International Journal of Computer Vision}, 60(2):91--110, 2004.
-
-\bibitem{mason1999functional}
-Llew Mason, Jonathan Baxter, Peter~L Bartlett, and Marcus Frean.
-\newblock Functional gradient techniques for combining hypotheses.
-\newblock In {\em Advances in Neural Information Processing Systems}, pages
-  221--246. MIT; 1998, 1999.
-
-\bibitem{Mei_PAMI_2011}
-X.~Mei and H.~Ling.
-\newblock Robust visual tracking and vehicle classification via sparse
-  representation.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  33(11):2259--2272, 2011.
-
-\bibitem{Ng_NIPS_2002}
-A.Y. Ng and M.I. Jordan.
-\newblock On discriminative vs. generative classifiers: A comparison of
-  logistic regression and naive bayes.
-\newblock In {\em Advances in Neural Information Processing Systems}, pages
-  841--848, 2002.
-
-\bibitem{nguyen2006robust}
-Hieu~T Nguyen and Arnold~WM Smeulders.
-\newblock Robust tracking using foreground-background texture discrimination.
-\newblock {\em International Journal of Computer Vision}, 69(3):277--293, 2006.
-
-\bibitem{oppenheim1983signals}
-Alan~V Oppenheim, Alan~S Willsky, and Syed~Hamid Nawab.
-\newblock {\em Signals and systems}, volume~2.
-\newblock Prentice-Hall Englewood Cliffs, NJ, 1983.
-
-\bibitem{oron2012locally}
-S.~Oron, A.~Bar-Hillel, D.~Levi, and S.~Avidan.
-\newblock Locally orderless tracking.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1940--1947, 2012.
-
-\bibitem{perez2002color}
-Patrick P{\'e}rez, Carine Hue, Jaco Vermaak, and Michel Gangnet.
-\newblock Color-based probabilistic tracking.
-\newblock In {\em Proceedings of European Conference on Computer Vision}, pages
-  661--675. Springer, 2002.
-
-\bibitem{porikli2005integral}
-Fatih Porikli.
-\newblock Integral histogram: A fast way to extract histograms in cartesian
-  spaces.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, volume~1, pages 829--836. IEEE, 2005.
-
-\bibitem{Raina_ICML07}
-R.~Raina, A.~Battle, H.~Lee, B.~Packer, and A.Y. Ng.
-\newblock Self-taught learning: transfer learning from unlabeled data.
-\newblock In {\em International Conference on Machine Learning}, pages
-  759--766, 2007.
-
-\bibitem{raina2007self}
-Rajat Raina, Alexis Battle, Honglak Lee, Benjamin Packer, and Andrew~Y Ng.
-\newblock Self-taught learning: transfer learning from unlabeled data.
-\newblock In {\em International Conference on Machine Learning}, pages
-  759--766, 2007.
-
-\bibitem{Ross_IJCV_2008}
-D.A. Ross, J.~Lim, R.S. Lin, and M.H. Yang.
-\newblock Incremental learning for robust visual tracking.
-\newblock {\em International Journal of Computer Vision}, 77(1):125--141, 2008.
-
-\bibitem{settles2010active}
-Burr Settles.
-\newblock Active learning literature survey.
-\newblock {\em University of Wisconsin, Madison}, 2010.
-
-\bibitem{settles2008multiple}
-Burr Settles, Mark Craven, and Soumya Ray.
-\newblock Multiple-instance active learning.
-\newblock In {\em Advances in Neural Information Processing Systems}, pages
-  1289--1296, 2008.
-
-\bibitem{sevilla2012distribution}
-L.~Sevilla-Lara and E.~Learned-Miller.
-\newblock Distribution fields for tracking.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1910--1917, 2012.
-
-\bibitem{silveira2007real}
-Geraldo Silveira and Ezio Malis.
-\newblock Real-time visual tracking under arbitrary illumination changes.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1--6. IEEE, 2007.
-
-\bibitem{torralba2003contextual}
-Antonio Torralba.
-\newblock Contextual priming for object detection.
-\newblock {\em International Journal of Computer Vision}, 53(2):169--191, 2003.
-
-\bibitem{venkataraman2007target}
-V.~Venkataraman, L.~Fan, Guoliang, and X.~Fan.
-\newblock Target tracking with online feature selection in flir imagery.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1--8, 2007.
-
-\bibitem{Viola_CVPR_2001}
-P.~Viola and M.~Jones.
-\newblock Rapid object detection using a boosted cascade of simple features.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, volume~1, pages 511--518, 2001.
-
-\bibitem{viola2001rapid}
-Paul Viola and Michael Jones.
-\newblock Rapid object detection using a boosted cascade of simple features.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, volume~1, pages I--511. IEEE, 2001.
-
-\bibitem{viola2006multiple}
-Paul Viola, John Platt, and Cha Zhang.
-\newblock Multiple instance boosting for object detection.
-\newblock In {\em Advances in Neural Information Processing Systems},
-  volume~18, page 1417, 2006.
-
-\bibitem{wang2007adaptive}
-Hanzi Wang, David Suter, Konrad Schindler, and Chunhua Shen.
-\newblock Adaptive object tracking based on an effective appearance filter.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  29(9):1661--1667, 2007.
-
-\bibitem{wang2011superpixel}
-S.~Wang, H.~Lu, F.~Yang, and M.H. Yang.
-\newblock Superpixel tracking.
-\newblock In {\em Proceedings of the IEEE International Conference on Computer
-  Vision}, pages 1323--1330, 2011.
-
-\bibitem{wang2007object}
-Tiesheng Wang, Irene~YH Gu, and Pengfei Shi.
-\newblock Object tracking using incremental 2d-pca learning and ml estimation.
-\newblock In {\em IEEE International Conference on Acoustics, Speech and Signal
-  Processing}, volume~1, pages I--933. IEEE, 2007.
-
-\bibitem{wang2005online}
-Y.~Wang, L.~Chen, and W.~Gao.
-\newblock Online selecting discriminative tracking features using particle
-  filter.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, volume~2, pages 1037--1042, 2005.
-
-\bibitem{webb2003statistical}
-Andrew~R Webb.
-\newblock {\em Statistical pattern recognition}.
-\newblock Wiley, 2003.
-
-\bibitem{Wen_ECCV_2012}
-L.~Wen, Z.~Cai, Z.~Lei, D.~Yi, and S.~Li.
-\newblock online spatio-temporal structure context learning for visual
-  tracking.
-\newblock In {\em Proceedings of European Conference on Computer Vision}, pages
-  716--729, 2012.
-
-\bibitem{wolf2006critical}
-Lior Wolf and Stanley Bileschi.
-\newblock A critical view of context.
-\newblock {\em International Journal of Computer Vision}, 69(2):251--261, 2006.
-
-\bibitem{Wright_PAMI_2009}
-J.~Wright, A.Y. Yang, A.~Ganesh, S.S. Sastry, and Y.~Ma.
+  on}, 12(7):629--639, 1990.
+
+\bibitem{nlr}
+G.~Peyr{\'e}, S.~Bougleux, and L.~D. Cohen.
+\newblock Non-local regularization of inverse problems.
+\newblock {\em Inverse Problems and Imaging}, 5(2):511--530, 2011.
+
+\bibitem{dnd2017}
+Tobias Pl{\"o}tz and Stefan Roth.
+\newblock Benchmarking denoising algorithms with real photographs.
+\newblock {\em CVPR}, 2017.
+
+\bibitem{fullyblind}
+J.~Portilla.
+\newblock Full blind denoising through noise covariance estimation using
+  {Gaussian} scale mixtures in the wavelet domain.
+\newblock {\em IEEE International Conference on Image Processing (ICIP)},
+  2:1217--1220, 2004.
+
+\bibitem{blsgsm}
+J.~Portilla, V.~Strela, M.J. Wainwright, and E.P. Simoncelli.
+\newblock Image denoising using scale mixtures of {Gaussians} in the wavelet
+  domain.
+\newblock {\em Image Processing, IEEE Transactions on}, 12(11):1338--1351,
+  2003.
+
+\bibitem{rabie2005robust}
+T.~Rabie.
+\newblock Robust estimation approach for blind denoising.
+\newblock {\em IEEE Transactions on Image Processing}, 14(11):1755--1765, 2005.
+
+\bibitem{foe}
+S.~Roth and M.~J. Black.
+\newblock Fields of experts.
+\newblock {\em International Journal of Computer Vision}, 82(2):205--229, 2009.
+
+\bibitem{rudin1992nonlinear}
+L.~I. Rudin, S.~Osher, and E.~Fatemi.
+\newblock Nonlinear total variation based noise removal algorithms.
+\newblock {\em Physica D: Nonlinear Phenomena}, 60(1):259--268, 1992.
+
+\bibitem{bliinds}
+Michele~A Saad, Alan~C Bovik, and Christophe Charrier.
+\newblock Blind image quality assessment: A natural scene statistics approach
+  in the dct domain.
+\newblock {\em IEEE transactions on Image Processing}, 21(8):3339--3352, 2012.
+
+\bibitem{salmon2014}
+Joseph Salmon, Zachary Harmany, Charles-Alban Deledalle, and Rebecca Willett.
+\newblock Poisson noise reduction with non-local pca.
+\newblock {\em Journal of mathematical imaging and vision}, 48(2):279--294,
+  2014.
+
+\bibitem{csf}
+U.~Schmidt and S.~Roth.
+\newblock Shrinkage fields for effective image restoration.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 2774--2781, June 2014.
+
+\bibitem{curvelet}
+J.~L. Starck, E.~J. Cand{\`e}s, and D.~L. Donoho.
+\newblock The curvelet transform for image denoising.
+\newblock {\em IEEE Transactions on Image Processing}, 11(6):670--684, 2002.
+
+\bibitem{lasso}
+Robert Tibshirani.
+\newblock Regression shrinkage and selection via the lasso.
+\newblock {\em Journal of the Royal Statistical Society. Series B
+  (Methodological)}, pages 267--288, 1996.
+
+\bibitem{Tomasi1998}
+C.~Tomasi and R.~Manduchi.
+\newblock Bilateral filtering for gray and color images.
+\newblock {\em IEEE International Conference on Computer Vision (ICCV)}, pages
+  839--846, 1998.
+
+\bibitem{tsin2001statistical}
+Y.~Tsin, Visvanathan Ramesh, and Takeo Kanade.
+\newblock Statistical calibration of ccd imaging process.
+\newblock {\em IEEE International Conference on Computer Vision (ICCV)},
+  1:480--487, 2001.
+
+\bibitem{nsp}
+S.~Wang, L.~Zhang, and Y.~Liang.
+\newblock Non-local spectral prior model for low-level vision.
+\newblock {\em ACCV}, pages 231--244, 2013.
+
+\bibitem{ssim}
+Z.~Wang, A.~C. Bovik, H.~R. Sheikh, and E.~P. Simoncelli.
+\newblock Image quality assessment: from error visibility to structural
+  similarity.
+\newblock {\em IEEE Transactions on Image Processing}, 13(4):600--612, 2004.
+
+\bibitem{msssim}
+Zhou Wang, Eero~P Simoncelli, and Alan~C Bovik.
+\newblock Multiscale structural similarity for image quality assessment.
+\newblock In {\em Signals, Systems and Computers, 2004. Conference Record of
+  the Thirty-Seventh Asilomar Conference on}, volume~2, pages 1398--1402. IEEE,
+  2003.
+
+\bibitem{weiss}
+Y.~Weiss and W.~T. Freeman.
+\newblock What makes a good model of natural images?
+\newblock {\em CVPR}, pages 1--8, 2007.
+
+\bibitem{srcvpr}
+J.~Wright, Y.~Ma, J.~Mairal, G.~Sapiro, T.~S. Huang, and S.~Yan.
+\newblock Sparse representation for computer vision and pattern recognition.
+\newblock {\em Proceedings of the IEEE}, 98(6):1031--1044, 2010.
+
+\bibitem{src}
+J.~Wright, A.~Y. Yang, A.~Ganesh, S.~S. Sastry, and Y.~Ma.
 \newblock Robust face recognition via sparse representation.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
   31(2):210--227, 2009.
 
-\bibitem{wu2007detection}
-Bo~Wu and Ram Nevatia.
-\newblock Detection and tracking of multiple, partially occluded humans by
-  bayesian combination of edgelet based part detectors.
-\newblock {\em International Journal of Computer Vision}, 75(2):247--266, 2007.
+\bibitem{emconvergence}
+C.~F. Wu.
+\newblock On the convergence properties of the {EM} algorithm.
+\newblock {\em The Annals of Statistics}, pages 95--103, 1983.
 
-\bibitem{yang2005efficient}
-Changjiang Yang, Ramani Duraiswami, and Larry Davis.
-\newblock Efficient mean-shift tracking via a new similarity measure.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, volume~1, pages 176--183. IEEE, 2005.
+\bibitem{xie2012image}
+Junyuan Xie, Linli Xu, and Enhong Chen.
+\newblock Image denoising and inpainting with deep neural networks.
+\newblock {\em Advances in Neural Information Processing Systems}, pages
+  341--349, 2012.
 
-\bibitem{yang2009context}
-Ming Yang, Ying Wu, and Gang Hua.
-\newblock Context-aware visual tracking.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  31(7):1195--1209, 2009.
+\bibitem{xuaccv2016}
+Jun Xu, Dongwei Ren, Lei Zhang, and David Zhang.
+\newblock Patch group based bayesian learning for blind image denoising.
+\newblock {\em Asian Conference on Computer Vision (ACCV) New Trends in Image
+  Restoration and Enhancement Workshop}, pages 79--95, 2016.
 
-\bibitem{Yilmaz_CSUR_2006}
-A.~Yilmaz, O.~Javed, and M.~Shah.
-\newblock Object tracking: A survey.
-\newblock {\em ACM Computing Surveys}, 38(4), 2006.
+\bibitem{guided}
+Jun Xu, Lei Zhang, and David Zhang.
+\newblock External prior guided internal prior learning for real noisy image
+  denoising.
+\newblock {\em https://arxiv.org/abs/1705.04505}, 2017.
 
-\bibitem{yu2008online}
-Qian Yu, Thang~Ba Dinh, and G{\'e}rard Medioni.
-\newblock Online tracking and reacquisition using co-trained generative and
-  discriminative trackers.
-\newblock In {\em Proceedings of European Conference on Computer Vision}, pages
-  678--691. Springer, 2008.
+\bibitem{twsc}
+Jun Xu, Lei Zhang, and David Zhang.
+\newblock A trilateral weigted sparse coding scheme for robust image denoising.
+\newblock {\em Unpublished Draft}, 2017.
 
-\bibitem{zeisl2010line}
-Bernhard Zeisl, Christian Leistner, Amir Saffari, and Horst Bischof.
-\newblock On-line semi-supervised multiple-instance boosting.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1879--1879, 2010.
+\bibitem{mcwnnm}
+Jun Xu, Lei Zhang, David Zhang, and Xiangchu Feng.
+\newblock Multi-channel weighted nuclear norm minimization for real color image
+  denoising.
+\newblock In {\em ICCV}, 2017.
 
-\bibitem{zhang2010interactive}
-Dan Zhang, Fei Wang, Zhenwei Shi, and Changshui Zhang.
-\newblock Interactive localized content based image retrieval with
-  multiple-instance active learning.
-\newblock {\em Pattern Recognition}, 43(2):478--484, 2010.
+\bibitem{pgpd}
+Jun Xu, Lei Zhang, Wangmeng Zuo, David Zhang, and Xiangchu Feng.
+\newblock Patch group based nonlocal self-similarity prior learning for image
+  denoising.
+\newblock In {\em ICCV}, 2015.
 
-\bibitem{Zhang_eccv_2012}
-K.~Zhang, L.~Zhang, and M.H. Yang.
-\newblock Real-time compressive tracking.
-\newblock In {\em Proceedings of European Conference on Computer Vision}, pages
-  864--877, 2012.
+\bibitem{yang2010image}
+Jianchao Yang, John Wright, Thomas~S Huang, and Yi~Ma.
+\newblock Image super-resolution via sparse representation.
+\newblock {\em IEEE transactions on image processing}, 19(11):2861--2873, 2010.
 
-\bibitem{kaihua2013fct}
-Kaihua Zhang, Lei Zhang, and Ming-Hsuan Yang.
-\newblock Fast compressive tracking.
-\newblock {\em Submitted to IEEE Transactions on Pattern Analysis and Machine
-  Intelligence}, 2013.
+\bibitem{ple}
+G.~Yu, G.~Sapiro, and S.~Mallat.
+\newblock Solving inverse problems with piecewise linear estimators: {From}
+  {Gaussian} mixture models to structured sparsity.
+\newblock {\em IEEE Transactions on Image Processing}, 21(5):2481--2499, 2012.
 
-\bibitem{kaihua2013odfs}
-Kaihua Zhang, Lei Zhang, and Ming-Hsuan Yang.
-\newblock Real-time object tracking via online discriminative feature
-  selection.
-\newblock {\em Submitted to IEEE Transactions on Image Processing}, 2013.
+\bibitem{Fadili}
+B.~Zhang, J.~M. Fadili, and J.~L. Starck.
+\newblock Wavelets, ridgelets, and curvelets for poisson noise removal.
+\newblock {\em IEEE Transactions on Image Processing}, 17(7):1093--1108, 2008.
 
-\bibitem{kaihua2013afs}
-Kaihua Zhang, Lei Zhang, Ming-Hsuan Yang, and Qinghua Hu.
-\newblock Robust object tracking via adaptive feature selection.
-\newblock {\em To appear in IEEE Transactions on Circuits and Systems for Video
-  Technology}, 2013.
+\bibitem{dncnn}
+K.~Zhang, W.~Zuo, Y.~Chen, D.~Meng, and L.~Zhang.
+\newblock Beyond a gaussian denoiser: Residual learning of deep cnn for image
+  denoising.
+\newblock {\em IEEE Transactions on Image Processing}, 2017.
 
-\bibitem{kaihua2012stc}
-Kaihua Zhang, Lei Zhang, Ming-Hsuan Yang, and David Zhang.
-\newblock Fast tracking via spatio-temporal context learning.
-\newblock {\em Submitted to Proceedings of the IEEE International Conference on
-  Computer Vision}.
+\bibitem{zhao2014robust}
+Q.~Zhao, D.~Meng, Z.~Xu, W.~Zuo, and L.~Zhang.
+\newblock Robust principal component analysis with complex noise.
+\newblock {\em ICML}, pages 55--63, 2014.
 
-\bibitem{zhang2012robust}
-T.~Zhang, B.~Ghanem, S.~Liu, and N.~Ahuja.
-\newblock Robust visual tracking via multi-task sparse learning.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 2042--2049, 2012.
+\bibitem{zhou2012nonparametric}
+Mingyuan Zhou, Haojun Chen, John Paisley, Lu~Ren, Lingbo Li, Zhengming Xing,
+  David Dunson, Guillermo Sapiro, and Lawrence Carin.
+\newblock Nonparametric bayesian dictionary learning for analysis of noisy and
+  incomplete images.
+\newblock {\em IEEE Transactions on Image Processing}, 21(1):130--144, 2012.
 
-\bibitem{zhang2000value}
-Tong Zhang and F~Oles.
-\newblock The value of unlabeled data for classification problems.
-\newblock In {\em International Conference on Machine Learning}, pages
-  1191--1198, 2000.
+\bibitem{Zhu_2016_CVPR}
+F.~Zhu, G.~Chen, and P.-A. Heng.
+\newblock From noise modeling to blind image denoising.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, June 2016.
 
-\bibitem{zhong2012robust}
-Wei Zhong, Huchuan Lu, and Ming-Hsuan Yang.
-\newblock Robust object tracking via sparsity-based collaborative model.
-\newblock In {\em Proceedings of IEEE Conference on Computer Vision and Pattern
-  Recognition}, pages 1838--1845. IEEE, 2012.
+\bibitem{epll}
+D.~Zoran and Y.~Weiss.
+\newblock From learning models of natural image patches to whole image
+  restoration.
+\newblock {\em IEEE International Conference on Computer Vision (ICCV)}, pages
+  479--486, 2011.
 
-\bibitem{zhou2011online}
-Qiu-Hong Zhou, Huchuan Lu, and Ming-Hsuan Yang.
-\newblock Online multiple support instance tracking.
-\newblock In {\em IEEE International Conference on Automatic Face \& Gesture
-  Recognition and Workshops (FG 2011)}, pages 545--552. IEEE, 2011.
+\bibitem{gmmnips}
+D.~Zoran and Y.~Weiss.
+\newblock Natural images, {Gaussian} mixtures and dead leaves.
+\newblock {\em NIPS}, pages 1736--1744, 2012.
 
 \end{thebibliography}
