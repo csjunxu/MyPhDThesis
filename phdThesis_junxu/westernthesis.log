@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7776,4 +7776,1130 @@ File: images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso1600_2.png Graphic
 file (type png)
 
 <use images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso1600_2.png>
-Package
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso
+1600_2.png used on input line 1852.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_d800_iso1600_2.png, id=803, 205.76875pt x 205.76875
+pt>
+File: images/mcwnnm/cc/resize_br_d800_iso1600_2.png Graphic file (type png)
+ <use images/mcwnnm/cc/resize_br_d800_iso1600_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_d800_iso1600_2.png used on 
+input line 1852.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 109 undefined on in
+put line 1853.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 109 undefined on in
+put line 1853.
+
+
+<images/mcwnnm/cc/resize_br_Noisy_d800_iso3200_2.png, id=804, 205.76875pt x 205
+.76875pt>
+File: images/mcwnnm/cc/resize_br_Noisy_d800_iso3200_2.png Graphic file (type pn
+g)
+ <use images/mcwnnm/cc/resize_br_Noisy_d800_iso3200_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_Noisy_d800_iso3200_2.png us
+ed on input line 1885.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso3200_2.png, id=805, 205.76875pt 
+x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso3200_2.png Graphic file (ty
+pe png)
+ <use images/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso3200_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso3200_2.p
+ng used on input line 1885.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_TRD_CC15_d800_iso3200_2.png, id=806, 205.76875pt x 
+205.76875pt>
+File: images/mcwnnm/cc/resize_br_TRD_CC15_d800_iso3200_2.png Graphic file (type
+ png)
+ <use images/mcwnnm/cc/resize_br_TRD_CC15_d800_iso3200_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_TRD_CC15_d800_iso3200_2.png
+ used on input line 1885.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_NI_CC15_d800_iso3200_2.png, id=807, 205.76875pt x 2
+05.76875pt>
+File: images/mcwnnm/cc/resize_br_NI_CC15_d800_iso3200_2.png Graphic file (type 
+png)
+ <use images/mcwnnm/cc/resize_br_NI_CC15_d800_iso3200_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_NI_CC15_d800_iso3200_2.png 
+used on input line 1885.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_NC_CC15_d800_iso3200_2.png, id=808, 205.76875pt x 2
+05.76875pt>
+File: images/mcwnnm/cc/resize_br_NC_CC15_d800_iso3200_2.png Graphic file (type 
+png)
+ <use images/mcwnnm/cc/resize_br_NC_CC15_d800_iso3200_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_NC_CC15_d800_iso3200_2.png 
+used on input line 1885.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CC_d800_iso3200_2.png, id=809, 205.76875pt x 205.76
+875pt>
+File: images/mcwnnm/cc/resize_br_CC_d800_iso3200_2.png Graphic file (type png)
+ <use images/mcwnnm/cc/resize_br_CC_d800_iso3200_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CC_d800_iso3200_2.png used 
+on input line 1912.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso3200_2.png, id=810, 205.76875pt 
+x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso3200_2.png Graphic file (ty
+pe png)
+ <use images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso3200_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso3200_2.p
+ng used on input line 1912.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso3200_2.png, id=811, 205.7
+6875pt x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso3200_2.png Graphic f
+ile (type png)
+
+<use images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso3200_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso3
+200_2.png used on input line 1912.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso3200_2.png, id=812, 205.
+76875pt x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso3200_2.png Graphic 
+file (type png)
+
+<use images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso3200_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso
+3200_2.png used on input line 1912.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_d800_iso3200_2.png, id=813, 205.76875pt x 205.76875
+pt>
+File: images/mcwnnm/cc/resize_br_d800_iso3200_2.png Graphic file (type png)
+ <use images/mcwnnm/cc/resize_br_d800_iso3200_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_d800_iso3200_2.png used on 
+input line 1912.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 109 undefined on in
+put line 1913.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 109 undefined on in
+put line 1913.
+
+
+<images/mcwnnm/cc/resize_br_Noisy_d800_iso6400_2.png, id=814, 205.76875pt x 205
+.76875pt>
+File: images/mcwnnm/cc/resize_br_Noisy_d800_iso6400_2.png Graphic file (type pn
+g)
+ <use images/mcwnnm/cc/resize_br_Noisy_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_Noisy_d800_iso6400_2.png us
+ed on input line 1947.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso6400_2.png, id=815, 205.76875pt 
+x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso6400_2.png Graphic file (ty
+pe png)
+ <use images/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso6400_2.p
+ng used on input line 1947.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_TRD_CC15_d800_iso6400_2.png, id=816, 205.76875pt x 
+205.76875pt>
+File: images/mcwnnm/cc/resize_br_TRD_CC15_d800_iso6400_2.png Graphic file (type
+ png)
+ <use images/mcwnnm/cc/resize_br_TRD_CC15_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_TRD_CC15_d800_iso6400_2.png
+ used on input line 1947.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_NI_CC15_d800_iso6400_2.png, id=817, 205.76875pt x 2
+05.76875pt>
+File: images/mcwnnm/cc/resize_br_NI_CC15_d800_iso6400_2.png Graphic file (type 
+png)
+ <use images/mcwnnm/cc/resize_br_NI_CC15_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_NI_CC15_d800_iso6400_2.png 
+used on input line 1947.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_NC_CC15_d800_iso6400_2.png, id=818, 205.76875pt x 2
+05.76875pt>
+File: images/mcwnnm/cc/resize_br_NC_CC15_d800_iso6400_2.png Graphic file (type 
+png)
+ <use images/mcwnnm/cc/resize_br_NC_CC15_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_NC_CC15_d800_iso6400_2.png 
+used on input line 1947.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CC_d800_iso6400_2.png, id=819, 205.76875pt x 205.76
+875pt>
+File: images/mcwnnm/cc/resize_br_CC_d800_iso6400_2.png Graphic file (type png)
+ <use images/mcwnnm/cc/resize_br_CC_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CC_d800_iso6400_2.png used 
+on input line 1974.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.png, id=820, 205.76875pt 
+x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.png Graphic file (ty
+pe png)
+ <use images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.p
+ng used on input line 1974.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6400_2.png, id=821, 205.7
+6875pt x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6400_2.png Graphic f
+ile (type png)
+
+<use images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6
+400_2.png used on input line 1974.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso6400_2.png, id=822, 205.
+76875pt x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso6400_2.png Graphic 
+file (type png)
+
+<use images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso
+6400_2.png used on input line 1974.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_d800_iso6400_2.png, id=823, 205.76875pt x 205.76875
+pt>
+File: images/mcwnnm/cc/resize_br_d800_iso6400_2.png Graphic file (type png)
+ <use images/mcwnnm/cc/resize_br_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_d800_iso6400_2.png used on 
+input line 1974.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 109 undefined on in
+put line 1975.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 109 undefined on in
+put line 1975.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 109 undefined on in
+put line 1980.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 109
+ []
+
+[109 <./images/mcwnnm/nc/resize_br_Noisy_dog.png (PNG copy)> <./images/mcwnnm/n
+c/resize_br_CBM3D_dog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_MLP_dog.png
+ (PNG copy)> <./images/mcwnnm/nc/resize_br_TNRD_dog.png (PNG copy)> <./images/m
+cwnnm/nc/resize_br_NI_dog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NC_dog.
+png (PNG copy)> <./images/mcwnnm/nc/resize_br_WNNMcw_dog.png (PNG copy)> <./ima
+ges/mcwnnm/nc/resize_br_WNNMJ_dog.png (PNG copy)> <./images/mcwnnm/nc/resize_br
+_WNNM_ADMM_dog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_dog.
+png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 110
+ []
+
+[110 <./images/mcwnnm/nc/resize_br_Noisy_frog.png (PNG copy)> <./images/mcwnnm/
+nc/resize_br_CBM3D_frog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_MLP_frog.
+png (PNG copy)> <./images/mcwnnm/nc/resize_br_TNRD_frog.png (PNG copy)> <./imag
+es/mcwnnm/nc/resize_br_NI_frog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NC
+_frog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_WNNMcw_frog.png (PNG copy)>
+ <./images/mcwnnm/nc/resize_br_WNNMJ_frog.png (PNG copy)> <./images/mcwnnm/nc/r
+esize_br_WNNM_ADMM_frog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_CWNNM_ADM
+M_NL_frog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_Noisy_chinesegirl.png (
+PNG copy)> <./images/mcwnnm/nc/resize_br_CBM3D_chinesegirl.png (PNG copy)> <./i
+mages/mcwnnm/nc/resize_br_MLP_chinesegirl.png (PNG copy)> <./images/mcwnnm/nc/r
+esize_br_TNRD_chinesegirl.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NI_chin
+esegirl.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NC_chinesegirl.png (PNG c
+opy)> <./images/mcwnnm/nc/resize_br_WNNMcw_chinesegirl.png (PNG copy)> <./image
+s/mcwnnm/nc/resize_br_WNNMJ_chinesegirl.png (PNG copy)> <./images/mcwnnm/nc/res
+ize_br_WNNM_ADMM_chinesegirl.png (PNG copy)> <./images/mcwnnm/nc/resize_br_CWNN
+M_ADMM_NL_chinesegirl.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 111
+ []
+
+[111 <./images/mcwnnm/nc/resize_br_Noisy_circuit.png (PNG copy)> <./images/mcwn
+nm/nc/resize_br_CBM3D_circuit.png (PNG copy)> <./images/mcwnnm/nc/resize_br_MLP
+_circuit.png (PNG copy)> <./images/mcwnnm/nc/resize_br_TNRD_circuit.png (PNG co
+py)> <./images/mcwnnm/nc/resize_br_NI_circuit.png (PNG copy)> <./images/mcwnnm/
+nc/resize_br_NC_circuit.png (PNG copy)> <./images/mcwnnm/nc/resize_br_WNNMcw_ci
+rcuit.png (PNG copy)> <./images/mcwnnm/nc/resize_br_WNNMJ_circuit.png (PNG copy
+)> <./images/mcwnnm/nc/resize_br_WNNM_ADMM_circuit.png (PNG copy)> <./images/mc
+wnnm/nc/resize_br_CWNNM_ADMM_NL_circuit.png (PNG copy)> <./images/mcwnnm/nc/res
+ize_br_Noisy_room.png (PNG copy)> <./images/mcwnnm/nc/resize_br_CBM3D_room.png 
+(PNG copy)> <./images/mcwnnm/nc/resize_br_MLP_room.png (PNG copy)> <./images/mc
+wnnm/nc/resize_br_TNRD_room.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NI_ro
+om.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NC_room.png (PNG copy)> <./ima
+ges/mcwnnm/nc/resize_br_WNNMcw_room.png (PNG copy)> <./images/mcwnnm/nc/resize_
+br_WNNMJ_room.png (PNG copy)> <./images/mcwnnm/nc/resize_br_WNNM_ADMM_room.png 
+(PNG copy)> <./images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_room.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 112
+ []
+
+[112]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 113
+ []
+
+[113 <./images/mcwnnm/cc/resize_br_Noisy_5dmark3_iso3200_1.png (PNG copy)> <./i
+mages/mcwnnm/cc/resize_br_CBM3D_CC15_5dmark3_iso3200_1.png (PNG copy)> <./image
+s/mcwnnm/cc/resize_br_TRD_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwn
+nm/cc/resize_br_NI_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/r
+esize_br_NC_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/resize_b
+r_CC_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNMJ
+_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNM_ADMM
+_NL_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/resize_br_CWNNM_
+ADMM_NL_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/resize_br_5d
+mark3_iso3200_1.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 114
+ []
+
+[114 <./images/mcwnnm/cc/resize_br_Noisy_d600_iso3200_2.png (PNG copy)> <./imag
+es/mcwnnm/cc/resize_br_CBM3D_CC15_d600_iso3200_2.png (PNG copy)> <./images/mcwn
+nm/cc/resize_br_TRD_CC15_d600_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/res
+ize_br_NI_CC15_d600_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_NC_
+CC15_d600_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_CC_d600_iso32
+00_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNMJ_CC15_d600_iso3200_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d600_iso3200_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d600_iso3200_2.p
+ng (PNG copy)> <./images/mcwnnm/cc/resize_br_d600_iso3200_2.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 115
+ []
+
+[115 <./images/mcwnnm/cc/resize_br_Noisy_d800_iso1600_2.png (PNG copy)> <./imag
+es/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso1600_2.png (PNG copy)> <./images/mcwn
+nm/cc/resize_br_TRD_CC15_d800_iso1600_2.png (PNG copy)> <./images/mcwnnm/cc/res
+ize_br_NI_CC15_d800_iso1600_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_NC_
+CC15_d800_iso1600_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_CC_d800_iso16
+00_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso1600_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso1600_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso1600_2.p
+ng (PNG copy)> <./images/mcwnnm/cc/resize_br_d800_iso1600_2.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 116
+ []
+
+[116 <./images/mcwnnm/cc/resize_br_Noisy_d800_iso3200_2.png (PNG copy)> <./imag
+es/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso3200_2.png (PNG copy)> <./images/mcwn
+nm/cc/resize_br_TRD_CC15_d800_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/res
+ize_br_NI_CC15_d800_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_NC_
+CC15_d800_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_CC_d800_iso32
+00_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso3200_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso3200_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso3200_2.p
+ng (PNG copy)> <./images/mcwnnm/cc/resize_br_d800_iso3200_2.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 117
+ []
+
+[117 <./images/mcwnnm/cc/resize_br_Noisy_d800_iso6400_2.png (PNG copy)> <./imag
+es/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso6400_2.png (PNG copy)> <./images/mcwn
+nm/cc/resize_br_TRD_CC15_d800_iso6400_2.png (PNG copy)> <./images/mcwnnm/cc/res
+ize_br_NI_CC15_d800_iso6400_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_NC_
+CC15_d800_iso6400_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_CC_d800_iso64
+00_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6400_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso6400_2.p
+ng (PNG copy)> <./images/mcwnnm/cc/resize_br_d800_iso6400_2.png (PNG copy)>]
+
+Package natbib Warning: Citation `crosschannel2016' on page 118 undefined on in
+put line 1982.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 118 undefined on in
+put line 1982.
+
+
+LaTeX Warning: Reference `tab4-4' on page 118 undefined on input line 1982.
+
+
+Package natbib Warning: Citation `mlp' on page 118 undefined on input line 1982
+.
+
+
+Package natbib Warning: Citation `tnrd' on page 118 undefined on input line 198
+2.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 118 undefined on in
+put line 1982.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 118 undefined on in
+put line 1982.
+
+
+LaTeX Warning: Reference `fig4-13' on page 118 undefined on input line 1984.
+
+
+LaTeX Warning: Reference `fig4-13' on page 118 undefined on input line 1984.
+
+
+LaTeX Warning: Reference `fig4-13' on page 118 undefined on input line 1984.
+
+
+LaTeX Warning: Reference `fig4-13' on page 118 undefined on input line 1984.
+
+
+LaTeX Warning: Reference `fig4-14' on page 118 undefined on input line 1984.
+
+
+LaTeX Warning: Reference `fig4-17' on page 118 undefined on input line 1984.
+
+
+LaTeX Warning: Reference `tab4-4' on page 118 undefined on input line 1986.
+
+
+Underfull \vbox (badness 7308) has occurred while \output is active []
+
+
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 118
+ []
+
+[118]
+
+Package natbib Warning: Citation `nearcor' on page 119 undefined on input line 
+1993.
+
+)
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 119
+ []
+
+[119]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 120
+ []
+
+[120]
+\openout2 = `chapter5.aux'.
+
+ (./chapter5.tex
+Chapter 5.
+
+Package natbib Warning: Citation `ksvd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `bm3d' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `cbm3d' on page 121 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `lssc' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `ncsr' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `wnnm' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `epll' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `pgpd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `mlp' on page 121 undefined on input line 10.
+
+
+Package natbib Warning: Citation `csf' on page 121 undefined on input line 10.
+
+
+Package natbib Warning: Citation `tnrd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `dncnn' on page 121 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `Liu2008' on page 121 undefined on input line 
+10.
+
+
+Package natbib Warning: Citation `noiseclinic' on page 121 undefined on input l
+ine 10.
+
+
+Package natbib Warning: Citation `Zhu_2016_CVPR' on page 121 undefined on input
+ line 10.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 121 undefined on in
+put line 10.
+
+
+Package natbib Warning: Citation `neatimage' on page 121 undefined on input lin
+e 10.
+
+
+Package natbib Warning: Citation `ksvd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `bm3d' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `cbm3d' on page 121 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `lssc' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `ncsr' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `wnnm' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `epll' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `pgpd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `mlp' on page 121 undefined on input line 10.
+
+
+Package natbib Warning: Citation `csf' on page 121 undefined on input line 10.
+
+
+Package natbib Warning: Citation `tnrd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `dncnn' on page 121 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `ksvd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `bm3d' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `cbm3d' on page 121 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `lssc' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `ncsr' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `wnnm' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `ksvd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `bm3d' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `cbm3d' on page 121 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `lssc' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `ncsr' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `wnnm' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `epll' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `pgpd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `mlp' on page 121 undefined on input line 10.
+
+
+Package natbib Warning: Citation `csf' on page 121 undefined on input line 10.
+
+
+Package natbib Warning: Citation `tnrd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `dncnn' on page 121 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 121 undefined on in
+put line 10.
+
+
+Package natbib Warning: Citation `ksvd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `bm3d' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `cbm3d' on page 121 undefined on input line 10
+.
+
+
+Package natbib Warning: Citation `lssc' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `ncsr' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `wnnm' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `epll' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `pgpd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `mlp' on page 121 undefined on input line 10.
+
+
+Package natbib Warning: Citation `csf' on page 121 undefined on input line 10.
+
+
+Package natbib Warning: Citation `tnrd' on page 121 undefined on input line 10.
+
+
+
+Package natbib Warning: Citation `dncnn' on page 121 undefined on input line 10
+.
+
+
+Underfull \vbox (badness 2809) has occurred while \output is active []
+
+ [121
+
+
+
+]
+
+Package natbib Warning: Citation `cbm3d' on page 122 undefined on input line 13
+.
+
+
+Package natbib Warning: Citation `Liu2008' on page 122 undefined on input line 
+13.
+
+
+Package natbib Warning: Citation `noiseclinic' on page 122 undefined on input l
+ine 13.
+
+
+Package natbib Warning: Citation `Zhu_2016_CVPR' on page 122 undefined on input
+ line 13.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 122 undefined on in
+put line 13.
+
+
+Package natbib Warning: Citation `neatimage' on page 122 undefined on input lin
+e 13.
+
+
+Package natbib Warning: Citation `cbm3d' on page 122 undefined on input line 13
+.
+
+
+Package natbib Warning: Citation `bm3d' on page 122 undefined on input line 13.
+
+
+
+Package natbib Warning: Citation `Liu2008' on page 122 undefined on input line 
+13.
+
+
+Package natbib Warning: Citation `noiseclinic' on page 122 undefined on input l
+ine 13.
+
+
+Package natbib Warning: Citation `Zhu_2016_CVPR' on page 122 undefined on input
+ line 13.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 122 undefined on in
+put line 13.
+
+
+Package natbib Warning: Citation `noiseclinic' on page 122 undefined on input l
+ine 13.
+
+
+Package natbib Warning: Citation `neatimage' on page 122 undefined on input lin
+e 13.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 122 undefined on in
+put line 13.
+
+
+Package natbib Warning: Citation `neatimage' on page 122 undefined on input lin
+e 13.
+
+
+Package natbib Warning: Citation `lasso' on page 122 undefined on input line 15
+.
+
+
+Package natbib Warning: Citation `src' on page 122 undefined on input line 15.
+
+
+Package natbib Warning: Citation `yang2010image' on page 122 undefined on input
+ line 15.
+
+
+Package natbib Warning: Citation `ksvd' on page 122 undefined on input line 15.
+
+
+
+Package natbib Warning: Citation `lssc' on page 122 undefined on input line 15.
+
+
+
+Package natbib Warning: Citation `ncsr' on page 122 undefined on input line 15.
+
+
+
+Package natbib Warning: Citation `ksvd' on page 122 undefined on input line 23.
+
+
+
+Package natbib Warning: Citation `lssc' on page 122 undefined on input line 23.
+
+
+
+Package natbib Warning: Citation `ncsr' on page 122 undefined on input line 23.
+
+
+
+Package natbib Warning: Citation `Zhu_2016_CVPR' on page 122 undefined on input
+ line 23.
+
+
+Package natbib Warning: Citation `zhao2014robust' on page 122 undefined on inpu
+t line 23.
+
+
+Package natbib Warning: Citation `Zhu_2016_CVPR' on page 122 undefined on input
+ line 23.
+
+
+Package natbib Warning: Citation `zhao2014robust' on page 122 undefined on inpu
+t line 23.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 122
+ []
+
+[122]
+
+Package natbib Warning: Citation `admm' on page 123 undefined on input line 25.
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 123
+ []
+
+[123]
+Overfull \hbox (14.60814pt too wide) in paragraph at lines 31--31
+[]\OT1/txr/bx/n/17.28 The Pro-posed Re-al-is-tic Im-age De-nois-ing Al-go-rithm
+ 
+ []
+
+
+Package natbib Warning: Citation `lasso' on page 124 undefined on input line 37
+.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 124
+ []
+
+[124]
+
+Package natbib Warning: Citation `ksvd' on page 125 undefined on input line 54.
+
+
+
+Package natbib Warning: Citation `lssc' on page 125 undefined on input line 54.
+
+
+
+Package natbib Warning: Citation `ncsr' on page 125 undefined on input line 54.
+
+
+
+LaTeX Warning: Reference `equ5-1' on page 125 undefined on input line 54.
+
+
+LaTeX Warning: Reference `equ5-1' on page 125 undefined on input line 56.
+
+
+LaTeX Warning: Reference `equ5-1' on page 125 undefined on input line 56.
+
+
+Package natbib Warning: Citation `Leungtip' on page 125 undefined on input line
+ 63.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 125
+ []
+
+[125]
+
+Package natbib Warning: Citation `Leungtip' on page 126 undefined on input line
+ 79.
+
+
+Package natbib Warning: Citation `glm' on page 126 undefined on input line 90.
+
+
+Package natbib Warning: Citation `Chen2015ICCV' on page 126 undefined on input 
+line 90.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 126
+ []
+
+[126]
+
+LaTeX Warning: Reference `equ5-2' on page 127 undefined on input line 96.
+
+
+LaTeX Warning: Reference `equ5-4' on page 127 undefined on input line 96.
+
+
+LaTeX Warning: Reference `equ5-6' on page 127 undefined on input line 107.
+
+
+LaTeX Warning: Reference `equ5-5' on page 127 undefined on input line 107.
+
+
+LaTeX Warning: Reference `equ5-4' on page 127 undefined on input line 107.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 127
+ []
+
+[127]
+
+LaTeX Warning: Reference `equ5-3' on page 128 undefined on input line 158.
+
+
+LaTeX Warning: Reference `equ5-3' on page 128 undefined on input line 158.
+
+
+LaTeX Warning: Reference `equ5-9' on page 128 undefined on input line 167.
+
+
+Package natbib Warning: Citation `Eckstein1992' on page 128 undefined on input 
+line 167.
+
+
+LaTeX Warning: Reference `equ5-9' on page 128 undefined on input line 167.
+
+
+LaTeX Warning: Reference `equ5-10' on page 128 undefined on input line 178.
+
+
+Package natbib Warning: Citation `admm' on page 128 undefined on input line 178
+.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 128
+ []
+
+[128]
+
+LaTeX Warning: Reference `equ5-13' on page 129 undefined on input line 217.
+
+
+Package natbib Warning: Citation `simoncini2016computational' on page 129 undef
+ined on input line 217.
+
+
+LaTeX Warning: Reference `equ5-13' on page 129 undefined on input line 217.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 129
+ []
+
+[129]
+
+LaTeX Warning: Reference `th5-1' on page 130 undefined on input line 257.
+
+
+LaTeX Warning: Reference `equ5-10' on page 130 undefined on input line 257.
+
+
+Package natbib Warning: Citation `admm' on page 130 undefined on input line 257
+.
+
+
+LaTeX Warning: Reference `th5-1' on page 130 undefined on input line 295.
+
+
+LaTeX Warning: Reference `th5-1' on page 130 undefined on input line 295.
+
+
+LaTeX Warning: Reference `fig5-1' on page 130 undefined on input line 295.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 130
+ []
+
+[130]
+
+LaTeX Warning: Reference `equ5-10' on page 131 undefined on input line 302.
+
+
+LaTeX Warning: Reference `equ5-13' on page 131 undefined on input line 311.
+
+
+LaTeX Warning: Reference `equ5-16' on page 131 undefined on input line 313.
+
+
+LaTeX Warning: Reference `equ5-3' on page 131 undefined on input line 361.
+
+<images/twsc/LinearScaleConvergence.pdf, id=894, 597.23125pt x 845.1575pt>
+File: images/twsc/LinearScaleConvergence.pdf Graphic file (type pdf)
+
+<use images/twsc/LinearScaleConvergence.pdf>
+Package pdftex.def Info: images/twsc/LinearScaleConvergence.pdf used on input l
+ine 378.
+(pdftex.def)             Requested size: 397.48499pt x 562.49985pt.
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 131
+ []
+
+[131]
+
+LaTeX Warning: Reference `equ5-13' on page 132 undefined on input line 389.
+
+
+LaTeX Warning: Reference `equ5-13' on page 132 undefined on input line 392.
+
+
+LaTeX Warning: Reference `equ5-13' on page 132 undefined on input line 392.
+
+
+LaTeX Warning: Reference `equ5-13' on page 132 undefined on input line 392.
+
+
+LaTeX Warning: Reference `equ5-13' on page 132 undefined on input line 392.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 132
+ []
+
+[132]
+
+LaTeX Warning: Reference `equ5-13' on page 133 undefined on input line 397.
+
+
+LaTeX Warning: Reference `th5-2' on page 133 undefined on input line 408.
+
+
+LaTeX Warning: Reference `equ5-13' on page 133 undefined on input line 411.
+
+
+LaTeX Warning: Reference `equ5-13' on page 133 undefined on input line 415.
+
+
+LaTeX Warning: Reference `th5-2' on page 133 undefined on input line 415.
+
+
+LaTeX Warning: Reference `equ5-13' on page 133 undefined on input line 415.
+
+
+LaTeX Warning: Reference `equ5-13' on page 133 undefined on input line 419.
+
+
+LaTeX Warning: Reference `equ5-14' on page 133 undefined on input line 421.
+
+
+LaTeX Warning: Reference `equ5-13' on page 133 undefined on input line 421.
+
+
+Package natbib Warning: Citation `Bartels1972' on page 133 undefined on input l
+ine 421.
+
+
+Package natbib Warning: Citation `GolubMatrix' on page 133 undefined on input l
+ine 421.
+
+
+Package natbib Warning: Citation `bareiss1968sylvester' on page 133 undefined o
+n input line 421.
+
+
+LaTeX Warning: Reference `equ5-13' on page 133 undefined on input line 421.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 133
+ []
+
+[133 <./images/twsc/LinearScaleConvergence.pdf>]
+
+LaTeX Warning: Reference `equ5-13' on page 134 undefined on input line 423.
+
+
+LaTeX Warning: Reference `equ5-13' on page 134 undefined on input line 423.
+
+
+LaTeX Warning: Reference `equ5-13' on page 134 undefined on input line 447.
+
+
+LaTeX Warning: Reference `equ5-8' on page 134 undefined on input line 452.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 134
+ []
+
+[134]
+
+Package natbib Warning: Citation `bm3d' on page 135 undefined on input line 459
+.
+
+
+Package natbib Warning: Citation `lssc' on page 135 undefined on input line 459
+.
+
+
+Package natbib Warning: Citation `ncsr' on page 135 undefined on input line 459
+.
+
+
+Package natbib Warning: Citation `wnnm' on page 135 undefined on input line 459
+.
+
+
+Package natbib Warning: Citation `tnrd' on page 135 undefined on input line 459
+.
+
+
+Package natbib Warning: Citation `dncnn' on page 135 undefined on input line 45
+9.
+
+
+Package natbib Warning: Citation `bm3d' on page 135 undefined on input line 459
+.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+al
