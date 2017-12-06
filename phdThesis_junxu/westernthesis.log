@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8902,4 +8902,202 @@ Package natbib Warning: Citation `bm3d' on page 135 undefined on input line 459
 
 Overfull \hbox (51.57799pt too wide) has occurred while \output is active
  \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
-al
+alistic Image Denoising  \OT1/txr/m/n/12 135
+ []
+
+[135]
+
+Package natbib Warning: Citation `ssim' on page 136 undefined on input line 461
+.
+
+
+LaTeX Warning: Reference `tab5-1' on page 136 undefined on input line 461.
+
+
+LaTeX Warning: Reference `fig2-5' on page 136 undefined on input line 463.
+
+
+LaTeX Warning: Reference `fig5-2' on page 136 undefined on input line 463.
+
+
+LaTeX Warning: Reference `fig5-6' on page 136 undefined on input line 463.
+
+
+Package natbib Warning: Citation `bm3d' on page 136 undefined on input line 463
+.
+
+
+Package natbib Warning: Citation `lssc' on page 136 undefined on input line 463
+.
+
+
+Package natbib Warning: Citation `ncsr' on page 136 undefined on input line 463
+.
+
+
+Package natbib Warning: Citation `wnnm' on page 136 undefined on input line 463
+.
+
+
+Package natbib Warning: Citation `tnrd' on page 136 undefined on input line 463
+.
+
+
+Package natbib Warning: Citation `dncnn' on page 136 undefined on input line 46
+3.
+
+<images/twsc/awgn/resize_br_baboon.png, id=929, 205.76875pt x 205.76875pt>
+File: images/twsc/awgn/resize_br_baboon.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_baboon.png used on input li
+ne 564.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_20_baboon.png, id=930, 205.76875pt x 205.76875pt>
+File: images/twsc/awgn/resize_br_20_baboon.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_20_baboon.png used on input
+ line 564.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_BM3D_20_baboon.png, id=931, 205.76875pt x 205.76875
+pt>
+File: images/twsc/awgn/resize_br_BM3D_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_BM3D_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_BM3D_20_baboon.png used on 
+input line 564.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_LSSC_20_baboon.png, id=932, 205.76875pt x 205.76875
+pt>
+File: images/twsc/awgn/resize_br_LSSC_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_LSSC_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_LSSC_20_baboon.png used on 
+input line 564.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_NCSR_20_baboon.png, id=933, 205.76875pt x 205.76875
+pt>
+File: images/twsc/awgn/resize_br_NCSR_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_NCSR_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_NCSR_20_baboon.png used on 
+input line 564.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WNNM_20_baboon.png, id=934, 205.76875pt x 205.76875
+pt>
+File: images/twsc/awgn/resize_br_WNNM_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WNNM_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WNNM_20_baboon.png used on 
+input line 591.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_TNRD_20_baboon.png, id=935, 205.76875pt x 205.76875
+pt>
+File: images/twsc/awgn/resize_br_TNRD_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_TNRD_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_TNRD_20_baboon.png used on 
+input line 591.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_DnCNN_20_baboon.png, id=936, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_DnCNN_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_DnCNN_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_DnCNN_20_baboon.png used on
+ input line 591.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WSC_20_baboon.png, id=937, 205.76875pt x 205.76875p
+t>
+File: images/twsc/awgn/resize_br_WSC_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WSC_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WSC_20_baboon.png used on i
+nput line 591.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WLSWSC_20_baboon.png, id=938, 205.76875pt x 205.768
+75pt>
+File: images/twsc/awgn/resize_br_WLSWSC_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WLSWSC_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WLSWSC_20_baboon.png used o
+n input line 591.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_barbara.png, id=939, 205.76875pt x 205.76875pt>
+File: images/twsc/awgn/resize_br_barbara.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_barbara.png used on input l
+ine 628.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_40_barbara.png, id=940, 205.76875pt x 205.76875pt>
+File: images/twsc/awgn/resize_br_40_barbara.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_40_barbara.png used on inpu
+t line 628.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_BM3D_40_barbara.png, id=941, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_BM3D_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_BM3D_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_BM3D_40_barbara.png used on
+ input line 628.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_LSSC_40_barbara.png, id=942, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_LSSC_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_LSSC_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_LSSC_40_barbara.png used on
+ input line 628.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_NCSR_40_barbara.png, id=943, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_NCSR_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_NCSR_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_NCSR_40_barbara.png used on
+ input line 628.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WNNM_40_barbara.png, id=944, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_WNNM_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WNNM_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WNNM_40_barbara.png used on
+ input line 655.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_TNRD_40_barbara.png, id=945, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_TNRD_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_TNRD_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_TNRD_40_barbara.png used on
+ input line 655.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_DnCNN_40_barbara.png, id=946, 205.76875pt x 205.768
+75pt>
+File: images/twsc/awgn/resize_br_DnCNN_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_DnCNN_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_DnCNN_40_barbara.png used o
+n input line 655.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WSC_40_barbara.png, id=947, 205.76875pt x 205.76875
+pt>
+File: images/twsc/awgn/resize_br_WSC_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WSC_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WSC_40_barbara.png used on 
+input line 655.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WLSWSC_40_barbara.png, id=948, 205.76875pt x 205.76
+875pt>
+File: images/twsc/awgn/resize_br_WLSWSC_40_barbara.png Graphic file (type 

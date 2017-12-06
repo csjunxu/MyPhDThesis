@@ -535,66 +535,61 @@ Metric
 \begin{figure}
 \begin{adjustwidth}{-2cm}{}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_baboon.png}
-	   \caption{Ground Truth}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_20_baboon.png}
-		\caption{Noisy: 22.11}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_BM3D_20_baboon.png}
-		\caption{BM3D: 26.61}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_LSSC_20_baboon.png}
-		\caption{LSSC: 26.75}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_NCSR_20_baboon.png}
-		\caption{NCSR: 26.64}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WNNM_20_baboon.png}
-		\caption{WNNM: 26.84}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_TNRD_20_baboon.png}
-		\caption{TNRD: 26.95}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_DnCNN_20_baboon.png}
-		\caption{DnCNN: 27.04}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WSC_20_baboon.png}
-		\caption{WSC: 26.58}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WLSWSC_20_baboon.png}
-		\caption{TWSC: 26.72}
-    \end{subfigure}
-    \caption{Denoised images and PSNR (dB) results of \textsl{Baboon} by different methods (the standard deviation of noise is $\sigma=20$).}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_baboon.png}}
+{\footnotesize Clean}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_20_baboon.png}}
+{\footnotesize Noisy: 22.11}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_BM3D_20_baboon.png}}
+{\footnotesize BM3D: 26.61}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_LSSC_20_baboon.png}}
+{\footnotesize LSSC: 26.75}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_NCSR_20_baboon.png}}
+{\footnotesize NCSR: 26.64}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WNNM_20_baboon.png}}
+{\footnotesize WNNM: 26.84}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_TNRD_20_baboon.png}}
+{\footnotesize TNRD: 26.95}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_DnCNN_20_baboon.png}}
+{\footnotesize DnCNN: 27.04}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WSC_20_baboon.png}}
+{\footnotesize WSC: 26.58}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WLSWSC_20_baboon.png}}
+{\footnotesize TWSC: 26.72}
+\end{minipage}
+}
+\caption{Denoised images and PSNR (dB) results of \textsl{Baboon} by different methods (the standard deviation of noise is $\sigma=20$).}
     \label{fig5-2}
 \end{adjustwidth}
 \end{figure}
@@ -604,66 +599,61 @@ Metric
 \begin{figure}
 \begin{adjustwidth}{-2cm}{}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_barbara.png}
-	   \caption{Ground Truth}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_40_barbara.png}
-		\caption{Noisy: 16.09}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_BM3D_40_barbara.png}
-		\caption{BM3D: 27.99}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_LSSC_40_barbara.png}
-		\caption{LSSC: 28.17}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_NCSR_40_barbara.png}
-		\caption{NCSR: 28.19}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WNNM_40_barbara.png}
-		\caption{WNNM: 28.76}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_TNRD_40_barbara.png}
-		\caption{TNRD: 27.11}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_DnCNN_40_barbara.png}
-		\caption{DnCNN: 27.36}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WSC_40_barbara.png}
-		\caption{WSC: 28.42}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WLSWSC_40_barbara.png}
-		\caption{TWSC: 28.89}
-    \end{subfigure}
-    \caption{Denoised images and PSNR (dB) results of \textsl{Barbara} by different methods (the standard deviation of noise is $\sigma=40$).}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_barbara.png}}
+{\footnotesize Clean}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_40_barbara.png}}
+{\footnotesize Noisy: 16.09}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_BM3D_40_barbara.png}}
+{\footnotesize BM3D: 27.99}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_LSSC_40_barbara.png}}
+{\footnotesize LSSC: 28.17}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_NCSR_40_barbara.png}}
+{\footnotesize NCSR: 28.19}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WNNM_40_barbara.png}}
+{\footnotesize WNNM: 28.76}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_TNRD_40_barbara.png}}
+{\footnotesize TNRD: 27.11}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_DnCNN_40_barbara.png}}
+{\footnotesize DnCNN: 27.36}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WSC_40_barbara.png}}
+{\footnotesize WSC: 28.42}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WLSWSC_40_barbara.png}}
+{\footnotesize TWSC: 28.89}
+\end{minipage}
+}
+\caption{Denoised images and PSNR (dB) results of \textsl{Barbara} by different methods (the standard deviation of noise is $\sigma=40$).}
     \label{fig5-3}
 \end{adjustwidth}
 \end{figure}
@@ -672,66 +662,61 @@ Metric
 \begin{figure}
 \begin{adjustwidth}{-2cm}{}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_lena.png}
-	   \caption{Ground Truth}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_60_lena.png}
-		\caption{Noisy: 12.57}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_BM3D_60_lena.png}
-		\caption{BM3D: 28.27}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_LSSC_60_lena.png}
-		\caption{LSSC: 28.14}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_NCSR_60_lena.png}
-		\caption{NCSR: 28.00}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WNNM_60_lena.png}
-		\caption{WNNM: 28.40}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_TNRD_60_lena.png}
-		\caption{TNRD: 28.11}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_DnCNN_60_lena.png}
-		\caption{DnCNN: 28.53}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WSC_60_lena.png}
-		\caption{WSC: 28.07}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WLSWSC_60_lena.png}
-		\caption{TWSC: 28.48}
-    \end{subfigure}
-    \caption{Denoised images and PSNR (dB) results of \textsl{Lena} by different methods (the standard deviation of noise is $\sigma=60$).}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_lena.png}}
+{\footnotesize Clean}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_60_lena.png}}
+{\footnotesize Noisy: 12.57}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_BM3D_60_lena.png}}
+{\footnotesize BM3D: 28.27}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_LSSC_60_lena.png}}
+{\footnotesize LSSC: 28.14}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_NCSR_60_lena.png}}
+{\footnotesize NCSR: 28.00}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WNNM_60_lena.png}}
+{\footnotesize WNNM: 28.40}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_TNRD_60_lena.png}}
+{\footnotesize TNRD: 28.11}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_DnCNN_60_lena.png}}
+{\footnotesize DnCNN: 28.53}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WSC_60_lena.png}}
+{\footnotesize WSC: 28.07}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WLSWSC_60_lena.png}}
+{\footnotesize TWSC: 28.48}
+\end{minipage}
+}
+\caption{Denoised images and PSNR (dB) results of \textsl{Lena} by different methods (the standard deviation of noise is $\sigma=60$).}
     \label{fig5-4}
 \end{adjustwidth}
 \end{figure}
