@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 15:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7202,4 +7202,390 @@ File: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_frog.png Graphic file (type png)
  <use images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_frog.png>
 Package pdftex.def Info: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_frog.png used
  on input line 1379.
-(pdftex.def)             Requested size: 75.52312pt x 75.5245
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 109 undefined on input lin
+e 1380.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 109 undefined on input lin
+e 1380.
+
+
+<images/mcwnnm/nc/resize_br_Noisy_chinesegirl.png, id=744, 225.84375pt x 225.84
+375pt>
+File: images/mcwnnm/nc/resize_br_Noisy_chinesegirl.png Graphic file (type png)
+ <use images/mcwnnm/nc/resize_br_Noisy_chinesegirl.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_Noisy_chinesegirl.png used 
+on input line 1413.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_CBM3D_chinesegirl.png, id=745, 225.84375pt x 225.84
+375pt>
+File: images/mcwnnm/nc/resize_br_CBM3D_chinesegirl.png Graphic file (type png)
+ <use images/mcwnnm/nc/resize_br_CBM3D_chinesegirl.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_CBM3D_chinesegirl.png used 
+on input line 1413.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_MLP_chinesegirl.png, id=746, 225.84375pt x 225.8437
+5pt>
+File: images/mcwnnm/nc/resize_br_MLP_chinesegirl.png Graphic file (type png)
+ <use images/mcwnnm/nc/resize_br_MLP_chinesegirl.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_MLP_chinesegirl.png used on
+ input line 1413.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_TNRD_chinesegirl.png, id=747, 225.84375pt x 225.843
+75pt>
+File: images/mcwnnm/nc/resize_br_TNRD_chinesegirl.png Graphic file (type png)
+ <use images/mcwnnm/nc/resize_br_TNRD_chinesegirl.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_TNRD_chinesegirl.png used o
+n input line 1413.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_NI_chinesegirl.png, id=748, 225.84375pt x 225.84375
+pt>
+File: images/mcwnnm/nc/resize_br_NI_chinesegirl.png Graphic file (type png)
+ <use images/mcwnnm/nc/resize_br_NI_chinesegirl.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_NI_chinesegirl.png used on 
+input line 1413.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_NC_chinesegirl.png, id=749, 225.84375pt x 225.84375
+pt>
+File: images/mcwnnm/nc/resize_br_NC_chinesegirl.png Graphic file (type png)
+ <use images/mcwnnm/nc/resize_br_NC_chinesegirl.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_NC_chinesegirl.png used on 
+input line 1440.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_WNNMcw_chinesegirl.png, id=750, 225.84375pt x 225.8
+4375pt>
+File: images/mcwnnm/nc/resize_br_WNNMcw_chinesegirl.png Graphic file (type png)
+
+ <use images/mcwnnm/nc/resize_br_WNNMcw_chinesegirl.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNMcw_chinesegirl.png used
+ on input line 1440.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_WNNMJ_chinesegirl.png, id=751, 225.84375pt x 225.84
+375pt>
+File: images/mcwnnm/nc/resize_br_WNNMJ_chinesegirl.png Graphic file (type png)
+ <use images/mcwnnm/nc/resize_br_WNNMJ_chinesegirl.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNMJ_chinesegirl.png used 
+on input line 1440.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_WNNM_ADMM_chinesegirl.png, id=752, 225.84375pt x 22
+5.84375pt>
+File: images/mcwnnm/nc/resize_br_WNNM_ADMM_chinesegirl.png Graphic file (type p
+ng)
+ <use images/mcwnnm/nc/resize_br_WNNM_ADMM_chinesegirl.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNM_ADMM_chinesegirl.png u
+sed on input line 1440.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_chinesegirl.png, id=753, 225.84375pt 
+x 225.84375pt>
+File: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_chinesegirl.png Graphic file (ty
+pe png)
+ <use images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_chinesegirl.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_chinesegirl.p
+ng used on input line 1440.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 109 undefined on input lin
+e 1441.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 109 undefined on input lin
+e 1441.
+
+<images/mcwnnm/nc/resize_br_Noisy_circuit.png, id=754, 212.795pt x 212.795pt>
+File: images/mcwnnm/nc/resize_br_Noisy_circuit.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_Noisy_circuit.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_Noisy_circuit.png used on i
+nput line 1474.
+(pdftex.def)             Requested size: 75.52312pt x 75.52489pt.
+
+<images/mcwnnm/nc/resize_br_CBM3D_circuit.png, id=755, 212.795pt x 212.795pt>
+File: images/mcwnnm/nc/resize_br_CBM3D_circuit.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_CBM3D_circuit.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_CBM3D_circuit.png used on i
+nput line 1474.
+(pdftex.def)             Requested size: 75.52312pt x 75.52489pt.
+
+<images/mcwnnm/nc/resize_br_MLP_circuit.png, id=756, 212.795pt x 212.795pt>
+File: images/mcwnnm/nc/resize_br_MLP_circuit.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_MLP_circuit.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_MLP_circuit.png used on inp
+ut line 1474.
+(pdftex.def)             Requested size: 75.52312pt x 75.52489pt.
+
+<images/mcwnnm/nc/resize_br_TNRD_circuit.png, id=757, 212.795pt x 212.795pt>
+File: images/mcwnnm/nc/resize_br_TNRD_circuit.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_TNRD_circuit.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_TNRD_circuit.png used on in
+put line 1474.
+(pdftex.def)             Requested size: 75.52312pt x 75.52489pt.
+
+<images/mcwnnm/nc/resize_br_NI_circuit.png, id=758, 212.795pt x 212.795pt>
+File: images/mcwnnm/nc/resize_br_NI_circuit.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_NI_circuit.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_NI_circuit.png used on inpu
+t line 1474.
+(pdftex.def)             Requested size: 75.52312pt x 75.52489pt.
+
+<images/mcwnnm/nc/resize_br_NC_circuit.png, id=759, 212.795pt x 212.795pt>
+File: images/mcwnnm/nc/resize_br_NC_circuit.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_NC_circuit.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_NC_circuit.png used on inpu
+t line 1501.
+(pdftex.def)             Requested size: 75.52312pt x 75.52489pt.
+
+<images/mcwnnm/nc/resize_br_WNNMcw_circuit.png, id=760, 212.795pt x 212.795pt>
+File: images/mcwnnm/nc/resize_br_WNNMcw_circuit.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_WNNMcw_circuit.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNMcw_circuit.png used on 
+input line 1501.
+(pdftex.def)             Requested size: 75.52312pt x 75.52489pt.
+
+<images/mcwnnm/nc/resize_br_WNNMJ_circuit.png, id=761, 212.795pt x 212.795pt>
+File: images/mcwnnm/nc/resize_br_WNNMJ_circuit.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_WNNMJ_circuit.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNMJ_circuit.png used on i
+nput line 1501.
+(pdftex.def)             Requested size: 75.52312pt x 75.52489pt.
+
+<images/mcwnnm/nc/resize_br_WNNM_ADMM_circuit.png, id=762, 212.795pt x 212.795p
+t>
+File: images/mcwnnm/nc/resize_br_WNNM_ADMM_circuit.png Graphic file (type png)
+ <use images/mcwnnm/nc/resize_br_WNNM_ADMM_circuit.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNM_ADMM_circuit.png used 
+on input line 1501.
+(pdftex.def)             Requested size: 75.52312pt x 75.52489pt.
+
+<images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_circuit.png, id=763, 212.795pt x 212.
+795pt>
+File: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_circuit.png Graphic file (type p
+ng)
+ <use images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_circuit.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_circuit.png u
+sed on input line 1501.
+(pdftex.def)             Requested size: 75.52312pt x 75.52489pt.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 109 undefined on input lin
+e 1502.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 109 undefined on input lin
+e 1502.
+
+<images/mcwnnm/nc/resize_br_Noisy_room.png, id=764, 240.9pt x 240.9pt>
+File: images/mcwnnm/nc/resize_br_Noisy_room.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_Noisy_room.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_Noisy_room.png used on inpu
+t line 1535.
+(pdftex.def)             Requested size: 75.52312pt x 75.51999pt.
+
+<images/mcwnnm/nc/resize_br_CBM3D_room.png, id=765, 240.9pt x 240.9pt>
+File: images/mcwnnm/nc/resize_br_CBM3D_room.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_CBM3D_room.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_CBM3D_room.png used on inpu
+t line 1535.
+(pdftex.def)             Requested size: 75.52312pt x 75.51999pt.
+
+<images/mcwnnm/nc/resize_br_MLP_room.png, id=766, 240.9pt x 240.9pt>
+File: images/mcwnnm/nc/resize_br_MLP_room.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_MLP_room.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_MLP_room.png used on input 
+line 1535.
+(pdftex.def)             Requested size: 75.52312pt x 75.51999pt.
+
+<images/mcwnnm/nc/resize_br_TNRD_room.png, id=767, 240.9pt x 240.9pt>
+File: images/mcwnnm/nc/resize_br_TNRD_room.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_TNRD_room.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_TNRD_room.png used on input
+ line 1535.
+(pdftex.def)             Requested size: 75.52312pt x 75.51999pt.
+
+<images/mcwnnm/nc/resize_br_NI_room.png, id=768, 240.9pt x 240.9pt>
+File: images/mcwnnm/nc/resize_br_NI_room.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_NI_room.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_NI_room.png used on input l
+ine 1535.
+(pdftex.def)             Requested size: 75.52312pt x 75.51999pt.
+
+<images/mcwnnm/nc/resize_br_NC_room.png, id=769, 240.9pt x 240.9pt>
+File: images/mcwnnm/nc/resize_br_NC_room.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_NC_room.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_NC_room.png used on input l
+ine 1562.
+(pdftex.def)             Requested size: 75.52312pt x 75.51999pt.
+
+<images/mcwnnm/nc/resize_br_WNNMcw_room.png, id=770, 240.9pt x 240.9pt>
+File: images/mcwnnm/nc/resize_br_WNNMcw_room.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_WNNMcw_room.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNMcw_room.png used on inp
+ut line 1562.
+(pdftex.def)             Requested size: 75.52312pt x 75.51999pt.
+
+<images/mcwnnm/nc/resize_br_WNNMJ_room.png, id=771, 240.9pt x 240.9pt>
+File: images/mcwnnm/nc/resize_br_WNNMJ_room.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_WNNMJ_room.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNMJ_room.png used on inpu
+t line 1562.
+(pdftex.def)             Requested size: 75.52312pt x 75.51999pt.
+
+<images/mcwnnm/nc/resize_br_WNNM_ADMM_room.png, id=772, 240.9pt x 240.9pt>
+File: images/mcwnnm/nc/resize_br_WNNM_ADMM_room.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_WNNM_ADMM_room.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNM_ADMM_room.png used on 
+input line 1562.
+(pdftex.def)             Requested size: 75.52312pt x 75.51999pt.
+
+<images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_room.png, id=773, 240.9pt x 240.9pt>
+File: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_room.png Graphic file (type png)
+
+
+<use images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_room.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_room.png used
+ on input line 1562.
+(pdftex.def)             Requested size: 75.52312pt x 75.51999pt.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 109 undefined on input lin
+e 1563.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 109 undefined on input lin
+e 1563.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 109 undefined on in
+put line 1572.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 109 undefined on in
+put line 1572.
+
+
+Overfull \hbox (44.92946pt too wide) in paragraph at lines 1579--1670
+ [] 
+ []
+
+
+<images/mcwnnm/cc/resize_br_Noisy_5dmark3_iso3200_1.png, id=774, 205.76875pt x 
+205.76875pt>
+File: images/mcwnnm/cc/resize_br_Noisy_5dmark3_iso3200_1.png Graphic file (type
+ png)
+ <use images/mcwnnm/cc/resize_br_Noisy_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_Noisy_5dmark3_iso3200_1.png
+ used on input line 1702.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CBM3D_CC15_5dmark3_iso3200_1.png, id=775, 205.76875
+pt x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_CBM3D_CC15_5dmark3_iso3200_1.png Graphic file 
+(type png)
+
+<use images/mcwnnm/cc/resize_br_CBM3D_CC15_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CBM3D_CC15_5dmark3_iso3200_
+1.png used on input line 1702.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_TRD_CC15_5dmark3_iso3200_1.png, id=776, 205.76875pt
+ x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_TRD_CC15_5dmark3_iso3200_1.png Graphic file (t
+ype png)
+
+<use images/mcwnnm/cc/resize_br_TRD_CC15_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_TRD_CC15_5dmark3_iso3200_1.
+png used on input line 1702.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_NI_CC15_5dmark3_iso3200_1.png, id=777, 205.76875pt 
+x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_NI_CC15_5dmark3_iso3200_1.png Graphic file (ty
+pe png)
+ <use images/mcwnnm/cc/resize_br_NI_CC15_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_NI_CC15_5dmark3_iso3200_1.p
+ng used on input line 1702.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_NC_CC15_5dmark3_iso3200_1.png, id=778, 205.76875pt 
+x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_NC_CC15_5dmark3_iso3200_1.png Graphic file (ty
+pe png)
+ <use images/mcwnnm/cc/resize_br_NC_CC15_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_NC_CC15_5dmark3_iso3200_1.p
+ng used on input line 1702.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CC_CC15_5dmark3_iso3200_1.png, id=779, 205.76875pt 
+x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_CC_CC15_5dmark3_iso3200_1.png Graphic file (ty
+pe png)
+ <use images/mcwnnm/cc/resize_br_CC_CC15_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CC_CC15_5dmark3_iso3200_1.p
+ng used on input line 1729.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_WNNMJ_CC15_5dmark3_iso3200_1.png, id=780, 205.76875
+pt x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_WNNMJ_CC15_5dmark3_iso3200_1.png Graphic file 
+(type png)
+
+<use images/mcwnnm/cc/resize_br_WNNMJ_CC15_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_WNNMJ_CC15_5dmark3_iso3200_
+1.png used on input line 1729.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_5dmark3_iso3200_1.png, id=781, 20
+5.76875pt x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_5dmark3_iso3200_1.png Graphi
+c file (type png)
+
+<use images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_5dmark3_i
+so3200_1.png used on input line 1729.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_5dmark3_iso3200_1.png, id=782, 2
+05.76875pt x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_5dmark3_iso3200_1.png Graph
+ic file (type png)
+
+<use images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_5dmark3_
+iso3200_1.png used on input line 1729.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_5dmark3_iso3200_1.png, id=783, 205.76875pt x 205.76
+875pt>
+File: images/mcwnnm/cc/resize_br_5dmark3_iso3200_1.png Graphic file (type png)
+ <use images/mcwnnm/cc/resize_br_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_5dmark3_iso3200_1.png used 
+on input line 1729.
+(pdftex.def)
