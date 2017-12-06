@@ -1,0 +1,1636 @@
+\chapter{Fast Compressive Tracking}\label{chap:CT}
+
+%
+In Chapters~\ref{chap:AFS} and~\ref{chap:odfs}, we focus on designing robust appearance models based on feature selection techniques that only a subset of features are used. On the contrary, in this chapter, we propose an efficient appearance model that is based on feature extraction technique, in which all the features are considered.
+\section{Introduction}
+
+%
+Numerous effective representation schemes have been proposed for robust
+object tracking in recent years.
+%
+One commonly adopted approach is to learn a
+low-dimensional subspace (e.g.,
+eigenspace~\cite{Ross_IJCV_2008,Ho_CVPR_2004}), which can adapt online
+to object appearance change.
+%
+Since this approach is
+data-dependent, the computational complexity is likely to increase
+significantly because it needs eigen-decompositions.
+%
+Moreover, the
+noisy or misaligned samples are likely to degrade the subspace basis,
+thereby causing these algorithms to drift away the target objects
+gradually.
+%
+Another successful approach is to
+extract discriminative features from a high-dimensional space.
+%
+Since object tracking
+can be posed as a binary classification task which separates object
+from its local background, a discriminative appearance model plays an
+important role for its success.
+%
+Online boosting methods~\cite{Grabner_BMVC_2006, Babenko_pami_2011}
+have been proposed to extract discriminative features for object
+tracking. In Chapter~\ref{chap:AFS} and Chapter~\ref{chap:odfs}, we have proposed two feature selection algorithms to select more discriminative features from a feature pool to design an appearance model for object tracking.
+%
+Alternatively, high-dimensional features can be projected to a
+low-dimensional space from which a classifier can be constructed.
+%
+\begin{figure*}[t]
+%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=1\linewidth]{fig1/fig1a}\\
+\scriptsize (a) Updating classifier at the $t$-th frame\\
+\includegraphics[width=1\linewidth]{fig1/fig1b} \\
+\scriptsize (b) Tracking at the ($t+1$)-th frame\\
+\end{tabular}
+\end{center}
+%\hspace{-3cm}
+\caption{Main components of the proposed compressive tracking algorithm.}
+%\label{fig1}
+\label{fig:overview}
+\end{figure*}
+
+The compressive sensing (CS)
+theory~\cite{Candes_IT_2005,Candes_IT_2006} shows that if the
+dimension of the feature space is sufficiently high, these features can
+be projected to a randomly chosen low-dimensional space which contains
+enough information to reconstruct the original high-dimensional
+features.
+The dimensionality reduction method via random projection
+(RP)~\cite{Achlioptas_JCSS_2003,Bingham_KDD_2001} is
+data-independent, non-adaptive and information-preserving.
+In this chapter, we propose an effective and efficient tracking
+algorithm with an appearance model based on features extracted in the
+compressed domain~\cite{Zhang_eccv_2012}.
+The main
+components of the proposed compressive tracking algorithm are shown by
+Figure~\ref{fig:overview}.
+%
+We use a very sparse measurement matrix that satisfies the restricted
+isometry property
+(RIP) in compressive sensing theory~\cite{Candes_IT_2005}, thereby
+facilitating efficient projection
+from the image feature space to a low-dimensional compressed subspace.
+%
+For tracking, the positive and negative samples are projected (i.e.,
+compressed) with the same sparse measurement matrix and discriminated
+by a simple naive Bayes classifier learned online.
+%
+The proposed compressive tracking algorithm runs at real-time
+and performs favorably against
+state-of-the-art trackers on challenging sequences in terms of
+efficiency, accuracy and robustness.
+
+\section{Preliminaries}
+\label{sec:preliminaries}
+We present some preliminaries of compressive sensing which are used
+in the proposed tracking algorithm.
+
+
+\subsection{Random Projection and Compressive Sensing}
+In random projection, a random matrix $\textbf{R}\in \mathbb{R}^{n\times m}$ whose rows have unit
+length projects data from the high-dimensional feature space
+$\textbf{x}\in \mathbb{R}^{m}$ to a lower-dimensional space $\textbf{v}\in
+\mathbb{R}^{n}$
+%-------------------------------------
+\begin{equation}
+ \textbf{v} = \textbf{R}\textbf{x},
+% \label{Eq1}
+\label{eq:projection}
+\end{equation}
+%-------------------------------------------------------------------------
+where $n\ll m$.
+Each projection $\textbf{v}$ is essentially equivalent to a
+compressive measurement in the compressive sensing encoding stage.
+%
+The compressive sensing theory~\cite{Candes_IT_2006,Donoho_IT_2006}
+states that if a signal is $K$-sparse (i.e., the signal is a linear
+combination of only $K$ basis~\cite{baraniuk2007compressive}), it is
+possible to
+near perfectly reconstruct the signal from a small number of random
+measurements.
+%
+The encoder in compressive sensing (using~(\ref{eq:projection}))
+correlates signal with noise (using random matrix
+$\textbf{R}$)~\cite{Candes_IT_2006},
+thereby it is a universal encoding which requires no prior knowledge
+of the signal structure.
+%
+In this paper, we adopt this encoder to
+construct the appearance model for visual tracking.
+
+Ideally, we expect $\textbf{R}$ provides a stable embedding
+that approximately preserves the salient information in any $K$-sparse
+signal when projecting from $\textbf{x}\in \mathbb{R}^m$ to
+$\textbf{v}\in\mathbb{R}^n$.
+%
+A necessary and sufficient condition for
+this stable embedding is that it approximately preserves distances
+between any pairs of $K$-sparse signals that share the same $K$
+basis.
+%
+That is, for any two $K$-sparse vectors $\textbf{x}_1$ and
+$\textbf{x}_2$ sharing the same $K$ basis,
+%-------------------------------------
+\begin{equation}
+(1-\epsilon)\|\textbf{x}_1-\textbf{x}_2\|_2\leq\|
+\textbf{Rx}_1-\textbf{Rx}_2\|_2\leq(1+\epsilon)\|\textbf{x}_1-
+\textbf{x}_2\|_2.
+% \label{Eq1}
+\label{eq:preserved distance}
+\end{equation}
+%-------------------------------------------------------------------------
+%
+The restricted isometry property~\cite{Candes_IT_2005,Candes_IT_2006}
+in compressive sensing shows the above results.
+%
+This property is achieved with high probability for some types
+of random matrix $\textbf{R}$ whose entries are identically and
+independently sampled from a standard normal distribution, symmetric
+Bernoulli distribution or Fourier matrix.
+%
+Furthermore, the above result
+can be directly obtained from the Johnson-Lindenstrauss (JL)
+lemma~\cite{Achlioptas_JCSS_2003}.
+
+\begin{Lemma}(Johnson-Lindenstrauss lemma)
+\label{JL lemma}~\cite{Achlioptas_JCSS_2003}:
+Let $Q$ be a finite collection of $d$ points in $\mathbb{R}^{m}$.
+Given $0<\epsilon<1$ and $\delta>0$, let $n$ be a positive integer such that
+%-----------------
+\begin{equation}\label{eq:JLdimension}
+ n\geq \left(\frac{4+2\delta}{\epsilon^{2}/2-\epsilon^{3}/3}\right)\ln(d).
+\end{equation}
+%----------------------
+Let $\emph{\textbf{R}}\in \mathbb{R}^{n\times m}$  be a random matrix
+with $\emph{\textbf{R}}(i,j)=r_{ij}$, where
+%
+\begin{equation}\label{eq:JLmatrix1}
+r_{ij}=\left\{\begin{array}{rl}
++1 & \ \mbox{with probability } \frac{1}{2}\\
+-1& \ \mbox{with probability } \frac{1}{2}.
+\end{array} \right.
+\end{equation}
+or
+\begin{equation}\label{eq:JLmatrix2}
+r_{ij}=\sqrt{3}\times\left\{\begin{array}{rl}
++1 & \ \mbox{with probability } \frac{1}{6}\\
+0  & \ \mbox{with probability } \frac{2}{3}\\
+-1& \ \mbox{with probability } \frac{1}{6}.
+\end{array} \right.
+\end{equation}
+%
+Then, with probability exceeding $1-d^{-\beta}$, the following
+statement holds: For every $\emph{\textbf{x}}_1,
+\emph{\textbf{x}}_2\in Q$,
+%----
+\begin{equation}\label{eq:JLdistance}
+(1-\epsilon)\|\emph{\textbf{x}}_1-\emph{\textbf{x}}_2\|_{2}\leq
+\frac{1}{\sqrt{n}}\|\emph{\textbf{R}}\emph{\textbf{x}}_1-
+\emph{\textbf{R}}\emph{\textbf{x}}_2\|_{2}\leq
+(1+\epsilon)\|\emph{\textbf{x}}_1-\emph{\textbf{x}}_2\|_{2}.
+\end{equation}
+\end{Lemma}
+%
+\noindent
+Baraniuk et al.~\cite{Baraniuk_CA_2008} prove that any
+random matrix satisfying the Johnson-Lindenstrauss lemma also holds
+true for the restricted isometry property in compressive sensing.
+%
+Therefore, if the random matrix $\textbf{R}$ in (\ref{eq:projection})
+satisfies the JL lemma, $\textbf{x}$ can be reconstructed  with
+minimum error from $\textbf{v}$  with high probability if
+$\textbf{x}$ is $K$-sparse (e.g., audio or image signals).
+%
+This strong theoretical support motivates us to analyze the
+high-dimensional signals via its low-dimensional random projections.
+%
+In the proposed algorithm, a very sparse matrix is adopted that not only
+satisfies the JL lemma, but also can be efficiently
+computed for real-time tracking.
+
+\subsection{Very Sparse Random Measurement Matrix}
+A typical measurement matrix satisfying the restricted isometry property
+is the random Gaussian matrix  $\textbf{R}\in \mathbb{R}^{n\times m}$  where
+$r_{ij}\thicksim \mathcal{N}(0,1)$
+(i.e., zero mean and unit variance), as used in recent
+work~\cite{Wright_PAMI_2009,Li_CVPR_2011,Liu_PAMI_2012}.
+%
+However, as the matrix is dense,
+the memory and computational loads are very expensive when $m$ is large.
+%
+In this paper, we adopt a
+very sparse random measurement matrix with entries defined as
+%
+\begin{equation}
+r_{ij}=\sqrt{\rho} \times \left\{\begin{array}{rl}
+1 & \ \mbox{with probability } \frac{1}{2\rho}\\
+0 & \ \mbox{with probability } 1-\frac{1}{\rho}\\
+-1& \ \mbox{with probability } \frac{1}{2\rho}.
+\end{array} \right.
+%\label{Eq4}
+\label{eq:coefficient}
+\end{equation}
+%
+Achlioptas~\cite{Achlioptas_JCSS_2003} proves that this type of
+matrix with $\rho=1$ or $3$ satisfies the
+Johnson-Lindenstrauss lemma (i.e., (\ref{eq:JLmatrix1}) and
+(\ref{eq:JLmatrix2})).
+%
+This matrix is easy to compute which requires only a uniform random
+generator.
+%
+More importantly, when $\rho=3$, it is
+sparse where two thirds of the computation can be avoided.
+%
+In addition, Li et al.~\cite{Li_KDD_2006}
+show that for $\rho=O(m)$ ($\textbf{x}\in\mathbb{R}^m$),
+this matrix is asymptotically normal.
+%
+Even when $\rho=m/\log(m)$, the random
+projections are almost as accurate as the conventional random
+projections where $r_{ij}\thicksim \mathcal{N}(0,1)$.
+%
+In this work, we set $\rho=m/4$ which makes a very sparse random
+matrix.
+%
+For each row of $\textbf{R}$,
+only about $c=(\frac{1}{2\rho}+\frac{1}{2\rho})\times m\thickapprox4$
+nonzero entries need to be computed.
+%
+Therefore, the computational complexity is only $O(cn)$ ($n=100$ in
+this work) which is very
+low.
+%
+Furthermore, only the nonzero entries of $\textbf{R}$ need to be
+stored which makes the memory
+requirement also very light.
+
+\begin{figure}[!ht]
+%\hspace{-.3cm}
+%\centering
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=0.8\linewidth]{figmultiscale/figmultiscale}\\
+\end{tabular}
+\end{center}
+%\hspace{-3cm}
+\caption{Illustration of multiscale image representation.}
+%\label{fig2}
+\label{fig:multiscalerepresentation}
+\end{figure}
+
+%================================================================
+\section{Proposed Algorithm}
+\label{sec:algorithm}
+In this section, we present the proposed compressive tracking
+algorithm in details.
+%
+The tracking problem is formulated as a detection task and the main
+steps of the proposed algorithm are shown in
+Figure~\ref{fig:overview}.
+%
+We assume that the tracking window in the first
+frame is given by a detector or manual label.
+%
+At each frame, we sample some positive
+samples near the current target location and negative samples away
+from the object center to update the classifier.
+%
+To predict the object location in the next frame,
+we draw some samples around the current target location
+and determine the one with the maximal classification score.
+%
+\subsection{Image Representation}
+To account for large scale change of object appearance, a
+multiscale image representation is often formed by convolving the
+input image with a Gaussian filter of different spatial
+variances~\cite{lowe2004distinctive}.
+%
+The Gaussian
+filters in practice have to be truncated which can be replaced by rectangle
+filters.
+%
+Bay et al.~\cite{bay2008speeded} show that this
+replacement does not affect the performance of the interest point
+detectors but can significantly speed up the detectors via integral
+image method~\cite{Viola_CVPR_2001}.
+
+For each sample $\textbf{Z}\in \mathbb{R}^{
+w\times h}$, its multiscale representation
+(as illustrated in Figure~\ref{fig:multiscalerepresentation}) is
+constructed by  convolving $\textbf{Z}$  with a set of rectangle
+filters  at multiple scales
+$\{\textbf{F}_{1,1},\ldots,\textbf{F}_{w,h}\}$
+defined by
+%
+\begin{equation}
+\textbf{F}_{w,h}(x,y)=\frac{1}{wh}\times\left\{\begin{array}{ll}
+1, & \textrm{ 1$\leq x\leq w$, 1$\leq y\leq h$}\\
+0, & \textrm{ otherwise}
+\end{array} \right.
+%\label{Eq5}
+\label{eq:filter}
+\end{equation}
+%
+where $w$ and $h$ are the width and height of a rectangle filter,
+respectively.
+
+Then, we represent each filtered image as a column vector in
+$\mathbb{R}^{\underline{w} \underline{h}}$ and concatenate these vectors as a
+very high-dimensional multiscale image feature vector
+$\textbf{x}=(x_1,...,x_m)^\top\in \mathbb{R}^{m}$ where
+$m=(\underline{w} \underline{h})^2$. The dimensionality $m$  is
+typically in the order of
+$10^6$ to $10^{10}$.
+%
+We adopt a sparse random matrix $\textbf{R}$  in
+(\ref{eq:coefficient}) with $\rho=m/4$  to project $\textbf{x}$  onto  a vector
+$\textbf{v}\in \mathbb{R}^{n}$ in a low-dimensional space.
+%
+The random
+matrix $\textbf{R}$ needs to be computed only once off-line and remains fixed
+throughout the tracking process.
+%
+For the sparse matrix $\textbf{R}$  in (\ref{eq:coefficient}), the
+computational load is very light.
+%
+As shown in Figure~\ref{fig:representation}, we only
+need to store the nonzero entries in $\textbf{R}$  and the positions of
+rectangle filters in an input image corresponding to the nonzero entries
+in each row of $\textbf{R}$.
+%
+Then, $\textbf{v}$  can be efficiently computed by
+using $\textbf{R}$  to sparsely measure the rectangular features which can be
+efficiently computed using the integral image method~\cite{Viola_CVPR_2001}.
+
+%-----------------------
+\begin{figure}[!ht]
+%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=1\linewidth]{fig2/fig2a}\\
+\end{tabular}
+\end{center}
+%\hspace{-3cm}
+\caption{Graphical representation of compressing a high-dimensional
+  vector $\textbf{x}$ to a low-dimensional vector $\textbf{v}$.
+  In the matrix $\textbf{R}$, dark, gray and white rectangles represent
+  negative,  positive, and zero entries, respectively.
+  The blue arrows
+  illustrate that one of nonzero entries of one row of $\textbf{R}$ sensing an
+  element in $\textbf{x}$ is equivalent to
+  a rectangle filter convolving the
+  intensity at a fixed position of an input image.}
+%\label{fig2}
+\label{fig:representation}
+\end{figure}
+
+%\subsection{Analysis of low-dimensional compressive features}
+\subsection{Analysis of Compressive Features}
+%
+%\subsubsection{Relationship to the Haar-like features}
+\noindent{\textbf{Relationship to The Haar-like Features.}}%
+As shown in Figure \ref{fig:representation}, each element $v_{i}$ in the
+low-dimensional feature $\textbf{v}\in \mathbb{R}^{n}$ is a
+linear combination of spatially distributed rectangle features at
+different scales.
+%
+Since the coefficients in the measurement matrix can be positive or
+negative (via (\ref{eq:coefficient})),
+the compressive features compute the relative intensity difference in
+a way similar to the generalized Haar-like
+features~\cite{Babenko_pami_2011} (See Figure~\ref{fig:representation}).
+%
+The Haar-like features have been widely
+used for object detection with demonstrated
+success~\cite{Viola_CVPR_2001,Li_PAMI_2004,Babenko_pami_2011}.
+%
+The basic types of these Haar-like features are typically
+designed for different tasks~\cite{Viola_CVPR_2001,Li_PAMI_2004}.
+%
+There often exist a very large number of Haar-like features
+which make the computational load very heavy.
+%
+This problem is alleviated by boosting algorithms for selecting
+important features~\cite{Viola_CVPR_2001,Li_PAMI_2004}.
+%
+Recently, Babenko et al.~\cite{Babenko_pami_2011} adopt the
+generalized Haar-like features where each one is a linear combination
+of randomly
+generated rectangle features, and use online boosting to select a
+small set of them for object tracking.
+%
+In this work, the large set of Haar-like features are compressively
+sensed with a very sparse measurement matrix.
+%
+The compressive sensing theories ensure that the extracted features of our
+algorithm preserve almost all the information of the original image, and hence is able to correctly classify any test
+image because the dimension of the feature space is sufficiently large
+($10^6$ to $10^{10}$)~\cite{Wright_PAMI_2009}.
+%
+Therefore, the projected features can be classified in
+the compressed domain efficiently and effectively without
+the curse of dimensionality.
+%
+
+\begin{figure}[t]
+%\hspace{-.3cm}
+%\centering
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=0.7\linewidth]{figs/figscale}\\
+\end{tabular}
+\end{center}
+%\hspace{-3cm}
+\caption{Illustration of scale invariant property of low-dimensional
+  features. From the left figure to the
+right one, the ratio is $s$. Red rectangle represents the
+$j$-th rectangle feature at position $\textbf{y}$.}
+%\label{fig2}
+\label{fig:scaleinvariant}
+\end{figure}
+%
+%\subsubsection{Scale invariant property}
+\noindent{\textbf{Scale Invariant Property.}}
+It is easy to show that the low-dimensional feature $\textbf{v}$ is
+scale invariant.
+%
+As shown in Figure~\ref{fig:representation},
+each feature in $\textbf{v}$ is a linear combination of some rectangle
+filters convolving the input image at different positions.
+%
+Therefore, without loss of generality, we only need to show that the
+$j$-th rectangle feature $x_j$ in the $i$-th feature $v_i$ in
+$\textbf{v}$ is
+scale invariant.
+%
+From Figure~\ref{fig:scaleinvariant}, we have
+\begin{eqnarray}
+x_j(s\textbf{y})&=&\textbf{F}_{sw_j,sh_j}(s\textbf{y})\otimes \textbf{Z}(s\textbf{y})
+\nonumber\\
+ &=&\textbf{F}_{sw_j,sh_j}(\textbf{a})\otimes \textbf{Z}(\textbf{a})|_{\textbf{a}=s\textbf{y}}
+\nonumber\\
+ &=&\frac{1}{s^2 w_i h_i}\int_{\textbf{u}\in\Omega_s}
+ \textbf{Z}(\textbf{a}-\textbf{u})d\textbf{u}
+ \nonumber\\
+ &=&\frac{1}{s^2 w_i h_i}\int_{\textbf{u}\in\Omega}
+ \textbf{Z}(\textbf{y}-\textbf{u})|s^2|d\textbf{u}
+ \nonumber\\
+ &=&\frac{1}{w_i h_i}\int_{\textbf{u}\in\Omega} \textbf{Z}(\textbf{y}-\textbf{u})d\textbf{u}
+ \nonumber\\
+ &=&\textbf{F}_{w_j,h_j}(\textbf{y})\otimes \textbf{Z}(\textbf{y})
+ \nonumber\\
+ &=&x_j(\textbf{y})\nonumber,
+\end{eqnarray}
+%
+where $\Omega=\{(u_1,u_2)|1\leq u_1\leq w_i,1\leq u_2\leq h_i\}$ and
+$\Omega_s=\{(u_1,u_2)|1\leq u_1\leq sw_i,1\leq u_2\leq sh_i\}$.
+
+%
+\begin{figure}[t]
+%\hspace{-.3cm}
+\begin{center}
+%\begin{tabular}{ccc}
+\includegraphics[width=0.32\linewidth]{fig3/fig3a}
+\includegraphics[width=0.32\linewidth]{fig3/fig3b}
+\includegraphics[width=0.32\linewidth]{fig3/fig3c}
+%\end{tabular}
+\end{center}
+\hspace{-3cm}
+\caption{Probability distributions of three different features in
+  a low-dimensional space. The red stair represents the histogram of
+  positive samples while the blue one represents the histogram of
+  negative samples. The red and blue lines denote the corresponding
+  estimated distributions by the proposed incremental update method.}
+%\label{fig3}
+\label{fig:distribution}
+\end{figure}
+%
+%---------------------------------------
+\subsection{Classifier Construction and Update}
+%
+We assume all elements in $\textbf{v}$
+are independently distributed and model them with a naive Bayes
+classifier~\cite{Ng_NIPS_2002},
+%
+\begin{eqnarray}
+H(\textbf{v})&=&\log\left(\frac{\prod^{n}_{i=1}p(v_{i}|y=1)p(y=1)}
+{\prod^{n}_{i=1}p(v_{i}|y=0)p(y=0)}\right)\nonumber\\
+&=&\sum_{i=1}^n\log\left(\frac{p(v_{i}|y=1)}{p(v_{i}|y=0)}\right),
+%\label{Eq6}
+\label{eq:classifier}
+\end{eqnarray}
+where we assume uniform prior, $p(y=1)=p(y=0)$, and
+$y\in\{0,1\}$ is a binary variable which represents the sample label.
+
+Diaconis and Freedman~\cite{Diaconis_AnnSt_1984} show that
+random projections of high dimensional random vectors
+are almost always Gaussian.
+%
+Thus, the conditional distributions $p(v_{i}|y=1)$ and $p(v_{i}|y=0)$
+in the classifier $H(\textbf{v})$ are assumed to be Gaussian
+distributed with four parameters
+$(\mu_{i}^{1},\sigma_{i}^{1},\mu_{i}^{0},\sigma_{i}^{0})$,
+\begin{equation}
+p(v_{i}|y=1)\sim \mathcal{N}(\mu_{i}^{1},\sigma_{i}^{1}), \hspace{3mm}
+p(v_{i}|y=0)\sim \mathcal{N}(\mu_{i}^{0},\sigma_{i}^{0}),
+%\label{Eq7}
+\label{eq:distribution}
+\end{equation}
+where $\mu_{i}^1$ ($\mu_{i}^0$) and $\sigma_{i}^1$ ($\sigma_{i}^0$) are mean and standard
+deviation of the positive (negative) class.
+%
+The scalar parameters in (\ref{eq:distribution}) are incrementally
+updated by (\ref{eq:onlineupdate})
+\ignore{
+\begin{eqnarray}
+\mu_{i}^{1} & \leftarrow & \lambda\mu_{i}^{1}+(1-\lambda)\mu^{1}
+\nonumber \\
+\sigma_{i}^{1} & \leftarrow &
+\sqrt{\lambda(\sigma_{i}^{1})^2+
+(1-\lambda)(\sigma^{1})^2+\lambda(1-\lambda)(\mu_{i}^{1}-\mu^{1})^2},\nonumber\\
+%\label{Eq8}
+\label{eq:update}
+\end{eqnarray}
+%----
+where $\lambda>0$ is a learning parameter,
+$\sigma^1=\sqrt{\frac{1}{n}\sum_{k=0|y=1}^{n-1}
+(v_{i}(k)-\mu^1)^2}$ and $\mu^1=\frac{1}{n}\sum_{k=0|y=1}^{n-1}v_{i}(k)$.
+Parameters  $\mu_{i}^{0}$ and $\sigma_{i}^{0}$ are updated with similar
+rules.
+}
+The above equations can be easily derived by maximum likelihood
+estimation~\cite{bishop2006pattern}.
+Figure~\ref{fig:distribution} shows the
+probability distributions for three different features of
+the positive and negative samples cropped from a few frames of a
+sequence for clarity of presentation.
+%
+%
+It shows that a Gaussian distribution with online update
+using (\ref{eq:onlineupdate}) is a good approximation of
+the features in the projected space where samples can be easily
+separated.
+
+%
+\begin{figure}[t]
+%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=0.96\linewidth]{figs/coarse2fine}
+\end{tabular}
+\end{center}
+%\hspace{-3cm}
+\caption{Coarse-to-fine search for new object location. Left: object
+  center location (denoted by red solid circle) at the $t$-th frame.
+Middle: coarse-grained search with a large radius $\gamma_c$ and search step
+$\Delta_c$ based on the previous object location.
+%
+Right: fine-grained search
+with a small radius $\gamma_f<\gamma_c$ and search step
+$\Delta_f<\Delta_c$ based on the coarse-grained search location
+(denoted by green solid circle). The final object location is denoted
+by blue solid circle.}
+\label{fig:searchcoarse2fine}
+\end{figure}
+%-----------------------------------------------
+\begin{algorithm}[t]
+%\vspace{-4mm}
+\caption{Compressive Tracking}
+\begin{algorithmic}[1]
+\label{alg1}
+\REQUIRE $t$-th image frame
+%\setlength{\itemsep}{-\itemsep}
+%\begin{enumerate}
+\STATE Coarsely sample a set of image patches in
+  $D^{\gamma_c}=\{\textbf{Z}|||\textbf{l}(\textbf{Z})-\textbf{l}_{t-1}||<\gamma_c\}$
+  where $\textbf{l}_{t-1}$ is the tracking location at the ($t-1$)-th
+  frame by shifting a number of pixels $\Delta_c$, and extract the
+  features with low dimensionality.
+\STATE Use classifier $H$ in (\ref{eq:classifier}) to each
+  feature vector $\textbf{v}(\textbf{Z})$ and find the tracking
+  location $\textbf{l}_t^\prime$ with the maximal classifier response.
+\STATE Finely sample a set of image patches in
+  $D^{\gamma_f}=\{\textbf{Z}|||\textbf{l}(\textbf{Z})-
+  \textbf{l}_t^\prime||<\gamma_f\}$
+  by shifting a number of pixels $\Delta_f$, and extract the features
+  with low dimensionality.
+\STATE Use classifier $H$ in (\ref{eq:classifier}) to each
+  feature vector $\textbf{v}(\textbf{Z})$ and find the tracking
+  location $\textbf{l}_t$ with the maximal classifier response.
+\STATE Sample two sets of image patches
+  $D^\alpha=\{\textbf{Z}|||\textbf{l}(\textbf{Z})-\textbf{l}_t||<\alpha\}$
+  and
+  $D^{\zeta,\beta}=\{\textbf{Z}|\zeta<||\textbf{l}
+  (\textbf{Z})-\textbf{l}_t||<\beta\}
+  $ with $\alpha<\zeta<\beta$, and extract the features with these two
+  sets of samples.
+\STATE Update the classifier parameters according to (\ref{eq:onlineupdate}).
+%\end{enumerate}
+\ENSURE Tracking location $\textbf{l}_t$ and classifier parameters
+\end{algorithmic}
+\end{algorithm}
+
+%======================================================
+\subsection{Fast Compressive Tracking}
+The aforementioned classifier is used for local search.
+%
+To reduce the computational complexity, a coarse-to-fine
+sliding window search strategy is adopted.
+%
+The main steps of our
+algorithm are summarized in Algorithm~\ref{alg1}.
+%
+First, we search the
+object location based on the previous object location by shifting the
+window with a large number of pixels $\Delta_c$ within a large search
+radius $\gamma_c$.
+%
+This generates fewer windows than
+locally exhaustive search method (e.g., \cite{Babenko_pami_2011})
+but the detected object location may be
+slightly inaccurate but close to the accurate object
+location.
+%
+Based on the coarse-grained detected location, fine-grained
+search is carried out with a small number of pixels
+$\Delta_f$ within a small search radius $\gamma_f$.
+%
+For example, we set $\gamma_c=25$, $\Delta_c=4$, and
+$\gamma_f=10$, $\Delta_f=1$ in all the experiments.
+%
+If we use the fine-grained locally exhaustive method with
+$\gamma_c=25$ and $\Delta_f=1$, the total number of search windows is
+about 1,962 (i.e., $\pi\gamma_c^2$).
+%
+%MH: how can you be sure that this coarse-to-fine method does not
+%sacrifice accuracy? any proof?
+%
+However, using this coarse-to-fine
+search strategy, the total number of search windows is
+about 436 (i.e., $\pi\gamma_c^2/16+\pi\gamma_f^2$),
+thereby significantly
+reducing computational cost.
+%
+\ignore{
+\begin{figure}[t]
+%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=0.6\linewidth]{figs/fastscale}
+\end{tabular}
+\end{center}
+%\hspace{-3cm}
+\caption{Fast multiscale tracking.
+For each location, we crop patches with three scales: current scale
+(red), small scale (green), and large scale (blue) to account for
+appearance change caused by fast scale change.}
+%\label{fig3}
+\label{fig:fastscaletracking}
+\end{figure}
+}
+%MH: bad title, what is "fast scale tracking"?
+%\subsubsection{Fast scale tracking}
+%
+\ignore{
+\subsubsection{Multiscale compressive tracking}
+%MH: or \subsection{Handling fast scale change}
+At each location in the search region, three image patches are
+ cropped at different scale $s$ (See
+ Figure~\ref{fig:fastscaletracking}): current ($s=1$), small
+ ($s=1-\delta$) and large scale ($s=1+\delta$),
+to account for appearance variation due to fast scale change.
+%
+The template of each rectangle feature  for patch with scale $s$ is
+ multiplied by ratio $s$ (See Figure~\ref{fig:scaleinvariant}).
+%
+Therefore, the feature
+ $\textbf{v}^s$ for each patch with scale $s$ can be efficiently
+ extracted by using the integral image method~\cite{Viola_CVPR_2001}.
+%
+Since the low-dimensional
+ features for each image patch are scale invariant, we have
+ $\textbf{v}_{t}^s=\arg\max_{\textbf{v}\in\mathcal{F}}
+ H(\textbf{v})\approx \textbf{v}_{t-1}$, where $\textbf{v}_{t-1}$ is
+ the low-dimensional feature vector that represents the object in the
+ ($t-1$)-th frame, and $\mathcal{F}$ is the set of low-dimensional
+ features extracted from image patches at different scales.
+%
+The classifier is updated with cropped positive and negative samples
+ based on the new object location and scale.
+%
+The above procedures can be easily integrated into
+Algorithm~\ref{alg1}.
+%
+To further reduce the number of samples for local search,
+samples at location $\textbf{l}_t$
+are randomly drawn with probability
+ $p(\textbf{l}_t|\textbf{l}_{t-1})=\mathcal{N}(\textbf{l}_{t-1},\sigma_l^2)$,
+ which is a Gaussian distribution with mean $\textbf{l}_{t-1}$ and
+ standard deviation $\sigma_l$.
+%
+Therefore, the same tracking algorithm can be used to efficiently
+account for appearance change caused by fast scale change.
+}
+\subsection{Discussion}
+We note that simplicity is the prime characteristic of the proposed
+algorithm in which the proposed sparse measurement matrix $\textbf{R}$ is
+independent of training samples, thereby resulting in an efficient
+method.
+%
+In addition, the proposed algorithm achieves robust performance as
+discussed below.
+%
+
+%-----------------------------
+{\flushleft \textbf{Difference with Related Work.}}
+It should be noted that the proposed algorithm is
+different from recent work based on sparse
+representation~\cite{Mei_PAMI_2011} and compressive
+sensing~\cite{Li_CVPR_2011}.
+%
+First, both algorithms are
+generative models that encode an object sample by sparse
+representation of templates using $\ell_1$-minimization.
+%
+Thus the training samples cropped from
+the previous frames are stored and updated,
+but this is not required in the proposed algorithm due to the use of
+a data-independent measurement matrix.
+%
+Second, the proposed algorithm extracts a linear
+combination of generalized Haar-like features and other
+trackers~\cite{Mei_PAMI_2011}\cite{Li_CVPR_2011} use
+sparse representations of holistic templates which are less robust as
+demonstrated in the experiments.
+%
+Third, both tracking
+algorithms~\cite{Mei_PAMI_2011}\cite{Li_CVPR_2011} need to solve
+numerous time-consuming $\ell_1$-minimization problems although
+one method has been recently proposed to alleviate the problem of
+high computational complexity~\cite{bao2012real}.
+%
+In contrast, the proposed
+algorithm is efficient as only matrix multiplications are required.
+%
+%In~\cite{Li_CVPR_2011}, an orthogonal matching pursuit algorithm is
+%applied to solve the $\ell_1$-minimization problems.
+
+%-----------------------------
+{\flushleft \textbf{Random Projection vs. Principal Component
+    Analysis.}}
+For visual tracking, dimensionality reduction algorithms such as
+principal component analysis (PCA) and its variations
+have been widely used in generative
+approaches~\cite{Black_IJCV_1998,Ross_IJCV_2008}.
+%
+These methods need to update the appearance models frequently
+for robust tracking.
+%
+However, these methods are usually sensitive to heavy occlusion due to
+the holistic representation schemes although some robust schemes have
+been proposed~\cite{Black_ICCV01}.
+%
+Furthermore, it is not clear whether the appearance models can be
+updated correctly with new observations (e.g., without alignment
+errors to avoid tracking drift).
+%
+In contrast, the proposed algorithm does not suffer from the problems with
+online self-taught learning approaches~\cite{Raina_ICML07}
+as the proposed model with the measurement matrix is data-independent.
+%
+It has been shown that for image and text applications,
+favorable results are achieved by methods with random projection
+than principal component analysis~\cite{Bingham_KDD_2001}.
+
+
+%-----------------------------------------
+\begin{figure}[!ht]
+%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=0.3\linewidth]{fig4/fig4a.png}
+\includegraphics[width=0.3\linewidth]{fig4/fig4c.png}
+\includegraphics[width=0.3\linewidth]{fig4/fig4e.png}\\
+\includegraphics[width=0.3\linewidth]{fig4/fig4b}
+\includegraphics[width=0.3\linewidth]{fig4/fig4d}
+\includegraphics[width=0.3\linewidth]{fig4/fig4f}
+\end{tabular}
+\end{center}
+%\hspace{-3cm}
+\caption{Illustration of the proposed algorithm in
+  dealing with ambiguity in detection.
+  %
+  Top row: three positive samples. The sample in red
+  rectangle is the most ``correct'' positive sample while other two in
+  yellow rectangles are less ``correct'' positive samples.
+  %
+  Bottom row:
+  the probability distributions for a feature extracted from positive
+  and negative samples. The red markers denote the feature extracted
+  from the most ``correct'' positive sample while the yellow markers
+  denote the feature extracted from the two less ``correct'' positive
+  samples. The red and blue stairs as well as lines denote the
+  estimated distributions of positive and negative samples as shown in
+  Figure~\ref{fig:distribution}.}
+%\label{fig4}
+\label{fig:ambiguity}
+\end{figure}
+%-----------------------------
+{\flushleft \textbf{Robustness to Ambiguity in Detection.}}
+%
+The tracking-by-detection methods often encounter the inherent
+ambiguity problems as shown in Figure~\ref{fig:ambiguity}.
+%
+Recently Babenko et al.~\cite{Babenko_pami_2011} introduce online
+multiple instance learning schemes to alleviate the tracking ambiguity
+problem.
+%
+The proposed algorithm is robust to the ambiguity problem as
+illustrated in Figure~\ref{fig:ambiguity}.
+%
+While the target appearance changes over time,
+the most ``correct'' positive samples (e.g., the sample in the red
+rectangle in Figure \ref{fig:ambiguity}) are similar in most frames.
+%
+However, the less ``correct'' positive
+samples
+(e.g., samples in yellow rectangles of Figure \ref{fig:ambiguity})
+are much more different as they contain some background pixels
+which vary much more than those within the target object.
+%
+Thus, the distributions for the features extracted from
+the most ``correct'' positive samples are more concentrated than
+those from the less ``correct'' positive samples.
+%
+This in turn makes the features
+from the most ``correct'' positive samples much more stable than those
+from the less ``correct'' positive samples (e.g., on the bottom
+row of Figure \ref{fig:ambiguity}, the features denoted by red markers are
+more stable than those denoted by yellow markers).
+%
+The proposed algorithm is able to
+select the most ``correct'' positive sample because its probability is
+larger than those of the less ``correct'' positive samples (See the
+markers in Figure \ref{fig:ambiguity}).
+%
+In addition, the proposed measurement matrix is data-independent and
+no noise is introduced by mis-aligned samples.
+
+%-----------------------------
+{\flushleft \textbf{Robustness to Occlusion.}}
+Each feature in the proposed algorithm is spatially localized
+(See Figure \ref{fig:representation})
+which is less sensitive to occlusion than
+methods based on holistic representations.
+%
+Similar representations, e.g., local binary
+patterns~\cite{Ahonen_PAMI_2006}, Haar-like
+features~\cite{Grabner_BMVC_2006, Babenko_pami_2011},
+have been shown to be effective in handling occlusion.
+%
+Furthermore, features are randomly sampled at multiple scales by the
+proposed algorithm in a way similar
+to~\cite{Leonardis_CVIU_2000, Babenko_pami_2011} which
+have demonstrated robust results for dealing with occlusion.
+
+%-----------------------------
+{\flushleft \textbf{Dimensionality of Projected Space.}}
+%
+Bingham and Mannila~\cite{Bingham_KDD_2001} show that
+in practice the bound of the Johnson-Lindenstrauss lemma (i.e.,
+(\ref{eq:JLdimension}))
+is much higher than that suffices to achieve good results
+on image and text data.
+%
+In~\cite{Bingham_KDD_2001}, the lower bound for $n$
+when $\epsilon=0.2$ is $1,600$ but $n=50$ is sufficient to generate
+good results for image and text analysis.
+%
+In the experiments, with 100 samples (i.e., $d=100$),
+$\epsilon =0.2$ and $\delta =1$, the lower bound for $n$ is
+approximately $1,600$.
+%
+Another bound derived from the restricted isometry
+property in compressive sensing~\cite{Candes_IT_2005} is much
+ tighter than that from the Johnson-Lindenstrauss lemma, where
+$n\geq \kappa \delta \log(m/ \delta)$ and $\kappa$ and $\delta$ are
+constants.
+%
+For $m=10^{6}, \kappa=1$, and $\delta=10$, it is expected that
+$n\geq 50$.
+%
+We observe that good results can be obtained when $n=100$
+in the experiments.
+
+\begin{table*}[t]
+\caption{Summary of all evaluated tracking algorithms.
+}
+\label{table:trackers}
+{\tiny
+  \center\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}|r||c|c|c|c|}\hline
+Trackers     &Object representation         & Adaptive appearance
+model\footnote[1]                   & Approach
+&Classifier\\ \hline\hline
+Frag         &local intensity histogram     &-
+&generative                  &-\\ \hline
+IVT          &holistic image intensity      &incremental principal
+component analysis
+&generative                  &-\\ \hline
+VTD          &hue, saturation, intensity and edge template &sparse
+principal component analysis
+&generative                  &-\\ \hline
+L1T          &holistic image intensity      &sparse representation
+&generative                  &-\\ \hline
+DF           &multi-layer distribution fields &-
+&generative                  &-\\ \hline
+MTT          &holistic image intensity       &multi-task learning
+&generative                  &-\\ \hline
+OAB          &Haar-like, HOG, and LBP features &online boosting
+&discriminative              &boosting \\ \hline
+SemiB        &Haar-like features &online
+semi-supervised boosting &discriminative  &boosting \\ \hline
+MIL          &Haar-like features             &online multiple instance
+learning &discriminative              &boosting \\ \hline
+%TLD          & Two-bit binary patterns            &-
+TLD          & Haar-like features            &-
+&discriminative              &cascaded \\ \hline
+Struck           &Haar-like features             &-
+&discriminative              &structured SVM      \\ \hline
+CST          &holistic image intensity       &-
+&discriminative              &SVM       \\ \hline
+\textbf{CT}           &Haar-like features             &-
+&discriminative              &naive Bayes \\ \hline
+\end{tabular*}
+}
+\tiny \footnote[1]. For the discriminative trackers, online feature selection
+methods are adopted to refine appearance models where features
+including histogram of oriented gradients (HOG) and local binary
+pattern (LBP) are used.
+\end{table*}
+
+%================================================================
+\section{Experiments}
+\label{sec:experiments}
+The proposed compressive tracking (CT) algorithm is evaluated with
+$12$ state-of-the-art methods on $20$ challenging sequences among
+which $14$ are publicly available and $6$ are collected on our own
+(i.e., \textit{Biker}, \textit{Bolt}, \textit{Chasing}, \textit{Goat},
+\textit{Pedestrian}, and \textit{Shaking 2} in Table~\ref{Table1}).
+%
+The $12$ evaluated trackers are
+the fragment tracker (Frag)~\cite{Adam_CVPR_2006},
+online AdaBoost method (OAB)~\cite{Grabner_BMVC_2006},
+Semi-supervised tracker (SemiB)~\cite{Grabner_ECCV_2008},
+incremental visual tracker (IVT)~\cite{Ross_IJCV_2008},
+MIL tracker~\cite{Babenko_pami_2011},
+visual tracking decomposition (VTD) algorithm~\cite{Kwon_CVPR_2010},
+$\ell_1$-tracker (L1T)~\cite{Mei_PAMI_2011},
+TLD tracker~\cite{Kalal_CVPR_2010},
+distribution field (DF) tracker~\cite{sevilla2012distribution},
+multi-task tracker (MTT)~\cite{zhang2012robust},
+Struck (Struck) method~\cite{Hare_ICCV_2011},
+and circulant structure tracker (CST)~\cite{henriques2012circulant}.
+%
+Table~\ref{table:trackers} summarizes the characteristics of the
+evaluated tracking algorithms.
+%
+Most of the compared discriminative algorithms rely on either
+refined features (via feature selection such as OAB, SemiB, MIL) or
+strong classifiers (SVM classifier such as Struck and CST) for object
+tracking.
+%
+For the TLD method, it uses a detector integrated with
+a cascade of three classifiers (i.e., patch variance, random ferns,
+and nearest neighbor classifiers) for tracking.
+%
+While the proposed tracking algorithm uses Haar-like features (via
+random projection) and simple naive Bayes classifier,
+it achieves favorable results against other methods.
+
+We note that the source code of~\cite{Li_CVPR_2011} is not available
+for evaluation and the implementation requires some technical details
+and parameters not discussed therein.
+%
+It is worth noticing that the most challenging sequences from
+the existing works are used for evaluation.
+%
+All parameters in the proposed algorithm are {\em fixed for all the
+    experiments} to demonstrate the robustness and stability of the
+  proposed method.
+ %
+We have tested many different initial rectangles and selected the initial rectangles that yield good results for most competing methods.
+%
+For other evaluated trackers, we use the source or
+binary codes provided by the authors with default parameters.
+%
+For fair comparisons, all the evaluated trackers are initialized with
+the same parameters (e.g., initial locations, number of particles and
+search range).
+%
+%MH: ask Yi to run this and give me higher frame rate with better
+%machines.
+The proposed compressive tracking algorithm runs at
+$149$ frame per second (FPS) with a MATLAB implementation on
+an i7 Quad-Core machine with $3.4$ GHz CPU and $32$ GB RAM.
+%
+\ignore{
+In addition, the fast multiscale compressive tracking algorithm runs
+$120$ frames per second.
+}
+%
+The source codes, videos, and data sets are available at
+\url{http://www4.comp.polyu.edu.hk/~cslzhang/FCT/FCT.htm}.
+%
+%----------------------------------------------
+\subsection{Experimental Setup}
+%MH: you need to write sentences in the right way. not "set to x=100",
+%but set x to 100.
+
+Given a target location at the current frame, the search radius for
+drawing positive samples $\alpha$ is set to $4$ which generates $45$
+positive samples.
+%
+The inner $\zeta$ and outer radii $\beta$ for
+the set $D^{\zeta,\beta}$ that generates negative samples are set to
+$8$ and $30$, respectively.
+%
+In addition, $50$ negative samples are randomly selected from the set
+$D^{\zeta,\beta}$.
+%
+The search radius $\gamma_c$
+for the set $D^{\gamma_c}$ to coarsely detect the object
+location is $25$ and the shifting step $\Delta_c$ is $4$.
+%
+The radius $\gamma_f$ for set $D^{\gamma_f}$ to fine-grained search
+is set to $10$ and the shifting step $\Delta_f$ is set to
+$1$.
+%
+The dimensionality of projected space $n$ is set to
+$100$, and the learning parameter $\lambda$ is set to $0.85$.
+%
+
+\begin{table*}[!ht]
+\caption{Success rate (SR)(\%). \textcolor{red}{\textbf{Bold}} fonts
+  indicate the best
+  performance while the \textcolor{blue}{\emph{italic}} fonts indicate
+  the second best
+  ones. The total number of evaluated frames is $8,762$.
+}
+\label{Table1}
+{\tiny
+  \center\begin{tabular*}{\linewidth}
+{@{\extracolsep{\fill}}|r||c|c|c|c|c|c|c|c|c|c|c|c|c|}\hline
+Sequence     &\textbf{CT}       &Frag   &OAB    &SemiB  &IVT    &MIL    &VTD    &L1T    &TLD    &DF     &MTT    &Struck &CST    \\ \hline\hline
+\textit{Animal}  &92    &3      &17     &51     &4          &83 &\textcolor{blue}{\emph{96}}        &6  &37         &6  &87     &\textcolor{blue}{\emph{96}}     &\textcolor{red}{\textbf{100}}  \\ \hline
+\textit{Biker}   &35    &3      &\textcolor{red}{\textbf{66}}   &\textcolor{blue}{\emph{39}}    &10         &1  &15         &3  &2          &6  &9      &9      &9    \\ \hline
+\textit{Bolt}    &\textcolor{red}{\textbf{94}}  &41     &0      &18     &17         &\textcolor{blue}{\emph{92}}        &0          &2  &0          &1  &1      &8       &\textcolor{blue}{\emph{92}}   \\ \hline
+\textit{Cliff bar} &\textcolor{red}{\textbf{99}}        &24     &66     &24     &47         &71 &53         &24 &63         &26 &55     &44     &\textcolor{blue}{\emph{96}}  \\ \hline
+\textit{Chasing} &79    &21     &71     &62     &\textcolor{blue}{\emph{91}}        &65 &70         &72 &76         &70 &\textcolor{red}{\textbf{96}}   &85      &\textcolor{red}{\textbf{96}}    \\ \hline
+\textit{Coupon book} &\textcolor{red}{\textbf{98}}      &26     &\textcolor{red}{\textbf{98}}&23        &\textcolor{red}{\textbf{98}}    &\textcolor{red}{\textbf{98}}&17           &16 &31         &34 &39     &\textcolor{red}{\textbf{98}}&\textcolor{blue}{\emph{81}}   \\ \hline
+\textit{David indoor}   &\textcolor{red}{\textbf{98}}   &8      &32     &46     &\textcolor{red}{\textbf{98}}   &71     &\textcolor{red}{\textbf{98}}    &\textcolor{blue}{\emph{83}}    &\textcolor{red}{\textbf{98}}  &51     &41     &33     &66 \\ \hline
+\textit{Dark car} &36   &0      &14     &19     &54         &48 &25         &46 &\textcolor{blue}{\emph{67}}        &\textcolor{red}{\textbf{78}}       &59     &18     &48   \\ \hline
+\textit{Football} &76   &26     &31     &17     &64         &\textcolor{blue}{\emph{77}}&\textcolor{red}{\textbf{83}}       &35 &59         &56 &67     &62     &69   \\ \hline
+\textit{Goat}    &\textcolor{blue}{\emph{77}}   &14     &46     &43     &37         &27 &39         &24 &48         &44 &39     &59     &\textcolor{red}{\textbf{89}}   \\ \hline
+\textit{Occluded face} &\textcolor{red}{\textbf{99}}    &54     &49     &41     &96         &\textcolor{blue}{\emph{97}}        &79         &96 &87         &78 &88      &\textcolor{blue}{\emph{97}}    &\textcolor{red}{\textbf{99}}  \\ \hline
+\textit{Panda}   &\textcolor{red}{\textbf{84}}  &9      &\textcolor{blue}{\emph{83}}    &71     &11         &80 &7          &63 &34         &13 &11     &43     &15   \\ \hline
+\textit{Pedestrian}&\textcolor{red}{\textbf{83}}        &0      &1      &3      &0          &1  &3          &4  &0          &\textcolor{blue}{\emph{7}} &4      &1      &1    \\ \hline
+\textit{Skating} &\textcolor{red}{\textbf{97}}  &11     &68     &39     &8          &21 &\textcolor{blue}{\emph{96}}        &65 &37         &19 &10     &84     &9    \\ \hline
+\textit{Shaking 1}       &\textcolor{blue}{\emph{84}}   &25     &39     &30     &1          &83 &\textcolor{red}{\textbf{93}}   &3      &15         &\textcolor{blue}{\emph{84}}         &2      &48     &36   \\ \hline
+\textit{Shaking 2}  &88 &34     &74     &46     &39         &41 &80         &36 &56         &\textcolor{red}{\textbf{95}}&\textcolor{blue}{\emph{93}}   &53     &43   \\ \hline
+\textit{Sylvester}      &77         &34 &65     &66     &45         &77 &33         &40 &\textcolor{red}{\textbf{89}}       &32 &67     &80     &\textcolor{blue}{\emph{83}}  \\ \hline
+\textit{Tiger 1}         &52    &19     &24     &29     &8          &34 &\textcolor{blue}{\emph{78}}        &18 &40         &36 &25     &\textcolor{red}{\textbf{87}}   &42   \\ \hline
+\textit{Tiger 2}        &\textcolor{red}{\textbf{72}}       &12 &36     &16     &19         &44 &13         &11 &24         &\textcolor{blue}{\emph{65}}        &34     &62     &37 \\ \hline
+
+\textit{Twinnings}      &\textcolor{blue}{\emph{98}}        &73 &\textcolor{red}{\textbf{99}}   &23     &49         &83 &75         &82 &91         &82 &77     &95     &86  \\ \hline\hline
+Average SR &\textcolor{red}{\textbf{82}}        &33     &56     &43     &49         &\textcolor{blue}{\emph{68}}        &51         &47 &57         &50 &50     &64     &66        \\ \hline
+
+\end{tabular*}
+}
+\end{table*}
+%-------------------------------------------------------------------
+\begin{table*}[!ht]
+\caption{Center location error (CLE)(in pixels) and
+    average frame per second (FPS). \textcolor{red}{\textbf{Bold}}
+    fonts indicate the
+    best performance while the \textcolor{blue}{\emph{italic}} fonts
+    indicate the second
+    best ones. The total number of evaluated frames is $8,762$.
+%    (Sort in alphabetical order).
+}
+\label{Table2}
+{\tiny
+  \center\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}|r||c|c|c|c|c|c|c|c|c|c|c|c|c|}\hline
+Sequence   &\textbf{CT} &Frag   &OAB    &SemiB  &IVT    &MIL    &VTD    &L1T    &TLD    &DF     &MTT    &Struck &CST    \\ \hline\hline
+
+\textit{Animal} &\textcolor{red}{\textbf{15}}   &100    &62     &26     &207    &32     &\textcolor{blue}{\emph{16}}    &122    &125    &252    &17     &19      &\textcolor{red}{\textbf{15}} \\ \hline
+\textit{Biker}  &\textcolor{blue}{\emph{12}}    &107    &\textcolor{red}{\textbf{10}}   &14     &111    &44     &86     &89         &166        &76         &68 &95     &53 \\ \hline
+\textit{Bolt}   &\textcolor{blue}{\emph{10}}    &44         &227&102&60     &\textcolor{red}{\textbf{8}}        &146 &261       &286    &277    &293    &148     &12 \\ \hline
+\textit{Cliff bar}      &\textcolor{red}{\textbf{6}}     &34    &33      &56    &37      &14    &31     &40     &70     &52     &25     &46     &\textcolor{blue}{\emph{7}} \\ \hline
+\textit{Chasing}        &10     &56     &9      &44     &\textcolor{blue}{\emph{5}}     &13     &23     &9      &47     &31     &\textcolor{red}{\textbf{4}}    &\textcolor{blue}{\emph{5}}      &\textcolor{red}{\textbf{4}} \\ \hline
+\textit{Coupon book}    &\textcolor{red}{\textbf{4}}    &62     &9      &74     &\textcolor{red}{\textbf{4}}    &\textcolor{blue}{\emph{6}}     &74     &75     &81     &23     &72      &\textcolor{blue}{\emph{6}}    &21 \\ \hline
+\textit{David indoor}   &11     &73     &57     &37     &\textcolor{red}{\textbf{6}}    &19     &\textcolor{red}{\textbf{6}}    &17     &\textcolor{blue}{\emph{8}}     &56     &125     &64     &18 \\ \hline
+\textit{Dark car}       &9      &116    &11     &11     &8      &9      &20     &8      &13     &\textcolor{red}{\textbf{6}}    &\textcolor{blue}{\emph{7}}     &9      &8 \\ \hline
+\textit{Football}       &13     &144    &37     &58     &10     &13     &\textcolor{red}{\textbf{6}}    &39     &15     &33     &\textcolor{blue}{\emph{9}}     &26     &17 \\ \hline
+\textit{Goat}   &\textcolor{blue}{\emph{18}}    &140    &71     &77     &94     &109    &92     &88     &103    &86     &99     &22     &\textcolor{red}{\textbf{9}}\\ \hline
+\textit{Occluded face}  &\textcolor{red}{\textbf{12}}   &57     &36     &39     &14     &17     &36     &17     &24     &22     &19     &15     &\textcolor{blue}{\emph{13}} \\ \hline
+\textit{Panda}  &\textcolor{red}{\textbf{6}}    &56     &8      &9      &58     &\textcolor{blue}{\emph{7}}     &61     &9      &16     &64     &47     &11     &46 \\ \hline
+\textit{Pedestrian}     &\textcolor{red}{\textbf{6}}    &160    &91     &86     &84     &\textcolor{blue}{\emph{71}}    &74     &76     &211    &90     &76     &72     &104 \\ \hline
+\textit{Skating}        &14     &176    &74     &76     &144    &136    &\textcolor{red}{\textbf{9}}    &87     &204    &174    &78     &15     &\textcolor{blue}{\emph{10}} \\ \hline
+\textit{\textit{Shaking 1}}     &\textcolor{blue}{\emph{10}}    &55     &22     &134    &122    &12     &\textcolor{red}{\textbf{6}}    &72     &232     &\textcolor{blue}{\emph{10}}    &115   &24     &21 \\ \hline
+\textit{Shaking 2}      &\textcolor{blue}{\emph{15}}    &119    &18     &124    &109    &58     &41     &113    &144    &\textcolor{red}{\textbf{7}}    &16     &48     &84 \\ \hline
+\textit{Sylvester}      &\textcolor{blue}{\emph{9}}     &47     &12     &14     &138    &\textcolor{blue}{\emph{9}}     &66     &50     &\textcolor{red}{\textbf{8}}    &56     &18     &10      &\textcolor{red}{\textbf{8}} \\ \hline
+\textit{Tiger 1}        &\textcolor{blue}{\emph{23}}    &39     &42     &38     &45     &27     &\textcolor{red}{\textbf{8}}    &37     &24     &30     &61     &\textcolor{red}{\textbf{8}}     &25 \\ \hline
+\textit{Tiger 2}        &\textcolor{red}{\textbf{10}}   &36     &22     &30     &44     &18     &47     &48     &40     &13     &24     &\textcolor{blue}{\emph{11}}    &22 \\ \hline
+\textit{Twinnings}      &10     &15     &\textcolor{red}{\textbf{7}}    &70     &23     &11     &19     &11     &\textcolor{blue}{\emph{8}}     &12     &12     &9      &11 \\ \hline\hline
+Average CLE     &\textcolor{red}{\textbf{10}}   &60     &31     &48     &56     &\textcolor{blue}{\emph{22}}    &42     &45     &65     &48     &57     &24     &23 \\ \hline
+Average FPS &\textcolor{blue}{\emph{149}} &6 &22 &11 &33 &38 &6 &0.5 &28 &13 &5 &20 &\textcolor{red}{\textbf{362}} \\ \hline
+\end{tabular*}
+}
+\end{table*}
+
+\subsection{Evaluation Criteria}
+Two metrics are used to evaluate the proposed CT algorithm with $12$
+state-of-the-art trackers in which gray scale videos are used except
+color images are used for the VTD method.
+%
+The first metric is the success rate which is used in the PASCAL VOC
+challenge~\cite{Everingham_ijcv_2010} defined as,
+$score=\frac{area(ROI_T\bigcap   ROI_G)}{area(ROI_T\bigcup
+  ROI_G)}$, where
+$ROI_T$ is the tracking bounding box and $ROI_G$ is the ground truth
+bounding box.
+%
+If the $score$ is larger than $0.5$ in one frame, the tracking result is
+considered as a success.
+%
+Table~\ref{Table1} shows the tracking results in terms of success rate.
+%
+The other is the center location error which is defined as the
+Euclidean distance between the central locations of the tracked
+objects and the manually labeled ground truth.
+%Figure~\ref{fig:errorplot} illustrates the tracking results in terms
+%of center location error.
+Table~\ref{Table2} shows the average tracking errors of all methods.
+%
+The proposed compressive tracking algorithm achieves the best or
+second best results in most sequences based on both success rate
+and center location error.
+%
+Furthermore, the proposed tracker runs faster than all the other
+algorithms except for the CST method which uses the fast Fourier
+transform.
+
+\begin{figure*}[!ht]
+%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.18\linewidth]{screenshot/david/50}
+\includegraphics[width=.18\linewidth]{screenshot/david/150}
+\includegraphics[width=.18\linewidth]{screenshot/david/200}
+\includegraphics[width=.18\linewidth]{screenshot/david/300}
+\includegraphics[width=.18\linewidth]{screenshot/david/460}\\
+\scriptsize (a) Tracking results of the \textit{David indoor} sequence\\
+\includegraphics[width=.18\linewidth]{screenshot/sylv/500}
+\includegraphics[width=.18\linewidth]{screenshot/sylv/600}
+\includegraphics[width=.18\linewidth]{screenshot/sylv/700}
+\includegraphics[width=.18\linewidth]{screenshot/sylv/1050}
+\includegraphics[width=.18\linewidth]{screenshot/sylv/1300}\\
+\scriptsize (b) Tracking results of the \textit{Sylvester} sequence \\
+\includegraphics[width=.18\linewidth]{screenshot/skating/76}
+\includegraphics[width=.18\linewidth]{screenshot/skating/165}
+\includegraphics[width=.18\linewidth]{screenshot/skating/229}
+\includegraphics[width=.18\linewidth]{screenshot/skating/280}
+\includegraphics[width=.18\linewidth]{screenshot/skating/383}\\
+\scriptsize (c) Tracking results of the \textit{Skating} sequence \\
+\includegraphics[width=.18\linewidth]{screenshot/shaking1/50}
+\includegraphics[width=.18\linewidth]{screenshot/shaking1/60}
+\includegraphics[width=.18\linewidth]{screenshot/shaking1/100}
+\includegraphics[width=.18\linewidth]{screenshot/shaking1/160}
+\includegraphics[width=.18\linewidth]{screenshot/shaking1/304}\\
+\scriptsize (d) Tracking results of the \textit{Shaking 1} sequence \\
+\end{tabular}
+\includegraphics[width=0.8\linewidth]{screenshot/legend}
+\end{center}
+%\hspace{-3cm}
+\caption{Screenshots of some sample tracking results when there are
+  pose variations and severe illumination changes.}
+%\label{fig5}
+\label{fig:illumination changes}
+\end{figure*}
+
+\begin{figure*}[!ht]
+%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.18\linewidth]{screenshot/occludedface/200}
+\includegraphics[width=.18\linewidth]{screenshot/occludedface/500}
+\includegraphics[width=.18\linewidth]{screenshot/occludedface/600}
+\includegraphics[width=.18\linewidth]{screenshot/occludedface/710}
+\includegraphics[width=.18\linewidth]{screenshot/occludedface/800}\\
+\scriptsize (a) Tracking results of the \textit{Occluded face} \\
+\includegraphics[width=.18\linewidth]{screenshot/panda/100}
+\includegraphics[width=.18\linewidth]{screenshot/panda/250}
+\includegraphics[width=.18\linewidth]{screenshot/panda/400}
+\includegraphics[width=.18\linewidth]{screenshot/panda/600}
+\includegraphics[width=.18\linewidth]{screenshot/panda/780}\\
+\scriptsize (b) Tracking results of the \textit{Panda} sequence\\
+\includegraphics[width=.18\linewidth]{screenshot/bolt/25}
+\includegraphics[width=.18\linewidth]{screenshot/bolt/125}
+\includegraphics[width=.18\linewidth]{screenshot/bolt/186}
+\includegraphics[width=.18\linewidth]{screenshot/bolt/200}
+\includegraphics[width=.18\linewidth]{screenshot/bolt/280}\\
+\scriptsize (c) Tracking results of the \textit{Bolt} sequence \\
+\includegraphics[width=.18\linewidth]{screenshot/goat/30}
+\includegraphics[width=.18\linewidth]{screenshot/goat/50}
+\includegraphics[width=.18\linewidth]{screenshot/goat/100}
+\includegraphics[width=.18\linewidth]{screenshot/goat/120}
+\includegraphics[width=.18\linewidth]{screenshot/goat/140}\\
+\scriptsize (d) Tracking results of the \textit{Goat} sequence \\
+\includegraphics[width=.18\linewidth]{screenshot/pedestrian/10}
+\includegraphics[width=.18\linewidth]{screenshot/pedestrian/26}
+\includegraphics[width=.18\linewidth]{screenshot/pedestrian/50}
+\includegraphics[width=.18\linewidth]{screenshot/pedestrian/80}
+\includegraphics[width=.18\linewidth]{screenshot/pedestrian/300}\\
+\scriptsize (e) Tracking results of the \textit{Pedestrian} sequence \\
+\end{tabular}
+\includegraphics[width=0.8\linewidth]{screenshot/legend}
+\end{center}
+%\hspace{-3cm}
+\caption{Screenshots of some sample tracking results when there are
+  severe occlusion and pose variations.}
+%\label{fig5}
+\label{fig:occlusion}
+\end{figure*}
+
+%------------------------------------------------
+\subsection{Tracking Results}
+%\subsubsection{Pose and illumination change}
+\noindent{\textbf{Pose and Illumination Change.}}
+For the \textit{David indoor} sequence shown in Figure
+\ref{fig:illumination changes}(a),
+the appearance changes gradually due to
+illumination and pose variation
+when the person walks out of the dark meeting room.
+%
+The IVT, VTD, TLD and CT algorithms perform well
+on this  sequence.
+%
+%MH: bad sentence and argument. why only for faces?
+%The IVT method uses a PCA appearance model which is very suitable
+%for faces~\cite{Babenko_PAMI_2011}.
+%KH: ok.
+The IVT method uses a PCA-based appearance model which has been shown to
+account for appearance change caused by illumination variation well.
+%
+%MH: bad arguments. edge features less sensitive to illumination
+%change?
+%MH: how many times do I need to tell you it is "the VTD method", not
+%"the VTD"?
+%The VTD performs well because it
+%uses edge features which are less sensitive to illumination
+%changes.
+%MH: check VTD paper on the kind of features
+%KH: They combine hue, saturation, intensity, and edge template.
+The VTD method performs well due to the use of multiple observation models
+constructed from different features.
+%
+The TLD approach works well because it maintains a detector
+which uses Haar-like features during tracking.
+%
+In the \textit{Sylvester} sequence shown in
+Figure~\ref{fig:illumination changes}(b), the object undergoes large
+pose and illumination change.
+%
+The MIL, TLD, Struck, CST and CT methods perform well
+on this sequence with lower tracking errors than other methods.
+%
+The IVT, L1T, MTT, and DF methods do not perform
+well on this sequence as these methods use holistic
+features which are less effective for large scale pose variations.
+%
+In Figure~\ref{fig:illumination changes}(c), the target object in the
+\textit{Skating} sequence undergoes occlusion ($\#165$), shape
+deformation ($\#229,\#280$), and severe illumination change
+($\#383$).
+%
+Only the VTD, Struck and CT methods perform well on this
+sequence.
+%
+The VTD method performs well as it constructs multiple
+observation models which account for some different object appearance
+variations over time.
+%
+The Struck method achieves low tracking errors
+as it maintains a fixed number of support vectors from the former
+frames which contain different aspects of the object appearance over
+time.
+%
+However, the Struck method drifts away from the target
+after frame $\#350$ in the \textit{Skating} sequence
+due to several reasons.
+%
+%
+When the stage light changes
+drastically and the pose of the performer changes rapidly as she
+performs, only the VTD, DF and CT methods are able to track
+the object reliably.
+%
+The proposed tracker is robust to pose
+and illumination changes as object appearance can be modeled well by
+random projections (based on the Johnson-Lindenstrauss lemma) and the
+classifier with online update is used to separate foreground and
+background samples.
+%
+%
+Furthermore,
+the features used in the proposed algorithm
+are similar to generalized Haar-like features
+which have been shown to be robust to pose and orientation
+change~\cite{Babenko_pami_2011}.
+
+%
+\begin{figure*}[!ht]
+%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.18\linewidth]{screenshot/chasing/350}
+\includegraphics[width=.18\linewidth]{screenshot/chasing/380}
+\includegraphics[width=.18\linewidth]{screenshot/chasing/400}
+\includegraphics[width=.18\linewidth]{screenshot/chasing/430}
+\includegraphics[width=.18\linewidth]{screenshot/chasing/530}\\
+\scriptsize (a) Tracking results of the \textit{Chasing} sequence \\
+\includegraphics[width=.18\linewidth]{screenshot/shaking2/50}
+\includegraphics[width=.18\linewidth]{screenshot/shaking2/120}
+\includegraphics[width=.18\linewidth]{screenshot/shaking2/180}
+\includegraphics[width=.18\linewidth]{screenshot/shaking2/270}
+\includegraphics[width=.18\linewidth]{screenshot/shaking2/287}\\
+\scriptsize (b) Tracking results of the \textit{Shaking 2} sequence \\
+\includegraphics[width=.18\linewidth]{screenshot/biker/5}
+\includegraphics[width=.18\linewidth]{screenshot/biker/33}
+\includegraphics[width=.18\linewidth]{screenshot/biker/50}
+\includegraphics[width=.18\linewidth]{screenshot/biker/70}
+\includegraphics[width=.18\linewidth]{screenshot/biker/100}\\
+\scriptsize (c) Tracking results of the \textit{Biker} sequence \\
+\includegraphics[width=.18\linewidth]{screenshot/tiger1/50}
+\includegraphics[width=.18\linewidth]{screenshot/tiger1/166}
+\includegraphics[width=.18\linewidth]{screenshot/tiger2/165}
+\includegraphics[width=.18\linewidth]{screenshot/tiger2/290}
+\includegraphics[width=.18\linewidth]{screenshot/tiger2/364}\\
+\scriptsize (d) Tracking results of the \textit{Tiger 1} and
+\textit{Tiger 2} sequences\\
+\end{tabular}
+\includegraphics[width=0.8\linewidth]{screenshot/legend}
+\end{center}
+%\hspace{-3cm}
+\caption{Screenshots of some sample tracking results when there are
+  rotation and abrupt motion.}
+%\label{fig5}
+\label{fig:rotation}
+\end{figure*}
+
+%\vspace{1mm}
+%\subsubsection{Occlusion and pose variation}
+\noindent{\textbf{Occlusion and Pose Variation.}}
+The target object in the \textit{Occluded face} sequence in
+Figure~\ref{fig:occlusion}(a) undergoes in-plane pose variation and
+heavy occlusion.
+%
+Overall, the MIL, L1T, Struck, CST and CT algorithms
+perform well on this sequence.
+%
+However, the proposed CT algorithm achieves the best performance in
+terms of both success rate and center location error.
+%
+In the \textit{Panda} sequence (Figure~\ref{fig:occlusion}(b)), the
+target undergoes out-of-plane pose variation and shape
+deformation.
+%
+Table~\ref{Table1} and Table~\ref{Table2} show that only the
+proposed CT method outperforms the other methods on this sequence
+in terms of success rate and center location error.
+%
+The OAB and MIL methods work well on this sequence as they select the
+most discriminative Haar-like features for object representation which
+can well handle pose variation and shape deformation.
+%
+Although the Struck method uses the Haar-like features to
+represent objects, no feature selection mechanism is employed and
+hence it is less effective in handling large pose variation and
+shape deformation.
+%
+Due to the same reasons, the Struck
+method fails to track the target object stably in the \textit{Bolt}
+sequence (Figure~\ref{fig:occlusion}(c)).
+%
+In the \textit{Bolt} sequence, several objects appear in the same
+scene with rapid appearance change due to shape deformation and
+fast motion.
+%
+Only the MIL, CST and CT algorithms track the object stably.
+%
+The IVT, VTD, L1T, DF, and MTT methods do not perform well as
+generative models are less effective to account for appearance change
+caused by large shape deformation (e.g., background pixels are mistakenly
+considered as foreground ones), thereby making the algorithms drift
+away to similar objects.
+%
+In the \textit{Goat} sequence, the object undergoes pose variation,
+occlusion, and shape deformation.
+%
+As shown in Figure~\ref{fig:occlusion}(d), the proposed CT algorithm
+performs well, and the Struck as well as CST methods
+achieve relatively high success rate and low center location error.
+%
+In the \textit{Pedestrian} sequence shown in
+Figure~\ref{fig:occlusion}(e),
+the target object undergoes heavy occlusion (e.g., $\#50$).
+%
+In addition, it is challenging to track the target object due to low
+resolution.
+%
+Except the CT algorithm, all the other methods lose track of the
+target in numerous frames.
+
+The proposed CT algorithm handles occlusion and pose variation well as
+the adopted appearance model is discriminatively learned from target and
+background with data-independent measurement, thereby alleviating
+the influence of background pixels (See also Figure
+\ref{fig:occlusion}(c)).
+%
+Furthermore, the CT algorithm performs well on objects
+with non-rigid shape deformation and camera view change in the
+\textit{Panda}, \textit{Bolt} and \textit{Goat}
+sequences (Figure \ref{fig:occlusion}(b), (c), and (d))
+as the adopted appearance model is based on spatially local features
+which are less sensitive to non-rigid shape deformation.
+%
+
+%\subsubsection{Rotation and abrupt motion}
+\noindent{\textbf{Rotation and Abrupt Motion.}}
+The target object in the \textit{Chasing} sequence (Figure
+\ref{fig:rotation}(a)) undergoes abrupt movements with $360$
+degree out-of-plane rotation.
+%
+The IVT, MTT, Struck, CST and CT methods perform well on this sequence.
+%
+The images of the \textit{Shaking 2} sequence
+(Figure~\ref{fig:rotation}(b)) are blurry due to fast motion of the
+subject.
+%
+The DF, MTT, and CT methods achieve favorable
+performance on this sequence in terms of both success rate and center
+location error.
+%
+However, the MTT method drifts away from the target object after frame
+$\#270$.
+%
+When the out-of-plane rotation and abrupt motion both occur
+in the \textit{Tiger 1}, \textit{Tiger 2} and \textit{Biker} sequences
+(Figure \ref{fig:rotation}(c), (d)), most algorithms fail to track the
+target objects well.
+%
+The proposed CT algorithm outperforms most of the other methods in all
+the metrics (accuracy, success rate and speed).
+%
+The \textit{Twinings} and \textit{Animal} sequences contain objects
+undergoing out-of-plane rotation and abrupt motion, respectively.
+%
+Similarly, the proposed tracker performs well in terms of
+all metrics.
+
+%%-------------------------------------------------------------------
+\ignore{
+\begin{table}[t]
+\caption{Success rate (SR)(\%) for multiscale tracking. \textcolor{red}{\textbf{Bold}} fonts indicate the best
+  performance while the \textcolor{blue}{\emph{italic}} fonts indicate the second best
+  ones.
+}
+\label{Table3}
+{\footnotesize
+  \center\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}|r||c|c|c|c|c|c|}\hline
+Sequence         &$\textbf{CT}_\textbf{s}$      &TLD    &VTD    &IVT    &L1T    &MTT    \\ \hline\hline
+\textit{Singer} &\textcolor{red}{\textbf{98}}    &38     &\textcolor{red}{\textbf{98}}     &\textcolor{blue}{\textit{90}}     &58     &61     \\ \hline
+\textit{Biker 2} &\textcolor{red}{\textbf{99}}  &41         &46         &\textcolor{blue}{\textit{54}}      &5          &3          \\ \hline
+
+\end{tabular*}
+}
+\end{table}
+%-------------------------------------------------------------------
+\begin{table}[t]
+\caption{Center location error (CLE)(in pixels) and average frame per second (FPS) for multiscale tracking. \textcolor{red}{\textbf{Bold}}
+    fonts indicate the best performance while the \textcolor{blue}{\emph{italic}} fonts indicate the second
+    best ones.}
+\label{Table4}
+{\footnotesize
+  \center\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}|r||c|c|c|c|c|c|}\hline
+Sequence         &$\textbf{CT}_\textbf{s}$      &TLD    &VTD    &IVT    &L1T    &MTT    \\ \hline\hline
+\textit{Singer}  &\textcolor{blue}{\textit{10}} &143        &\textcolor{red}{\textbf{9}}  &16    &49    &64  \\ \hline
+\textit{Biker 2} &\textcolor{red}{\textbf{9}}    &84     &40    &\textcolor{blue}{\textit{10}}   &265   &273  \\ \hline\hline
+Average FPS      &\textcolor{red}{\textbf{120}}    &28     &6  &\textcolor{blue}{\textit{33}}     &0.5  &5  \\ \hline  \end{tabular*}
+}
+\end{table}
+}
+%MH: change this figure too
+%-------------------------------------------------------------------
+\begin{figure*}[!ht]
+%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.18\linewidth]{screenshot/cliffbar/83}
+\includegraphics[width=.18\linewidth]{screenshot/cliffbar/150}
+\includegraphics[width=.18\linewidth]{screenshot/cliffbar/200}
+\includegraphics[width=.18\linewidth]{screenshot/cliffbar/250}
+\includegraphics[width=.18\linewidth]{screenshot/cliffbar/320}\\
+\scriptsize (a) Tracking results of the \textit{Cliff bar} sequence\\
+\includegraphics[width=.18\linewidth]{screenshot/couponbook/10}
+\includegraphics[width=.18\linewidth]{screenshot/couponbook/60}
+\includegraphics[width=.18\linewidth]{screenshot/couponbook/150}
+\includegraphics[width=.18\linewidth]{screenshot/couponbook/200}
+\includegraphics[width=.18\linewidth]{screenshot/couponbook/280}\\
+\scriptsize (b) Tracking results of the \textit{Coupon book} sequence
+\end{tabular}
+\includegraphics[width=0.9\linewidth]{screenshot/legend}
+\end{center}
+%\hspace{-3cm}
+\caption{Screenshots of some sample tracking results with
+  background clutter.}
+%\label{fig5}
+\label{fig:background clutter}
+\end{figure*}
+%===================================================================
+
+
+%\subsubsection{Background clutter}
+\noindent{\textbf{Background Clutter.}} The object in the \textit{Cliff bar} sequence changes in scale,
+orientation and the surrounding background has similar texture
+(Figure~\ref{fig:background clutter}(a)).
+%
+As the Frag, IVT, VTD, L1T, DF, and MTT methods use generative
+appearance models that do not exploit the background information,
+it is difficult to keep track of the objects correctly.
+%
+The object in the \textit{Coupon book} sequence undergoes significant
+appearance change  at the $60$-th frame and then the other coupon book
+appears in the scene.
+%
+The Frag, SemiB, VTD, L1T, TLD, and MTT methods drift away to track
+the other coupon book ($\#150,\#200,\#280$ in Figure \ref{fig:background
+  clutter}(b)) while the proposed CT algorithm successfully tracks the
+correct one.
+%
+The proposed CT algorithm is able to track the right objects
+accurately in these sequences as it extracts discriminative
+features for the most ``correct'' positive sample (i.e., the target
+object) online with classifier update for foreground and background
+separation  (See Figure \ref{fig:ambiguity}).
+%
+\begin{figure*}[!ht]
+%\hspace{-.3cm}
+\begin{center}
+\includegraphics[width=1\linewidth]{images/afsodfsct}
+\end{center}
+%\hspace{-3cm}
+\caption{Comparison results among AFS,ODFS and CT. The average results are shown inside the legend.}
+%\label{fig5}
+\label{fig:afsodfsct}
+\end{figure*}
+%
+\begin{table}[t]
+\caption{Average frame per second (FPS) for AFS, ODFS and CT.
+   The \textcolor{red}{\textbf{red}} fonts indicate the best performance while the \textcolor{blue}{\emph{italic}} fonts indicate the second     best ones.}
+\label{table:afsodfsct}
+{\center\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}|r||c|c|c|}\hline
+Method         &AFS    &ODFS  &CT    \\ \hline\hline
+Average FPS    &15     &\textcolor{blue}{\textbf{30}}    &\textcolor{red}{\textbf{36}}   \\ \hline
+\end{tabular*}
+}
+\end{table}
+
+\section{Connections of AFS, ODFS and CT}
+All these methods exploit the Haar-like features and naive Bayes classifiers. However, there exist some difference among them: the AFS method selects features on bag level while the ODFS selects features on bag level. The CT method explores the random Haar-like features via feature extraction method without learning.
+\subsection{Comparisons of AFS, ODFS and CT}
+Figure~\ref{fig:afsodfsct} illustrates the comparison results in terms of success rate among the three methods by using 12 video clips. We can observe that the proposed CT method achieves the best results while the AFS performs worst on these datasets, which is the same as the order of efficiency comparison demonstrated by Table~\ref{table:afsodfsct}. 
+%================================================================
+\section{Summary}
+\label{sec:conclusions}
+In this chapter, we proposed a simple yet robust tracking algorithm with
+an appearance model based on non-adaptive random projections that
+preserve the structure of original image space.
+%
+A very sparse measurement matrix
+is adopted to efficiently compress features from the foreground
+targets and background ones.
+%
+The tracking task is formulated as
+a binary classification problem with online update in the compressed
+domain.
+%
+Numerous experiments with state-of-the-art algorithms on challenging
+sequences demonstrate that the proposed algorithm performs well in terms of
+accuracy, robustness, and speed.
+

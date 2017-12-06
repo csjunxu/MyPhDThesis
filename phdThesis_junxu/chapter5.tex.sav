@@ -1,3 +1,0 @@
-\chapter{Fast Tracking via Spatio-Temporal Context Learning}\label{chap:STC}
-
-In the afore-mentioned chapters, the sophisticated Haar-like features are learned via feature selection or extraction techniques to build efficient and effective appearance models. However, the spatio-temporal context information is not fully u, which helps determine target location   

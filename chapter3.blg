@@ -1,0 +1,69 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: chapter3.aux
+Case mismatch error between cite keys Avidan_PAMI_2004 and Avidan_pami_2004
+---line 87 of file chapter3.aux
+ : \citation{Avidan_PAMI_2004
+ :                           ,avidan2007ensembel,Collins_PAMI_2005,Grabner_BMVC_2006}
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Grabner_bmvc_2006 and Grabner_BMVC_2006
+---line 106 of file chapter3.aux
+ : \citation{Avidan_pami_2007,Collins_pami_2005,Grabner_bmvc_2006
+ :                                                               }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Hare_iccv_2011 and Hare_ICCV_2011
+---line 110 of file chapter3.aux
+ : \citation{Hare_iccv_2011
+ :                         }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Grabner_bmvc_2006 and Grabner_BMVC_2006
+---line 113 of file chapter3.aux
+ : \citation{Grabner_bmvc_2006
+ :                            ,Babenko_pami_2011}
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Grabner_bmvc_2006 and Grabner_BMVC_2006
+---line 115 of file chapter3.aux
+ : \citation{chen2004probabilistic,Collins_pami_2005,liang2006online,dore2008online,venkataraman2007target,wang2005online,Grabner_bmvc_2006
+ :                                                                                                                                         ,liu2007gradient}
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Grabner_bmvc_2006 and Grabner_BMVC_2006
+---line 117 of file chapter3.aux
+ : \citation{Grabner_bmvc_2006
+ :                            }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Grabner_bmvc_2006 and Grabner_BMVC_2006
+---line 119 of file chapter3.aux
+ : \citation{wang2005online,Grabner_bmvc_2006
+ :                                           ,liu2007gradient}
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Hare_iccv_2011 and Hare_ICCV_2011
+---line 120 of file chapter3.aux
+ : \citation{Hare_iccv_2011
+ :                         }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Grabner_bmvc_2006 and Grabner_BMVC_2006
+---line 126 of file chapter3.aux
+ : \citation{Adam_cvpr_2006,Grabner_bmvc_2006
+ :                                           ,Grabner_eccv_2008,Mei_iccv_2009,Kalal_cvpr_2010,Hare_iccv_2011,Kwon_CVPR_2010,Zhang_eccv_2012}
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Grabner_bmvc_2006 and Grabner_BMVC_2006
+---line 127 of file chapter3.aux
+ : \citation{Adam_cvpr_2006,Grabner_bmvc_2006
+ :                                           ,Grabner_eccv_2008,Mei_iccv_2009,Babenko_pami_2011,Kalal_cvpr_2010,Hare_iccv_2011,Kwon_CVPR_2010,Zhang_eccv_2012}
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Grabner_bmvc_2006 and Grabner_BMVC_2006
+---line 129 of file chapter3.aux
+ : \citation{Grabner_bmvc_2006
+ :                            }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Hare_iccv_2011 and Hare_ICCV_2011
+---line 133 of file chapter3.aux
+ : \citation{Hare_iccv_2011
+ :                         }
+I'm skipping whatever remains of this command
+Case mismatch error between cite keys Hare_iccv_2011 and Hare_ICCV_2011
+---line 148 of file chapter3.aux
+ : \citation{Hare_iccv_2011
+ :                         }
+I'm skipping whatever remains of this command
+I found no \bibdata command---while reading file chapter3.aux
+I found no \bibstyle command---while reading file chapter3.aux
+(There were 15 error messages)

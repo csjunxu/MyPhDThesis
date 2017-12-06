@@ -1,0 +1,26 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2013.6.25)  26 JUN 2013 16:11
+entering extended mode
+**D:/Phd*Thesis/phdThesis*templates/phdThesis_zhkh/chapter2.tex
+("D:/Phd Thesis/phdThesis templates/phdThesis_zhkh/chapter2.tex"
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for loaded.
+! Undefined control sequence.
+l.1 \chapter
+            {Robust Object Tracking via Active Feature Selection}\label{chap...
+
+? 
+! Emergency stop.
+l.1 \chapter
+            {Robust Object Tracking via Active Feature Selection}\label{chap...
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 495362
+ 239 string characters out of 3184023
+ 44825 words of memory out of 3000000
+ 3272 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 5i,0n,1p,142b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
