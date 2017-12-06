@@ -495,6 +495,15 @@ With the proposed dataset, we take a comprehensive evaluation on the state-of-th
 
 
 \subsection{Results and Discussion}
+
+\textbf{Results on Dataset 1}. Figure\ \ref{f3} show the denoised images of ``Dog'' (the method CC \cite{crosschannel2016} is not compared since its testing code is not available).\ One can see that CBM3D, TNRD, DnCNN, NI and NC remain some noise-caused color artifacts across the whole image, while MCWNNM and WSC tend to over-smooth a little the image.\ The proposed TWSC removes more clearly the noise without over-smoothing much the image details.\ These results demonstrate that the methods designed for AWGN are not effective for realistic noise removal.\ Though NC and NI methods are specifically developed for real noisy images, their performance is not satisfactory.\ In comparison, the proposed TWSC works much better in removing the noise while maintaining the details (see the zoom-in window in ``Dog'') than the other competing methods.
+
+\textbf{Results on Dataset 2}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{t2}.\ One can see that the proposed TWSC is much better than other competing methods, including the baseline method WSC and the recently proposed CC, MCWNNM.\ Figure\ \ref{f4} shows the denoised images of a scene captured by Nikon D800 at ISO = 6400.\ One can see that the proposed TWSC method results in not only higher PSNR and SSIM measures, but also much better visual quality than other methods.
+
+
+
+
+\textbf{Results on Dataset 3}.
 The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-1}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images.
 
 Some visual comparisons are listed in Figures \ref{fig6-4}-\ref{fig6-13}, from which one can see that our proposed TWSC method removes the noise while still maintains the details. This is because that the TWSC considers different noise levels for each local patch as well as each channel. Hence, the TWSC can adaptively process each local region of the noisy images according to the noise level in that region. This property makes the proposed TWSC method more flexible than the other state-of-the-art image denoising methods. 
