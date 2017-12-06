@@ -496,24 +496,146 @@ With the proposed dataset, we take a comprehensive evaluation on the state-of-th
 
 \subsection{Results and Discussion}
 
-\textbf{Results on Dataset 1}. Figure\ \ref{f3} show the denoised images of ``Dog'' (the method CC \cite{crosschannel2016} is not compared since its testing code is not available).\ One can see that CBM3D, TNRD, DnCNN, NI and NC remain some noise-caused color artifacts across the whole image, while MCWNNM and WSC tend to over-smooth a little the image.\ The proposed TWSC removes more clearly the noise without over-smoothing much the image details.\ These results demonstrate that the methods designed for AWGN are not effective for realistic noise removal.\ Though NC and NI methods are specifically developed for real noisy images, their performance is not satisfactory.\ In comparison, the proposed TWSC works much better in removing the noise while maintaining the details (see the zoom-in window in ``Dog'') than the other competing methods.
+\textbf{Results on Dataset 1}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{tab6-6}.\ One can see that the proposed TWSC is much better than other competing methods, including the baseline method WSC and the recently proposed CC, MCWNNM.\ Figure\ \ref{f4} shows the denoised images of a scene captured by Nikon D800 at ISO = 6400.\ One can see that the proposed TWSC method results in not only higher PSNR and SSIM measures, but also much better visual quality than other methods.\ More visual comparisons can be found in the supplementary file.
 
-\textbf{Results on Dataset 2}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{t2}.\ One can see that the proposed TWSC is much better than other competing methods, including the baseline method WSC and the recently proposed CC, MCWNNM.\ Figure\ \ref{f4} shows the denoised images of a scene captured by Nikon D800 at ISO = 6400.\ One can see that the proposed TWSC method results in not only higher PSNR and SSIM measures, but also much better visual quality than other methods.
+\begin{table}[hbp]
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf{Dataset 1} \cite{crosschannel2016}.}
+\scriptsize
+\label{tab6-6}
+\begin{center}
+\renewcommand\arraystretch{1.2}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}ccccccccc}
+\hline
+Metric
+&
+\textbf{CBM3D}
+&
+\textbf{KSVD}
+&
+\textbf{LSSC}
+&
+\textbf{EPLL}
+&
+\textbf{NCSR}
+&
+\textbf{WNNM}
+&
+\textbf{MLP}
+&
+\textbf{CSF}
+\\
+\hline
+PSNR & 37.40 & 36.29 &  & 36.17 & 36.40 & 31.59 & 38.07 & 37.71
+\\
+\hline
+SSIM & 0.9526 & 0.9255 &  & 0.9216 & 0.9290 & 0.8347 & 0.9615 & 0.9571
+\\
+\hline
+Metric
+&
+\textbf{TNRD}
+&
+\textbf{DnCNN}
+&
+\textbf{NC}
+&
+\textbf{NI}
+&
+\textbf{PGPD}
+&
+\textbf{Guided}
+&
+\textbf{MCWNNM}
+&
+\textbf{TWSC}
+\\
+\hline
+PSNR & 38.17 & 36.08 &  &  & 36.18 & 38.35 & 38.51 & \textbf{38.60}
+\\
+\hline
+SSIM & 0.9640 & 0.9161 &  &  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
+\\
+\hline
+\end{tabular*}
+\end{center}
+\end{table}
 
+\textbf{Results on Dataset 2}. In Table \ref{tab6-7}, we list the average PSNR and SSIM results of the competing methods on the 1000 cropped images in the DND dataset \cite{dnd2017}.\ We can see again that the proposed TWSC achieves much better performance than the other competing methods.\ Note that the ``ground truth'' images of this dataset have not been published, but one can submit the denoised images to the project website and get the PSNR and SSIM results.\ Figure\ \ref{f5} shows the denoised images of a scene captured by a Nexus 6P camera.\ One can still see that the proposed TWSC method results better visual quality than the other denoising methods.\ More visual comparisons can be found in the supplementary file.
 
+\begin{table}[hbp]
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1000 cropped images in \textbf{Dataset 2} \cite{dnd2017}.}
+\scriptsize
+\label{tab6-7}
+\begin{center}
+\renewcommand\arraystretch{1.2}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}ccccccccc}
+\hline
+Metric
+&
+\textbf{CBM3D}
+&
+\textbf{KSVD}
+&
+\textbf{LSSC}
+&
+\textbf{EPLL}
+&
+\textbf{NCSR}
+&
+\textbf{WNNM}
+&
+\textbf{MLP}
+&
+\textbf{CSF}
+\\
+\hline
+PSNR & 37.40 & 36.29 &  & 36.17 & 36.40 & 31.59 & 38.07 & 37.71
+\\
+\hline
+SSIM & 0.9526 & 0.9255 &  & 0.9216 & 0.9290 & 0.8347 & 0.9615 & 0.9571
+\\
+\hline
+Metric
+&
+\textbf{TNRD}
+&
+\textbf{DnCNN}
+&
+\textbf{NC}
+&
+\textbf{NI}
+&
+\textbf{PGPD}
+&
+\textbf{Guided}
+&
+\textbf{MCWNNM}
+&
+\textbf{TWSC}
+\\
+\hline
+PSNR & 38.17 & 36.08 &  &  & 36.18 & 38.35 & 38.51 & \textbf{38.60}
+\\
+\hline
+SSIM & 0.9640 & 0.9161 &  &  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
+\\
+\hline
+\end{tabular*}
+\end{center}
+\end{table}
 
 
 \textbf{Results on Dataset 3}.
-The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-1}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images.
+The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images.
 
 Some visual comparisons are listed in Figures \ref{fig6-4}-\ref{fig6-13}, from which one can see that our proposed TWSC method removes the noise while still maintains the details. This is because that the TWSC considers different noise levels for each local patch as well as each channel. Hence, the TWSC can adaptively process each local region of the noisy images according to the noise level in that region. This property makes the proposed TWSC method more flexible than the other state-of-the-art image denoising methods. 
 
 Contrast to the proposed methods, the traditional denoising methods (e.g., LSSC, EPLL, NCSR, WNNM, and PGPD) designed for grey scale image would generate artifacts since they process each channel of the RGB image individually \cite{srcolor}. They cannot deal with the images which have different noise statistics in different channels as well as different local region. Hence, these methods would fail to process the real-world noisy images captured from real-world scenes. On the other hand, the discriminative learning based methods (e.g., MLP, CSF, TNRD, and DnCNN) are trained on paired clean and noisy images. These methods largely depends on the training dataset, and would achieve inferior performance upon the noise in the testing images is different from the noise in the training images.
 
 \begin{table}[hbp]
-\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset.}
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}).}
 \scriptsize
-\label{tab6-1}
+\label{tab6-8}
 \begin{center}
 \renewcommand\arraystretch{1.2}
 \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}ccccccccc}
