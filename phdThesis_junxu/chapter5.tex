@@ -724,65 +724,60 @@ Metric
 \begin{figure}
 \begin{adjustwidth}{-2cm}{}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_elaine.png}
-	   \caption{Ground Truth}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_80_elaine.png}
-		\caption{Noisy: 10.07}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_BM3D_80_elaine.png}
-		\caption{BM3D: 27.16}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_LSSC_80_elaine.png}
-		\caption{LSSC: 27.02}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_NCSR_80_elaine.png}
-		\caption{NCSR: 26.88}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WNNM_80_elaine.png}
-		\caption{WNNM: 27.26}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_TNRD_80_elaine.png}
-		\caption{TNRD: 26.35}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_DnCNN_80_elaine.png}
-		\caption{DnCNN: 26.72}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WSC_80_elaine.png}
-		\caption{WSC: 27.07}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WLSWSC_80_elaine.png}
-		\caption{TWSC: 27.43}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_elaine.png}}
+{\footnotesize Clean}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_80_elaine.png}}
+{\footnotesize Noisy: 10.07}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_BM3D_80_elaine.png}}
+{\footnotesize BM3D: 27.16}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_LSSC_80_elaine.png}}
+{\footnotesize LSSC: 27.02}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_NCSR_80_elaine.png}}
+{\footnotesize NCSR: 26.88}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WNNM_80_elaine.png}}
+{\footnotesize WNNM: 27.26}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_TNRD_80_elaine.png}}
+{\footnotesize TNRD: 26.35}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_DnCNN_80_elaine.png}}
+{\footnotesize DnCNN: 26.72}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WSC_80_elaine.png}}
+{\footnotesize WSC: 27.07}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WLSWSC_80_elaine.png}}
+{\footnotesize TWSC: 27.43}
+\end{minipage}
+}
     \caption{Denoised images and PSNR (dB) results of \textsl{Elaine} by different methods (the standard deviation of noise is $\sigma=80$).}
     \label{fig5-5}
 \end{adjustwidth}
@@ -791,65 +786,60 @@ Metric
 \begin{figure}
 \begin{adjustwidth}{-2cm}{}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/br_monarch.png}
-	   \caption{Ground Truth}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/br_100_monarch.png}
-		\caption{Noisy: 8.10}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/br_BM3D_100_monarch.png}
-		\caption{BM3D: 22.52}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/br_LSSC_100_monarch.png}
-		\caption{LSSC: 22.24}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/br_NCSR_100_monarch.png}
-		\caption{NCSR: 22.13}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/br_WNNM_100_monarch.png}
-		\caption{WNNM: 22.95}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/br_TNRD_100_monarch.png}
-		\caption{TNRD: 21.72}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/br_DnCNN_100_monarch.png}
-		\caption{DnCNN: 17.13}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/br_WSC_100_monarch.png}
-		\caption{WSC: 22.56}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/awgn/br_WLSWSC_100_monarch.png}
-		\caption{TWSC: 23.01}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_monarch.png}}
+{\footnotesize Clean}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_100_monarch.png}}
+{\footnotesize Noisy: 8.10}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_BM3D_100_monarch.png}}
+{\footnotesize BM3D: 22.52}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_LSSC_100_monarch.png}}
+{\footnotesize LSSC: 22.24}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_NCSR_100_monarch.png}}
+{\footnotesize NCSR: 22.13}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WNNM_100_monarch.png}}
+{\footnotesize WNNM: 22.95}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_TNRD_100_monarch.png}}
+{\footnotesize TNRD: 21.72}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_DnCNN_100_monarch.png}}
+{\footnotesize DnCNN: 17.13}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WSC_100_monarch.png}}
+{\footnotesize WSC: 22.56}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/awgn/resize_br_WLSWSC_100_monarch.png}}
+{\footnotesize TWSC: 23.01}
+\end{minipage}
+}
     \caption{Denoised images and PSNR (dB) results of \textsl{Monarch} by different methods (the standard deviation of noise is $\sigma=100$).}
     \label{fig5-6}
 \end{adjustwidth}
@@ -918,53 +908,50 @@ SSIM & 0.9063 & 0.9381 & 0.9463 & 0.8635 & 0.9126 & 0.9364 & 0.9481 & 0.9516 & \
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_Noisy_dog.png}
-		\caption{Noisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_CBM3D_dog.png}
-		\caption{CBM3D}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_WNNM_dog.png}
-\caption{WNNM}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TRD_dog.png}
-\caption{TNRD}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_DnCNN_dog.png}
-\caption{DnCNN}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NI_dog.png}
-\caption{NI}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NC_dog.png}
-		\caption{NC}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TWSC_dog.png}
-		\caption{TWSC}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_Noisy_dog.png}}
+{\footnotesize Noisy }
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_CBM3D_dog.png}}
+{\footnotesize CBM3D}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_WNNM_dog.png}}
+{\footnotesize WNNM}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TRD_dog.png}}
+{\footnotesize TNRD}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_DnCNN_dog.png}}
+{\footnotesize DnCNN}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NI_dog.png}}
+{\footnotesize NI  }
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NC_dog.png}}
+{\footnotesize NC}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TWSC_dog.png}}
+{\footnotesize TWSC}
+\end{minipage}
+}
     \caption{Denoised images of the real noisy image \textsl{Dog} \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are 16.8, 17.0, and 16.6, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig5-7}
 \end{figure}
@@ -972,53 +959,50 @@ SSIM & 0.9063 & 0.9381 & 0.9463 & 0.8635 & 0.9126 & 0.9364 & 0.9481 & 0.9516 & \
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_Noisy_bears.png}
-		\caption{Noisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_CBM3D_bears.png}
-		\caption{CBM3D}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_WNNM_bears.png}
-\caption{WNNM}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TRD_bears.png}
-\caption{TNRD}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_DnCNN_bears.png}
-\caption{DnCNN}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NI_bears.png}
-\caption{NI}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NC_bears.png}
-		\caption{NC}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TWSC_bears.png}
-		\caption{TWSC}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_Noisy_bears.png}}
+{\footnotesize Noisy }
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_CBM3D_bears.png}}
+{\footnotesize CBM3D}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_WNNM_bears.png}}
+{\footnotesize WNNM}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TRD_bears.png}}
+{\footnotesize TNRD}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_DnCNN_bears.png}}
+{\footnotesize DnCNN}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NI_bears.png}}
+{\footnotesize NI  }
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NC_bears.png}}
+{\footnotesize NC}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TWSC_bears.png}}
+{\footnotesize TWSC}
+\end{minipage}
+}
     \caption{Denoised images of the real noisy image \textsl{Bears} \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig5-8}
 \end{figure}
@@ -1026,107 +1010,101 @@ SSIM & 0.9063 & 0.9381 & 0.9463 & 0.8635 & 0.9126 & 0.9364 & 0.9481 & 0.9516 & \
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_Noisy_frog.png}
-		\caption{Noisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_CBM3D_frog.png}
-		\caption{CBM3D}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_WNNM_frog.png}
-\caption{WNNM}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TRD_frog.png}
-\caption{TNRD}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_DnCNN_frog.png}
-\caption{DnCNN}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NI_frog.png}
-\caption{NI}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NC_frog.png}
-		\caption{NC}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TWSC_frog.png}
-		\caption{TWSC}
-    \end{subfigure}
-    \caption{Denoised images of the real noisy image \textsl{Frog} \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_Noisy_frog.png}}
+{\footnotesize Noisy }
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_CBM3D_frog.png}}
+{\footnotesize CBM3D}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_WNNM_frog.png}}
+{\footnotesize WNNM}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TRD_frog.png}}
+{\footnotesize TNRD}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_DnCNN_frog.png}}
+{\footnotesize DnCNN}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NI_frog.png}}
+{\footnotesize NI  }
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NC_frog.png}}
+{\footnotesize NC}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TWSC_frog.png}}
+{\footnotesize TWSC}
+\end{minipage}
+}
+\caption{Denoised images of the real noisy image \textsl{Frog} \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig5-9}
 \end{figure}
 
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_Noisy_chinesegirl.png}
-		\caption{Noisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_CBM3D_chinesegirl.png}
-		\caption{CBM3D}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_WNNM_chinesegirl.png}
-\caption{WNNM}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TRD_chinesegirl.png}
-\caption{TNRD}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_DnCNN_chinesegirl.png}
-\caption{DnCNN}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NI_chinesegirl.png}
-\caption{NI}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NC_chinesegirl.png}
-		\caption{NC}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.24\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TWSC_chinesegirl.png}
-		\caption{TWSC}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_Noisy_chinesegirl.png}}
+{\footnotesize Noisy }
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_CBM3D_chinesegirl.png}}
+{\footnotesize CBM3D}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_WNNM_chinesegirl.png}}
+{\footnotesize WNNM}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TRD_chinesegirl.png}}
+{\footnotesize TNRD}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_DnCNN_chinesegirl.png}}
+{\footnotesize DnCNN}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NI_chinesegirl.png}}
+{\footnotesize NI  }
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_NC_chinesegirl.png}}
+{\footnotesize NC}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/nc/resize_br_TWSC_chinesegirl.png}}
+{\footnotesize TWSC}
+\end{minipage}
+}
     \caption{Denoised images of the real noisy image \textsl{Girl} \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig5-10}
 \end{figure}
@@ -1135,65 +1113,60 @@ SSIM & 0.9063 & 0.9381 & 0.9463 & 0.8635 & 0.9126 & 0.9364 & 0.9481 & 0.9516 & \
 %%---------------------------CC--------------------------
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_5dmark3_iso3200_1_real.png}
-		\caption{Mean Image}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png}
-		\caption{Noisy 37.00}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png}
-		\caption{CBM3D 39.72}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png}
-\caption{WNNM 37.48}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_5dmark3_iso3200_1_real.png}
-\caption{TNRD 39.46}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png}
-\caption{DnCNN 37.26}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_5dmark3_iso3200_1_real.png}
-\caption{NI 37.68}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_5dmark3_iso3200_1_real.png}
-		\caption{NC 38.76}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_5dmark3_iso3200_1.png}
-		\caption{CC 38.37}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_5dmark3_iso3200_1.png}
-		\caption{TWSC \textbf{40.75}}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_5dmark3_iso3200_1_real.png}}
+{\footnotesize Mean Image}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png}}
+{\footnotesize Noisy 37.00}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png}}
+{\footnotesize CBM3D 39.72}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png}}
+{\footnotesize WNNM 37.48}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_5dmark3_iso3200_1_real.png}}
+{\footnotesize TNRD 39.46}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png}}
+{\footnotesize DnCNN 37.26}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_5dmark3_iso3200_1_real.png}}
+{\footnotesize NI 37.68}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_5dmark3_iso3200_1_real.png}}
+{\footnotesize NC 38.76}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_5dmark3_iso3200_1.png}}
+{\footnotesize CC 38.37}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_5dmark3_iso3200_1.png}}
+{\footnotesize TWSC \textbf{40.75}}
+\end{minipage}
+}
     \caption{Denoised images and PSNR (dB) results of the real noisy image \textsl{Canon 5D Mark 3 ISO 3200 1} \cite{crosschannel2016} by different methods.\ The estimated noise levels of R, G, and B channels are 1.6, 1.5, and 1.6, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig5-11}
 \end{figure}
@@ -1201,65 +1174,60 @@ SSIM & 0.9063 & 0.9381 & 0.9463 & 0.8635 & 0.9126 & 0.9364 & 0.9481 & 0.9516 & \
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_d600_iso3200_2_real.png}
-		\caption{Mean Image}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_d600_iso3200_2_real.png}
-		\caption{Noisy 33.77}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_d600_iso3200_2_real.png}
-		\caption{CBM3D 35.06}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png}
-\caption{WNNM 36.07}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png}
-\caption{TNRD 36.34}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_d600_iso3200_2_real.png}
-\caption{DnCNN 34.48}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_d600_iso3200_2_real.png}
-\caption{NI 35.36}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_d600_iso3200_2_real.png}
-		\caption{NC 36.70}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png}
-		\caption{CC 35.95}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_d600_iso3200_2.png}
-		\caption{TWSC \textbf{37.07}}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_d600_iso3200_2_real.png}}
+{\footnotesize Mean Image}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_d600_iso3200_2_real.png}}
+{\footnotesize Noisy 33.77}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_d600_iso3200_2_real.png}}
+{\footnotesize CBM3D 35.06}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png}}
+{\footnotesize WNNM 36.07}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png}}
+{\footnotesize TNRD 36.34}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_d600_iso3200_2_real.png}}
+{\footnotesize DnCNN 34.48}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_d600_iso3200_2_real.png}}
+{\footnotesize NI 35.36}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_d600_iso3200_2_real.png}}
+{\footnotesize NC 36.70}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png}}
+{\footnotesize CC 35.95}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_d600_iso3200_2.png}}
+{\footnotesize TWSC \textbf{37.07}}
+\end{minipage}
+}
     \caption{Denoised images and PSNR (dB) results of the real noisy image \textsl{Nikon D600 ISO 3200 2} \cite{crosschannel2016} by different methods.\ The estimated noise levels of R, G, and B channels are 1.2, 1.3, and 1.4, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig5-12}
 \end{figure}
@@ -1267,65 +1235,60 @@ SSIM & 0.9063 & 0.9381 & 0.9463 & 0.8635 & 0.9126 & 0.9364 & 0.9481 & 0.9516 & \
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_d800_iso1600_1_real.png}
-		\caption{Mean Image}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_d800_iso1600_1_real.png}
-		\caption{Noisy 35.47}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_d800_iso1600_1_real.png}
-		\caption{CBM3D 36.79}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d800_iso1600_1_real.png}
-\caption{WNNM 36.33}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d800_iso1600_1_real.png}
-\caption{TNRD 38.07}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_d800_iso1600_1_real.png}
-\caption{DnCNN 35.79}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_d800_iso1600_1_real.png}
-\caption{NI 37.34}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_d800_iso1600_1_real.png}
-		\caption{NC 38.01}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d800_iso1600_1.png}
-		\caption{CC 37.99}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_d800_iso1600_1.png}
-		\caption{TWSC \textbf{39.18}}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_d800_iso1600_1_real.png}}
+{\footnotesize Mean Image}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_d800_iso1600_1_real.png}}
+{\footnotesize Noisy 35.47}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_d800_iso1600_1_real.png}}
+{\footnotesize CBM3D 36.79}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d800_iso1600_1_real.png}}
+{\footnotesize WNNM 36.33}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d800_iso1600_1_real.png}}
+{\footnotesize TNRD 38.07}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_d800_iso1600_1_real.png}}
+{\footnotesize DnCNN 35.79}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_d800_iso1600_1_real.png}}
+{\footnotesize NI 37.34}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_d800_iso1600_1_real.png}}
+{\footnotesize NC 38.01}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d800_iso1600_1.png}}
+{\footnotesize CC 37.99}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_d800_iso1600_1.png}}
+{\footnotesize TWSC \textbf{39.18}}
+\end{minipage}
+}
     \caption{Denoised images and PSNR (dB) results of the real noisy image \textsl{Nikon D800 ISO 1600 1} \cite{crosschannel2016} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig5-13}
 \end{figure}
@@ -1333,65 +1296,60 @@ SSIM & 0.9063 & 0.9381 & 0.9463 & 0.8635 & 0.9126 & 0.9364 & 0.9481 & 0.9516 & \
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_d800_iso3200_1_real.png}
-		\caption{Mean Image}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_d800_iso3200_1_real.png}
-		\caption{Noisy 33.26}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_d800_iso3200_1_real.png}
-		\caption{CBM3D 35.04}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d800_iso3200_1_real.png}
-\caption{WNNM 38.56}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d800_iso3200_1_real.png}
-\caption{TNRD 37.66}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_d800_iso3200_1_real.png}
-\caption{DnCNN 34.08}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_d800_iso3200_1_real.png}
-\caption{NI 36.95}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_d800_iso3200_1_real.png}
-		\caption{NC 38.07}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d800_iso3200_1.png}
-		\caption{CC 39.01}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_d800_iso3200_1.png}
-		\caption{TWSC \textbf{39.98}}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_d800_iso3200_1_real.png}}
+{\footnotesize Mean Image}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_d800_iso3200_1_real.png}}
+{\footnotesize Noisy 33.26}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_d800_iso3200_1_real.png}}
+{\footnotesize CBM3D 35.04}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d800_iso3200_1_real.png}}
+{\footnotesize WNNM 38.56}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d800_iso3200_1_real.png}}
+{\footnotesize TNRD 37.66}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_d800_iso3200_1_real.png}}
+{\footnotesize DnCNN 34.08}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_d800_iso3200_1_real.png}}
+{\footnotesize NI 36.95}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_d800_iso3200_1_real.png}}
+{\footnotesize NC 38.07}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d800_iso3200_1.png}}
+{\footnotesize CC 39.01}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_d800_iso3200_1.png}}
+{\footnotesize TWSC \textbf{39.98}}
+\end{minipage}
+}
     \caption{Denoised images and PSNR (dB) results of the real noisy image \textsl{Nikon D800 ISO 3200 1} \cite{crosschannel2016} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig5-14}
 \end{figure}
@@ -1400,65 +1358,60 @@ SSIM & 0.9063 & 0.9381 & 0.9463 & 0.8635 & 0.9126 & 0.9364 & 0.9481 & 0.9516 & \
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_d800_iso6400_1_real.png}
-		\caption{Mean Image}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_d800_iso6400_1_real.png}
-		\caption{Noisy 29.63}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_d800_iso6400_1_real.png}
-		\caption{CBM3D 31.12}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d800_iso6400_1_real.png}
-\caption{WNNM 33.27}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d800_iso6400_1_real.png}
-\caption{TNRD 32.80}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_d800_iso6400_1_real.png}
-\caption{DnCNN 29.83}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_d800_iso6400_1_real.png}
-\caption{NI 31.28}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_d800_iso6400_1_real.png}
-		\caption{NC 33.49}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d800_iso6400_1.png}
-		\caption{CC 34.61}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_d800_iso6400_1.png}
-		\caption{TWSC \textbf{35.47}}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_d800_iso6400_1_real.png}}
+{\footnotesize Mean Image}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_d800_iso6400_1_real.png}}
+{\footnotesize Noisy 29.63}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_d800_iso6400_1_real.png}}
+{\footnotesize CBM3D 31.12}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d800_iso6400_1_real.png}}
+{\footnotesize WNNM 33.27}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d800_iso6400_1_real.png}}
+{\footnotesize TNRD 32.80}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_d800_iso6400_1_real.png}}
+{\footnotesize DnCNN 29.83}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_d800_iso6400_1_real.png}}
+{\footnotesize NI 31.28}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_d800_iso6400_1_real.png}}
+{\footnotesize NC 33.49}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d800_iso6400_1.png}}
+{\footnotesize CC 34.61}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_d800_iso6400_1.png}}
+{\footnotesize TWSC \textbf{35.47}}
+\end{minipage}
+}
     \caption{Denoised images and PSNR (dB) results of the real noisy image \textsl{Nikon D800 ISO 6400 1} \cite{crosschannel2016} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig5-15}
 \end{figure}
