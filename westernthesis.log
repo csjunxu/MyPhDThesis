@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 19:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8032,14 +8032,18 @@ ges/dataset/NikonD800_5_125_6400_stair_3_real.JPG> <./images/dataset/NikonD800_
 _real.JPG> <./images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG> <./images
 /dataset/Sony_3-5_200_1600_classroom_14_real.JPG> <./images/dataset/Sony_4-5_12
 5_3200_plant_10_mean.JPG> <./images/dataset/Sony_4-5_125_3200_plant_10_real.JPG
->] [170]
-Overfull \hbox (0.4929pt too wide) in paragraph at lines 482--483
+>]
+Overfull \vbox (1.20299pt too high) has occurred while \output is active []
+
+
+[170]
+Overfull \hbox (0.4929pt too wide) in paragraph at lines 484--485
 \OT1/txr/m/n/12 [[]], K-SVD [[]], LSSC [[]], Ex-pected Patch Log Like-li-hood (
 EPLL) [[]], multi-
  []
 
 
-Overfull \hbox (7.82634pt too wide) in paragraph at lines 482--483
+Overfull \hbox (7.82634pt too wide) in paragraph at lines 484--485
 \OT1/txr/m/n/12 layer per-cep-tion (MLP) [[]], Non-lo-cally Cen-tral-ized Spars
 e Rep-re-sen-ta-tions (NCSR)
  []
@@ -8049,20 +8053,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [171]
 
-LaTeX Warning: Reference `fig6-4' on page 172 undefined on input line 490.
+LaTeX Warning: Reference `fig6-4' on page 172 undefined on input line 492.
 
 
-LaTeX Warning: Reference `fig6-13' on page 172 undefined on input line 490.
+LaTeX Warning: Reference `fig6-13' on page 172 undefined on input line 492.
 
 
-Underfull \vbox (badness 7308) has occurred while \output is active []
-
- [172]
-Overfull \hbox (2.89185pt too wide) in paragraph at lines 492--493
+Overfull \hbox (2.89185pt too wide) in paragraph at lines 494--495
 []\OT1/txr/m/n/12 Contrast to the pro-posed meth-ods, the tra-di-tional de-nois
 -ing meth-ods (e.g., LSSC,
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [172]
 [173]) [174]
 No file westernthesis.bnd.
 (./westernthesis.bbl
@@ -8151,7 +8156,7 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on westernthesis.pdf (212 pages, 52131001 bytes).
+Output written on westernthesis.pdf (212 pages, 52130853 bytes).
 PDF statistics:
  1454 PDF objects out of 1728 (max. 8388607)
  541 compressed objects within 6 object streams
