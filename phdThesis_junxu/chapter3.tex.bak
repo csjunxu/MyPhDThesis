@@ -1,0 +1,1931 @@
+\chapter{Real-Time Object Tracking via Online Discriminative Feature Selection}\label{chap:odfs} %
+
+Different from our ASF method in Chapter~\ref{chap:AFS} that improves the MIL feature selection method via a more informative criterion, in this chapter, we demonstrate that it is
+unnecessary to use feature selection method proposed in the MIL
+tracker~\cite{Babenko_pami_2011}, and
+instead an efficient feature
+selection method based on optimization of the instance probability can
+be exploited for better performance.
+%
+\section{Introduction}
+\label{sec:introduction}
+%
+%
+Motivated by success of formulating the face detection problem with
+the multiple instance learning framework~\cite{viola2006multiple},
+an online multiple instance learning method~\cite{Babenko_pami_2011}
+is proposed to handle the
+ambiguity problem of sample location by minimizing the bag likelihood
+loss function.
+%
+We note that in~\cite{zhou2011online} the MILES
+model~\cite{chen2006miles} is employed to select features in
+a supervised learning manner for object tracking.
+%
+However, this method runs at about 2 to 5 frames per second (FPS),
+which is less efficient than the proposed algorithm (about 30 FPS).
+%
+In addition, this method is developed with the MIL framework and thus
+has similar drawbacks as the MILTrack method~\cite{Babenko_pami_2011}.
+%
+Recently, Hare~\emph{et al}.~\cite{Hare_ICCV_2011} show that the
+objectives for tracking and classification are not explicitly coupled
+because the objective for tracking is to estimate the most {\em correct}
+object position while the objective for classification is to predict
+the instance labels.
+%
+However, this issue is not addressed in the
+existing discriminative tracking
+methods under the MIL framework~\cite{zhou2011online, Babenko_pami_2011,
+ leistner2010miforests, zeisl2010line}.
+
+%
+The key
+contributions of this work are summarized as follows.
+\begin{enumerate}
+  \item We propose a simple and effective online discriminative
+    feature selection (ODFS) approach which directly couples the
+    classifier score with the sample importance, thereby formulating a
+    more robust and efficient tracker than
+    state-of-the-art algorithms and 17 times faster than
+    the MILTrack~\cite{Babenko_pami_2011} method (both are
+    implemented in MATLAB).
+  \item We show that it is unnecessary to use bag likelihood loss
+    functions for feature selection as proposed in the MILTrack method.
+    Instead, we can directly select features on the
+    instance level by using a supervised learning method which is
+    more efficient and robust than the MILTrack method.
+    %
+    As all the instances, including the {\em correct} positive one,
+    can be labeled from the current classifier, they can be used
+    for update via self-taught learning~\cite{raina2007self}.
+    %
+    Here, the most {\em correct} positive instance can be effectively
+    used as the tracking
+    result of the current frame in a way similar to other discriminative
+    models~\cite{Grabner_BMVC_2006,
+      avidan2007ensemble, Collins_pami_2005}.
+\ignore{
+  \item We propose an online parameter update
+    method based on maximum likelihood estimation, which
+    achieves more robust results than the MILTrack method.
+  }
+\end{enumerate}
+
+\begin{figure*}[t]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=0.8\linewidth]{images/Figs/system-overview}
+\end{tabular}
+\end{center}
+%\vspace{-3mm}
+\caption{Main steps of the proposed algorithm.}
+\label{fig:system-overview}
+\end{figure*}
+%
+\begin{algorithm}[!ht]
+\caption{ODFS Tracking}
+\begin{algorithmic}\label{alg:ODFS}
+\STATE \textbf{Input:} ($t$+1)-th video frame
+\begin{enumerate}\setlength{\itemsep}{-\itemsep}
+\item Sample a set of image patches,
+  $X^\gamma=\{\textbf{x}|||\textbf{l}_{t+1}(\textbf{x})-
+\textbf{l}_{t}(\textbf{x}^{\star})||<\gamma\}$
+where $\textbf{l}_{t}(\textbf{x}^{\star})$ is the tracking location at
+the $t$-th frame, and extract the features $\{f_{k}(\textbf{x})\}_{k=1}^K$
+for each sample
+\item Apply classifier $h_K$ in (\ref{Eq2}) to each
+  feature vector and find the tracking
+  location $\textbf{l}_{t+1}(\textbf{x}^{\star})$
+where $\textbf{x}^{\star}=\arg\max_{\textbf{x}\in X^{\gamma}}\{c(\textbf{x})=\sigma(h_K(\textbf{x}))\}$
+\item Sample two sets of image patches
+  $X^\alpha=\{\textbf{x}|||\textbf{l}_{t+1}(\textbf{x})-
+\textbf{l}_{t+1}(\textbf{x}^{\star})||<\alpha\}$
+  and
+  $X^{\zeta,\beta}=\{\textbf{x}|\zeta<||\textbf{l}_{t+1}
+  (\textbf{x})-\textbf{l}_{t+1}(\textbf{x}^{\star})||<\beta\}
+  $ with $\alpha<\zeta<\beta$
+\item Extract the features with these two sets of samples by
+the ODFS algorithm and update
+  the classifier parameters according to ~(\ref{eq:onlineupdate})
+\end{enumerate}
+\STATE \textbf{Output:} Tracking location $\textbf{l}_{t+1}(\textbf{x}^{\star})$ and
+classifier parameters
+\end{algorithmic}
+\end{algorithm}
+
+%======================================================
+\section{Problem Formulation}
+In this section, we present the algorithmic details and theoretical
+justifications of this work.
+%-------------------------------------------------------------------------
+\subsection{Tracking by Detection}
+The main steps of our tracking system are summarized in
+\textbf{Algorithm} \ref{alg:ODFS}.
+Figure~\ref{fig:system-overview} illustrates the basic flow of our
+algorithm.
+%
+Our discriminative appearance model is based
+a classifier $h_K(\textbf{x})$ which estimates the posterior
+probability
+%
+\begin{equation}
+c(\textbf{x})=P(y=1|\textbf{x})=\sigma(h_K(\textbf{x})),
+\label{eq:confidence}
+\end{equation}
+(i.e., confidence map function) where
+$\textbf{x}$ is the sample represented by a feature vector
+$\textbf{f}(\textbf{x})=(f_{1}(\textbf{x}),\ldots,f_K(\textbf{x}))^\top$,
+$y\in\{0,1\}$ is a binary variable which represents the sample label,
+and $\sigma(\cdot)$ is a sigmoid function.
+
+Given a classifier, the tracking by detection process is as follows.
+%
+Let $\textbf{l}_{t}(\textbf{x})\in \mathbb{R}^{2}$
+ denote the location of sample $\textbf{x}$ at the $t$-{th} frame.
+%
+We have the object location $\textbf{l}_{t}(\textbf{x}^{\star})$ where we
+ assume the corresponding sample is $\textbf{x}^{\star}$, and then we
+ densely crop some patches
+ $X^{\alpha}=\{{\textbf{x}\mid \parallel
+   \textbf{l}_{t}(\textbf{x})-
+   \textbf{l}_{t}(\textbf{x}^{\star})\parallel} < \alpha\}$
+ within a search radius $\alpha$ centering at the current object
+ location, and label them as positive samples.
+%
+Then, we randomly crop some patches from set
+$X^{\zeta,\beta}=\{{\textbf{x}|\zeta<\parallel
+\textbf{l}_{t}(\textbf{x})- \textbf{l}_{t}(\textbf{x}^{\star})
+\parallel<\beta}\}$
+where $\alpha<\zeta<\beta$, and label them as negative samples.
+%
+We utilize these samples to update the classifier $h_K$.
+%
+When the ($t$+1)-{th}  frame arrives, we crop some patches
+ $X^{\gamma}=\{\textbf{x}\mid \parallel
+ \textbf{l}_{t+1}(\textbf{x})-\textbf{l}_{t}(\textbf{x}^{\star})\parallel<\gamma\}$
+ with a large radius $\gamma$ surrounding the old object location
+ $\textbf{l}_{t}(\textbf{x}^{\star})$ in the ($t$+1)-{th} frame.
+%
+Next, we apply the updated classifier to these patches to find the patch
+ with the maximum confidence i.e.
+ $\textbf{x}^{\star}=\arg\max_{\textbf{x}}(c(\textbf{x}))$.
+%
+The location $\textbf{l}_{t+1}(\textbf{x}^{\star})$ is the
+ new object location in the ($t$+1)-{th} frame. Based on the
+ newly detected object location, our tracking system repeats the
+ above-mentioned procedures.
+
+%------------------------------------------------------------
+\subsection{Classifier Construction and Update}
+\label{sec:classifier-update}
+In this work, sample $\textbf{x}$ is represented by a
+feature vector
+$\textbf{f}(\textbf{x})=(f_{1}(\textbf{x}),\ldots,f_{K}(\textbf{x}))^\top$,
+where each feature is assumed to be independently distributed as
+MILTrack~\cite{Babenko_pami_2011},
+and then the classifier $h_{K}$ can be modeled by a naive Bayes
+classifier~\cite{Ng_NIPS_2002}
+\begin{equation}
+ h_{K}(\textbf{x})=\log\left(\frac{\prod^{K}_{k=1}p(f_{k}(\textbf{x})|y=1)P(y=1)}
+{\prod^{K}_{k=1}p(f_{k}(\textbf{x})|y=0)P(y=0)}\right) = \sum_{k=1}^K
+\phi_{k}(\textbf{x}),
+ \label{Eq2}
+\end{equation}
+where
+\begin{equation}
+  \phi_{k}(\textbf{x})=\log
+  \left(
+  \frac{p(f_{k}(\textbf{x})\mid y=1)}{p(f_{k}(\textbf{x})\mid y=0)}
+  \right),
+ \label{Eq3}
+\end{equation}
+is a weak classifier with equal prior, i.e., $P(y=1)=P(y=0)$.
+%
+Next, we have $P(y=1\mid\textbf{x})=\sigma(h_{K}(\textbf{x}))$ (i.e.,
+(\ref{eq:confidence})),
+where the classifier $h_{K}$ is a linear function of weak classifiers
+and $\sigma(z)=\frac{1}{1+e^{-z}}$.
+
+We use a set of Haar-like features
+$f_{k}$~\cite{Babenko_pami_2011} to represent samples.
+%
+The conditional distributions $p(f_{k}\mid y=1)$ and
+$p(f_{k}\mid y=0)$ in the classifier $h_{K}$ are assumed to be
+Gaussian distributed as the MILTrack method~\cite{Babenko_pami_2011}
+with four parameters
+$(\mu_{k}^{+},\sigma_{k}^{+},\mu_{k}^{-},\sigma_{k}^{-})$  where
+\begin{equation}
+  p(f_{k}\mid y=1)\thicksim \mathcal{N}(\mu_{k}^{+},\sigma_{k}^{+}),
+  p(f_{k}\mid y=0)\thicksim \mathcal{N}(\mu_{k}^{-},\sigma_{k}^{-}).
+ \label{Eq5}
+\end{equation}
+The parameters
+$(\mu_{k}^{+},\sigma_{k}^{+},\mu_{k}^{-},\sigma_{k}^{-})$ in
+(\ref{Eq5}) are incrementally estimated by~(\ref{eq:onlineupdate})
+
+\ignore{
+as follows
+\begin{equation}
+ \mu_{k}^{+}\leftarrow \eta\mu_{k}^{+}+(1-\eta)\mu^{+},
+ \label{Eq6}
+\end{equation}
+\begin{equation}
+ \sigma_{k}^{+}\leftarrow \sqrt{\eta(\sigma_{k}^{+})^2+(1-\eta)
+   (\sigma^{+})^{2}+\eta(1-\eta)(\mu_{k}^{+}-\mu^{+})^{2}},
+ \label{Eq7}
+\end{equation}
+%
+where $\eta$ is the learning rate for update,
+$\sigma^{+}=\sqrt{\frac{1}{N}\sum_{i=0\mid
+    y=1}^{N-1}(f_{k}(\textbf{x}_{i})-\mu^{+})^{2}}$, and $N$
+is the number of positive samples.
+%
+In addition, $\mu^{+}=\frac{1}{N}\sum_{i=0\mid
+  y=1}^{N-1}f_{k}(\textbf{x}_{i})$.
+%
+We update  $\mu_{k}^{-}$  and
+$\sigma_{k}^{-}$ with similar rules.
+%
+The above-mentioned (\ref{Eq6}) and (\ref{Eq7}) can
+be easily deduced by Lemma~\ref{lemma1} where $\eta$
+is a learning rate to moderate the balance between the
+former frames and the current one.
+
+\begin{Lemma}
+\label{lemma1}
+Let
+$D_{t-1}=\{f(\textbf{\em{x}}_{0}),\ldots,f(\textbf{\em{x}}_{n-1})\}$,
+$D=\{f(\textbf{\em{x}}_{n}),\ldots,f(\textbf{\em{x}}_{n+m-1})\}$,
+$D_{t}=\{D_{t-1},D\}$ denote the feature $f$ of all the positive
+samples from the first frame to the ($t$-1)-th frame, in the current
+frame, and from the first frame to the $t$-th frame,
+respectively. Suppose all of the features in $D_{t}$ are independent
+and Gaussian distributed with the same mean $\mu_{t}$ and standard
+deviation $\sigma_{t}$. Then, the maximum likelihood estimates for
+$\mu_{t}$ and $\sigma_{t}$ are
+\begin{equation}
+ \widetilde{\mu}_{t}=\eta \widetilde{\mu}_{t-1}+(1-\eta)\widetilde{\mu}
+ \label{a1}
+\end{equation}
+\begin{equation}
+\widetilde{\sigma}_{t}=\sqrt{\eta
+(\widetilde{\sigma}_{t-1})^{2}+(1-\eta)\widetilde{\sigma}^{2}+\eta(1-\eta)
+(\widetilde{\mu}_{t-1}-\widetilde{\mu})^{2}}
+\label{a2}
+\end{equation}
+where
+$\widetilde{\mu}_{t-1}=\frac{1}{n}\sum\limits_{i=0}^{n-1}f(\textbf{\em{x}}_{i})$,
+$\widetilde{\sigma}_{t-1}=\sqrt{\frac{1}{n}\sum
+  \limits_{i=0}^{n-1}(f(\textbf{\em{x}}_{i})-\widetilde{\mu}_{t-1})^2}$,
+$\widetilde{\mu}=\frac{1}{m}\sum\limits_{i=n}^{n+m-1}f(\textbf{\em{x}}_{i})$,
+$\widetilde{\sigma}= \sqrt{\frac{1}{m}\sum\limits_{i=n}^{n+m-1}
+(f(\textbf{\em{x}}_{i})-\widetilde{\mu})^2}$,
+and $\eta=\frac{n}{m+n}$.
+\end{Lemma}
+
+%\vspace{2mm}
+\emph{Proof:}
+%\begin{Proof}
+The maximum likelihood estimates for $\mu_{t},\sigma_{t}$ are
+$\widetilde{\mu}_{t}=\frac{1}{m+n}\sum\limits_{i=0}^{m+n-1}f(\textbf{x}_{i})$,
+$\widetilde{\sigma}_{t}=\sqrt{\frac{1}{m+n}\sum\limits_{i=0}^{m+n-1}(f(\textbf{x}_{i})-\widetilde{\mu}_{t})^{2}}$,
+ respectively~\cite{Bishop_prml_2006}. Then, we have
+%\begin{small}
+\begin{equation}
+\begin{aligned}
+\widetilde{\mu}_{t}&=\frac{1}{m+n}\textstyle\sum\limits_{i=0}^{m+n-1}f(\textbf{x}_{i})
+\nonumber\\
+ &=\frac{1}{m+n}
+  \begin{pmatrix}
+  \sum\limits_{i=0}^{n-1}f(\textbf{x}_{i})+\sum\limits_{i=n}^{m+n-1}f(\textbf{x}_{i})
+  \end{pmatrix}
+  \nonumber\\
+&=\frac{n}{m+n}\frac{1}{n}\sum_{i=0}^{n-1}f(\textbf{x}_{i})+\frac{m}{m+n}\frac{1}{m}\sum_{i=n}^{m+n-1}
+f(\textbf{x}_{i})
+\nonumber\\
+&=\eta\widetilde{\mu}_{t-1}+(1-\eta)\widetilde{\mu}
+\nonumber\\
+\end{aligned}
+\end{equation}
+%\end{small}
+%\begin{small}
+\begin{equation}
+\begin{aligned}
+\widetilde{\sigma_{t}}&=\sqrt{\frac{1}{m+n}
+\sum_{i=0}^{m+n-1}(f(\textbf{x}_{i})-\widetilde{\mu}_{t})^{2}}
+\nonumber\\
+&=\sqrt{\frac{1}{m+n}\sum_{i=0}^{m+n-1}f^{2}(\textbf{x}_{i})-\widetilde{\mu}_{t}^{2}}
+\nonumber\\
+&=\sqrt{\frac{1}{m+n}
+\begin{pmatrix}
+\sum\limits_{i=0}^{n-1}f^{2}(\textbf{x}_{i})+
+\sum\limits_{i=n}^{m+n-1}f^{2}(\textbf{x}_{i})
+-\frac{n}{m+n}\widetilde{\mu}_{t-1}+\frac{m}{m+n}\widetilde{\mu}
+\end{pmatrix}
+^{2}
+}
+\nonumber\\
+&=\sqrt{\frac{1}{m+n}
+\begin{pmatrix}
+n(\widetilde{\sigma}_{t-1}^{2}+\widetilde{\mu}_{t-1}^{2})
++m(\widetilde{\sigma}^{2}+
+\widetilde{\mu}^{2})
+\end{pmatrix}
+-
+\begin{pmatrix}
+\frac{n}{m+n}\widetilde{\mu}_{t-1}
++\frac{m}{m+n}\widetilde{\mu}
+\end{pmatrix}
+^{2}}
+\nonumber\\
+&=\sqrt{\eta\widetilde{\sigma}_{t-1}^{2}+(1-\eta)\widetilde{\sigma}^{2}+
+\eta(1-\eta)(\widetilde{\mu}_{t-1}-\widetilde{\mu})^{2}}
+\nonumber\\
+\end{aligned}
+\end{equation}
+%\end{small}
+where
+$\eta,\widetilde{\mu}_{t-1},\widetilde{\sigma}_{t-1}$,
+$\widetilde{\mu}$, and $\widetilde{\sigma}$
+are the same as those in (\ref{a1}) and (\ref{a2}).\\
+\rightline{$\Box$}
+%\end{proof}
+%\qed
+%
+%
+}
+It should be noted that our parameter update method is different from
+that of the MILTrack method~\cite{Babenko_pami_2011}, and
+our update equations are derived based on maximum likelihood
+estimation.
+%
+In Section~\ref{sec:experiments}, we
+demonstrate that the importance
+and stability of this update method in comparisons
+with~\cite{Babenko_pami_2011}.
+
+For online object tracking, a feature pool with $M>K$ features is
+maintained.
+%
+As demonstrated in~\cite{Collins_pami_2005}, online selection of
+the discriminative features between object and background can
+significantly improve the performance of tracking.
+%
+Our objective is to estimate the sample $\textbf{x}^{\star}$ with the
+maximum confidence from (\ref{eq:confidence}) as
+$\textbf{x}^{\star}=\arg\max_{\textbf{x}}(c(\textbf{x}))$ with
+$K$ selected features.
+%
+However, if we directly select $K$ features
+from the pool of $M$ features by using
+a brute force method to maximize $c(\cdot)$, the computational
+complexity with $C_{M}^{K}$ combinations is prohibitively high
+(we set $K = 15$ and $M = 150$ in our experiments) for real-time
+object tracking.
+%
+In the following
+section, we propose an efficient online discriminative feature
+selection method which is a sequential forward selection
+method~\cite{webb2003statistical} where the number of feature combinations
+is $MK$, thereby facilitating real-time performance.
+
+%-----------------------------------------------------
+\subsection{Online Discriminative Feature Selection}
+\ignore{
+We first review the MILTrack
+method~\cite{Babenko_pami_2011} as it is related to our work,
+and then introduce the proposed ODFS algorithm.
+
+\noindent{\textbf{Bag Likelihood with Noisy-OR Model.}}
+The instance probability of the MILTrack method is modeled by
+$P_{ij}=\sigma(h(\textbf{x}_{ij}))$ (i.e., (\ref{eq:confidence})) where $i$
+indexes the bag and $j$ indexes the instance in the bag, and
+$h=\sum_{k}\phi_{k}$ is a strong classifier.
+%
+The weak classifier $\phi_{k}$ is computed by (\ref{Eq3}) and
+the bag probability based on the Noisy-OR model is
+\begin{equation}
+P_{i}=1-\prod\limits_{j}(1-P_{ij}).
+ \label{oEq1}
+ \end{equation}
+The MILTrack method maintains a pool of $M$ candidate weak
+classifiers, and selects $K$ weak classifiers from this
+pool in a greedy manner using the following criterion
+\begin{equation}
+\phi_{k}=\mathop{\arg\max}_{\phi\in\Phi}\log
+L(h_{k-1}+\phi),
+\label{oeq2}
+\end{equation}
+where $\Phi=\{\phi_{i}\}_{i=1}^M$ is the weak classifier pool and each weak classifier is composed of a feature (See (\ref{Eq3})), $L=\prod_{i}P_{i}^{y_{i}}(1-P_{i})^{1-y_{i}}$ is the bag
+likelihood function, and $y_{i}\in\{0,1\}$ is a binary label.
+%
+The selected $K$ weak classifiers construct the strong classifier as
+$h_{K}=\sum_{k=1}^{K}\phi_{k}$.
+%
+The classifier $h_{K}$ is applied to the
+cropped patches in the new frame to determine the one with the highest
+response as the most {\em correct} object location.
+}
+%
+We show that it is not necessary to use the bag likelihood function
+based on the Noisy-OR model (\ref{eq:argmaxLoglike}) for weak classifier
+selection, and we can select weak
+classifiers by directly optimizing instance probability
+$P_{ij}=\sigma(h_K(\textbf{x}_{ij}))$ via a supervised learning method
+as both the most {\em correct} positive instance (i.e., the tracking
+result in current frame) and the instance labels are assumed to be
+known.
+
+%-------------------------------------------
+%\noindent{\textbf{Principle of ODFS.}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In (\ref{eq:confidence}), the confidence map of a sample $\textbf{x}$
+being the target is computed, and
+the object location is determined by the peak of the map, i.e.,
+$\textbf{x}^\star=\arg\max_{\textbf{x}}c(\textbf{x})$.
+%
+Providing that the sample space is partitioned into two regions
+$\mathcal{R}^{+}=\{\textbf{x},y=1\}$
+and $\mathcal{R}^{-}=\{\textbf{x},y=0\}$, we define a margin as
+the average confidence of samples in $\mathcal{R}^{+}$
+minus the average confidence of samples in $\mathcal{R}^{-}$:
+%
+\begin{equation}
+E_{margin}=\frac{1}{|\mathcal{R}^{+}|}
+\mathop{\int}_{\textbf{x}\in\mathcal{R}^{+}}c(\textbf{x})d\textbf{x}
+-\frac{1}{|\mathcal{R}^{-}|}\mathop{\int}_{\textbf{x}\in\mathcal{R}^{-}}
+c(\textbf{x})d\textbf{x},
+\label{eq:margin}
+\end{equation}
+%
+where $|\mathcal{R}^{+}|$ and $|\mathcal{R}^{-}|$ are cardinalities of
+positive and negative sets, respectively.
+
+In the training set, we assume the positive set
+$\mathcal{R}^{+}=\{\textbf{x}_{i}\}_{i=0}^{N-1}$
+(where $\textbf{x}_{0}$ is the tracking result of the current frame)
+consists of $N$ samples, and the
+negative set $\mathcal{R}^{-}=\{\textbf{x}_{i}\}_{i=N}^{N+L-1}$ is
+composed of $L$ samples ($L\approx N$ in our experiments).
+%
+Therefore, replacing the integrals with the corresponding sums and
+putting (\ref{Eq2}) and (\ref{eq:confidence}), we formulate
+(\ref{eq:margin}) as
+\begin{equation}
+\begin{aligned}
+E_{margin}\approx\frac{1}{N}
+\Big(
+\sum\limits_{i=0}^{N-1}\sigma\big(
+\sum_{k=1}^{K}\phi_k(\textbf{x}_i)
+\big)
+-\sum\limits_{i=N}^{N+L-1}\sigma\big(
+\sum_{k=1}^{K}\phi_k(\textbf{x}_i)
+\big)
+\Big).
+\label{eq::new bayes error 2}
+\end{aligned}
+\end{equation}
+%
+Each sample $\textbf{x}_i$ is represented by a feature vector
+$\textbf{f}(\textbf{x}_i)=(f_{1}(\textbf{x}_i),\ldots,f_{M}(\textbf{x}_i))^\top$,
+a weak classifier pool $\Phi=\{\phi_{m}\}_{m=1}^M$
+is maintained using (\ref{Eq3}).
+%
+Our objective is to select a subset of weak classifiers
+$\{\phi_{k}\}_{k=1}^K$ from the pool $\Phi$ which
+%
+%KH: maximizes->maximize
+%MH: no, a subset... maximizes
+maximizes the average confidence of samples in $\mathcal{R}^{+}$ while
+suppressing the average confidence of samples in
+$\mathcal{R}^{-}$. Therefore, we maximize the margin function
+$E_{margin}$ by
+%
+\begin{equation}
+\{\phi_1,\ldots,\phi_K\}=\mathop{\arg\max}_{\{\phi_1,\ldots,\phi_K\}\in\Phi}
+E_{margin}(\phi_1,\ldots,\phi_K).
+\label{eq:argmax_margin}
+\end{equation}
+%
+We use a greedy scheme to sequentially select one
+weak classifier from the pool $\Phi$ to maximize $E_{margin}$
+%
+\begin{equation}
+\begin{aligned}
+\phi_{k}&=\mathop{\arg\max}\limits_{\phi\in\Phi}
+E_{margin}(\phi_1,\ldots,\phi_{k-1},\phi)
+ \\
+ &=\mathop{\arg\max}\limits_{\phi\in\Phi}
+ \begin{pmatrix}
+ \sum\limits_{i=0}^{N-1}\sigma(h_{k-1}(\textbf{x}_{i})+\phi(\textbf{x}_{i}))
+ -\sum\limits_{i=N}^{N+L-1} \sigma(h_{k-1}(\textbf{x}_{i})+
+ \phi(\textbf{x}_{i}))
+ \end{pmatrix},
+ \end{aligned}
+ \label{Eq8}
+\end{equation}
+%
+where $h_{k-1}(\cdot)$ is a classifier constructed by a linear
+combination of the first ($k$-1) weak classifiers.
+%
+Note that it is difficult to find a closed form solution of the
+objective function in (\ref{Eq8}).
+%
+Furthermore, although it is natural and easy to
+directly select $\phi$ that maximizes objective function in
+(\ref{Eq8}), the selected $\phi$ is optimal only to
+the current samples $\{\textbf{x}_i\}_{i=0}^{N+L-1}$, which limits its
+generalization
+capability for the extracted samples in the new frames.
+%
+In the following section, we adopt an approach similar to the approach
+used in the gradient boosting
+method~\cite{friedman2001greedy} to solve (\ref{Eq8})
+which enhances the generalization capability for the selected weak
+classifiers.
+
+%
+The steepest descent direction of the objective function of
+(\ref{Eq8}) in the
+($N$+$L$)-dimensional data space at $g_{k-1}(\textbf{x})$
+is $\textbf{g}_{k-1}=(g_{k-1}(\textbf{x}_0), \ldots,g_{k-1}(\textbf{x}_{N-1}),$
+$-g_{k-1}(\textbf{x}_{N})$, $\ldots,-g_{k-1}(\textbf{x}_{N+L-1}))^\top$
+where
+\begin{equation}
+g_{k-1}(\textbf{x})=-\frac{\partial \sigma(h_{k-1}(\textbf{x}))}
+{\partial h_{k-1}}=-\sigma(h_{k-1}(\textbf{x}))(1-\sigma(h_{k-1}(\textbf{x}))),
+ \label{Eq10}
+\end{equation}
+is the inverse gradient (i.e., the steepest descent direction) of the
+posterior probability function $\sigma(h_{k-1})$ with respect to
+$h_{k-1}$.
+%
+Since $\textbf{g}_{k-1}$ is only defined at the points
+$(\textbf{x}_{0},\ldots,\textbf{x}_{N+L-1})^\top$,
+its generalization capability is limited.
+%
+Friedman~\cite{friedman2001greedy} proposes an approach
+to select $\phi$ that makes
+$\boldsymbol{\phi}=(\phi(\textbf{x}_0),\ldots,\phi(\textbf{x}_{N+L-1}))^\top$
+most parallel to $\textbf{g}_{k-1}$ when minimizing our objective
+function in (\ref{Eq8}).
+%
+The selected weak classifier $\phi$ is most
+highly correlated with
+the gradient $g_{k-1}$ over the data distribution, thereby improving
+its generalization performance.
+%
+%
+In this work, we instead select $\bm{\phi}$ that
+is least parallel to $\textbf{g}_{k-1}$ as we maximize the
+objective function (See Figure~\ref{fig:featureselection}).
+%
+Thus, we choose the weak classifier $\phi$ with the following
+criterion which constrains the relationship between Single Gradient
+and Single
+weak Classifier (SGSC) output for each sample:
+\begin{equation}
+\begin{aligned}
+ \phi_{k}&=\mathop{\arg\max}\limits_{\phi\in{\Phi}}\{E_{SGSC}(\phi)=
+{\parallel\textbf{g}_{k-1}-\bm{\phi}\parallel_{2}^2}\}\\
+ &=\mathop{\arg\max}\limits_{\phi\in \Phi}
+ \begin{pmatrix}
+ \sum\limits_{i=0}^{N-1}(g_{k-1}(\textbf{x}_{i})-\phi(\textbf{x}_{i}))^{2}
+ +\sum\limits_{i=N}^{N+L-1}(-g_{k-1}(\textbf{x}_{i})-
+\phi(\textbf{x}_{i}))^{2}
+ \end{pmatrix}.
+ \label{eq:sgsc}
+\end{aligned}
+\end{equation}
+%
+However, the constraint between the selected weak classifier $\phi$ and the
+inverse gradient direction $g_{k-1}$ is still too strong in (\ref{eq:sgsc})
+because $\phi$ is limited to the a small pool $\Phi$.
+%
+In addition, both the single gradient and the weak classifier output
+are easily affected by noise introduced by the misaligned samples,
+which may lead to unstable results.
+%
+To alleviate this problem,
+we relax the constraint between $\phi$  and $g_{k-1}$
+%
+with the Average Gradient and Average weak Classifier (AGAC)
+criteria in a way similar to the regression tree method
+in~\cite{friedman2001greedy}.
+%
+That is, we take the average weak
+classifier output for the positive and negative samples,
+and the average gradient direction instead of each gradient
+direction for every sample,
+\begin{equation}
+\begin{aligned}
+\phi_{k}&=\mathop{\arg\max}\limits_{\phi\in\Phi}
+\begin{Bmatrix}
+E_{AGAC}(\phi)=N(\overline{g}_{k-1}^{+}-\overline{\phi}^{+})^2
++L(-\overline{g}_{k-1}^{-}-\overline{\phi}^{-})^2
+\end{Bmatrix}
+\\
+&\approx\mathop{\arg\max}\limits_{\phi\in\Phi}
+\begin{pmatrix}
+(\overline{g}_{k-1}^{+}-
+\overline{\phi}^{+})^2+(-\overline{g}_{k-1}^{-}-\overline{\phi}^{-})^2
+\end{pmatrix},
+ \label{eq:agac}
+\end{aligned}
+\end{equation}
+%
+where $N$ is set approximately the same as $L$ in our experiments.
+%
+In addition,
+$\overline{g}_{k-1}^{+}$
+$=\frac{1}{N}\sum_{i=0}^{N-1}g_{k-1}(\textbf{x}_i)$,
+$\overline{\phi}^{+}$
+$=\frac{1}{N}\sum_{i=0}^{N-1}\phi(\textbf{x}_{i})$,
+$\overline{g}_{k-1}^{-}$
+$=\frac{1}{L}\sum_{i=N}^{N+L-1}g_{k-1}(\textbf{x}_{i})$,
+and
+$\overline{\phi}^{-}$
+$=\frac{1}{L}\sum_{i=N}^{N+L-1}\phi(\textbf{x}_{i})$.
+%
+It is easy to verify $E_{SGSC}(\phi)$ and $E_{AGAC}(\phi)$
+have the following relationship:
+%
+\begin{equation}
+E_{SGSC}(\phi) = S_{+}^2+S_{-}^2+E_{AGAC}(\phi),
+\label{eq:sgscagac}
+\end{equation}
+%
+where $S_{+}^2=\sum_{i=0}^{N-1}(g_{k-1}(\textbf{x}_i)-
+\phi(\textbf{x}_i)-(\overline{g}_{k-1}^{+}-\overline{\phi}^{+}))^2$
+and $S_{-}^2=\sum_{i=N}^{N+L-1}(-g_{k-1}(\textbf{x}_i)-
+\phi(\textbf{x}_i)-(-\overline{g}_{k-1}^{-}-\overline{\phi}^{-}))^2$.
+Therefore, $(S_{+}^2+S_{-}^2)/N$ measures the variance of the pooled
+terms $\{g_{k-1}(\textbf{x}_i)-\phi(\textbf{x}_i)\}_{i=0}^{N-1}$ and
+$\{-g_{k-1}(\textbf{x}_i)-\phi(\textbf{x}_i)\}_{i=N}^{N+L-1}$.
+%
+However,
+this pooled variance is easily affected by noisy data or outliers.
+From (\ref{eq:sgscagac}), we have $\max_{\phi\in\Phi}E_{AGAC}(\phi)=
+\max_{\phi\in\Phi}(E_{SGSC}(\phi) - (S_{+}^2+S_{-}^2))$,
+which means the selected weak classifier $\phi$
+%
+tends to maximize $E_{SGSC}$ while suppressing the variance
+$S_{+}^2+S_{-}^2$, thereby leading to more stable results.
+
+\begin{figure}[t]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.7\linewidth]{images/Figs/fig2}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Principle of the SGSC feature selection method.}
+\label{fig:featureselection}
+\end{figure}
+%
+In our experiments, a small search radius (e.g., $\alpha=4$) is
+adopted to crop out the positive samples in the neighborhood
+of the current object location,
+leading to the positive samples with very
+similar appearances
+(See Figure~\ref{fig:positive samples}).
+%
+Therefore, we have
+$\overline{g}_{k-1}^{+}=\frac{1}{N}\sum_{i=0}^{N-1}g_{k-1}(\textbf{x}_i)\approx
+g_{k-1}(\textbf{x}_0)$. Replacing $\overline{g}_{k-1}^{+}$ by
+$g_{k-1}(\textbf{x}_0)$ in (\ref{eq:agac}), the ODFS criterion becomes
+\begin{equation}
+\phi_{k}=\mathop{\arg\max}\limits_{\phi\in\Phi}
+\begin{Bmatrix}
+E_{ODFS}(\phi)=
+(g_{k-1}(\textbf{x}_0)-
+\overline{\phi}^{+})^2
++(-\overline{g}_{k-1}^{-}-\overline{\phi}^{-})^2
+\end{Bmatrix}.
+ \label{eq:odfs}
+\end{equation}
+\noindent
+It is worth noting that the average weak classifier output (i.e.,
+$\overline{\phi}^{+}$ in (\ref{eq:odfs})) computed from different
+positive samples alleviates the
+noise effects caused by some misaligned positive samples.
+%
+Moreover, the gradient from the most {\em correct} positive sample
+helps select effective features that reduce the sample ambiguity
+problem.
+%that is not taken into account by the AGAC method.
+%
+In contrast, other discriminative models that update with positive
+features from only one positive sample
+(e.g.,~\cite{Grabner_BMVC_2006,Collins_pami_2005})
+are susceptible to noise induced by the misaligned positive sample
+when drift occurs.
+%
+If only one positive sample (i.e., the tracking result $\textbf{x}_0$)
+is used for feature selection in our method, we have the single
+positive feature selection (SPFS) criterion
+\begin{equation}
+\phi_{k}=\mathop{\arg\max}\limits_{\phi\in\Phi}
+\begin{Bmatrix}
+%\left\{
+E_{SPFS}(\phi)=
+(g_{k-1}(\textbf{x}_0)-
+\phi(\textbf{x}_0))^2
++(-\overline{g}_{k-1}^{-}-\overline{\phi}^{-})^2
+%\right\}
+\end{Bmatrix}.
+ \label{eq::spfs}
+\end{equation}
+%
+We present experimental results to validate why the proposed method
+performs better than the one using the SPFS criterion in
+Section~\ref{sec:diff-fs}.
+
+\begin{figure}[t]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=0.8\linewidth]{images/Figs/pSample.png}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Illustration of cropping out positive samples with radius
+  $\alpha=4$ pixels.
+The yellow rectangle denotes the current tracking result and the white
+dash rectangles denote the positive samples.}
+\label{fig:positive samples}
+\end{figure}
+%
+When a new frame arrives, we update all the weak classifiers in the
+pool $\Phi$ in parallel, and select $K$
+weak classifiers sequentially from $\Phi$ using the
+criterion (\ref{eq:odfs}).
+%
+The main steps of the
+the proposed online discriminative feature selection algorithm are
+summarized in $\textbf{Algorithm}$ \ref{alg-scdl}.
+%-------------------------
+%
+\begin{algorithm}[!ht]
+%\caption{ODFS}
+\caption{Online Discriminative Feature Selection}
+\begin{algorithmic}[1]\label{alg-scdl}
+\REQUIRE Dataset $\{{\textbf{x}_{i},y_{i}}\}_{i=0}^{N+L-1}$ where $y_{i}\in\{0,1\}$.
+\STATE Update weak classifier pool $\Phi=\{\phi_{m}\}_{m=1}^{M}$ with data
+  $\{\textbf{x}_{i},y_{i}\}_{i=0}^{N+L-1}$.
+\STATE Update the average weak classifier outputs $\overline{\phi}_{m}^{+}$ and
+  $\overline{\phi}_{m}^{-},m=1,\ldots,M$, in (\ref{eq:agac}),
+  respectively.
+\STATE Initialize $h_{0}(\textbf{x}_{i})=0$.
+\STATE \textbf{for} $k=1$ to  $K$ \textbf{do}
+\STATE  \quad Update $g_{k-1}(\textbf{x}_{i})$ by (\ref{Eq10}).
+\STATE \quad \textbf{for} $m=1$ to $M$ \textbf{do}
+\STATE \quad\quad $E_{m}=(g_{k-1}(\textbf{x}_{0})-\overline{\phi}_{m}^{+})^{2}
++(-\overline{g}_{k-1}^{-}-\overline{\phi}_{m}^{-})^2$.
+\STATE \quad \textbf{end for}
+\STATE \quad $m^{\star}=\arg\max_{m}(E_{m})$.
+\STATE \quad $\phi_{k}\leftarrow\phi_{m^{\star}}$.
+\STATE \quad $h_{k}(\textbf{x}_{i})\leftarrow
+  \sum_{j=1}^{k}\phi_{j}(\textbf{x}_{i})$.
+\STATE \quad $h_{k}(\textbf{x}_{i})\leftarrow h_{k}(\textbf{x}_{i})/\sum_{j=1}
+^{k}|\phi_{j}(\textbf{x}_{i})|$ ({Normalization}).
+\STATE \textbf{end for}
+\ENSURE Strong classifier
+$h_{K}(\textbf{x})=\sum_{k=1}^{K}\phi_{k}(\textbf{x})$ and confidence map function
+$P(y=1|\textbf{x})=\sigma(h_K(\textbf{x}))$.
+\end{algorithmic}
+\end{algorithm}
+%
+
+\noindent{\textbf{Relation to Bayes Error Rate.}}
+In this section, we show that the optimization problem in
+(\ref{eq:argmax_margin}) is equivalent to minimizing the
+Bayes error rate in statistical classification.
+%
+The Bayes error rate\cite{duda2001pattern} is
+\begin{equation}
+\begin{aligned}
+P_e&=P(\textbf{x}\in\mathcal{R}^{+},y=0)+P(\textbf{x}\in\mathcal{R}^{-},y=1)
+\\
+&=
+\begin{pmatrix}
+P(\textbf{x}\in\mathcal{R}^{+}|y=0)P(y=0)
++P(\textbf{x}\in\mathcal{R}^{-}|y=1)P(y=1)
+\end{pmatrix}
+\\
+&=
+\begin{pmatrix}
+\mathop{\int}_{\mathcal{R}^{+}}p(\textbf{x}\in\mathcal{R}^{+}|y=0)P(y=0)d\textbf{x}
++\mathop{\int}_{\mathcal{R}^{-}}p(\textbf{x}\in\mathcal{R}^{-}|y=1)P(y=1)d\textbf{x}
+\end{pmatrix},
+\end{aligned}
+\label{eq::bayes error}
+\end{equation}
+where $p(\textbf{x}|y)$ is the class conditional probability density
+function and $P(y)$ describes
+the prior probability.
+%
+The posterior probability $P(y|\textbf{x})$ is computed by
+$P(y|\textbf{x})=p(\textbf{x}|y)P(y)/p(\textbf{x})$,
+where $p(\textbf{x})=\sum_{j=0}^1p(\textbf{x}|y=j)P(y=j)$.
+%
+Using (\ref{eq::bayes error}), we have
+\begin{equation}
+\begin{aligned}
+P_e&=
+\begin{pmatrix}
+\mathop{\int}_{\mathcal{R}^{+}}P(y=0|\textbf{x}\in\mathcal{R}^{+})p(\textbf{x}\in\mathcal{R}^{+})d\textbf{x}
++\mathop{\int}_{\mathcal{R}^{-}}P(y=1|\textbf{x}\in\mathcal{R}^{-})p(\textbf{x}\in\mathcal{R}^{-})d\textbf{x}
+\end{pmatrix}
+\\
+&=-
+\begin{pmatrix}
+\mathop{\int}_{\mathcal{R}^{+}}(P(y=1|\textbf{x}\in\mathcal{R}^{+})-1)p(\textbf{x}\in\mathcal{R}^{+})d\textbf{x}
+-
+\mathop{\int}_{\mathcal{R}^{-}}P(y=1|\textbf{x}\in\mathcal{R}^{-})p(\textbf{x}\in\mathcal{R}^{-})d\textbf{x}
+\end{pmatrix}.
+\label{eq::new bayes error}
+\end{aligned}
+\end{equation}
+%
+In our experiments, the samples in each set $\mathcal{R}^s, s=\{+,-\}$
+are generated with equal probability, i.e,
+$p(x\in\mathcal{R}^s)=\frac{1}{|\mathcal{R}^s|}$, where
+$|\mathcal{R}^s|$ is the cardinality of set $\mathcal{R}^s$.
+%
+Thus, we have
+%
+\begin{equation}
+P_e=1-E_{margin},
+\end{equation}
+%
+where $E_{margin}$ is our objective function
+(\ref{eq:margin}).
+%
+That is, maximizing the proposed objective function
+$E_{margin}$ is equivalent to minimizing
+the Bayes error rate $P_e$.
+
+\noindent{\textbf{Discussion.}}
+We discuss the merits of the proposed algorithm with comparisons to the
+MILTrack method and related work.
+
+{\flushleft\emph{A. Assumption regarding the {\em most} positive sample.}}
+We assume the most {\em correct} positive sample is the tracking result
+in the current frame.
+%
+This has been widely used in discriminative models with one positive
+sample~\cite{avidan2007ensemble, Collins_pami_2005, Grabner_BMVC_2006}.
+%
+%
+Furthermore,
+most generative models~\cite{Adam_CVPR_2006,Ross_IJCV_2008}
+assume the tracking result in the current frame is the {\em correct}
+object representation which can also be seen as the {\em most} positive
+sample.
+%
+In fact, it is not possible for online algorithms to ensure a tracking
+result is completely free of drift in the current frame (i.e., the
+classic problems in online learning, semi-supervised learning,
+and self-taught learning).
+%
+However, the average weak classifier output in our objective function of (\ref{eq:odfs}) can alleviate the noise effect caused by misaligned samples. Moreover, our classifier couples its score with the importance of
+samples that can alleviate the drift problem.
+%
+Thus, we can alleviate this problem by considering the
+tracking result in the current frame as the most {\em correct} positive
+sample.
+
+{\flushleft\emph{B. Sample ambiguity problem.}}
+%
+While the findings by Babenko et al.~\cite{Babenko_pami_2011}
+demonstrate that the location ambiguity problem can be alleviated
+with the online multiple instance learning approach, the tracking
+results may still not be stable in some challenging tracking
+tasks~\cite{Babenko_pami_2011}.
+%
+This can be explained by several factors.
+%
+First, the Noisy-OR model used by MILTrack does not explicitly treat
+the positive samples discriminatively, and instead selects less
+effective features.
+%
+Second, the classifier is only trained by the binary
+labels without considering the importance of each sample.
+%
+Thus, the maximum classifier score may not correspond to the most
+{\em correct} positive sample,
+and a similar observation is recently stated by
+Hare~\emph{et al}.~\cite{Hare_ICCV_2011}.
+%
+In our algorithm, the feature selection criterion (i.e., (\ref{eq:odfs}))
+explicitly relates
+the classifier score with the importance of the samples.
+%
+Therefore, the ambiguity problem can be better dealt with by the
+proposed method.
+
+{\flushleft \emph{C. Sparse and discriminative feature selection.}}
+We examine Step 12 of $\textbf{Algorithm}$ \ref{alg-scdl} in
+greater detail.
+%
+If we denote  $\phi_{j}=w_{j}\psi_{j}$, where
+$\psi_{j}=\mbox{sign}(\phi_{j})$ can be seen as a binary weak classifier whose output is
+only $1$ or $-1$, and $w_{j}=|\phi_{j}|$ is the weight of the binary
+weak classifier whose range is $[0,+\infty)$ (refer to
+(\ref{Eq3})).
+%
+Therefore, the normalized equation in Step 12 can be
+rewritten as
+$h_{k}\leftarrow\sum_{i=1}^{k}(\psi_{i}w_{i}/\sum_{j=1}^{k}|w_{j}|)$,
+and we restrict $h_{k}$ to be the \emph{convex} combination
+of elements from the binary weak classifier set
+$\{\psi_{i},i=1,\ldots,k\}$.
+%
+This normalization procedure is critical
+because it avoids the potential overfitting problem
+caused by arbitrary linear combination of elements of the binary weak classifier
+set.
+%
+In fact a similar problem also exists in the AnyBoost
+algorithm~\cite{mason1999functional}.
+%
+We choose an $\ell_1$ norm normalization method which helps to
+\emph{sparsely} select the most discriminative features.
+%
+In our experiments, we only need to select 15 ($K=15$)
+features from a feature pool with 150 ($M=150$) features, which is
+computationally more efficient than the boosting feature selection
+techniques~\cite{Grabner_BMVC_2006, Babenko_pami_2011} that select 50
+($K=50$) features out of a pool of 250 ($M=250$) features in the
+experiments.
+
+{\flushleft \emph{D. Advantages of ODFS over MILTrack.}}
+%
+First, our ODFS method only needs to update the gradient of the
+classifier \emph{once} after selecting a feature, and this is much more
+efficient than the MILTrack method because all instance and bag
+probabilities must be updated $M$ times after selecting a weak classifier.
+%
+Second, the ODFS method directly couples its classifier score with the
+importance of the samples while the MILTrack algorithm does not.
+Thus the ODFS method is able to select the most effective features
+related to the most {\em correct} positive instance.
+%
+This enables our tracker to better handle the drift problem than
+the MILTrack algorithm~\cite{Babenko_pami_2011}, especially in case of
+drastic illumination change or heavy occlusion.
+
+%
+%KH: difference->differences
+%MH: okay
+{\flushleft \emph{E. Differences with other online feature selection trackers.}}
+%
+Online feature selection techniques have been widely studied in object
+tracking~\cite{chen2004probabilistic,Collins_pami_2005,liang2006online,
+dore2008online,venkataraman2007target,wang2005online,Grabner_BMVC_2006,liu2007gradient}.
+%
+%
+%The feature selection techniques adopted by most
+%trackers~\cite{chen2004probabilistic, Collins_pami_2005, liang2006online,
+%dore2008online,venkataraman2007target} are well designed for
+%histograms of RGB colors.
+%
+In~\cite{wang2005online}, Wang \textit{et al}. use
+particle filter method to select a set of Haar-like features to
+construct a binary classifier. Grabner \textit{et al}.~\cite{Grabner_BMVC_2006}
+propose an online boosting algorithm to select Haar-like, HOG and LBP
+features.
+%
+Liu and Yu~\cite{liu2007gradient} propose a gradient-based online
+boosting algorithm to update a fixed number of HOG features.
+%
+The proposed ODFS
+algorithm is different from the aforementioned trackers.
+%
+First, all of
+the abovementioned trackers use
+%
+%KH: one only->only one
+only one target sample (i.e., the
+current tracking result) to extract features.
+%
+Thus, these features are
+easily affected by noise introduced by misaligned target sample when
+tracking drift occurs.
+%
+However, the proposed ODFS method suppresses noise by averaging
+the outputs of the weak classifiers from all positive samples (See
+(\ref{eq:odfs})).
+%
+Second, the final strong classifier
+in~\cite{wang2005online,Grabner_BMVC_2006, liu2007gradient}
+generates only binary labels of samples (i.e., foreground object or
+not).
+%
+However, this is not explicitly
+coupled to the objective of tracking which is to predict the object
+location~\cite{Hare_ICCV_2011}.
+%
+The proposed ODFS algorithm selects features that
+maximize the confidences of target samples while suppressing the
+confidences of background samples, which is consistent with the
+objective of tracking.
+
+The proposed algorithm is different from the
+method proposed by Liu and Yu~\cite{liu2007gradient} in another two
+aspects.
+%
+First, the algorithm by Liu and Yu does not select a small number of
+features from a feature pool but uses all the features in the pool to
+construct a binary strong classifier.
+%
+In contrast, the proposed method selects a
+small number of features from a feature pool to construct a confidence
+map.
+%
+%
+Second, the objective of~\cite{liu2007gradient} is to minimize the
+weighted least square error between the estimated feature response and
+the true label whereas the objective of this work is to maximize the
+margin between the average confidences of positive samples and
+negative ones based on (\ref{eq:margin}).
+
+%
+
+%
+%====================================================================
+\section{Experiments}
+\label{sec:experiments}
+
+We use the same generalized Haar-like features
+as~\cite{Babenko_pami_2011}, which can be efficiently computed
+using the integral image.
+%
+%
+As the proposed ODFS tracker is developed to address several issues of
+MIL based tracking methods (See Section~\ref{sec:introduction}), we
+evaluate it with the MILTrack~\cite{Babenko_pami_2011} on $16$
+challenging video clips, among which $14$ sequences are publicly
+available~\cite{Babenko_pami_2011,Kalal_CVPR_2010,Kwon_CVPR_2010}
+and the others are collected on our own.
+%
+In addition, seven other
+state-of-the-art learning based trackers~\cite{Adam_CVPR_2006,Grabner_BMVC_2006,Grabner_ECCV_2008,Mei_PAMI_2011,Kalal_CVPR_2010,Hare_ICCV_2011,
+  Kwon_CVPR_2010,Zhang_eccv_2012} are also compared.
+%
+For fair evaluations, we use the original source or binary
+codes~\cite{Adam_CVPR_2006, Grabner_BMVC_2006, Grabner_ECCV_2008,
+  Mei_PAMI_2011,Babenko_pami_2011,Kalal_CVPR_2010, Hare_ICCV_2011,
+  Kwon_CVPR_2010, Zhang_eccv_2012}
+in which parameters of each method are tuned for best performance.
+%
+The $9$ trackers we compare with are:
+fragment tracker (Frag)~\cite{Adam_CVPR_2006},
+online AdaBoost tracker (OAB)~\cite{Grabner_BMVC_2006},
+Semi-Supervised Boosting tracker (SemiB)~\cite{Grabner_ECCV_2008},
+multiple instance learning tracker (MILTrack)~\cite{Babenko_pami_2011},
+Tracking-Learning-Detection (TLD) method~\cite{Kalal_CVPR_2010},
+Struck method~\cite{Hare_ICCV_2011},
+$\ell_1$-tracker~\cite{Mei_PAMI_2011}, visual tracking decomposition
+(VTD) method~\cite{Kwon_CVPR_2010}
+and compressive tracker (CT)~\cite{Zhang_eccv_2012}.
+%
+\emph{We fix the parameters of the proposed algorithm for all
+experiments to demonstrate its robustness and stability.}
+%
+We have tested many different initial rectangles and selected the initial rectangles that yield good results for most competing methods.
+Since all the evaluated algorithms involve some random
+%
+%KH: sampling->samplings
+%MH: no, sampling
+sampling except~\cite{Adam_CVPR_2006},
+we repeat the experiments $10$ times on each sequence,
+and present the averaged results.
+%
+Implemented
+in MATLAB, our tracker runs at $30$ frames per
+second (FPS) on a Pentium Dual-Core $2.10$ GHz CPU
+with $1.95$ GB RAM.
+%
+Our source codes and videos are available at
+\url{http://www4.comp.polyu.edu.hk/~cslzhang/ODFS/ODFS.htm}.
+%
+%==================================================================
+\begin{figure*}[ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/david}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/twinings}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/kitesurf}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/panda}\\
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/occ2}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/tiger1}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/tiger2}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/soccer}\\
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/animal}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/bikeskill}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/jumping}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/dollar}\\
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/cliffbar}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/football}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/pedestrian}
+\includegraphics[width=.24\linewidth]{images/Figs/errorplot/shaking}\\
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Error plots in terms of center location error for $16$
+  test sequences.}
+\label{fig:errorplot}
+\end{figure*}
+%--------------------------
+\subsection{Experimental Setup}
+We use a radius ($\alpha$) of $4$ pixels for cropping the similar positive
+samples in each frame and generate $45$ positive samples. A large $\alpha$ can make positive samples much different which may add more noise but a small
+$\alpha$ generates a small number of positive samples which are insufficient to avoid noise.
+%
+The inner and outer radii
+for the set $X^{\zeta,\beta}$ that generates negative
+samples are set as $\zeta=\lceil 2\alpha\rceil=8$ and $\beta=\lceil1.5\gamma\rceil=38$, respectively.
+%
+Note that we set the inner radius $\zeta$ larger than the radius $\alpha$ to
+reduce the overlaps with the positive samples, which can reduce the
+ambiguity between the positive and negative samples.
+%
+Then, we randomly select a set of $40$ negative samples from the set
+$X^{\zeta,\beta}$ which is fewer than that of the MILTrack method
+(where $65$ negative examples are used).
+%
+Moreover, we do not need to utilize many samples to initialize
+the classifier whereas the MILTrack method uses $1000$ negative patches.
+%
+The radius for searching the new object location in the next frame is set
+as $\gamma=25$ that is enough to take into account all possible object
+locations because the object motion between two consecutive frames is
+often smooth, and $2000$ samples are drawn, which is the same as the
+MILTrack method~\cite{Babenko_pami_2011}.
+%
+Note that we can also use a coarse-to-fine search strategy to reduce test samples as the proposed CT method. Here, for fair comparison, we use the same setting as the MIL tracker.
+%
+Therefore, this procedure is time-consuming if we
+use more features in the classifier design.
+%
+Our ODFS tracker selects $15$ features for classifier construction
+which is much more efficient than the MILTrack method that sets
+$K=50$.
+%
+The number of candidate features $M$ in the feature pool is set to
+$150$, which is fewer than that of the MILTrack method ($M=250$).
+%
+We note that we also evaluate with the parameter settings $K=15, M=150$
+in the MILTrack method but find it does not perform well for most
+experiments.
+%
+The learning parameter can be set as $\lambda=0.80\sim0.95$.
+%
+A smaller
+learning rate can make the tracker quickly adapts to the
+fast appearance changes and a larger learning rate can reduce the
+likelihood that the tracker drifts off the target.
+%
+Good results can be
+achieved by fixing $\lambda=0.93$ in our experiments.
+
+%--------------------------
+\subsection{Experimental Results}
+
+\begin{table*}[!ht]\caption{Center location error (CLE) and
+    average frames per second (FPS). Top two results are shown in
+   \textcolor{red}{\textbf{Bold}} and \textcolor{blue}{\emph{italic}}. }
+\label{table:tracking-error}
+{
+\scriptsize
+\center\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}|r||c|c|c|c|c|c|c|c|c|c|}
+    \hline
+Sequence   & \textbf{ODFS}   &CT  & MILTrack  &Struck    &OAB   &TLD   &$\ell_1$-tracker  &SemiB     &Frag &VTD  \\ \hline\hline
+
+Animal                &\textcolor{blue}{\emph{15}}    &17 &32     &17    &62     &$-$   &155    &25     &99  &\textcolor{red}{\textbf{11}} \\ \hline
+Bike skill            &\textcolor{red}{\textbf{6}}    &12  &43     &95     &\textcolor{blue}{\emph{9}}     &$-$   &79     &14     &106      &86    \\ \hline
+Coupon book           &\textcolor{blue}{\emph{8}}     &\textcolor{red}{\textbf{6}} &\textcolor{red}{\textbf{6}}    &10     &9      &$-$   &\textcolor{red}{\textbf{6}}&74 &63 &73 \\ \hline
+Cliff bar             &\textcolor{red}{\textbf{5}}    &\textcolor{blue}{\emph{8}}  &14    &20     &33     &$-$   &35     &56     &34      &31 \\ \hline
+David           &12    &17  &19 &\textcolor{blue}{\emph{9}} &57 &12    &42     &37     &73 &\textcolor{red}{\textbf{6}} \\ \hline
+Football              &13      &13  &14     &19     &37     &\textcolor{blue}{\emph{10}}   &184    &58     &143     &\textcolor{red}{\textbf{6}}    \\ \hline
+Jumping               &\textcolor{red}{\textbf{8}}   &\textcolor{blue}{\emph{9}} &10    &42     &11     &\textcolor{red}{\textbf{8}}&99 &11     &29 &17 \\ \hline
+Kitesurf              &\textcolor{red}{\textbf{7}}   &11 &\textcolor{blue}{\emph{8}}&\textcolor{red}{\textbf{7}} &11     &$-$&45&9      &93  &30\\ \hline
+Occluded face 2       &\textcolor{red}{\textbf{10}}   &\textcolor{blue}{\emph{12}} &16    &25     &36     &$-$   &19     &39     &58    &46  \\ \hline
+Pedestrian            &\textcolor{red}{\textbf{8}}      &43 &38     &\textcolor{blue}{\emph{13}}    &105    &$-$   &99     &57     &99     &35            \\ \hline
+Panda                 &\textcolor{red}{\textbf{7}}  &\textcolor{blue}{\emph{8}} &9 &67      &10     &20     &10     &10     &69      &71  \\ \hline
+Soccer                &\textcolor{blue}{\emph{19}}   &\textcolor{red}{\textbf{18}} &64     &95     &96     &$-$   &189    &135    &54 &24 \\ \hline
+Shaking               &\textcolor{blue}{\emph{11}}   &\textcolor{blue}{\emph{11}} &12    &166    &22     &$-$   &192    &133    &41     &\textcolor{red}{\textbf{8}}    \\ \hline
+Twinings              &\textcolor{blue}{\emph{12}}   &13 &14     &\textcolor{red}{\textbf{7}}&\textcolor{red}{\textbf{7}}&15     &10     &70     &15 &20 \\ \hline
+Tiger 1               &\textcolor{blue}{\emph{13}}    &20 &27     &\textcolor{red}{\textbf{12}}   &42     &$-$   &48     &39     &39    &\textcolor{red}{\textbf{12}}   \\ \hline
+Tiger 2               &\textcolor{red}{\textbf{14}}   &\textcolor{red}{\textbf{14}} &\textcolor{blue}{\emph{18}}    &22     &22     &$-$   &57     &29     &37    &47  \\ \hline\hline
+Average CLE           &\textcolor{red}{\textbf{10}}   &\textcolor{blue}{\emph{13}} &20    &44     &31     &$-$   &67     &49     &62     &31    \\ \hline
+Average FPS           &\textcolor{blue}{\emph{30}} &\textcolor{red}{\textbf{33}} &10.3\footnote[1]&0.01 &8.5    &9.4    &0.1 &6.5       &3.5 &0.01\\ \hline
+
+\end{tabular*}
+\footnote[1].The FPS is 1.7 in our MATLAB implementation.
+}
+\end{table*}
+%----------------------------------------------------------------
+\begin{table*}[!ht]
+\caption{Success rate
+    (SR).
+Top two results are shown in
+   \textcolor{red}{\textbf{Bold}} and \textcolor{blue}{\emph{italic}}. }
+\label{table:tracking-success}
+{%\tiny
+\scriptsize
+  \center\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}|r||c|c|c|c|c|c|c|c|c|c|}
+    \hline
+Sequence              & \textbf{ODFS}    &CT    & MILTrack     &Struck    &OAB         &TLD               &$\ell_1$-tracker        &SemiB     &Frag  &VTD \\ \hline\hline
+Animal                &90   &76 &73     &\textcolor{red}{\textbf{97}}  &15&75   &5      &47     &3  &\textcolor{blue}{\emph{96}}                         \\ \hline
+Bike skill            &\textcolor{red}{\textbf{91}}  &30 &2      &7      &\textcolor{blue}{\emph{74}}    &8      &7      &47     &3  &27                             \\ \hline
+Coupon book          &\textcolor{blue}{\emph{99}}   &98 &\textcolor{blue}{\emph{99}}&\textcolor{blue}{\emph{99}}        &98     &16     &\textcolor{red}{\textbf{100}}   &37    &27 &37                         \\ \hline
+Cliff bar            &\textcolor{red}{\textbf{94}}   &\textcolor{blue}{\emph{87}} &65     &70    &23     &67     &38     &65     &22 &47\\ \hline
+David           &\textcolor{blue}{\emph{90}}   &86 &68     &\textcolor{red}{\textbf{98}}&31 &\textcolor{red}{\textbf{98}} &41&46   &8  &\textcolor{red}{\textbf{98}}\\ \hline
+Football             &71  &76 &70     &69     &37     &\textcolor{blue}{\emph{80}}   &30     &19     &31    &\textcolor{red}{\textbf{96}}     \\ \hline
+Jumping               &\textcolor{red}{\textbf{100}} &97 &\textcolor{blue}{\emph{99}}        &18     &86     &98     &9      &84     &36    &87                      \\ \hline
+Kitesurf              &\textcolor{red}{\textbf{84}} &58 &78  &\textcolor{blue}{\emph{82}} &73  &45   &27          &73               &1      &41  \\ \hline
+Occluded face 2       &\textcolor{red}{\textbf{100}} &98 &\textcolor{blue}{\emph{99}}&78  &47  &46   &84          &40               &52    &67   \\ \hline
+Pedestrian           &\textcolor{red}{\textbf{71}} &54 &53     &58   &4      &21     &18     &23     &5           &\textcolor{blue}{\emph{64}}       \\ \hline
+Panda         &\textcolor{blue}{\emph{78}} &\textcolor{red}{\textbf{80}} &75 &13  &69  &29   &56              &67           &7    &4    \\ \hline
+Soccer                &\textcolor{blue}{\emph{67}} &\textcolor{red}{\textbf{70}} &17       &14  &8           &10            &13          &9      &27 &39 \\ \hline
+Shaking              &87  &\textcolor{blue}{\emph{88}} &85    &1      &40     &16     &10     &31     &28      &\textcolor{red}{\textbf{97}}   \\ \hline
+Twinings              &83 &\textcolor{blue}{\emph{85}} &72  &\textcolor{red}{\textbf{98}}&\textcolor{red}{\textbf{98}}&46  &83       &23 &69  &78\\ \hline
+Tiger 1       &\textcolor{blue}{\emph{68}} &53  &39 &\textcolor{red}{\textbf{73}}  &24  &65       &13              &28           &19   &\textcolor{red}{\textbf{73}}   \\ \hline
+Tiger 2       &43 &\textcolor{red}{\textbf{55}}  &\textcolor{blue}{\emph{45}}&22 &37  &41       &12              &17           &13    &12   \\ \hline\hline
+Average SR    &\textcolor{red}{\textbf{83}} &\textcolor{blue}{\emph{80}}  &66    &52     &52     &45     &42     &41     &26      &62   \\ \hline
+
+\end{tabular*}
+}
+\end{table*}
+%
+All of the test sequences consist of gray-level images and
+the ground truth object locations are obtained by manual labels at
+each frame.
+%
+We use the center location error in pixels as an index to
+quantitatively compare $10$ object tracking algorithms.
+%
+In addition, we use the success rate to evaluate the
+tracking results.
+%
+This criterion is used in the
+PASCAL VOC challenge~\cite{Everingham_ijcv_2010} and the
+score is defined as $score=\frac{area(G\bigcap T)}{area(G\bigcup T)}$,
+where $G$ is the ground truth bounding box and $T$ is the tracked
+bounding box.
+%
+If $score$ is larger than $0.5$ in one frame, then the result is
+considered a success.
+%
+Table~\ref{table:tracking-error} shows the experimental results in
+terms of center location errors,
+and Table~\ref{table:tracking-success} presents the tracking
+results in terms of success rate.
+%
+Our ODFS-based tracking algorithm achieves the best or second best
+performance in most sequences, both in terms of success rate and
+center location error.
+%
+Furthermore, the proposed ODFS-based tracker performs well in terms of
+speed (only slightly slower than CT method) among all the
+evaluated algorithms on the same machine even though other
+trackers (except for the TLD, CT methods and $\ell_1$-tracker) are
+implemented in C or C++ which is intrinsically more efficient than
+MATLAB.
+%
+We also implement the MILTrack method in MATLAB which runs at
+1.7 FPS on the same machine.
+%
+Our ODFS-based tracker (at 30 FPS) is more than 17 times
+faster than the MILTrack method with more robust performance in terms
+of success rate and center location error.
+%
+The quantitative results also bear out the hypothesis that supervised
+learning method can yield much more stable and accurate results than
+the greedy feature selection method used in the MILTrack
+algorithm~\cite{Babenko_pami_2011}
+as we integrate known prior (i.e., the instance labels and the most
+{\em correct} positive sample) into the learning procedure.
+
+Figure~\ref{fig:errorplot} shows the error plots for
+all test video clips.
+%
+For the sake of clarity, we only present the results of ODFS
+against the CT, Struck, MILTrack and VTD methods which have
+been shown to perform well.
+
+%
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\includegraphics[width=1\linewidth]{images/Figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Legend that represents different evaluated algorithms.}
+%\label{fig5}
+\label{fig:legend}
+\end{figure*}
+%
+%------------------------------------------------------
+\begin{figure}[!ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/david/80}
+\includegraphics[width=.32\linewidth]{images/Figs/david/130}
+\includegraphics[width=.32\linewidth]{images/Figs/david/180}\\
+\includegraphics[width=.32\linewidth]{images/Figs/david/218}
+\includegraphics[width=.32\linewidth]{images/Figs/david/345}
+\includegraphics[width=.32\linewidth]{images/Figs/david/400}\\
+%\includegraphics[width=0.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Some tracking results of {\em David} sequence.}
+\label{fig:david}
+\end{figure}
+%----------------------------------------
+%------------------------------------------------------
+\begin{figure}[!ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/twinings/20}
+\includegraphics[width=.32\linewidth]{images/Figs/twinings/100}
+\includegraphics[width=.32\linewidth]{images/Figs/twinings/200}\\
+\includegraphics[width=.32\linewidth]{images/Figs/twinings/366}
+\includegraphics[width=.32\linewidth]{images/Figs/twinings/419}
+\includegraphics[width=.32\linewidth]{images/Figs/twinings/466}\\
+%\includegraphics[width=.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Some tracking results of {\em Twinings} sequence.}
+\label{fig:twinings}
+\end{figure}
+%----------------------------------------
+\begin{figure}[!ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/panda/100}
+\includegraphics[width=.32\linewidth]{images/Figs/panda/150}
+\includegraphics[width=.32\linewidth]{images/Figs/panda/250}\\
+\includegraphics[width=.32\linewidth]{images/Figs/panda/380}
+\includegraphics[width=.32\linewidth]{images/Figs/panda/550}
+\includegraphics[width=.32\linewidth]{images/Figs/panda/780}\\
+%\includegraphics[width=.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Some tracking results of {\em Panda} sequence.}
+\label{fig:panda}
+\end{figure}
+%----------------------------------------------------------------
+\begin{figure}[!ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/surfer/5}
+\includegraphics[width=.32\linewidth]{images/Figs/surfer/20}
+\includegraphics[width=.32\linewidth]{images/Figs/surfer/35}\\
+\includegraphics[width=.32\linewidth]{images/Figs/surfer/55}
+\includegraphics[width=.32\linewidth]{images/Figs/surfer/75}
+\includegraphics[width=.32\linewidth]{images/Figs/surfer/80}\\
+%\includegraphics[width=.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Some tracking results of {\em Kitesurf} sequence.}
+\label{fig:kitesurfer}
+\end{figure}
+%--------------------------------------------------------
+\begin{figure}[!ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/occ2/55}
+\includegraphics[width=.32\linewidth]{images/Figs/occ2/155}
+\includegraphics[width=.32\linewidth]{images/Figs/occ2/270}\\
+\includegraphics[width=.32\linewidth]{images/Figs/occ2/380}
+\includegraphics[width=.32\linewidth]{images/Figs/occ2/500}
+\includegraphics[width=.32\linewidth]{images/Figs/occ2/700}\\
+%\includegraphics[width=.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Some tracking results of {\em Occluded face 2} sequence.}
+\label{fig:faceocc}
+\end{figure}
+%--------------------------------------------------------
+%-------------------------------------------------------
+\begin{figure}[!ht]
+%%\hspace{-.3cm}
+%%\vspace{-3.5mm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/tiger2/108}
+\includegraphics[width=.32\linewidth]{images/Figs/tiger2/138}
+\includegraphics[width=.32\linewidth]{images/Figs/tiger2/257}\\
+\includegraphics[width=.32\linewidth]{images/Figs/tiger2/278}
+\includegraphics[width=.32\linewidth]{images/Figs/tiger2/330}
+\includegraphics[width=.32\linewidth]{images/Figs/tiger2/355}\\
+%\includegraphics[width=.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Some tracking results of {\em Tiger 2} sequence.}
+\label{fig:tiger2}
+\end{figure}
+%--------------------------------------------------------
+{\flushleft \textbf{Scale and Pose.}}
+Similar to most state-of-the-art tracking algorithms (Frag, OAB,
+SemiB, and MILTrack), our tracker estimates the translational object
+motion.
+%
+Nevertheless, our tracker is able to handle scale and orientation
+change due to the use of Haar-like features.
+%
+The targets in
+{\em David } ($\#130$, $\#180$, $\#218$ in Figure~\ref{fig:david}),
+{\em Twinings} ($\#200$, $\#366$, $\#419$ in Figure~\ref{fig:twinings})
+and {\em Panda} ($\#100$, $\#150$, $\#250$, $\#550$, $\#780$ in Figure
+\ref{fig:panda})
+sequences undergo large appearance change due to scale
+and pose variation.
+%
+Our tracker achieves the best or second best performance in
+most sequences.
+%
+The Struck method performs well when the objects undergo
+pose variation as in the {\em David}, {\em Twinings} and {\em
+  Kitesurf}  sequences (See Figure~\ref{fig:kitesurfer}) but does not
+perform well in the {\em Panda} sequence (See frame $\#150$, $\#250$,
+$\#780$ in Figure \ref{fig:panda}).
+%
+The object in {\em Kitesurf} sequence shown in
+Figure~\ref{fig:kitesurfer} undergoes large
+in-plane and out-of-plane rotation.
+%
+The VTD method gradually drifts
+away due to large appearance change (See frame $\#75$, $\#80$ in
+Figure~\ref{fig:kitesurfer}).
+%
+The MILTrack does not perform well in the {\em David} sequence when the appearance changes much (See frame
+$\#180$, $\#218$, $\#345$ in Figure \ref{fig:david}).
+%
+In the proposed algorithm, the background samples yield very small classifier
+scores with (\ref{eq:agac}) which makes our tracker better separate
+target object from its surrounding background.
+%
+Thus, the proposed tracker does not drift away from the target
+object in cluttered background.
+
+
+{\flushleft \textbf{Heavy Occlusion and Pose Variation.}}
+The object in {\em Occluded face 2} shown in Figure~\ref{fig:faceocc}
+undergoes heavy occlusion and pose variation.
+%
+The VTD and Struck methods do not perform well
+as shown in Figure \ref{fig:faceocc} due to
+large appearance change caused by occlusion and pose variation ($\#380, \#500$ in Figure~\ref{fig:faceocc}).
+%
+In the {\em Tiger 2} sequences (Figure \ref{fig:tiger2}), the
+appearances of the objects change significantly as a result of scale,
+pose variation, illumination change and motion blur at the same time.
+%
+The Struck, MILTrack and VTD methods drift away
+at frame $\#278$, $\#355$ in {\em Tiger 2}
+sequences when the target objects undergo changes of lighting, pose,
+and partial occlusion.
+%
+%
+Our tracker performs well in these challenging sequences
+as it effectively selects the most discriminative local features
+for updating the classifier, thereby
+better handling drastic appearance change than methods based on holistic
+features.
+%-------------------------------------------------------
+\begin{figure}[!ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/jumping/30}
+\includegraphics[width=.32\linewidth]{images/Figs/jumping/100}
+\includegraphics[width=.32\linewidth]{images/Figs/jumping/200}\\
+\includegraphics[width=.32\linewidth]{images/Figs/jumping/250}
+\includegraphics[width=.32\linewidth]{images/Figs/jumping/280}
+\includegraphics[width=.32\linewidth]{images/Figs/jumping/300}\\
+%\includegraphics[width=.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Some tracking results of {\em Jumping} sequence.}
+\label{fig:jumping}
+\end{figure}
+%--------------------------------------------------------
+\begin{figure}[!ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/cliffbar/80}
+\includegraphics[width=.32\linewidth]{images/Figs/cliffbar/154}
+\includegraphics[width=.32\linewidth]{images/Figs/cliffbar/164}\\
+\includegraphics[width=.32\linewidth]{images/Figs/cliffbar/200}
+\includegraphics[width=.32\linewidth]{images/Figs/cliffbar/230}
+\includegraphics[width=.32\linewidth]{images/Figs/cliffbar/325}\\
+%\includegraphics[width=.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Some tracking results of {\em Cliff bar} sequence.}
+\label{fig:cliffbar}
+\end{figure}
+%--------------------------------------------------------
+%----------------------------------------
+\begin{figure}[!ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/animal/12}
+\includegraphics[width=.32\linewidth]{images/Figs/animal/25}
+\includegraphics[width=.32\linewidth]{images/Figs/animal/42}\\
+\includegraphics[width=.32\linewidth]{images/Figs/animal/56}
+\includegraphics[width=.32\linewidth]{images/Figs/animal/60}
+\includegraphics[width=.32\linewidth]{images/Figs/animal/71}\\
+%\includegraphics[width=.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%\vspace{-3mm}
+\caption{Some tracking results of {\em Animal} sequence.}
+\label{fig:animal}
+\end{figure}
+%--------------------------------------------------------
+
+{\flushleft \textbf{Abrupt Motion, Rotation and Blur.}}
+The blurry images of the {\em Jumping} sequence (See Figure
+\ref{fig:jumping}) due to fast motion make it difficult to track the
+target object.
+%
+As shown in frame $\#300$ of Figure \ref{fig:jumping}, the Struck
+and VTD methods drift away from the target because of
+the drastic appearance change caused by motion blur.
+%
+The object in the {\em Cliff bar} sequence of Figure \ref{fig:cliffbar}
+undergoes scale change, rotation, and motion blur.
+%
+As illustrated in frame $\#154$ of Figure \ref{fig:cliffbar},
+when the object undergoes in-plane  rotation and blur, all evaluated
+algorithms except the proposed tracker do not track
+the object well.
+%
+The object in the {\em Animal} sequence (Figure \ref{fig:animal})
+undergoes abrupt motion.
+%
+The MILTrack method performs well in most of
+frames, but it loses track of the object from frame $\#35$ to $\#45$.
+%
+The {\em Bike skill} sequence is challenging
+as the object moves abruptly with out-of-plane rotation and motion
+blur.
+%
+The MILTrack, Struck and VTD methods drift away from the target object after frame $\#100$.
+%
+
+For the above four sequences, our tracker achieves the best performance
+in terms of tracking error and success rate
+except in the {\em Animal} sequence (See Figure~\ref{fig:animal})
+the Struck and VTD methods achieve slightly better success rate.
+%
+The results show that the proposed feature
+selection method by integrating the prior information can effectively
+select more discriminative features than
+the MILTrack method~\cite{Babenko_pami_2011}, thereby preventing our
+tracker from drifting to the background region.
+
+%----------------------------------------
+\begin{figure}[!ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/dollar/20}
+\includegraphics[width=.32\linewidth]{images/Figs/dollar/50}
+\includegraphics[width=.32\linewidth]{images/Figs/dollar/128}\\
+\includegraphics[width=.32\linewidth]{images/Figs/dollar/190}
+\includegraphics[width=.32\linewidth]{images/Figs/dollar/245}
+\includegraphics[width=.32\linewidth]{images/Figs/dollar/295}\\
+%\includegraphics[width=.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%%\vspace{-3mm}
+\caption{Some tracking results of {\em Coupon book} sequence.}
+\label{fig:coupon}
+\end{figure}
+
+%
+{\flushleft \textbf{Cluttered Background and Abrupt Camera Shake.}}
+The object in the {\em Cliff bar} sequence changes in scale and moves in a region with similar
+texture.
+%
+The VTD method is a generative model that does not take into account the
+negative samples, and it drifts to the background in the {\em Cliff bar}
+sequence (See frame $\#200, \#230$ of Figure~\ref{fig:cliffbar})
+because the texture of the background is similar to the
+object.
+%
+Similarly, in the {\em Coupon book} sequence (See frame $\#190, \#245,
+\#295$ of Figure~\ref{fig:coupon}), the VTD method is not effective in separating
+two nearby objects with similar appearance.
+%
+Our tracker performs well on these sequences because it weighs
+more on the most {\em correct} positive sample
+and assigns a small classifier score to the background samples
+during classifier update, thereby facilitating separation of
+the foreground target and the background.
+%
+%
+All the other compared trackers except for the
+Struck method snap to the other object with similar texture to the target after frame $\#100$ (See Figure \ref{fig:errorplot}).
+%
+Our tracker performs well as
+it integrates the most {\em correct} positive sample information into
+the learning process which makes the updated classifier better
+differentiate the target from the cluttered background.
+
+%--------------------------------------------------------
+\begin{figure}[!ht]
+%\vspace{-.1cm}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/Figs/soccer/50}
+\includegraphics[width=.32\linewidth]{images/Figs/soccer/100}
+\includegraphics[width=.32\linewidth]{images/Figs/soccer/120}\\
+\includegraphics[width=.32\linewidth]{images/Figs/soccer/180}
+\includegraphics[width=.32\linewidth]{images/Figs/soccer/240}
+\includegraphics[width=.32\linewidth]{images/Figs/soccer/344}\\
+%\includegraphics[width=.7\linewidth]{images/Figs/legend}
+\end{tabular}
+\end{center}
+%%\vspace{-3mm}
+\caption{Some tracking results of {\em Soccer} sequence.}
+\label{fig:soccer}
+\end{figure}
+%------------------------------------------------------------
+
+{\flushleft \textbf{Large Illumination Change and Pose Variation.}}
+The appearance of the singer in the {\em Shaking} sequence
+changes significantly due to large variation of
+illumination and head pose.
+%
+The MILTrack method fails to track the target when the stage light
+changes drastically at frame $\#60$
+whereas our tracker can accurately locate the object.
+%
+In the {\em Soccer} sequence (See Figure \ref{fig:soccer}),
+the target player is occluded in a scene with large change of scale and
+illumination (e.g., frame $\#100$, $\#120$, $\#180$, $\#240$ of
+Figure~\ref{fig:soccer}).
+%
+The MILTrack and Struck methods  fail to track the target object in this video (See Figure~\ref{fig:errorplot}).
+The VTD method does not perform well when the heavy occlusion occurs as shown by frame $\#120$, $\#180$ in Figure~\ref{fig:soccer}.
+%
+Our tracker is able to adapt the classifier quickly to
+appearance change as it selects the discriminative
+features which maximize the classifier score with respect to the most
+{\em correct} positive sample while suppressing the classifier score
+of background samples.
+%
+Thus, our tracker performs well in spite of large
+appearance change due to variation of illumination, scale and
+camera view.
+%
+\begin{table}[!ht]
+\caption{Center location error (CLE) and
+    average frames per second (FPS).
+Top two results are shown in \textcolor{red}{\textbf{Bold}} and
+\textcolor{blue}{\emph{italic}}.}
+\label{table:tracking-error of different odfs}
+{
+\scriptsize
+\center\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}|r||c|c|c|c|}
+    \hline
+Sequence   & \textbf{ODFS}   &AGAC   &SPFS   &SGSC\\ \hline\hline
+
+Animal                &\textcolor{blue}{\emph{15}}   &\textcolor{blue}{\emph{15}}  &62  &58\\ \hline
+Bike skill            &\textcolor{red}{\textbf{6}}   &\textcolor{blue}{\emph{7}}   &71  &95\\ \hline
+Coupon book           &\textcolor{red}{\textbf{8}}    &\textcolor{blue}{\emph{9}}   &45 &27\\ \hline
+Cliff bar             &\textcolor{red}{\textbf{5}}   &\textcolor{red}{\textbf{5}}   &\textcolor{blue}{\emph{6}} &10\\ \hline
+David           &\textcolor{red}{\textbf{12}}   &\textcolor{blue}{\emph{13}}  &23   &14\\ \hline
+Football              &\textcolor{red}{\textbf{13}}  &14                           &14     &14\\ \hline
+Jumping               &\textcolor{red}{\textbf{8}}  &\textcolor{blue}{\emph{9}}   &63  &71\\ \hline
+Kitesurf              &\textcolor{red}{\textbf{7}}  &\textcolor{red}{\textbf{7}}   &14 &\textcolor{blue}{\emph{10}}\\ \hline
+Occluded face 2       &\textcolor{red}{\textbf{10}}  &\textcolor{red}{\textbf{10}}  &15 &\textcolor{blue}{\emph{13}}\\ \hline
+Pedestrian            &\textcolor{red}{\textbf{8}}   &\textcolor{red}{\textbf{8}} &44   &\textcolor{blue}{\emph{11}}\\ \hline
+Panda                 &\textcolor{blue}{\emph{7}} &\textcolor{blue}{\emph{7}}  &\textcolor{blue}{\emph{7}} &\textcolor{red}{\textbf{6}}\\ \hline
+Soccer                &\textcolor{red}{\textbf{19}}  &\textcolor{blue}{\emph{20}}  &124 &152 \\ \hline
+Shaking               &\textcolor{red}{\textbf{11}}  &\textcolor{blue}{\emph{12}}  &16  &176\\ \hline
+Twinings              &\textcolor{red}{\textbf{12}}  &\textcolor{red}{\textbf{12}}  &\textcolor{blue}{\emph{15}} &25\\ \hline
+Tiger 1               &\textcolor{red}{\textbf{13}}   &\textcolor{blue}{\emph{15}}  &45 &16\\ \hline
+Tiger 2               &\textcolor{blue}{\emph{14}}  &\textcolor{red}{\textbf{12}}  &\textcolor{red}{\textbf{12}}  &\textcolor{red}{\textbf{12}}\\ \hline\hline
+Average CLE           &\textcolor{red}{\textbf{10}}  &\textcolor{blue}{\emph{11}}  &30  &39   \\ \hline
+\ignore{
+Average FPS           &\textcolor{blue}{\emph{30}} &29 &\textcolor{red}{\textbf{31}} &28\\ \hline
+}
+\end{tabular*}
+}
+\end{table}
+%----------------------------------------------------------------
+\begin{table}[!ht]
+\caption{Success rate
+    (SR). Top two results are shown in \textcolor{red}{\textbf{Bold}}
+and  \textcolor{blue}{\emph{italic}}.}
+\label{table:tracking-success of different odfs}
+{%\tiny
+\scriptsize
+  \center\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}|r||c|c|c|c|}
+    \hline
+Sequence              & \textbf{ODFS}   &AGAC   &SPFS   &SGSC\\ \hline\hline
+Animal                &\textcolor{red}{\textbf{90}}  &\textcolor{blue}{\emph{88}}  &27   &27 \\ \hline
+Bike skill        &\textcolor{red}{\textbf{91}}  &\textcolor{red}{\textbf{91}}  &4 &\textcolor{blue}{\emph{6}}\\ \hline
+Coupon book          &\textcolor{red}{\textbf{99}}    &\textcolor{blue}{\emph{95}}  &16  &20\\ \hline
+Cliff bar            &\textcolor{red}{\textbf{94}}   &\textcolor{red}{\textbf{94}}   &\textcolor{red}{\textbf{94}}  &\textcolor{blue}{\emph{82}}\\ \hline
+David           &\textcolor{blue}{\emph{90}}   &\textcolor{blue}{\emph{90}}  &64 &\textcolor{red}{\textbf{99}}\\ \hline
+Football             &\textcolor{red}{\textbf{71}}  &\textcolor{blue}{\emph{69}}  &64  &64 \\ \hline
+Jumping               &\textcolor{red}{\textbf{100}} &\textcolor{blue}{\emph{98}}  &7  &5\\ \hline
+Kitesurf              &\textcolor{red}{\textbf{84}} &\textcolor{red}{\textbf{84}} &\textcolor{blue}{\emph{70}} &68\\ \hline
+Occluded face 2       &\textcolor{red}{\textbf{100}} &\textcolor{red}{\textbf{100}}  &98  &\textcolor{blue}{\emph{99}} \\ \hline
+Pedestrian           &\textcolor{blue}{\emph{71}}   &\textcolor{red}{\textbf{73}}  &57   &82\\ \hline
+Panda         &\textcolor{blue}{\emph{78}} &76  &76  &\textcolor{red}{\textbf{91}}\\ \hline
+Soccer                &\textcolor{red}{\textbf{67}} &\textcolor{blue}{\emph{64}}  &22  &22\\ \hline
+Shaking              &\textcolor{red}{\textbf{87}}  &\textcolor{blue}{\emph{83}}   &70  &2\\ \hline
+Twinings              &\textcolor{red}{\textbf{83}} &\textcolor{red}{\textbf{83}}  &\textcolor{blue}{\emph{74}} &36\\ \hline
+Tiger 1       &\textcolor{red}{\textbf{68}} &\textcolor{blue}{\emph{66}} &16   &32  \\ \hline
+Tiger 2       &43 &44 &\textcolor{blue}{\emph{46}}   &\textcolor{red}{\textbf{47}}  \\ \hline\hline
+Average SR    &\textcolor{red}{\textbf{83}}  &\textcolor{blue}{\emph{81}} &61  &58 \\ \hline
+
+\end{tabular*}
+}
+\end{table}
+\subsection{Analysis of ODFS}
+\label{sec:diff-fs}
+%
+We compare the proposed ODFS algorithm with the AGAC (i.e.,
+(\ref{eq:agac})), SPFS (i.e., (\ref{eq::spfs})), and SGSC (i.e.,
+(\ref{eq:sgsc})) methods all of which differ only in feature
+selection and number of samples.
+%
+Tables~\ref{table:tracking-error of different odfs}
+and~\ref{table:tracking-success of different odfs}
+present the tracking results in terms of center location error and
+success rate, respectively.
+%
+The ODFS and AGAC methods achieve much better results than other two
+methods.
+%
+Both ODFS and AGAC use average weak classifier output from all
+positive samples (i.e., $\overline{\phi}^+$ in (\ref{eq:odfs}) and
+(\ref{eq:agac})) and the only difference is that ODFS
+adopts single gradient from the most {\em correct} positive sample to
+replace the average gradient from all positive samples in AGAC.
+%
+This approach facilitates reducing the sample ambiguity problem and
+%
+%KH: lead->leads
+%MH: okay
+leads to better results than the AGAC method which does not take into
+account the sample ambiguity problem.
+%
+The SPFS method uses single gradient and single weak classifier output
+from the most {\em correct} positive sample that does not have the
+sample ambiguity problem.
+%
+However, the noisy effect introduced by the misaligned
+samples significantly affects its performance.
+%
+The SGSC method does not work well because of both noisy and sample
+ambiguity problems.
+%
+Both the gradient from the most {\em correct}
+positive sample and the average weak classifier output from all
+positive samples play important roles for the performance of ODFS.
+%
+The adopted gradient reduces the
+sample ambiguity problem while the averaging process alleviates the
+noisy effect caused by some misaligned positive samples.
+
+%--------------------------------------------------------------
+\subsection{Online Update of Model Parameters}
+\label{sec:onlineupdate}
+
+\begin{figure*}[!ht]
+%%\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.4\linewidth]{images/Figs/errorplot/ctiger1}
+\includegraphics[width=.4\linewidth]{images/Figs/errorplot/ctiger2}\\
+\includegraphics[width=.4\linewidth]{images/Figs/errorplot/cpedestrian}
+\includegraphics[width=.4\linewidth]{images/Figs/errorplot/cocc2}
+\end{tabular}
+\end{center}
+%%\vspace{-1cm}
+\caption{Error plots in terms of center location error for $4$
+  test sequences.}
+\label{fig:4errorplot}
+\end{figure*}
+
+\begin{figure}[!ht]
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[width=.32\linewidth]{images/cfig/tiger1/30}
+\includegraphics[width=.32\linewidth]{images/cfig/tiger1/280}
+\includegraphics[width=.32\linewidth]{images/cfig/tiger1/310}\\
+\includegraphics[width=.32\linewidth]{images/cfig/tiger2/180}
+\includegraphics[width=.32\linewidth]{images/cfig/tiger2/310}
+\includegraphics[width=.32\linewidth]{images/cfig/tiger2/330}\\
+\includegraphics[width=.32\linewidth]{images/cfig/pedestrian/50}
+\includegraphics[width=.32\linewidth]{images/cfig/pedestrian/90}
+\includegraphics[width=.32\linewidth]{images/cfig/pedestrian/120}\\
+\includegraphics[width=.32\linewidth]{images/cfig/occ2/380}
+\includegraphics[width=.32\linewidth]{images/cfig/occ2/450}
+\includegraphics[width=.32\linewidth]{images/cfig/occ2/725}\\
+\includegraphics[width=0.6\linewidth]{images/cfig/legend}
+\end{tabular}
+\end{center}
+\caption{Some tracking results of {\em Tiger 1, Tiger 2, Pedestrian},
+and {\em Occluded face 2} sequences using MILTrack, CMILTrack and
+ODFS methods.}
+\label{fig:4sequences}
+\end{figure}
+
+We implement our parameter update method in MATLAB
+with evaluation on 4 sequences, and the MILTrack method using our
+parameter update method is referred as CMILTrack as illustrated in
+Section~\label{sec:classifier-update}.
+%
+For fair comparisons, the only difference between the MATLAB
+implementations of the MILTrack and CMILTrack methods
+is the parameter update module.
+%
+We compare the proposed ODFS, MILTrack and CMILTrack methods
+using four videos.
+%
+Figure~\ref{fig:4errorplot} shows the error plots
+and some sampled results are shown in Figure~\ref{fig:4sequences}.
+%
+We note that in the {\em Occluded face 2} sequence,
+the results of the CMILTrack algorithm  are more stable than those of
+the MILTrack method.
+%
+In the {\em Tiger 1} and {\em Tiger 2} sequences, the
+CMILTrack tracker has less drift than the MILTrack method.
+%
+On the other hand, in the {\em Pedestrian} sequence, the results by
+the CMILTrack and  MILTrack methods are similar.
+%
+Experimental results show that both the
+parameter update method and the Noisy-OR model are important for
+robust tracking performance.
+%
+While we use the parameter update method based on maximum
+likelihood estimation in the CMILTrack method, the results may still be
+unstable because the Noisy-OR model may
+select the less effective features (even though the CMILTrack method
+generates more stable results than the MILTrack method in most cases).
+%
+We note the results by the proposed ODFS algorithm are more accurate
+and stable than the MILTrack and CMILTrack methods.
+
+%----------------------------------------------------------------
+%#######################################################
+%
+%==============================================================
+\section{Summary}
+In this chapter, we present a novel online discriminative feature
+selection (ODFS) method for object tracking which couples the classifier
+score explicitly with the importance of the samples.
+%
+The proposed ODFS method selects features which optimize the classifier
+objective function in the steepest \emph{ascent} direction with
+respect to the positive samples while in steepest \emph{descent}
+direction with respect to the negative ones.
+%
+This leads to a more robust and efficient tracker without parameter
+tuning.
+%
+Our tracking algorithm is easy to implement and achieves real-time
+performance with MATLAB implementation on a Pentium dual-core
+machine.
+%
+Experimental results on challenging video sequences
+demonstrate that our tracker achieves
+favorable performance when compared with several state-of-the-art
+algorithms.
+% 

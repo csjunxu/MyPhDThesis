@@ -1,0 +1,945 @@
+@article{Yuri_CT,
+    author = {G. Funka-lea and Y. Boykov and C. Florin and M. Jolly and R. Moreau-gobard and R. Ramaraj and D. Rinck},
+    title = {Automatic heart isolation for CT coronary visualization using graph-cuts},
+    journal = {In IEEE International Symposium on Biomedical Imaging},
+    pages = {614-617},
+    year = {2006}
+}
+
+@inproceedings{Grady_handbook,
+author = {L. Grady and Y. Sun and J. Williams},
+title = {Handbook of Mathematical Models in Computer Vision},
+publisher = "Springer",
+pages = {453-469},
+YEAR = 2006,
+}
+
+@article{Jolly,
+  author = {M.P. Jolly and H. Xue and L. Grady and J. Guehring},
+  title = {Combining Registration and Minimum Surfaces for the Segmentation of the Left Ventricle in Cardiac Cine MR Images},
+  journal = {Proc. of Medical Image Computing and Computer-Assited Intervation},
+  pages = {910--918},
+  year = 2009
+  }
+@article{Bleyer,
+ author = {M. Bleyer and M. Gelautz},
+ title = {Graph-based surface reconstruction from stereo pairs using image segmentation},
+ journal = {SPIE Signal Processing and Target Recognition},
+ pages = {288-299},
+ year = 2005
+}
+
+@article{Favaro,
+ author = {P. Favaro and S. Soatto},
+ title = {A variational approach to scene reconstruction and image segmentation from motion blur cues},
+ journal = {IEEE Conference on Computer Vision and Pattern Recognition},
+ pages = {631--637},
+ year = 2004
+}
+
+@article{Yu,
+ author = {S. Yu and R. Gross and J. Shi},
+ title = {Concurrent Object Segmentation and Recognition with Graph Partitioning},
+ journal = {Neural Information Processing Systems},
+ year = 2002
+}
+
+@article{Seo,
+ author = {K.H. Seo and J.H. Shin and W. Kim and J.J. Lee},
+ title = {Real-time object tracking and segmentation using adaptive color snake model},
+ journal = {International Journal of Control, Automation, and Systems},
+ volume = 4,
+ number = 2,
+ pages = {236--246},
+ year = 2006
+}
+
+@article{Lam,
+ author = {C. Lam and S. Yuen},
+ title = {An unbiased active contour algorithm for object tracking},
+ journal = {Pattern Recognition Letters},
+ volume = {19},
+ number = {5-6},
+ pages = {491--498},
+ year = 1998
+}
+
+@article{Russell,
+ author = {B. Russell and A. Efros and J. Sivic and W. Freeman and A. Zisserman},
+ title = {Using multiple segmentations to discover objects and their extent in image collections},
+ journal = {IEEE Conference on Computer Vision and Pattern Recognition},
+ year = 2006
+}
+
+@Inproceedings{Wertheimer,
+author = {M. Wertheimer},
+title = {Laws of Organization in Perceptual Forms (partial translation),A Sourcebook of Gestalt Psycychology},
+publisher = "W.B.Ellis, ed.Harcourt, Brace",
+pages = {71--88},
+YEAR = 1938,
+}
+
+@Inproceedings{Gonzalez,
+author = {R.C. Gonzalez and R.E. Woods},
+title = {Digital Image Processing},
+publisher = "Addison Wesley, Reading, MA",
+YEAR = 1992,
+}
+
+@article{Wu_minicut,
+ author = {Z. Wu and R. Leahy},
+ title = {An optimal graph theoretic approach to data clustering Theory and its application to image segmentation},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ volume = 15,
+ number = 11,
+ pages = {1101-1113},
+ year = 1993
+}
+
+@article{yuri_pami1,
+ author = {Y. Boykov and O. Veksler and R. Zabih},
+ title = {Fast Approximate Energy Minimization via Graph Cuts},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ volume = 23,
+ number = 11,
+ pages = {1222--1239},
+ year = 2001
+}
+
+@Inproceedings{Sethian,
+author = {J.A Sethian},
+title = {Level Set Methods and Fast Marching Methods},
+publisher = "Cambridge University Press",
+year = 1999
+}
+
+@Inproceedings{Osher,
+author = {S.J Osher and R.P Fedkiw},
+title = {Level Set Methods and Dynamic Implicit Surfaces},
+publisher = "Springer Verlag",
+year = 2002
+}
+
+@article{Delong,
+ author = {A. Delong and A. Osokin and H. Isack and Y. Boykov},
+ title = {Fast Approximate Energy Minimization with Label Costs},
+ journal = {In IEEE conference on Computer Vision and Pattern Recognition},
+ year = 2010
+}
+
+@article{Ayed,
+ author = {B. Ayed and A. Mitiche},
+ title = {A Region Merging Prior for Variational Level
+Set Image Segmentation},
+ journal = {IEEE Transactions on Image Processing},
+ volume = 17,
+ number = 12,
+ pages = {2301-2311},
+ year = 2008
+}
+
+@article{Geman1,
+ author = {S. Geman and D. Geman},
+ title = {Stochastic relaxation, Gibbs distribution and the Bayesian restoration of images},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ volume = 6,
+ number = 6,
+ pages = {721-741},
+ year = 1984
+}
+
+@article{Geman2,
+ author = {S. Geman and D. McClure},
+ title = {Bayesian image analysis: An application to single photon emission tomography},
+ journal = {In Proceedings of the Statistical Computing Section},
+ pages = {12-18},
+ year = 1985
+}
+
+@article{Geman3,
+ author = {S. Geman and C. Graffigne},
+ title = {Markov random field image models and their applications to computer vision},
+ journal = {In A. M. Gleason (Ed.), Proceedings of the International Congress of Mathematicians},
+ pages = {1496-1517},
+ year = 1987
+}
+
+@article{Falco,
+ author = {A.X. Falc{\~{a}}o and J. Stolfi and R.A. Lotufo},
+ title = {Ultrafast user-steered image segmentation paradigm: live-wire-on-the-fly},
+ journal = {IEEE Transactions on Medical Imaging},
+ volume = 19,
+ number = 1,
+ pages = {55-62},
+ year = 2000
+}
+
+@InProceedings{Gonzalez,
+ author = {R.C. Gonzalez and R.E. Woods},
+ title = {Digital Image Processing},
+ booktitle = {Addison Wesley, Reading, MA},
+ year = 1992
+}
+
+@article{Canny,
+ author = {J. Canny},
+ title = {A Computational Approach to Edge Detection},
+ journal = {IEEE Trans. Pattern Analysis and Machine Intelligence},
+ volume = {8},
+ pages = {679-698},
+ year = 1986
+}
+
+@article{Paul,
+ author = {B. Paul and L. Zhang and X. Wu},
+ title = {Canny edge detection enhancement by scale multiplication},
+ journal = {IEEE. Trans. on Pattern Analysis and Machine Intelligence},
+ volume = {27},
+ pages = {1485-1490},
+ year = 2005
+}
+
+@article{Zhanglei,
+ author = {L. Zhang and B. Paul},
+ title = { Edge detection by scale multiplication in wavelet domain},
+ journal = {Pattern Recognition Letters},
+ volume = 23,
+ pages = {1771-1784},
+ year = 2002
+}
+
+@article{Shi,
+ author = {J. Shi and J. Malik},
+ title = {Normalized Cuts and Image Segmentation},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ volume = 22,
+ pages = {888--905},
+ year = 1997
+}
+
+@article{RatioCut,
+ author = {S. Wang and J. M. Siskind},
+ title = {Image Segmentation with Ratio Cut},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ volume = 25,
+ number = 6,
+ pages = {675-690},
+ year = 2003
+}
+
+@article{Wu,
+ author = {Z. Wu and R. Leahy},
+ title = {An optimal graph theoretic approach to data clustering Theory and its application to image segmentation},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ volume = 15,
+ pages = {1101¨C1113},
+ year = 1993
+}
+
+@article{yuri_pami2,
+ author = {Y. Boykov, V. Kolmogorov},
+ title = {An Experimental Comparison of Min-Cut/Max-Flow Algorithms for Energy Minimization in Vision},
+ journal = {IEEE transactions on Pattern Analysis and Machine Intelligence},
+ volume = 26,
+ number = 9,
+ pages = {1124-1137},
+ year = 2004
+}
+
+@article{Cheng,
+ author = {H.D Cheng and Y. Sun},
+ title = {A hierarchical approach to color image segmentation using homogeneity},
+ journal = {IEEE Transactions on Image Processing},
+ volume = 9,
+ issue = 12,
+ pages = {2071-2082},
+ year = 2000
+}
+
+@article{Lee,
+ author = {S. Lee and M.M. Crawford},
+ title = {Unsupervised multistage image classification using hierarchical
+clustering with a bayesian similarity measure},
+ journal = {IEEE Transactions on Image Processing},
+ volume = 14,
+ issue = 3,
+ pages = {312-320},
+ year = 2005
+}
+
+@article{Moore1,
+ author = {A. Moore and S. Prince and J. Warrell and U. Mohammed and G. Jones},
+ title = {Superpixel lattices},
+ journal = {IEEE Conference on Computer Vision and Pattern Recognition},
+ pages = {1-8},
+ year = 2008
+}
+
+@article{Moore2,
+ author = {A. Moore and S. Prince and J. Warrell and U. Mohammed and G. Jones},
+ title = {Scene shape priors for superpxiel segmentation},
+ journal = {International Conference on Computer Vision},
+ pages = {771-778},
+ year = 2009
+}
+
+@article{Moore3,
+ author = {A. Moore and S. Prince},
+ title = {``Lattice Cut'' - Constructing superpixels using layer constraints},
+ journal = {IEEE Conference on Computer Vision and Pattern Recognition},
+ pages = {2117-2124},
+ year = 2010
+}
+
+@article{Nock,
+ author = {R. Nock and F. Nielsen},
+ title = {Statistical region merging},
+ journal = {IEEE Trans. on Pattern Analysis and Machine Intelligence},
+ volume = 26,
+ issue = 11,
+ pages = {1452--1458},
+ year = 2004
+}
+
+@article{Haris,
+ author = {K. Haris and S.N. Estradiadis and N. Maglaveras and A.K Katsaggelos},
+ title = {Hybrid image segmentation using watersheds and fast region merging},
+ journal = {IEEE Transactions on Image Processing},
+ volume = 7,
+ pages = {1684-1699},
+ year = 1998
+}
+
+@article{Felzenszwalb1,
+ author = {P.F. Felzenszwalb, D.P. Huttenlocher},
+ title = {Image segmentation using local variations},
+ journal = {Proceedings of IEEE International Conference on Computer Vision and Pattern Recognition},
+ pages = {98-104},
+ year = 1998
+}
+
+@article{Peng,
+ author = {B. Peng and L. Zhang and J. Yang},
+ title = {Iterated Graph Cuts for Image Segmentation},
+ journal = {Asian Conference on Computer Vision},
+ year = 2009
+}
+
+@article{Moscheni,
+ author = {F. Moscheni and S. Bhattacharjee and M. Kunt},
+ title = {Spatio-temporal segmentation based on region merging},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ volume = 20,
+ pages = {897-915},
+ year = 1998
+}
+
+@article{Calderero1,
+ author = {F. Calderero, F. Marques},
+ title = {Region merging techniques using information theory statistical measures},
+ journal = {IEEE Transactions on Image Processing},
+ volume = 19,
+ pages = {1567-1586},
+ year = 2010
+}
+
+
+@article{Calderero2,
+ author = {F. Calderero and F. Marques},
+ title = {General region merging approaches based on information theory
+statistical measures},
+ journal = {The 15th IEEE International Conference on Image Processing},
+ pages = {3016-3019},
+ year = 2008
+}
+
+@article{Liu,
+ author = {H. Liu and Q. Guo and M. Xu and I. Shen},
+ title = {Fast image segmentation using region merging with a k-Nearest Neighbor graph},
+ journal = {IEEE Conference on Cybernetics and Intelligent Systems},
+ pages = {179-184},
+ year = 2008
+}
+
+@article{Shu,
+ author = {Y. Shu and G.A and Bilodeau and F. Cheriet},
+ title = {Segmentation of laparoscopic images: integrating graph-based segmentation and multistage region
+merging},
+ journal = {The 2nd Canadian Conference on Computer and Robot Vision},
+ pages = {429-436},
+ year = 2005
+}
+
+@article{Beucher,
+ author = {S. Beucher and C. Lantu{\~{e}}joul},
+ title = {Use of watersheds in contour detection},
+ journal = {International workshop on image processing, real-time edge and motion detection},
+ year = 1979
+}
+
+
+@article{Fernand1,
+ author = {M. Fernand},
+ title = {Sequential algorithms for cell segmentation: maximum efficiency?},
+ journal = {International symposium on clinical cytometry and histometry, Scholoss Elmau},
+ year = 1986
+}
+
+@article{Beucher,
+ author = {S. Beucher},
+ title = {Watershed, hierarchical segmentation and waterfall algorithm},
+ journal = {Mathematical Morphology and Its Applications to Image Processing},
+ pagess = {69-76},
+ year = 1994
+}
+
+@article{Marcotegui,
+ author = {B. Marcotegui and S. Beucher},
+ title = {Fast implementation of waterfall based on graphs},
+ journal = {Computational Imaging and Vision},
+ volume = 30,
+ pages = {177-186},
+ year = 2005
+}
+
+@article{Fernand2,
+ author = {M. Fernand},
+ title = {Hierarchies of partitions and morphological segmentation},
+ journal = {IEEE Workshop on scale-space and Morphology in computer vision},
+ year = 2001
+}
+
+@article{Wan,
+ author = {T. Wan and N. Canagarajah and A. Achim},
+ title = {Statistical multiscale image segmentation via alpha-stable modeling of wavelet coefficients},
+ journal = {IEEE Transactions on Multimedia},
+ volume = 11,
+ issue = 4,
+ pages = {624--633},
+ year = 2009
+}
+
+@article{LaValle,
+ author = {S. LaValle and S.M. Hutchinson},
+ title = {Bayesian region merging probability for parametric image models},
+ journal = {Proc. IEEE Computer Soc.Conf. Computer Vision Pattern Recognition},
+ pages = {778-779},
+ year = 1993
+}
+
+@InProceedings{Gordon_gestalt,
+ author = {I.E. Gordon},
+ title = {Theories of Visual Perception},
+ booktitle = {First ed. John Wiley and Sons},
+ year = 1989
+}
+
+@InProceedings{Koffka_gestalt,
+ author = {K. Koffka},
+ title = {Principles of Gestalt Psychology},
+ booktitle = {New York: Harcourt, Brace and World},
+ year = 1935
+}
+
+@InProceedings{Wald,
+ author = {A. Wald},
+ title = {Sequential Analysis},
+ booktitle = {Wiley Publications in Statistics},
+ year = 1947
+}
+
+@InProceedings{Morden,
+ author = {D.A. Forsyth and J.Ponce},
+ title = {Computer Vision: A Modern Approach},
+ booktitle = {Prentice Hall},
+ year = 2002
+}
+
+@article{Wu_Homo,
+ author = {Z. Wu},
+ title = {Homogeneity testing for unlabeled data: A performance evaluation},
+ booktitle = {CVGIP: Graph. Models Image Process},
+ volume = 55,
+ pages = {370-380},
+ year = 1993
+}
+
+@article{Tremeau_Homo,
+ author = {A. Tr{\~{e}}meau and P. Colantoni},
+ title = {Regions adjacency graph applied to color image segmentation},
+ journal = {IEEE Transactions on Image Processing},
+ volume = 9,
+ pages = {735--744},
+ year = 2000
+}
+
+@InProceedings{Bellman,
+ author = {R. Bellman},
+ title = {Dynamic Programming},
+ booktitle = {Princeton University Press},
+ year = 1957
+}
+
+@article{snake1,
+ author = {A. Mishra and P. Fieguth and D. Clausi},
+ title = {Accurate boundary Localization using Dynamic Programming on Snakes},
+ journal = {Proceedings of the Canadian Conference on Computer and Robot Vision},
+ page = {261--268},
+ year = 2008
+}
+
+@article{snake2,
+ author = {A. A. Amini and T.E. Weymouth and R.C. Jam},
+ title = {Using dynamic programming for solving variational problems in vision},
+ journal = {IEEE Trans. on Pattern Analysis and Machine Intelligence},
+ volume = 12,
+ page = {855--867},
+ year = 1990
+}
+
+@article{meanshift,
+ author = {D. Comanicu and P. Meer},
+ title = {Mean shift: A robust approach toward feature space analysis},
+ journal = {IEEE Trans. on Pattern Analysis and Machine Intelligence},
+ volume = 24,
+ pages = {603--619},
+ year = 2002
+}
+
+@article{watershed,
+ author = {L. Vincent and P. Soiller},
+ title = {Watersheds in digital spaces: an efficient algorithm based on immersion simulations},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ volume = 13,
+ number  = 6,
+ pages = {583--598},
+ year = 1991
+}
+
+@article{Martin_database,
+ author = {D. Martin and C. Fowlkes and D. Tal and J. Malik},
+ title = {A Database of Human Segmented Natural Images and its Application to Evaluating
+Segmentation Algorithms and Measuring Ecological Statistics},
+ journal = {International Conference on Computer Vision},
+ year = 2001
+}
+
+@article{Martin_pami,
+ author = {D. Martin, C. Fowlkes, and J. Malik},
+ title = {Learning to detect natural image boundaries using local brightness,
+color and texture cues},
+ journal = {IEEE Trans. on Pattern Analysis and Machine Intelligence},
+ volume = 26,
+ number  = 5,
+ page = {530--549},
+ year = 2004
+}
+
+@article{Rijsbergen,
+ author = {C. Van Rijsbergen},
+ title = {Information Retrieval},
+ journal = {second ed. Dept. of Computer Science, Univ. of Glasgow},
+ year = 1979
+}
+
+@article{Arbelaez,
+ author = {P. Arbelaez and M. Maire and C. Fowlkes and J. Malik},
+ title = {From Contours to Regions: An Empirical Evaluation},
+ journal = {IEEE Conference on Computer Vision and Pattern Recognition},
+ pages = {2294--2301},
+ year = 2009
+}
+
+@article{k-means,
+ author = {S. P. Lloyd},
+ title = {Least squares quantization in PCM},
+ journal = {IEEE Transactions on Information Theory},
+ volume = 28,
+ number = 2,
+ pages = {129-136},
+ year = 1982
+}
+
+@article{Chen_splitting,
+ author = {S. Chen, W. Lin, and C. Chen},
+ title = {Split-and-merge image segmentation based on localized feature analysis and statistical tests},
+ journal = {CVGIP: Graph. Models Image Process},
+ volume = 53,
+ pages = {457-475},
+ year = 1991
+}
+
+@article{Felzenszwalb2,
+ author = {P. Felzenszwalb and D. Huttenlocher},
+ title = {Efficient graph-based image segmentation},
+ journal = {International Journal on Computer Vision},
+ volume = 59,
+ number = 2,
+ pages = {167-181},
+ year = 2004
+}
+
+@article{SR1,
+ author = {I. Daubechies and M. Defriese and C. DeMol},
+ title = {An iterative thresholding algorithm for linear inverse problems with a sparsity constraint},
+ journal = {Pure Appl. Math.},
+ volume = 57,
+ pages = {1413-1457},
+ year = 2004
+}
+
+
+@article{SR2,
+ author = {D. L. Donoho},
+ title = {For most large underdetermined systems of linear equations the minimal $l_1$-norm solution is also the sparsest solution},
+ journal = {Communications on Pure and Applied Mathematics},
+ volume = 59,
+ number = 6,
+ pages = {797-829},
+ year = 2006
+}
+
+@article{face,
+ author = {J. Wright and A. Yang and A. Ganesh and S. Sastry and Y. Ma},
+ title = {Robust face recognition via sparse representation},
+ journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+ volume = 31,
+ number = 2,
+ year = 2009
+}
+
+@article{SRclustering,
+ author = {E. Elhamifar and R. Vidal},
+ title = {Sparse Subspace Clustering},
+ journal = {IEEE Conference on Computer Vision and Pattern Recognition},
+ pages = {2790-2797},
+ year = 2009
+}
+
+%\bibitem{sparse1}
+%M. Elad, M.A.T. Figueiredo, and Y. Ma.
+%\newblock On the Role of Sparse and Redundant Representations in Image Processing.
+%\newblock to appear in {\em Proceedings of IEEE, Special Issue on Applications of
+%Compressive Sensing and Sparse Representation}.
+@article{sparse2,
+ author = {J. Wright and Y. Ma and J. Mairal and G. Sapiro and T. Huang and S. Yan},
+ title = {Sparse Representation for Computer Vision and Pattern Recognition},
+ journal = {submitted to Proc. IEEE},
+ year = 2009
+}
+
+@InProceedings{wavelet,
+ author = {S. Mallat},
+ title = {A Wavelet Tour of Signal Processing},
+ booktitle = {Academic Press, San Diego, CA},
+ year = 1998
+}
+
+@InProceedings{Convex,
+ author = {S. Boyd and L. Vandenberghe},
+ title = {Convex Optimization},
+ booktitle = {Cambridge University Press},
+ year = 2004
+}
+
+@article{SRreview,
+ author = {E. Cand{\~{e}s and T. Tao},
+ title = {Near optimal signal recovery from random projections: Universal encoding strategies?},
+ journal = {IEEE Trans. on Information Theory},
+ volume = 52,
+ number = 12,
+ pages = {5406-5425},
+ year = 2006
+}
+
+@article{CS,
+ author = {D. Donoho},
+ title = {Compressed sensing},
+ journal = {IEEE Trans. on Information Theory},
+ volume = 52,
+ number = 4,
+ pages = {1289 - 1306},
+ year = 2006
+}
+
+@article{Restoration,
+ author = {J. Mairal and M. Elad and G. Sapiro},
+ title = {Sparse representation for color image restoration},
+ journal = {IEEE Trans. on Image Processing},
+ volume = 17,
+ number = 1,
+ pages = {53-69},
+ year = 2008
+}
+
+
+@article{waveletsparse2,
+ author = {P. Moulin and J. Liu},
+ title = {Analysis of multiresolution image denoising
+schemes using generalized-Gaussian and complexity priors},
+ journal = {IEEE Transactions on Information Theory},
+ pages = {909¨C919},
+ year = 1999
+}
+
+@article{waveletsparse3,
+ author = {E. Simoncelli and E. Adelson},
+ title = {Noise removal via Bayesian wavelet coring},
+ journal = {Proceedings of the IEEE International Conference on Image Processing},
+ pages = {379--382},
+ year = 1996
+}
+
+@article{iteratedwavelet1,
+ author = {M.A. Figueiredo and R.D. Nowak},
+ title = {An EM algorithm for wavelet-based image restoration},
+ journal = {IEEE Trans. Image Processing},
+ volume = 12,
+ number = 8,
+ pages = {906--916},
+ year = 2003
+}
+
+@article{DL0,
+ author = {D. Donoho and M. Elad},
+ title = {Optimal Sparse Representation in General (Nonorthogoinal) Dictionaries via $L_1$ Minimization},
+ journal = {The Proc. Nat. Aca. Sci.},
+ volume = 100,
+ pages = {2197-2202},
+ year = 2003
+}
+
+@article{DL2,
+ author = {J. Mairal and G. Sapiro and M. Elad},
+ title = {Learning Multiscale Sparse Representations for Image and Video Restoration},
+ journal = {SIAM Multiscale Modeling and Simulation},
+ volume = 7,
+ number = 1,
+ pages = {214-241},
+ year = 2008
+}
+
+@article{ksvd,
+ author = {M. Aharon and M. Elad and A. Bruckstein},
+ title = {K-SVD: An Algorithm for Designing Overcomplete Dictionaries for Sparse Representation TeX Export},
+ journal = {IEEE Transactions on Signal Processing},
+ volume = 54,
+ pages = {4311-4322},
+ year = 2006
+}
+
+@article{NonlocalDL,
+ author = {J. Mairal and F. Bach and J. Ponce and G. Sapiro and A. Zisserman},
+ title = {Non-local sparse models for image restoration},
+ journal = {International Conference on Computer Vision},
+ pages = {2272--2279},
+ year = 2009
+}
+
+@article{StructureDL,
+ author = {G. Monaci and P. Vandergheynst},
+ title = {Learning structured dictionaries for image representation},
+ journal = {International Conference on Image Processing},
+ volume = 4,
+ pages = {2351--2354},
+ year = 2004
+}
+
+@article{Denoising,
+ author = {M. Elad and M. Aharon},
+ title = {Image Denoising Via Learned Dictionaries and Sparse representation},
+ journal = {Proceedings of the 2006 IEEE Computer Society Conference on Computer Vision and Pattern Recognition},
+ volume = 1,
+ pages = {895--900},
+ year = 2006
+}
+
+@article{MCA,
+ author = {M. Elad and J. Starck and P. Querre and D. Donoho},
+ title = {Simultaneous Cartoon and Texture Image Inpainting Using Morphological Component Analysis (MCA)},
+ journal = {Journal on Applied and Computational Harmonic Analysis},
+ volume = 19,
+ pages = {340-358},
+ year = 2005
+}
+
+@article{L0_1,
+ author = {E. Cand{\~{e}}s},
+ title = {The restricted isometry property and its implications for
+compressed sensing},
+ journal = {C. R. Acad. Sci. Series I},
+ volume = 346,
+ pages = {589-¨C592},
+ year = 2008
+}
+
+@article{EM,
+ author = {D. MacKay},
+ title = {An Example Inference Task: Clustering},
+ journal = {Information Theory, Inference and Learning Algorithms},
+ pages = {284--292},
+ year = 2003
+}
+
+@article{Falaco98,
+ author = {A.X. Falc{\~{a}}o and J.K. Udupa and S. Samarasekara and S. Sharma},
+ title = {User-steered image segmentation paradigms: Live wire and live lane},
+ journal = {Graphical Models and Image Processing},
+ volume = 60,
+ pages = {233--260},
+ year = 1998
+}
+
+@article{Kass88,
+ author = {M. Kass and A. Witkin and D. Terzopoulos},
+ title = {Snakes: Active contour models},
+ journal = {International Journal of Computer Vision},
+ volume = 2,
+ pages = {321--331},
+ year = 1988
+}
+
+@article{Osher88,
+ author = {S. Osher and J.A. Sethian},
+ title = {Fronts propagating with curvature dependent speed: Algorithm
+based on hamilton jacobi formulations},
+ journal = {Journal of Computational Physics},
+ volume = 79,
+ pages = {12--49},
+ year = 1988
+}
+
+@article{Yuri01,
+ author = {Y. Boykov and M.P. Jolly},
+ title = {Interactive graph cuts for optimal boundary and region segmentation},
+ journal = {International Conference on Computer Vision},
+ volume = 1,
+ pages = {105--112},
+ year = 2001
+}
+
+@article{Yuri06,
+ author = {Y. Boykov and G. Funka Lea},
+ title = {Graph cuts and efficient n-d image segmentation},
+ journal = {International Journal of Computer Vision},
+ volume = 69,
+ number = 2,
+ pages = {109--131},
+ year = 2006
+}
+
+@article{grabcut,
+ author = {C. Rother and V. Kolmogorov and A. Blake},
+ title = {Grabcut-interactive foreground extraction using iterated graph cuts},
+ journal = {ACM Transactions on Graphics},
+ pages = {309--314},
+ year = 2004
+}
+
+@article{lazy,
+ author = {Y. Li and J. Sun and C.K. Tang and H.Y. Shum},
+ title = {Lazy Snapping},
+ journal = {ACM Transactions on Graphics},
+ volume = 23,
+ pages = {303--308},
+ year = 2004
+}
+
+@article{paint,
+ author = {J. Liu, J. and H.Y. Shum},
+ title = {Paint Selection},
+ journal = {ACM Transactions on Graphics},
+ year = 2009
+}
+
+@article{stereo,
+ author = {V. Kolmogorov and A. Criminisi and A. Blake and G. Cross and C. Rother},
+ title = {Bi-layer segmentation of binocular stereo video},
+ journal = {IEEE Conference of Computer Vision and Pattern Recognition},
+ pages = {407--414}
+ year = 2005
+}
+
+@article{Yuri_geodesics,
+ author = {Y. Boykov and  V. Kolmogorov},
+ title = {Computing geodesics and minimal surfaces via graph cuts},
+ journal = {International Conference on Computer Vision},
+ volume = 1,
+ pages = {26--33}
+ year = 2003
+}
+
+@article{Yuri_what,
+ author = {V. Kolmogorov and Y. Boykov},
+ title = {What metrics can be approximated by geo-cuts, or global optimization of length/area and flux},
+ journal = {International Conference on Computer Vision},
+ volume = 1,
+ pages = {564--571}
+ year = 2005
+}
+
+@article{shape3,
+ author = {O.Veksler},
+ title = {Star Shape Prior for Graph-Cut Image Segmentation},
+ journal = {Proceedings of the 10th European Conference on Computer Vision},
+ pages = {454-467}
+ year = 2008
+}
+
+@article{shape2,
+ author = {P.Das, O.Veksler, V. Zavadsky, Y. Boykov},
+ title = {Semiautomatic Segmentation with Compact Shape Prior},
+ journal = {Image and Vision Computing},
+ volume = 27,
+ issue = 1-2,
+ pages = {206-219}
+ year = 2009
+}
+
+@article{topology,
+ author = {Y. Zeng, D. Samaras, W. Chen, Q. Peng},
+ title = {Topology cuts: A novel min-cut/max-flow algorithm for
+topology preserving segmentation in N-D images},
+ journal = {Computer Vision and Image Understanding},
+ volume = 112,
+ issue = 1,
+ pages = {81--90}
+ year = 2008
+}
+
+@article{R1,
+ author = {P.A.V. Miranda and A.X. Falc{\~{a}}o and J.K. Udupa},
+ title = {Synergistic Arc-Weight  Estimation  for Interactive  Image
+Segmentation using Graphs},
+ journal = {Computer Vision and Image Understanding},
+ volume = 112,
+ issue = 1,
+ pages = {81--90}
+ year = 2008
+}
+\bibitem{}
+.
+\newblock .
+\newblock {\em }. doi:
+10.1016/j.cviu.2009.08.001, 2009.
+
+\bibitem{R3}
+A.X. Falc{\~{a}}o and J. Stolfi and R.A. Lotufo.
+\newblock The Image Foresting Transform: Theory, Algorithms, and
+Applications.
+\newblock {\em IEEE Trans. on Pattern Analysis and Machine
+Intelligence}. vol. 26, no. 1, pp.19--29, 2004.
+
+\bibitem{R4}
+A.X. Falc{\~{a}}o and F.P.G. Bergo.
+\newblock Interactive Volume
+Segmentation with Differential Image Foresting Transforms.
+\newblock {\em IEEE Trans. on
+Medical Imaging},vol. 23, no. 9, pp.1100--1108,2004.
+
+\bibitem{R5}
+P.A.V. Miranda and A.X. Falc{\~{a}}o.
+\newblock Links Between Image Segmentation Based on Optimum-Path Forest and Minimum Cut in
+Graph.
+\newblock {\em Journal of Mathematical Imaging and Vision.} issn 1573-7683,
+Springer Netherlands, 2009.

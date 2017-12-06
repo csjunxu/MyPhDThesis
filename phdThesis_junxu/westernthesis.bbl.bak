@@ -1,0 +1,381 @@
+\begin{thebibliography}{10}
+
+\bibitem{snake2}
+A.~A. Amini, T.E. Weymouth, and R.C. Jam.
+\newblock Using dynamic programming for solving variational problems in vision.
+\newblock {\em IEEE Trans. on Pattern Analysis and Machine Intelligence}, 12,
+  1990.
+
+\bibitem{Arbelaez}
+P.~Arbelaez, M.~Maire, C.~Fowlkes, and J.~Malik.
+\newblock From contours to regions: An empirical evaluation.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition},
+  pages 2294--2301, 2009.
+
+\bibitem{Ayed}
+B.~Ayed and A.~Mitiche.
+\newblock A region merging prior for variational level set image segmentation.
+\newblock {\em IEEE Transactions on Image Processing}, 17(12):2301--2311, 2008.
+
+\bibitem{Bellman}
+R.~Bellman.
+\newblock Dynamic programming.
+\newblock In {\em Princeton University Press}, 1957.
+
+\bibitem{Beucher}
+S.~Beucher and C.~Lantu{\~{e}}joul.
+\newblock Use of watersheds in contour detection.
+\newblock {\em International workshop on image processing, real-time edge and
+  motion detection}, 1979.
+
+\bibitem{Bleyer}
+M.~Bleyer and M.~Gelautz.
+\newblock Graph-based surface reconstruction from stereo pairs using image
+  segmentation.
+\newblock {\em SPIE Signal Processing and Target Recognition}, pages 288--299,
+  2005.
+
+\bibitem{yuri_pami1}
+Y.~Boykov, O.~Veksler, and R.~Zabih.
+\newblock Fast approximate energy minimization via graph cuts.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  23(11):1222--1239, 2001.
+
+\bibitem{Calderero2}
+F.~Calderero and F.~Marques.
+\newblock General region merging approaches based on information theory
+  statistical measures.
+\newblock {\em The 15th IEEE International Conference on Image Processing},
+  pages 3016--3019, 2008.
+
+\bibitem{Canny}
+J.~Canny.
+\newblock A computational approach to edge detection.
+\newblock {\em IEEE Trans. Pattern Analysis and Machine Intelligence},
+  8:679--698, 1986.
+
+\bibitem{Cheng}
+H.D Cheng and Y.~Sun.
+\newblock A hierarchical approach to color image segmentation using
+  homogeneity.
+\newblock {\em IEEE Transactions on Image Processing}, 9:2071--2082, 2000.
+
+\bibitem{meanshift}
+D.~Comanicu and P.~Meer.
+\newblock Mean shift: A robust approach toward feature space analysis.
+\newblock {\em IEEE Trans. on Pattern Analysis and Machine Intelligence},
+  24:603--619, 2002.
+
+\bibitem{Martin_pami}
+C.~Fowlkes D.~Martin and J.~Malik.
+\newblock Learning to detect natural image boundaries using local brightness,
+  color and texture cues.
+\newblock {\em IEEE Trans. on Pattern Analysis and Machine Intelligence},
+  26(5), 2004.
+
+\bibitem{Delong}
+A.~Delong, A.~Osokin, H.~Isack, and Y.~Boykov.
+\newblock Fast approximate energy minimization with label costs.
+\newblock {\em In IEEE conference on Computer Vision and Pattern Recognition},
+  2010.
+
+\bibitem{Calderero1}
+F.~Marques F.~Calderero.
+\newblock Region merging techniques using information theory statistical
+  measures.
+\newblock {\em IEEE Transactions on Image Processing}, 19:1567--1586, 2010.
+
+\bibitem{Falco}
+A.X. Falc{\~{a}}o, J.~Stolfi, and R.A. Lotufo.
+\newblock Ultrafast user-steered image segmentation paradigm:
+  live-wire-on-the-fly.
+\newblock {\em IEEE Transactions on Medical Imaging}, 19(1):55--62, 2000.
+
+\bibitem{Favaro}
+P.~Favaro and S.~Soatto.
+\newblock A variational approach to scene reconstruction and image segmentation
+  from motion blur cues.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition},
+  pages 631--637, 2004.
+
+\bibitem{Fernand1}
+M.~Fernand.
+\newblock Sequential algorithms for cell segmentation: maximum efficiency?
+\newblock {\em International symposium on clinical cytometry and histometry,
+  Scholoss Elmau}, 1986.
+
+\bibitem{Fernand2}
+M.~Fernand.
+\newblock Hierarchies of partitions and morphological segmentation.
+\newblock {\em IEEE Workshop on scale-space and Morphology in computer vision},
+  2001.
+
+\bibitem{Morden}
+D.A. Forsyth and J.Ponce.
+\newblock Computer vision: A modern approach.
+\newblock In {\em Prentice Hall}, 2002.
+
+\bibitem{Yuri_CT}
+G.~Funka-lea, Y.~Boykov, C.~Florin, M.~Jolly, R.~Moreau-gobard, R.~Ramaraj, and
+  D.~Rinck.
+\newblock Automatic heart isolation for ct coronary visualization using
+  graph-cuts.
+\newblock {\em In IEEE International Symposium on Biomedical Imaging}, pages
+  614--617, 2006.
+
+\bibitem{Geman1}
+S.~Geman and D.~Geman.
+\newblock Stochastic relaxation, gibbs distribution and the bayesian
+  restoration of images.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  6(6):721--741, 1984.
+
+\bibitem{Geman3}
+S.~Geman and C.~Graffigne.
+\newblock Markov random field image models and their applications to computer
+  vision.
+\newblock {\em In A. M. Gleason (Ed.), Proceedings of the International
+  Congress of Mathematicians}, pages 1496--1517, 1987.
+
+\bibitem{Geman2}
+S.~Geman and D.~McClure.
+\newblock Bayesian image analysis: An application to single photon emission
+  tomography.
+\newblock {\em In Proceedings of the Statistical Computing Section}, pages
+  12--18, 1985.
+
+\bibitem{Gonzalez}
+R.C. Gonzalez and R.E. Woods.
+\newblock Digital image processing.
+\newblock Addison Wesley, Reading, MA, 1992.
+
+\bibitem{Gordon_gestalt}
+I.E. Gordon.
+\newblock Theories of visual perception.
+\newblock In {\em First ed. John Wiley and Sons}, 1989.
+
+\bibitem{Grady_handbook}
+L.~Grady, Y.~Sun, and J.~Williams.
+\newblock Handbook of mathematical models in computer vision.
+\newblock pages 453--469. Springer, 2006.
+
+\bibitem{Haris}
+K.~Haris, S.N. Estradiadis, N.~Maglaveras, and A.K Katsaggelos.
+\newblock Hybrid image segmentation using watersheds and fast region merging.
+\newblock {\em IEEE Transactions on Image Processing}, 7:1684--1699, 1998.
+
+\bibitem{Jolly}
+M.P. Jolly, H.~Xue, L.~Grady, and J.~Guehring.
+\newblock Combining registration and minimum surfaces for the segmentation of
+  the left ventricle in cardiac cine mr images.
+\newblock {\em Proc. of Medical Image Computing and Computer-Assited
+  Intervation}, pages 910--918, 2009.
+
+\bibitem{Koffka_gestalt}
+K.~Koffka.
+\newblock Principles of gestalt psychology.
+\newblock In {\em New York: Harcourt, Brace and World}, 1935.
+
+\bibitem{Lam}
+C.~Lam and S.~Yuen.
+\newblock An unbiased active contour algorithm for object tracking.
+\newblock {\em Pattern Recognition Letters}, 19(5-6):491--498, 1998.
+
+\bibitem{LaValle}
+S.~LaValle and S.M. Hutchinson.
+\newblock Bayesian region merging probability for parametric image models.
+\newblock {\em Proc. IEEE Computer Soc.Conf. Computer Vision Pattern
+  Recognition}, pages 778--779, 1993.
+
+\bibitem{Lee}
+S.~Lee and M.M. Crawford.
+\newblock Unsupervised multistage image classification using hierarchical
+  clustering with a bayesian similarity measure.
+\newblock {\em IEEE Transactions on Image Processing}, 14:312--320, 2005.
+
+\bibitem{Liu}
+H.~Liu, Q.~Guo, M.~Xu, and I.~Shen.
+\newblock Fast image segmentation using region merging with a k-nearest
+  neighbor graph.
+\newblock {\em IEEE Conference on Cybernetics and Intelligent Systems}, pages
+  179--184, 2008.
+
+\bibitem{Marcotegui}
+B.~Marcotegui and S.~Beucher.
+\newblock Fast implementation of waterfall based on graphs.
+\newblock {\em Computational Imaging and Vision}, 30:177--186, 2005.
+
+\bibitem{Martin_database}
+D.~Martin, C.~Fowlkes, D.~Tal, and J.~Malik.
+\newblock A database of human segmented natural images and its application to
+  evaluating segmentation algorithms and measuring ecological statistics.
+\newblock {\em International Conference on Computer Vision}, 2001.
+
+\bibitem{snake1}
+A.~Mishra, P.~Fieguth, and D.~Clausi.
+\newblock Accurate boundary localization using dynamic programming on snakes.
+\newblock {\em Proceedings of the Canadian Conference on Computer and Robot
+  Vision}, 2008.
+
+\bibitem{Moore3}
+A.~Moore and S.~Prince.
+\newblock ``lattice cut'' - constructing superpixels using layer constraints.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition},
+  pages 2117--2124, 2010.
+
+\bibitem{Moore1}
+A.~Moore, S.~Prince, J.~Warrell, U.~Mohammed, and G.~Jones.
+\newblock Superpixel lattices.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition},
+  pages 1--8, 2008.
+
+\bibitem{Moore2}
+A.~Moore, S.~Prince, J.~Warrell, U.~Mohammed, and G.~Jones.
+\newblock Scene shape priors for superpxiel segmentation.
+\newblock {\em International Conference on Computer Vision}, pages 771--778,
+  2009.
+
+\bibitem{Moscheni}
+F.~Moscheni, S.~Bhattacharjee, and M.~Kunt.
+\newblock Spatio-temporal segmentation based on region merging.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  20:897--915, 1998.
+
+\bibitem{Nock}
+R.~Nock and F.~Nielsen.
+\newblock Statistical region merging.
+\newblock {\em IEEE Trans. on Pattern Analysis and Machine Intelligence},
+  26:1452--1458, 2004.
+
+\bibitem{Osher}
+S.J Osher and R.P Fedkiw.
+\newblock Level set methods and dynamic implicit surfaces.
+\newblock Springer Verlag, 2002.
+
+\bibitem{Paul}
+B.~Paul, L.~Zhang, and X.~Wu.
+\newblock Canny edge detection enhancement by scale multiplication.
+\newblock {\em IEEE. Trans. on Pattern Analysis and Machine Intelligence},
+  27:1485--1490, 2005.
+
+\bibitem{Peng}
+B.~Peng, L.~Zhang, and J.~Yang.
+\newblock Iterated graph cuts for image segmentation.
+\newblock {\em Asian Conference on Computer Vision}, 2009.
+
+\bibitem{Felzenszwalb1}
+D.P.~Huttenlocher P.F.~Felzenszwalb.
+\newblock Image segmentation using local variations.
+\newblock {\em Proceedings of IEEE International Conference on Computer Vision
+  and Pattern Recognition}, pages 98--104, 1998.
+
+\bibitem{Rijsbergen}
+C.~Van Rijsbergen.
+\newblock Information retrieval.
+\newblock {\em second ed. Dept. of Computer Science, Univ. of Glasgow}, 1979.
+
+\bibitem{Russell}
+B.~Russell, A.~Efros, J.~Sivic, W.~Freeman, and A.~Zisserman.
+\newblock Using multiple segmentations to discover objects and their extent in
+  image collections.
+\newblock {\em IEEE Conference on Computer Vision and Pattern Recognition},
+  2006.
+
+\bibitem{Seo}
+K.H. Seo, J.H. Shin, W.~Kim, and J.J. Lee.
+\newblock Real-time object tracking and segmentation using adaptive color snake
+  model.
+\newblock {\em International Journal of Control, Automation, and Systems},
+  4(2):236--246, 2006.
+
+\bibitem{Sethian}
+J.A Sethian.
+\newblock Level set methods and fast marching methods.
+\newblock Cambridge University Press, 1999.
+
+\bibitem{Shi}
+J.~Shi and J.~Malik.
+\newblock Normalized cuts and image segmentation.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  22:888--905, 1997.
+
+\bibitem{Shu}
+Y.~Shu, G.A, Bilodeau, and F.~Cheriet.
+\newblock Segmentation of laparoscopic images: integrating graph-based
+  segmentation and multistage region merging.
+\newblock {\em The 2nd Canadian Conference on Computer and Robot Vision}, pages
+  429--436, 2005.
+
+\bibitem{Tremeau_Homo}
+A.~Tr{\~{e}}meau and P.~Colantoni.
+\newblock Regions adjacency graph applied to color image segmentation.
+\newblock {\em IEEE Transactions on Image Processing}, 9:735--744, 2000.
+
+\bibitem{watershed}
+L.~Vincent and P.~Soiller.
+\newblock Watersheds in digital spaces: an efficient algorithm based on
+  immersion simulations.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  13(6):583--598, 1991.
+
+\bibitem{Wald}
+A.~Wald.
+\newblock Sequential analysis.
+\newblock In {\em Wiley Publications in Statistics}, 1947.
+
+\bibitem{Wan}
+T.~Wan, N.~Canagarajah, and A.~Achim.
+\newblock Statistical multiscale image segmentation via alpha-stable modeling
+  of wavelet coefficients.
+\newblock {\em IEEE Transactions on Multimedia}, 11:624--633, 2009.
+
+\bibitem{RatioCut}
+S.~Wang and J.~M. Siskind.
+\newblock Image segmentation with ratio cut.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  25(6):675--690, 2003.
+
+\bibitem{Wertheimer}
+M.~Wertheimer.
+\newblock Laws of organization in perceptual forms (partial translation),a
+  sourcebook of gestalt psycychology.
+\newblock pages 71--88. W.B.Ellis, ed.Harcourt, Brace, 1938.
+
+\bibitem{Wu_Homo}
+Z.~Wu.
+\newblock Homogeneity testing for unlabeled data: A performance evaluation.
+\newblock 55:370--380, 1993.
+
+\bibitem{wu}
+Z.~Wu and R.~Leahy.
+\newblock An optimal graph theoretic approach to data clustering theory and its
+  application to image segmentation.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  15:1101¨C1113, 1993.
+
+\bibitem{Wu_minicut}
+Z.~Wu and R.~Leahy.
+\newblock An optimal graph theoretic approach to data clustering theory and its
+  application to image segmentation.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  15(11):1101--1113, 1993.
+
+\bibitem{yuri_pami2}
+V.~Kolmogorov Y.~Boykov.
+\newblock An experimental comparison of min-cut/max-flow algorithms for energy
+  minimization in vision.
+\newblock {\em IEEE transactions on Pattern Analysis and Machine Intelligence},
+  26(9):1124--1137, 2004.
+
+\bibitem{Yu}
+S.~Yu, R.~Gross, and J.~Shi.
+\newblock Concurrent object segmentation and recognition with graph
+  partitioning.
+\newblock {\em Neural Information Processing Systems}, 2002.
+
+\bibitem{Zhanglei}
+L.~Zhang and B.~Paul.
+\newblock Edge detection by scale multiplication in wavelet domain.
+\newblock {\em Pattern Recognition Letters}, 23:1771--1784, 2002.
+
+\end{thebibliography}

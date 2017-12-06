@@ -1,0 +1,550 @@
+\chapter{Robust Object Tracking via Active Feature Selection}\label{chap:AFS}
+%
+\section{Introduction}
+\label{sec:introduction}
+The tracking by detection methods treat tracking as a classification task, which separates object from its local background via a discriminative classifier. When training the classifier, the selection of positive and negative samples affects much the performance of the tracker. Most trackers~\cite{avidan2004support,avidan2007ensemble,Grabner_BMVC_2006,liu2007gradient,wang2005online} only choose one positive sample, i.e., the tracking result in the current frame. If the tracked target location is not accurate, the classifier will be updated based on a less effective positive sample, thereby leading to visual drift over time. To alleviate the drifting problem, multiple samples near the tracked target location can be used to train the classifier. However, the ambiguity occurs if the traditional supervised learning method is used to train the classifier~\cite{Babenko_pami_2011}.
+
+%
+Recently, a multiple instance learning (MIL) approach~\cite{Babenko_pami_2011} is proposed to solve the ambiguity problem in tracking. The samples are put into bags and only the labels of the bags are provided. The bag is positive if one or more instances in it are positive while the bag is negative when all of the instances in it are negative. The samples near the tracking location are put into the positive bag while the samples far from the tracking location are put into the negative bag. Then, a classifier is designed by optimizing the bag likelihood function. To handle the appearance variations over time, an online MIL boosting algorithm is proposed to greedily select the discriminative features from a feature pool by maximizing the bag likelihood function. Finally, the selected weak classifiers (each corresponds to a feature) are linearly combined to a strong classifier. The strong classifier is then used to separate object from background in the next frame. Empirical studies on some challenging sequences have shown that the MIL tracker can better handle visual drift than most state-of-the-art trackers.
+%
+
+Despite its success, the MIL tracker~\cite{Babenko_pami_2011} has the following shortcomings. First, the selected features may be less informative. In order to make the classifier discriminative enough, a relatively large number of features are selected from the feature pool. This enlarges the computational burden. Second, the more features are selected, the higher the probability that less discriminative features are included. These less discriminative features can degrade the performance of the classifier, and cause drift over time.
+
+%
+To address the above problems, inspired by the active learning method~\cite{settles2010active} we propose a novel feature selection scheme to select the more informative features for visual tracking, namely, the active feature selection (AFS) based tracker. An online feature selection scheme is proposed by optimizing a bag Fisher information function instead of the bag likelihood function. Thus, the selected features are much more informative than those selected by the bag likelihood function in MIL tracker~\cite{Babenko_pami_2011}. Consequently, we can use less features to design a classifier which is more efficient and robust than the classifier induced by the MIL tracker. Our experimental evaluations on challenging video clips validate the superior performance of AFS tracker to state-of-the-art trackers in terms of efficiency, accuracy and robustness.
+%
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{images/systemAFS}
+\vspace{-2mm}
+\end{center}
+\caption{Illustration of how our AFS tracking system works}
+\label{fig:systemAFS}
+\end{figure}
+%
+\section{Tracking with Adaptive Feature Selection}
+%
+\subsection{System Overview}
+Figure~\ref{fig:systemAFS} illustrates the basic flow of our tracking system. There are two important components in our tracking system. One is how to detect the object location in the new frame, and the other is how to update the classifier. We represent the object location in the $t$-th frame as $\textbf{l}_t^\star$. A set of patches near the old object location are cropped as $D^s=\{\textbf{x}||\textbf{l}(\textbf{x})-\textbf{l}_{t-1}^\star|<s\}$, where $s$ is a search radius and $\textbf{x}$ denotes the image patch. Then, we compute the classifier response $H(\textbf{x})$ for all $\textbf{x}\in D^s$ in which the classifier $H(\textbf{x})=\sum_k h_k(\textbf{x})$ is a linear combination of some weak classifier $h_k(\textbf{x})$. Finally, we update the object location using a greedy strategy
+%
+\begin{equation}
+\textbf{l}_t^\star=\textbf{l}\big({\arg\max}_{\textbf{x}\in D^s}H(\textbf{x})\big).
+\label{eq:argmaxHx}
+\end{equation}
+%
+After the object location is updated, a set of samples $D^r=\{\textbf{x}||\textbf{l}(\textbf{x})-\textbf{l}_t^\star|<r\}$, where $r$ is a scalar radius, are cropped and put into a positive bag. For the negative samples, we take a small random set of samples from set $D^{r,\beta}=\{\textbf{x}|r<|\textbf{l}(\textbf{x})-\textbf{l}_t^\star|<\beta\}$ , where $\beta$ is a scalar radius. We have found that good results can also be achieved by selecting the negative samples a little far from the target sample as in ODFS and CT methods. Because $D^{r,\beta}$ contains a large number of samples. Note that injecting the negative samples far from the object location may be beneficial for classification if the backgrounds between two consecutive frames do not changes much. On the contrary, injecting the negative samples far from the object location may degrade the tracking performance because the negative patches between two consecutive frame will correlate each other less, and more noises from the background are added into the training procedure. We put all the negative samples into a negative bag. Then, we update the classifier via maximizing the bag Fisher information loss function in an online manner.
+
+%
+\subsection{MIL Tracker}
+%
+We first briefly review the MIL tracker~\cite{Babenko_pami_2011} that is most related to our work. The MIL method was introduced by Dietterich et al.~\cite{dietterich1997solving} to deal with the drug activity prediction. Suppose that we have a set of $N$ bags $\{X_1,\ldots,X_N\}$, where each bag $X_i=\{\textbf{x}_{i1},\ldots,\textbf{x}_{in_i}\}$  has $n_i$ instances. Let $y_i\in\{0,1\}$ be the label of bag $X_i$ and $y_{ij}\in\{0,1\}$ the label of instance $\textbf{x}_{ij}$. The MIL defines that if bag $X_i$ is positive, then at least one of the instance labels in it is positive. If the bag label is zero, then all of the corresponding instance labels are zero. The MIL tracker seeks for the discriminative classifier $H(\textbf{x})$, which can return the conditional probability $p(y=1|\textbf{x})$. Since the discriminative classifier is an instance classifier that is related to the conditional probabilities of the instances, the Noisy-OR model is used to exploit the conditional probabilities of the instances to estimate the bag probability
+%
+\begin{equation}
+p(y_i=1|X_i)=1-\prod_j(1-p(y_{ij}=1|\textbf{x}_{ij})),
+\label{eq:noisyOR}
+\end{equation}
+%
+where the instance probability $p(y_{ij}=1|\textbf{x}_{ij})$ is modeled as
+%
+\begin{equation}
+p(y_{ij}=1|\textbf{x}_{ij})=\sigma(H(\textbf{x}_{ij})),
+\label{eq:instanceprob}
+\end{equation}
+%
+where $\sigma(z)=\frac{1}{1+e^{-z}}$  is the sigmoid function, and the classifier $H(\textbf{x})$ is learned by maximizing the following bag log likelihood loss function
+%
+\begin{equation}
+\mathcal{L}(H)=\sum_i\bigg(y_i\log(p(y_i=1|X_i))+(1-y_i)\log(1-p(y_i=1|X_i))\bigg).
+\label{eq:loglikehood}
+\end{equation}
+%
+
+%
+To handle the appearance changes over time, an online MIL boosting approach is proposed to update the classifier $H(\textbf{x})$. First, a weak classifier pool is maintained, and then a small number of weak classifiers are greedily selected from the pool by maximizing the log likelihood of the bag
+%
+\begin{equation}
+h_k={\arg\max}_{h\in\Phi}\mathcal{L}(H_{k-1}+h),
+\label{eq:argmaxLoglike}
+\end{equation}
+%
+where $H_{k-1}=\sum_{m=1}^{k-1}h_m$ is a strong classifier by assembling the first $k-1$ weak classifiers, and $\Phi=\{h_1,\ldots,h_M\}$ is the weak classifier pool with $M$ weak classifiers. Similar to the boosting feature selection method in face detection~\cite{viola2001rapid}, weak classifier selection can be viewed as feature selection because each weak classifier corresponds to a feature. Feature selection has been proven very useful to reduce visual drift in visual tracking~\cite{Collins_pami_2005}. Moreover, the classifier can run efficiently because the number of the selected features is much smaller than the size of the feature pool.
+%
+\subsection{Principle of AFS}
+From the formulation of the log likelihood function in~(\ref{eq:loglikehood}), we can see that the feature selection scheme in~(\ref{eq:argmaxLoglike}) is to select the weak classifiers that maximize the conditional probability $p(y_i=1|X_i)$ of the positive bag $X_i$ while minimizing the conditional probability $p(y_j=1|X_j)$ of the negative bag $X_j$. We argue that the selected features can be less informative than those selected by optimizing the Fisher information function in our method to be introduced below. Therefore, to ensure the enough discriminative information, in the MIL tracker a relatively large number of features ($K=50$) are selected from a feature pool with a relatively large size ($M=250$), while in our AFS tracker only $K=15$ features are selected from a pool with $M=50$ features. Moreover, if too many features are selected, the discrimination between the object and background features can be reduced.
+
+%
+Similar to the MIL tracker~\cite{Babenko_pami_2011}, we take the classifier as the following form
+%
+\begin{equation}
+H(\textbf{x})=\bm{\alpha}^\top \textbf{h}(\textbf{x}),
+\label{eq:strongclf}
+\end{equation}
+%
+where $\bm{\alpha}=(\alpha_1,\ldots,\alpha_M)^\top$ is a weight vector and $\textbf{h}=(h_1,\ldots,h_M)^\top$ is a weak classifier vector. Each element in $\textbf{h}$ is a decision stump function that returns the binary labels (i.e., $+1$ or $-1$). In order to devise the classifier $H(\textbf{x})$, we need to estimate its corresponding parameters $\bm{\alpha}$. The  Cramer-Rao inequality~\cite{cover2012elements} shows that any unbiased estimator $\textbf{t}_n$ of $\bm{\alpha}$ based on $n$ independent and identically distributed samples from the probability $p(y|\bm{\alpha})$, the covariance of $\textbf{t}_n$ should satisfy that $cov(\textbf{t}_n)-\frac{1}{n}I(\bm{\alpha})^{-1}$ is a nonnegative definite matrix, where $I(\bm{\alpha})$ is the Fisher information matrix defined as~\cite{cover2012elements}
+%
+\begin{equation}
+I(\bm{\alpha})=-\int p(y|\bm{\alpha})\frac{\partial^2}{\partial\bm{\alpha}^2}\log p(y|\bm{\alpha})dy.
+\label{eq:fisherinformation}
+\end{equation}
+%
+The Fisher information matrix represents the overall uncertainty of the classification model which is often used in active learning method~\cite{zhang2000value}. In~\cite{zhang2000value}, for each query in active learning, an unlabeled sample that can decrease the Fisher information most is selected. To measure the uncertainty of the classification model in our AFS tracker, we use the Fisher information matrix based on the samples from the bag probability
+%
+\begin{equation}
+I(\bm{\alpha})=\sum_i\bigg(y_i p(y_i|X_i,\bm{\alpha})\frac{\partial^2}{\partial\bm{\alpha}^2}\log p(y_i|X_i,\bm{\alpha})+(1-y_i)p(y_i|X_i,\bm{\alpha})\frac{\partial^2}{\partial\bm{\alpha}^2}\log p(y_i|X_i,\bm{\alpha})\bigg)+\delta I_m,
+\label{eq:fisherinformationsum}
+\end{equation}
+%
+where $y_i\in\{0,1\}$ is the bag label and $\delta I_m$ (where $\delta>0$ is a scalar parameter and $I_m$ is an identity matrix) is added to make $I(\bm{\alpha})$ non-singular. Note that $\delta I_m$ is a trivial term that can be eliminated in our feature selection criterion~(\ref{eq:argmaxHx}). In~(\ref{eq:fisherinformationsum}), $p(y_i=1|X_i,\bm{\alpha})$ and $p(y_i=0|X_i,\bm{\alpha})$ are expressed as follows by combining~(\ref{eq:noisyOR}),~(\ref{eq:instanceprob}) and~(\ref{eq:strongclf})
+%
+\begin{equation}
+p(y_i=1|X_i,\bm{\alpha})=1-\prod_j(1-\sigma(\bm{\alpha}^\top\textbf{h}(\textbf{x}_{ij}))),
+p(y_i=0|X_i,\bm{\alpha})=\prod_j(1-\sigma(\bm{\alpha}^\top\textbf{h}(\textbf{x}_{ij}))).
+\label{eq:noisyORprob}
+\end{equation}
+%
+Note that our information matrix~(\ref{eq:fisherinformationsum}) is different from the object functions of the recently developed multiple-instance active learning (MIAL) methods~\cite{settles2008multiple,zhang2010interactive} because our objective is to measure the uncertainty of the classification model for the selected features when the bag labels are known, while the objective of MIAL is to measure the uncertainty of the classification model for an unlabeled sample.
+
+%
+The inverse Fisher information matrix $I(\bm{\alpha})^{-1}$ is the lower bound of the covariance matrix of the estimated $\bm{\alpha}$~\cite{cover2012elements}. As a particular case, $det(I(\bm{\alpha}))^{-1}$ is the lower bound of the product of the variances for the elements in $\bm{\alpha}$. Thus, Liao et al.~\cite{liao2005logistic} proposed to select the samples that maximize $det(I(\bm{\alpha}))$ for active learning to reduce the uncertainty of $\bm{\alpha}$. However, since it is difficult to compute $det(I(\bm{\alpha}))$ in our objective function~(\ref{eq:fisherinformationsum}), we relax it to minimize the trace of matrix $I(\bm{\alpha})$ (denote by $tr(I(\bm{\alpha}))$) because the upper bound of $det(I(\bm{\alpha}))$ is $\big(\frac{1}{m}tr(I(\bm{\alpha}))\big)^m$. It is easy to validate that $det(I(\bm{\alpha}))\leq\big(\frac{1}{m}tr(I(\bm{\alpha}))\big)^m$ as follows: since $I(\bm{\alpha})$ is a positive definite symmetric matrix~\cite{cover2012elements}, all of its eigenvalues $\{\lambda_i>0,i=1,\ldots,m\}$ are positive~\cite{horn1990matrix}. Thus, we have the following inequality~\cite{horn1990matrix}
+%
+\begin{equation}
+det(I(\bm{\alpha}))=\prod_{i=1}^m\lambda_i\leq\bigg(\frac{1}{m}\sum_{i=1}^m\lambda_i\bigg)^m=\bigg(\frac{1}{m}tr(I(\bm{\alpha}))\bigg)^m,
+\label{eq:detI}
+\end{equation}
+%
+where $tr(I(\bm{\alpha}))$ is represented by
+%
+\begin{equation}
+\begin{aligned}
+tr(I(\bm{\alpha}))=-m\sum_i\bigg(y_i\bigg(\sum_j p_i p_{ij}(1-p_{ij})+ p_{ij}(\frac{p_{ij}}{p_i}-1)\bigg)
++(1-y_i)p_i\sum_j p_{ij}(1-p_{ij})\bigg)+m\delta,
+\label{eq:trIsum}
+\end{aligned}
+\end{equation}
+%
+where $p_i=p(y_i|X_i,\bm{\alpha})$ and $p_{ij}=p(y_{ij}|\textbf{x}_{ij},\bm{\alpha})$. In~(\ref{eq:trIsum}), we have set $\textbf{h}(\textbf{x})^\top\textbf{h}(\textbf{x})=m$ because each element $h_i\in\{+1,-1\}$ in $\textbf{h}(\textbf{x})$ is a decision stump function.
+
+%
+Although the above equation (\ref{eq:trIsum}) seems complex, its physical meaning is simple. For the positive bag, as learning proceeds and the bag probability approaches to the target, we have $p(y_i=1|X_i,\bm{\alpha})\approx 1$~\cite{viola2006multiple}. Thus the component of the positive bag in $tr(I(\bm{\alpha}))$ can be simplified to $-m(p(y_i=1|X_i,\bm{\alpha})-1)\sum_j p(y_{ij}=1|\textbf{x}_{ij},\bm{\alpha})(1-p(y_{ij}=1|\textbf{x}_{ij},\bm{\alpha}))$.
+In order to minimize this function, we need to maximize two terms $p(y_i=1|X_i,\bm{\alpha})$ and $p(y_{ij}=1|\textbf{x}_{ij},\bm{\alpha})(1-p(y_{ij}=1|\textbf{x}_{ij},\bm{\alpha}))$. Similar to the bag log likelihood function~(\ref{eq:loglikehood}), the first term is to maximize the conditional probability of the positive bag. The second term reaches its maximum value at $p(y_{ij}=1|\textbf{x}_{ij},\bm{\alpha})=0.5$, which measures the most classification uncertainty for instance $\textbf{x}_{ij}$. The component of the negative bag in $tr(I(\bm{\alpha}))$ also contains two parts: $p(y_i=0|X_i,\bm{\alpha})$ and $p(y_{ij}=0|\textbf{x}_{ij},\bm{\alpha})(1-p(y_{ij}=0|\textbf{x}_{ij},\bm{\alpha}))$. The analysis for these two components is the same as those for the positive bag. Therefore, minimizing $tr(I(\bm{\alpha}))$ can be deemed as a tradeoff between the bag probability and the classification uncertainty for the instances. In the following, we propose an online AFS approach to selecting the informative features via minimizing $tr(I(\bm{\alpha}))$.
+
+%
+\subsection{Online AFS Boosting}
+  We take a statistical view of boosting~\cite{friedman2000additive} where the weak classifiers (each weak classifier corresponds to a feature) are selected sequentially to optimize a specific objective function $\mathcal{F}$  as
+%
+\begin{equation}
+(h_k,\alpha_k)={\arg\min}_{h\in\Phi,\alpha\in\mathbb{R}}F(H_{k-1}+\alpha h),
+\label{eq:onlinemin}
+\end{equation}
+%
+where $H_{k-1}=\sum_{i=1}^{k-1}h_i$ is a strong classifier with the first $k-1$ weak classifiers and $\Phi$ is the set of all possible weak classifiers. We use this forward feature selection method because of its efficiency. For online learning, we always maintain a pool of $M$ candidate weak classifiers. When updating the strong classifier, we first incrementally update the weak classifiers in the pool with the newly cropped samples, and then select sequentially $K<M$ the most discriminative weak classifiers from the pool by minimizing the Fisher information criterion
+%
+\begin{equation}
+(h_k,\alpha_k)={\arg\min}_{h\in\{h_1,\ldots,h_M\},\alpha\in\mathbb{R}}F(H_{k-1}+\alpha h),
+\label{eq:onlinemin2}
+\end{equation}
+%
+where $F(H_{k-1}+\alpha h)=F(\bm{\alpha}^\top\textbf{h})=tr(I(\bm{\alpha}))$ with $\bm{\alpha}=(\alpha_1,\ldots,\alpha_{k-1},\alpha)^\top$ and $\textbf{h}=(h_1,\ldots,h_{k-1},h)^\top$. To simply the problem, as in the MIL tracker~\cite{Babenko_pami_2011}, in our implementation we integrate the scalar weights $\bm{\alpha}$  into the weak classifiers $\textbf{h}$  in order to return real values. Therefore, the weight vector $\bm{\alpha}$  cannot be used to indicate the importance of the weak classifiers. Note that our feature selection criterion~(\ref{eq:onlinemin2}) is a greedy forward feature selection method. Though this greedy feature selection method is sub-optimal, it is very efficient for visual tracking.
+%
+Algorithm~\ref{alg:onlineAFSBoosting} shows the pseudo-code of online AFS Boosting, which is the key part of the tracking algorithm illustrated in Figure~\ref{fig:systemAFS}.
+%
+\begin{algorithm}[!ht]
+\caption{Online AFS Boosting}
+\begin{algorithmic}\label{alg:onlineAFSBoosting}
+\STATE \textbf{Input:} Dataset
+$\{X_i,y_i\}_{i=0}^N$, where $X_i=\{\textbf{x}_{i1},\textbf{x}_{i2},\ldots\}$ is the $i$-th bag and $y_i\in\{0,1\}$
+\begin{enumerate}\setlength{\itemsep}{-\itemsep}
+\item Update all the $M$ weak classifiers in the pool with data $\{\textbf{x}_{ij},y_i\}$
+\item Initialize $H_0(\textbf{x}_{ij})=0$ for all $i,j$
+\item \textbf{For} $k=1$ to  $K$ \textbf{do}
+\item \quad \textbf{For} $m=1$ to $M$ \textbf{do}
+\item \quad\quad $F_m=F(H_{k-1}+h_m)$
+\item \quad \textbf{End for}
+\item \quad $m^{\star}={\arg\min}_{m}(F_{m})$
+\item \quad $h_{k}\leftarrow h_{m^{\star}}$
+\item \quad $H_{k}\leftarrow H_{k-1}+h_k$
+\item \textbf{End for}
+\end{enumerate}
+\STATE\textbf{Output:} Classifier
+$H(\textbf{x})=\sum_{k=1}^{K}h_{k}(\textbf{x})$
+\end{algorithmic}
+\end{algorithm}
+%
+\subsection{Advantages over The MIL Tracker}
+Our Fisher information criterion~(\ref{eq:onlinemin2}) can select the features which are much more informative than those selected from the log likelihood criterion~(\ref{eq:argmaxLoglike}) in the MIL tracker, because our criterion maximizes the uncertainty of the selected features. Thus, we only need to actively select a small number of weak classifiers which are more discriminative than those used in the MIL tracker. In our experiments, we select $K=15$ weak classifiers from a pool with $M=50$ candidate weak classifiers, which are much less than the MIL tracker where $K=50$ and $M=250$. Although our objective function~(\ref{eq:trIsum}) seems more complex than that used in MIL tracker (i.e.,~(\ref{eq:loglikehood})), their computational complexities are comparative because only addition and multiplication are needed to compute bag and instance probabilities. Moreover, the MIL tracker needs to update more classifiers ($M=250$) than ours ($M=50$), and select more weak classifier ($K=50$) than our method ($K=15$). Thus, overall our tracker is more efficient than MIL tracker (please refer to our experimental results in next section). In addition, because our selected weak classifiers are more informative than those selected by the MIL tracker, our appearance model (i.e., the strong classifier) is able to better handle visual drift.
+%
+\subsection{Implementation Details}
+We use the same Haar-like image features as those used by the MIL tracker~\cite{Babenko_pami_2011} which can be efficiently computed using the integral image technique~\cite{Viola_CVPR_2001}. Each feature $f_i$ is a Haar-like image feature computed by the sum of weighted pixels in $2\sim4$ randomly selected rectangles. Each weak classifier $h_i$ returns the log odds ratio
+%
+\begin{equation}
+h_i=\log\bigg(\frac{p(y=1|f_i(\textbf{x}))}{p(y=0|f_i(\textbf{x}))}\bigg)=\log\bigg(\frac{p(f_i(\textbf{x})|y=1)}{p(f_i(\textbf{x})|y=0)}\bigg),
+\label{eq:weakclf}
+\end{equation}
+%
+where we assume uniform prior $p(y=1)=p(y=0)$, $p(f_i(\textbf{x})|y=1)\sim \mathcal{N}(\mu_1,\sigma_1)$ and $p(f_i(\textbf{x})|y=0)\sim \mathcal{N}(\mu_0,\sigma_0)$. The parameters $\mu_t,\sigma_t,t\in\{0,1\}$ can be incrementally updated based on maximal likelihood estimation~\cite{bishop2006pattern}
+%
+\begin{equation}
+\mu_t\leftarrow\lambda\mu_t+(1-\lambda)\mu,
+\sigma_t\leftarrow\sqrt{\lambda\sigma_t^2+(1-\lambda)\sigma^2+\lambda(1-\lambda)(\mu_t-\mu)^2},
+\label{eq:onlineupdate}
+\end{equation}
+%
+where $\{(\textbf{x}_1,y_1),\ldots,(\textbf{x}_n,y_n)\}$ are the new data, $0<\lambda<1$ is a learning parameter, $\mu=\frac{1}{n}\sum_{k|y_i=t}f_i(\textbf{x}_k)$ and $\sigma=\sqrt{\frac{1}{n}\sum_{k|y_i=t}(f_i(\textbf{x}_k)-\mu)^2}$.
+%
+\section{Experimental Results}
+%
+As the proposed AFS tracker is developed to address several issues of MIL based tracking method (See Section~\ref{sec:introduction}), we compare it with the MIL tracker~\cite{Babenko_pami_2011} on $12$ challenging video sequences (all are publicly available). The other compared trackers are: fragment tracker (Frag)~\cite{Adam_CVPR_2006}, online AdaBoost tracker (OAB)~\cite{Grabner_BMVC_2006}, semi-supervised boosting tracker (SemiB)~\cite{Grabner_ECCV_2008}, incremental visual tracker (IVT)~\cite{Ross_IJCV_2008}, $\ell_1$-tracker~\cite{Mei_PAMI_2011}, and visual tracking decomposition (VTD) method~\cite{Kwon_CVPR_2010}. The default setting for the MIL tracker is to select $K=50$ weak classifiers from a pool with $M=250$ candidate weak classifiers. We also test the MIL tracker with setting $K=15$ and $M=50$ (we call it $MIL_{15}$).
+
+%
+\textit{We fix the parameters of the proposed tracker for all the experiments to demonstrate its robustness and stability}. For the other competing algorithms, we use the original source codes or binary codes provided by the original authors~\cite{Adam_CVPR_2006,Grabner_BMVC_2006,Grabner_ECCV_2008,Ross_IJCV_2008,Kwon_CVPR_2010,Mei_PAMI_2011} and tune their parameters for best performance. Since all the competing trackers (except for~\cite{Adam_CVPR_2006}) involve randomness, we repeat each experiment $10$ times and report the average results. We have tested many different initial rectangles and selected the initial rectangles that yield good results for most competing methods. Our tracker is implemented in MATLAB and runs at $15$ frames per second on a Pentium Dual-Core $2.10$ GHz CPU with $1.95$ GB RAM. The videos used in the experiments can be found at \url{ http://youtu.be/3UobcBa-V1Q}. TABLE I lists the speed of all trackers in terms of average frames per second (FPS). Note that the source code of the MIL tracker is written in C++ which runs at $10$ FPS, while the $MIL_{15}$ tracker runs at 25 FPS. However, as shown in Section 4.2, the MIL15 tracker performs poorly in most experiments. We also implemented our algorithm in C++ ad it runs at 35 FPS without optimization, which is more than 3 times faster than the MIL tracker.
+%
+\begin{table*}[t]
+\caption{Average frames per second (FPS) of AFS and other state-of-the-art trackers}
+{
+\scriptsize
+\center\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}\hline
+Traker   &Frag &OAB  &MIL  &$MIL_{15}$ &SemiB   &IVT   &$\ell_1$   &VTD   &AFS\\\hline
+Average FPS &3    &8    &10         &25      &6     &11          &0.1  &0.01  &15\\\hline
+
+\end{tabular}
+
+}
+\end{table*}
+%
+\subsection{Experimental Setup}
+%
+We set the radius $r=4$ for cropping the samples in the positive bag which generates $45$ samples. The output radius for the set $D^{r,\beta}$ that generates negative samples is set to $\beta=35$. Then, we randomly select $45$ negative samples from $D^{r,\beta}$ to construct the negative bag. The radius for searching the new object location in the next frame is set to $s=25$ which is large enough to handle fast motion (we have tested different parameter $s$ and found the results are stable when we set $20<s<30$) and about $2000$ samples are drawn, which is the same as that in the MIL tracker. Note that we can also use a coarse-to-fine search strategy to reduce test samples as the proposed CT method. Here, for fair comparison, we use the same setting as the MIL tracker. Therefore, this procedure is time-consuming if too many weak classifiers are used to design the strong classifier. Our tracker uses $K=15$ weak classifiers and thus is much more efficient than the MIL tracker which sets $K=50$. Moreover, in AFS the number of candidate weak classifiers in the pool is set to $M=50$ (each weak classifier corresponds to a random Haar-like feature.), which is also less than that of the MIL tracker ($M=250$). The learning parameter is set to $\lambda=0.85$.
+%
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\includegraphics[width=1\linewidth]{images/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Legend that represents different evaluated algorithms.}
+%\label{fig5}
+\label{fig:legend}
+\end{figure*}
+%
+%
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/david/1}
+\includegraphics[width=.3\linewidth]{images/afs/david/2}
+\includegraphics[width=.3\linewidth]{images/afs/david/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/david/4}
+\includegraphics[width=.3\linewidth]{images/afs/david/5}
+\includegraphics[width=.3\linewidth]{images/afs/david/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{David indoor} sequence.}
+%\label{fig5}
+\label{fig:david}
+\end{figure*}
+%
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/twinings/1}
+\includegraphics[width=.3\linewidth]{images/afs/twinings/2}
+\includegraphics[width=.3\linewidth]{images/afs/twinings/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/twinings/4}
+\includegraphics[width=.3\linewidth]{images/afs/twinings/5}
+\includegraphics[width=.3\linewidth]{images/afs/twinings/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Twinings} sequence.}
+%\label{fig5}
+\label{fig:twinings}
+\end{figure*}
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/panda/1}
+\includegraphics[width=.3\linewidth]{images/afs/panda/2}
+\includegraphics[width=.3\linewidth]{images/afs/panda/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/panda/4}
+\includegraphics[width=.3\linewidth]{images/afs/panda/5}
+\includegraphics[width=.3\linewidth]{images/afs/panda/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Panda} sequence.}
+%\label{fig5}
+\label{fig:panda}
+\end{figure*}
+\subsection{Qualitative Evaluation}
+\noindent{\textbf{Scale and Pose Change.}}
+Although our tracker only estimates the translational motion which is similar to most state-of-the-art algorithms (Frag, OAB, SemiB and MIL), it can also handle scale and orientation changes because of the Haar-like features. In the David indoor sequence, the target has big scale and pose changes. Note that the IVT, MIL, VTD and our AFS trackers perform well on this sequence while the Frag, OAB, SemiB, $\ell_1$, and $MIL_{15}$ have severe drifts (see frame $\#130$, $\#150$, $\#290$, $\#400$ in Figure~\ref{fig:david}). The Haar-like features make MIL and AFS trackers able to handle the scale and pose changes well. Nonetheless, our AFS tracker yields much more accurate results (see frame $\#290$, $\#462$ in Figure~\ref{fig:david}) than the MIL tracker because it can select more informative features to better separate object from background. The $MIL_{15}$ tracker suffers from severe drift at frames $\#150$, $\#400$ and $\#462$, which verifies that the selected features by the MIL tracker are less informative than those by our AFS tracker. In the Twinings sequence (in Figure~\ref{fig:twinings}), the target undergoes out-of-plane rotation. The Frag tracker has severe drift at frames $\#110$, $\#240$, $\#330$, $\#360$, $\#415$ because its template does not update online, making it unable to handle large appearance changes. The SemiB tracker completely drifts to the background at frames $\#240$, $\#330$, $\#360$, $\#415$ because it throws away some very useful information that can well separate object from its background. The VTD method also has severe drift at frames $\#240$, $\#330$, $\#360$, $\#415$ because it does not use the information from the background. In the Panda sequence (Figure~\ref{fig:panda}), the target undergoes large scale non-rigid deformation. The Frag, IVT, and VTD methods drift to the background (see frames $\#200$, $\#350$, $\#550$, $\#750$, $\#900$) because they are not specially designed for non-rigid deformation. The $MIL_{15}$ tracker drifts to the background at frames $\#550$ and $\#750$ while the MIL and our AFS trackers perform well at these frames.
+%
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/tiger2/1}
+\includegraphics[width=.3\linewidth]{images/afs/tiger2/2}
+\includegraphics[width=.3\linewidth]{images/afs/tiger2/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/tiger2/4}
+\includegraphics[width=.3\linewidth]{images/afs/tiger2/5}
+\includegraphics[width=.3\linewidth]{images/afs/tiger2/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Tiger2} sequence.}
+%\label{fig5}
+\label{fig:tiger2}
+\end{figure*}
+%
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/cliffbar/1}
+\includegraphics[width=.3\linewidth]{images/afs/cliffbar/2}
+\includegraphics[width=.3\linewidth]{images/afs/cliffbar/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/cliffbar/4}
+\includegraphics[width=.3\linewidth]{images/afs/cliffbar/5}
+\includegraphics[width=.3\linewidth]{images/afs/cliffbar/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Cliffbar} sequence.}
+%\label{fig5}
+\label{fig:cliffbar}
+\end{figure*}
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/dollar/1}
+\includegraphics[width=.3\linewidth]{images/afs/dollar/2}
+\includegraphics[width=.3\linewidth]{images/afs/dollar/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/dollar/4}
+\includegraphics[width=.3\linewidth]{images/afs/dollar/5}
+\includegraphics[width=.3\linewidth]{images/afs/dollar/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Coupon book} sequence.}
+%\label{fig5}
+\label{fig:dollar}
+\end{figure*}
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/pedestrian/1}
+\includegraphics[width=.3\linewidth]{images/afs/pedestrian/2}
+\includegraphics[width=.3\linewidth]{images/afs/pedestrian/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/pedestrian/4}
+\includegraphics[width=.3\linewidth]{images/afs/pedestrian/5}
+\includegraphics[width=.3\linewidth]{images/afs/pedestrian/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Pedestrian} sequence.}
+%\label{fig5}
+\label{fig:pedestrian}
+\end{figure*}
+
+\noindent{\textbf{Background Clutter and Pose Variation.}}
+%
+We use four sequences (\textit{Tiger2}, \textit{Cliffbar}, \textit{Coupon book}, \textit{Pedestrian}) to demonstrate the superior performance of our tracker in handling background clutter and pose variation. In the \textit{Tiger2} sequence, there are also partial occlusion and out-of-plane rotation, which makes object tracking more difficult. From the tracking results shown in Figure~\ref{fig:tiger2}, we observe that all the other trackers drift to the background at some frames (see frames $\#280$ and $\#330$) expect for AFS tracker, which tracks the object stably and accurately. In the \textit{Cliff bar} sequence, the background has similar texture to the target. Moreover, the target undergoes in-plane rotation. The Frag, OAB, SemiB, IVT, $\ell_1$ and VTD methods drift to the background while the MIL, $MIL_{15}$ and our AFS trackers perform well on this sequence. The reason that the Frag tracker cannot work well on this sequence is that its template does not update online, making it unable to adaptively capture the difference between the target and the background over time. The SemiB, $\ell_1$ and VTD methods cannot work well on this sequence because they do not use the useful information from the background to discriminate object. Because of the same reason, in the \textit{Coupon book}sequence shown by Figure~\ref{fig:dollar}, the SemiB, $\ell_1$ and VTD methods also drift to another coupon book after the top coupon book is taken away (see frames $\#210$, $\#260$ and $\#300$).
+
+%
+Our AFS and MIL trackers perform well on these two sequences due to the following reasons. First, the Haar-like features are localized which are effective in handling appearance changes due to pose variation; second, the discriminative appearance models are updated in an online manner which take into account the difference between the target and the background over time and thereby avoid the drift problem throughout these two sequences. In the Pedestrian sequence, there is also camera motion. Most trackers drift to the background except for the MIL, $MIL_{15}$ and our AFS trackers from frame $\#1$ to $\#100$. The reason is that the localized Haar-like features are less sensitive to appearance changes caused by pose variation. Nonetheless, the MIL and $MIL_{15}$ trackers drift to the background in latter frames (see frame $\#120$ and $\#135$ in Figure~\ref{fig:pedestrian}) while only our AFS tracker can perform well throughout the sequence.
+%
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/soccer/1}
+\includegraphics[width=.3\linewidth]{images/afs/soccer/2}
+\includegraphics[width=.3\linewidth]{images/afs/soccer/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/soccer/4}
+\includegraphics[width=.3\linewidth]{images/afs/soccer/5}
+\includegraphics[width=.3\linewidth]{images/afs/soccer/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Soccer} sequence.}
+%\label{fig5}
+\label{fig:soccer}
+\end{figure*}
+%
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/kitesurf/1}
+\includegraphics[width=.3\linewidth]{images/afs/kitesurf/2}
+\includegraphics[width=.3\linewidth]{images/afs/kitesurf/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/kitesurf/4}
+\includegraphics[width=.3\linewidth]{images/afs/kitesurf/5}
+\includegraphics[width=.3\linewidth]{images/afs/kitesurf/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Kitesurf} sequence.}
+%\label{fig5}
+\label{fig:kitesurf}
+\end{figure*}
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/shaking/1}
+\includegraphics[width=.3\linewidth]{images/afs/shaking/2}
+\includegraphics[width=.3\linewidth]{images/afs/shaking/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/shaking/4}
+\includegraphics[width=.3\linewidth]{images/afs/shaking/5}
+\includegraphics[width=.3\linewidth]{images/afs/shaking/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Shaking} sequence.}
+%\label{fig5}
+\label{fig:shaking}
+\end{figure*}
+
+
+\noindent{\textbf{Illumination Change and Pose Variation.}}
+%
+ We use the \textit{Soccer}, \textit{Kitesurf} and \textit{Shaking} sequences to evaluate the performance of AFS in handling illumination change and pose variation. In the Soccer sequence, there is also severe occlusion besides illumination change. Only our AFS tracker performs well throughout this sequence while the other trackers drift from the target at some frames as shown in Figure~\ref{fig:soccer}. There is also out-of-plane rotation in the \textit{Kitesurf} sequence. As shown in Figure~\ref{fig:kitesurf}, only AFS, SemiB and $MIL_{15}$ trackers work well on this sequence while the other trackers drift to the background in the last frames. In the \textit{Shaking} sequence shown in Figure~\ref{fig:shaking}, the target undergoes large illumination and pose variations. All the trackers except for AFS, VTD and MIL drift from the target quickly. The discriminative appearance model in AFS finds the most informative features to account for the appearance changes of the target and background over time, and therefore it achieves favorably accurate and stable tracking results.
+ %
+ %
+
+\ignore{
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/occface/1}
+\includegraphics[width=.3\linewidth]{images/afs/occface/2}
+\includegraphics[width=.3\linewidth]{images/afs/occface/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/occface/4}
+\includegraphics[width=.3\linewidth]{images/afs/occface/5}
+\includegraphics[width=.3\linewidth]{images/afs/occface/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Occluded face} sequence.}
+%\label{fig5}
+\label{fig:occface}
+\end{figure*}
+%
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/jumping/1}
+\includegraphics[width=.3\linewidth]{images/afs/jumping/2}
+\includegraphics[width=.3\linewidth]{images/afs/jumping/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/jumping/4}
+\includegraphics[width=.3\linewidth]{images/afs/jumping/5}
+\includegraphics[width=.3\linewidth]{images/afs/jumping/6}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Some sampled tracking results on the \textit{Jumping} sequence.}
+%\label{fig5}
+\label{fig:jumping}
+\end{figure*}
+ %
+
+\noindent{\textbf{Occlusion and Motion Blur.}}
+ %
+Figure~\ref{fig:occface} and Figure~\ref{fig:jumping} evaluate the AFS tracker when the targets undergo occlusion and motion blur. In the \textit{Occluded face} sequence, there is pose variation besides partial occlusion. Although the Frag tracker is specially designed to handle partial occlusion by a part-based model, it cannot perform well on this sequence because of the large scale appearance changes due to the
+severe pose variation and occlusion. The OAB and SemiB trackers drift to the background when the heavy occlusion occurs at frame $\#730$ in Figure~\ref{fig:occface}. After that frame, the OAB and SemiB trackers are unable to re-detect the target. Although the IVT and $\ell_1$ methods are able to track the object throughout the sequence, their results are inaccurate at frames $\#730$ and $\#760$, and both the two trackers are snapped to cap area. The reason is that they are generative models which do not take into account the useful information from the background. Both AFS and MIL trackers achieve good results because of the following two reasons. First, the localized Haar-like features are robust to partial occlusion~\cite{Babenko_pami_2011}. Second, both trackers use an online update criterion which takes into account the appearance changes of the target and the background. In the Jumping sequence shown in Figure~\ref{fig:jumping}, there is severe motion blur which makes it difficult to distinguish the appearance of the target. Our tracker still performs well while the $\ell_1$ method drifts to the background quickly. It can be explained by the fact that the global intensity features used in $\ell_1$ method has limited discriminative capability to separate target from background when the appearance of the target changes much due to severe motion blur.
+}
+%
+%
+\ignore{
+\begin{figure*}[!ht]
+\hspace{-.3cm}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/1}
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/2}
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/3}\\
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/4}
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/5}
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/6}\\
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/7}
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/8}
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/9}\\
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/10}
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/11}
+\includegraphics[width=.3\linewidth]{images/afs/errorplots/12}\\
+\end{tabular}
+%\includegraphics[width=.43\linewidth]{figs/legend}
+\end{center}
+\vspace{-2mm}
+\caption{Error plots of the test sequences.}
+%\label{fig5}
+\label{fig:errorplots}
+\end{figure*}
+%
+}
+\subsection{Quantitative evaluation}
+We use two commonly used criteria to quantitatively assess the performance of the trackers: the tracking success rate and the center location error using the manually labeled ground truth. We employ the PASCAL~\cite{everingham2010pascal} overlap criterion to determine whether a tracking result is a success. Given the ground truth bounding box $ROI_g$ and the tracked bounding box $ROI_t$, the score is defined as $score=\frac{area(R_g\cap R_t)}{area(R_g\cup R_t)}$. If $score>0.5$, the tracking result is considered as a success. TABLE~\ref{table:success} shows the success rates of competing methods. Our AFS tracker achieves the best or second best performance in all the test sequences.
+%Figure~\ref{fig:errorplots} illustrates the tracking results in terms of center location error, which is defined as %the Euclidian distance between the center locations of the tracked target and the ground truth. Overall, our AFS %tracker performs favorably against the other state-of-the-art trackers.
+%
+%
+\begin{table*}[t]
+\caption{Success rate ($\%$). Bold fonts indicate the best performance while the italic fonts indicate the second best.}
+\label{table:success}
+{
+\scriptsize
+\center\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|c|}\hline
+Traker   &Frag &OAB  &SemiB &MIL  &$MIL_{15}$ &TLD &IVT  &$\ell_1$   &VTD   &AFS\\\hline
+ David indoor &8	&32	&45	&66	&52	&\textcolor{blue}{\textit{98}}	&\textcolor{red}{\textbf{100}}	&41	&83	 &92\\\hline
+ Twinings	&69	&\textcolor{red}{\textbf{97}}	&22	&71	&67	&46	&49	&83	&\textcolor{red}{\textbf{97}}	 &\textcolor{blue}{\textit{92}}\\\hline
+ Panda	    &7	&69	&67	&\textcolor{blue}{\textit{75}}	&47	&29	&7	&56	&4	 &\textcolor{red}{\textbf{76}}\\\hline
+ Tiger2	    &13	&39	&19	&43	&\textcolor{blue}{\textit{44}}	&41	&18	&12	&12	 &\textcolor{red}{\textbf{56}}\\\hline
+ Cliffbar	&22	&24	&63	&67	&\textcolor{blue}{\textit{72}}	&67	&46	&38	&47	 &\textcolor{red}{\textbf{92}}\\\hline
+ Coupon book&27	&98	&37	&\textcolor{blue}{\textit{99}}	&68	&16	 &\textcolor{red}{\textbf{100}}&\textcolor{red}{\textbf{100}}&37	&\textcolor{red}{\textbf{100}}\\\hline
+ Pedestrian	&5	&4	&23	&53	&45	&21	&10	&18	&\textcolor{blue}{\textit{64}}	&\textcolor{red}{\textbf{80}} \\\hline
+ Kitesurf	&1	&73	&73	&78	&\textcolor{blue}{\textit{79}}	&45	&30	&27	&41	&\textcolor{red}{\textbf{80}} \\\hline
+ Soccer	    &27	&8	&9	&17	&20	&10	&19	&13	&\textcolor{blue}{\textit{39}}	&\textcolor{red}{\textbf{41}} \\\hline
+ Shaking	&28	&40	&31	&\textcolor{blue}{\textit{85}}	&17	&16	&1	&10	&\textcolor{red}{\textbf{97}}	&79 \\\hline
+ Occluded face	&52	&46	&41	&\textcolor{blue}{\textit{99}}	&57	&46	&87	&84	&67	 &\textcolor{red}{\textbf{100}} \\\hline
+ Jumping	&36	&86	&84	&\textcolor{blue}{\textit{99}}	&\textcolor{blue}{\textit{99}}	&98	&98	&9	&87	 &\textcolor{red}{\textbf{100}} \\\hline
+
+\end{tabular}
+
+}
+\end{table*}
+%
+\section{Summary}
+In this chapter, we proposed a robust tracker based on an online discriminative appearance model. In order to design a robust appearance model, we developed an online active feature selection (AFS) approach via minimizing a Fishier information criterion. We showed that the features selected by our proposed online AFS boosting algorithm are much more informative and discriminative than those selected by online MIL boosting algorithm which maximizes a likelihood loss function. The AFS appearance model can well handle large appearance changes. Numerous experimental results and evaluations on challenging video sequences demonstrated that our AFS tracker outperforms other state-of-the-art algorithms in terms of efficiency, accuracy and robustness.
+

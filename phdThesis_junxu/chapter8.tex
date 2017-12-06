@@ -1,0 +1,1125 @@
+% !TEX root = ../XJ_thesis.tex
+%
+\chapter{Appendix}
+\label{sec:appendix}
+
+\section{Closed-Form Solution of the Weighted Sparse Coding Problem (\ref{equ2-11})}
+
+For notation simplicity, we ignore the indices $n,m,t$ in problem (\ref{equ2-11}).\ The weighted sparse coding problem (\ref{equ2-11}) turns into the following problem:
+\begin{equation}
+\label{equ8-1}
+\min\nolimits_{\bm{\alpha}}\|\bm{y}-\bm{D}\bm{\alpha}\|_{2}^{2}+\sum\nolimits_{j=1}^{3p^2}\lambda_{j}|\bm{\alpha}_{j}|.
+\end{equation}
+Since $\bm{D}$ is an orthogonal matrix, problem (\ref{equ8-1}) is equivalent to:
+\begin{equation}
+\label{equ8-2}
+\min\nolimits_{\bm{\alpha}}\|\bm{D}^{T}\bm{y}-\bm{\alpha}\|_{2}^{2}+\sum\nolimits_{j=1}^{3p^2}\lambda_{j}|\bm{\alpha}_{j}|.
+\end{equation}
+For simplicity, we denote $\bm{z} = \bm{D^{T}y}$.\ Here we have $\lambda_{j}>0$, $j=1,...,3p^2$, then problem (\ref{equ8-2}) can be written as:
+\begin{equation}
+\label{equ8-3}
+\min\nolimits_{\boldsymbol{\alpha}}\sum\nolimits_{j=1}^{3p^2}((\bm{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|).
+\end{equation}
+The problem (\ref{equ8-1}) is separable w.r.t. each $\bm{\alpha}_{j}$ and hence can be simplified to $3p^2$ independent scalar minimization problems:
+\begin{equation}
+\label{equ8-4}
+\min\nolimits_{\bm{\alpha}_{j}}(\bm{z}_{j}-\bm{\alpha}_{j})^{2}+\lambda_{j}|\bm{\alpha}_{j}|,
+\end{equation}
+where $j=1,...,3p^2$. Taking derivative of $\bm{\alpha}_{j}$ in problem (\ref{equ2-11}) and setting the derivative to be zero. There are two cases for the solution.
+
+(a) If $\bm{\alpha}_{j}\ge 0$, we have 
+$
+2(\bm{\alpha}_{j}-\bm{z}_{j})+\lambda_{j}=0,
+$ and the solution is
+$
+\hat{\bm{\alpha}}_{j}=\bm{z}_{j}-\frac{\lambda_{j}}{2} \ge 0.
+$
+So $\bm{z}_{j}\ge\frac{\lambda_{j}}{2}> 0$, and the solution $\hat{\bm{\alpha}}_{j}$ can be written as
+$
+\hat{\bm{\alpha}}_{j}=\text{sgn}(\bm{z}_{j})*(|\bm{z}_{j}|-\frac{\lambda_{j}}{2}),
+$
+where $\text{sgn}(\bullet)$ is the sign function. 
+
+(b) If $\bm{\alpha}_{j}< 0$, we have
+$
+2(\bm{\alpha}_{j}-\bm{z}_{j})-\lambda_{j}=0
+$
+and the solution is
+$
+\hat{\bm{\alpha}}_{j}=\bm{z}_{j}+\frac{\lambda_{j}}{2} < 0.
+$
+So $\bm{z}_{j}<-\frac{\lambda_{j}}{2}< 0$, and the solution $\hat{\bm{\alpha}}_{j}$ can be written as
+$
+\hat{\bm{\alpha}}_{j}=\text{sgn}(\bm{z}_{j})*(-\bm{z}_{j}-\frac{\lambda_{j}}{2})=\text{sgn}(\bm{z}_{j})*(|\bm{z}_{j}|-\frac{\lambda_{j}}{2}).
+$
+
+In summary, we have the final solution of the weighted sparse coding problem (\ref{equ8-1}) as:
+\begin{equation}
+\label{equ8-5}
+\hat{\bm{\alpha}}= \text{sgn}(\bm{D^{T}y})\odot \text{max}(|\bm{D^{T}y}|-\bm{\lambda},0),
+\end{equation}
+where $\bm{\lambda} = \frac{1}{2}[\lambda_{1},\lambda_{2},...,\lambda_{3p^2}]^{\top}$ is the vector of regularization parameter and $\odot$ means element-wise multiplication.
+
+\section{Proof of the Theorem \ref{th3-1}}
+
+Let $\mathcal{A}\in \mathbb{R}^{(3p^2-r)\times M},\mathcal{Y}\in \mathbb{R}^{3p^2\times M}$ be two given data matrices. Denote by $\mathcal{E}\in\mathbb{R}^{3p^2\times r}$ the external subdictionary and $\mathcal{D}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ the internal subdictionary. For simplicity, we assume $3p^2\ge M$. The problem in \textbf{Theorem \ref{th3-1}} is as follows:
+\begin{equation}
+\label{equ8-6}
+\begin{split}
+\hat{\mathcal{D}}
+=
+&
+\arg\min\nolimits_{\mathcal{D}}\|\mathcal{Y}-\mathcal{D}\mathcal{A}\|_{F}^{2}
+\\
+&
+\text{s.t.}
+\quad
+\mathcal{D}^{\top}\mathcal{D} = \bm{I}_{(3p^2-r)\times (3p^2-r)}, \mathcal{E}^{\top}\mathcal{D} = \bm{0}_{r\times (3p^2-r)}.
+\end{split}
+\end{equation} 
+
+\begin{proof}
+We firstly prove the necessary condition.
+Since $\mathcal{D}^{\top}\mathcal{D} = \bm{I}_{(3p^2-r)\times (3p^2-r)}$, we have
+\begin{equation}
+\label{equ8-7}
+\begin{split}
+\hat{\mathcal{D}}
+&
+=
+\arg\min\nolimits_{\mathcal{D}}\|\mathcal{Y}-\mathcal{D}\mathcal{A}\|_{F}^{2}
+=
+\arg\max\nolimits_{\mathcal{D}}\text{Tr}(\mathcal{A}\mathcal{Y}^{\top}\mathcal{D})
+\\
+&
+\text{s.t.}
+\quad
+\mathcal{D}^{\top}\mathcal{D} = \bm{I}_{(3p^2-r)\times (3p^2-r)}, \mathcal{E}^{\top}\mathcal{D} = \bm{0}_{r\times (3p^2-r)}.
+\end{split}
+\end{equation}
+The Lagrange function is
+$
+\mathcal{L}
+=
+\text{Tr}(\mathcal{A}\mathcal{Y}^{\top}\mathcal{D})
+-
+\text{Tr}(\Gamma_{1}(\mathcal{D}^{\top}\mathcal{D} - \bm{I}_{(3p^2-r)\times (3p^2-r)}))
+-
+\text{Tr}(\Gamma_{2}(\mathcal{D}^{\top}\mathcal{E}))
+$,
+where $\Gamma_{1}$ and $\Gamma_{2}$ are the Lagrange multipliers. Take the derivative of $\mathcal{L}$ w.r.t. $\mathcal{D}$ and set it to be matrix $\bm{0}$ of conformal dimensions, we can get
+\begin{equation}
+\label{equ8-8}
+\partial\mathcal{L}/\partial\mathcal{D} 
+=
+\mathcal{Y}\mathcal{A}^{\top}
+-
+\mathcal{D}(\Gamma_{1}+\Gamma_{1}^{\top})
+-
+\mathcal{E}\Gamma_{2}^{\top}
+=
+\bm{0}_{3p^2\times (3p^2-r)}.
+\end{equation}
+Since $\mathcal{D}^{\top}\mathcal{D}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$ and $\mathcal{E}^{\top}\mathcal{D} = \bm{0}_{3p^2\times (3p^2-r)}$, by left multiplying both sides of the Eq. (\ref{equ8-8}) by $\mathcal{E}^{\top}$, we have 
+\begin{equation}
+\label{equ8-9}
+\mathcal{E}^{\top}\mathcal{Y}\mathcal{A}^{\top}
+=
+\Gamma_{2}^{\top}.
+\end{equation}
+Put the Eq. (\ref{equ8-9}) back into Eq. (\ref{equ8-8}), we have 
+\begin{equation}
+\label{equ8-10}
+(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}
+=
+\mathcal{D}(\Gamma_{1}+\Gamma_{1}^{\top}).
+\end{equation}
+Right multiplying both sides of Eq. (\ref{equ8-10}) by $\mathcal{D}^{\top}$, we have
+\begin{equation}
+\label{equ8-11}
+(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top}
+=
+\mathcal{D}(\Gamma_{1}+\Gamma_{1}^{\top})\mathcal{D}^{\top}
+.
+\end{equation}
+This shows that $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top}$ is a symmetric matrix of order $3p^2\times 3p^2$. Then we perform economy (or reduced) singular value decomposition (SVD)  \cite{eckart1936approximation} on $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}=\mathcal{U}\Sigma\mathcal{V}^{\top}$,
+there is
+\begin{equation}
+\label{equ8-12}
+(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top}
+=
+\mathcal{U}\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top}
+=
+\mathcal{D}\mathcal{V}\Sigma\mathcal{U}^{\top}.
+\end{equation}
+Hence, we have $\mathcal{U}=\mathcal{D}\mathcal{V}$, or equivalently $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$. The necessary condition is proved. 
+
+Now we prove the sufficient condition. If $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$, then $\hat{\mathcal{D}}^{\top}\hat{\mathcal{D}}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$. To prove $\mathcal{E}^{\top}\hat{\mathcal{D}}=\bm{0}_{3p^2\times (3p^2-r)}$, we left multiply both sides of Eq. (\ref{equ8-12}) by $\mathcal{E}^{\top}$ and have  
+$
+\bm{0}_{3p^2\times (3p^2-r)}
+=
+\mathcal{E}^{\top}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\hat{\mathcal{D}}^{\top}
+=
+\mathcal{E}^{\top}\mathcal{U}\Sigma\mathcal{V}^{\top}\hat{\mathcal{D}}^{\top}
+=
+\mathcal{E}^{\top}\mathcal{U}\Sigma\mathcal{U}^{\top}
+$
+.
+It means that $\mathcal{E}^{\top}\mathcal{U}\Sigma\mathcal{U}^{\top}=\bm{0}_{3p^2\times 3p^2}$. This only happens when $\mathcal{E}^{\top}\mathcal{U}=\bm{0}_{3p^2\times (3p^2-r)}$ since $\text{rank}(\Sigma)=3p^2-r$ and $\mathcal{U}\Sigma\mathcal{U}^{\top}$ is positive definite. Then $\mathcal{E}^{\top}\hat{\mathcal{D}}=\mathcal{E}^{\top}\mathcal{U}\mathcal{V}^{\top}=\bm{0}_{3p^2\times (3p^2-r)}$. 
+
+Finally we prove that $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ is the solution of
+\begin{equation}
+\label{equ8-13}
+\begin{split}
+\hat{\mathcal{D}}
+=
+\arg\min\nolimits_{\mathcal{D}}
+\|\mathcal{Y}-\mathcal{D}\mathcal{A}\|_{F}^{2}
+=
+\arg\max\nolimits_{\mathcal{D}}
+\text{Tr}(\mathcal{Y}^{\top}\mathcal{D}\mathcal{A}).
+\end{split}
+\end{equation}
+Note that by cyclic perturbation which retains the trace unchanged and due to $\mathcal{E}^{\top}\hat{\mathcal{D}}=\bm{0}_{3p^2\times (3p^2-r)}$, we have 
+$
+\text{Tr}(\mathcal{Y}^{\top}\hat{\mathcal{D}}\mathcal{A})
+=
+\text{Tr}(\mathcal{Y}\mathcal{A}^{\top}\hat{\mathcal{D}}^{\top})
+=
+\text{Tr}((\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\hat{\mathcal{D}}^{\top})
+=
+\text{Tr}(\mathcal{U}\Sigma\mathcal{V}^{\top}\mathcal{V}\mathcal{U}^{\top})
+=
+\text{Tr}(\Sigma).
+$
+For every $\mathcal{D}$ satisfying that $\mathcal{D}^{\top}\mathcal{D} = \bm{I}_{(3p^2-r)\times (3p^2-r)}$, $\mathcal{E}^{\top}\mathcal{D} = \bm{0}_{3p^2\times (3p^2-r)}$, we have 
+$
+\text{Tr}(\mathcal{Y}^{\top}\mathcal{D}\mathcal{A})
+=
+\text{Tr}((\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\mathcal{D}^{\top})
+=
+\text{Tr}(\mathcal{U}\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top})
+=
+\text{Tr}(\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top}\mathcal{U})
+$.
+By using a generalization version \cite{TenBerge1983} of the Kristof's Theorem \cite{Kristof1970515}, we have $\text{Tr}(\mathcal{Y}^{\top}\mathcal{D}\mathcal{A})
+=
+\text{Tr}(\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top}\mathcal{U})
+\le
+\text{Tr}(\Sigma)
+.
+$
+The equality is obtained at 
+$\mathcal{V}^{\top}\mathcal{D}^{\top}\mathcal{U}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$, i.e., $\mathcal{D}=\mathcal{U}\mathcal{V}^{\top}=\hat{\mathcal{D}}$. This completes the proof.
+\end{proof}
+
+\section{Proof of the Theorem \ref{th3-2}}
+
+Before we prove the Theorem \ref{th3-2}, we need firstly prove the following Lemma 1.
+
+\emph{Lemma 1}: Let $\mathcal{E}\in\mathbb{R}^{3p^2\times r}$ be an orthogonal matrix with $\mathcal{E}^{\top}\mathcal{E}=\bm{I}_{r\times r}$, then $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\ge 3p^2-r$.
+
+\begin{proof} Since $\text{rank}(\mathcal{E}\mathcal{E}^{\top})\le\min\{\text{rank}(\mathcal{E}),\text{rank}(\mathcal{E}^{\top})\}=r$ and $\text{rank}(\mathcal{E}\mathcal{E}^{\top})\ge\text{rank}(\mathcal{E})+\text{rank}(\mathcal{E}^{\top})-r=2r-r=r$ by Sylvester's inequality, we have $\text{rank}(\mathcal{E}\mathcal{E}^{\top})=r$. Then, $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\ge\text{rank}(\bm{I}_{3p^2\times 3p^2})-\text{rank}(\mathcal{E}\mathcal{E}^{\top})\ge 3p^2-r$. 
+\end{proof}
+
+The $\text{rank}(\Sigma)$ ($\Sigma$ is defined in Theorem \ref{th3-1}) depends on $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})$, $\text{rank}(\mathcal{Y})$ and $\text{rank}(\mathcal{A})$. Note that $\text{rank}(\mathcal{Y})\ge M$ and $\text{rank}(\mathcal{A})\ge \min\{3p^2,M\}$ and $\text{rank}(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\ge 3p^2-r$. Hence, $\text{rank}(\Sigma)\le\min\{3p^2-r,M\}$.
+
+Now we prove the Theorem \ref{th3-2}:
+\begin{proof} 
+a) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ is nonsingular, i.e., $\text{rank}(\Sigma)=3p^2-r$, $\Sigma$ may have distinct or multiple non-zero singular values. In the SVD \cite{eckart1936approximation} of $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}
+=
+\mathcal{U}\Sigma\mathcal{V}^{\top}$, the singular vectors in $\mathcal{U}$ and $\mathcal{V}$
+can be determined up to orientation. Hence, we can reformulate it as 
+\begin{equation}\label{equ8-14}
+(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}
+=
+\mathcal{U}^{*}\mathcal{K}_{u}\Sigma\mathcal{K}_{v}(\mathcal{V}^{*})^{\top},
+\end{equation}
+where $\mathcal{U}^{*}\in \mathbb{R}^{3p^2\times (3p^2-r)}$ and $\mathcal{V}^{*}\in \mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ are arbitrarily orientated singular vectors of $\mathcal{U}$ and $\mathcal{V}$, respectively. The $\mathcal{K}_{u}$ and $\mathcal{K}_{v}$ are diagonal matrices with $+1$ or $-1$ as diagonal elements in arbitrary distribution. $\Sigma\in \mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ is a diagonal matrix with singular values in non-increasing order, i.e., $\Sigma_{11}\ge\Sigma_{22}\ge...\ge\Sigma_{(3p^2-r)(3p^2-r)}\ge0$. If we fix $\mathcal{K}_{u}$, then $\mathcal{K}_{v}$ is uniquely determined to meet the above requirements of $\Sigma$. If the orientations of the singular vectors of $\mathcal{U}^{*}$ are fixed, then $\mathcal{U}=\mathcal{U}^{*}\mathcal{K}_{u}$ is determined, so do the orientations of the singular vectors of $\mathcal{V}^{*}$ and $\mathcal{V}^{\top}=\mathcal{K}_{v}(\mathcal{V}^{*})^{\top}$. In this case, the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}=\mathcal{U}^{*}\mathcal{K}_{u}\mathcal{K}_{v}(\mathcal{V}^{*})^{\top}$ is unique. When $\Sigma$ has multiple singular values, the unique solution of $\hat{\mathcal{D}}$ can be proved in a similar way. 
+
+b) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ is singular, i.e.,  $0\le \text{rank}(\Sigma)< 3p^2-r$, and $\Sigma$ has $3p^2-r-\text{rank}(\Sigma)$ (at least one) zero singular values. The discussion in a) can still be applied to the singular vectors corresponding to the nonzero singular values, and the production of these singular vectors in $\mathcal{U}$ and $\mathcal{V}$ is still unique. However, the singular vectors corresponding to the zero singular values could be in arbitrary orientations as long as they satisfy the conditions of $\mathcal{U}^{\top}\mathcal{U}=\mathcal{V}^{\top}\mathcal{V}=\mathcal{V}\mathcal{V}^{\top}=\bm{I}_{(3p^2-r)\times (3p^2-r)}$. Since $\mathcal{U}\in \mathbb{R}^{3p^2\times (3p^2-r)}$, $\mathcal{U}\mathcal{U}^{\top}$ no longer equals to the identity matrix of order $3p^2\times 3p^2$. From Eq. (\ref{equ8-12}), we have
+\begin{equation}
+\label{equ8-15}
+\mathcal{U}\Sigma\mathcal{V}^{\top}\mathcal{D}^{\top}
+=
+\mathcal{D}\mathcal{V}\Sigma\mathcal{U}^{\top}
+\vspace{-2mm}
+\end{equation}
+Right multiplying both sides of Eq.\ (\ref{equ8-15}) by $\mathcal{D}\mathcal{V}$ and left multiplying each side by $\mathcal{U}^{\top}$, we have
+\begin{equation}\label{equ8-16}
+\Sigma
+=
+\mathcal{U}^{\top}\mathcal{D}\mathcal{V}\Sigma\mathcal{U}^{\top}\mathcal{D}\mathcal{V}
+\vspace{-2mm}
+\end{equation}
+Hence, $\Delta=\mathcal{U}^{\top}\mathcal{D}\mathcal{V}\in\mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ is a diagonal matrix, the diagonal elements of which are 
+\vspace{-1mm}
+\begin{displaymath}
+\Delta_{ii}= \left\{ \begin{array}{ll}
+1 & \textrm{if $1\le i\le \text{rank}(\Sigma)$};\\
+\pm 1 & \textrm{if $\text{rank}(\Sigma)< i \le 3p^2-r$}.\\
+\end{array} \right.
+\vspace{-1mm}
+\end{displaymath}
+Thus, we have $\mathcal{D}=\mathcal{U}\Delta\mathcal{V}^{\top}$. That is, if $\text{rank}(\Sigma)<3p^2-r$, once we get the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ in problem (\ref{equ3-11}), $\mathcal{D}=\mathcal{U}\Delta\mathcal{V}^{\top}$ with suitable $\Delta$ is also the solution of problem (\ref{equ3-11}). In fact, the number of solutions $\hat{\mathcal{D}}$ for problem (\ref{equ3-11}) is $2^{3p^2-r-\text{rank}(\Sigma)}$ given fixed $\mathcal{U}$ and $\mathcal{V}$.
+\end{proof}
+
+
+
+\section{Proof of Theorem \ref{th4-1}}
+\begin{theorem}
+Assume that the weights in $\bm{w}$ are in a non-descending order, the sequence $\{\bm{X}_{k}\}$, $\{\bm{Z}_{k}\}$, and $\{\bm{A}_{k}\}$ generated in Algorithm 1 satisfy:
+\begin{equation}
+\label{equ8-17}
+(a) \lim_{k \to \infty} \|\bm{X}_{k+1}-\bm{Z}_{k+1}\|_{F}=0;
+\\
+(b) \lim_{k \to \infty} \|\bm{X}_{k+1}-\bm{X}_{k}\|_{F}=0;
+\\
+(c) \lim_{k \to \infty} \|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0.
+\end{equation}
+\end{theorem}
+\begin{proof}
+1.\ Firstly, we prove that the sequence $\{\bm{A}_{k}\}$ generated by Algorithm 1 is upper bounded.
+Let $\bm{X}_{k+1}+\rho_{k}^{-1}\bm{A}_{k}
+=
+\bm{U}_{k}\bm{\Sigma}_{k}\bm{V}_{k}^{\top}$
+be its singular value decomposition (SVD) \cite{eckart1936approximation} in the $(k+1)$-th iteration. According to Corollary 1 of \cite{wnnmijcv}, we can have the SVD of $\bm{Z}_{k+1}$ as $\bm{Z}_{k+1}=\bm{U}_{k}\hat{\bm{\Sigma}}_{k}\bm{V}_{k}^{\top}=\bm{U}_{k}\mathcal{S}_{\frac{\bm{w}}{\rho_{k}}}(\bm{\Sigma}_{k})\bm{V}_{k}^{\top}$. 
+Then we have 
+\begin{align}
+\|
+\bm{A}_{k+1}
+\|_{F}
+&
+=
+\|
+\bm{A}_{k}
++
+\rho_{k}
+(\bm{X}_{k+1}-\bm{Z}_{k+1})
+\|_{F}
+=
+\rho_{k}\|
+\rho_{k}^{-1}
+\bm{A}_{k}
++
+\bm{X}_{k+1}
+-
+\bm{Z}_{k+1}
+\|_{F}
+\\
+&
+=
+\rho_{k}\|
+\bm{U}_{k}\bm{\Sigma}_{k}\bm{V}_{k}^{\top}
+-
+\bm{U}_{k}\mathcal{S}_{\frac{\bm{w}}{\rho_{k}}}(\bm{\Sigma}_{k})\bm{V}_{k}^{\top}
+\|_{F}
+=
+\rho_{k}\|
+\bm{\Sigma}_{k}
+-
+\mathcal{S}_{\frac{\bm{w}}{\rho_{k}}}(\bm{\Sigma}_{k})
+\|_{F}
+\\
+&
+=
+\rho_{k}
+\sqrt{\sum_{i}(\bm{\Sigma}_{k}^{ii}-\mathcal{S}_{\frac{w_{i}}{\rho_{k}}}(\bm{\Sigma}_{k}^{ii}))^{2}}
+\le
+\rho_{k}
+\sqrt{\sum_{i}(\frac{w_{i}}{\rho_{k}})^{2}}
+=
+\sqrt{\sum_{i}w_{i}^{2}}.
+\end{align}
+The inequality in the second last step can be proved as follows: given the diagonal matrix $\bm{\Sigma}_{k}$, we define $\bm{\Sigma}_{k}^{ii}$ as the $i$-th element of $\bm{\Sigma}_{k}$. If $\bm{\Sigma}_{k}^{ii}\ge\frac{w_{i}}{\rho_{k}}$, we have $\mathcal{S}_{\frac{w_{i}}{\rho_{k}}}(\bm{\Sigma}_{k}^{ii})=\bm{\Sigma}_{k}^{ii}-\frac{w_{i}}{\rho_{k}}$. If $\bm{\Sigma}_{k}^{ii}<\frac{w_{i}}{\rho_{k}}$, we have $\mathcal{S}_{\frac{w_{i}}{\rho_{k}}}(\bm{\Sigma}_{k}^{ii})=0$. Overall, we have $|\bm{\Sigma}_{k}^{ii}-\mathcal{S}_{\frac{w_{i}}{\rho_{k}}}(\bm{\Sigma}_{k}^{ii})|\le\frac{w_{i}}{\rho_{k}}$ and hence the inequality holds. Hence, the sequence $\{\bm{A}_{k}\}$ is upper bounded.
+
+2.\ Secondly, we prove that the sequence of Lagrangian function $\{\mathcal{L}(\bm{X}_{k+1},\bm{Z}_{k+1},\bm{A}_{k},\rho_{k})\}$ is also upper bounded. Since we have the globally optimal solution of $\bm{X}$ and $\bm{Z}$ in their corresponding subproblems, we always have 
+\begin{align}
+\mathcal{L}(\bm{X}_{k+1},\bm{Z}_{k+1},\bm{A}_{k},\rho_{k})
+\le
+\mathcal{L}(\bm{X}_{k},\bm{Z}_{k},\bm{A}_{k},\rho_{k}).
+\end{align}
+Based on the updating rule that 
+$
+\bm{A}_{k+1}
+=
+\bm{A}_{k} + \rho_{k}(\bm{X}_{k+1}-\bm{Z}_{k+1})
+$
+,
+we have 
+\begin{align}
+&
+\mathcal{L}(\bm{X}_{k+1},\bm{Z}_{k+1},\bm{A}_{k+1},\rho_{k+1})
+\\
+=
+&
+\mathcal{L}(\bm{X}_{k+1},\bm{Z}_{k+1},\bm{A}_{k},\rho_{k})
++
+\langle
+\bm{A}_{k+1}
+-
+\bm{A}_{k}
+,
+\bm{X}_{k+1}
+-
+\bm{Z}_{k+1}
+\rangle
++
+\frac{\rho_{k+1}-\rho_{k}}{2}
+\|
+\bm{X}_{k+1}-\bm{Z}_{k+1}
+\|_{F}^{2}
+\\
+=
+&
+\mathcal{L}(\bm{X}_{k+1},\bm{Z}_{k+1},\bm{A}_{k},\rho_{k})
++
+\frac{\rho_{k+1}+\rho_{k}}{2\rho_{k}^{2}}
+\|
+\bm{A}_{k+1}
+-
+\bm{A}_{k}
+\|_{F}^{2}.
+\end{align}
+Since the sequence 
+$\{
+\bm{A}_{k}\}$
+is upper bounded, the sequence 
+$\{
+\bm{A}_{k+1}
+-
+\bm{A}_{k}
+\}$ is also upper bounded. Denote by $a$ the upper bound of 
+$\{
+\bm{A}_{k+1}
+-
+\bm{A}_{k}
+\}$, 
+i.e., 
+$
+\|
+\bm{A}_{k+1}
+-
+\bm{A}_{k}
+\|_{F}\le a
+$
+holds for
+$\forall k\ge0$
+,
+we have 
+\begin{align}
+\mathcal{L}(\bm{X}_{k+1},\bm{Z}_{k+1},\bm{A}_{k+1},\rho_{k+1})
+&
+\le
+\mathcal{L}(\bm{X}_{1},\bm{Z}_{1},\bm{A}_{0},\rho_{0})
++
+a^2\sum_{k=0}^{\infty}\frac{\rho_{k+1}+\rho_{k}}{2\rho_{k}^{2}}
+\\
+&
+=
+\mathcal{L}(\bm{X}_{1},\bm{Z}_{1},\bm{A}_{0},\rho_{0})
++
+a^2\sum_{k=0}^{\infty}\frac{\mu+1}{2\mu^{k}\rho_{0}}
+\\
+&
+\le
+\mathcal{L}(\bm{X}_{1},\bm{Z}_{1},\bm{A}_{0},\rho_{0})
++
+\frac{a^2}{\rho_{0}}\sum_{k=0}^{\infty}\frac{1}{\mu^{k-1}}.
+\end{align}
+The last inequality holds since $\mu>1$ and $\mu+1<2\mu$. Therefore, we have $\sum_{k=0}^{\infty}\frac{1}{\mu^{k-1}}<\infty$ and the sequence of Lagrangian function 
+$\{\mathcal{L}(\bm{X}_{k+1},\bm{Z}_{k+1},\bm{A}_{k+1},\rho_{k+1})\}$
+is upper bounded.
+
+3. Thirdly, we prove that the sequences of 
+$\{\bm{X}_{k}\}$ and $\{\bm{Z}_{k}\}$ are upper bounded. Since 
+\begin{align}
+&\|\bm{W}(\bm{Y}-\bm{X}_{k})\|_{F}^{2}
++
+\|\bm{Z}_{k}\|_{\bm{w},*}
+\\
+=
+&
+\mathcal{L}(\bm{X}_{k},\bm{Z}_{k},\bm{A}_{k-1},\rho_{k-1})
+-
+\langle
+\bm{A}_{k-1},
+\bm{X}_{k}-\bm{Z}_{k}
+\rangle
+-
+\frac{\rho_{k-1}}{2}
+\|
+\bm{X}_{k}-\bm{Z}_{k}
+\|_{F}^{2}
+\\
+=
+&
+\mathcal{L}(\bm{X}_{k},\bm{Z}_{k},\bm{A}_{k-1},\rho_{k-1})
++
+\frac{1}{2\rho_{k-1}}
+(
+\|
+\bm{A}_{k-1}
+\|_{F}^{2}
+-
+\|
+\bm{A}_{k}
+\|_{F}^{2}
+)
+,
+\end{align}
+both $\{\bm{W}(\bm{Y}-\bm{X}_{k})\}$ and $\{\bm{Z}_{k}\}$ are upper bounded, and hence
+the sequence $\{\bm{X}_{k}\}$ is bounded by the Cauchy-Schwarz inequality and triangle inequality.
+We can obtain that 
+\begin{equation}
+\label{equ8-30}
+\lim_{k \to \infty} 
+\|\bm{X}_{k+1}-\bm{Z}_{k+1}\|_{F}
+=
+\lim_{k \to \infty} 
+\rho_{k}^{-1}
+\|
+\bm{A}_{k+1}
+-
+\bm{A}_{k}
+\|_{F}
+=
+0,
+\end{equation}
+and the equation (a) is proved.
+
+4. Then we can prove that 
+\begin{align}
+&
+\lim_{k \to \infty} 
+\|
+\bm{X}_{k+1}
+-
+\bm{X}_{k}
+\|_{F}
+\\
+=
+&
+\lim_{k \to \infty} 
+\|
+(\bm{W}^{\top}\bm{W}
++
+\frac{\rho_{k}}{2}
+\bm{I})^{-1}
+(\bm{W}^{\top}\bm{W}\bm{Y}
+-
+\bm{W}^{\top}\bm{W}\bm{Z}_{k}
+-
+\frac{1}{2}
+\bm{A}_{k})
+-
+\rho_{k-1}^{-1}
+(\bm{A}_{k}-\bm{A}_{k-1})
+\|_{F}
+\\
+\le
+&
+\lim_{k \to \infty} 
+(
+\|
+(\bm{W}^{\top}\bm{W}
++
+\frac{\rho_{k}}{2}
+\bm{I})^{-1}
+(\bm{W}^{\top}\bm{W}\bm{Y}
+-
+\bm{W}^{\top}\bm{W}\bm{Z}_{k}
+-
+\frac{1}{2}
+\bm{A}_{k})
+\|_{F}
++
+\rho_{k-1}^{-1}\|
+\bm{A}_{k}-\bm{A}_{k-1}
+\|_{F}
+)
+\\
+=
+&
+0,
+\end{align}
+and hence the equation (b) is proved. 
+
+5. Finally, the equation (c) can be proved by checking that 
+\begin{align}
+&
+\lim_{k \to \infty} 
+\|
+\bm{Z}_{k+1}-\bm{Z}_{k}
+\|_{F}
+\\
+=
+&
+\lim_{k \to \infty} 
+\|
+\bm{X}_{k}+\rho_{k-1}^{-1}\bm{A}_{k-1}-\bm{Z}_{k}
++
+\bm{X}_{k+1}-\bm{X}_{k}
+-
+\rho_{k-1}^{-1}
+\bm{A}_{k-1}
++
+\rho_{k}^{-1}
+\bm{A}_{k}
+-
+\rho_{k}^{-1}
+\bm{A}_{k+1}
+\|_{F}
+\\
+\le
+&
+\lim_{k \to \infty} 
+(
+\|
+\bm{\Sigma}_{k-1}-\mathcal{S}_{\bm{w}/\rho_{k-1}}(\bm{\Sigma}_{k-1})
+\|_{F}
++
+\|
+\bm{X}_{k+1}-\bm{X}_{k}
+\|_{F}
++
+\|
+\rho_{k-1}^{-1}\bm{A}_{k-1}
++
+\rho_{k}^{-1}\bm{A}_{k+1}
+-
+\rho_{k}^{-1}\bm{A}_{k}
+\|_{F}
+)
+\\
+\le
+&
+\lim_{k \to \infty} 
+(
+\rho_{k-1}^{-1}
+\|
+\bm{w}
+\|_{F}
++
+\|
+\bm{X}_{k+1}-\bm{X}_{k}
+\|_{F}
++
+\|
+\rho_{k-1}^{-1}\bm{A}_{k-1}
++
+\rho_{k}^{-1}\bm{A}_{k+1}
+-
+\rho_{k}^{-1}\bm{A}_{k}
+\|_{F}
+)
+\\
+=
+&
+0
+,
+\end{align}
+where $\bm{U}_{k-1}\bm{\Sigma}_{k-1}\bm{V}_{k-1}^{\top}$ is the SVD of the matrix $\bm{X}_{k}+\rho_{k-1}^{-1}\bm{A}_{k-1}$
+.
+\end{proof}
+
+
+\section{Proofs of Theorem \ref{th5-1} and Theorem \ref{th5-2}}
+\begin{theorem}
+Given $\rho_{k+1}=\mu\rho_{k}$ ($\rho_{0}>0$) for $k\ge0$ and $\mu>1$, the sequences $\{\bm{C}_{k}\}$ and $\{\bm{Z}_{k}\}$ generated in Algorithm 1 satisfy:
+\begin{align}
+&
+(a)\ 
+\|\bm{C}_{k+1}-\bm{Z}_{k+1}\|_{F}=\mathcal{O}(\rho_{k}^{-1})
+\ 
+\textsl{as}\ k \to +\infty
+,\ 
+\textsl{i.e.},\ 
+\lim_{k \to +\infty} \|\bm{C}_{k+1}-\bm{Z}_{k+1}\|_{F}=0;
+\\
+&
+(b)\ 
+\textsl{If}\ 
+\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=\mathcal{O}(\rho_{k}^{-1})
+\ 
+\textsl{as}\ k \to +\infty
+,\ 
+\textsl{then} 
+\lim_{k \to +\infty} \|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}=0;
+\\
+&
+(c)\ 
+\textsl{If}\ 
+\lim_{k \to +\infty} \|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}=0,\ 
+\textsl{then} 
+\lim_{k \to +\infty} \|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=0.
+\end{align}
+\end{theorem}
+
+\vspace{-6mm}
+\begin{proof}
+$ $\newline
+1.\ Firstly, we prove that the sequence $\{\bm{\Delta}_{k}\}$ generated by Algorithm 1 is upper bounded. Denote by $\bm{T}_{k}=\bm{C}_{k+1}+\rho_{k}^{-1}\bm{\Delta}_{k}$ in the $(k+1)$-th iteration. According to Eq. (\ref{equ5-16}) in the Section 5, we have $\bm{Z}_{k+1}=\mathcal{S}_{\frac{1}{2\rho_{k}}}(\bm{T}_{k})$. 
+Then we have 
+\begin{align}
+\|
+\bm{\Delta}_{k+1}
+\|_{F}
+&
+=
+\|
+\bm{\Delta}_{k}
++
+\rho_{k}
+(\bm{C}_{k+1}-\bm{Z}_{k+1})
+\|_{F}
+=
+\rho_{k}\|
+\rho_{k}^{-1}
+\bm{\Delta}_{k}
++
+\bm{C}_{k+1}
+-
+\bm{Z}_{k+1}
+\|_{F}
+\\
+&
+=
+\rho_{k}\|
+\bm{T}_{k}
+-
+\mathcal{S}_{\rho_{k}^{-1}}(\bm{T}_{k})
+\|_{F}
+=
+\rho_{k}
+\sqrt{\sum_{i,j}(\bm{T}_{k}^{ij}-\mathcal{S}_{\rho_{k}^{-1}}(\bm{T}_{k}^{ij}))^{2}}
+\\
+&
+\le
+\rho_{k}
+\sqrt{\sum_{i,j}\rho_{k}^{-2}}
+=
+3p^2M.
+\end{align}
+The inequality in Eq. (8-46) can be proved as follows: given the matrix $\bm{T}_{k}$, we define $\bm{T}_{k}^{ij}$ as the element of the $i$-th row and $j$-th column of $\bm{T}_{k}$. If $\bm{T}_{k}^{ij}\ge\rho_{k}^{-1}$, we have $\mathcal{S}_{\rho_{k}^{-1}}(\bm{T}_{k}^{ij})=\bm{T}_{k}^{ij}-\rho_{k}^{-1}$. If $\bm{T}_{k}^{ij}<\rho_{k}^{-1}$, we have $\mathcal{S}_{\rho_{k}^{-1}}(\bm{T}_{k}^{ij})=0$. Overall, we have $|\bm{T}_{k}^{ij}-\mathcal{S}_{\rho_{k}^{-1}}(\bm{T}_{k}^{ij})|\le\rho_{k}^{-1}$ and the inequality holds. Hence, the sequence $\{\bm{\Delta}_{k}\}$ is upper bounded.
+
+2.\ Secondly, we prove that the sequence of Lagrangian function $\{\mathcal{L}(\bm{C}_{k+1},\bm{Z}_{k+1},\bm{\Delta}_{k},\rho_{k})\}$ is also upper bounded. Since we have the globally optimal solution of $\bm{C}$ and $\bm{Z}$ in their corresponding subproblems, we always have 
+\begin{align}
+\mathcal{L}(\bm{C}_{k+1},\bm{Z}_{k+1},\bm{\Delta}_{k},\rho_{k})
+\le
+\mathcal{L}(\bm{C}_{k},\bm{Z}_{k},\bm{\Delta}_{k},\rho_{k}).
+\end{align}
+Based on the updating rule that 
+$
+\bm{\Delta}_{k+1}
+=
+\bm{\Delta}_{k} + \rho_{k}(\bm{C}_{k+1}-\bm{Z}_{k+1})
+$
+,
+we have 
+\begin{align}
+&
+\mathcal{L}(\bm{C}_{k+1},\bm{Z}_{k+1},\bm{\Delta}_{k+1},\rho_{k+1})
+\\
+=
+&
+\mathcal{L}(\bm{C}_{k+1},\bm{Z}_{k+1},\bm{\Delta}_{k},\rho_{k})
++
+\langle
+\bm{\Delta}_{k+1}
+-
+\bm{\Delta}_{k}
+,
+\bm{C}_{k+1}
+-
+\bm{Z}_{k+1}
+\rangle
++
+\frac{\rho_{k+1}-\rho_{k}}{2}
+\|
+\bm{C}_{k+1}-\bm{Z}_{k+1}
+\|_{F}^{2}
+\\
+=
+&
+\mathcal{L}(\bm{C}_{k+1},\bm{Z}_{k+1},\bm{\Delta}_{k},\rho_{k})
++
+\frac{\rho_{k+1}+\rho_{k}}{2\rho_{k}^{2}}
+\|
+\bm{\Delta}_{k+1}
+-
+\bm{\Delta}_{k}
+\|_{F}^{2}.
+\end{align}
+Since the sequence 
+$\{
+\bm{\Delta}_{k}\}$
+is upper bounded, the sequence 
+$\{
+\bm{\Delta}_{k+1}
+-
+\bm{\Delta}_{k}
+\}$ is also upper bounded. Denote by $a$ the upper bound of 
+$\{
+\bm{\Delta}_{k+1}
+-
+\bm{\Delta}_{k}
+\}$, 
+i.e., 
+$
+\|
+\bm{\Delta}_{k+1}
+-
+\bm{\Delta}_{k}
+\|_{F}\le a
+$
+holds for
+$\forall k\ge0$
+,
+we have 
+\begin{align}
+&
+\mathcal{L}(\bm{C}_{k+1},\bm{Z}_{k+1},\bm{\Delta}_{k+1},\rho_{k+1})
+\\
+\le
+&
+\mathcal{L}(\bm{C}_{1},\bm{Z}_{1},\bm{A}_{0},\rho_{0})
++
+a^2\sum_{k=0}^{+\infty}\frac{\rho_{k+1}+\rho_{k}}{2\rho_{k}^{2}}
+\\
+=
+&
+\mathcal{L}(\bm{C}_{1},\bm{Z}_{1},\bm{A}_{0},\rho_{0})
++
+a^2\sum_{k=0}^{+\infty}\frac{\mu+1}{2\mu^{k}\rho_{0}}
+\\
+\le
+&
+\mathcal{L}(\bm{C}_{1},\bm{Z}_{1},\bm{A}_{0},\rho_{0})
++
+\frac{a^2}{\rho_{0}}\sum_{k=0}^{+\infty}\frac{1}{\mu^{k-1}}.
+\end{align}
+The last inequality holds since $\mu>1$ and $\mu+1<2\mu$. Therefore, we have $\sum_{k=0}^{+\infty}\frac{1}{\mu^{k-1}}<+\infty$ and the sequence of Lagrangian function 
+$\{\mathcal{L}(\bm{C}_{k+1},\bm{Z}_{k+1},\bm{\Delta}_{k+1},\rho_{k+1})\}$
+is upper bounded.
+
+3. Thirdly, we prove that the sequences of 
+$\{\bm{C}_{k}\}$ and $\{\bm{Z}_{k}\}$ are upper bounded. Since 
+\begin{align}
+&\|\bm{W}_{1}(\bm{Y}-\bm{D}\bm{W}_{3}\bm{C}_{k})\bm{W}_{2}\|_{F}^{2}
++
+\|\bm{Z}_{k}\|_{1}
+\\
+=
+&
+\mathcal{L}(\bm{C}_{k},\bm{Z}_{k},\bm{\Delta}_{k-1},\rho_{k-1})
+-
+\langle
+\bm{\Delta}_{k-1},
+\bm{C}_{k}-\bm{Z}_{k}
+\rangle
+-
+\frac{\rho_{k-1}}{2}
+\|
+\bm{C}_{k}-\bm{Z}_{k}
+\|_{F}^{2}
+\\
+=
+&
+\mathcal{L}(\bm{C}_{k},\bm{Z}_{k},\bm{\Delta}_{k-1},\rho_{k-1})
++
+\frac{1}{2\rho_{k-1}}
+(
+\|
+\bm{\Delta}_{k-1}
+\|_{F}^{2}
+-
+\|
+\bm{\Delta}_{k}
+\|_{F}^{2}
+)
+,
+\end{align}
+both $\{\bm{W}_{1}(\bm{Y}-\bm{D}\bm{W}_{3}\bm{C}_{k})\bm{W}_{2}\}$ and $\{\bm{Z}_{k}\}$ are upper bounded, and hence
+the sequence $\{\bm{C}_{k}\}$ is bounded by the Cauchy-Schwarz inequality and triangle inequality.
+We can obtain that 
+\begin{equation}
+\label{equa8-54}
+\lim_{k \to +\infty} 
+\|\bm{C}_{k+1}-\bm{Z}_{k+1}\|_{F}
+=
+\lim_{k \to +\infty} 
+\rho_{k}^{-1}
+\|
+\bm{\Delta}_{k+1}
+-
+\bm{\Delta}_{k}
+\|_{F}
+=
+0.
+\end{equation}
+Since the sequence of $\{\bm{\Delta}_{k}\}$ is upper bounded, we can also easily obtain that
+$\|\bm{C}_{k+1}-\bm{Z}_{k+1}\|_{F}=\mathcal{O}(\rho_{k}^{-1})$ 
+as 
+$k \to +\infty$
+and the equation (a) is proved.
+
+4. Now we prove the equation (b). Denote by $\bm{A}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{D}\bm{W}_{3}$, $\bm{B}=\frac{1}{2}(\bm{W}_{2}\bm{W}_{2}^{\top})^{-1}$, and $\bm{E}=\bm{W}_{3}^{\top}\bm{D}^{\top}\bm{W}_{1}^{\top}\bm{W}_{1}\bm{Y}$, and $\bm{F}_{k}=\rho_{k}(\bm{Z}_{k} -\frac{1}{\rho_{k}}\bm{\Delta}_{k})\bm{B}$. According to the Eq. (\ref{equ5-13}) in the main paper, we have
+\begin{equation}
+\label{equa8-55}
+\bm{A}\bm{C}_{k+1}
++
+\rho_{k}\bm{C}_{k+1}\bm{B}
+=
+\bm{E}
++
+\bm{F}_{k},
+\end{equation}
+\begin{equation}
+\label{equa8-56}
+\bm{A}\bm{C}_{k}
++
+\rho_{k-1}\bm{C}_{k}\bm{B}
+=
+\bm{E}
++
+\bm{F}_{k-1}.
+\end{equation}
+By calculating the difference between the Eq. (\ref{equa8-56}) and Eq. (\ref{equa8-55}), we have
+\begin{equation}
+\begin{split}
+\label{equa8-57}
+&
+\bm{A}
+(\bm{C}_{k+1} - \bm{C}_{k})
++
+\rho_{k}
+(\bm{C}_{k+1} - \bm{C}_{k})
+\bm{B}
+\\
+=
+&
+\bm{F}_{k}
+-
+\bm{F}_{k-1}
++
+\rho_{k-1}\bm{C}_{k}\bm{B}
+-
+\rho_{k}\bm{C}_{k}\bm{B}
+\\
+=
+&
+\rho_{k}(\bm{Z}_{k}-\bm{C}_{k})\bm{B}
++
+(\bm{\Delta}_{k-1}-\bm{\Delta}_{k})\bm{B}
+-
+\rho_{k-1}(\bm{Z}_{k-1}-\bm{C}_{k})\bm{B}
+\\
+=
+&
+\rho_{k}(\bm{Z}_{k}-\bm{C}_{k})\bm{B}
++
+(\bm{\Delta}_{k-1}-\bm{\Delta}_{k})\bm{B}
++
+\rho_{k-1}(\bm{C}_{k}-\bm{Z}_{k})\bm{B}
++
+\rho_{k-1}(\bm{Z}_{k}-\bm{Z}_{k-1})\bm{B}
+\\
+=
+&
+\mu(\bm{\Delta}_{k-1}-\bm{\Delta}_{k})\bm{B}
++
+\rho_{k-1}(\bm{Z}_{k}-\bm{Z}_{k-1})\bm{B}.
+\end{split}
+\end{equation}
+This equation can be transformed into the following Sylvester equation 
+\begin{equation}
+\label{equa8-58}
+(\bm{I}_{n}\otimes\mathbf{A}
++
+\rho_{k}\bm{B}^{\top}\otimes\mathbf{I}_{m})\text{vec}(\bm{C}_{k+1} - \bm{C}_{k})
+=
+\text{vec}(\mu(\bm{\Delta}_{k-1}-\bm{\Delta}_{k})\bm{B}+\rho_{k-1}(\bm{Z}_{k}-\bm{Z}_{k-1})\bm{B}),
+\end{equation}
+Since $\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}=\mathcal{O}(\rho_{k}^{-1})$ as $k \to +\infty$, there exist constants $N\in\mathbb{Z}$ and $c\in\mathbb{R}_{+}$ such that,
+\begin{equation}
+\label{equa8-59}
+\rho_{k}\|\bm{Z}_{k+1}-\bm{Z}_{k}\|_{F}
+\le
+c
+\quad 
+\text{for all}
+\quad
+k>N.
+\end{equation}
+Note that $\lim_{k \to +\infty}\rho_{k}=0$ and the solution of the above Sylvester equation is
+\begin{equation}
+\label{equa8-60}
+\text{vec}(\bm{C}_{k+1} - \bm{C}_{k})
+=
+(\bm{I}_{n}\otimes\mathbf{A}
++
+\rho_{k}\bm{B}^{\top}\otimes\mathbf{I}_{m})^{-1}
+\text{vec}(\mu(\bm{\Delta}_{k-1}-\bm{\Delta}_{k})\bm{B}+\rho_{k-1}(\bm{Z}_{k}-\bm{Z}_{k-1})\bm{B}).
+\end{equation}
+By Cauchy-Schwarz inequality, we can obtain that
+\begin{align}
+&
+\|
+\bm{C}_{k+1}
+-
+\bm{C}_{k}
+\|_{F}
+=
+\|
+\text{vec}(\bm{C}_{k+1} - \bm{C}_{k})
+\|_{2}
+\\
+=
+&
+\|
+(\bm{I}_{n}\otimes\mathbf{A}
++
+\rho_{k}\bm{B}^{\top}\otimes\mathbf{I}_{m})^{-1}
+\text{vec}(\mu(\bm{\Delta}_{k-1}-\bm{\Delta}_{k})\bm{B}+\rho_{k-1}(\bm{Z}_{k}-\bm{Z}_{k-1})\bm{B})
+\|_{2}
+\\
+\le
+&
+(
+\mu
+a
++
+c
+)
+\|
+(\bm{I}_{n}\otimes\mathbf{A}
++
+\rho_{k}\bm{B}^{\top}\otimes\mathbf{I}_{m})^{-1}
+\|_{F}
+\|
+\bm{B}
+\|_{F}.
+\end{align}
+Since $\lim_{k \to +\infty}\rho_{k}=+\infty$, we have that 
+$\lim_{k \to +\infty} 
+\|
+(\bm{I}_{n}\otimes\mathbf{A}
++
+\rho_{k}\bm{B}^{\top}\otimes\mathbf{I}_{m})^{-1}
+\|_{F}=0$ 
+and 
+\begin{equation}
+\label{equa8-64}
+\lim_{k \to +\infty} 
+\|
+\bm{C}_{k+1}-\bm{C}_{k}
+\|_{F}
+=
+0.
+\end{equation}
+The equation (b) is proved. 
+
+
+5. Now we prove the argument (c). Denote by $\bm{T}_{k-1}=\bm{C}_{k}+\rho_{k-1}^{-1}\bm{\Delta}_{k-1}$. Since $\lim_{k \to +\infty}\rho_{k}=+\infty$ and $\lim_{k \to +\infty} \|\bm{C}_{k+1}-\bm{C}_{k}\|_{F}=0$, the argument (c) can be proved by checking that 
+\begin{align}
+&\lim_{k \to +\infty} 
+\|
+\bm{Z}_{k+1}-\bm{Z}_{k}
+\|_{F}
+\\
+=
+&
+\lim_{k \to +\infty} 
+\|
+\bm{C}_{k}+\rho_{k-1}^{-1}\bm{\Delta}_{k-1}-\bm{Z}_{k}
++
+\bm{C}_{k+1}-\bm{C}_{k}
+-
+\rho_{k-1}^{-1}
+\bm{\Delta}_{k-1}
++
+\rho_{k}^{-1}
+\bm{\Delta}_{k}
+-
+\rho_{k}^{-1}
+\bm{\Delta}_{k+1}
+\|_{F}
+\\
+\le
+&
+\lim_{k \to +\infty} 
+(
+\|
+\bm{T}_{k-1}-\mathcal{S}_{\rho_{k-1}^{-1}}(\bm{T}_{k-1})
+\|_{F}
++
+\|
+\bm{C}_{k+1}-\bm{C}_{k}
+\|_{F}
++
+\|
+\rho_{k-1}^{-1}\bm{\Delta}_{k-1}
++
+\rho_{k}^{-1}\bm{\Delta}_{k+1}
+-
+\rho_{k}^{-1}\bm{\Delta}_{k}
+\|_{F}
+)
+\\
+\le
+&
+\lim_{k \to +\infty} 
+(
+3p^2M\rho_{k-1}^{-1}
++
+\|
+\bm{C}_{k+1}-\bm{C}_{k}
+\|_{F}
++
+\|
+\rho_{k-1}^{-1}\bm{\Delta}_{k-1}
++
+\rho_{k}^{-1}\bm{\Delta}_{k+1}
+-
+\rho_{k}^{-1}\bm{\Delta}_{k}
+\|_{F}
+)
+=
+0
+.
+\end{align}
+That is the end of the proof.
+\end{proof}
+
+
+\begin{theorem}
+Assume that $\bm{A}\in\mathbb{R}^{3p^2\times 3p^2}$, $\bm{B}\in\mathbb{R}^{M\times M}$ are both symmetric and positive semi-definite matrices. If at least one of $\bm{A}, \bm{B}$ is positive definite, the Sylvester equation $\bm{A}\bm{C}
++
+\bm{C}\bm{B}
+=
+\bm{E}$ has a unique solution for $\bm{C}\in \mathbb{R}^{3p^2\times M}$.
+\end{theorem}
+\vspace{-4mm}
+\begin{proof}
+Since $\bm{A}, \bm{B}$ are symmetric matrices, they can be diagonalized as 
+$
+\bm{A}
+=
+\bm{U}_{\bm{A}}\bm{\Sigma}_{\bm{A}}\bm{U}_{\bm{A}}^{\top}
+$
+,
+$
+\bm{B}
+=
+\bm{U}_{\bm{B}}\bm{\Sigma}_{\bm{B}}\bm{U}_{\bm{B}}^{\top}
+$
+,
+where $\bm{\Sigma}_{\bm{A}}=\text{diag}(\lambda_{A}^{1},...,\lambda_{A}^{3p^2})$ and $\bm{\Sigma}_{\bm{B}}=\text{diag}(\lambda_{B}^{1},...,\lambda_{B}^{M})$ are diagonal matrices. Since $\bm{A}, \bm{B}$ are positive semi-definite matrices, their corresponding eigenvalues are non-negative, i.e., $\lambda_{A}^{i}\ge0$ for $\forall i=1,...,3p^2$ and $\lambda_{B}^{j}\ge0$ for $\forall j=1,...,M$. If at least one of the matrices $\bm{A}, \bm{B}$ is positive definite, then $\lambda_{A}^{i}+\lambda_{B}^{j}>0$ holds true for $\forall i, j$ and $\sigma(\bm{A})\cap\sigma(\bm{-B})=\emptyset$. Therefore, the Sylvester equation $\bm{A}\bm{C}
++
+\bm{C}\bm{B}
+=
+\bm{E}$ has a unique solution.
+\end{proof}
+
+
