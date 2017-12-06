@@ -1384,65 +1384,60 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_Noisy_chinesegirl.png}
-		\caption{Noisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CBM3D_chinesegirl.png}
-		\caption{CBM3D}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_MLP_chinesegirl.png}
-\caption{MLP}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_TNRD_chinesegirl.png}
-\caption{TNRD}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_chinesegirl.png}
-\caption{NI}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NC_chinesegirl.png}
-		\caption{NC}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMcw_chinesegirl.png}
-		\caption{WNNM-1}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMJ_chinesegirl.png}
-		\caption{WNNM-2}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNM_ADMM_chinesegirl.png}
-		\caption{WNNM-3}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_chinesegirl.png}
-		\caption{MC-WNNM}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_Noisy_chinesegirl.png}}
+{\footnotesize Noisy }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CBM3D_chinesegirl.png}}
+{\footnotesize CBM3D}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_MLP_chinesegirl.png}}
+{\footnotesize MLP}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_TNRD_chinesegirl.png}}
+{\footnotesize TNRD}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_chinesegirl.png}}
+{\footnotesize NI}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NC_chinesegirl.png}}
+{\footnotesize NC  }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMcw_chinesegirl.png}}
+{\footnotesize WNNM-1 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMJ_chinesegirl.png}}
+{\footnotesize WNNM-2 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNM_ADMM_chinesegirl.png}}
+{\footnotesize WNNM-3 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_chinesegirl.png}}
+{\footnotesize MC-WNNM }
+\end{minipage}
+}
     \caption{Denoised images of the real noisy image ``Girl'' \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig4-10}
 \end{figure}
@@ -1450,65 +1445,60 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_Noisy_circuit.png}
-		\caption{Noisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CBM3D_circuit.png}
-		\caption{CBM3D}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_MLP_circuit.png}
-\caption{MLP}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_TNRD_circuit.png}
-\caption{TNRD}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_circuit.png}
-\caption{NI}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NC_circuit.png}
-		\caption{NC}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMcw_circuit.png}
-		\caption{WNNM-1}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMJ_circuit.png}
-		\caption{WNNM-2}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNM_ADMM_circuit.png}
-		\caption{WNNM-3}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_circuit.png}
-		\caption{MC-WNNM}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_Noisy_circuit.png}}
+{\footnotesize Noisy }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CBM3D_circuit.png}}
+{\footnotesize CBM3D}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_MLP_circuit.png}}
+{\footnotesize MLP}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_TNRD_circuit.png}}
+{\footnotesize TNRD}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_circuit.png}}
+{\footnotesize NI}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NC_circuit.png}}
+{\footnotesize NC  }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMcw_circuit.png}}
+{\footnotesize WNNM-1 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMJ_circuit.png}}
+{\footnotesize WNNM-2 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNM_ADMM_circuit.png}}
+{\footnotesize WNNM-3 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_circuit.png}}
+{\footnotesize MC-WNNM }
+\end{minipage}
+}
     \caption{Denoised images of the real noisy image ``Circuit'' \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig4-11}
 \end{figure}
@@ -1516,65 +1506,60 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_Noisy_room.png}
-		\caption{Noisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CBM3D_room.png}
-		\caption{CBM3D}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_MLP_room.png}
-\caption{MLP}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_TNRD_room.png}
-\caption{TNRD}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_room.png}
-\caption{NI}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NC_room.png}
-		\caption{NC}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMcw_room.png}
-		\caption{WNNM-1}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMJ_room.png}
-		\caption{WNNM-2}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNM_ADMM_room.png}
-		\caption{WNNM-3}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_room.png}
-		\caption{MC-WNNM}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_Noisy_room.png}}
+{\footnotesize Noisy }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CBM3D_room.png}}
+{\footnotesize CBM3D}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_MLP_room.png}}
+{\footnotesize MLP}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_TNRD_room.png}}
+{\footnotesize TNRD}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_room.png}}
+{\footnotesize NI}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NC_room.png}}
+{\footnotesize NC  }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMcw_room.png}}
+{\footnotesize WNNM-1 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMJ_room.png}}
+{\footnotesize WNNM-2 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNM_ADMM_room.png}}
+{\footnotesize WNNM-3 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_room.png}}
+{\footnotesize MC-WNNM }
+\end{minipage}
+}
     \caption{Denoised images of the real noisy image ``Room'' \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig4-12}
 \end{figure}
