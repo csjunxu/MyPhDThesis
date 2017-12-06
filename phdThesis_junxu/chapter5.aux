@@ -1,200 +1,97 @@
 \relax 
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Fast Tracking via Spatio-Temporal Context Learning}{104}}
+\citation{ksvd,bm3d,cbm3d,lssc,ncsr,wnnm,epll,pgpd,mlp,csf,tnrd,dncnn,Liu2008,noiseclinic,Zhu_2016_CVPR,crosschannel2016,neatimage}
+\citation{ksvd,bm3d,cbm3d,lssc,ncsr,wnnm,epll,pgpd,mlp,csf,tnrd,dncnn}
+\citation{ksvd}
+\citation{bm3d,cbm3d,lssc,ncsr,wnnm}
+\citation{ksvd,bm3d,cbm3d,lssc,ncsr}
+\citation{wnnm}
+\citation{epll,pgpd}
+\citation{mlp,csf,tnrd,dncnn}
+\citation{crosschannel2016}
+\citation{ksvd,bm3d,cbm3d,lssc,ncsr,wnnm,epll,pgpd,mlp,csf,tnrd,dncnn}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising}{121}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:STC}{{5}{104}}
-\newsmartlabel{chap:STC}{{5}{5}}
-\newnamelabel{chap:STC}{{Fast Tracking via Spatio-Temporal Context Learning}{Fast Tracking via Spatio-Temporal Context Learning}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{104}}
-\citation{divvala2009empirical}
-\citation{yang2009context,grabner2010tracking,dinh2011context,Wen_ECCV_2012}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Basic flow of our tracking algorithm. The local context regions are inside the red rectangles while the target locations are indicated by the yellow rectangles. FFT denotes the Fast Fourier Transform and IFFT is the inverse FFT.\relax }}{105}}
-\newlabel{fig:basicflow}{{5.1}{105}}
-\newsmartlabel{fig:basicflow}{{5.1}{5}}
-\newnamelabel{fig:basicflow}{{Introduction}{Introduction}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Graphical model representation of spatial relationship between object and its local context. The local context region $\Omega _c$ is inside the red rectangle which includes object region $\Omega _o$ surrounding by the yellow rectangle centering at the tracked result $\textbf  {x}^\star $. The context feature at location $\textbf  {z}$ is denoted by $\textbf  {c}(\textbf  {z})=(I(\textbf  {z}),\textbf  {z})$ including a low-level appearance representation (i.e., image intensity $I(\textbf  {z})$) and location information.\relax }}{107}}
-\newlabel{fig:graphrepresentation}{{5.2}{107}}
-\newsmartlabel{fig:graphrepresentation}{{5.2}{5}}
-\newnamelabel{fig:graphrepresentation}{{Problem Formulation}{Problem Formulation}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Problem Formulation}{107}}
-\newlabel{eq:confmap}{{5.1}{107}}
-\newsmartlabel{eq:confmap}{{5.1}{5}}
-\newlabel{eq:marginalizingconfmap}{{5.2}{108}}
-\newsmartlabel{eq:marginalizingconfmap}{{5.2}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Spatial Context Model}{108}}
-\newlabel{eq:spatialcontext}{{5.3}{108}}
-\newsmartlabel{eq:spatialcontext}{{5.3}{5}}
-\citation{torralba2003contextual}
-\citation{belongie2002shape,wolf2006critical}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Context Prior Model}{109}}
-\newlabel{eq:context-prior}{{5.4}{109}}
-\newsmartlabel{eq:context-prior}{{5.4}{5}}
-\newlabel{eq:weight}{{5.5}{109}}
-\newsmartlabel{eq:weight}{{5.5}{5}}
-\citation{Babenko_pami_2011}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Illustration of 1-D cross section of the confidence map $c$(\textbf  {x}) in (5.6\hbox {}) with different parameters $\beta $. Here, the object location $\textbf  {x}^\star =(100,100)$.\relax }}{110}}
-\newlabel{fig:confidencemap}{{5.3}{110}}
-\newsmartlabel{fig:confidencemap}{{5.3}{5}}
-\newnamelabel{fig:confidencemap}{{Confidence Map}{Confidence Map}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Confidence Map}{110}}
-\newlabel{eq:confidencemap}{{5.6}{110}}
-\newsmartlabel{eq:confidencemap}{{5.6}{5}}
-\citation{oppenheim1983signals}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Fast Learning Spatial Context Model}{111}}
-\newlabel{sec:fast-learning}{{5.2.4}{111}}
-\newsmartlabel{sec:fast-learning}{{5.2.4}{5}}
-\newnamelabel{sec:fast-learning}{{Fast Learning Spatial Context Model}{Fast Learning Spatial Context Model}}
-\newlabel{eq:convolutionconfmap}{{5.7}{111}}
-\newsmartlabel{eq:convolutionconfmap}{{5.7}{5}}
-\newlabel{eq:fft}{{5.8}{112}}
-\newsmartlabel{eq:fft}{{5.8}{5}}
-\newlabel{eq:fftspatialcontextmodel}{{5.9}{112}}
-\newsmartlabel{eq:fftspatialcontextmodel}{{5.9}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Proposed Tracking Algorithm}{112}}
-\newlabel{eq:confmaptt}{{5.10}{112}}
-\newsmartlabel{eq:confmaptt}{{5.10}{5}}
-\newlabel{eq:confmapdeftt}{{5.11}{112}}
-\newsmartlabel{eq:confmapdeftt}{{5.11}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Illustration of the amplitude of the temporal filter $F_\omega $ in (5.14\hbox {}).\relax }}{113}}
-\newlabel{fig:lowpassfilter}{{5.4}{113}}
-\newsmartlabel{fig:lowpassfilter}{{5.4}{5}}
-\newnamelabel{fig:lowpassfilter}{{Proposed Tracking Algorithm}{Proposed Tracking Algorithm}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Update of Spatio-Temporal Context}{113}}
-\newlabel{eq:spatiotemporal}{{5.12}{113}}
-\newsmartlabel{eq:spatiotemporal}{{5.12}{5}}
-\newlabel{eq:temporalFrequency}{{5.13}{113}}
-\newsmartlabel{eq:temporalFrequency}{{5.13}{5}}
-\citation{oppenheim1983signals}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Illustration of why the proposed model is equipped to handle heavy occlusion. The object, background, and occlusion regions are denoted by $\Omega _o$, $\Omega _b$ and $\Omega _{occ}$, respectively. The context region $\Omega _c=\Omega _o\DOTSB \bigcup@ \slimits@ \Omega _b$. See text for details.\relax }}{114}}
-\newlabel{fig:occ}{{5.5}{114}}
-\newsmartlabel{fig:occ}{{5.5}{5}}
-\newnamelabel{fig:occ}{{Update of Spatio-Temporal Context}{Update of Spatio-Temporal Context}}
-\newlabel{eq:filter}{{5.14}{114}}
-\newsmartlabel{eq:filter}{{5.14}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Discussion}{114}}
-\newlabel{discussion}{{5.3.2}{114}}
-\newsmartlabel{discussion}{{5.3.2}{5}}
-\newnamelabel{discussion}{{Discussion}{Discussion}}
-\citation{yang2009context,grabner2010tracking,dinh2011context,Wen_ECCV_2012}
-\citation{bolme2009average,bolme2010visual,henriques2012circulant}
-\citation{yang2009context}
-\citation{grabner2010tracking,dinh2011context,Wen_ECCV_2012}
-\citation{grabner2010tracking,dinh2011context,Wen_ECCV_2012}
-\citation{bolme2009average,bolme2010visual}
-\citation{henriques2012circulant}
-\citation{bolme2009average,bolme2010visual}
-\citation{bolme2009average,bolme2010visual,henriques2012circulant}
-\newlabel{eq:confmapttocc}{{5.15}{116}}
-\newsmartlabel{eq:confmapttocc}{{5.15}{5}}
-\citation{collins2003mean}
-\citation{Adam_CVPR_2006}
-\citation{Grabner_ECCV_2008}
-\citation{oron2012locally}
-\citation{Ross_IJCV_2008}
-\citation{Grabner_BMVC_2006}
-\citation{Babenko_pami_2011}
-\citation{Kwon_CVPR_2010}
-\citation{Mei_PAMI_2011}
-\citation{Kalal_CVPR_2010}
-\citation{sevilla2012distribution}
-\citation{zhang2012robust}
-\citation{Hare_ICCV_2011}
-\citation{dinh2011context}
-\citation{bolme2010visual}
-\citation{Zhang_eccv_2012}
-\citation{henriques2012circulant}
-\citation{cehovin2013robust}
-\newlabel{eq:contextocc}{{5.16}{117}}
-\newsmartlabel{eq:contextocc}{{5.16}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Experiments}{117}}
-\citation{oppenheim1983signals,bolme2009average}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Experimental Setup}{118}}
-\citation{henriques2012circulant}
-\citation{bolme2010visual}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Tracking results of evaluated algorithms.\relax }}{119}}
-\newlabel{fig:challengingEnvironments}{{5.6}{119}}
-\newsmartlabel{fig:challengingEnvironments}{{5.6}{5}}
-\newnamelabel{fig:challengingEnvironments}{{Experiments}{Experiments}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Success rate (SR)(\%). \leavevmode {\color  {red}\textbf  {Red}} fonts indicate the best performance while the \leavevmode {\color  {blue}\textbf  {blue}} fonts indicate the second best ones. The total number of evaluated frames is $9,607$. \relax }}{120}}
-\newlabel{Table1}{{5.1}{120}}
-\newsmartlabel{Table1}{{5.1}{5}}
-\newnamelabel{Table1}{{Experimental Setup}{Experimental Setup}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Experimental Results}{120}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Center location error (CLE)(in pixels) and average frame per second (FPS). \leavevmode {\color  {red}\textbf  {Red}} fonts indicate the best performance while the \leavevmode {\color  {blue}\textbf  {blue}} fonts indicate the second best ones. The total number of evaluated frames is $9,607$. \relax }}{121}}
-\newlabel{Table2}{{5.2}{121}}
-\newsmartlabel{Table2}{{5.2}{5}}
-\newnamelabel{Table2}{{Experimental Setup}{Experimental Setup}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Tracking results of evaluated algorithms.\relax }}{122}}
-\newlabel{fig:screenshots}{{5.7}{122}}
-\newsmartlabel{fig:screenshots}{{5.7}{5}}
-\newnamelabel{fig:screenshots}{{Experimental Setup}{Experimental Setup}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Tracking results of evaluated algorithms.\relax }}{123}}
-\newlabel{fig:screenshots1}{{5.8}{123}}
-\newsmartlabel{fig:screenshots1}{{5.8}{5}}
-\newnamelabel{fig:screenshots1}{{Experimental Results}{Experimental Results}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Tracking results of evaluated algorithms.\relax }}{124}}
-\newlabel{fig:cliffbar}{{5.9}{124}}
-\newsmartlabel{fig:cliffbar}{{5.9}{5}}
-\newnamelabel{fig:cliffbar}{{Experimental Results}{Experimental Results}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Tracking results of evaluated algorithms.\relax }}{125}}
-\newlabel{fig:screenshots2}{{5.10}{125}}
-\newsmartlabel{fig:screenshots2}{{5.10}{5}}
-\newnamelabel{fig:screenshots2}{{Experimental Results}{Experimental Results}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Analysis of CT and STC}{128}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Illustration of fusion strategy.\relax }}{128}}
-\newlabel{fig:coarsefine}{{5.11}{128}}
-\newsmartlabel{fig:coarsefine}{{5.11}{5}}
-\newnamelabel{fig:coarsefine}{{Analysis of CT and STC}{Analysis of CT and STC}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Success rate (SR)($\%$). The \leavevmode {\color  {red}\textbf  {red}} fonts indicate the best performance while the \leavevmode {\color  {blue}\emph  {italic}} fonts indicate the second best ones.\relax }}{129}}
-\newlabel{table:sr}{{5.3}{129}}
-\newsmartlabel{table:sr}{{5.3}{5}}
-\newnamelabel{table:sr}{{Analysis of CT and STC}{Analysis of CT and STC}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Discussion}{129}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Fusion of CT and STC}{129}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Summary}{130}}
-\@setckpt{chapter5}{
-\setcounter{page}{131}
-\setcounter{equation}{18}
-\setcounter{enumi}{4}
-\setcounter{enumii}{0}
-\setcounter{enumiii}{0}
-\setcounter{enumiv}{0}
-\setcounter{footnote}{0}
-\setcounter{mpfootnote}{0}
-\setcounter{part}{0}
-\setcounter{chapter}{5}
-\setcounter{section}{6}
-\setcounter{subsection}{0}
-\setcounter{subsubsection}{0}
-\setcounter{paragraph}{0}
-\setcounter{subparagraph}{0}
-\setcounter{figure}{11}
-\setcounter{table}{3}
-\setcounter{ContinuedFloat}{0}
-\setcounter{@pps}{0}
-\setcounter{@ppsavesec}{0}
-\setcounter{@ppsaveapp}{0}
-\setcounter{parentequation}{0}
-\setcounter{@smartlistlen}{2}
-\setcounter{less@smartlist}{0}
-\setcounter{@currsmartlistplace}{0}
-\setcounter{lofdepth}{1}
-\setcounter{lotdepth}{1}
-\setcounter{ALC@unique}{23}
-\setcounter{ALC@line}{6}
-\setcounter{ALC@rem}{0}
-\setcounter{ALC@depth}{0}
-\setcounter{float@type}{8}
-\setcounter{algorithm}{4}
-\setcounter{LT@tables}{0}
-\setcounter{LT@chunks}{0}
-\setcounter{subfigure}{0}
-\setcounter{lofdepth}{1}
-\setcounter{subtable}{0}
-\setcounter{lotdepth}{1}
-\setcounter{Lemma}{1}
-\setcounter{NAT@ctr}{0}
-\setcounter{theorem}{0}
-\setcounter{myappendices}{0}
-\setcounter{appdepth}{1}
-}
+\newlabel{sec:internalsc}{{5}{121}}
+\newsmartlabel{sec:internalsc}{{5}{5}}
+\newnamelabel{sec:internalsc}{{A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising}{A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{121}}
+\citation{cbm3d,Liu2008,noiseclinic,Zhu_2016_CVPR,crosschannel2016,neatimage}
+\citation{cbm3d}
+\citation{bm3d}
+\citation{Liu2008}
+\citation{noiseclinic,Zhu_2016_CVPR}
+\citation{crosschannel2016}
+\citation{noiseclinic}
+\citation{neatimage}
+\citation{crosschannel2016,neatimage}
+\citation{lasso}
+\citation{src,yang2010image}
+\citation{ksvd,lssc,ncsr}
+\citation{ksvd}
+\citation{lssc}
+\citation{ncsr}
+\citation{Zhu_2016_CVPR,zhao2014robust}
+\citation{Zhu_2016_CVPR,zhao2014robust}
+\citation{admm}
+\citation{lasso}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}The Proposed Realistic Image Denoising Algorithm}{124}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}The Trilateral Weighted Sparse Coding Model}{124}}
+\newlabel{equ5-1}{{5.1}{124}}
+\newsmartlabel{equ5-1}{{5.1}{5}}
+\citation{ksvd,lssc,ncsr}
+\citation{Leungtip}
+\newlabel{equ5-2}{{5.2}{125}}
+\newsmartlabel{equ5-2}{{5.2}{5}}
+\newlabel{equ5-3}{{5.3}{125}}
+\newsmartlabel{equ5-3}{{5.3}{5}}
+\citation{Leungtip}
+\citation{glm}
+\citation{Chen2015ICCV}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}The Setting of Weight Matrices}{126}}
+\newlabel{equ5-4}{{5.4}{126}}
+\newsmartlabel{equ5-4}{{5.4}{5}}
+\newlabel{equ5-5}{{5.5}{126}}
+\newsmartlabel{equ5-5}{{5.5}{5}}
+\newlabel{equ5-6}{{5.6}{127}}
+\newsmartlabel{equ5-6}{{5.6}{5}}
+\newlabel{equ5-7}{{5.7}{127}}
+\newsmartlabel{equ5-7}{{5.7}{5}}
+\newlabel{equ5-8}{{5.8}{127}}
+\newsmartlabel{equ5-8}{{5.8}{5}}
+\citation{Eckstein1992}
+\citation{admm}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Model Optimization}{128}}
+\newlabel{equ5-9}{{5.9}{128}}
+\newsmartlabel{equ5-9}{{5.9}{5}}
+\newlabel{equ5-10}{{5.10}{128}}
+\newsmartlabel{equ5-10}{{5.10}{5}}
+\newlabel{equ5-11}{{5.11}{128}}
+\newsmartlabel{equ5-11}{{5.11}{5}}
+\citation{simoncini2016computational}
+\newlabel{equ5-12}{{5.12}{129}}
+\newsmartlabel{equ5-12}{{5.12}{5}}
+\newlabel{equ5-13}{{5.13}{129}}
+\newsmartlabel{equ5-13}{{5.13}{5}}
+\newlabel{equ5-14}{{5.14}{129}}
+\newsmartlabel{equ5-14}{{5.14}{5}}
+\newlabel{equ5-15}{{5.15}{129}}
+\newsmartlabel{equ5-15}{{5.15}{5}}
+\newlabel{equ5-16}{{5.16}{129}}
+\newsmartlabel{equ5-16}{{5.16}{5}}
+\citation{admm}
+\newlabel{equ5-17}{{5.17}{130}}
+\newsmartlabel{equ5-17}{{5.17}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Convergence Analysis}{130}}
+\newlabel{th5-1}{{5.2.1}{130}}
+\newsmartlabel{th5-1}{{5.2.1}{5}}
+\newnamelabel{th5-1}{{Convergence Analysis}{Convergence Analysis}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}The Denoising Algorithm}{131}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Existence and Faster Solution of Sylvester Equation (\G@refundefinedtrue \text  {\normalfont  \bfseries  ??}\GenericWarning  {               }{LaTeX Warning: Reference `equ5-13' on page 132 undefined})}{132}}
+\citation{Bartels1972}
+\citation{GolubMatrix}
+\citation{bareiss1968sylvester}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Existence of the Unique Solution}{133}}
+\newlabel{th5-2}{{5.3.1}{133}}
+\newsmartlabel{th5-2}{{5.3.1}{5}}
+\newnamelabel{th5-2}{{Ex
