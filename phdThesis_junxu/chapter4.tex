@@ -1323,65 +1323,60 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 
 \begin{figure}
     \centering
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_Noisy_frog.png}
-		\caption{Noisy}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CBM3D_frog.png}
-		\caption{CBM3D}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_MLP_frog.png}
-\caption{MLP}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_TNRD_frog.png}
-\caption{TNRD}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_frog.png}
-\caption{NI}
-    \end{subfigure}
-\hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NC_frog.png}
-		\caption{NC}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMcw_frog.png}
-		\caption{WNNM-1}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMJ_frog.png}
-		\caption{WNNM-2}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNM_ADMM_frog.png}
-		\caption{WNNM-3}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.19\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_frog.png}
-		\caption{MC-WNNM}
-    \end{subfigure}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_Noisy_frog.png}}
+{\footnotesize Noisy }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CBM3D_frog.png}}
+{\footnotesize CBM3D}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_MLP_frog.png}}
+{\footnotesize MLP}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_TNRD_frog.png}}
+{\footnotesize TNRD}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_frog.png}}
+{\footnotesize NI}
+\end{minipage}
+}\vspace{-4mm}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NC_frog.png}}
+{\footnotesize NC  }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMcw_frog.png}}
+{\footnotesize WNNM-1 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNMJ_frog.png}}
+{\footnotesize WNNM-2 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_WNNM_ADMM_frog.png}}
+{\footnotesize WNNM-3 }
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_frog.png}}
+{\footnotesize MC-WNNM }
+\end{minipage}
+}
     \caption{Denoised images of the real noisy image ``Frog'' \cite{ncwebsite} by different methods.\ The estimated noise levels of R, G, and B channels are ?, ?, and ?, respectively.\ The images are better to be zoomed in on screen.}
     \label{fig4-9}
 \end{figure}

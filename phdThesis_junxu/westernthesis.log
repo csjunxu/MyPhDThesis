@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  6 DEC 2017 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7003,4 +7003,203 @@ Package natbib Warning: Citation `crosschannel2016' on page 108 undefined on in
 put line 1255.
 
 
-Package natbib Warnin
+Package natbib Warning: Citation `crosschannel2016' on page 108 undefined on in
+put line 1255.
+
+
+LaTeX Warning: Reference `fig4-2' on page 108 undefined on input line 1255.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 108 undefined on input lin
+e 1257.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 108 undefined on input lin
+e 1259.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 108 undefined on in
+put line 1259.
+
+
+LaTeX Warning: Reference `fig4-8' on page 108 undefined on input line 1261.
+
+
+LaTeX Warning: Reference `fig4-9' on page 108 undefined on input line 1261.
+
+
+LaTeX Warning: Reference `fig4-12' on page 108 undefined on input line 1261.
+
+
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 108
+ []
+
+[108] <images/mcwnnm/nc/resize_br_Noisy_dog.png, id=724, 200.75pt x 200.75pt>
+File: images/mcwnnm/nc/resize_br_Noisy_dog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_Noisy_dog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_Noisy_dog.png used on input
+ line 1291.
+(pdftex.def)             Requested size: 75.52312pt x 75.52304pt.
+
+<images/mcwnnm/nc/resize_br_CBM3D_dog.png, id=725, 200.75pt x 200.75pt>
+File: images/mcwnnm/nc/resize_br_CBM3D_dog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_CBM3D_dog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_CBM3D_dog.png used on input
+ line 1291.
+(pdftex.def)             Requested size: 75.52312pt x 75.52304pt.
+
+<images/mcwnnm/nc/resize_br_MLP_dog.png, id=726, 200.75pt x 200.75pt>
+File: images/mcwnnm/nc/resize_br_MLP_dog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_MLP_dog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_MLP_dog.png used on input l
+ine 1291.
+(pdftex.def)             Requested size: 75.52312pt x 75.52304pt.
+
+<images/mcwnnm/nc/resize_br_TNRD_dog.png, id=727, 200.75pt x 200.75pt>
+File: images/mcwnnm/nc/resize_br_TNRD_dog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_TNRD_dog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_TNRD_dog.png used on input 
+line 1291.
+(pdftex.def)             Requested size: 75.52312pt x 75.52304pt.
+
+<images/mcwnnm/nc/resize_br_NI_dog.png, id=728, 200.75pt x 200.75pt>
+File: images/mcwnnm/nc/resize_br_NI_dog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_NI_dog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_NI_dog.png used on input li
+ne 1291.
+(pdftex.def)             Requested size: 75.52312pt x 75.52304pt.
+
+<images/mcwnnm/nc/resize_br_NC_dog.png, id=729, 200.75pt x 200.75pt>
+File: images/mcwnnm/nc/resize_br_NC_dog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_NC_dog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_NC_dog.png used on input li
+ne 1318.
+(pdftex.def)             Requested size: 75.52312pt x 75.52304pt.
+
+<images/mcwnnm/nc/resize_br_WNNMcw_dog.png, id=730, 200.75pt x 200.75pt>
+File: images/mcwnnm/nc/resize_br_WNNMcw_dog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_WNNMcw_dog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNMcw_dog.png used on inpu
+t line 1318.
+(pdftex.def)             Requested size: 75.52312pt x 75.52304pt.
+
+<images/mcwnnm/nc/resize_br_WNNMJ_dog.png, id=731, 200.75pt x 200.75pt>
+File: images/mcwnnm/nc/resize_br_WNNMJ_dog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_WNNMJ_dog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNMJ_dog.png used on input
+ line 1318.
+(pdftex.def)             Requested size: 75.52312pt x 75.52304pt.
+
+<images/mcwnnm/nc/resize_br_WNNM_ADMM_dog.png, id=732, 200.75pt x 200.75pt>
+File: images/mcwnnm/nc/resize_br_WNNM_ADMM_dog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_WNNM_ADMM_dog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNM_ADMM_dog.png used on i
+nput line 1318.
+(pdftex.def)             Requested size: 75.52312pt x 75.52304pt.
+
+<images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_dog.png, id=733, 200.75pt x 200.75pt>
+File: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_dog.png Graphic file (type png)
+<use images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_dog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_dog.png used 
+on input line 1318.
+(pdftex.def)             Requested size: 75.52312pt x 75.52304pt.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 109 undefined on input lin
+e 1319.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 109 undefined on input lin
+e 1319.
+
+
+<images/mcwnnm/nc/resize_br_Noisy_frog.png, id=734, 225.84375pt x 225.84375pt>
+File: images/mcwnnm/nc/resize_br_Noisy_frog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_Noisy_frog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_Noisy_frog.png used on inpu
+t line 1352.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_CBM3D_frog.png, id=735, 225.84375pt x 225.84375pt>
+File: images/mcwnnm/nc/resize_br_CBM3D_frog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_CBM3D_frog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_CBM3D_frog.png used on inpu
+t line 1352.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_MLP_frog.png, id=736, 225.84375pt x 225.84375pt>
+File: images/mcwnnm/nc/resize_br_MLP_frog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_MLP_frog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_MLP_frog.png used on input 
+line 1352.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_TNRD_frog.png, id=737, 225.84375pt x 225.84375pt>
+File: images/mcwnnm/nc/resize_br_TNRD_frog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_TNRD_frog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_TNRD_frog.png used on input
+ line 1352.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_NI_frog.png, id=738, 225.84375pt x 225.84375pt>
+File: images/mcwnnm/nc/resize_br_NI_frog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_NI_frog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_NI_frog.png used on input l
+ine 1352.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_NC_frog.png, id=739, 225.84375pt x 225.84375pt>
+File: images/mcwnnm/nc/resize_br_NC_frog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_NC_frog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_NC_frog.png used on input l
+ine 1379.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_WNNMcw_frog.png, id=740, 225.84375pt x 225.84375pt>
+File: images/mcwnnm/nc/resize_br_WNNMcw_frog.png Graphic file (type png)
+<use images/mcwnnm/nc/resize_br_WNNMcw_frog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNMcw_frog.png used on inp
+ut line 1379.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_WNNMJ_frog.png, id=741, 225.84375pt x 225.84375pt>
+File: images/mcwnnm/nc/resize_br_WNNMJ_frog.png Graphic file (type png)
+
+<use images/mcwnnm/nc/resize_br_WNNMJ_frog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNMJ_frog.png used on inpu
+t line 1379.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_WNNM_ADMM_frog.png, id=742, 225.84375pt x 225.84375
+pt>
+File: images/mcwnnm/nc/resize_br_WNNM_ADMM_frog.png Graphic file (type png)
+ <use images/mcwnnm/nc/resize_br_WNNM_ADMM_frog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_WNNM_ADMM_frog.png used on 
+input line 1379.
+(pdftex.def)             Requested size: 75.52312pt x 75.52458pt.
+
+<images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_frog.png, id=743, 225.84375pt x 225.8
+4375pt>
+File: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_frog.png Graphic file (type png)
+
+ <use images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_frog.png>
+Package pdftex.def Info: images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_frog.png used
+ on input line 1379.
+(pdftex.def)             Requested size: 75.52312pt x 75.5245
