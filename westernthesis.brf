@@ -922,6 +922,7 @@
 \backcite {ssim}{{171}{6.4.1}{subsection.6.4.1}}
 \backcite {dnd2017}{{171}{6.4.1}{subsection.6.4.1}}
 \backcite {ssim}{{171}{6.4.1}{subsection.6.4.1}}
+\backcite {ssim}{{172}{6.4.1}{subsection.6.4.1}}
 \backcite {cbm3d}{{172}{6.4.2}{subsection.6.4.2}}
 \backcite {ksvd}{{172}{6.4.2}{subsection.6.4.2}}
 \backcite {lssc}{{172}{6.4.2}{subsection.6.4.2}}
@@ -939,9 +940,9 @@
 \backcite {guided}{{172}{6.4.2}{subsection.6.4.2}}
 \backcite {mcwnnm}{{172}{6.4.2}{subsection.6.4.2}}
 \backcite {twsc}{{172}{6.4.2}{subsection.6.4.2}}
-\backcite {dncnn}{{172}{6.4.2}{subsection.6.4.2}}
+\backcite {dncnn}{{173}{6.4.2}{subsection.6.4.2}}
 \backcite {Chen2015ICCV}{{173}{6.4.2}{subsection.6.4.2}}
 \backcite {noiselevel}{{173}{6.4.2}{subsection.6.4.2}}
 \backcite {noiselevel}{{173}{6.4.2}{subsection.6.4.2}}
-\backcite {ssim}{{173}{6.4.2}{subsection.6.4.2}}
-\backcite {srcolor}{{174}{6.4.2}{subsection.6.4.2}}
+\backcite {ssim}{{173}{6.4.3}{subsection.6.4.3}}
+\backcite {srcolor}{{174}{6.4.3}{subsection.6.4.3}}
