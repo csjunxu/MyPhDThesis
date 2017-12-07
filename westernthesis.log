@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 DEC 2017 20:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 DEC 2017 21:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8316,26 +8316,23 @@ File: images/dataset/cc/resize_br_TWSC_5dmark3_iso3200_1_real.png Graphic file
 Package pdftex.def Info: images/dataset/cc/resize_br_TWSC_5dmark3_iso3200_1_rea
 l.png used on input line 674.
 (pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
-
-
-LaTeX Warning: Float too large for page by 14.00467pt on input line 677.
-
-[181] [182 <./images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png (PNG 
-copy)> <./images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png (PNG cop
-y)> <./images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png (PNG copy)>
- <./images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png (PNG copy)> <./
-images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png (PNG copy)> <./imag
-es/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png (PNG copy)> <./images/d
-ataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png (PNG copy)> <./images/datase
-t/cc/resize_br_CSF_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/
-resize_br_TRD_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resiz
-e_br_DnCNN_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_b
-r_NC_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_NI_5
-dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_PGPD_5dmar
-k3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_Guided_5dmark3
-_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_MCWNNM_5dmark3_i
-so3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_TWSC_5dmark3_iso32
-00_1_real.png (PNG copy)>]
+ [181]
+[182 <./images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png (PNG copy)>
+ <./images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png (PNG copy)> <.
+/images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png (PNG copy)> <./im
+ages/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png (PNG copy)> <./images
+/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dat
+aset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset
+/cc/resize_br_MLP_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/r
+esize_br_CSF_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize
+_br_TRD_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_D
+nCNN_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_NC_5
+dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_NI_5dmark3
+_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_PGPD_5dmark3_iso
+3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_Guided_5dmark3_iso32
+00_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_MCWNNM_5dmark3_iso3200
+_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_TWSC_5dmark3_iso3200_1_r
+eal.png (PNG copy)>]
 File: images/twsc/cc/resize_br_Mean_d600_iso3200_2_real.png Graphic file (type 
 png)
 
@@ -8447,10 +8444,6 @@ File: images/twsc/cc/resize_br_TWSC_d600_iso3200_2.png Graphic file (type png)
 Package pdftex.def Info: images/twsc/cc/resize_br_TWSC_d600_iso3200_2.png used 
 on input line 829.
 (pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
-
-
-LaTeX Warning: Float too large for page by 9.57962pt on input line 832.
-
 
 <images/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_GO_11_real.png, id=3762, 
 205.76875pt x 205.76875pt>
@@ -8612,9 +8605,6 @@ Package pdftex.def Info: images/dataset/PolyU/resize_br_TWSC_Canon80D_8_8_800_G
 O_11_real.png used on input line 984.
 (pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
 
-
-LaTeX Warning: Float too large for page by 14.00467pt on input line 987.
-
 [183] [184] [185 <./images/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_GO_11_
 real.png (PNG copy)> <./images/dataset/PolyU/resize_br_Noisy_Canon80D_8_8_800_G
 O_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_CBM3D_Canon80D_8_8_
@@ -8740,7 +8730,7 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on westernthesis.pdf (229 pages, 54199282 bytes).
+Output written on westernthesis.pdf (229 pages, 54199006 bytes).
 PDF statistics:
  4758 PDF objects out of 5155 (max. 8388607)
  3716 compressed objects within 38 object streams
