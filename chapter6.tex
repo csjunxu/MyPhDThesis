@@ -737,9 +737,102 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  0.9403
 \end{center}
 \end{table}
 
+\begin{figure}
+    \centering
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_d600_iso3200_2_real.png}}
+{\footnotesize Mean Image}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_d600_iso3200_2_real.png}}
+{\footnotesize Noisy 33.77}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_d600_iso3200_2_real.png}}
+{\footnotesize CBM3D 35.06}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png}}
+{\footnotesize EPLL}
+\end{minipage}
+}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png}}
+{\footnotesize NCSR}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png}}
+{\footnotesize WNNM 36.07}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png}}
+{\footnotesize MLP}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png}}
+{\footnotesize CSF}
+\end{minipage}
+}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png}}
+{\footnotesize TNRD 36.34}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_d600_iso3200_2_real.png}}
+{\footnotesize DnCNN 34.48}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_d600_iso3200_2_real.png}}
+{\footnotesize NC 36.70}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_d600_iso3200_2_real.png}}
+{\footnotesize NI 35.36}
+\end{minipage}
+}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png}}
+{\footnotesize PGPD}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png}}
+{\footnotesize Guided}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png}}
+{\footnotesize MCWNNM}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_d600_iso3200_2.png}}
+{\footnotesize TWSC \textbf{37.07}}
+\end{minipage}
+}
+    \caption{Denoised images and PSNR (dB) results of the real noisy image \textsl{Nikon D600 ISO 3200 2} \cite{crosschannel2016} by different methods.\ The estimated noise levels of R, G, and B channels are 1.2, 1.3, and 1.4, respectively.\ The images are better to be zoomed in on screen.}
+    \label{fig6-6}
+\end{figure}
 
 \textbf{Results on Dataset 3}.
-The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images. Some visual comparisons are listed in Figures \ref{fig6-8}, from which one can see that the TWSC method removes the noise while still maintains the details. 
+The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images. Some visual comparisons are listed in Figures \ref{fig6-7}, from which one can see that the TWSC method removes the noise while still maintains the details. 
 
 \begin{table}[hbp]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}).}
@@ -798,6 +891,100 @@ SSIM & 0.9161 & 0.9449  & 0.9570  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
 \end{tabular*}
 \end{center}
 \end{table}
+
+\begin{figure}
+    \centering
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Mean_d600_iso3200_2_real.png}}
+{\footnotesize Mean Image}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_Noisy_d600_iso3200_2_real.png}}
+{\footnotesize Noisy 33.77}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CBM3D_d600_iso3200_2_real.png}}
+{\footnotesize CBM3D 35.06}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png}}
+{\footnotesize EPLL}
+\end{minipage}
+}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png}}
+{\footnotesize NCSR}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png}}
+{\footnotesize WNNM 36.07}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png}}
+{\footnotesize MLP}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png}}
+{\footnotesize CSF}
+\end{minipage}
+}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png}}
+{\footnotesize TNRD 36.34}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_DnCNN_d600_iso3200_2_real.png}}
+{\footnotesize DnCNN 34.48}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NC_d600_iso3200_2_real.png}}
+{\footnotesize NC 36.70}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_NI_d600_iso3200_2_real.png}}
+{\footnotesize NI 35.36}
+\end{minipage}
+}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png}}
+{\footnotesize PGPD}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png}}
+{\footnotesize Guided}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png}}
+{\footnotesize MCWNNM}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/twsc/cc/resize_br_TWSC_d600_iso3200_2.png}}
+{\footnotesize TWSC \textbf{37.07}}
+\end{minipage}
+}
+    \caption{Denoised images and PSNR (dB) results of the real noisy image \textsl{Nikon D600 ISO 3200 2} \cite{crosschannel2016} by different methods.\ The estimated noise levels of R, G, and B channels are 1.2, 1.3, and 1.4, respectively.\ The images are better to be zoomed in on screen.}
+    \label{fig6-7}
+\end{figure}
 
 
 \textbf{Discussion}. Contrast to the proposed methods, the traditional denoising methods (e.g., LSSC, EPLL, NCSR, WNNM, and PGPD) designed for grey scale image would generate artifacts since they process each channel of the RGB image individually \cite{srcolor}. They cannot deal with the images which have different noise statistics in different channels as well as different local region. Hence, these methods would fail to process the real-world noisy images captured from real-world scenes. On the other hand, the discriminative learning based methods (e.g., MLP, CSF, TNRD, and DnCNN) are trained on paired clean and noisy images. These methods largely depends on the training dataset, and would achieve inferior performance upon the noise in the testing images is different from the noise in the training images.
