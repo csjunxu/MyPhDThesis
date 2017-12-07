@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 DEC 2017 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 DEC 2017 22:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8650,9 +8650,6 @@ Underfull \hbox (badness 5147) in paragraph at lines 7--7
 T1/txtt/m/n/12 https : / /
  []
 
-Missing character: There is no â in font txr!
-Missing character: There is no € in font txr!
-Missing character: There is no ™ in font txr!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -8660,6 +8657,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
+Missing character: There is no â in font txr!
+Missing character: There is no € in font txr!
+Missing character: There is no ™ in font txr!
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [189]
@@ -8692,42 +8693,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [197]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [198])
+ [198]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [199]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [200])
 
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 541.
-[199]
+[201]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 541.
  (./westernthesis.aux (./acknowledgement.aux) (./chapter1.aux)
 (./chapter2.aux) (./chapter3.aux) (./chapter4.aux) (./chapter5.aux)
 (./chapter6.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 541.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 541.
+Package rerunfilecheck Info: File `westernthesis.brf' has not changed.
+(rerunfilecheck)             Checksum: B355A6D1B3EDE022DE670009300334BB;47908.
 
-
-Package rerunfilecheck Warning: File `westernthesis.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `westernthesis.brf':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  B355A6D1B3EDE022DE670009300334BB;47908.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 541.
  ) 
 Here is how much of TeX's memory you used:
- 14768 strings out of 493091
- 332474 string characters out of 6134517
+ 14770 strings out of 493091
+ 332490 string characters out of 6134517
  418074 words of memory out of 5000000
  16560 multiletter control sequences out of 15000+600000
  87715 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,20n,39p,5322b,803s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,20n,39p,5322b,819s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Software
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Sof
 tware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c
@@ -8744,10 +8743,10 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on westernthesis.pdf (225 pages, 55337215 bytes).
+Output written on westernthesis.pdf (227 pages, 55360917 bytes).
 PDF statistics:
- 4089 PDF objects out of 4296 (max. 8388607)
- 3044 compressed objects within 31 object streams
- 760 named destinations out of 1000 (max. 500000)
+ 4755 PDF objects out of 5155 (max. 8388607)
+ 3701 compressed objects within 38 object streams
+ 762 named destinations out of 1000 (max. 500000)
  3411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
