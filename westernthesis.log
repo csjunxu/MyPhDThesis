@@ -6082,4 +6082,2210 @@ png)
  <use images/mcwnnm/cc/resize_br_NC_CC15_d800_iso6400_2.png>
 Package pdftex.def Info: images/mcwnnm/cc/resize_br_NC_CC15_d800_iso6400_2.png 
 used on input line 1947.
-(pdftex.def)   
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CC_d800_iso6400_2.png, id=2776, 205.76875pt x 205.7
+6875pt>
+File: images/mcwnnm/cc/resize_br_CC_d800_iso6400_2.png Graphic file (type png)
+ <use images/mcwnnm/cc/resize_br_CC_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CC_d800_iso6400_2.png used 
+on input line 1974.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.png, id=2777, 205.76875pt
+ x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.png Graphic file (ty
+pe png)
+ <use images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.p
+ng used on input line 1974.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6400_2.png, id=2778, 205.
+76875pt x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6400_2.png Graphic f
+ile (type png)
+
+<use images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6
+400_2.png used on input line 1974.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso6400_2.png, id=2779, 205
+.76875pt x 205.76875pt>
+File: images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso6400_2.png Graphic 
+file (type png)
+
+<use images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso
+6400_2.png used on input line 1974.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/mcwnnm/cc/resize_br_d800_iso6400_2.png, id=2780, 205.76875pt x 205.7687
+5pt>
+File: images/mcwnnm/cc/resize_br_d800_iso6400_2.png Graphic file (type png)
+ <use images/mcwnnm/cc/resize_br_d800_iso6400_2.png>
+Package pdftex.def Info: images/mcwnnm/cc/resize_br_d800_iso6400_2.png used on 
+input line 1974.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 115
+ []
+
+[115 <./images/mcwnnm/nc/resize_br_Noisy_dog.png (PNG copy)> <./images/mcwnnm/n
+c/resize_br_CBM3D_dog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_MLP_dog.png
+ (PNG copy)> <./images/mcwnnm/nc/resize_br_TNRD_dog.png (PNG copy)> <./images/m
+cwnnm/nc/resize_br_NI_dog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NC_dog.
+png (PNG copy)> <./images/mcwnnm/nc/resize_br_WNNMcw_dog.png (PNG copy)> <./ima
+ges/mcwnnm/nc/resize_br_WNNMJ_dog.png (PNG copy)> <./images/mcwnnm/nc/resize_br
+_WNNM_ADMM_dog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_dog.
+png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 116
+ []
+
+[116 <./images/mcwnnm/nc/resize_br_Noisy_frog.png (PNG copy)> <./images/mcwnnm/
+nc/resize_br_CBM3D_frog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_MLP_frog.
+png (PNG copy)> <./images/mcwnnm/nc/resize_br_TNRD_frog.png (PNG copy)> <./imag
+es/mcwnnm/nc/resize_br_NI_frog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NC
+_frog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_WNNMcw_frog.png (PNG copy)>
+ <./images/mcwnnm/nc/resize_br_WNNMJ_frog.png (PNG copy)> <./images/mcwnnm/nc/r
+esize_br_WNNM_ADMM_frog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_CWNNM_ADM
+M_NL_frog.png (PNG copy)> <./images/mcwnnm/nc/resize_br_Noisy_chinesegirl.png (
+PNG copy)> <./images/mcwnnm/nc/resize_br_CBM3D_chinesegirl.png (PNG copy)> <./i
+mages/mcwnnm/nc/resize_br_MLP_chinesegirl.png (PNG copy)> <./images/mcwnnm/nc/r
+esize_br_TNRD_chinesegirl.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NI_chin
+esegirl.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NC_chinesegirl.png (PNG c
+opy)> <./images/mcwnnm/nc/resize_br_WNNMcw_chinesegirl.png (PNG copy)> <./image
+s/mcwnnm/nc/resize_br_WNNMJ_chinesegirl.png (PNG copy)> <./images/mcwnnm/nc/res
+ize_br_WNNM_ADMM_chinesegirl.png (PNG copy)> <./images/mcwnnm/nc/resize_br_CWNN
+M_ADMM_NL_chinesegirl.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 117
+ []
+
+[117 <./images/mcwnnm/nc/resize_br_Noisy_circuit.png (PNG copy)> <./images/mcwn
+nm/nc/resize_br_CBM3D_circuit.png (PNG copy)> <./images/mcwnnm/nc/resize_br_MLP
+_circuit.png (PNG copy)> <./images/mcwnnm/nc/resize_br_TNRD_circuit.png (PNG co
+py)> <./images/mcwnnm/nc/resize_br_NI_circuit.png (PNG copy)> <./images/mcwnnm/
+nc/resize_br_NC_circuit.png (PNG copy)> <./images/mcwnnm/nc/resize_br_WNNMcw_ci
+rcuit.png (PNG copy)> <./images/mcwnnm/nc/resize_br_WNNMJ_circuit.png (PNG copy
+)> <./images/mcwnnm/nc/resize_br_WNNM_ADMM_circuit.png (PNG copy)> <./images/mc
+wnnm/nc/resize_br_CWNNM_ADMM_NL_circuit.png (PNG copy)> <./images/mcwnnm/nc/res
+ize_br_Noisy_room.png (PNG copy)> <./images/mcwnnm/nc/resize_br_CBM3D_room.png 
+(PNG copy)> <./images/mcwnnm/nc/resize_br_MLP_room.png (PNG copy)> <./images/mc
+wnnm/nc/resize_br_TNRD_room.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NI_ro
+om.png (PNG copy)> <./images/mcwnnm/nc/resize_br_NC_room.png (PNG copy)> <./ima
+ges/mcwnnm/nc/resize_br_WNNMcw_room.png (PNG copy)> <./images/mcwnnm/nc/resize_
+br_WNNMJ_room.png (PNG copy)> <./images/mcwnnm/nc/resize_br_WNNM_ADMM_room.png 
+(PNG copy)> <./images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_room.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 118
+ []
+
+[118]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 119
+ []
+
+[119 <./images/mcwnnm/cc/resize_br_Noisy_5dmark3_iso3200_1.png (PNG copy)> <./i
+mages/mcwnnm/cc/resize_br_CBM3D_CC15_5dmark3_iso3200_1.png (PNG copy)> <./image
+s/mcwnnm/cc/resize_br_TRD_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwn
+nm/cc/resize_br_NI_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/r
+esize_br_NC_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/resize_b
+r_CC_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNMJ
+_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNM_ADMM
+_NL_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/resize_br_CWNNM_
+ADMM_NL_CC15_5dmark3_iso3200_1.png (PNG copy)> <./images/mcwnnm/cc/resize_br_5d
+mark3_iso3200_1.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 120
+ []
+
+[120 <./images/mcwnnm/cc/resize_br_Noisy_d600_iso3200_2.png (PNG copy)> <./imag
+es/mcwnnm/cc/resize_br_CBM3D_CC15_d600_iso3200_2.png (PNG copy)> <./images/mcwn
+nm/cc/resize_br_TRD_CC15_d600_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/res
+ize_br_NI_CC15_d600_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_NC_
+CC15_d600_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_CC_d600_iso32
+00_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNMJ_CC15_d600_iso3200_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d600_iso3200_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d600_iso3200_2.p
+ng (PNG copy)> <./images/mcwnnm/cc/resize_br_d600_iso3200_2.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 121
+ []
+
+[121 <./images/mcwnnm/cc/resize_br_Noisy_d800_iso1600_2.png (PNG copy)> <./imag
+es/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso1600_2.png (PNG copy)> <./images/mcwn
+nm/cc/resize_br_TRD_CC15_d800_iso1600_2.png (PNG copy)> <./images/mcwnnm/cc/res
+ize_br_NI_CC15_d800_iso1600_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_NC_
+CC15_d800_iso1600_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_CC_d800_iso16
+00_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso1600_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso1600_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso1600_2.p
+ng (PNG copy)> <./images/mcwnnm/cc/resize_br_d800_iso1600_2.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 122
+ []
+
+[122 <./images/mcwnnm/cc/resize_br_Noisy_d800_iso3200_2.png (PNG copy)> <./imag
+es/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso3200_2.png (PNG copy)> <./images/mcwn
+nm/cc/resize_br_TRD_CC15_d800_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/res
+ize_br_NI_CC15_d800_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_NC_
+CC15_d800_iso3200_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_CC_d800_iso32
+00_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso3200_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso3200_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso3200_2.p
+ng (PNG copy)> <./images/mcwnnm/cc/resize_br_d800_iso3200_2.png (PNG copy)>]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 123
+ []
+
+[123 <./images/mcwnnm/cc/resize_br_Noisy_d800_iso6400_2.png (PNG copy)> <./imag
+es/mcwnnm/cc/resize_br_CBM3D_CC15_d800_iso6400_2.png (PNG copy)> <./images/mcwn
+nm/cc/resize_br_TRD_CC15_d800_iso6400_2.png (PNG copy)> <./images/mcwnnm/cc/res
+ize_br_NI_CC15_d800_iso6400_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_NC_
+CC15_d800_iso6400_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_CC_d800_iso64
+00_2.png (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNMJ_CC15_d800_iso6400_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_WNNM_ADMM_NL_CC15_d800_iso6400_2.pn
+g (PNG copy)> <./images/mcwnnm/cc/resize_br_CWNNM_ADMM_NL_CC15_d800_iso6400_2.p
+ng (PNG copy)> <./images/mcwnnm/cc/resize_br_d800_iso6400_2.png (PNG copy)>]
+Underfull \vbox (badness 7308) has occurred while \output is active []
+
+
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 124
+ []
+
+[124])
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 125
+ []
+
+[125]
+Overfull \hbox (102.29071pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 4.  Multi-channel Weighted Nuclear Norm Minimization 
+for Real Color Image Denoising  \OT1/txr/m/n/12 126
+ []
+
+[126]
+\openout2 = `chapter5.aux'.
+
+ (./chapter5.tex
+Chapter 5.
+
+Underfull \vbox (badness 2809) has occurred while \output is active []
+
+ [127
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 128
+ []
+
+[128]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 129
+ []
+
+[129]
+Overfull \hbox (14.60814pt too wide) in paragraph at lines 31--31
+[]\OT1/txr/bx/n/17.28 The Pro-posed Re-al-is-tic Im-age De-nois-ing Al-go-rithm
+ 
+ []
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 130
+ []
+
+[130]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 131
+ []
+
+[131]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 132
+ []
+
+[132]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 133
+ []
+
+[133]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 134
+ []
+
+[134]
+
+Package natbib Warning: Citation `simoncini2016computational' on page 135 undef
+ined on input line 217.
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 135
+ []
+
+[135]
+Overfull \hbox (0.98941pt too wide) in paragraph at lines 295--296
+\OT1/txr/m/n/12 rem [][]5.2.1[][] could not di-rectly guar-an-tee $[][] \OMS/tx
+sy/m/n/12 k\OML/txmi/bx/it/12 C[] \OMS/txsy/m/n/12 ^^@ \OML/txmi/bx/it/12 C[]\O
+MS/txsy/m/n/12 k[] \OT1/txr/m/n/12 = 0$ and $[][] \OMS/txsy/m/n/12 k\OML/txmi/b
+x/it/12 Z[] \OMS/txsy/m/n/12 ^^@
+ []
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 136
+ []
+
+[136]
+<images/twsc/LinearScaleConvergence.pdf, id=3063, 597.23125pt x 845.1575pt>
+File: images/twsc/LinearScaleConvergence.pdf Graphic file (type pdf)
+
+<use images/twsc/LinearScaleConvergence.pdf>
+Package pdftex.def Info: images/twsc/LinearScaleConvergence.pdf used on input l
+ine 378.
+(pdftex.def)             Requested size: 397.48499pt x 562.49985pt.
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 137
+ []
+
+[137]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 138
+ []
+
+[138]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 139
+ []
+
+[139 <./images/twsc/LinearScaleConvergence.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 140
+ []
+
+[140]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 141
+ []
+
+[141]
+<images/twsc/awgn/resize_br_baboon.png, id=3150, 205.76875pt x 205.76875pt>
+File: images/twsc/awgn/resize_br_baboon.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_baboon.png used on input li
+ne 564.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_20_baboon.png, id=3151, 205.76875pt x 205.76875pt>
+File: images/twsc/awgn/resize_br_20_baboon.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_20_baboon.png used on input
+ line 564.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_BM3D_20_baboon.png, id=3152, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_BM3D_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_BM3D_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_BM3D_20_baboon.png used on 
+input line 564.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_LSSC_20_baboon.png, id=3153, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_LSSC_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_LSSC_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_LSSC_20_baboon.png used on 
+input line 564.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_NCSR_20_baboon.png, id=3154, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_NCSR_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_NCSR_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_NCSR_20_baboon.png used on 
+input line 564.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WNNM_20_baboon.png, id=3155, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_WNNM_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WNNM_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WNNM_20_baboon.png used on 
+input line 591.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_TNRD_20_baboon.png, id=3156, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_TNRD_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_TNRD_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_TNRD_20_baboon.png used on 
+input line 591.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_DnCNN_20_baboon.png, id=3157, 205.76875pt x 205.768
+75pt>
+File: images/twsc/awgn/resize_br_DnCNN_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_DnCNN_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_DnCNN_20_baboon.png used on
+ input line 591.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WSC_20_baboon.png, id=3158, 205.76875pt x 205.76875
+pt>
+File: images/twsc/awgn/resize_br_WSC_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WSC_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WSC_20_baboon.png used on i
+nput line 591.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WLSWSC_20_baboon.png, id=3159, 205.76875pt x 205.76
+875pt>
+File: images/twsc/awgn/resize_br_WLSWSC_20_baboon.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WLSWSC_20_baboon.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WLSWSC_20_baboon.png used o
+n input line 591.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_barbara.png, id=3160, 205.76875pt x 205.76875pt>
+File: images/twsc/awgn/resize_br_barbara.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_barbara.png used on input l
+ine 628.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_40_barbara.png, id=3161, 205.76875pt x 205.76875pt>
+File: images/twsc/awgn/resize_br_40_barbara.png Graphic file (type png)
+<use images/twsc/awgn/resize_br_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_40_barbara.png used on inpu
+t line 628.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_BM3D_40_barbara.png, id=3162, 205.76875pt x 205.768
+75pt>
+File: images/twsc/awgn/resize_br_BM3D_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_BM3D_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_BM3D_40_barbara.png used on
+ input line 628.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_LSSC_40_barbara.png, id=3163, 205.76875pt x 205.768
+75pt>
+File: images/twsc/awgn/resize_br_LSSC_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_LSSC_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_LSSC_40_barbara.png used on
+ input line 628.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_NCSR_40_barbara.png, id=3164, 205.76875pt x 205.768
+75pt>
+File: images/twsc/awgn/resize_br_NCSR_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_NCSR_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_NCSR_40_barbara.png used on
+ input line 628.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WNNM_40_barbara.png, id=3165, 205.76875pt x 205.768
+75pt>
+File: images/twsc/awgn/resize_br_WNNM_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WNNM_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WNNM_40_barbara.png used on
+ input line 655.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_TNRD_40_barbara.png, id=3166, 205.76875pt x 205.768
+75pt>
+File: images/twsc/awgn/resize_br_TNRD_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_TNRD_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_TNRD_40_barbara.png used on
+ input line 655.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_DnCNN_40_barbara.png, id=3167, 205.76875pt x 205.76
+875pt>
+File: images/twsc/awgn/resize_br_DnCNN_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_DnCNN_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_DnCNN_40_barbara.png used o
+n input line 655.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WSC_40_barbara.png, id=3168, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_WSC_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WSC_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WSC_40_barbara.png used on 
+input line 655.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WLSWSC_40_barbara.png, id=3169, 205.76875pt x 205.7
+6875pt>
+File: images/twsc/awgn/resize_br_WLSWSC_40_barbara.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WLSWSC_40_barbara.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WLSWSC_40_barbara.png used 
+on input line 655.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_lena.png, id=3170, 256.96pt x 256.96pt>
+File: images/twsc/awgn/resize_br_lena.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_lena.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_lena.png used on input line
+ 691.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/resize_br_60_lena.png, id=3171, 256.96pt x 256.96pt>
+File: images/twsc/awgn/resize_br_60_lena.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_60_lena.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_60_lena.png used on input l
+ine 691.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/resize_br_BM3D_60_lena.png, id=3172, 256.96pt x 256.96pt>
+File: images/twsc/awgn/resize_br_BM3D_60_lena.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_BM3D_60_lena.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_BM3D_60_lena.png used on in
+put line 691.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/resize_br_LSSC_60_lena.png, id=3173, 256.96pt x 256.96pt>
+File: images/twsc/awgn/resize_br_LSSC_60_lena.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_LSSC_60_lena.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_LSSC_60_lena.png used on in
+put line 691.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/resize_br_NCSR_60_lena.png, id=3174, 256.96pt x 256.96pt>
+File: images/twsc/awgn/resize_br_NCSR_60_lena.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_NCSR_60_lena.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_NCSR_60_lena.png used on in
+put line 691.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/resize_br_WNNM_60_lena.png, id=3175, 256.96pt x 256.96pt>
+File: images/twsc/awgn/resize_br_WNNM_60_lena.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_WNNM_60_lena.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WNNM_60_lena.png used on in
+put line 718.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/resize_br_TNRD_60_lena.png, id=3176, 205.76875pt x 205.76875p
+t>
+File: images/twsc/awgn/resize_br_TNRD_60_lena.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_TNRD_60_lena.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_TNRD_60_lena.png used on in
+put line 718.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_DnCNN_60_lena.png, id=3177, 205.76875pt x 205.76875
+pt>
+File: images/twsc/awgn/resize_br_DnCNN_60_lena.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_DnCNN_60_lena.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_DnCNN_60_lena.png used on i
+nput line 718.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WSC_60_lena.png, id=3178, 256.96pt x 256.96pt>
+File: images/twsc/awgn/resize_br_WSC_60_lena.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_WSC_60_lena.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WSC_60_lena.png used on inp
+ut line 718.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/resize_br_WLSWSC_60_lena.png, id=3179, 256.96pt x 256.96pt>
+File: images/twsc/awgn/resize_br_WLSWSC_60_lena.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_WLSWSC_60_lena.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WLSWSC_60_lena.png used on 
+input line 718.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/resize_br_elaine.png, id=3180, 205.76875pt x 205.76875pt>
+File: images/twsc/awgn/resize_br_elaine.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_elaine.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_elaine.png used on input li
+ne 753.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_80_elaine.png, id=3181, 205.76875pt x 205.76875pt>
+File: images/twsc/awgn/resize_br_80_elaine.png Graphic file (type png)
+
+<use images/twsc/awgn/resize_br_80_elaine.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_80_elaine.png used on input
+ line 753.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_BM3D_80_elaine.png, id=3182, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_BM3D_80_elaine.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_BM3D_80_elaine.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_BM3D_80_elaine.png used on 
+input line 753.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_LSSC_80_elaine.png, id=3183, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_LSSC_80_elaine.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_LSSC_80_elaine.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_LSSC_80_elaine.png used on 
+input line 753.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_NCSR_80_elaine.png, id=3184, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_NCSR_80_elaine.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_NCSR_80_elaine.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_NCSR_80_elaine.png used on 
+input line 753.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WNNM_80_elaine.png, id=3185, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_WNNM_80_elaine.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WNNM_80_elaine.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WNNM_80_elaine.png used on 
+input line 780.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_TNRD_80_elaine.png, id=3186, 205.76875pt x 205.7687
+5pt>
+File: images/twsc/awgn/resize_br_TNRD_80_elaine.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_TNRD_80_elaine.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_TNRD_80_elaine.png used on 
+input line 780.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_DnCNN_80_elaine.png, id=3187, 205.76875pt x 205.768
+75pt>
+File: images/twsc/awgn/resize_br_DnCNN_80_elaine.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_DnCNN_80_elaine.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_DnCNN_80_elaine.png used on
+ input line 780.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WSC_80_elaine.png, id=3188, 205.76875pt x 205.76875
+pt>
+File: images/twsc/awgn/resize_br_WSC_80_elaine.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WSC_80_elaine.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WSC_80_elaine.png used on i
+nput line 780.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/resize_br_WLSWSC_80_elaine.png, id=3189, 205.76875pt x 205.76
+875pt>
+File: images/twsc/awgn/resize_br_WLSWSC_80_elaine.png Graphic file (type png)
+ <use images/twsc/awgn/resize_br_WLSWSC_80_elaine.png>
+Package pdftex.def Info: images/twsc/awgn/resize_br_WLSWSC_80_elaine.png used o
+n input line 780.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/awgn/br_monarch.png, id=3190, 256.96pt x 256.96pt>
+File: images/twsc/awgn/br_monarch.png Graphic file (type png)
+
+<use images/twsc/awgn/br_monarch.png>
+Package pdftex.def Info: images/twsc/awgn/br_monarch.png used on input line 815
+.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/br_100_monarch.png, id=3191, 256.96pt x 256.96pt>
+File: images/twsc/awgn/br_100_monarch.png Graphic file (type png)
+
+<use images/twsc/awgn/br_100_monarch.png>
+Package pdftex.def Info: images/twsc/awgn/br_100_monarch.png used on input line
+ 815.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/br_BM3D_100_monarch.png, id=3192, 256.96pt x 256.96pt>
+File: images/twsc/awgn/br_BM3D_100_monarch.png Graphic file (type png)
+
+<use images/twsc/awgn/br_BM3D_100_monarch.png>
+Package pdftex.def Info: images/twsc/awgn/br_BM3D_100_monarch.png used on input
+ line 815.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/br_LSSC_100_monarch.png, id=3193, 256.96pt x 256.96pt>
+File: images/twsc/awgn/br_LSSC_100_monarch.png Graphic file (type png)
+
+<use images/twsc/awgn/br_LSSC_100_monarch.png>
+Package pdftex.def Info: images/twsc/awgn/br_LSSC_100_monarch.png used on input
+ line 815.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/br_NCSR_100_monarch.png, id=3194, 256.96pt x 256.96pt>
+File: images/twsc/awgn/br_NCSR_100_monarch.png Graphic file (type png)
+
+<use images/twsc/awgn/br_NCSR_100_monarch.png>
+Package pdftex.def Info: images/twsc/awgn/br_NCSR_100_monarch.png used on input
+ line 815.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/br_WNNM_100_monarch.png, id=3195, 256.96pt x 256.96pt>
+File: images/twsc/awgn/br_WNNM_100_monarch.png Graphic file (type png)
+
+<use images/twsc/awgn/br_WNNM_100_monarch.png>
+Package pdftex.def Info: images/twsc/awgn/br_WNNM_100_monarch.png used on input
+ line 842.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/br_TNRD_100_monarch.png, id=3196, 256.96pt x 256.96pt>
+File: images/twsc/awgn/br_TNRD_100_monarch.png Graphic file (type png)
+
+<use images/twsc/awgn/br_TNRD_100_monarch.png>
+Package pdftex.def Info: images/twsc/awgn/br_TNRD_100_monarch.png used on input
+ line 842.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/br_DnCNN_100_monarch.png, id=3197, 256.96pt x 256.96pt>
+File: images/twsc/awgn/br_DnCNN_100_monarch.png Graphic file (type png)
+
+<use images/twsc/awgn/br_DnCNN_100_monarch.png>
+Package pdftex.def Info: images/twsc/awgn/br_DnCNN_100_monarch.png used on inpu
+t line 842.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/br_WSC_100_monarch.png, id=3198, 256.96pt x 256.96pt>
+File: images/twsc/awgn/br_WSC_100_monarch.png Graphic file (type png)
+
+<use images/twsc/awgn/br_WSC_100_monarch.png>
+Package pdftex.def Info: images/twsc/awgn/br_WSC_100_monarch.png used on input 
+line 842.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+<images/twsc/awgn/br_WLSWSC_100_monarch.png, id=3199, 256.96pt x 256.96pt>
+File: images/twsc/awgn/br_WLSWSC_100_monarch.png Graphic file (type png)
+
+<use images/twsc/awgn/br_WLSWSC_100_monarch.png>
+Package pdftex.def Info: images/twsc/awgn/br_WLSWSC_100_monarch.png used on inp
+ut line 842.
+(pdftex.def)             Requested size: 75.52312pt x 75.52415pt.
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 142
+ []
+
+[142]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 143
+ []
+
+[143 <./images/twsc/awgn/resize_br_baboon.png (PNG copy)> <./images/twsc/awgn/r
+esize_br_20_baboon.png (PNG copy)> <./images/twsc/awgn/resize_br_BM3D_20_baboon
+.png (PNG copy)> <./images/twsc/awgn/resize_br_LSSC_20_baboon.png (PNG copy)> <
+./images/twsc/awgn/resize_br_NCSR_20_baboon.png (PNG copy)> <./images/twsc/awgn
+/resize_br_WNNM_20_baboon.png (PNG copy)> <./images/twsc/awgn/resize_br_TNRD_20
+_baboon.png (PNG copy)> <./images/twsc/awgn/resize_br_DnCNN_20_baboon.png (PNG 
+copy)> <./images/twsc/awgn/resize_br_WSC_20_baboon.png (PNG copy)> <./images/tw
+sc/awgn/resize_br_WLSWSC_20_baboon.png (PNG copy)>]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 144
+ []
+
+[144 <./images/twsc/awgn/resize_br_barbara.png (PNG copy)> <./images/twsc/awgn/
+resize_br_40_barbara.png (PNG copy)> <./images/twsc/awgn/resize_br_BM3D_40_barb
+ara.png (PNG copy)> <./images/twsc/awgn/resize_br_LSSC_40_barbara.png (PNG copy
+)> <./images/twsc/awgn/resize_br_NCSR_40_barbara.png (PNG copy)> <./images/twsc
+/awgn/resize_br_WNNM_40_barbara.png (PNG copy)> <./images/twsc/awgn/resize_br_T
+NRD_40_barbara.png (PNG copy)> <./images/twsc/awgn/resize_br_DnCNN_40_barbara.p
+ng (PNG copy)> <./images/twsc/awgn/resize_br_WSC_40_barbara.png (PNG copy)> <./
+images/twsc/awgn/resize_br_WLSWSC_40_barbara.png (PNG copy)> <./images/twsc/awg
+n/resize_br_lena.png (PNG copy)> <./images/twsc/awgn/resize_br_60_lena.png (PNG
+ copy)> <./images/twsc/awgn/resize_br_BM3D_60_lena.png (PNG copy)> <./images/tw
+sc/awgn/resize_br_LSSC_60_lena.png (PNG copy)> <./images/twsc/awgn/resize_br_NC
+SR_60_lena.png (PNG copy)> <./images/twsc/awgn/resize_br_WNNM_60_lena.png (PNG 
+copy)> <./images/twsc/awgn/resize_br_TNRD_60_lena.png (PNG copy)> <./images/tws
+c/awgn/resize_br_DnCNN_60_lena.png (PNG copy)> <./images/twsc/awgn/resize_br_WS
+C_60_lena.png (PNG copy)> <./images/twsc/awgn/resize_br_WLSWSC_60_lena.png (PNG
+ copy)>]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 145
+ []
+
+[145 <./images/twsc/awgn/resize_br_elaine.png (PNG copy)> <./images/twsc/awgn/r
+esize_br_80_elaine.png (PNG copy)> <./images/twsc/awgn/resize_br_BM3D_80_elaine
+.png (PNG copy)> <./images/twsc/awgn/resize_br_LSSC_80_elaine.png (PNG copy)> <
+./images/twsc/awgn/resize_br_NCSR_80_elaine.png (PNG copy)> <./images/twsc/awgn
+/resize_br_WNNM_80_elaine.png (PNG copy)> <./images/twsc/awgn/resize_br_TNRD_80
+_elaine.png (PNG copy)> <./images/twsc/awgn/resize_br_DnCNN_80_elaine.png (PNG 
+copy)> <./images/twsc/awgn/resize_br_WSC_80_elaine.png (PNG copy)> <./images/tw
+sc/awgn/resize_br_WLSWSC_80_elaine.png (PNG copy)> <./images/twsc/awgn/br_monar
+ch.png (PNG copy)> <./images/twsc/awgn/br_100_monarch.png (PNG copy)> <./images
+/twsc/awgn/br_BM3D_100_monarch.png (PNG copy)> <./images/twsc/awgn/br_LSSC_100_
+monarch.png (PNG copy)> <./images/twsc/awgn/br_NCSR_100_monarch.png (PNG copy)>
+ <./images/twsc/awgn/br_WNNM_100_monarch.png (PNG copy)> <./images/twsc/awgn/br
+_TNRD_100_monarch.png (PNG copy)> <./images/twsc/awgn/br_DnCNN_100_monarch.png 
+(PNG copy)> <./images/twsc/awgn/br_WSC_100_monarch.png (PNG copy)> <./images/tw
+sc/awgn/br_WLSWSC_100_monarch.png (PNG copy)>]
+Underfull \vbox (badness 7308) has occurred while \output is active []
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 146
+ []
+
+[146] <images/twsc/nc/resize_br_Noisy_dog.png, id=3255, 200.75pt x 200.75pt>
+File: images/twsc/nc/resize_br_Noisy_dog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_Noisy_dog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_Noisy_dog.png used on input l
+ine 932.
+(pdftex.def)             Requested size: 95.39857pt x 95.40012pt.
+
+<images/twsc/nc/resize_br_CBM3D_dog.png, id=3256, 200.75pt x 200.75pt>
+File: images/twsc/nc/resize_br_CBM3D_dog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_CBM3D_dog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_CBM3D_dog.png used on input l
+ine 932.
+(pdftex.def)             Requested size: 95.39857pt x 95.40012pt.
+
+<images/twsc/nc/resize_br_WNNM_dog.png, id=3257, 200.75pt x 200.75pt>
+File: images/twsc/nc/resize_br_WNNM_dog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_WNNM_dog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_WNNM_dog.png used on input li
+ne 932.
+(pdftex.def)             Requested size: 95.39857pt x 95.40012pt.
+
+<images/twsc/nc/resize_br_TRD_dog.png, id=3258, 200.75pt x 200.75pt>
+File: images/twsc/nc/resize_br_TRD_dog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_TRD_dog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_TRD_dog.png used on input lin
+e 932.
+(pdftex.def)             Requested size: 95.39857pt x 95.40012pt.
+
+<images/twsc/nc/resize_br_DnCNN_dog.png, id=3259, 200.75pt x 200.75pt>
+File: images/twsc/nc/resize_br_DnCNN_dog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_DnCNN_dog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_DnCNN_dog.png used on input l
+ine 954.
+(pdftex.def)             Requested size: 95.39857pt x 95.40012pt.
+
+<images/twsc/nc/resize_br_NI_dog.png, id=3260, 200.75pt x 200.75pt>
+File: images/twsc/nc/resize_br_NI_dog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_NI_dog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_NI_dog.png used on input line
+ 954.
+(pdftex.def)             Requested size: 95.39857pt x 95.40012pt.
+
+<images/twsc/nc/resize_br_NC_dog.png, id=3261, 200.75pt x 200.75pt>
+File: images/twsc/nc/resize_br_NC_dog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_NC_dog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_NC_dog.png used on input line
+ 954.
+(pdftex.def)             Requested size: 95.39857pt x 95.40012pt.
+
+<images/twsc/nc/resize_br_TWSC_dog.png, id=3262, 200.75pt x 200.75pt>
+File: images/twsc/nc/resize_br_TWSC_dog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_TWSC_dog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_TWSC_dog.png used on input li
+ne 954.
+(pdftex.def)             Requested size: 95.39857pt x 95.40012pt.
+
+<images/twsc/nc/resize_br_Noisy_bears.png, id=3265, 290.08376pt x 193.72375pt>
+File: images/twsc/nc/resize_br_Noisy_bears.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_Noisy_bears.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_Noisy_bears.png used on input
+ line 983.
+(pdftex.def)             Requested size: 95.39857pt x 63.70732pt.
+
+<images/twsc/nc/resize_br_CBM3D_bears.png, id=3266, 290.08376pt x 193.72375pt>
+File: images/twsc/nc/resize_br_CBM3D_bears.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_CBM3D_bears.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_CBM3D_bears.png used on input
+ line 983.
+(pdftex.def)             Requested size: 95.39857pt x 63.70732pt.
+
+<images/twsc/nc/resize_br_WNNM_bears.png, id=3267, 290.08376pt x 193.72375pt>
+File: images/twsc/nc/resize_br_WNNM_bears.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_WNNM_bears.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_WNNM_bears.png used on input 
+line 983.
+(pdftex.def)             Requested size: 95.39857pt x 63.70732pt.
+
+<images/twsc/nc/resize_br_TRD_bears.png, id=3268, 290.08376pt x 193.72375pt>
+File: images/twsc/nc/resize_br_TRD_bears.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_TRD_bears.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_TRD_bears.png used on input l
+ine 983.
+(pdftex.def)             Requested size: 95.39857pt x 63.70732pt.
+
+<images/twsc/nc/resize_br_DnCNN_bears.png, id=3269, 290.08376pt x 193.72375pt>
+File: images/twsc/nc/resize_br_DnCNN_bears.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_DnCNN_bears.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_DnCNN_bears.png used on input
+ line 1005.
+(pdftex.def)             Requested size: 95.39857pt x 63.70732pt.
+
+<images/twsc/nc/resize_br_NI_bears.png, id=3270, 290.08376pt x 193.72375pt>
+File: images/twsc/nc/resize_br_NI_bears.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_NI_bears.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_NI_bears.png used on input li
+ne 1005.
+(pdftex.def)             Requested size: 95.39857pt x 63.70732pt.
+
+<images/twsc/nc/resize_br_NC_bears.png, id=3271, 290.08376pt x 193.72375pt>
+File: images/twsc/nc/resize_br_NC_bears.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_NC_bears.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_NC_bears.png used on input li
+ne 1005.
+(pdftex.def)             Requested size: 95.39857pt x 63.70732pt.
+
+<images/twsc/nc/resize_br_TWSC_bears.png, id=3272, 290.08376pt x 193.72375pt>
+File: images/twsc/nc/resize_br_TWSC_bears.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_TWSC_bears.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_TWSC_bears.png used on input 
+line 1005.
+(pdftex.def)             Requested size: 95.39857pt x 63.70732pt.
+
+<images/twsc/nc/resize_br_Noisy_frog.png, id=3275, 301.125pt x 225.84375pt>
+File: images/twsc/nc/resize_br_Noisy_frog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_Noisy_frog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_Noisy_frog.png used on input 
+line 1034.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_CBM3D_frog.png, id=3276, 301.125pt x 225.84375pt>
+File: images/twsc/nc/resize_br_CBM3D_frog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_CBM3D_frog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_CBM3D_frog.png used on input 
+line 1034.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_WNNM_frog.png, id=3277, 301.125pt x 225.84375pt>
+File: images/twsc/nc/resize_br_WNNM_frog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_WNNM_frog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_WNNM_frog.png used on input l
+ine 1034.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_TRD_frog.png, id=3278, 301.125pt x 225.84375pt>
+File: images/twsc/nc/resize_br_TRD_frog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_TRD_frog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_TRD_frog.png used on input li
+ne 1034.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_DnCNN_frog.png, id=3279, 301.125pt x 225.84375pt>
+File: images/twsc/nc/resize_br_DnCNN_frog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_DnCNN_frog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_DnCNN_frog.png used on input 
+line 1056.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_NI_frog.png, id=3280, 301.125pt x 225.84375pt>
+File: images/twsc/nc/resize_br_NI_frog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_NI_frog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_NI_frog.png used on input lin
+e 1056.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_NC_frog.png, id=3281, 301.125pt x 225.84375pt>
+File: images/twsc/nc/resize_br_NC_frog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_NC_frog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_NC_frog.png used on input lin
+e 1056.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_TWSC_frog.png, id=3282, 301.125pt x 225.84375pt>
+File: images/twsc/nc/resize_br_TWSC_frog.png Graphic file (type png)
+
+<use images/twsc/nc/resize_br_TWSC_frog.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_TWSC_frog.png used on input l
+ine 1056.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_Noisy_chinesegirl.png, id=3285, 301.125pt x 225.84375
+pt>
+File: images/twsc/nc/resize_br_Noisy_chinesegirl.png Graphic file (type png)
+ <use images/twsc/nc/resize_br_Noisy_chinesegirl.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_Noisy_chinesegirl.png used on
+ input line 1085.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_CBM3D_chinesegirl.png, id=3286, 301.125pt x 225.84375
+pt>
+File: images/twsc/nc/resize_br_CBM3D_chinesegirl.png Graphic file (type png)
+ <use images/twsc/nc/resize_br_CBM3D_chinesegirl.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_CBM3D_chinesegirl.png used on
+ input line 1085.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_WNNM_chinesegirl.png, id=3287, 301.125pt x 225.84375p
+t>
+File: images/twsc/nc/resize_br_WNNM_chinesegirl.png Graphic file (type png)
+ <use images/twsc/nc/resize_br_WNNM_chinesegirl.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_WNNM_chinesegirl.png used on 
+input line 1085.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_TRD_chinesegirl.png, id=3288, 301.125pt x 225.84375pt
+>
+File: images/twsc/nc/resize_br_TRD_chinesegirl.png Graphic file (type png)
+ <use images/twsc/nc/resize_br_TRD_chinesegirl.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_TRD_chinesegirl.png used on i
+nput line 1085.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_DnCNN_chinesegirl.png, id=3289, 301.125pt x 225.84375
+pt>
+File: images/twsc/nc/resize_br_DnCNN_chinesegirl.png Graphic file (type png)
+ <use images/twsc/nc/resize_br_DnCNN_chinesegirl.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_DnCNN_chinesegirl.png used on
+ input line 1107.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_NI_chinesegirl.png, id=3290, 301.125pt x 225.84375pt>
+File: images/twsc/nc/resize_br_NI_chinesegirl.png Graphic file (type png)
+<use images/twsc/nc/resize_br_NI_chinesegirl.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_NI_chinesegirl.png used on in
+put line 1107.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_NC_chinesegirl.png, id=3291, 301.125pt x 225.84375pt>
+File: images/twsc/nc/resize_br_NC_chinesegirl.png Graphic file (type png)
+<use images/twsc/nc/resize_br_NC_chinesegirl.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_NC_chinesegirl.png used on in
+put line 1107.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/nc/resize_br_TWSC_chinesegirl.png, id=3292, 301.125pt x 225.84375p
+t>
+File: images/twsc/nc/resize_br_TWSC_chinesegirl.png Graphic file (type png)
+ <use images/twsc/nc/resize_br_TWSC_chinesegirl.png>
+Package pdftex.def Info: images/twsc/nc/resize_br_TWSC_chinesegirl.png used on 
+input line 1107.
+(pdftex.def)             Requested size: 95.39857pt x 71.54779pt.
+
+<images/twsc/cc/resize_br_Mean_5dmark3_iso3200_1_real.png, id=3295, 205.76875pt
+ x 205.76875pt>
+File: images/twsc/cc/resize_br_Mean_5dmark3_iso3200_1_real.png Graphic file (ty
+pe png)
+ <use images/twsc/cc/resize_br_Mean_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_Mean_5dmark3_iso3200_1_real.p
+ng used on input line 1142.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png, id=3296, 205.76875p
+t x 205.76875pt>
+File: images/twsc/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png Graphic file (t
+ype png)
+
+<use images/twsc/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_Noisy_5dmark3_iso3200_1_real.
+png used on input line 1142.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png, id=3297, 205.76875p
+t x 205.76875pt>
+File: images/twsc/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png Graphic file (t
+ype png)
+
+<use images/twsc/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.
+png used on input line 1142.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png, id=3298, 205.76875pt
+ x 205.76875pt>
+File: images/twsc/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png Graphic file (ty
+pe png)
+ <use images/twsc/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_WNNM_5dmark3_iso3200_1_real.p
+ng used on input line 1142.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_TRD_5dmark3_iso3200_1_real.png, id=3299, 205.76875pt 
+x 205.76875pt>
+File: images/twsc/cc/resize_br_TRD_5dmark3_iso3200_1_real.png Graphic file (typ
+e png)
+ <use images/twsc/cc/resize_br_TRD_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_TRD_5dmark3_iso3200_1_real.pn
+g used on input line 1142.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png, id=3300, 205.76875p
+t x 205.76875pt>
+File: images/twsc/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png Graphic file (t
+ype png)
+
+<use images/twsc/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.
+png used on input line 1169.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_NI_5dmark3_iso3200_1_real.png, id=3301, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_NI_5dmark3_iso3200_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_NI_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_NI_5dmark3_iso3200_1_real.png
+ used on input line 1169.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_NC_5dmark3_iso3200_1_real.png, id=3302, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_NC_5dmark3_iso3200_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_NC_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_NC_5dmark3_iso3200_1_real.png
+ used on input line 1169.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_CCNoise_5dmark3_iso3200_1.png, id=3303, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_CCNoise_5dmark3_iso3200_1.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_CCNoise_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_CCNoise_5dmark3_iso3200_1.png
+ used on input line 1169.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_TWSC_5dmark3_iso3200_1.png, id=3304, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_TWSC_5dmark3_iso3200_1.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_TWSC_5dmark3_iso3200_1.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_TWSC_5dmark3_iso3200_1.png us
+ed on input line 1169.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_Mean_d600_iso3200_2_real.png, id=3307, 205.76875pt x 
+205.76875pt>
+File: images/twsc/cc/resize_br_Mean_d600_iso3200_2_real.png Graphic file (type 
+png)
+ <use images/twsc/cc/resize_br_Mean_d600_iso3200_2_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_Mean_d600_iso3200_2_real.png 
+used on input line 1203.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_Noisy_d600_iso3200_2_real.png, id=3308, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_Noisy_d600_iso3200_2_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_Noisy_d600_iso3200_2_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_Noisy_d600_iso3200_2_real.png
+ used on input line 1203.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_CBM3D_d600_iso3200_2_real.png, id=3309, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_CBM3D_d600_iso3200_2_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_CBM3D_d600_iso3200_2_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_CBM3D_d600_iso3200_2_real.png
+ used on input line 1203.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png, id=3310, 205.76875pt x 
+205.76875pt>
+File: images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png Graphic file (type 
+png)
+ <use images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_WNNM_d600_iso3200_2_real.png 
+used on input line 1203.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png, id=3311, 205.76875pt x 2
+05.76875pt>
+File: images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png Graphic file (type p
+ng)
+ <use images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_TRD_d600_iso3200_2_real.png u
+sed on input line 1203.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_DnCNN_d600_iso3200_2_real.png, id=3312, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_DnCNN_d600_iso3200_2_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_DnCNN_d600_iso3200_2_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_DnCNN_d600_iso3200_2_real.png
+ used on input line 1230.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_NI_d600_iso3200_2_real.png, id=3313, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_NI_d600_iso3200_2_real.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_NI_d600_iso3200_2_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_NI_d600_iso3200_2_real.png us
+ed on input line 1230.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_NC_d600_iso3200_2_real.png, id=3314, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_NC_d600_iso3200_2_real.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_NC_d600_iso3200_2_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_NC_d600_iso3200_2_real.png us
+ed on input line 1230.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png, id=3315, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png us
+ed on input line 1230.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_TWSC_d600_iso3200_2.png, id=3316, 205.76875pt x 205.7
+6875pt>
+File: images/twsc/cc/resize_br_TWSC_d600_iso3200_2.png Graphic file (type png)
+ <use images/twsc/cc/resize_br_TWSC_d600_iso3200_2.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_TWSC_d600_iso3200_2.png used 
+on input line 1230.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_Mean_d800_iso1600_1_real.png, id=3319, 205.76875pt x 
+205.76875pt>
+File: images/twsc/cc/resize_br_Mean_d800_iso1600_1_real.png Graphic file (type 
+png)
+ <use images/twsc/cc/resize_br_Mean_d800_iso1600_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_Mean_d800_iso1600_1_real.png 
+used on input line 1264.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_Noisy_d800_iso1600_1_real.png, id=3320, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_Noisy_d800_iso1600_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_Noisy_d800_iso1600_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_Noisy_d800_iso1600_1_real.png
+ used on input line 1264.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_CBM3D_d800_iso1600_1_real.png, id=3321, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_CBM3D_d800_iso1600_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_CBM3D_d800_iso1600_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_CBM3D_d800_iso1600_1_real.png
+ used on input line 1264.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_WNNM_d800_iso1600_1_real.png, id=3322, 205.76875pt x 
+205.76875pt>
+File: images/twsc/cc/resize_br_WNNM_d800_iso1600_1_real.png Graphic file (type 
+png)
+ <use images/twsc/cc/resize_br_WNNM_d800_iso1600_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_WNNM_d800_iso1600_1_real.png 
+used on input line 1264.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_TRD_d800_iso1600_1_real.png, id=3323, 205.76875pt x 2
+05.76875pt>
+File: images/twsc/cc/resize_br_TRD_d800_iso1600_1_real.png Graphic file (type p
+ng)
+ <use images/twsc/cc/resize_br_TRD_d800_iso1600_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_TRD_d800_iso1600_1_real.png u
+sed on input line 1264.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_DnCNN_d800_iso1600_1_real.png, id=3324, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_DnCNN_d800_iso1600_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_DnCNN_d800_iso1600_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_DnCNN_d800_iso1600_1_real.png
+ used on input line 1291.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_NI_d800_iso1600_1_real.png, id=3325, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_NI_d800_iso1600_1_real.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_NI_d800_iso1600_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_NI_d800_iso1600_1_real.png us
+ed on input line 1291.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_NC_d800_iso1600_1_real.png, id=3326, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_NC_d800_iso1600_1_real.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_NC_d800_iso1600_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_NC_d800_iso1600_1_real.png us
+ed on input line 1291.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_CCNoise_d800_iso1600_1.png, id=3327, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_CCNoise_d800_iso1600_1.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_CCNoise_d800_iso1600_1.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_CCNoise_d800_iso1600_1.png us
+ed on input line 1291.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_TWSC_d800_iso1600_1.png, id=3328, 205.76875pt x 205.7
+6875pt>
+File: images/twsc/cc/resize_br_TWSC_d800_iso1600_1.png Graphic file (type png)
+ <use images/twsc/cc/resize_br_TWSC_d800_iso1600_1.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_TWSC_d800_iso1600_1.png used 
+on input line 1291.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_Mean_d800_iso3200_1_real.png, id=3331, 205.76875pt x 
+205.76875pt>
+File: images/twsc/cc/resize_br_Mean_d800_iso3200_1_real.png Graphic file (type 
+png)
+ <use images/twsc/cc/resize_br_Mean_d800_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_Mean_d800_iso3200_1_real.png 
+used on input line 1325.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_Noisy_d800_iso3200_1_real.png, id=3332, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_Noisy_d800_iso3200_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_Noisy_d800_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_Noisy_d800_iso3200_1_real.png
+ used on input line 1325.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_CBM3D_d800_iso3200_1_real.png, id=3333, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_CBM3D_d800_iso3200_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_CBM3D_d800_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_CBM3D_d800_iso3200_1_real.png
+ used on input line 1325.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_WNNM_d800_iso3200_1_real.png, id=3334, 205.76875pt x 
+205.76875pt>
+File: images/twsc/cc/resize_br_WNNM_d800_iso3200_1_real.png Graphic file (type 
+png)
+ <use images/twsc/cc/resize_br_WNNM_d800_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_WNNM_d800_iso3200_1_real.png 
+used on input line 1325.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_TRD_d800_iso3200_1_real.png, id=3335, 205.76875pt x 2
+05.76875pt>
+File: images/twsc/cc/resize_br_TRD_d800_iso3200_1_real.png Graphic file (type p
+ng)
+ <use images/twsc/cc/resize_br_TRD_d800_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_TRD_d800_iso3200_1_real.png u
+sed on input line 1325.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_DnCNN_d800_iso3200_1_real.png, id=3336, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_DnCNN_d800_iso3200_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_DnCNN_d800_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_DnCNN_d800_iso3200_1_real.png
+ used on input line 1352.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_NI_d800_iso3200_1_real.png, id=3337, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_NI_d800_iso3200_1_real.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_NI_d800_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_NI_d800_iso3200_1_real.png us
+ed on input line 1352.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_NC_d800_iso3200_1_real.png, id=3338, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_NC_d800_iso3200_1_real.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_NC_d800_iso3200_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_NC_d800_iso3200_1_real.png us
+ed on input line 1352.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_CCNoise_d800_iso3200_1.png, id=3339, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_CCNoise_d800_iso3200_1.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_CCNoise_d800_iso3200_1.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_CCNoise_d800_iso3200_1.png us
+ed on input line 1352.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_TWSC_d800_iso3200_1.png, id=3340, 205.76875pt x 205.7
+6875pt>
+File: images/twsc/cc/resize_br_TWSC_d800_iso3200_1.png Graphic file (type png)
+ <use images/twsc/cc/resize_br_TWSC_d800_iso3200_1.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_TWSC_d800_iso3200_1.png used 
+on input line 1352.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_Mean_d800_iso6400_1_real.png, id=3343, 205.76875pt x 
+205.76875pt>
+File: images/twsc/cc/resize_br_Mean_d800_iso6400_1_real.png Graphic file (type 
+png)
+ <use images/twsc/cc/resize_br_Mean_d800_iso6400_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_Mean_d800_iso6400_1_real.png 
+used on input line 1387.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_Noisy_d800_iso6400_1_real.png, id=3344, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_Noisy_d800_iso6400_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_Noisy_d800_iso6400_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_Noisy_d800_iso6400_1_real.png
+ used on input line 1387.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_CBM3D_d800_iso6400_1_real.png, id=3345, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_CBM3D_d800_iso6400_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_CBM3D_d800_iso6400_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_CBM3D_d800_iso6400_1_real.png
+ used on input line 1387.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_WNNM_d800_iso6400_1_real.png, id=3346, 205.76875pt x 
+205.76875pt>
+File: images/twsc/cc/resize_br_WNNM_d800_iso6400_1_real.png Graphic file (type 
+png)
+ <use images/twsc/cc/resize_br_WNNM_d800_iso6400_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_WNNM_d800_iso6400_1_real.png 
+used on input line 1387.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_TRD_d800_iso6400_1_real.png, id=3347, 205.76875pt x 2
+05.76875pt>
+File: images/twsc/cc/resize_br_TRD_d800_iso6400_1_real.png Graphic file (type p
+ng)
+ <use images/twsc/cc/resize_br_TRD_d800_iso6400_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_TRD_d800_iso6400_1_real.png u
+sed on input line 1387.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_DnCNN_d800_iso6400_1_real.png, id=3348, 205.76875pt x
+ 205.76875pt>
+File: images/twsc/cc/resize_br_DnCNN_d800_iso6400_1_real.png Graphic file (type
+ png)
+ <use images/twsc/cc/resize_br_DnCNN_d800_iso6400_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_DnCNN_d800_iso6400_1_real.png
+ used on input line 1414.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_NI_d800_iso6400_1_real.png, id=3349, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_NI_d800_iso6400_1_real.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_NI_d800_iso6400_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_NI_d800_iso6400_1_real.png us
+ed on input line 1414.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_NC_d800_iso6400_1_real.png, id=3350, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_NC_d800_iso6400_1_real.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_NC_d800_iso6400_1_real.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_NC_d800_iso6400_1_real.png us
+ed on input line 1414.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_CCNoise_d800_iso6400_1.png, id=3351, 205.76875pt x 20
+5.76875pt>
+File: images/twsc/cc/resize_br_CCNoise_d800_iso6400_1.png Graphic file (type pn
+g)
+ <use images/twsc/cc/resize_br_CCNoise_d800_iso6400_1.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_CCNoise_d800_iso6400_1.png us
+ed on input line 1414.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+
+<images/twsc/cc/resize_br_TWSC_d800_iso6400_1.png, id=3352, 205.76875pt x 205.7
+6875pt>
+File: images/twsc/cc/resize_br_TWSC_d800_iso6400_1.png Graphic file (type png)
+ <use images/twsc/cc/resize_br_TWSC_d800_iso6400_1.png>
+Package pdftex.def Info: images/twsc/cc/resize_br_TWSC_d800_iso6400_1.png used 
+on input line 1414.
+(pdftex.def)             Requested size: 75.52312pt x 75.52098pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 147
+ []
+
+[147]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 148
+ []
+
+[148 <./images/twsc/nc/resize_br_Noisy_dog.png (PNG copy)> <./images/twsc/nc/re
+size_br_CBM3D_dog.png (PNG copy)> <./images/twsc/nc/resize_br_WNNM_dog.png (PNG
+ copy)> <./images/twsc/nc/resize_br_TRD_dog.png (PNG copy)> <./images/twsc/nc/r
+esize_br_DnCNN_dog.png (PNG copy)> <./images/twsc/nc/resize_br_NI_dog.png (PNG 
+copy)> <./images/twsc/nc/resize_br_NC_dog.png (PNG copy)> <./images/twsc/nc/res
+ize_br_TWSC_dog.png (PNG copy)> <./images/twsc/nc/resize_br_Noisy_bears.png (PN
+G copy)> <./images/twsc/nc/resize_br_CBM3D_bears.png (PNG copy)> <./images/twsc
+/nc/resize_br_WNNM_bears.png (PNG copy)> <./images/twsc/nc/resize_br_TRD_bears.
+png (PNG copy)> <./images/twsc/nc/resize_br_DnCNN_bears.png (PNG copy)> <./imag
+es/twsc/nc/resize_br_NI_bears.png (PNG copy)> <./images/twsc/nc/resize_br_NC_be
+ars.png (PNG copy)> <./images/twsc/nc/resize_br_TWSC_bears.png (PNG copy)>]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 149
+ []
+
+[149 <./images/twsc/nc/resize_br_Noisy_frog.png (PNG copy)> <./images/twsc/nc/r
+esize_br_CBM3D_frog.png (PNG copy)> <./images/twsc/nc/resize_br_WNNM_frog.png (
+PNG copy)> <./images/twsc/nc/resize_br_TRD_frog.png (PNG copy)> <./images/twsc/
+nc/resize_br_DnCNN_frog.png (PNG copy)> <./images/twsc/nc/resize_br_NI_frog.png
+ (PNG copy)> <./images/twsc/nc/resize_br_NC_frog.png (PNG copy)> <./images/twsc
+/nc/resize_br_TWSC_frog.png (PNG copy)> <./images/twsc/nc/resize_br_Noisy_chine
+segirl.png (PNG copy)> <./images/twsc/nc/resize_br_CBM3D_chinesegirl.png (PNG c
+opy)> <./images/twsc/nc/resize_br_WNNM_chinesegirl.png (PNG copy)> <./images/tw
+sc/nc/resize_br_TRD_chinesegirl.png (PNG copy)> <./images/twsc/nc/resize_br_DnC
+NN_chinesegirl.png (PNG copy)> <./images/twsc/nc/resize_br_NI_chinesegirl.png (
+PNG copy)> <./images/twsc/nc/resize_br_NC_chinesegirl.png (PNG copy)> <./images
+/twsc/nc/resize_br_TWSC_chinesegirl.png (PNG copy)>]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 150
+ []
+
+[150 <./images/twsc/cc/resize_br_Mean_5dmark3_iso3200_1_real.png (PNG copy)> <.
+/images/twsc/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png (PNG copy)> <./image
+s/twsc/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png (PNG copy)> <./images/twsc
+/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png (PNG copy)> <./images/twsc/cc/res
+ize_br_TRD_5dmark3_iso3200_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_D
+nCNN_5dmark3_iso3200_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_NI_5dma
+rk3_iso3200_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_NC_5dmark3_iso32
+00_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_CCNoise_5dmark3_iso3200_1
+.png (PNG copy)> <./images/twsc/cc/resize_br_TWSC_5dmark3_iso3200_1.png (PNG co
+py)> <./images/twsc/cc/resize_br_Mean_d600_iso3200_2_real.png (PNG copy)> <./im
+ages/twsc/cc/resize_br_Noisy_d600_iso3200_2_real.png (PNG copy)> <./images/twsc
+/cc/resize_br_CBM3D_d600_iso3200_2_real.png (PNG copy)> <./images/twsc/cc/resiz
+e_br_WNNM_d600_iso3200_2_real.png (PNG copy)> <./images/twsc/cc/resize_br_TRD_d
+600_iso3200_2_real.png (PNG copy)> <./images/twsc/cc/resize_br_DnCNN_d600_iso32
+00_2_real.png (PNG copy)> <./images/twsc/cc/resize_br_NI_d600_iso3200_2_real.pn
+g (PNG copy)> <./images/twsc/cc/resize_br_NC_d600_iso3200_2_real.png (PNG copy)
+> <./images/twsc/cc/resize_br_CCNoise_d600_iso3200_2.png (PNG copy)> <./images/
+twsc/cc/resize_br_TWSC_d600_iso3200_2.png (PNG copy)>]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 151
+ []
+
+[151 <./images/twsc/cc/resize_br_Mean_d800_iso1600_1_real.png (PNG copy)> <./im
+ages/twsc/cc/resize_br_Noisy_d800_iso1600_1_real.png (PNG copy)> <./images/twsc
+/cc/resize_br_CBM3D_d800_iso1600_1_real.png (PNG copy)> <./images/twsc/cc/resiz
+e_br_WNNM_d800_iso1600_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_TRD_d
+800_iso1600_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_DnCNN_d800_iso16
+00_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_NI_d800_iso1600_1_real.pn
+g (PNG copy)> <./images/twsc/cc/resize_br_NC_d800_iso1600_1_real.png (PNG copy)
+> <./images/twsc/cc/resize_br_CCNoise_d800_iso1600_1.png (PNG copy)> <./images/
+twsc/cc/resize_br_TWSC_d800_iso1600_1.png (PNG copy)> <./images/twsc/cc/resize_
+br_Mean_d800_iso3200_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_Noisy_d
+800_iso3200_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_CBM3D_d800_iso32
+00_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_WNNM_d800_iso3200_1_real.
+png (PNG copy)> <./images/twsc/cc/resize_br_TRD_d800_iso3200_1_real.png (PNG co
+py)> <./images/twsc/cc/resize_br_DnCNN_d800_iso3200_1_real.png (PNG copy)> <./i
+mages/twsc/cc/resize_br_NI_d800_iso3200_1_real.png (PNG copy)> <./images/twsc/c
+c/resize_br_NC_d800_iso3200_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_
+CCNoise_d800_iso3200_1.png (PNG copy)> <./images/twsc/cc/resize_br_TWSC_d800_is
+o3200_1.png (PNG copy)>]
+Overfull \hbox (51.57799pt too wide) has occurred while \output is active
+ \OT1/txr/m/sc/12 Chapter 5.  A Trilateral Weighted Sparse Coding Scheme for Re
+alistic Image Denoising  \OT1/txr/m/n/12 152
+ []
+
+[152 <./images/twsc/cc/resize_br_Mean_d800_iso6400_1_real.png (PNG copy)> <./im
+ages/twsc/cc/resize_br_Noisy_d800_iso6400_1_real.png (PNG copy)> <./images/twsc
+/cc/resize_br_CBM3D_d800_iso6400_1_real.png (PNG copy)> <./images/twsc/cc/resiz
+e_br_WNNM_d800_iso6400_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_TRD_d
+800_iso6400_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_DnCNN_d800_iso64
+00_1_real.png (PNG copy)> <./images/twsc/cc/resize_br_NI_d800_iso6400_1_real.pn
+g (PNG copy)> <./images/twsc/cc/resize_br_NC_d800_iso6400_1_real.png (PNG copy)
+> <./images/twsc/cc/resize_br_CCNoise_d800_iso6400_1.png (PNG copy)> <./images/
+twsc/cc/resize_br_TWSC_d800_iso6400_1.png (PNG copy)>]
+\openout2 = `chapter6.aux'.
+
+ (./chapter6.tex
+Chapter 6.
+
+Underfull \vbox (badness 3815) has occurred while \output is active []
+
+ [153
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [154]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [155]
+[156] [157] [158]
+Overfull \hbox (2.223pt too wide) in paragraph at lines 142--143
+\OT1/txr/m/n/12 sev-eral lim-i-ta-tions in eval-u-at-ing ex-ist-ing and fu-ture
+ im-age de-nois-ing meth-ods. These
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [159]
+[160]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [161]
+<images/dataset/200_3-5_1-60.jpg, id=3505, 416.8665pt x 234.549pt>
+File: images/dataset/200_3-5_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/200_3-5_1-60.jpg>
+Package pdftex.def Info: images/dataset/200_3-5_1-60.jpg used on input line 181
+.
+(pdftex.def)             Requested size: 127.1981pt x 71.56775pt.
+
+<images/dataset/200_6-7_1-60.jpg, id=3506, 416.8665pt x 234.549pt>
+File: images/dataset/200_6-7_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/200_6-7_1-60.jpg>
+Package pdftex.def Info: images/dataset/200_6-7_1-60.jpg used on input line 181
+.
+(pdftex.def)             Requested size: 127.1981pt x 71.56775pt.
+
+<images/dataset/200_6-7_1-8.jpg, id=3507, 416.8665pt x 234.549pt>
+File: images/dataset/200_6-7_1-8.jpg Graphic file (type jpg)
+
+<use images/dataset/200_6-7_1-8.jpg>
+Package pdftex.def Info: images/dataset/200_6-7_1-8.jpg used on input line 181.
+
+(pdftex.def)             Requested size: 127.1981pt x 71.56775pt.
+
+<images/dataset/400_6-7_1-60.jpg, id=3508, 416.2095pt x 234.2205pt>
+File: images/dataset/400_6-7_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/400_6-7_1-60.jpg>
+Package pdftex.def Info: images/dataset/400_6-7_1-60.jpg used on input line 198
+.
+(pdftex.def)             Requested size: 127.1981pt x 71.57831pt.
+
+<images/dataset/1600_6-7_1-60.jpg, id=3509, 416.2095pt x 234.2205pt>
+File: images/dataset/1600_6-7_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/1600_6-7_1-60.jpg>
+Package pdftex.def Info: images/dataset/1600_6-7_1-60.jpg used on input line 19
+8.
+(pdftex.def)             Requested size: 127.1981pt x 71.57831pt.
+
+<images/dataset/3200_6-7_1-60.jpg, id=3510, 416.2095pt x 234.2205pt>
+File: images/dataset/3200_6-7_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/3200_6-7_1-60.jpg>
+Package pdftex.def Info: images/dataset/3200_6-7_1-60.jpg used on input line 19
+8.
+(pdftex.def)             Requested size: 127.1981pt x 71.57831pt.
+
+<images/dataset/6400_6-7_1-60.jpg, id=3511, 416.2095pt x 234.2205pt>
+File: images/dataset/6400_6-7_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/6400_6-7_1-60.jpg>
+Package pdftex.def Info: images/dataset/6400_6-7_1-60.jpg used on input line 21
+5.
+(pdftex.def)             Requested size: 127.1981pt x 71.57831pt.
+
+<images/dataset/6400_6-7_1-350.jpg, id=3512, 416.2095pt x 234.2205pt>
+File: images/dataset/6400_6-7_1-350.jpg Graphic file (type jpg)
+
+<use images/dataset/6400_6-7_1-350.jpg>
+Package pdftex.def Info: images/dataset/6400_6-7_1-350.jpg used on input line 2
+15.
+(pdftex.def)             Requested size: 127.1981pt x 71.57831pt.
+
+<images/dataset/6400_16_1-60.jpg, id=3513, 416.8665pt x 234.549pt>
+File: images/dataset/6400_16_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/6400_16_1-60.jpg>
+Package pdftex.def Info: images/dataset/6400_16_1-60.jpg used on input line 215
+.
+(pdftex.def)             Requested size: 127.1981pt x 71.56775pt.
+ [162] [163 <./images/dataset/200_3-5_1-60.jpg> <./images/dataset/200_6-7_1-60.
+jpg> <./images/dataset/200_6-7_1-8.jpg> <./images/dataset/400_6-7_1-60.jpg> <./
+images/dataset/1600_6-7_1-60.jpg> <./images/dataset/3200_6-7_1-60.jpg> <./image
+s/dataset/6400_6-7_1-60.jpg> <./images/dataset/6400_6-7_1-350.jpg> <./images/da
+taset/6400_16_1-60.jpg>]
+<images/dataset/scene.jpg, id=3531, 1084.05pt x 1445.4pt>
+File: images/dataset/scene.jpg Graphic file (type jpg)
+
+<use images/dataset/scene.jpg>
+Package pdftex.def Info: images/dataset/scene.jpg used on input line 238.
+(pdftex.def)             Requested size: 158.99156pt x 211.9706pt.
+
+<images/dataset/scenewithperson.jpg, id=3532, 1084.05pt x 1445.4pt>
+File: images/dataset/scenewithperson.jpg Graphic file (type jpg)
+
+<use images/dataset/scenewithperson.jpg>
+Package pdftex.def Info: images/dataset/scenewithperson.jpg used on input line 
+238.
+(pdftex.def)             Requested size: 158.99156pt x 211.9706pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [164]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [165 <./images/dataset/scene.jpg> <./images/dataset/scenewithperson.jpg>]
+Overfull \hbox (15.13182pt too wide) in paragraph at lines 253--254
+[]\OT1/txr/bx/n/12 Generating ``Ground Truth'' Im-age\OT1/txr/m/n/12 : The ``Gr
+ound Truth'' im-ages of the RENOIR
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [166]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [167]
+<images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG, id=3562, 2794.44pt x 1862
+.96pt>
+File: images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG Graphic file (type jp
+g)
+ <use images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG us
+ed on input line 274.
+(pdftex.def)             Requested size: 158.99156pt x 105.97379pt.
+
+<images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG, id=3563, 2794.44pt x 1862
+.96pt>
+File: images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG Graphic file (type jp
+g)
+ <use images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG us
+ed on input line 274.
+(pdftex.def)             Requested size: 158.99156pt x 105.97379pt.
+
+<images/dataset/Canon5D2_5_200_3200_toy_mean.JPG, id=3564, 2794.44pt x 1862.96p
+t>
+File: images/dataset/Canon5D2_5_200_3200_toy_mean.JPG Graphic file (type jpg)
+ <use images/dataset/Canon5D2_5_200_3200_toy_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_200_3200_toy_mean.JPG used o
+n input line 284.
+(pdftex.def)             Requested size: 158.99156pt x 105.97379pt.
+
+<images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG, id=3565, 3693.8pt x 
+2465.21pt>
+File: images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG Graphic file (ty
+pe jpg)
+ <use images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_4-5_160_1800_classroom_mean.J
+PG used on input line 284.
+(pdftex.def)             Requested size: 158.99156pt x 106.0772pt.
+
+<images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG, id=3566, 3693.8pt x 2465
+.21pt>
+File: images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG Graphic file (type j
+pg)
+ <use images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG u
+sed on input line 294.
+(pdftex.def)             Requested size: 158.99156pt x 106.0772pt.
+
+<images/dataset/NikonD800_8_125_6400_photo_mean.JPG, id=3567, 3693.8pt x 2465.2
+1pt>
+File: images/dataset/NikonD800_8_125_6400_photo_mean.JPG Graphic file (type jpg
+)
+ <use images/dataset/NikonD800_8_125_6400_photo_mean.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_8_125_6400_photo_mean.JPG use
+d on input line 294.
+(pdftex.def)             Requested size: 158.99156pt x 106.0772pt.
+
+<images/dataset/Sony_3-5_200_1600_classroom_mean.JPG, id=3568, 3019.28pt x 1694
+.33pt>
+File: images/dataset/Sony_3-5_200_1600_classroom_mean.JPG Graphic file (type jp
+g)
+ <use images/dataset/Sony_3-5_200_1600_classroom_mean.JPG>
+Package pdftex.def Info: images/dataset/Sony_3-5_200_1600_classroom_mean.JPG us
+ed on input line 304.
+(pdftex.def)             Requested size: 158.99156pt x 89.21994pt.
+
+<images/dataset/Sony_4-5_125_3200_plant_mean.JPG, id=3569, 3019.28pt x 1694.33p
+t>
+File: images/dataset/Sony_4-5_125_3200_plant_mean.JPG Graphic file (type jpg)
+ <use images/dataset/Sony_4-5_125_3200_plant_mean.JPG>
+Package pdftex.def Info: images/dataset/Sony_4-5_125_3200_plant_mean.JPG used o
+n input line 304.
+(pdftex.def)             Requested size: 158.99156pt x 89.21994pt.
+
+<images/dataset/Sony_4_200_3200_door_mean.JPG, id=3570, 3019.28pt x 1694.33pt>
+File: images/dataset/Sony_4_200_3200_door_mean.JPG Graphic file (type jpg)
+
+<use images/dataset/Sony_4_200_3200_door_mean.JPG>
+Package pdftex.def Info: images/dataset/Sony_4_200_3200_door_mean.JPG used on i
+nput line 314.
+(pdftex.def)             Requested size: 158.99156pt x 89.21994pt.
+
+<images/dataset/Canon80D_8_8_3200_ball_mean.JPG, id=3571, 2987.16pt x 1686.3pt>
+File: images/dataset/Canon80D_8_8_3200_ball_mean.JPG Graphic file (type jpg)
+<use images/dataset/Canon80D_8_8_3200_ball_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon80D_8_8_3200_ball_mean.JPG used on
+ input line 314.
+(pdftex.def)             Requested size: 158.99156pt x 89.74915pt.
+
+<images/dataset/Canon80D_8_8_12800_printer_mean.JPG, id=3572, 2987.16pt x 1686.
+3pt>
+File: images/dataset/Canon80D_8_8_12800_printer_mean.JPG Graphic file (type jpg
+)
+ <use images/dataset/Canon80D_8_8_12800_printer_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon80D_8_8_12800_printer_mean.JPG use
+d on input line 324.
+(pdftex.def)             Requested size: 158.99156pt x 89.74915pt.
+
+<images/dataset/Canon80D_8_8_6400_comproom_mean.JPG, id=3573, 2987.16pt x 1686.
+3pt>
+File: images/dataset/Canon80D_8_8_6400_comproom_mean.JPG Graphic file (type jpg
+)
+ <use images/dataset/Canon80D_8_8_6400_comproom_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon80D_8_8_6400_comproom_mean.JPG use
+d on input line 324.
+(pdftex.def)             Requested size: 158.99156pt x 89.74915pt.
+
+
+LaTeX Warning: Float too large for page by 81.64404pt on input line 327.
+
+[168]
+<images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG, id=3578, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG 
+used on input line 348.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG, id=3579, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG 
+used on input line 348.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG, id=3580, 513.92pt x 51
+3.92pt>
+File: images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG
+ used on input line 348.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_160_6400_circuit_11_real.JPG, id=3581, 513.92pt x 51
+3.92pt>
+File: images/dataset/Canon5D2_5_160_6400_circuit_11_real.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Canon5D2_5_160_6400_circuit_11_real.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_circuit_11_real.JPG
+ used on input line 348.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_160_6400_reciever_1_mean.JPG, id=3582, 513.92pt x 51
+3.92pt>
+File: images/dataset/Canon5D2_5_160_6400_reciever_1_mean.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Canon5D2_5_160_6400_reciever_1_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_reciever_1_mean.JPG
+ used on input line 366.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG, id=3583, 513.92pt x 51
+3.92pt>
+File: images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG
+ used on input line 366.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG, id=3584, 513.92pt x 513.92p
+t>
+File: images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG Graphic file (type jpg)
+
+ <use images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG used
+ on input line 366.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_200_3200_toy_3_real.JPG, id=3585, 513.92pt x 513.92p
+t>
+File: images/dataset/Canon5D2_5_200_3200_toy_3_real.JPG Graphic file (type jpg)
+
+ <use images/dataset/Canon5D2_5_200_3200_toy_3_real.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_200_3200_toy_3_real.JPG used
+ on input line 366.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG, id=3586, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG 
+used on input line 384.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG, id=3587, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG>
+Package pdftex.def Info: images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG 
+used on input line 384.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG, id=3588, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG 
+used on input line 384.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon600D_4-5_125_1600_toy_16_real.JPG, id=3589, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon600D_4-5_125_1600_toy_16_real.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon600D_4-5_125_1600_toy_16_real.JPG>
+Package pdftex.def Info: images/dataset/Canon600D_4-5_125_1600_toy_16_real.JPG 
+used on input line 384.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG, id=3590, 513.92pt x 513.
+92pt>
+File: images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG Graphic file (type j
+pg)
+ <use images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG u
+sed on input line 402.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/NikonD800_5_125_6400_stair_3_real.JPG, id=3591, 513.92pt x 513.
+92pt>
+File: images/dataset/NikonD800_5_125_6400_stair_3_real.JPG Graphic file (type j
+pg)
+ <use images/dataset/NikonD800_5_125_6400_stair_3_real.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_5_125_6400_stair_3_real.JPG u
+sed on input line 402.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/NikonD800_6-3_125_5000_plant_1_mean.JPG, id=3592, 513.92pt x 51
+3.92pt>
+File: images/dataset/NikonD800_6-3_125_5000_plant_1_mean.JPG Graphic file (type
+ jpg)
+ <use images/dataset/NikonD800_6-3_125_5000_plant_1_mean.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_6-3_125_5000_plant_1_mean.JPG
+ used on input line 402.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/NikonD800_6-3_125_5000_plant_1_real.JPG, id=3593, 513.92pt x 51
+3.92pt>
+File: images/dataset/NikonD800_6-3_125_5000_plant_1_real.JPG Graphic file (type
+ jpg)
+ <use images/dataset/NikonD800_6-3_125_5000_plant_1_real.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_6-3_125_5000_plant_1_real.JPG
+ used on input line 402.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG, id=3594, 513.92pt x 51
+3.92pt>
+File: images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG>
+Package pdftex.def Info: images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG
+ used on input line 420.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG, id=3595, 513.92pt x 51
+3.92pt>
+File: images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG>
+Package pdftex.def Info: images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG
+ used on input line 420.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Sony_4-5_125_3200_plant_10_mean.JPG, id=3596, 513.92pt x 513.92
+pt>
+File: images/dataset/Sony_4-5_125_3200_plant_10_mean.JPG Graphic file (type jpg
+)
+ <use images/dataset/Sony_4-5_125_3200_plant_10_mean.JPG>
+Package pdftex.def Info: images/dataset/Sony_4-5_125_3200_plant_10_mean.JPG use
+d on input line 420.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Sony_4-5_125_3200_plant_10_real.JPG, id=3597, 513.92pt x 513.92
+pt>
+File: images/dataset/Sony_4-5_125_3200_plant_10_real.JPG Graphic file (type jpg
+)
+ <use images/dataset/Sony_4-5_125_3200_plant_10_real.JPG>
+Package pdftex.def Info: images/dataset/Sony_4-5_125_3200_plant_10_real.JPG use
+d on input line 420.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [169]
+[170 <./images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG> <./images/dataset/
+Canon5D2_5_160_6400_circuit_mean.JPG> <./images/dataset/Canon5D2_5_200_3200_toy
+_mean.JPG> <./images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG> <./imag
+es/dataset/NikonD800_6-3_125_5000_plant_mean.JPG> <./images/dataset/NikonD800_8
+_125_6400_photo_mean.JPG> <./images/dataset/Sony_3-5_200_1600_classroom_mean.JP
+G> <./images/dataset/Sony_4-5_125_3200_plant_mean.JPG> <./images/dataset/Sony_4
+_200_3200_door_mean.JPG> <./images/dataset/Canon80D_8_8_3200_ball_mean.JPG> <./
+images/dataset/Canon80D_8_8_12800_printer_mean.JPG> <./images/dataset/Canon80D_
+8_8_6400_comproom_mean.JPG>] [171 <./images/dataset/Canon5D2_5_160_6400_bicycle
+_6_mean.JPG> <./images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG> <./image
+s/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG> <./images/dataset/Canon5D2_5
+_160_6400_circuit_11_real.JPG> <./images/dataset/Canon5D2_5_160_6400_reciever_1
+_mean.JPG> <./images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG> <./images
+/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG> <./images/dataset/Canon5D2_5_200_3
+200_toy_3_real.JPG> <./images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG> <
+./images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG> <./images/dataset/Cano
+n600D_4-5_125_1600_toy_16_mean.JPG> <./images/dataset/Canon600D_4-5_125_1600_to
+y_16_real.JPG> <./images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG> <./imag
+es/dataset/NikonD800_5_125_6400_stair_3_real.JPG> <./images/dataset/NikonD800_6
+-3_125_5000_plant_1_mean.JPG> <./images/dataset/NikonD800_6-3_125_5000_plant_1_
+real.JPG> <./images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG> <./images/
+dataset/Sony_3-5_200_1600_classroom_14_real.JPG> <./images/dataset/Sony_4-5_125
+_3200_plant_10_mean.JPG> <./images/dataset/Sony_4-5_125_3200_plant_10_real.JPG>
+]
+Underfull \vbox (badness 3088) has occurred while \output is active []
+
+ [172]
+Overfull \hbox (0.81763pt too wide) in paragraph at lines 518--519
+\OT1/txr/m/n/12 age Fileds (CSF) [[]], Weighted Nu-clear Norm Min-i-miza-tion (
+WNNM) [[]], Train-
+ []
+
+[173]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [174]
+
+LaTeX Warning: Reference `f4' on page 175 undefined on input line 525.
+
+
+LaTeX Warning: Reference `f5' on page 175 undefined on input line 585.
+
+[175]
+
+LaTeX Warning: Reference `fig6-4' on page 176 undefined on input line 650.
+
+
+LaTeX Warning: Reference `fig6-13' on page 176 undefined on input line 650.
+
+[176]
+Overfull \hbox (2.89185pt too wide) in paragraph at lines 652--653
+[]\OT1/txr/m/n/12 Contrast to the pro-posed meth-ods, the tra-di-tional de-nois
+-ing meth-ods (e.g., LSSC,
+ []
+
+[177]) [178] [179]
+No file westernthesis.bnd.
+(./westernthesis.bbl (./westernthesis.brf)
+\tf@brf=\write7
+\openout7 = `westernthesis.brf'.
+
+
+Underfull \hbox (badness 5147) in paragraph at lines 7--7
+[]\OT1/txr/m/n/12 The most com-monly used camera-lens com-bi-na-tions.  [][]$\O
+T1/txtt/m/n/12 https : / /
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [180
+
+
+]
+Missing character: There is no â in font txr!
+Missing character: There is no € in font txr!
+Missing character: There is no ™ in font txr!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [181]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [182]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [183]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [184]
+Missing character: There is no Ã in font txr!
+Missing character: There is no ¼ in font txr!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [185]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [186]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [187]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [188]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [189]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [190]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [191]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [192])
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 541.
+[193]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 541.
+ (./westernthesis.aux (./acknowledgement.aux) (./chapter1.aux)
+(./chapter2.aux) (./chapter3.aux) (./chapter4.aux) (./chapter5.aux)
+(./chapter6.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 541.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 541.
+Package rerunfilecheck Info: File `westernthesis.brf' has not changed.
+(rerunfilecheck)             Checksum: 4E314988F9E8D7C09B73AB132839C463;47768.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 541.
+ ) 
+Here is how much of TeX's memory you used:
+ 14517 strings out of 493091
+ 319034 string characters out of 6134517
+ 414926 words of memory out of 5000000
+ 16371 multiletter control sequences out of 15000+600000
+ 87715 words of font info for 203 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,20n,39p,5322b,821s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Software
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Sof
+tware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c
+:/Software/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/Soft
+ware/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxbmi.pfb><c:/Software
+/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/Software/texli
+ve/2015/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/Software/texlive/20
+15/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/Software/texlive/2015/tex
+mf-dist/fonts/type1/public/txfonts/rtxsc.pfb><c:/Software/texlive/2015/texmf-di
+st/fonts/type1/public/txfonts/txex.pfb><c:/Software/texlive/2015/texmf-dist/fon
+ts/type1/public/txfonts/txsy.pfb><c:/Software/texlive/2015/texmf-dist/fonts/typ
+e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
+/times/utmb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
+mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
+ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on westernthesis.pdf (219 pages, 52472035 bytes).
+PDF statistics:
+ 4640 PDF objects out of 5155 (max. 8388607)
+ 3644 compressed objects within 37 object streams
+ 740 named destinations out of 1000 (max. 500000)
+ 3176 words of extra memory for PDF output out of 10000 (max. 10000000)
+
