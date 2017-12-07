@@ -220,24 +220,23 @@ Given fixed shutter speed and aperture, enhancing the camera sensitivity will ge
 
 \subsection{The Construction Process}
 
-To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}, we propose to further construct a new dataset which are: 1) contains more camera brands; 2) contain more carefully designed camera settings; 3) capture more real-world scenes with realistic objects; 4) capture both the raw data and sRGB data for comparison analysis on the noise. In the following we will discuss each advantages in details. The format of our captured images are raw data and JPEG images with uncompressed process. For each scene, we capture it for 500 times, similar to \cite{crosschannel2016}. In Figure \ref{fig6-2}, we show the scene how we capture the static images in indoor environment. We capture images with different camera settings. The cameras are set based on the following rules: the first rule is that the shutter speed should be larger than the blink of the fluorescent lights, otherwise the flickering of the light will make the global illuminances of the captured images very different. The second rule is that we should set the shutter speed, the shutter speed, and the ISO value accordingly so that the scenes are in a naturally lighting condition. Besides, since the DSLRs use mechanical shutter, the shutter speed of each shot is irregular. This small error results in the different brightness of shots. However, we ignored this error in our dataset, so as the \cite{crosschannel2016}.
+To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}, we propose to further construct a new dataset which are: 1) contains more camera brands; 2) contain more carefully designed camera settings; 3) capture more real-world scenes with realistic objects; 4) capture both the raw data and sRGB data for comparison analysis on the noise. In the following we will discuss each advantages in details. The format of our captured images are raw data and JPEG images with uncompressed process. For each scene, we capture it for 500 times, similar to \cite{crosschannel2016}. In Figure \ref{fig6-2}, we show the scene how we capture the static images in indoor environment. The static scene is captured with cameras fixed by tripod. The capture is automatically done with shutter release. Hence, the misalignment problem can be nearly avoided when we capture over 500 images for one scene. We capture images with different camera settings. The cameras are set based on the following rules: the first rule is that the shutter speed should be larger than the blink of the fluorescent lights, otherwise the flickering of the light will make the global illuminances of the captured images very different. The second rule is that we should set the shutter speed, the shutter speed, and the ISO value accordingly so that the scenes are in a naturally lighting condition. Besides, since the DSLRs use mechanical shutter, the shutter speed of each shot is irregular. This small error results in the different brightness of shots. However, we ignored this error in our dataset, so as the \cite{crosschannel2016}.
 
 \begin{figure}
     \centering
-
 \subfigure{
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/200_6-7_1-60.jpg}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/scene.jpg}}
 {\footnotesize 200,6.7,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/200_6-7_1-8.jpg}}
+\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/scenewithperson.jpg}}
 {\footnotesize 200,6.7,1/8}
 \end{minipage}
 }
-    \caption{Captured Images with the Sony A7 II camera under different (ISO, Shutter, Aperture) settings.}
+    \caption{The static scene is captured with cameras fixed by tripod. The capture is automatically done with shutter release.}
     \label{fig6-1}
 \end{figure}
 
