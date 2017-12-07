@@ -866,4 +866,1340 @@ Package caption Info: End \AtBeginDocument code.
 \scratchdimen=\dimen144
 \scratchbox=\box35
 \nofMPsegments=\count154
-\nofMParguments=\
+\nofMParguments=\count155
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count156
+\MPscratchDim=\dimen145
+\MPnumerator=\count157
+\makeMPintoPDFobject=\count158
+\everyMPtoPDFconversion=\toks31
+) (c:/Software/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box36
+Package backref Info: ** backref set up for natbib ** on input line 346.
+Package hyperref Info: Link coloring ON on input line 346.
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(c:/Software/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count159
+)
+LaTeX Info: Redefining \ref on input line 346.
+LaTeX Info: Redefining \pageref on input line 346.
+LaTeX Info: Redefining \nameref on input line 346.
+
+[1
+
+
+{c:/Software/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+txmia on input line 361.
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 361.
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 361.
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 361.
+
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--361
+
+ []
+
+[2] [3]
+Underfull \vbox (badness 7308) has occurred while \output is active []
+
+ [4]
+[5]
+Overfull \hbox (0.76976pt too wide) in paragraph at lines 417--418
+[]\OT1/txr/m/n/12 Jun Xu, Lei Zhang, Wang-meng Zuo, David Zhang and Xi-angchu F
+eng, ``Patch
+ []
+
+
+Overfull \hbox (0.32576pt too wide) in paragraph at lines 419--420
+[]\OT1/txr/m/n/12 Jun Xu, Lei Zhang, David Zhang,``External Prior Guided In-ter
+-nal Prior Learn-
+ []
+
+
+Overfull \hbox (9.99702pt too wide) in paragraph at lines 420--421
+[]\OT1/txr/m/n/12 Jun Xu, Lei Zhang, David Zhang,``A Tri-lat-eral Weighted Spar
+se Cod-ing Scheme
+ []
+
+[6] [7]
+\openout2 = `acknowledgement.aux'.
+
+ (./acknowledgement.tex) [8
+
+]
+\tf@toc=\write4
+\openout4 = `westernthesis.toc'.
+
+ [9
+
+]
+\tf@lof=\write5
+\openout5 = `westernthesis.lof'.
+
+ [10]
+\tf@lot=\write6
+\openout6 = `westernthesis.lot'.
+
+ [11]
+\openout2 = `chapter1.aux'.
+
+ (./chapter1.tex
+Chapter 1.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+
+]
+
+Package natbib Warning: Citation `Foipractical' on page 2 undefined on input li
+ne 23.
+
+[2]
+
+LaTeX Warning: Reference `e11' on page 3 undefined on input line 30.
+
+
+Package natbib Warning: Citation `Foipractical' on page 3 undefined on input li
+ne 42.
+
+
+Package natbib Warning: Citation `bm3d' on page 3 undefined on input line 44.
+
+
+Package natbib Warning: Citation `ksvd' on page 3 undefined on input line 44.
+
+
+Package natbib Warning: Citation `Foipractical' on page 3 undefined on input li
+ne 44.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 3 undefined on inpu
+t line 44.
+
+
+Package natbib Warning: Citation `karaimer_brown_ECCV_2016' on page 3 undefined
+ on input line 44.
+
+[3]
+
+Package natbib Warning: Citation `Bishop' on page 4 undefined on input line 50.
+
+
+
+Package natbib Warning: Citation `lasso' on page 4 undefined on input line 50.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+
+Package natbib Warning: Citation `ssim' on page 5 undefined on input line 55.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+[6]
+
+Package natbib Warning: Citation `ssim' on page 7 undefined on input line 77.
+
+
+Package natbib Warning: Citation `msssim' on page 7 undefined on input line 79.
+
+
+
+Package natbib Warning: Citation `bliinds' on page 7 undefined on input line 79
+.
+
+
+Package natbib Warning: Citation `biqi' on page 7 undefined on input line 79.
+
+[7]
+
+Package natbib Warning: Citation `makitalo2013optimal' on page 8 undefined on i
+nput line 91.
+
+
+Underfull \vbox (badness 8075) has occurred while \output is active []
+
+ [8]
+
+Package natbib Warning: Citation `PeronaMalik1990' on page 9 undefined on input
+ line 93.
+
+
+Package natbib Warning: Citation `rudin1992nonlinear' on page 9 undefined on in
+put line 93.
+
+
+Package natbib Warning: Citation `osher2005iterative' on page 9 undefined on in
+put line 93.
+
+
+Package natbib Warning: Citation `rudin1992nonlinear' on page 9 undefined on in
+put line 93.
+
+
+Package natbib Warning: Citation `weiss' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `rudin1992nonlinear' on page 9 undefined on in
+put line 93.
+
+
+Package natbib Warning: Citation `osher2005iterative' on page 9 undefined on in
+put line 93.
+
+
+Package natbib Warning: Citation `Tomasi1998' on page 9 undefined on input line
+ 93.
+
+
+Package natbib Warning: Citation `softthresholding' on page 9 undefined on inpu
+t line 93.
+
+
+Package natbib Warning: Citation `bayesshrink' on page 9 undefined on input lin
+e 93.
+
+
+Package natbib Warning: Citation `curvelet' on page 9 undefined on input line 9
+3.
+
+
+Package natbib Warning: Citation `blsgsm' on page 9 undefined on input line 93.
+
+
+
+Package natbib Warning: Citation `foe' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `Bishop' on page 9 undefined on input line 93.
+
+
+
+Package natbib Warning: Citation `nlm' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `ksvd' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `olshausen1997sparse' on page 9 undefined on i
+nput line 93.
+
+
+Package natbib Warning: Citation `olshausen1996emergence' on page 9 undefined o
+n input line 93.
+
+
+Package natbib Warning: Citation `olshausen1996emergence' on page 9 undefined o
+n input line 93.
+
+
+Package natbib Warning: Citation `olshausen1997sparse' on page 9 undefined on i
+nput line 93.
+
+
+Package natbib Warning: Citation `ksvd' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `ksvdtsp' on page 9 undefined on input line 93
+.
+
+
+Package natbib Warning: Citation `ksvd' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `srcolor' on page 9 undefined on input line 93
+.
+
+
+Package natbib Warning: Citation `srcvpr' on page 9 undefined on input line 93.
+
+
+
+Package natbib Warning: Citation `lcksvd' on page 9 undefined on input line 93.
+
+
+
+Package natbib Warning: Citation `epll' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `gmmnips' on page 9 undefined on input line 93
+.
+
+
+Package natbib Warning: Citation `ple' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `ksvd' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `bm3d' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `lssc' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `ncsr' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `nnm' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `wnnm' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `wnnm' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `mlp' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `csf' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `tnrd' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `dncnn' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `mlp' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `csf' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `tnrd' on page 9 undefined on input line 93.
+
+
+Package natbib Warning: Citation `residualnetwork' on page 9 undefined on input
+ line 93.
+
+
+Package natbib Warning: Citation `dncnn' on page 9 undefined on input line 93.
+
+[9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+
+Package natbib Warning: Citation `foe' on page 11 undefined on input line 99.
+
+
+Package natbib Warning: Citation `cbm3d' on page 11 undefined on input line 99.
+
+
+
+Package natbib Warning: Citation `cbm3d' on page 11 undefined on input line 99.
+
+
+
+Package natbib Warning: Citation `mairal2008sparse' on page 11 undefined on inp
+ut line 99.
+
+
+Package natbib Warning: Citation `Zhu_2016_CVPR' on page 11 undefined on input 
+line 99.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+
+Package natbib Warning: Citation `Liu2008' on page 12 undefined on input line 1
+01.
+
+
+Package natbib Warning: Citation `Leungtip' on page 12 undefined on input line 
+101.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 12 undefined on inp
+ut line 101.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 12 undefined on inp
+ut line 101.
+
+
+Package natbib Warning: Citation `karaimer_brown_ECCV_2016' on page 12 undefine
+d on input line 101.
+
+
+Package natbib Warning: Citation `mairal2008sparse' on page 12 undefined on inp
+ut line 101.
+
+[12]
+
+Package natbib Warning: Citation `blsgsm' on page 13 undefined on input line 10
+3.
+
+
+Package natbib Warning: Citation `blsgsm' on page 13 undefined on input line 10
+3.
+
+
+Package natbib Warning: Citation `fullyblind' on page 13 undefined on input lin
+e 103.
+
+
+Package natbib Warning: Citation `huber2011robust' on page 13 undefined on inpu
+t line 103.
+
+
+Package natbib Warning: Citation `rabie2005robust' on page 13 undefined on inpu
+t line 103.
+
+
+Package natbib Warning: Citation `cbm3d' on page 13 undefined on input line 103
+.
+
+
+Package natbib Warning: Citation `bm3d' on page 13 undefined on input line 103.
+
+
+
+Package natbib Warning: Citation `Liu2008' on page 13 undefined on input line 1
+03.
+
+
+Package natbib Warning: Citation `Liu2008' on page 13 undefined on input line 1
+03.
+
+
+Package natbib Warning: Citation `mairal2008sparse' on page 13 undefined on inp
+ut line 103.
+
+
+Package natbib Warning: Citation `noiseclinic' on page 13 undefined on input li
+ne 103.
+
+
+Package natbib Warning: Citation `nlbayes' on page 13 undefined on input line 1
+03.
+
+
+Package natbib Warning: Citation `noiseclinic' on page 13 undefined on input li
+ne 103.
+
+
+Package natbib Warning: Citation `ncwebsite' on page 13 undefined on input line
+ 103.
+
+
+Package natbib Warning: Citation `Zhu_2016_CVPR' on page 13 undefined on input 
+line 103.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 13 undefined on inp
+ut line 103.
+
+
+Package natbib Warning: Citation `kervrann2007bayesian' on page 13 undefined on
+ input line 103.
+
+
+Package natbib Warning: Citation `neatimage' on page 13 undefined on input line
+ 103.
+
+
+Package natbib Warning: Citation `crosschannel2016' on page 13 undefined on inp
+ut line 103.
+
+
+Package natbib Warning: Citation `neatimage' on page 13 undefined on input line
+ 103.
+
+
+Package natbib Warning: Citation `bm3d' on page 13 undefined on input line 103.
+
+
+
+Package natbib Warning: Citation `wnnm' on page 13 undefined on input line 103.
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+
+Package natbib Warning: Citation `Liu2008' on page 14 undefined on input line 1
+06.
+
+
+Package natbib Warning: Citation `noiseclinic' on page 14 undefined on input li
+ne 106.
+
+
+Package natbib Warning: Citation `fullyblind' on page 14 undefined on input lin
+e 106.
+
+
+Package natbib Warning: Citation `rabie2005robust' on page 14 undefined on inpu
+t line 106.
+
+
+Package natbib Warning: Citation `Liu2008' on page 14 undefined on input line 1
+06.
+
+
+Package natbib Warning: Citation `Liu2008' on page 14 undefined on input line 1
+06.
+
+
+Package natbib Warning: Citation `noiseclinic' on page 14 undefined on input li
+ne 106.
+
+<images/ThesisOrganization.pdf, id=132, 844.65562pt x 596.98032pt>
+File: images/ThesisOrganization.pdf Graphic file (type pdf)
+
+<use images/ThesisOrganization.pdf>
+Package pdftex.def Info: images/ThesisOrganization.pdf used on input line 113.
+(pdftex.def)             Requested size: 397.48499pt x 280.93604pt.
+
+
+LaTeX Warning: Reference `fig1-1' on page 14 undefined on input line 118.
+
+
+Package natbib Warning: Citation `ksvd' on page 14 undefined on input line 120.
+
+
+
+Package natbib Warning: Citation `ple' on page 14 undefined on input line 120.
+
+
+Package natbib Warning: Citation `bm3d' on page 14 undefined on input line 120.
+
+
+
+Package natbib Warning: Citation `lssc' on page 14 undefined on input line 120.
+
+
+
+Package natbib Warning: Citation `ncsr' on page 14 undefined on input line 120.
+
+
+
+Package natbib Warning: Citation `wnnm' on page 14 undefined on input line 120.
+
+
+
+Package natbib Warning: Citation `epll' on page 14 undefined on input line 120.
+
+
+[14] [15 <./images/ThesisOrganization.pdf>]
+
+Package natbib Warning: Citation `cbm3d' on page 16 undefined on input line 122
+.
+
+
+Package natbib Warning: Citation `bm3d' on page 16 undefined on input line 122.
+
+
+
+Package natbib Warning: Citation `mlp' on page 16 undefined on input line 122.
+
+
+Package natbib Warning: Citation `csr' on page 16 undefined on input line 122.
+
+
+Package natbib Warning: Citation `neatimage' on page 16 undefined on input line
+ 122.
+
+
+Underfull \vbox (badness 3078) has occurred while \output is active []
+
+ [16]
+
+LaTeX Warning: Reference `sec:external' on page 17 undefined on input line 141.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+
+LaTeX Warning: Reference `sec:guided' on page 17 undefined on input line 146.
+
+
+Overfull \hbox (1.3078pt too wide) in paragraph at lines 146--147
+[]\OT1/txr/bx/n/12 Chapter []: Ex-ter-nal Prior Guided In-ter-nal Prior Learn-i
+ng for Real-World
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+[17]
+
+LaTeX Warning: Reference `sec:internallr' on page 18 undefined on input line 15
+2.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
+
+ []
+
+
+LaTeX Warning: Reference `sec:internalsc' on page 18 undefined on input line 15
+8.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
+
+LaTeX Warning: Reference `sec:dataset' on page 18 undefined on input line 163.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+[18]) [19]
+\openout2 = `chapter2.aux'.
+
+ (./chapter2.tex
+Chapter 2.
+<images/pgpd/flowchart2.png, id=213, 828.9369pt x 602.9727pt>
+File: images/pgpd/flowchart2.png Graphic file (type png)
+
+<use images/pgpd/flowchart2.png>
+Package pdftex.def Info: images/pgpd/flowchart2.png used on input line 11.
+(pdftex.def)             Requested size: 317.9892pt x 231.31255pt.
+
+
+Package natbib Warning: Citation `Tomasi1998' on page 20 undefined on input lin
+e 16.
+
+
+Package natbib Warning: Citation `PeronaMalik1990' on page 20 undefined on inpu
+t line 16.
+
+
+Package natbib Warning: Citation `rudin1992nonlinear' on page 20 undefined on i
+nput line 16.
+
+
+Package natbib Warning: Citation `osher2005iterative' on page 20 undefined on i
+nput line 16.
+
+
+Package natbib Warning: Citation `softthresholding' on page 20 undefined on inp
+ut line 16.
+
+
+Package natbib Warning: Citation `bayesshrink' on page 20 undefined on input li
+ne 16.
+
+
+Package natbib Warning: Citation `curvelet' on page 20 undefined on input line 
+16.
+
+
+Package natbib Warning: Citation `ksvd' on page 20 undefined on input line 16.
+
+
+Package natbib Warning: Citation `lssc' on page 20 undefined on input line 16.
+
+
+Package natbib Warning: Citation `ncsr' on page 20 undefined on input line 16.
+
+
+Package natbib Warning: Citation `nlm' on page 20 undefined on input line 16.
+
+
+Package natbib Warning: Citation `bm3d' on page 20 undefined on input line 16.
+
+
+Package natbib Warning: Citation `nnm' on page 20 undefined on input line 16.
+
+
+Package natbib Warning: Citation `wnnm' on page 20 undefined on input line 16.
+
+
+Package natbib Warning: Citation `softthresholding' on page 20 undefined on inp
+ut line 18.
+
+
+Package natbib Warning: Citation `bayesshrink' on page 20 undefined on input li
+ne 18.
+
+
+Package natbib Warning: Citation `blsgsm' on page 20 undefined on input line 18
+.
+
+
+Package natbib Warning: Citation `weiss' on page 20 undefined on input line 18.
+
+
+
+Package natbib Warning: Citation `rudin1992nonlinear' on page 20 undefined on i
+nput line 18.
+
+
+Package natbib Warning: Citation `osher2005iterative' on page 20 undefined on i
+nput line 18.
+
+
+Package natbib Warning: Citation `foe' on page 20 undefined on input line 18.
+
+
+Package natbib Warning: Citation `Bishop' on page 20 undefined on input line 18
+.
+
+
+Package natbib Warning: Citation `csf' on page 20 undefined on input line 18.
+
+
+Underfull \vbox (badness 3815) has occurred while \output is active []
+
+ [20
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./images/pgpd/flowchart2.png>]
+
+Package natbib Warning: Citation `olshausen1996emergence' on page 22 undefined 
+on input line 20.
+
+
+Package natbib Warning: Citation `olshausen1997sparse' on page 22 undefined on 
+input line 20.
+
+
+Package natbib Warning: Citation `ksvd' on page 22 undefined on input line 20.
+
+
+Package natbib Warning: Citation `ksvdtsp' on page 22 undefined on input line 2
+0.
+
+
+Package natbib Warning: Citation `ksvd' on page 22 undefined on input line 20.
+
+
+Package natbib Warning: Citation `srcolor' on page 22 undefined on input line 2
+0.
+
+
+Package natbib Warning: Citation `srcvpr' on page 22 undefined on input line 20
+.
+
+
+Package natbib Warning: Citation `lcksvd' on page 22 undefined on input line 20
+.
+
+
+Package natbib Warning: Citation `epll' on page 22 undefined on input line 20.
+
+
+Package natbib Warning: Citation `gmmnips' on page 22 undefined on input line 2
+0.
+
+
+Package natbib Warning: Citation `ple' on page 22 undefined on input line 20.
+
+
+Package natbib Warning: Citation `nlm' on page 22 undefined on input line 22.
+
+
+Package natbib Warning: Citation `nlr' on page 22 undefined on input line 22.
+
+
+Package natbib Warning: Citation `bm3d' on page 22 undefined on input line 22.
+
+
+Package natbib Warning: Citation `lssc' on page 22 undefined on input line 22.
+
+
+Package natbib Warning: Citation `nsp' on page 22 undefined on input line 22.
+
+
+Package natbib Warning: Citation `ncsr' on page 22 undefined on input line 22.
+
+
+Package natbib Warning: Citation `nnm' on page 22 undefined on input line 22.
+
+
+Package natbib Warning: Citation `wnnm' on page 22 undefined on input line 22.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+
+Package natbib Warning: Citation `bm3d' on page 23 undefined on input line 24.
+
+
+Package natbib Warning: Citation `ncsr' on page 23 undefined on input line 24.
+
+
+Package natbib Warning: Citation `wnnm' on page 23 undefined on input line 24.
+
+
+LaTeX Warning: Reference `fig2-1' on page 23 undefined on input line 26.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+
+Package natbib Warning: Citation `nlm' on page 24 undefined on input line 30.
+
+
+Package natbib Warning: Citation `bm3d' on page 24 undefined on input line 30.
+
+
+Package natbib Warning: Citation `lssc' on page 24 undefined on input line 30.
+
+
+Package natbib Warning: Citation `ncsr' on page 24 undefined on input line 30.
+
+
+Package natbib Warning: Citation `wnnm' on page 24 undefined on input line 30.
+
+
+Package natbib Warning: Citation `nlm' on page 24 undefined on input line 30.
+
+
+Package natbib Warning: Citation `bm3d' on page 24 undefined on input line 30.
+
+
+Package natbib Warning: Citation `lssc' on page 24 undefined on input line 30.
+
+
+Package natbib Warning: Citation `ncsr' on page 24 undefined on input line 30.
+
+
+Package natbib Warning: Citation `wnnm' on page 24 undefined on input line 30.
+
+
+Package natbib Warning: Citation `srcolor' on page 24 undefined on input line 3
+0.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+
+LaTeX Warning: Reference `fig2-2' on page 25 undefined on input line 39.
+
+
+Package natbib Warning: Citation `epll' on page 25 undefined on input line 46.
+
+
+Package natbib Warning: Citation `ple' on page 25 undefined on input line 46.
+
+<images/pgpd/2pgs.png, id=239, 809.1831pt x 523.9575pt>
+File: images/pgpd/2pgs.png Graphic file (type png)
+
+<use images/pgpd/2pgs.png>
+Package pdftex.def Info: images/pgpd/2pgs.png used on input line 50.
+(pdftex.def)             Requested size: 278.23827pt x 180.16591pt.
+ [25]
+
+Package natbib Warning: Citation `ksvd' on page 26 undefined on input line 55.
+
+
+Package natbib Warning: Citation `lssc' on page 26 undefined on input line 55.
+
+[26 <./images/pgpd/2pgs.png>]
+
+Package natbib Warning: Citation `Bishop' on page 27 undefined on input line 68
+.
+
+
+LaTeX Warning: Reference `equ2-4' on page 27 undefined on input line 68.
+
+
+Package natbib Warning: Citation `em' on page 27 undefined on input line 68.
+
+
+LaTeX Warning: Reference `equ2-4' on page 27 undefined on input line 68.
+
+
+Package natbib Warning: Citation `Bishop' on page 27 undefined on input line 82
+.
+
+
+LaTeX Warning: Reference `equ2-5' on page 27 undefined on input line 84.
+
+
+Package natbib Warning: Citation `Bishop' on page 27 undefined on input line 84
+.
+
+
+Package natbib Warning: Citation `emconvergence' on page 27 undefined on input 
+line 84.
+
+
+LaTeX Warning: Reference `fig2-3' on page 27 undefined on input line 84.
+
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 84.
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+File: ot1txtt.fd 2000/12/15 v3.1
+)
+<images/pgpd/cvgc.png, id=260, 508.90125pt x 298.11375pt>
+File: images/pgpd/cvgc.png Graphic file (type png)
+
+<use images/pgpd/cvgc.png>
+Package pdftex.def Info: images/pgpd/cvgc.png used on input line 87.
+(pdftex.def)             Requested size: 298.11374pt x 174.6392pt.
+ [27]
+
+Package natbib Warning: Citation `epll' on page 28 undefined on input line 96.
+
+
+Package natbib Warning: Citation `ple' on page 28 undefined on input line 96.
+
+
+LaTeX Warning: Reference `fig2-2' on page 28 undefined on input line 98.
+
+[28 <./images/pgpd/cvgc.png (PNG copy)>]
+
+LaTeX Warning: Reference `equ2-9' on page 29 undefined on input line 100.
+
+
+Package natbib Warning: Citation `epll' on page 29 undefined on input line 100.
+
+
+
+Package natbib Warning: Citation `epll' on page 29 undefined on input line 102.
+
+
+
+Package natbib Warning: Citation `bm3d' on page 29 undefined on input line 102.
+
+
+[29]
+
+Package natbib Warning: Citation `epll' on page 30 undefined on input line 109.
+
+
+
+LaTeX Warning: Reference `equ2-8' on page 30 undefined on input line 114.
+
+
+LaTeX Warning: Reference `equ2-9' on page 30 undefined on input line 119.
+
+[30]
+
+LaTeX Warning: Reference `fig2-4' on page 31 undefined on input line 128.
+
+<images/pgpd/dics.png, id=291, 809.30354pt x 266.55585pt>
+File: images/pgpd/dics.png Graphic file (type png)
+
+<use images/pgpd/dics.png>
+Package pdftex.def Info: images/pgpd/dics.png used on input line 131.
+(pdftex.def)             Requested size: 397.48499pt x 130.91853pt.
+
+
+LaTeX Warning: Reference `equ2-16' on page 31 undefined on input line 136.
+
+[31 <./images/pgpd/dics.png>]
+
+LaTeX Warning: Reference `equ2-11' on page 32 undefined on input line 142.
+
+
+Overfull \hbox (6.01216pt too wide) in paragraph at lines 151--153
+\OT1/txr/m/n/12 the $\OML/txmi/m/it/12 i$\OT1/txr/m/n/12 th eigen-vec-tor in $\
+OML/txmi/bx/it/12 D$\OT1/txr/m/n/12 , we as-sume that it fol-lows dis-tri-bu-ti
+on $[] [](\OMS/txsy/m/n/12 ^^@\OML/txmi/m/it/12 c[]\OMS/txsy/m/n/12 j\OML/txmi/
+bx/it/12 []\OMS/txsy/m/n/12 j\OML/txmi/m/it/12 =\OML/txmi/bx/it/12 ^^U[]\OT1/t
+xr/m/n/12 )$,
+ []
+
+
+LaTeX Warning: Reference `equ2-13' on page 32 undefined on input line 157.
+
+
+LaTeX Warning: Reference `equ2-14' on page 32 undefined on input line 157.
+
+
+LaTeX Warning: Reference `equ2-12' on page 32 undefined on input line 157.
+
+[32]
+
+LaTeX Warning: Reference `equ2-15' on page 33 undefined on input line 161.
+
+
+LaTeX Warning: Reference `equ2-11' on page 33 undefined on input line 161.
+
+
+LaTeX Warning: Reference `equ2-16' on page 33 undefined on input line 168.
+
+
+LaTeX Warning: Reference `equ2-11' on page 33 undefined on input line 168.
+
+
+LaTeX Warning: Reference `equ2-11' on page 33 undefined on input line 168.
+
+
+LaTeX Warning: Reference `sec:appendix' on page 33 undefined on input line 168.
+
+
+
+LaTeX Warning: Reference `equ2-17' on page 33 undefined on input line 174.
+
+
+Package natbib Warning: Citation `osher2005iterative' on page 33 undefined on i
+nput line 174.
+
+
+LaTeX Warning: Reference `equ2-9' on page 33 undefined on input line 199.
+
+
+LaTeX Warning: Reference `equ2-11' on page 33 undefined on input line 201.
+
+[33]
+
+LaTeX Warning: Reference `fig2-5' on page 34 undefined on input line 217.
+
+
+Package natbib Warning: Citation `bsds' on page 34 undefined on input line 217.
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+<images/pgpd/airfield.png, id=321, 256.96pt x 256.96pt>
+File: images/pgpd/airfield.png Graphic file (type png)
+
+<use images/pgpd/airfield.png>
+Package pdftex.def Info: images/pgpd/airfield.png used on input line 262.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/airplane.png, id=322, 256.96pt x 256.96pt>
+File: images/pgpd/airplane.png Graphic file (type png)
+
+<use images/pgpd/airplane.png>
+Package pdftex.def Info: images/pgpd/airplane.png used on input line 262.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/baboon.png, id=323, 256.96pt x 256.96pt>
+File: images/pgpd/baboon.png Graphic file (type png)
+
+<use images/pgpd/baboon.png>
+Package pdftex.def Info: images/pgpd/baboon.png used on input line 262.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/barbara.png, id=324, 256.96pt x 256.96pt>
+File: images/pgpd/barbara.png Graphic file (type png)
+
+<use images/pgpd/barbara.png>
+Package pdftex.def Info: images/pgpd/barbara.png used on input line 262.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/boat.png, id=325, 256.96pt x 256.96pt>
+File: images/pgpd/boat.png Graphic file (type png)
+ <use images/pgpd/boat.png>
+Package pdftex.def Info: images/pgpd/boat.png used on input line 262.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/cameraman.png, id=326, 128.48pt x 128.48pt>
+File: images/pgpd/cameraman.png Graphic file (type png)
+
+<use images/pgpd/cameraman.png>
+Package pdftex.def Info: images/pgpd/cameraman.png used on input line 262.
+(pdftex.def)             Requested size: 35.77219pt x 35.77222pt.
+
+<images/pgpd/carhouse.png, id=327, 256.96pt x 256.96pt>
+File: images/pgpd/carhouse.png Graphic file (type png)
+
+<use images/pgpd/carhouse.png>
+Package pdftex.def Info: images/pgpd/carhouse.png used on input line 262.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/couple.png, id=328, 256.96pt x 256.96pt>
+File: images/pgpd/couple.png Graphic file (type png)
+
+<use images/pgpd/couple.png>
+Package pdftex.def Info: images/pgpd/couple.png used on input line 262.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/elaine.png, id=329, 256.96pt x 256.96pt>
+File: images/pgpd/elaine.png Graphic file (type png)
+
+<use images/pgpd/elaine.png>
+Package pdftex.def Info: images/pgpd/elaine.png used on input line 262.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/hat.png, id=330, 128.48pt x 128.48pt>
+File: images/pgpd/hat.png Graphic file (type png)
+ <use images/pgpd/hat.png>
+Package pdftex.def Info: images/pgpd/hat.png used on input line 262.
+(pdftex.def)             Requested size: 35.77219pt x 35.77222pt.
+
+<images/pgpd/hill.png, id=331, 256.96pt x 256.96pt>
+File: images/pgpd/hill.png Graphic file (type png)
+ <use images/pgpd/hill.png>
+Package pdftex.def Info: images/pgpd/hill.png used on input line 304.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/house.png, id=332, 128.48pt x 128.48pt>
+File: images/pgpd/house.png Graphic file (type png)
+
+<use images/pgpd/house.png>
+Package pdftex.def Info: images/pgpd/house.png used on input line 304.
+(pdftex.def)             Requested size: 35.77219pt x 35.77222pt.
+
+<images/pgpd/lake.png, id=333, 256.96pt x 256.96pt>
+File: images/pgpd/lake.png Graphic file (type png)
+ <use images/pgpd/lake.png>
+Package pdftex.def Info: images/pgpd/lake.png used on input line 304.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/leaves.png, id=334, 128.48pt x 128.48pt>
+File: images/pgpd/leaves.png Graphic file (type png)
+
+<use images/pgpd/leaves.png>
+Package pdftex.def Info: images/pgpd/leaves.png used on input line 304.
+(pdftex.def)             Requested size: 35.77219pt x 35.77222pt.
+
+<images/pgpd/lena.png, id=335, 256.96pt x 256.96pt>
+File: images/pgpd/lena.png Graphic file (type png)
+ <use images/pgpd/lena.png>
+Package pdftex.def Info: images/pgpd/lena.png used on input line 304.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/man.png, id=336, 256.96pt x 256.96pt>
+File: images/pgpd/man.png Graphic file (type png)
+ <use images/pgpd/man.png>
+Package pdftex.def Info: images/pgpd/man.png used on input line 304.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/monarch.png, id=337, 128.48pt x 128.48pt>
+File: images/pgpd/monarch.png Graphic file (type png)
+
+<use images/pgpd/monarch.png>
+Package pdftex.def Info: images/pgpd/monarch.png used on input line 304.
+(pdftex.def)             Requested size: 35.77219pt x 35.77222pt.
+
+<images/pgpd/paint.png, id=338, 128.48pt x 128.48pt>
+File: images/pgpd/paint.png Graphic file (type png)
+
+<use images/pgpd/paint.png>
+Package pdftex.def Info: images/pgpd/paint.png used on input line 304.
+(pdftex.def)             Requested size: 35.77219pt x 35.77222pt.
+
+<images/pgpd/peppers.png, id=339, 256.96pt x 256.96pt>
+File: images/pgpd/peppers.png Graphic file (type png)
+
+<use images/pgpd/peppers.png>
+Package pdftex.def Info: images/pgpd/peppers.png used on input line 304.
+(pdftex.def)             Requested size: 35.77219pt x 35.77026pt.
+
+<images/pgpd/zelda.png, id=340, 128.48pt x 128.48pt>
+File: images/pgpd/zelda.png Graphic file (type png)
+
+<use images/pgpd/zelda.png>
+Package pdftex.def Info: images/pgpd/zelda.png used on input line 304.
+(pdftex.def)             Requested size: 35.77219pt x 35.77222pt.
+ [35 <./images/pgpd/airfield.png (PNG copy)> <./images/pgpd/airplane.png (PNG c
+opy)> <./images/pgpd/baboon.png (PNG copy)> <./images/pgpd/barbara.png (PNG cop
+y)> <./images/pgpd/boat.png (PNG copy)> <./images/pgpd/cameraman.png (PNG copy)
+> <./images/pgpd/carhouse.png (PNG copy)> <./images/pgpd/couple.png (PNG copy)>
+ <./images/pgpd/elaine.png (PNG copy)> <./images/pgpd/hat.png (PNG copy)> <./im
+ages/pgpd/hill.png (PNG copy)> <./images/pgpd/house.png (PNG copy)> <./images/p
+gpd/lake.png (PNG copy)> <./images/pgpd/leaves.png (PNG copy)> <./images/pgpd/l
+ena.png (PNG copy)> <./images/pgpd/man.png (PNG copy)> <./images/pgpd/monarch.p
+ng (PNG copy)> <./images/pgpd/paint.png (PNG copy)> <./images/pgpd/peppers.png 
+(PNG copy)> <./images/pgpd/zelda.png (PNG copy)>]
+
+LaTeX Warning: Reference `tab2-1' on page 36 undefined on input line 316.
+
+
+LaTeX Warning: Reference `fig2-6' on page 36 undefined on input line 316.
+
+
+LaTeX Warning: Reference `fig2-9' on page 36 undefined on input line 316.
+
+
+Overfull \hbox (29.00462pt too wide) in paragraph at lines 323--399
+ [] 
+ []
+
+<images/pgpd/pgdpd/br_hill.jpg, id=352, 513.92pt x 513.92pt>
+File: images/pgpd/pgdpd/br_hill.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_hill.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_hill.jpg used on input line 425.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/pgpd/pgdpd/br_30_hill.jpg, id=353, 513.92pt x 513.92pt>
+File: images/pgpd/pgdpd/br_30_hill.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_30_hill.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_30_hill.jpg used on input line 42
+5.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/pgpd/pgdpd/br_GMM65_30_hill.jpg, id=354, 513.92pt x 513.92pt>
+File: images/pgpd/pgdpd/br_GMM65_30_hill.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_GMM65_30_hill.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_GMM65_30_hill.jpg used on input l
+ine 425.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/pgpd/pgdpd/br_our_30_hill.jpg, id=355, 513.92pt x 513.92pt>
+File: images/pgpd/pgdpd/br_our_30_hill.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_our_30_hill.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_our_30_hill.jpg used on input lin
+e 425.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/pgpd/pgdpd/br_house.jpg, id=356, 256.96pt x 256.96pt>
+File: images/pgpd/pgdpd/br_house.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_house.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_house.jpg used on input line 454.
+
+(pdftex.def)             Requested size: 95.39857pt x 95.39914pt.
+
+<images/pgpd/pgdpd/br_40_house.jpg, id=357, 256.96pt x 256.96pt>
+File: images/pgpd/pgdpd/br_40_house.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_40_house.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_40_house.jpg used on input line 4
+54.
+(pdftex.def)             Requested size: 95.39857pt x 95.39914pt.
+
+<images/pgpd/pgdpd/br_GMM65_40_house.jpg, id=358, 256.96pt x 256.96pt>
+File: images/pgpd/pgdpd/br_GMM65_40_house.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_GMM65_40_house.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_GMM65_40_house.jpg used on input 
+line 454.
+(pdftex.def)             Requested size: 95.39857pt x 95.39914pt.
+
+<images/pgpd/pgdpd/br_our_40_house.jpg, id=359, 256.96pt x 256.96pt>
+File: images/pgpd/pgdpd/br_our_40_house.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_our_40_house.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_our_40_house.jpg used on input li
+ne 454.
+(pdftex.def)             Requested size: 95.39857pt x 95.39914pt.
+
+<images/pgpd/pgdpd/br_barbara.jpg, id=360, 513.92pt x 513.92pt>
+File: images/pgpd/pgdpd/br_barbara.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_barbara.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_barbara.jpg used on input line 48
+3.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/pgpd/pgdpd/br_50_barbara.jpg, id=361, 513.92pt x 513.92pt>
+File: images/pgpd/pgdpd/br_50_barbara.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_50_barbara.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_50_barbara.jpg used on input line
+ 483.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/pgpd/pgdpd/br_GMM65_50_barbara.jpg, id=362, 513.92pt x 513.92pt>
+File: images/pgpd/pgdpd/br_GMM65_50_barbara.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_GMM65_50_barbara.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_GMM65_50_barbara.jpg used on inpu
+t line 483.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/pgpd/pgdpd/br_our_50_barbara.jpg, id=363, 513.92pt x 513.92pt>
+File: images/pgpd/pgdpd/br_our_50_barbara.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_our_50_barbara.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_our_50_barbara.jpg used on input 
+line 483.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/pgpd/pgdpd/br_cameraman.jpg, id=364, 256.96pt x 256.96pt>
+File: images/pgpd/pgdpd/br_cameraman.jpg Graphic file (type jpg)
+
+<use images/pgpd/pgdpd/br_cameraman.jpg>
+Package pdftex.def Info: images/pgpd/pgdpd/br_cameraman.jpg used on input line 
+512.
+(pdftex.def)             Re
