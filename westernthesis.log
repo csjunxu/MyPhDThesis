@@ -7791,19 +7791,23 @@ File: images/dataset/6400_16_1-60.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/dataset/6400_16_1-60.jpg used on input line 215
 .
 (pdftex.def)             Requested size: 127.1981pt x 71.56775pt.
- [162] [163 <./images/dataset/200_3-5_1-60.jpg> <./images/dataset/200_6-7_1-60.
-jpg> <./images/dataset/200_6-7_1-8.jpg> <./images/dataset/400_6-7_1-60.jpg> <./
-images/dataset/1600_6-7_1-60.jpg> <./images/dataset/3200_6-7_1-60.jpg> <./image
-s/dataset/6400_6-7_1-60.jpg> <./images/dataset/6400_6-7_1-350.jpg> <./images/da
-taset/6400_16_1-60.jpg>]
-<images/dataset/scene.jpg, id=3531, 1084.05pt x 1445.4pt>
+
+
+LaTeX Warning: Reference `fig6-2' on page 162 undefined on input line 223.
+
+[162] [163 <./images/dataset/200_3-5_1-60.jpg> <./images/dataset/200_6-7_1-60.j
+pg> <./images/dataset/200_6-7_1-8.jpg> <./images/dataset/400_6-7_1-60.jpg> <./i
+mages/dataset/1600_6-7_1-60.jpg> <./images/dataset/3200_6-7_1-60.jpg> <./images
+/dataset/6400_6-7_1-60.jpg> <./images/dataset/6400_6-7_1-350.jpg> <./images/dat
+aset/6400_16_1-60.jpg>]
+<images/dataset/scene.jpg, id=3530, 1084.05pt x 1445.4pt>
 File: images/dataset/scene.jpg Graphic file (type jpg)
 
 <use images/dataset/scene.jpg>
 Package pdftex.def Info: images/dataset/scene.jpg used on input line 238.
 (pdftex.def)             Requested size: 158.99156pt x 211.9706pt.
 
-<images/dataset/scenewithperson.jpg, id=3532, 1084.05pt x 1445.4pt>
+<images/dataset/scenewithperson.jpg, id=3531, 1084.05pt x 1445.4pt>
 File: images/dataset/scenewithperson.jpg Graphic file (type jpg)
 
 <use images/dataset/scenewithperson.jpg>
@@ -7829,10 +7833,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [167]
-
-LaTeX Warning: Reference `fig6-4' on page 168 undefined on input line 261.
-
-
 <images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG, id=3561, 2794.44pt x 1862
 .96pt>
 File: images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG Graphic file (type jp
@@ -8162,9 +8162,6 @@ LaTeX Warning: Reference `f5' on page 175 undefined on input line 585.
 
 [175]
 
-LaTeX Warning: Reference `fig6-4' on page 176 undefined on input line 650.
-
-
 LaTeX Warning: Reference `fig6-13' on page 176 undefined on input line 650.
 
 [176]
@@ -8281,10 +8278,10 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on westernthesis.pdf (218 pages, 52471718 bytes).
+Output written on westernthesis.pdf (218 pages, 52471633 bytes).
 PDF statistics:
- 4636 PDF objects out of 5155 (max. 8388607)
- 3641 compressed objects within 37 object streams
+ 4637 PDF objects out of 5155 (max. 8388607)
+ 3642 compressed objects within 37 object streams
  739 named destinations out of 1000 (max. 500000)
  3176 words of extra memory for PDF output out of 10000 (max. 10000000)
 
