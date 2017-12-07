@@ -368,24 +368,36 @@ I hereby declare that this thesis is my own work and that, to the best of my kno
 %%  ***  Put your Abstract here.   ***
 %% (150 words for M.Sc. and 350 words for Ph.D.)
 
-The nonlocal self-similarity (NSS) prior of natural images has been extensively studied in many image restoration methods. In this thesis, we exploit the NSS property of external natural images, external guided internal NSS property, and internal NSS property for image denoising tasks.
+The nonlocal self-similarity (NSS) prior of natural images has been extensively studied in many image restoration methods. In this thesis, we exploit the NSS property of external natural images, external guided internal NSS property, and internal NSS property for image denoising tasks, as well as a new dataset to benchmark the real-world image denoising task.
+
+To exploit the NSS prior from the external clean natural images, we propose
+a patch group (PG) based NSS prior learning scheme to learn explicit NSS models from natural images for high performance denoising. PGs are extracted from training images by putting nonlocal similar patches into groups, and a PG based Gaussian Mixture Model (PG-GMM) learning algorithm is developed to learn the NSS prior. We demonstrate that, owe to the learned PG-GMM, a simple weighted sparse coding model, which has a closed-form solution, can be used to perform image denoising effectively, resulting in high PSNR measure, fast speed, and particularly the best visual quality among all competing methods.
+
+To exploit the information in both external data and the given noisy
+image, we develop an external prior guided internal prior learning method for real-world noisy image denoising. We first learn
+external priors from an independent set of clean natural images. With the aid of learned external priors, we then learn internal
+priors from the given noisy image to refine the prior model. The external and internal priors are formulated as a set of orthogonal
+dictionaries to efficiently reconstruct the desired image. Extensive experiments are performed on several real-world noisy image
+datasets. The proposed method demonstrates highly competitive denoising performance, outperforming state-of-the-art denoising
+methods including those designed for real-world noisy images.
+
+We then investigate how to utilize the internal NSS of noisy images for real-world image denoising task. To this end, we propose a multi-channel (MC) optimization
+model for real color image denoising under the weighted
+nuclear norm minimization (WNNM) framework. We concatenate
+the RGB patches to make use of the channel redundancy,
+and introduce a weight matrix to balance the data
+fidelity of the three channels in consideration of their different
+noise statistics. The proposed MC-WNNM model does
+not have an analytical solution. We reformulate it into a
+linear equality-constrained problem and solve it via alternating
+direction method of multipliers. Each alternative updating
+step has a closed-form solution and the convergence
+can be guaranteed. Experiments on both synthetic and real
+noisy image datasets demonstrate the superiority of the proposed
+MC-WNNM over state-of-the-art denoising methods.
 
 
-
-Visual tracking has been extensively studied because of its importance in practical applications such as visual surveillance, human computer interaction, traffic monitoring, to name a few. Despite extensive research in this topic with demonstrated success, it is still a very challenging task to build a robust and efficient tracking system to deal with various appearance changes caused by pose variation, illumination changes, shape deformation and abrupt motion. In this thesis, we address these challenging factors by building several robust appearance models for visual tracking.
-
-%
-To effectively select informative features to build an appearance model, we first present an online boosting feature selection approach via optimizing the Fisher information criterion. Recently, the multiple instance learning (MIL) method has been introduced into tracking to solve the sample ambiguity problems. The MIL tracker puts the positive and negative samples into bags, and then selects features with an online boosting method via maximizing the bag likelihood function. However, the features selected by the MIL tracker are less informative to tell target from background. To solve this problem, motivated by the active learning method, we propose an active feature selection approach which is able to select more informative features than MIL tracker by using the Fisher information criterion to measure the uncertainty of classification model, thereby resulting in more robust and efficient real-time object tracking performance.
-
-%
-We further show that it is unnecessary to use bag likelihood loss functions for feature selection as proposed in the MIL tracker. Instead, we can directly select features on the instance level by using a supervised learning method which is more efficient and robust than the MIL tracker. In the MIL tracker, the important prior information of instance labels and the most important positive instance (i.e., the tracking result in the current frame) are not exploited. We show that integrating such prior information into a
-supervised learning algorithm can handle visual drift more effectively and efficiently than the MIL tracker. We present an online discriminative feature selection algorithm that directly couples its score with the importance of samples, leading to a more robust and efficient tracker.
-%
-
-%
-Different from the above-mentioned methods that select features via online boosting methods to design appearance models, we then propose an appearance model which is built by features extracted from a multiscale image feature space with random projections. A very sparse measurement matrix is constructed to efficiently extract the features. The tracking task is then formulated as a binary classification via a naive Bayes classifier with online update in the compressed domain.
-
-In summary, in this thesis we investigate in-depth how to utilize the NSS prior based image denoising methods, and develop several new models and a new real-world dataset for image denoisig applications. Our models not only enrich the understanding of NSS based statistical image modeling, but also demonstrate state-of-the-art performance
+In summary, in this thesis we investigate in-depth how to utilize the NSS prior based image denoising methods, and develop several new mod els and a new real-world dataset for image denoisig applications. Our models not only enrich the understanding of NSS based statistical image modeling, but also demonstrate state-of-the-art performance
 in image denoising problem.
 
 \textbf{Keywords:} Nonlocal self-similarity, Sparse models, Low-rank models, Image denoising.
