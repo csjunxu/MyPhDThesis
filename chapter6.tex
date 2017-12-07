@@ -256,9 +256,9 @@ We first remove the images with unalignment with carefully subjective evaluation
 
 \subsection{Summary of the Dataset}
 
-In our newly constructed dataset, we capture 40 different scenes with comprehensive contents with various object categories. In Figure \ref{fig6-2}, we show some samples of the real-world noisy images we captured in our new dataset. From which we can see that the scenes we captured are much more complex and comprehensive than the previous datasets. For example, we captured the scenes from different types of classrooms, various types of indoor scenes, and versaitile objects under fixed lighting conditions, etc. These scenes are largely different from the scenes of previous datasets. We choose images those look typically for daily photograpy, or those including regions which we believe to be challenging for the image denoising methods. 
+In our newly constructed dataset, we capture 40 different scenes with comprehensive contents with various object categories. In Figure \ref{fig6-3}, we show some samples of the real-world noisy images we captured in our new dataset. From which we can see that the scenes we captured are much more complex and comprehensive than the previous datasets. For example, we captured the scenes from different types of classrooms, various types of indoor scenes, and versaitile objects under fixed lighting conditions, etc. These scenes are largely different from the scenes of previous datasets. We choose images those look typically for daily photograpy, or those including regions which we believe to be challenging for the image denoising methods. 
 
-Since the images we captured are very large, we crop 100 smaller parts from the 40 scenes to evaluated the existing image denoising methods. Some examples of the cropped parts and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-3}. One can see that the cropped parts can represente the captured images in the whole dataset. Besides, one can see ththe ``ground truth'' image parts are clearly demonstrate the noise is removed from the corresponding cropped image parts. Hence, it is reasonable to emply this newly constructed dataset for evaluating the image denoising methods. 
+Since the images we captured are very large, we crop 100 smaller parts from the 40 scenes to evaluated the existing image denoising methods. Some examples of the cropped parts and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-4}. One can see that the cropped parts can represente the captured images in the whole dataset. Besides, one can see ththe ``ground truth'' image parts are clearly demonstrate the noise is removed from the corresponding cropped image parts. Hence, it is reasonable to emply this newly constructed dataset for evaluating the image denoising methods. 
 
 \begin{figure}
     \centering
@@ -323,7 +323,7 @@ Since the images we captured are very large, we crop 100 smaller parts from the 
 \end{minipage}
 }
 \caption{Some examples in our newly constructed dataset.}
-\label{fig6-2}
+\label{fig6-3}
 \end{figure}
 
 \begin{figure}
@@ -419,7 +419,7 @@ Since the images we captured are very large, we crop 100 smaller parts from the 
 \end{minipage}
 }
     \caption{Some cropped parts of the ``ground truth'' images (up) and their corresponding realistic images (down) in our newly constructed dataset.}
-    \label{fig6-3}
+    \label{fig6-4}
 \end{figure}
 
 The detailed description on cameras and camera settings are listed in Table \ref{tab6-4}. One can see that in our dataset, in our dataset the ISO values are more comprehensive than the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}. For better evaluation of image denoising methods, we random crop 10 $512\times512$ regions for each images in this dataset, and select at most 3 more representative regions. After obtaining $40\times3=120$ smaller regions, we then delete 20 regions which contain relatively trivial contents. Finally, we obtain 100 cropped regions as our finally testing set. The detailed information of these cropped images is summarized in Table \ref{tab6-5}.
