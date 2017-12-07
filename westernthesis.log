@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 DEC 2017 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 DEC 2017 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7816,7 +7816,7 @@ g)
  <use images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG>
 Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG us
 ed on input line 256.
-(pdftex.def)             Requested size: 190.79109pt x 127.1799pt.
+(pdftex.def)             Requested size: 158.99156pt x 105.97379pt.
 
 <images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG, id=3556, 2794.44pt x 1862
 .96pt>
@@ -7825,7 +7825,7 @@ g)
  <use images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG>
 Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG us
 ed on input line 256.
-(pdftex.def)             Requested size: 190.79109pt x 127.1799pt.
+(pdftex.def)             Requested size: 158.99156pt x 105.97379pt.
 
 <images/dataset/Canon5D2_5_200_3200_toy_mean.JPG, id=3557, 2794.44pt x 1862.96p
 t>
@@ -7833,7 +7833,7 @@ File: images/dataset/Canon5D2_5_200_3200_toy_mean.JPG Graphic file (type jpg)
  <use images/dataset/Canon5D2_5_200_3200_toy_mean.JPG>
 Package pdftex.def Info: images/dataset/Canon5D2_5_200_3200_toy_mean.JPG used o
 n input line 266.
-(pdftex.def)             Requested size: 190.79109pt x 127.1799pt.
+(pdftex.def)             Requested size: 158.99156pt x 105.97379pt.
 
 <images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG, id=3558, 3693.8pt x 
 2465.21pt>
@@ -7842,7 +7842,7 @@ pe jpg)
  <use images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG>
 Package pdftex.def Info: images/dataset/NikonD800_4-5_160_1800_classroom_mean.J
 PG used on input line 266.
-(pdftex.def)             Requested size: 190.79109pt x 127.33025pt.
+(pdftex.def)             Requested size: 158.99156pt x 106.0772pt.
 
 <images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG, id=3559, 3693.8pt x 2465
 .21pt>
@@ -7851,7 +7851,7 @@ pg)
  <use images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG>
 Package pdftex.def Info: images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG u
 sed on input line 276.
-(pdftex.def)             Requested size: 190.79109pt x 127.33025pt.
+(pdftex.def)             Requested size: 158.99156pt x 106.0772pt.
 
 <images/dataset/NikonD800_8_125_6400_photo_mean.JPG, id=3560, 3693.8pt x 2465.2
 1pt>
@@ -7860,7 +7860,7 @@ File: images/dataset/NikonD800_8_125_6400_photo_mean.JPG Graphic file (type jpg
  <use images/dataset/NikonD800_8_125_6400_photo_mean.JPG>
 Package pdftex.def Info: images/dataset/NikonD800_8_125_6400_photo_mean.JPG use
 d on input line 276.
-(pdftex.def)             Requested size: 190.79109pt x 127.33025pt.
+(pdftex.def)             Requested size: 158.99156pt x 106.0772pt.
 
 <images/dataset/Sony_3-5_200_1600_classroom_mean.JPG, id=3561, 3019.28pt x 1694
 .33pt>
@@ -7869,7 +7869,7 @@ g)
  <use images/dataset/Sony_3-5_200_1600_classroom_mean.JPG>
 Package pdftex.def Info: images/dataset/Sony_3-5_200_1600_classroom_mean.JPG us
 ed on input line 286.
-(pdftex.def)             Requested size: 190.79109pt x 107.05876pt.
+(pdftex.def)             Requested size: 158.99156pt x 89.21994pt.
 
 <images/dataset/Sony_4-5_125_3200_plant_mean.JPG, id=3562, 3019.28pt x 1694.33p
 t>
@@ -7877,7 +7877,7 @@ File: images/dataset/Sony_4-5_125_3200_plant_mean.JPG Graphic file (type jpg)
  <use images/dataset/Sony_4-5_125_3200_plant_mean.JPG>
 Package pdftex.def Info: images/dataset/Sony_4-5_125_3200_plant_mean.JPG used o
 n input line 286.
-(pdftex.def)             Requested size: 190.79109pt x 107.05876pt.
+(pdftex.def)             Requested size: 158.99156pt x 89.21994pt.
 
 <images/dataset/Sony_4_200_3200_door_mean.JPG, id=3563, 3019.28pt x 1694.33pt>
 File: images/dataset/Sony_4_200_3200_door_mean.JPG Graphic file (type jpg)
@@ -7885,14 +7885,14 @@ File: images/dataset/Sony_4_200_3200_door_mean.JPG Graphic file (type jpg)
 <use images/dataset/Sony_4_200_3200_door_mean.JPG>
 Package pdftex.def Info: images/dataset/Sony_4_200_3200_door_mean.JPG used on i
 nput line 296.
-(pdftex.def)             Requested size: 190.79109pt x 107.05876pt.
+(pdftex.def)             Requested size: 158.99156pt x 89.21994pt.
 
 <images/dataset/Canon80D_8_8_3200_ball_mean.JPG, id=3564, 2987.16pt x 1686.3pt>
 File: images/dataset/Canon80D_8_8_3200_ball_mean.JPG Graphic file (type jpg)
 <use images/dataset/Canon80D_8_8_3200_ball_mean.JPG>
 Package pdftex.def Info: images/dataset/Canon80D_8_8_3200_ball_mean.JPG used on
  input line 296.
-(pdftex.def)             Requested size: 190.79109pt x 107.68353pt.
+(pdftex.def)             Requested size: 158.99156pt x 89.74915pt.
 
 <images/dataset/Canon80D_8_8_12800_printer_mean.JPG, id=3565, 2987.16pt x 1686.
 3pt>
@@ -7901,7 +7901,7 @@ File: images/dataset/Canon80D_8_8_12800_printer_mean.JPG Graphic file (type jpg
  <use images/dataset/Canon80D_8_8_12800_printer_mean.JPG>
 Package pdftex.def Info: images/dataset/Canon80D_8_8_12800_printer_mean.JPG use
 d on input line 306.
-(pdftex.def)             Requested size: 190.79109pt x 107.68353pt.
+(pdftex.def)             Requested size: 158.99156pt x 89.74915pt.
 
 <images/dataset/Canon80D_8_8_6400_comproom_mean.JPG, id=3566, 2987.16pt x 1686.
 3pt>
@@ -7910,10 +7910,10 @@ File: images/dataset/Canon80D_8_8_6400_comproom_mean.JPG Graphic file (type jpg
  <use images/dataset/Canon80D_8_8_6400_comproom_mean.JPG>
 Package pdftex.def Info: images/dataset/Canon80D_8_8_6400_comproom_mean.JPG use
 d on input line 306.
-(pdftex.def)             Requested size: 190.79109pt x 107.68353pt.
+(pdftex.def)             Requested size: 158.99156pt x 89.74915pt.
 
 
-LaTeX Warning: Float too large for page by 199.06386pt on input line 309.
+LaTeX Warning: Float too large for page by 81.64404pt on input line 309.
 
 
 <images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG, id=3567, 513.92pt x 513
@@ -8227,19 +8227,11 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 541.
 (./chapter6.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 541.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 541.
+Package rerunfilecheck Info: File `westernthesis.brf' has not changed.
+(rerunfilecheck)             Checksum: E0D459CD96AFCCE7466F673037D67B1D;47752.
 
-
-Package rerunfilecheck Warning: File `westernthesis.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `westernthesis.brf':
-(rerunfilecheck)             Before: CB448DC64150DC908A607865ED89DD92;47752
-(rerunfilecheck)             After:  E0D459CD96AFCCE7466F673037D67B1D;47752.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 541.
  ) 
@@ -8267,10 +8259,10 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on westernthesis.pdf (218 pages, 52242613 bytes).
+Output written on westernthesis.pdf (218 pages, 52242583 bytes).
 PDF statistics:
- 4629 PDF objects out of 5155 (max. 8388607)
- 3636 compressed objects within 37 object streams
+ 4627 PDF objects out of 5155 (max. 8388607)
+ 3634 compressed objects within 37 object streams
  737 named destinations out of 1000 (max. 500000)
  3166 words of extra memory for PDF output out of 10000 (max. 10000000)
 
