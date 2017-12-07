@@ -28,61 +28,61 @@
 \contentsline {subsection}{\numberline {2.4.2}Comparison with Patch Prior based Denoising}{36}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Comparison With the State-of-the-art Methods}{39}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Results and Discussions}{39}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}Results on the Berkeley Segmentation Data Set}{43}{section.2.5}
-\contentsline {section}{\numberline {2.6}Conclusion}{44}{section.2.6}
-\contentsline {chapter}{\numberline {3}External Prior Guided Internal Prior Learning for Real Noisy Image Denoising}{50}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{50}{section.3.1}
-\contentsline {section}{\numberline {3.2}External Prior Guided Internal Prior Learning for Image Denoising}{58}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Learn External Patch Group Priors}{58}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Guided Internal Prior Learning}{59}{subsection.3.2.2}
-\contentsline {subsubsection}{Internal Subspace Clustering}{59}{section*.28}
-\contentsline {subsubsection}{Guided Orthogonal Dictionary Learning}{60}{section*.29}
-\contentsline {subsection}{\numberline {3.2.3}The Denoising Algorithm}{64}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Experiments}{65}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Implementation Details}{65}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}The Testing Datasets}{67}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Comparison among external, internal and guided internal priors}{72}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Comparison with State-of-the-Art Denoising Methods}{73}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Conclusion}{87}{section.3.4}
-\contentsline {chapter}{\numberline {4}Multi-channel Weighted Nuclear Norm Minimization for Real Color Image Denoising}{89}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{89}{section.4.1}
-\contentsline {section}{\numberline {4.2}The Proposed Color Image Denoising Algorithm}{94}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}The Multi-channel Weighted Nuclear Norm Minimization Model}{94}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}The Setting of Weight Matrix $\mathbf {W}$}{96}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Model Optimization}{97}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}The Denoising Algorithm}{102}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Complexity Analysis}{103}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Experiments}{103}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Experimental Settings}{103}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Experiments on Synthetic Noisy Color Images}{105}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Experiments on Real Noisy Color Images}{113}{subsection.4.3.3}
-\contentsline {subsubsection}{Results on Dataset \cite {ncwebsite}}{114}{section*.70}
-\contentsline {section}{\numberline {4.4}Conclusion}{125}{section.4.4}
-\contentsline {chapter}{\numberline {5}A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising}{127}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{127}{section.5.1}
-\contentsline {section}{\numberline {5.2}The Proposed Realistic Image Denoising Algorithm}{130}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}The Trilateral Weighted Sparse Coding Model}{130}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}The Setting of Weight Matrices}{132}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Model Optimization}{134}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Convergence Analysis}{136}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}The Denoising Algorithm}{137}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Existence and Faster Solution of Sylvester Equation (\ref {equ5-13})}{138}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Existence of the Unique Solution}{139}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Faster Solution of the Sylvester Equation (\ref {equ5-13})}{140}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Experiments}{141}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Results on Additive White Gaussian Noise Removal}{141}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Results on Realistic Noise Removal}{142}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Conclusion}{152}{section.5.5}
-\contentsline {chapter}{\numberline {6}Real-World Noisy Image Dataset: A New Benchmark}{154}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{154}{section.6.1}
-\contentsline {section}{\numberline {6.2}Existing Datasets}{157}{section.6.2}
-\contentsline {section}{\numberline {6.3}The Proposed Dataset}{161}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Motivation}{161}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}The Construction Process}{163}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Summary of the Dataset}{169}{subsection.6.3.3}
-\contentsline {section}{\numberline {6.4}Experiments}{172}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Benchmark Dataset}{172}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Comparison Methods}{174}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Results and Discussion}{176}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}Conclusion}{179}{section.6.5}
-\contentsline {chapter}{Bibliography}{182}{section.6.5}
+\contentsline {section}{\numberline {2.5}Results on the Berkeley Segmentation Data Set}{45}{section.2.5}
+\contentsline {section}{\numberline {2.6}Conclusion}{45}{section.2.6}
+\contentsline {chapter}{\numberline {3}External Prior Guided Internal Prior Learning for Real Noisy Image Denoising}{54}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{54}{section.3.1}
+\contentsline {section}{\numberline {3.2}External Prior Guided Internal Prior Learning for Image Denoising}{62}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Learn External Patch Group Priors}{62}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Guided Internal Prior Learning}{63}{subsection.3.2.2}
+\contentsline {subsubsection}{Internal Subspace Clustering}{63}{section*.28}
+\contentsline {subsubsection}{Guided Orthogonal Dictionary Learning}{64}{section*.29}
+\contentsline {subsection}{\numberline {3.2.3}The Denoising Algorithm}{68}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Experiments}{69}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Implementation Details}{69}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}The Testing Datasets}{71}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Comparison among external, internal and guided internal priors}{76}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Comparison with State-of-the-Art Denoising Methods}{77}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}Conclusion}{91}{section.3.4}
+\contentsline {chapter}{\numberline {4}Multi-channel Weighted Nuclear Norm Minimization for Real Color Image Denoising}{93}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{93}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Proposed Color Image Denoising Algorithm}{98}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}The Multi-channel Weighted Nuclear Norm Minimization Model}{98}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}The Setting of Weight Matrix $\mathbf {W}$}{100}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Model Optimization}{102}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}The Denoising Algorithm}{106}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Complexity Analysis}{106}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Experiments}{108}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Experimental Settings}{108}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Experiments on Synthetic Noisy Color Images}{110}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Experiments on Real Noisy Color Images}{110}{subsection.4.3.3}
+\contentsline {subsubsection}{Results on Dataset \cite {ncwebsite}}{120}{section*.70}
+\contentsline {section}{\numberline {4.4}Conclusion}{131}{section.4.4}
+\contentsline {chapter}{\numberline {5}A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising}{132}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{132}{section.5.1}
+\contentsline {section}{\numberline {5.2}The Proposed Realistic Image Denoising Algorithm}{135}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}The Trilateral Weighted Sparse Coding Model}{135}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}The Setting of Weight Matrices}{137}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Model Optimization}{139}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Convergence Analysis}{141}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}The Denoising Algorithm}{142}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Existence and Faster Solution of Sylvester Equation (\ref {equ5-13})}{143}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Existence of the Unique Solution}{144}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Faster Solution of the Sylvester Equation (\ref {equ5-13})}{145}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Experiments}{146}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Results on Additive White Gaussian Noise Removal}{146}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Results on Realistic Noise Removal}{147}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Conclusion}{157}{section.5.5}
+\contentsline {chapter}{\numberline {6}Real-World Noisy Image Dataset: A New Benchmark}{159}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{159}{section.6.1}
+\contentsline {section}{\numberline {6.2}Existing Datasets}{162}{section.6.2}
+\contentsline {section}{\numberline {6.3}The Proposed Dataset}{166}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Motivation}{166}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}The Construction Process}{168}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Summary of the Dataset}{174}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}Experiments}{177}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Benchmark Dataset}{177}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Comparison Methods}{179}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Results and Discussion}{181}{subsection.6.4.3}
+\contentsline {section}{\numberline {6.5}Conclusion}{184}{section.6.5}
+\contentsline {chapter}{Bibliography}{187}{section.6.5}
