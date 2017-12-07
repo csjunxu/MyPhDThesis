@@ -631,15 +631,11 @@ Contrast to the proposed methods, the traditional denoising methods (e.g., LSSC,
 \label{tab6-8}
 \begin{center}
 \renewcommand\arraystretch{1.2}
-\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}ccccccccc}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cccccccc}
 \hline
 Metric
 &
 \textbf{CBM3D}
-&
-\textbf{KSVD}
-&
-\textbf{LSSC}
 &
 \textbf{EPLL}
 &
@@ -650,17 +646,17 @@ Metric
 \textbf{MLP}
 &
 \textbf{CSF}
+&
+\textbf{TNRD}
 \\
 \hline
-PSNR & 37.40 & 36.29 &  & 36.17 & 36.40 & 31.59 & 38.07 & 37.71
+PSNR & 37.40 & 36.17 & 36.40 & 31.59 & 38.07 & 37.71 & 38.17 
 \\
 \hline
-SSIM & 0.9526 & 0.9255 &  & 0.9216 & 0.9290 & 0.8347 & 0.9615 & 0.9571
+SSIM & 0.9526 & 0.9216 & 0.9290 & 0.8347 & 0.9615 & 0.9571 & 0.9640
 \\
 \hline
 Metric
-&
-\textbf{TNRD}
 &
 \textbf{DnCNN}
 &
@@ -677,10 +673,10 @@ Metric
 \textbf{TWSC}
 \\
 \hline
-PSNR & 38.17 & 36.08 &  &  & 36.18 & 38.35 & 38.51 & \textbf{38.60}
+PSNR & 36.08 & 36.18 & 38.35 & 38.51 & \textbf{38.60}
 \\
 \hline
-SSIM & 0.9640 & 0.9161 &  &  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
+SSIM & 0.9161 & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
 \\
 \hline
 \end{tabular*}
