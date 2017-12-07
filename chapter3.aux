@@ -1,0 +1,317 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\citation{bayesshrink,curvelet,ksvd,lssc,ncsr,bm3d,cbm3d,zhou2012nonparametric,Tomasi1998,blsgsm,nlm,nlbayes,wnnm,pgpd,combexin,external,tid,foe,epll,mlp,xie2012image,dncnn,barbu2009training,csf,tnrd,Fadili,salmon2014,Foipractical,Luisier,makitalo2013optimal,Montagner,jiang2014mixed,Hu2016,xuaccv2016,fullyblind,rabie2005robust,Liu2008,almapg,noiseclinic,ncwebsite,Zhu_2016_CVPR,crosschannel2016,neatimage}
+\citation{bayesshrink,curvelet,ksvd,lssc,ncsr,bm3d,cbm3d,zhou2012nonparametric,Tomasi1998,blsgsm,nlm,nlbayes,wnnm,pgpd,foe,epll,mlp,xie2012image,dncnn,barbu2009training,csf,tnrd}
+\citation{Fadili,salmon2014}
+\citation{Foipractical,Luisier,makitalo2013optimal,Montagner}
+\citation{jiang2014mixed,Hu2016,xuaccv2016}
+\citation{fullyblind,rabie2005robust,Liu2008,almapg,Zhu_2016_CVPR,noiseclinic,ncwebsite,crosschannel2016,neatimage}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}External Prior Guided Internal Prior Learning for Real Noisy Image Denoising}{54}{chapter.3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:guided}{{3}{54}{External Prior Guided Internal Prior Learning for Real Noisy Image Denoising}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{54}{section.3.1}}
+\newlabel{sec:system:intro}{{3.1}{54}{Introduction}{section.3.1}{}}
+\citation{bayesshrink}
+\citation{curvelet}
+\citation{ksvd,lssc,ncsr,bm3d,cbm3d,zhou2012nonparametric}
+\citation{Tomasi1998}
+\citation{blsgsm}
+\citation{nlm,nlbayes}
+\citation{wnnm,pgpd}
+\citation{wnnm}
+\citation{foe,epll,pgpd}
+\citation{ksvd}
+\citation{mlp,xie2012image,dncnn,tnrd,barbu2009training,csf}
+\citation{mlp,xie2012image,dncnn}
+\citation{barbu2009training,csf}
+\citation{tnrd}
+\citation{blsgsm,zhou2012nonparametric,ksvd,lssc,ncsr,foe,epll,pgpd,combexin,external,tid,mlp,xie2012image,dncnn,barbu2009training,csf,tnrd}
+\citation{foe,epll,pgpd}
+\citation{blsgsm,zhou2012nonparametric,ksvd,lssc,ncsr}
+\citation{mlp,xie2012image,dncnn,barbu2009training,csf,tnrd}
+\citation{combexin,external,tid}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{foe,epll,pgpd}
+\citation{blsgsm,zhou2012nonparametric,ksvd,lssc,ncsr}
+\citation{blsgsm,zhou2012nonparametric,ksvd,lssc,ncsr}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 3200 A3'' \cite  {crosschannel2016} by different methods.\ The scene was shot 500 times with the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR index can be computed. The images are better viewed by zooming in on screen.\relax }}{57}{figure.caption.26}}
+\newlabel{fig3-1}{{3.1}{57}{Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 3200 A3'' \cite {crosschannel2016} by different methods.\ The scene was shot 500 times with the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR index can be computed. The images are better viewed by zooming in on screen.\relax }{figure.caption.26}{}}
+\citation{combexin}
+\citation{external}
+\citation{external}
+\citation{external}
+\citation{tid}
+\citation{bayesshrink,curvelet,ksvd,lssc,ncsr,bm3d,cbm3d,zhou2012nonparametric,Tomasi1998,blsgsm,nlm,nlbayes,wnnm,pgpd,foe,epll,mlp,xie2012image,dncnn,barbu2009training,csf,tnrd}
+\citation{crosschannel2016,healey1994radiometric}
+\citation{cbm3d}
+\citation{wnnm}
+\citation{dncnn}
+\citation{csf}
+\citation{tnrd}
+\citation{crosschannel2016}
+\citation{fullyblind,rabie2005robust,Liu2008,almapg,crosschannel2016,Zhu_2016_CVPR,noiseclinic,ncwebsite}
+\citation{fullyblind}
+\citation{rabie2005robust}
+\citation{Liu2008}
+\citation{almapg}
+\citation{noiseclinic,ncwebsite}
+\citation{nlbayes}
+\citation{Zhu_2016_CVPR}
+\citation{crosschannel2016}
+\citation{kervrann2007bayesian}
+\citation{neatimage}
+\citation{fullyblind,rabie2005robust,Liu2008,almapg,crosschannel2016,Zhu_2016_CVPR,noiseclinic,ncwebsite}
+\citation{neatimage}
+\citation{healey1994radiometric}
+\citation{tsin2001statistical,NewInCamera,crosschannel2016,karaimer_brown_ECCV_2016}
+\citation{fullyblind,rabie2005robust,Liu2008,almapg,crosschannel2016,Zhu_2016_CVPR,noiseclinic,ncwebsite,neatimage}
+\citation{noiseclinic,ncwebsite}
+\citation{neatimage}
+\citation{fullyblind,rabie2005robust,Liu2008,almapg,crosschannel2016,Zhu_2016_CVPR,noiseclinic,ncwebsite}
+\newlabel{fig3-2}{{\caption@xref {fig3-2}{ on input line 111}}{61}{Introduction}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Flowchart of the proposed external prior guided internal prior learning and denoising framework.\relax }}{61}{figure.caption.27}}
+\citation{pgpd}
+\citation{pgpd,epll}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}External Prior Guided Internal Prior Learning for Image Denoising}{62}{section.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Learn External Patch Group Priors}{62}{subsection.3.2.1}}
+\newlabel{equ3-1}{{3.1}{62}{Learn External Patch Group Priors}{equation.3.2.1}{}}
+\citation{eckart1936approximation}
+\newlabel{equ3-2}{{3.2}{63}{Learn External Patch Group Priors}{equation.3.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Guided Internal Prior Learning}{63}{subsection.3.2.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Internal Subspace Clustering}{63}{section*.28}}
+\citation{donoho2001uncertainty}
+\newlabel{equ3-3}{{3.3}{64}{Internal Subspace Clustering}{equation.3.2.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Guided Orthogonal Dictionary Learning}{64}{section*.29}}
+\newlabel{equ3-4}{{3.4}{64}{Guided Orthogonal Dictionary Learning}{equation.3.2.4}{}}
+\newlabel{equ3-5}{{3.5}{65}{Guided Orthogonal Dictionary Learning}{equation.3.2.5}{}}
+\newlabel{equ3-6}{{3.6}{65}{Guided Orthogonal Dictionary Learning}{equation.3.2.6}{}}
+\citation{eckart1936approximation}
+\newlabel{equ3-7}{{3.7}{66}{Guided Orthogonal Dictionary Learning}{equation.3.2.7}{}}
+\newlabel{equ3-8}{{3.8}{66}{Guided Orthogonal Dictionary Learning}{equation.3.2.8}{}}
+\newlabel{equ3-9}{{3.9}{66}{Guided Orthogonal Dictionary Learning}{equation.3.2.9}{}}
+\citation{eckart1936approximation}
+\newlabel{equ3-10}{{3.10}{67}{Guided Orthogonal Dictionary Learning}{equation.3.2.10}{}}
+\newlabel{th3-1}{{3.2.1}{67}{Guided Orthogonal Dictionary Learning}{theorem.3.2.1}{}}
+\newlabel{equ3-11}{{3.11}{67}{Guided Orthogonal Dictionary Learning}{equation.3.2.11}{}}
+\newlabel{equ3-12}{{3.12}{67}{Guided Orthogonal Dictionary Learning}{equation.3.2.12}{}}
+\citation{eckart1936approximation}
+\newlabel{th3-2}{{3.2.2}{68}{Guided Orthogonal Dictionary Learning}{theorem.3.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}The Denoising Algorithm}{68}{subsection.3.2.3}}
+\newlabel{alg3-1}{{\caption@xref {alg3-1}{ on input line 292}}{69}{Guided Orthogonal Dictionary Learning}{table.caption.30}{}}
+\newlabel{equ3-13}{{3.13}{69}{The Denoising Algorithm}{equation.3.2.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Experiments}{69}{section.3.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Implementation Details}{69}{subsection.3.3.1}}
+\newlabel{alg3-2}{{\caption@xref {alg3-2}{ on input line 330}}{70}{The Denoising Algorithm}{table.caption.31}{}}
+\citation{ncwebsite}
+\citation{crosschannel2016}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}The Testing Datasets}{71}{subsection.3.3.2}}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{ncwebsite}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{ncsr}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Some samples cropped from real noisy images of Dataset 1 \cite  {ncwebsite}.\relax }}{73}{figure.caption.32}}
+\newlabel{fig3-3}{{3.3}{73}{Some samples cropped from real noisy images of Dataset 1 \cite {ncwebsite}.\relax }{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces The 15 cropped real noisy images used in \cite  {crosschannel2016}.\relax }}{73}{figure.caption.33}}
+\newlabel{fig3-4}{{3.4}{73}{The 15 cropped real noisy images used in \cite {crosschannel2016}.\relax }{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Some samples cropped from real noisy images of Dataset 2 \cite  {crosschannel2016}.\relax }}{74}{figure.caption.34}}
+\newlabel{fig3-5}{{3.5}{74}{Some samples cropped from real noisy images of Dataset 2 \cite {crosschannel2016}.\relax }{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Some samples cropped from our dataset (Dataset 3).\relax }}{74}{figure.caption.35}}
+\newlabel{fig3-6}{{3.6}{74}{Some samples cropped from our dataset (Dataset 3).\relax }{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 C1'' \cite  {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }}{75}{figure.caption.36}}
+\newlabel{fig3-7}{{3.7}{75}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 C1'' \cite {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 C1'' \cite  {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }}{75}{figure.caption.37}}
+\newlabel{fig3-8}{{3.8}{75}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 C1'' \cite {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.37}{}}
+\citation{crosschannel2016}
+\citation{ncwebsite}
+\citation{ncwebsite}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Comparison among external, internal and guided internal priors}{76}{subsection.3.3.3}}
+\citation{ncwebsite}
+\citation{ncwebsite}
+\citation{ncwebsite}
+\citation{ncwebsite}
+\citation{makitalo2013optimal}
+\citation{cbm3d}
+\citation{wnnm}
+\citation{mlp}
+\citation{dncnn}
+\citation{csf}
+\citation{tnrd}
+\citation{noiseclinic,ncwebsite}
+\citation{crosschannel2016}
+\citation{neatimage}
+\citation{makitalo2013optimal}
+\citation{cbm3d}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Denoised images of the real noisy image ``Dog'' \cite  {ncwebsite} by different methods. The images are better to be zoomed in on screen.\relax }}{77}{figure.caption.38}}
+\newlabel{fig3-9}{{3.9}{77}{Denoised images of the real noisy image ``Dog'' \cite {ncwebsite} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Comparison with State-of-the-Art Denoising Methods}{77}{subsection.3.3.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Denoised images of the real noisy image ``Frog'' \cite  {ncwebsite} by different methods. The images are better to be zoomed in on screen.\relax }}{78}{figure.caption.39}}
+\newlabel{fig3-10}{{3.10}{78}{Denoised images of the real noisy image ``Frog'' \cite {ncwebsite} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Denoised images of the real noisy image ``Circuit'' \cite  {ncwebsite} by different methods. The images are better to be zoomed in on screen.\relax }}{78}{figure.caption.40}}
+\newlabel{fig3-11}{{3.11}{78}{Denoised images of the real noisy image ``Circuit'' \cite {ncwebsite} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.40}{}}
+\citation{noiselevel,Chen2015ICCV}
+\citation{Chen2015ICCV}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{ncwebsite}
+\citation{crosschannel2016}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Average PSNR (dB) and Run Time (seconds) of the ``External'', ``Internal'', and ``Guided Internal'' methods on 60 real noisy images (of size $500\times 500\times 3$) cropped from \cite  {crosschannel2016}.\relax }}{79}{table.caption.41}}
+\newlabel{tab3-1}{{3.1}{79}{Average PSNR (dB) and Run Time (seconds) of the ``External'', ``Internal'', and ``Guided Internal'' methods on 60 real noisy images (of size $500\times 500\times 3$) cropped from \cite {crosschannel2016}.\relax }{table.caption.41}{}}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{ssim}
+\citation{makitalo2013optimal}
+\citation{bm3d}
+\citation{wnnm}
+\citation{mlp}
+\citation{csf}
+\citation{tnrd}
+\citation{dncnn}
+\citation{neatimage}
+\citation{noiseclinic,ncwebsite}
+\citation{crosschannel2016}
+\citation{ssim}
+\citation{crosschannel2016}
+\citation{ssim}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces PSNR(dB) results of different methods on 15 cropped real noisy images used in \cite  {crosschannel2016}.\relax }}{81}{table.caption.42}}
+\newlabel{tab3-2}{{3.2}{81}{PSNR(dB) results of different methods on 15 cropped real noisy images used in \cite {crosschannel2016}.\relax }{table.caption.42}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces SSIM \cite  {ssim} results of different methods on 15 cropped real noisy images used in \cite  {crosschannel2016}.\relax }}{82}{table.caption.43}}
+\newlabel{tab3-3}{{3.3}{82}{SSIM \cite {ssim} results of different methods on 15 cropped real noisy images used in \cite {crosschannel2016}.\relax }{table.caption.43}{}}
+\citation{ssim}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{makitalo2013optimal}
+\citation{bm3d}
+\citation{wnnm}
+\citation{mlp}
+\citation{csf}
+\citation{tnrd}
+\citation{dncnn}
+\citation{neatimage}
+\citation{noiseclinic,ncwebsite}
+\citation{crosschannel2016}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 5D Mark 3 ISO 3200 1'' \cite  {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }}{85}{figure.caption.44}}
+\newlabel{fig3-12}{{3.12}{85}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 5D Mark 3 ISO 3200 1'' \cite {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.44}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Average PSNR(dB) results of different methods on 60 real noisy images cropped from \cite  {crosschannel2016}.\relax }}{85}{table.caption.47}}
+\newlabel{tab3-4}{{3.4}{85}{Average PSNR(dB) results of different methods on 60 real noisy images cropped from \cite {crosschannel2016}.\relax }{table.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 5D Mark 3 ISO 3200 2'' \cite  {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }}{86}{figure.caption.45}}
+\newlabel{fig3-13}{{3.13}{86}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 5D Mark 3 ISO 3200 2'' \cite {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 2'' \cite  {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }}{86}{figure.caption.46}}
+\newlabel{fig3-14}{{3.14}{86}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 2'' \cite {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.46}{}}
+\citation{ssim}
+\citation{crosschannel2016}
+\citation{ssim}
+\citation{crosschannel2016}
+\citation{makitalo2013optimal}
+\citation{bm3d}
+\citation{wnnm}
+\citation{mlp}
+\citation{csf}
+\citation{tnrd}
+\citation{dncnn}
+\citation{neatimage}
+\citation{noiseclinic,ncwebsite}
+\citation{crosschannel2016}
+\citation{ssim}
+\citation{ssim}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\citation{crosschannel2016}
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Average SSIM \cite  {ssim} results of different methods on 60 real noisy images cropped from \cite  {crosschannel2016}.\relax }}{87}{table.caption.48}}
+\newlabel{tab3-5}{{3.5}{87}{Average SSIM \cite {ssim} results of different methods on 60 real noisy images cropped from \cite {crosschannel2016}.\relax }{table.caption.48}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces Average PSNR(dB) results of different methods on 100 real noisy images cropped from our new dataset.\relax }}{87}{table.caption.49}}
+\newlabel{tab3-6}{{3.6}{87}{Average PSNR(dB) results of different methods on 100 real noisy images cropped from our new dataset.\relax }{table.caption.49}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.7}{\ignorespaces Average SSIM \cite  {ssim} results of different methods on 100 real noisy images cropped from our new dataset.\relax }}{88}{table.caption.50}}
+\newlabel{tab3-7}{{3.7}{88}{Average SSIM \cite {ssim} results of different methods on 100 real noisy images cropped from our new dataset.\relax }{table.caption.50}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.8}{\ignorespaces Average Speed (sec.) results of different methods on 100 real noisy images cropped from our new dataset.\relax }}{88}{table.caption.51}}
+\newlabel{tab3-8}{{3.8}{88}{Average Speed (sec.) results of different methods on 100 real noisy images cropped from our new dataset.\relax }{table.caption.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 3200 A3'' \cite  {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }}{88}{figure.caption.52}}
+\newlabel{fig3-15}{{3.15}{88}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 3200 A3'' \cite {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 1600 B2'' \cite  {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }}{89}{figure.caption.53}}
+\newlabel{fig3-16}{{3.16}{89}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 1600 B2'' \cite {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.53}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 3200 A1'' \cite  {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }}{89}{figure.caption.54}}
+\newlabel{fig3-17}{{3.17}{89}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 3200 A1'' \cite {crosschannel2016} by different methods. The images are better to be zoomed in on screen.\relax }{figure.caption.54}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.18}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 80D ISO 12800 IMG 2321'' in our new dataset by different methods.. The images are better to be zoomed in on screen.\relax }}{90}{figure.caption.55}}
+\newlabel{fig3-18}{{3.18}{90}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 80D ISO 12800 IMG 2321'' in our new dataset by different methods.. The images are better to be zoomed in on screen.\relax }{figure.caption.55}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.19}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 80D ISO 12800 IMG2360'' in our new dataset by different methods.. The images are better to be zoomed in on screen.\relax }}{90}{figure.caption.56}}
+\newlabel{fig3-19}{{3.19}{90}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 80D ISO 12800 IMG2360'' in our new dataset by different methods.. The images are better to be zoomed in on screen.\relax }{figure.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.20}{\ignorespaces Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``SONY A7II ISO 6400 DSC03017'' in our new dataset by different methods.. The images are better to be zoomed in on screen.\relax }}{91}{figure.caption.57}}
+\newlabel{fig3-20}{{3.20}{91}{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``SONY A7II ISO 6400 DSC03017'' in our new dataset by different methods.. The images are better to be zoomed in on screen.\relax }{figure.caption.57}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Conclusion}{91}{section.3.4}}
+\@setckpt{chapter3}{
+\setcounter{page}{93}
+\setcounter{equation}{13}
+\setcounter{enumi}{9}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{3}
+\setcounter{section}{4}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{20}
+\setcounter{table}{8}
+\setcounter{ContinuedFloat}{0}
+\setcounter{@pps}{0}
+\setcounter{@ppsavesec}{0}
+\setcounter{@ppsaveapp}{0}
+\setcounter{parentequation}{0}
+\setcounter{@smartlistlen}{2}
+\setcounter{less@smartlist}{0}
+\setcounter{@currsmartlistplace}{0}
+\setcounter{lofdepth}{1}
+\setcounter{lotdepth}{1}
+\setcounter{ALC@unique}{0}
+\setcounter{ALC@line}{0}
+\setcounter{ALC@rem}{0}
+\setcounter{ALC@depth}{0}
+\setcounter{float@type}{8}
+\setcounter{algorithm}{0}
+\setcounter{LT@tables}{0}
+\setcounter{LT@chunks}{0}
+\setcounter{subfigure}{0}
+\setcounter{lofdepth}{1}
+\setcounter{subtable}{0}
+\setcounter{lotdepth}{1}
+\setcounter{Lemma}{0}
+\setcounter{NAT@ctr}{0}
+\setcounter{cp@cntr}{0}
+\setcounter{Item}{9}
+\setcounter{Hfootnote}{1}
+\setcounter{bookmark@seq@number}{0}
+\setcounter{theorem}{0}
+\setcounter{myappendices}{0}
+\setcounter{appdepth}{1}
+\setcounter{section@level}{1}
+}
