@@ -385,31 +385,11 @@ supervised learning algorithm can handle visual drift more effectively and effic
 %
 Different from the above-mentioned methods that select features via online boosting methods to design appearance models, we then propose an appearance model which is built by features extracted from a multiscale image feature space with random projections. A very sparse measurement matrix is constructed to efficiently extract the features. The tracking task is then formulated as a binary classification via a naive Bayes classifier with online update in the compressed domain.
 
-%
-Finally, we present a simple yet very fast and robust
-algorithm which exploits the spatio-temporal context for visual
-tracking.
-%
-Our approach formulates the spatio-temporal relationship
-between the object of interest and its local context based on the
-Bayesian framework, which models the spatio-temporal statistical
-correlation between the low-level features (i.e., image intensity and
-position) from the target and its surrounding regions.
-%
-The tracking problem is then
-formulated as computing a confidence map, and obtaining the best
-target location by maximizing an object location likelihood
-function.
-%
-The Fast Fourier Transform is adopted for extremely fast
-learning and detection in this work.
-%
-Implemented in MATLAB,
-the proposed tracker runs at 350 frames per second on an i7
-machine.
-%
+In summary, in this thesis we investigate in-depth how to utilize the NSS prior based image denoising methods, and develop several new models and a new real-world dataset for image denoisig applications. Our models not only enrich the understanding of NSS based statistical image modeling, but also demonstrate state-of-the-art performance
+in image denoising problem.
 
-%\textbf{Keywords:} Image segmentation, graph cuts, region merging, energy minimization, segmentation evaluation
+\textbf{Keywords:} Nonlocal self-similarity, Sparse models, Low-rank models, Image denoising.
+
 \newpage
 \addcontentsline{toc}{chapter}{Publication}
 \Large\begin{center}\textbf{List of Publications}\end{center}\normalsize
