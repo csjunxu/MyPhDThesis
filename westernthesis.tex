@@ -396,6 +396,20 @@ can be guaranteed. Experiments on both synthetic and real
 noisy image datasets demonstrate the superiority of the proposed
 MC-WNNM over state-of-the-art denoising methods.
 
+We also develop a trilateral weighted sparse coding (TWSC) scheme
+for robust realistic image denoising. Specifically, we introduce
+three weight matrices into the data and regularization
+terms of the sparse coding framework to characterize the
+statistics of realistic noise and image priors. TWSC can be
+reformulated as a linear equality-constrained problem and
+can be solved by the alternating direction method of multipliers.
+The existence and uniqueness of the solution and
+convergence of the proposed algorithm are analyzed. Extensive
+experiments demonstrate that the proposed TWSC
+scheme outperforms state-of-the-art denoising methods on
+removing realistic noise.
+
+Finally, to benchmark the real-world image denoising problem, and to complement the previous datasets, we construct a new dataset which contains more comprehensive scene contents with more camera brands and camera settings. Extensive comparison experiments are performed on previous and our new benchmark datasets demonstrate that the our new dataset is more challenging than previous ones. Besides, the analysis on results demonstrate that the real-world image denoising task is still challenging and needs more broad study.
 
 In summary, in this thesis we investigate in-depth how to utilize the NSS prior based image denoising methods, and develop several new mod els and a new real-world dataset for image denoisig applications. Our models not only enrich the understanding of NSS based statistical image modeling, but also demonstrate state-of-the-art performance
 in image denoising problem.
