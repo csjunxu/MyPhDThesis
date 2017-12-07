@@ -7735,4 +7735,555 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [167]
 <images/dataset/200_3-5_1-60.jpg, id=3552, 416.8665pt x 234.549pt>
-File: im
+File: images/dataset/200_3-5_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/200_3-5_1-60.jpg>
+Package pdftex.def Info: images/dataset/200_3-5_1-60.jpg used on input line 181
+.
+(pdftex.def)             Requested size: 127.1981pt x 71.56775pt.
+
+<images/dataset/200_6-7_1-60.jpg, id=3553, 416.8665pt x 234.549pt>
+File: images/dataset/200_6-7_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/200_6-7_1-60.jpg>
+Package pdftex.def Info: images/dataset/200_6-7_1-60.jpg used on input line 181
+.
+(pdftex.def)             Requested size: 127.1981pt x 71.56775pt.
+
+<images/dataset/200_6-7_1-8.jpg, id=3554, 416.8665pt x 234.549pt>
+File: images/dataset/200_6-7_1-8.jpg Graphic file (type jpg)
+
+<use images/dataset/200_6-7_1-8.jpg>
+Package pdftex.def Info: images/dataset/200_6-7_1-8.jpg used on input line 181.
+
+(pdftex.def)             Requested size: 127.1981pt x 71.56775pt.
+
+<images/dataset/400_6-7_1-60.jpg, id=3555, 416.2095pt x 234.2205pt>
+File: images/dataset/400_6-7_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/400_6-7_1-60.jpg>
+Package pdftex.def Info: images/dataset/400_6-7_1-60.jpg used on input line 198
+.
+(pdftex.def)             Requested size: 127.1981pt x 71.57831pt.
+
+<images/dataset/1600_6-7_1-60.jpg, id=3556, 416.2095pt x 234.2205pt>
+File: images/dataset/1600_6-7_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/1600_6-7_1-60.jpg>
+Package pdftex.def Info: images/dataset/1600_6-7_1-60.jpg used on input line 19
+8.
+(pdftex.def)             Requested size: 127.1981pt x 71.57831pt.
+
+<images/dataset/3200_6-7_1-60.jpg, id=3557, 416.2095pt x 234.2205pt>
+File: images/dataset/3200_6-7_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/3200_6-7_1-60.jpg>
+Package pdftex.def Info: images/dataset/3200_6-7_1-60.jpg used on input line 19
+8.
+(pdftex.def)             Requested size: 127.1981pt x 71.57831pt.
+
+<images/dataset/6400_6-7_1-60.jpg, id=3558, 416.2095pt x 234.2205pt>
+File: images/dataset/6400_6-7_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/6400_6-7_1-60.jpg>
+Package pdftex.def Info: images/dataset/6400_6-7_1-60.jpg used on input line 21
+5.
+(pdftex.def)             Requested size: 127.1981pt x 71.57831pt.
+
+<images/dataset/6400_6-7_1-350.jpg, id=3559, 416.2095pt x 234.2205pt>
+File: images/dataset/6400_6-7_1-350.jpg Graphic file (type jpg)
+
+<use images/dataset/6400_6-7_1-350.jpg>
+Package pdftex.def Info: images/dataset/6400_6-7_1-350.jpg used on input line 2
+15.
+(pdftex.def)             Requested size: 127.1981pt x 71.57831pt.
+
+<images/dataset/6400_16_1-60.jpg, id=3560, 416.8665pt x 234.549pt>
+File: images/dataset/6400_16_1-60.jpg Graphic file (type jpg)
+
+<use images/dataset/6400_16_1-60.jpg>
+Package pdftex.def Info: images/dataset/6400_16_1-60.jpg used on input line 215
+.
+(pdftex.def)             Requested size: 127.1981pt x 71.56775pt.
+ [168] [169 <./images/dataset/200_3-5_1-60.jpg> <./images/dataset/200_6-7_1-60.
+jpg> <./images/dataset/200_6-7_1-8.jpg> <./images/dataset/400_6-7_1-60.jpg> <./
+images/dataset/1600_6-7_1-60.jpg> <./images/dataset/3200_6-7_1-60.jpg> <./image
+s/dataset/6400_6-7_1-60.jpg> <./images/dataset/6400_6-7_1-350.jpg> <./images/da
+taset/6400_16_1-60.jpg>]
+<images/dataset/scene.jpg, id=3579, 1084.05pt x 1445.4pt>
+File: images/dataset/scene.jpg Graphic file (type jpg)
+
+<use images/dataset/scene.jpg>
+Package pdftex.def Info: images/dataset/scene.jpg used on input line 238.
+(pdftex.def)             Requested size: 158.99156pt x 211.9706pt.
+
+<images/dataset/scenewithperson.jpg, id=3580, 1084.05pt x 1445.4pt>
+File: images/dataset/scenewithperson.jpg Graphic file (type jpg)
+
+<use images/dataset/scenewithperson.jpg>
+Package pdftex.def Info: images/dataset/scenewithperson.jpg used on input line 
+238.
+(pdftex.def)             Requested size: 158.99156pt x 211.9706pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [170]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [171 <./images/dataset/scene.jpg> <./images/dataset/scenewithperson.jpg>]
+Overfull \hbox (15.13182pt too wide) in paragraph at lines 253--254
+[]\OT1/txr/bx/n/12 Generating ``Ground Truth'' Im-age\OT1/txr/m/n/12 : The ``Gr
+ound Truth'' im-ages of the RENOIR
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [172]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [173]
+<images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG, id=3610, 2794.44pt x 1862
+.96pt>
+File: images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG Graphic file (type jp
+g)
+ <use images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG us
+ed on input line 274.
+(pdftex.def)             Requested size: 158.99156pt x 105.97379pt.
+
+<images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG, id=3611, 2794.44pt x 1862
+.96pt>
+File: images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG Graphic file (type jp
+g)
+ <use images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG us
+ed on input line 274.
+(pdftex.def)             Requested size: 158.99156pt x 105.97379pt.
+
+<images/dataset/Canon5D2_5_200_3200_toy_mean.JPG, id=3612, 2794.44pt x 1862.96p
+t>
+File: images/dataset/Canon5D2_5_200_3200_toy_mean.JPG Graphic file (type jpg)
+ <use images/dataset/Canon5D2_5_200_3200_toy_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_200_3200_toy_mean.JPG used o
+n input line 284.
+(pdftex.def)             Requested size: 158.99156pt x 105.97379pt.
+
+<images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG, id=3613, 3693.8pt x 
+2465.21pt>
+File: images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG Graphic file (ty
+pe jpg)
+ <use images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_4-5_160_1800_classroom_mean.J
+PG used on input line 284.
+(pdftex.def)             Requested size: 158.99156pt x 106.0772pt.
+
+<images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG, id=3614, 3693.8pt x 2465
+.21pt>
+File: images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG Graphic file (type j
+pg)
+ <use images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG u
+sed on input line 294.
+(pdftex.def)             Requested size: 158.99156pt x 106.0772pt.
+
+<images/dataset/NikonD800_8_125_6400_photo_mean.JPG, id=3615, 3693.8pt x 2465.2
+1pt>
+File: images/dataset/NikonD800_8_125_6400_photo_mean.JPG Graphic file (type jpg
+)
+ <use images/dataset/NikonD800_8_125_6400_photo_mean.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_8_125_6400_photo_mean.JPG use
+d on input line 294.
+(pdftex.def)             Requested size: 158.99156pt x 106.0772pt.
+
+<images/dataset/Sony_3-5_200_1600_classroom_mean.JPG, id=3616, 3019.28pt x 1694
+.33pt>
+File: images/dataset/Sony_3-5_200_1600_classroom_mean.JPG Graphic file (type jp
+g)
+ <use images/dataset/Sony_3-5_200_1600_classroom_mean.JPG>
+Package pdftex.def Info: images/dataset/Sony_3-5_200_1600_classroom_mean.JPG us
+ed on input line 304.
+(pdftex.def)             Requested size: 158.99156pt x 89.21994pt.
+
+<images/dataset/Sony_4-5_125_3200_plant_mean.JPG, id=3617, 3019.28pt x 1694.33p
+t>
+File: images/dataset/Sony_4-5_125_3200_plant_mean.JPG Graphic file (type jpg)
+ <use images/dataset/Sony_4-5_125_3200_plant_mean.JPG>
+Package pdftex.def Info: images/dataset/Sony_4-5_125_3200_plant_mean.JPG used o
+n input line 304.
+(pdftex.def)             Requested size: 158.99156pt x 89.21994pt.
+
+<images/dataset/Sony_4_200_3200_door_mean.JPG, id=3618, 3019.28pt x 1694.33pt>
+File: images/dataset/Sony_4_200_3200_door_mean.JPG Graphic file (type jpg)
+
+<use images/dataset/Sony_4_200_3200_door_mean.JPG>
+Package pdftex.def Info: images/dataset/Sony_4_200_3200_door_mean.JPG used on i
+nput line 314.
+(pdftex.def)             Requested size: 158.99156pt x 89.21994pt.
+
+<images/dataset/Canon80D_8_8_3200_ball_mean.JPG, id=3619, 2987.16pt x 1686.3pt>
+File: images/dataset/Canon80D_8_8_3200_ball_mean.JPG Graphic file (type jpg)
+<use images/dataset/Canon80D_8_8_3200_ball_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon80D_8_8_3200_ball_mean.JPG used on
+ input line 314.
+(pdftex.def)             Requested size: 158.99156pt x 89.74915pt.
+
+<images/dataset/Canon80D_8_8_12800_printer_mean.JPG, id=3620, 2987.16pt x 1686.
+3pt>
+File: images/dataset/Canon80D_8_8_12800_printer_mean.JPG Graphic file (type jpg
+)
+ <use images/dataset/Canon80D_8_8_12800_printer_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon80D_8_8_12800_printer_mean.JPG use
+d on input line 324.
+(pdftex.def)             Requested size: 158.99156pt x 89.74915pt.
+
+<images/dataset/Canon80D_8_8_6400_comproom_mean.JPG, id=3621, 2987.16pt x 1686.
+3pt>
+File: images/dataset/Canon80D_8_8_6400_comproom_mean.JPG Graphic file (type jpg
+)
+ <use images/dataset/Canon80D_8_8_6400_comproom_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon80D_8_8_6400_comproom_mean.JPG use
+d on input line 324.
+(pdftex.def)             Requested size: 158.99156pt x 89.74915pt.
+
+
+LaTeX Warning: Float too large for page by 81.64404pt on input line 327.
+
+
+<images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG, id=3622, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG 
+used on input line 348.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG, id=3623, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG 
+used on input line 348.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG, id=3624, 513.92pt x 51
+3.92pt>
+File: images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG
+ used on input line 348.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_160_6400_circuit_11_real.JPG, id=3625, 513.92pt x 51
+3.92pt>
+File: images/dataset/Canon5D2_5_160_6400_circuit_11_real.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Canon5D2_5_160_6400_circuit_11_real.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_circuit_11_real.JPG
+ used on input line 348.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_160_6400_reciever_1_mean.JPG, id=3626, 513.92pt x 51
+3.92pt>
+File: images/dataset/Canon5D2_5_160_6400_reciever_1_mean.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Canon5D2_5_160_6400_reciever_1_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_reciever_1_mean.JPG
+ used on input line 366.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG, id=3627, 513.92pt x 51
+3.92pt>
+File: images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG
+ used on input line 366.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG, id=3628, 513.92pt x 513.92p
+t>
+File: images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG Graphic file (type jpg)
+
+ <use images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG used
+ on input line 366.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon5D2_5_200_3200_toy_3_real.JPG, id=3629, 513.92pt x 513.92p
+t>
+File: images/dataset/Canon5D2_5_200_3200_toy_3_real.JPG Graphic file (type jpg)
+
+ <use images/dataset/Canon5D2_5_200_3200_toy_3_real.JPG>
+Package pdftex.def Info: images/dataset/Canon5D2_5_200_3200_toy_3_real.JPG used
+ on input line 366.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG, id=3630, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG 
+used on input line 384.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG, id=3631, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG>
+Package pdftex.def Info: images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG 
+used on input line 384.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG, id=3632, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG>
+Package pdftex.def Info: images/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG 
+used on input line 384.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Canon600D_4-5_125_1600_toy_16_real.JPG, id=3633, 513.92pt x 513
+.92pt>
+File: images/dataset/Canon600D_4-5_125_1600_toy_16_real.JPG Graphic file (type 
+jpg)
+ <use images/dataset/Canon600D_4-5_125_1600_toy_16_real.JPG>
+Package pdftex.def Info: images/dataset/Canon600D_4-5_125_1600_toy_16_real.JPG 
+used on input line 384.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG, id=3634, 513.92pt x 513.
+92pt>
+File: images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG Graphic file (type j
+pg)
+ <use images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG u
+sed on input line 402.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/NikonD800_5_125_6400_stair_3_real.JPG, id=3635, 513.92pt x 513.
+92pt>
+File: images/dataset/NikonD800_5_125_6400_stair_3_real.JPG Graphic file (type j
+pg)
+ <use images/dataset/NikonD800_5_125_6400_stair_3_real.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_5_125_6400_stair_3_real.JPG u
+sed on input line 402.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/NikonD800_6-3_125_5000_plant_1_mean.JPG, id=3636, 513.92pt x 51
+3.92pt>
+File: images/dataset/NikonD800_6-3_125_5000_plant_1_mean.JPG Graphic file (type
+ jpg)
+ <use images/dataset/NikonD800_6-3_125_5000_plant_1_mean.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_6-3_125_5000_plant_1_mean.JPG
+ used on input line 402.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/NikonD800_6-3_125_5000_plant_1_real.JPG, id=3637, 513.92pt x 51
+3.92pt>
+File: images/dataset/NikonD800_6-3_125_5000_plant_1_real.JPG Graphic file (type
+ jpg)
+ <use images/dataset/NikonD800_6-3_125_5000_plant_1_real.JPG>
+Package pdftex.def Info: images/dataset/NikonD800_6-3_125_5000_plant_1_real.JPG
+ used on input line 402.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG, id=3638, 513.92pt x 51
+3.92pt>
+File: images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG>
+Package pdftex.def Info: images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG
+ used on input line 420.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG, id=3639, 513.92pt x 51
+3.92pt>
+File: images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG Graphic file (type
+ jpg)
+ <use images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG>
+Package pdftex.def Info: images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG
+ used on input line 420.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Sony_4-5_125_3200_plant_10_mean.JPG, id=3640, 513.92pt x 513.92
+pt>
+File: images/dataset/Sony_4-5_125_3200_plant_10_mean.JPG Graphic file (type jpg
+)
+ <use images/dataset/Sony_4-5_125_3200_plant_10_mean.JPG>
+Package pdftex.def Info: images/dataset/Sony_4-5_125_3200_plant_10_mean.JPG use
+d on input line 420.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+
+<images/dataset/Sony_4-5_125_3200_plant_10_real.JPG, id=3641, 513.92pt x 513.92
+pt>
+File: images/dataset/Sony_4-5_125_3200_plant_10_real.JPG Graphic file (type jpg
+)
+ <use images/dataset/Sony_4-5_125_3200_plant_10_real.JPG>
+Package pdftex.def Info: images/dataset/Sony_4-5_125_3200_plant_10_real.JPG use
+d on input line 420.
+(pdftex.def)             Requested size: 95.39857pt x 95.39522pt.
+ [174] [175 <./images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG> <./images/d
+ataset/Canon5D2_5_160_6400_circuit_mean.JPG> <./images/dataset/Canon5D2_5_200_3
+200_toy_mean.JPG> <./images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG> 
+<./images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG> <./images/dataset/Niko
+nD800_8_125_6400_photo_mean.JPG> <./images/dataset/Sony_3-5_200_1600_classroom_
+mean.JPG> <./images/dataset/Sony_4-5_125_3200_plant_mean.JPG> <./images/dataset
+/Sony_4_200_3200_door_mean.JPG> <./images/dataset/Canon80D_8_8_3200_ball_mean.J
+PG> <./images/dataset/Canon80D_8_8_12800_printer_mean.JPG> <./images/dataset/Ca
+non80D_8_8_6400_comproom_mean.JPG>] [176 <./images/dataset/Canon5D2_5_160_6400_
+bicycle_6_mean.JPG> <./images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG> <
+./images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG> <./images/dataset/Can
+on5D2_5_160_6400_circuit_11_real.JPG> <./images/dataset/Canon5D2_5_160_6400_rec
+iever_1_mean.JPG> <./images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG> <.
+/images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG> <./images/dataset/Canon5D2_
+5_200_3200_toy_3_real.JPG> <./images/dataset/Canon80D_8_8_6400_comproom_11_mean
+.JPG> <./images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG> <./images/datas
+et/Canon600D_4-5_125_1600_toy_16_mean.JPG> <./images/dataset/Canon600D_4-5_125_
+1600_toy_16_real.JPG> <./images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG> 
+<./images/dataset/NikonD800_5_125_6400_stair_3_real.JPG> <./images/dataset/Niko
+nD800_6-3_125_5000_plant_1_mean.JPG> <./images/dataset/NikonD800_6-3_125_5000_p
+lant_1_real.JPG> <./images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG> <./
+images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG> <./images/dataset/Sony_
+4-5_125_3200_plant_10_mean.JPG> <./images/dataset/Sony_4-5_125_3200_plant_10_re
+al.JPG>] [177]
+[178] [179]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [180]
+<images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png, id=3721, 205.7687
+5pt x 205.76875pt>
+File: images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png Graphic file 
+(type png)
+
+<use images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_rea
+l.png used on input line 608.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png, id=3722, 205.768
+75pt x 205.76875pt>
+File: images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png Graphic file
+ (type png)
+
+<use images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_re
+al.png used on input line 608.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png, id=3723, 205.768
+75pt x 205.76875pt>
+File: images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png Graphic file
+ (type png)
+
+<use images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_re
+al.png used on input line 608.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png, id=3724, 205.7687
+5pt x 205.76875pt>
+File: images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png Graphic file 
+(type png)
+
+<use images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_rea
+l.png used on input line 608.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png, id=3725, 205.7687
+5pt x 205.76875pt>
+File: images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png Graphic file 
+(type png)
+
+<use images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_rea
+l.png used on input line 630.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png, id=3726, 205.7687
+5pt x 205.76875pt>
+File: images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png Graphic file 
+(type png)
+
+<use images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_rea
+l.png used on input line 630.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png, id=3727, 205.76875
+pt x 205.76875pt>
+File: images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png Graphic file (
+type png)
+
+<use images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real
+.png used on input line 630.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real.png, id=3728, 205.76875
+pt x 205.76875pt>
+File: images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real.png Graphic file (
+type png)
+
+<use images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real
+.png used on input line 630.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real.png, id=3729, 205.76875
+pt x 205.76875pt>
+File: images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real.png Graphic file (
+type png)
+
+<use images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real
+.png used on input line 652.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png, id=3730, 205.768
+75pt x 205.76875pt>
+File: images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png Graphic file
+ (type png)
+
+<use images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_re
+al.png used on input line 652.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.png, id=3731, 205.76875p
+t x 205.76875pt>
+File: images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.png Graphic file (t
+ype png)
+
+<use images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.
+png used on input line 652.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+<images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.png, id=3732, 205.76875p
+t x 205.76875pt>
+File: images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.png Graphic file (t
+ype png)
+
+<use images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.png>
+Package pdftex.def Info: images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.
+png used on input line 652.
+(pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+
+
+LaTeX Warning: File `images/dataset/cc/resize_br_CCNoise_d600_iso3200_2.png' no
+t found on input line 674.
+
+
+! Package pdftex.def Error: File `images/dataset/cc/resize_br_CCNoise_d600_iso3
+200_2.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <r
