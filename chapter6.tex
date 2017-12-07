@@ -727,10 +727,10 @@ Metric
 \textbf{TWSC}
 \\
 \hline
-PSNR & 32.41 & 36.07 & 35.11 & 33.12 & 36.41 & 37.38 &  37.94
+PSNR & 32.41 & 36.07 & 35.11 & 33.12 & 36.41 & 37.38 &  \textbf{37.94}
 \\
 \hline
-SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  0.9403
+SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 \\
 \hline
 \end{tabular*}
@@ -852,10 +852,10 @@ Metric
 \textbf{TNRD}
 \\
 \hline
-PSNR & 37.40 & 36.17 & 36.40 & 31.59 & 38.07 & 37.71 & 38.17 
+PSNR & 37.40 & 36.17 & 36.40 & 36.59 & 38.07 & 37.71 & 38.17 
 \\
 \hline
-SSIM & 0.9526 & 0.9216 & 0.9290 & 0.8347 & 0.9615 & 0.9571 & 0.9640
+SSIM & 0.9526 & 0.9216 & 0.9290 & 0.9247 & 0.9615 & 0.9571 & 0.9640
 \\
 \hline
 Metric
@@ -983,14 +983,16 @@ SSIM & 0.9161 & 0.9449  & 0.9570  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
 \textbf{Discussion}. 
 The experimental results shown in Tables \ref{tab6-6}, \ref{tab6-7}, and \ref{tab6-8} and Figures \ref{fig6-5}-\ref{fig6-7} demonstrate that:
 \begin{itemize}
-\item The original methods such as CBM3D, EPLL, NCSR, WNNM, MLP, CSF, TNRD, DnCNN, and PGPD, which designed for additive whit Gaussian noise (AWGN), are not effective at processing the realistic noise in real-world noisy images captured by CCD or CMOS cameras;
+\item The methods (e.g., CBM3D, EPLL, NCSR, WNNM, MLP, CSF, TNRD, DnCNN, and PGPD) designed for additive whit Gaussian noise (AWGN) achieve lower PSNR and SSIM when compared to the methods proposed for real-world noisy image denoising;
 
-\item 
+\item The denoising methods (e.g., EPLL, NCSR, WNNM, and PGPD) designed for grey scale image would generate artifacts since they process each channel of the RGB image individually \cite{srcolor}. They cannot deal with the images which have different noise statistics in different channels as well as different local region. Hence, these methods would fail to process the real-world noisy images captured from real-world scenes;
 
+\item The discriminative learning based methods (e.g., MLP, CSF, TNRD, and DnCNN) are trained on paired clean and noisy images. These methods largely depends on the training dataset, and would achieve inferior performance upon the noise in the testing images is different from the noise in the training images;
+
+\item The performance of existing denoising methods on datasets \cite{crosschannel2016,dnd2017} are very distinct, as we can see from Tables \ref{tab6-6} and \ref{tab6-7}, the highest PSNR in our proposed methods (TWSC) and the highest PSNR in previous methods (TNRD on Dataset 1 and NC on Dataset 2) have a difference of over 1dB. However, in our new dataset, the highest PSNR in our proposed methods (TWSC) and the highest PSNR in previous methods (TNRD) only have a difference of around 0.3dB. This indicate that This comparison on differences shows that our dataset is more challenging than previous two datasets \cite{crosschannel2016,dnd2017}.
+  
 \end{itemize}
-Contrast to the proposed methods, the traditional denoising methods (e.g., LSSC, EPLL, NCSR, WNNM, and PGPD) designed for grey scale image would generate artifacts since they process each channel of the RGB image individually \cite{srcolor}. They cannot deal with the images which have different noise statistics in different channels as well as different local region. Hence, these methods would fail to process the real-world noisy images captured from real-world scenes. On the other hand, the discriminative learning based methods (e.g., MLP, CSF, TNRD, and DnCNN) are trained on paired clean and noisy images. These methods largely depends on the training dataset, and would achieve inferior performance upon the noise in the testing images is different from the noise in the training images.
 
-\textbf{Discussion on Datasets}. 
 
 
 \section{Conclusion}

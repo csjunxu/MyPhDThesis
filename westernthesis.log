@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 DEC 2017 22:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  7 DEC 2017 23:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8609,36 +8609,50 @@ ic file (type png)
 Package pdftex.def Info: images/dataset/PolyU/resize_br_TWSC_Canon80D_8_8_800_G
 O_11_real.png used on input line 977.
 (pdftex.def)             Requested size: 95.39857pt x 95.3989pt.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 986.
 
-[183] [184 <./images/dataset/dnd/resize_br_Noisy_0001_1.png (PNG copy)> <./imag
-es/dataset/dnd/resize_br_CBM3D_0001_1.png (PNG copy)> <./images/dataset/dnd/res
-ize_br_EPLL_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_NCSR_0001_1.
-png (PNG copy)> <./images/dataset/dnd/resize_br_WNNM_0001_1.png (PNG copy)> <./
-images/dataset/dnd/resize_br_MLP_0001_1.png (PNG copy)> <./images/dataset/dnd/r
-esize_br_CSF_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_TRD_0001_1.
-png (PNG copy)> <./images/dataset/dnd/resize_br_DnCNN_0001_1.png (PNG copy)> <.
-/images/dataset/dnd/resize_br_NC_0001_1.png (PNG copy)> <./images/dataset/dnd/r
-esize_br_NI_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_PGPD_0001_1.
-png (PNG copy)> <./images/dataset/dnd/resize_br_Guided_0001_1.png (PNG copy)> <
-./images/dataset/dnd/resize_br_MCWNNM_0001_1.png (PNG copy)> <./images/dataset/
-dnd/resize_br_TWSC_0_3_0001_1.png (PNG copy)>] [185 <./images/dataset/PolyU/res
-ize_br_Mean_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU
-/resize_br_Noisy_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/
-PolyU/resize_br_CBM3D_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dat
-aset/PolyU/resize_br_EPLL_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images
-/dataset/PolyU/resize_br_NCSR_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./im
-ages/dataset/PolyU/resize_br_WNNM_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <
-./images/dataset/PolyU/resize_br_MLP_Canon80D_8_8_800_GO_11_real.png (PNG copy)
-> <./images/dataset/PolyU/resize_br_CSF_Canon80D_8_8_800_GO_11_real.png (PNG co
-py)> <./images/dataset/PolyU/resize_br_TRD_Canon80D_8_8_800_GO_11_real.png (PNG
- copy)> <./images/dataset/PolyU/resize_br_DnCNN_Canon80D_8_8_800_GO_11_real.png
- (PNG copy)> <./images/dataset/PolyU/resize_br_NC_Canon80D_8_8_800_GO_11_real.p
-ng (PNG copy)> <./images/dataset/PolyU/resize_br_NI_Canon80D_8_8_800_GO_11_real
-.png (PNG copy)> <./images/dataset/PolyU/resize_br_PGPD_Canon80D_8_8_800_GO_11_
-real.png (PNG copy)> <./images/dataset/PolyU/resize_br_Guided_Canon80D_8_8_800_
-GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_MCWNNM_Canon80D_8_
-8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_TWSC_Canon80
-D_8_8_800_GO_11_real.png (PNG copy)>] [186]) [187]
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/omstxr.fd
+File: omstxr.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 986.
+ [183]
+[184 <./images/dataset/dnd/resize_br_Noisy_0001_1.png (PNG copy)> <./images/dat
+aset/dnd/resize_br_CBM3D_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br
+_EPLL_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_NCSR_0001_1.png (P
+NG copy)> <./images/dataset/dnd/resize_br_WNNM_0001_1.png (PNG copy)> <./images
+/dataset/dnd/resize_br_MLP_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_
+br_CSF_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_TRD_0001_1.png (P
+NG copy)> <./images/dataset/dnd/resize_br_DnCNN_0001_1.png (PNG copy)> <./image
+s/dataset/dnd/resize_br_NC_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_
+br_NI_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_PGPD_0001_1.png (P
+NG copy)> <./images/dataset/dnd/resize_br_Guided_0001_1.png (PNG copy)> <./imag
+es/dataset/dnd/resize_br_MCWNNM_0001_1.png (PNG copy)> <./images/dataset/dnd/re
+size_br_TWSC_0_3_0001_1.png (PNG copy)>] [185 <./images/dataset/PolyU/resize_br
+_Mean_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resiz
+e_br_Noisy_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/
+resize_br_CBM3D_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/P
+olyU/resize_br_EPLL_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/datas
+et/PolyU/resize_br_NCSR_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/d
+ataset/PolyU/resize_br_WNNM_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./imag
+es/dataset/PolyU/resize_br_MLP_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./i
+mages/dataset/PolyU/resize_br_CSF_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <
+./images/dataset/PolyU/resize_br_TRD_Canon80D_8_8_800_GO_11_real.png (PNG copy)
+> <./images/dataset/PolyU/resize_br_DnCNN_Canon80D_8_8_800_GO_11_real.png (PNG 
+copy)> <./images/dataset/PolyU/resize_br_NC_Canon80D_8_8_800_GO_11_real.png (PN
+G copy)> <./images/dataset/PolyU/resize_br_NI_Canon80D_8_8_800_GO_11_real.png (
+PNG copy)> <./images/dataset/PolyU/resize_br_PGPD_Canon80D_8_8_800_GO_11_real.p
+ng (PNG copy)> <./images/dataset/PolyU/resize_br_Guided_Canon80D_8_8_800_GO_11_
+real.png (PNG copy)> <./images/dataset/PolyU/resize_br_MCWNNM_Canon80D_8_8_800_
+GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_TWSC_Canon80D_8_8_
+800_GO_11_real.png (PNG copy)>]
+Overfull \hbox (0.20503pt too wide) in paragraph at lines 990--991
+\OT1/txr/m/n/12 DnCNN) are trained on paired clean and noisy im-ages. These met
+h-ods largely
+ []
+
+[186]) [187]
 No file westernthesis.bnd.
 (./westernthesis.bbl (./westernthesis.brf)
 \tf@brf=\write7
@@ -8711,19 +8725,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 541.
 (./chapter6.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 541.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 541.
-Package rerunfilecheck Info: File `westernthesis.brf' has not changed.
-(rerunfilecheck)             Checksum: B355A6D1B3EDE022DE670009300334BB;47908.
 
+
+Package rerunfilecheck Warning: File `westernthesis.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `westernthesis.brf':
+(rerunfilecheck)             Before: 260F772D764A942224B2CD778B95A4AD;47908
+(rerunfilecheck)             After:  A58564FDEED4C0AD03076ADDF45BE2A8;48142.
 
 LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 541.
  ) 
 Here is how much of TeX's memory you used:
- 14770 strings out of 493091
- 332490 string characters out of 6134517
+ 14789 strings out of 493091
+ 332815 string characters out of 6134517
  418074 words of memory out of 5000000
- 16560 multiletter control sequences out of 15000+600000
+ 16576 multiletter control sequences out of 15000+600000
  87715 words of font info for 203 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,20n,39p,5322b,819s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -8743,10 +8762,10 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on westernthesis.pdf (227 pages, 55360917 bytes).
+Output written on westernthesis.pdf (227 pages, 55362096 bytes).
 PDF statistics:
- 4755 PDF objects out of 5155 (max. 8388607)
- 3701 compressed objects within 38 object streams
+ 4766 PDF objects out of 5155 (max. 8388607)
+ 3712 compressed objects within 38 object streams
  762 named destinations out of 1000 (max. 500000)
  3411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
