@@ -78,3 +78,4 @@
 \contentsline {figure}{\numberline {6.2}{\ignorespaces The static scene is captured with cameras fixed by tripod. The capture is automatically done with shutter release.\relax }}{165}{figure.caption.105}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Some examples in our newly constructed dataset.\relax }}{169}{figure.caption.106}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Some cropped parts of the ``ground truth'' images (up) and their corresponding realistic images (down) in our newly constructed dataset.\relax }}{170}{figure.caption.107}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Denoised images and PSNR (dB) results of the real noisy image \textsl {Nikon D600 ISO 3200 2} \cite {crosschannel2016} by different methods.\ The estimated noise levels of R, G, and B channels are 1.2, 1.3, and 1.4, respectively.\ The images are better to be zoomed in on screen.\relax }}{176}{figure.caption.111}

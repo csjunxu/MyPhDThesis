@@ -28,5 +28,5 @@
 \contentsline {table}{\numberline {6.4}{\ignorespaces Cameras and camera settings for capturing the our new dataset.\relax }}{171}{table.caption.108}
 \contentsline {table}{\numberline {6.5}{\ignorespaces Detailed information of the 100 cropped regions from the 40 scenes captured in the our new dataset.\relax }}{172}{table.caption.109}
 \contentsline {table}{\numberline {6.6}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf {Dataset 1} \cite {crosschannel2016}.\relax }}{175}{table.caption.110}
-\contentsline {table}{\numberline {6.7}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1000 cropped images in \textbf {Dataset 2} \cite {dnd2017}.\relax }}{176}{table.caption.111}
-\contentsline {table}{\numberline {6.8}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf {Dataset 3}).\relax }}{179}{table.caption.112}
+\contentsline {table}{\numberline {6.7}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1000 cropped images in \textbf {Dataset 2} \cite {dnd2017}.\relax }}{177}{table.caption.112}
+\contentsline {table}{\numberline {6.8}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf {Dataset 3}).\relax }}{180}{table.caption.113}
