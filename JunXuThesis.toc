@@ -28,8 +28,8 @@
 \contentsline {subsection}{\numberline {2.4.2}Comparison with Patch Prior based Denoising}{31}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Comparison With the State-of-the-art Methods}{33}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Results and Discussions}{33}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}Results on the Berkeley Segmentation Data Set}{36}{section.2.5}
-\contentsline {section}{\numberline {2.6}Conclusion}{37}{section.2.6}
+\contentsline {subsection}{\numberline {2.4.5}Results on the Berkeley Segmentation Data Set}{36}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.5}Conclusion}{37}{section.2.5}
 \contentsline {chapter}{\numberline {3}External Prior Guided Internal Prior Learning for Realistic Image Denoising}{44}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduction}{44}{section.3.1}
 \contentsline {section}{\numberline {3.2}External Prior Guided Internal Prior Learning for Image Denoising}{49}{section.3.2}
