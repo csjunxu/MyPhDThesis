@@ -165,7 +165,7 @@ for $k=1,...,K$.\ Then $\bm{\overline{Y}}_{n}$ is assigned to the subspace with 
 
 \subsubsection{Guided Orthogonal Dictionary Learning}
 
-Assume that we have assigned all the internal noisy PGs $\{\bm{\overline{Y}}_{n}\}_{n=1}^{N}$ to their corresponding most suitable subspaces in $\{\mathcal{N}(\bm{0},\bm{\Sigma}_{k})\}_{k=1}^{K}$. For the $k$-th subspace, the noisy PGs assigned to it are $\{\bm{\overline{Y}}_{k_{n}}\}_{n=1}^{N_{k}}$, where $\bm{\overline{Y}}_{k_{n}}=[\bm{\overline{y}}_{k_{n},1},...,\bm{\overline{y}}_{k_{n},M}]$ and $\sum_{k=1}^{K}N_{k}=N$.\ We propose to learn an orthogonal dictionary $\bm{D}_{k}$ from each set of PGs $\bm{\overline{Y}}_{k_{n}}$ to characterize the internal PG prior with the guidance of the corresponding external orthogonal dictionary $\bm{U}_{k}$ (Eq.\ (\ref{equ3-2})). The reasons that we learn orthogonal dictionaries are two-fold.\ Firstly, the PGs $\{\bm{\overline{Y}}_{k_{n}}\}_{n=1}^{N_{k}}$ are in a subspace of the whole space of all PGs; therefore, there is no necessary to learn a redundant over-complete dictionary to characterize it, while an orthonormal dictionary has naturally zero \emph{mutual incoherence} \cite{donoho2001uncertainty}. Secondly, the orthogonality of dictionary can make the patch encoding in the testing stage very efficient, leading to an efficient denoising algorithm (please refer to sub-section III-C for more details).
+Assume that we have assigned all the internal noisy PGs $\{\bm{\overline{Y}}_{n}\}_{n=1}^{N}$ to their corresponding most suitable subspaces in $\{\mathcal{N}(\bm{0},\bm{\Sigma}_{k})\}_{k=1}^{K}$. For the $k$-th subspace, the noisy PGs assigned to it are $\{\bm{\overline{Y}}_{k_{n}}\}_{n=1}^{N_{k}}$, where $\bm{\overline{Y}}_{k_{n}}=[\bm{\overline{y}}_{k_{n},1},...,\bm{\overline{y}}_{k_{n},M}]$ and $\sum_{k=1}^{K}N_{k}=N$.\ We propose to learn an orthogonal dictionary $\bm{D}_{k}$ from each set of PGs $\bm{\overline{Y}}_{k_{n}}$ to characterize the internal PG prior with the guidance of the corresponding external orthogonal dictionary $\bm{U}_{k}$ (Eq.\ (\ref{equ3-2})). The reasons that we learn orthogonal dictionaries are two-fold.\ Firstly, the PGs $\{\bm{\overline{Y}}_{k_{n}}\}_{n=1}^{N_{k}}$ are in a subspace of the whole space of all PGs; therefore, there is no necessary to learn a redundant over-complete dictionary to characterize it, while an orthonormal dictionary has naturally zero \emph{mutual incoherence} \cite{donoho2001uncertainty}. Secondly, the orthogonality of dictionary can make the patch encoding in the testing stage efficient, leading to an efficient denoising algorithm.
 
 We let the orthogonal dictionary $\bm{D}_{k}$ be 
 \vspace{-2mm}
@@ -243,7 +243,7 @@ where $\bm{\lambda} = \frac{1}{2}[\lambda_{1},\lambda_{2},...,\lambda_{3p^2}]^{\
 [\bm{D}_{\text{E}}\ \bm{D}_{\text{I}}],\ \bm{D}_{\text{I}}^{\top}\bm{D}_{\text{I}} = \bm{I}_{(3p^2-r)},\ \bm{D}_{\text{E}}^{\top}\bm{D}_{\text{I}} = \bm{0},
 \end{split}
 \end{equation}
-where $\textbf{A}^{(t+1)}=[\bm{\alpha}_{1,1}^{(t+1)},...,\bm{\alpha}_{1,M}^{(t)},...,\bm{\alpha}_{N,1}^{(t+1)},...,\bm{\alpha}_{N,M}^{(t+1)}]$ and $\bm{I}_{(3p^2-r)}$ is the $(3p^2-r)$ dimensional identity matrix.\ The sparse coefficients matrix can be written as $\bm{A}^{(t+1)}=[(\bm{A}_{\text{E}}^{(t+1)})^{\top}\ (\bm{A}_{\text{I}}^{(t+1)})^{\top}]^{\top}$ where the external part $\bm{A}_{\text{E}}^{(t+1)}\in\mathbb{R}^{r\times NM}$ and the internal part $\bm{A}_{\text{I}}^{(t+1)}\in\mathbb{R}^{(3p^2-r)\times NM}$ represent the coding coefficients of $\bm{Y}$ over external sub-dictionary $\bm{D}_{\text{E}}$ and internal sub-dictionary $\bm{D}_{\text{I}}^{(t)}$, respectively.\ According to the following Theorem \ref{th1}, by setting $\mathcal{Y}=\bm{\overline{Y}}_{n}-\bm{D}_{\text{E}}\bm{A}_{\text{E}}^{(t+1)},\mathcal{E}=\bm{D}_{\text{E}},\mathcal{D}=\bm{D}_{\text{I}},\mathcal{A}=\bm{A}_{\text{I}}$, the problem (\ref{equ3-9}) has a closed-form solution $\bm{D}_{\text{I}}^{(t+1)}=\bm{U}_{\text{I}}\bm{V}_{\text{I}}^{\top}$, where $\bm{U}_{\text{I}}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ and $\bm{V}_{\text{I}}\in\mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ are the orthogonal matrices obtained by the following SVD \cite{eckart1936approximation}
+where $\textbf{A}^{(t+1)}=[\bm{\alpha}_{1,1}^{(t+1)},...,\bm{\alpha}_{1,M}^{(t)},...,\bm{\alpha}_{N,1}^{(t+1)},...,\bm{\alpha}_{N,M}^{(t+1)}]$ and $\bm{I}_{(3p^2-r)}$ is the $(3p^2-r)$ dimensional identity matrix.\ The sparse coefficients matrix can be written as $\bm{A}^{(t+1)}=[(\bm{A}_{\text{E}}^{(t+1)})^{\top}\ (\bm{A}_{\text{I}}^{(t+1)})^{\top}]^{\top}$ where the external part $\bm{A}_{\text{E}}^{(t+1)}\in\mathbb{R}^{r\times NM}$ and the internal part $\bm{A}_{\text{I}}^{(t+1)}\in\mathbb{R}^{(3p^2-r)\times NM}$ represent the coding coefficients of $\bm{Y}$ over external sub-dictionary $\bm{D}_{\text{E}}$ and internal sub-dictionary $\bm{D}_{\text{I}}^{(t)}$, respectively.\ According to the following Theorem \ref{th3-1}, by setting $\mathcal{Y}=\bm{\overline{Y}}_{n}-\bm{D}_{\text{E}}\bm{A}_{\text{E}}^{(t+1)},\mathcal{E}=\bm{D}_{\text{E}},\mathcal{D}=\bm{D}_{\text{I}},\mathcal{A}=\bm{A}_{\text{I}}$, the problem (\ref{equ3-9}) has a closed-form solution $\bm{D}_{\text{I}}^{(t+1)}=\bm{U}_{\text{I}}\bm{V}_{\text{I}}^{\top}$, where $\bm{U}_{\text{I}}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ and $\bm{V}_{\text{I}}\in\mathbb{R}^{(3p^2-r)\times (3p^2-r)}$ are the orthogonal matrices obtained by the following SVD \cite{eckart1936approximation}
 \vspace{-1mm}
 \begin{equation}\label{equ3-10}
 \vspace{-1mm}
@@ -284,13 +284,14 @@ The proof of the Theorem \ref{th3-1} can be found in Appendix B. Though the prob
 
 \begin{theorem}
 \label{th3-2}
-(a) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ is nonsingular, i.e., $\text{rank}(\Sigma)=3p^2-r$, then the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ is unique; (b) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ is singular, i.e., $0\le\text{rank}(\bm{\Sigma})< 3p^2-r$, then the number of possible solutions of $\hat{\mathcal{D}}$ is $2^{3p^2-r-\text{rank}(\bm{\Sigma})}$ for fixed $\mathcal{U}$ and $\mathcal{V}$.
+(a) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}\in\mathbb{R}^{3p^2\times (3p^2-r)}$ is nonsingular, i.e., $\text{rank}(\Sigma)=3p^2-r$, then the solution of $\hat{\mathcal{D}}=\mathcal{U}\mathcal{V}^{\top}$ is unique; (b) If $(\bm{I}_{3p^2\times 3p^2}-\mathcal{E}\mathcal{E}^{\top})\mathcal{Y}\mathcal{A}^{\top}$ is singular, i.e., $0\le\text{rank}(\bm{\Sigma})< 3p^2-r$, then the number of possible solutions of $\hat{\mathcal{D}}$ is $2^{3p^2-r-\text{rank}(\bm{\Sigma})}$ for fixed $\mathcal{U}$, $\mathcal{V}$.
 \end{theorem}
 
 The above alternative updating steps are repeated until the number of iterations exceeds a preset threshold. In each step, the energy value of the objective function (\ref{equ3-5}) is decreased and we empirically found that the proposed model usually converges in 10 iterations. We summarize the procedures in Algorithm 1.
 
 
-\begin{table}\label{alg3-1}\vspace{3mm}
+\begin{table}[t!]
+\label{alg3-1}
 \begin{tabular}{l}
 \hline
 \textbf{Algorithm 1}: External Prior Guided Internal Prior Learning
@@ -326,8 +327,7 @@ The denoising of the given noisy image $\mathbf{y}$ can be simultaneously done w
 \end{equation}
 where $\bm{\mu}_{n}$ is the group mean of $\bm{Y}_{n}$. The latent clean image is then reconstructed by aggregating all the reconstructed patches in all PGs.\ We perform the above denoising procedures for several iterations for better denoising outputs.\ The proposed denoising algorithm is summarized in Algorithm 2.
 
-\vspace{3mm}
-\begin{table}[htpb]
+\begin{table}[t!]
 \label{alg3-2}
 \begin{tabular}{l}
 \hline
