@@ -993,7 +993,7 @@ Average
 
 In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 15 cropped realistic noisy images used in \cite{crosschannel2016}.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR and SSIM \cite{ssim} can be computed.\  The average SSIM results of GAT-BM3D \cite{makitalo2013optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{tnrd}, DnCNN \cite{dncnn}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, CC \cite{crosschannel2016}, and the proposed method are listed in Table \ref{tab3-1}. As can be seen from Figures \ref{fig3-3}-\ref{fig3-5}, our proposed method achieves better performance than the the competing methods.
 
-\begin{table}[htpb]
+\begin{table}[t!]
 \begin{adjustwidth}{-.6cm}{}
 \caption{SSIM \cite{ssim} results of different methods on 15 cropped realistic noisy images used in \cite{crosschannel2016}.}
 \label{tab3-3}
@@ -1347,7 +1347,7 @@ SSIM
 \hline
 \end{tabular}
 \end{center}
-\end{adjustwidth}\vspace{-2mm}
+\end{adjustwidth}\vspace{-4mm}
 \end{table}
 
 
@@ -1382,7 +1382,7 @@ PSNR
 \hline
 \end{tabular}
 \end{center}
-\end{adjustwidth}\vspace{-2mm}
+\end{adjustwidth}\vspace{-4mm}
 \end{table}
 
 In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 100 realistic noisy images cropped from the new dataset we constructed.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR and SSIM can be computed.\ The average  SSIM results of GAT-BM3D \cite{makitalo2013optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{tnrd}, DnCNN \cite{dncnn}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, and the proposed method are listed in Table \ref{tab3-7} (CC is not compared since the code of \cite{crosschannel2016} is not available).\ As can be seen from Figure \ref{fig3-12}, our proposed method achieves better performance than the competing methods.
@@ -1416,7 +1416,7 @@ SSIM
 \hline
 \end{tabular}
 \end{center}
-\end{adjustwidth}\vspace{-2mm}
+\end{adjustwidth}\vspace{-4mm}
 \end{table}
 
 
@@ -1449,7 +1449,7 @@ Time
 \hline
 \end{tabular}
 \end{center}
-\end{adjustwidth}\vspace{-2mm}
+\end{adjustwidth}\vspace{-0mm}
 \end{table}
 
 
@@ -1633,6 +1633,7 @@ Time
 } \vspace{-3mm}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the realistic noisy image ``Nikon D800 ISO 3200 A1'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-17}
+\vspace{-4mm}
 \end{figure}
 
 %------------------------------------------------------------------------------------
