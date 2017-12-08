@@ -522,9 +522,9 @@ To more clearly demonstrate the effectiveness of PG based NSS prior learning, we
 \subsection{Results and Discussions}
 We evaluate the competing methods from three aspects: PSNR, Speed, and Visual Quality.
 
-\textbf{PSNR}. In Table \ref{tab2-2}, we present the PSNR results on four noise levels $\sigma=30,40,50,75$. The results on noise levels $\sigma=10,20,100$ can be found in the supplementary material. From Table \ref{tab2-2}, we have several observations. Firstly, PGPD achieves much better PSNR results than PPD. The improvements are 0.24$\sim$0.52dB on average. This clearly demonstrates the effectiveness of PG-GMM in NSS prior learning. Secondly, PGPD has higher PSNR values than BM3D, LSSC, EPLL and NCSR, and is only slightly inferior to WNNM. However, PGPD is much more efficient than WNNM (see next paragraph). This validates the strong ability of PG based NSS prior in image denoising. 
+\textbf{PSNR}. In Tables \ref{tab2-2}-\ref{tab2-4}, we present the PSNR results on four noise levels $\sigma=30,40,50,75$. The results on noise levels $\sigma=10,20,100$ can be found in the supplementary material. From Tables \ref{tab2-2}-\ref{tab2-4}, we have several observations. Firstly, PGPD achieves much better PSNR results than PPD. The improvements are 0.24$\sim$0.52dB on average. This clearly demonstrates the effectiveness of PG-GMM in NSS prior learning. Secondly, PGPD has higher PSNR values than BM3D, LSSC, EPLL and NCSR, and is only slightly inferior to WNNM. However, PGPD is much more efficient than WNNM (see next paragraph). This validates the strong ability of PG based NSS prior in image denoising. 
 
-\textbf{Speed}. Efficiency is another important factor to evaluate an algorithm. We then compare the speed of all competing methods. All experiments are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-4770K CPU of 3.50GHz and 12.0 GB RAM. The run time (s) of competing methods on the test images is shown in Table \ref{tab2-3}.\ One can easily see that BM3D is the fastest method. The proposed PGPD is the second fastest, and it is much faster than the other methods. For a $256\times256$ image, BM3D costs about 0.8s while PGPD costs about 10s. However, please note that BM3D is implemented with compiled C++ mex-function and with parallelization, while PGPD is implemented purely in Matlab. EPLL is about 4 times slower than PGPD. Both LSSC and NCSR are very slow since they need to train online dictionary.\ Though WNNM has the highest PSNR, it suffers from huge computational cost due to the many online SVD operations. It is 10$\sim$16 times slower than PGPD. 
+\textbf{Speed}. Efficiency is another important factor to evaluate an algorithm. We then compare the speed of all competing methods. All experiments are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-4770K CPU of 3.50GHz and 12.0 GB RAM. The run time (s) of competing methods on the test images is shown in Table \ref{tab2-5}.\ One can easily see that BM3D is the fastest method. The proposed PGPD is the second fastest, and it is much faster than the other methods. For a $256\times256$ image, BM3D costs about 0.8s while PGPD costs about 10s. However, please note that BM3D is implemented with compiled C++ mex-function and with parallelization, while PGPD is implemented purely in Matlab. EPLL is about 4 times slower than PGPD. Both LSSC and NCSR are very slow since they need to train online dictionary.\ Though WNNM has the highest PSNR, it suffers from huge computational cost due to the many online SVD operations. It is 10$\sim$16 times slower than PGPD. 
 
 \textbf{Visual Quality}. Considering that human subjects are the ultimate judge of the image quality, the visual quality of denoised images is also critical to evaluate a denoising algorithm. In Figures \ref{fig2-10} to \ref{fig2-13}, we show some visual quality comparisons on different testing images. For example, Fig. \ref{fig2-12} and Fig. \ref{fig2-13} show the denoised images of \textsl{Airplane} and \textsl{Cameraman} by the competing methods, respectively. Due to the page limit, the results of PPD are not shown here, and more visual comparisons can be found in the supplementary file.\ We can see that BM3D tends to over-smooth the image, while EPLL, LSSC, NCSR and WNNM are likely to generate artifacts when noise is high. Owe to the learned NSS prior, the proposed PGPD method is more robust against artifacts, and it preserves edge and texture areas much better than the other methods. For example, in image \textsl{Airplane}, PGPD reconstructs the numbers ``01568'' more clearly than all the other methods including WNNM. In image \textsl{Cameraman}, PGPD recoveries more faithfully the fine structures of the camera area. 
 
@@ -609,6 +609,19 @@ Airplane &35.97 &36.05&35.92&36.04&36.26 &36.00  &32.63&32.57 &32.64&32.69&32.91
  \textbf{Average} &34.21&34.39&33.99 &34.31&34.53&34.19  &30.95 &31.03 &34.75&30.95&31.20&30.95   
 \\
 \hline
+\end{tabular}
+\end{center}
+\end{adjustwidth}
+\end{table}
+
+\begin{table}[t!]
+\begin{adjustwidth}{-0.5cm}{}
+\caption{PSNR(dB) results of different denoising algorithms on 20 natural images.}
+\label{tab2-3}
+\begin{center}
+\renewcommand\arraystretch{1.0}
+\scriptsize
+\begin{tabular}{|c||c|c|c|c|c|c||c|c|c|c|c|c|}
 \hline
 &\multicolumn{6}{c||}{ $\sigma = 30$}&\multicolumn{6}{c|}{ $\sigma = 40$}
 \\
@@ -681,6 +694,19 @@ Airplane&  30.71  & 30.62  &  30.68  &  30.70 & 30.97 & 30.80    & 29.20 & 29.21
  \textbf{Average} &  29.13 & 29.11  &  28.92 & 29.03  & 29.37 & 29.13   &27.69&27.80 & 27.62& 27.71&28.05 &27.88     
 \\
 \hline
+\end{tabular}
+\end{center}
+\end{adjustwidth}
+\end{table}
+
+\begin{table}[t!]
+\begin{adjustwidth}{-0.5cm}{}
+\caption{PSNR(dB) results of different denoising algorithms on 20 natural images.}
+\label{tab2-4}
+\begin{center}
+\renewcommand\arraystretch{1.0}
+\scriptsize
+\begin{tabular}{|c||c|c|c|c|c|c||c|c|c|c|c|c|}
 \hline
 &\multicolumn{6}{c||}{ $\sigma = 50$}&\multicolumn{6}{c|}{ $\sigma = 75$}
 \\
@@ -760,9 +786,9 @@ Images&\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&\te
 
 
 \begin{table}[t!]
-\begin{adjustwidth}{-2cm}{}
+\begin{adjustwidth}{-0.5cm}{}
 \caption{Average run time (seconds) with standard deviation of different methods on images of size $256\times 256$ and $512\times 512$. BM3D uses parallelization and is implemented with compiled C++ mex-function while the other methods are implemented in Matlab.}
-\label{tab2-3}
+\label{tab2-5}
 \scriptsize
 \begin{center}
 \begin{tabular}{|c||c|c|c|c|c|c|c|}
@@ -980,7 +1006,7 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 \end{figure}
 
 
-\begin{figure}[t!]
+\begin{figure}[ht!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -1033,10 +1059,10 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 \section{Results on the Berkeley Segmentation Data Set}
 In this section, we give the denoising results (PSNR and visual quality) on the Berkeley Segmentation Data Set \cite{bsds}. This dataset contains 500 images of size $321\times481$. Since EPLL is trained on the 300 images in the training set and validation set, we use the 200 images in the testing set for comparison. 
 
-From Table \ref{tab2-4}, we can see that EPLL is comparable to BM3D and LSSC on the 200 test images. Though the proposed PGPD is trained on the Kodak PhotoCD dataset, in which the images have different resolution and statistics from the images in the Berkeley Segmentation Data Set, it still shows superiority over EPLL and other methods. In Figures \ref{fig2-14}-\ref{fig2-17}, we compare the visual quality of the denoised images by the competing methods. For better visualization, the presented images are cropped to size of $321\times 321$.
+From Table \ref{tab2-6}, we can see that EPLL is comparable to BM3D and LSSC on the 200 test images. Though the proposed PGPD is trained on the Kodak PhotoCD dataset, in which the images have different resolution and statistics from the images in the Berkeley Segmentation Data Set, it still shows superiority over EPLL and other methods. In Figures \ref{fig2-14}-\ref{fig2-17}, we compare the visual quality of the denoised images by the competing methods. For better visualization, the presented images are cropped to size of $321\times 321$.
 \begin{table}[t!]
 \caption{Average PSNR(dB) results of different denoising algorithms on the 200 test images of the Berkeley Segmentation Data Set.}
-\label{tab2-4}
+\label{tab2-6}
 \begin{center}
 \begin{tabular}{|c||c|c|c|c|c|c|}
 \hline
@@ -1121,7 +1147,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
 \end{figure}
 
 
-\begin{figure}[t!]
+\begin{figure}[ht!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -1171,7 +1197,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
     \label{fig2-15}
 \end{figure}
 
-\begin{figure}[t!]
+\begin{figure}[ht!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -1221,7 +1247,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
     \label{fig2-16}
 \end{figure}
 
-\begin{figure}[t!]
+\begin{figure}[ht!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
