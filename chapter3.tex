@@ -396,7 +396,7 @@ Since the image size is very large (about $7000\times5000$) and the 11 scenes sh
 Our dataset provides real noisy images of realistic objects with different ISO settings. It can be used to more fairly evaluate the performance of different real noisy image denoising methods. Consider that the image resolution is very high (about $4000\times4000$), for the convenience of experimental studies, we cropped 100 (10 for each scene) smaller images (of size $512\times512$) from it to perform experiments. The whole dataset will be made publically available with the publication of this work.
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -446,7 +446,7 @@ Our dataset provides real noisy images of realistic objects with different ISO s
     \label{fig3-3}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -518,7 +518,7 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \label{fig3-4}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -568,7 +568,7 @@ Our dataset provides real noisy images of realistic objects with different ISO s
     \label{fig3-5}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -613,13 +613,13 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/SONY_A7II_ISO12800_DSC02383_part8.JPG}}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Some samples cropped from our dataset (Dataset 3).}
     \label{fig3-6}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -640,14 +640,14 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \begin{minipage}[t]{0.19\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
-{\footnotesize Guided Internal \textbf{39.39}}
+{\footnotesize Guided \textbf{39.39}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 C1'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-7}
 \end{figure}
@@ -674,14 +674,14 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \begin{minipage}[t]{0.19\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
-{\footnotesize Guided Internal \textbf{38.01}}
+{\footnotesize Guided \textbf{38.01}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 C1'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-8}
 \end{figure}
@@ -689,12 +689,12 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 
 \subsection{Comparison among external, internal and guided internal priors}
 
-To demonstrate the advantages of external prior guided internal prior learning, we perform real noisy image denoising by using external priors only (denoted by ``External''), internal priors only (denoted by ``Internal''), and the proposed guided internal priors (denoted by ``Guided Internal''), respectively.\ For the ``External'' method, we utilize the full external dictionaries (i.e., $r=108$ in Eq.\ (\ref{equ3-5})) for denoising.\ For the ``Internal'' method, the overall framework is similar to the method of \cite{ncsr}.\ A GMM model (with $K = 32$ Gaussians) is directly learned from the PGs extracted from the given noisy image without using any external data, and then the internal orthogonal dictionaries are obtained via Eq.\ (\ref{equ3-2}) to perform denoising.\ All parameters of the ``External'' and ``Internal'' methods are tuned to achieve their best performance. 
+To demonstrate the advantages of external prior guided internal prior learning, we perform real noisy image denoising by using external priors only (denoted by ``External''), internal priors only (denoted by ``Internal''), and the proposed guided internal priors (denoted by ``Guided''), respectively.\ For the ``External'' method, we utilize the full external dictionaries (i.e., $r=108$ in Eq.\ (\ref{equ3-5})) for denoising.\ For the ``Internal'' method, the overall framework is similar to the method of \cite{ncsr}.\ A GMM model (with $K = 32$ Gaussians) is directly learned from the PGs extracted from the given noisy image without using any external data, and then the internal orthogonal dictionaries are obtained via Eq.\ (\ref{equ3-2}) to perform denoising.\ All parameters of the ``External'' and ``Internal'' methods are tuned to achieve their best performance. 
 
-We compare the three methods on the 60 cropped images from \cite{crosschannel2016}.\ The average PSNR and run time are listed in Table \ref{tab1}.\ The best results are highlighted in bold.\ It can be seen that ``Guided Internal'' method achieves better PSNR than both ``External'' and ``Internal'' methods. In addition, the ``Internal'' method is very slow because it involves online GMM learning, while the ``Guided Internal'' method is only a little slower than the ``External'' method.\ Figs. \ref{fig3-7} and \ref{fig3-8} show the denoised images of two noisy images by the three methods.\ One can see that the  ``External'' method is good at recovering large-scale structures (see Fig. \ref{fig3-7}) while the ``Internal'' method is good at recovering fine-scale textures (see Fig. \ref{fig3-8}).\ By utilizing external priors to guide the internal prior learning, our proposed method can effectively recover both the large-scale structures and fine-scale textures. 
+We compare the three methods on the 60 cropped images from \cite{crosschannel2016}.\ The average PSNR and run time are listed in Table \ref{tab3-1}.\ The best results are highlighted in bold.\ It can be seen that ``Guided'' method achieves better PSNR than both ``External'' and ``Internal'' methods. In addition, the ``Internal'' method is very slow because it involves online GMM learning, while the ``Guided'' method is only a little slower than the ``External'' method.\ Figs. \ref{fig3-7} and \ref{fig3-8} show the denoised images of two noisy images by the three methods.\ One can see that the  ``External'' method is good at recovering large-scale structures (see Fig. \ref{fig3-7}) while the ``Internal'' method is good at recovering fine-scale textures (see Fig. \ref{fig3-8}).\ By utilizing external priors to guide the internal prior learning, our proposed method can effectively recover both the large-scale structures and fine-scale textures. 
 
 %------------------------------------------------------------------------------------
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -722,7 +722,7 @@ We compare the three methods on the 60 cropped images from \cite{crosschannel201
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_dog.png}}
 {\footnotesize CSF}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -749,12 +749,12 @@ We compare the three methods on the 60 cropped images from \cite{crosschannel201
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_dog.png}}
 {\footnotesize Ours}
 \end{minipage}
-}
+}\vspace{-3mm}
 \caption{Denoised images of the real noisy image ``Dog'' \cite{ncwebsite} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-9}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -782,7 +782,7 @@ We compare the three methods on the 60 cropped images from \cite{crosschannel201
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_CSF_frog.png}}
 {\footnotesize CSF}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -809,12 +809,12 @@ We compare the three methods on the 60 cropped images from \cite{crosschannel201
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_Guided_frog.png}}
 {\footnotesize Ours}
 \end{minipage}
-}
+}\vspace{-3mm}
 \caption{Denoised images of the real noisy image ``Frog'' \cite{ncwebsite} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-10}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[ht!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -842,7 +842,7 @@ We compare the three methods on the 60 cropped images from \cite{crosschannel201
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_CSF_circuit.png}}
 {\footnotesize CSF}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -869,7 +869,7 @@ We compare the three methods on the 60 cropped images from \cite{crosschannel201
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_Guided_circuit.png}}
 {\footnotesize Ours}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images of the real noisy image ``Circuit'' \cite{ncwebsite} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-11}
 \end{figure}
@@ -882,9 +882,8 @@ We compare the proposed method with state-of-the-art image denoising methods, in
 \textbf{Noise level of comparison methods.} 
 For the CBM3D method, the standard deviation of noise on color images should be given as a parameter.\ For methods of WNNM, MLP, CSF, and TNRD, the noise level in each color channel should be input. For the DnCNN method, it is trained to deal with noise in a range of levels $0\sim55$.\ We retrain the models of discriminative denoising methods MLP, CSF, and TNRD (using the released codes by the authors) at different noise levels from $\sigma=5$ to $\sigma=50$ with a gap of $5$.\ The denoising is performed by processing each channel with the model trained at the same (or nearest) noise level.\ The noise levels ($\sigma_{r}, \sigma_{g}, \sigma_{b}$) in R, G ,B channels are assumed to be Gaussian and can be estimated via some noise estimation methods \cite{noiselevel,Chen2015ICCV}.\ In this work, we employ the method \cite{Chen2015ICCV} to estimate the noise level for each color channel.
 
-\begin{table}
+\begin{table}[t!]
 \caption{Average PSNR (dB) and Run Time (seconds) of the ``External'', ``Internal'', and ``Guided Internal'' methods on 60 real noisy images (of size $500\times500\times3$) cropped from \cite{crosschannel2016}.}
-
 \label{tab3-1}
 \begin{center}
 \renewcommand\arraystretch{1}
@@ -910,9 +909,8 @@ Since there is no ``ground truth'' for the real noisy images in  dataset 1 \cite
 
 \begin{table}
 \scriptsize
-\begin{adjustwidth}{-2cm}{}
+\begin{adjustwidth}{-.2cm}{}
 \caption{PSNR(dB) results of different methods on 15 cropped real noisy images used in \cite{crosschannel2016}.}
-
 \label{tab3-2}
 \begin{center}
 \renewcommand\arraystretch{1}
@@ -932,7 +930,7 @@ Camera Settings
 &\textbf{Ours} 
 \\
 \hline
-\multirow{3}{*}{\small{Canon 5D Mark III}} 
+\multirow{3}{*}{Canon 5D} 
 & 31.23 & 39.76 & 37.51 & 39.00 & 35.68 & 39.51 & 37.26 & 37.68 & 38.76 & 38.37 & \textbf{40.50}
 \\ 
 \cdashline{2-12} 
