@@ -13,7 +13,7 @@
 \label{fig2-1}
 \end{figure}
 
-Image denoising is a classical problem in low level vision and has been extensively studied for several decades. Image denoising is still an active topic for that it not only serves as a baseline problem for other image resotration problems, but also provides an ideal test bed for image modeling techniques. In general, image denoising aims to recover the clean image $\bm{x}$ from its noisy observation $\bm{y} = \bm{x} + \bm{v}$, where $\bm{v}$ is assumed to be additive white Gaussian noise.\ A variety of image denoising methods have been developed in past decades, including filtering based methods \cite{Tomasi1998}, diffusion based methods \cite{PeronaMalik1990}, total variation based methods \cite{rudin1992nonlinear,osher2005iterative}, wavelet/curvelet based methods \cite{softthresholding,bayesshrink,curvelet}, sparse representation based methods \cite{ksvd,lssc,ncsr}, nonlocal self-similarity based methods \cite{nlm,bm3d,nnm,wnnm}, etc.
+Image denoising is a classical problem in low level vision and has been extensively studied for several decades. Image denoising is still an active topic for that it not only serves as a baseline problem for other image resotration problems, but also provides an ideal test bed for image modeling techniques. In general, image denoising aims to recover the clean image $\bm{x}$ from its noisy observation $\bm{y} = \bm{x} + \bm{n}$, where $\bm{n}$ is assumed to be additive white Gaussian noise.\ A variety of image denoising methods have been developed in past decades, including filtering based methods \cite{Tomasi1998}, diffusion based methods \cite{PeronaMalik1990}, total variation based methods \cite{rudin1992nonlinear,osher2005iterative}, wavelet/curvelet based methods \cite{softthresholding,bayesshrink,curvelet}, sparse representation based methods \cite{ksvd,lssc,ncsr}, nonlocal self-similarity based methods \cite{nlm,bm3d,nnm,wnnm}, etc.
 
 Image modeling plays a central role in image denoising. By modeling the wavelet transform coefficients as Laplacian distributions, many wavelet shrinkage based denoising methods such as the classical soft-thresholding \cite{softthresholding} have been proposed.\ Chang et al. modeled the wavelet transform coefficients as generalized Gaussian distribution, and proposed the BayesShrink \cite{bayesshrink} algorithm.\ By considering the correlation of wavelet coefficients across scales, Portilla et al.  \cite{blsgsm} proposed to use Gaussian Scale Mixtures for image modeling and achieved promising denoising performance. It is widely accepted that natural image gradients exhibit heavy-tailed distributions \cite{weiss}, and the total variation (TV) based methods \cite{rudin1992nonlinear,osher2005iterative} actually assume Laplacian distributions of image gradients for denoising. The Fields of Experts (FoE) \cite{foe} proposed by Roth and Black models the filtering responses with Student's t-distribution to learn filters through Markov Random Field (MRF) \cite{Bishop}. Recently, Schmidt and Roth proposed the cascade of shrinkage fields (CSF) to perform denoising efficiently \cite{csf}.
 
@@ -44,7 +44,7 @@ From a given set of natural images, we can extract $N$ PGs, and we denote one PG
 \overline{\bm{X}}_{n}\triangleq \{\overline{\bm{x}}_{n,m}\}_{m=1}^{M}, n=1,...,N.
 \end{equation}
 The PGs $\{\bm{\overline{X}}_{n}\}$ contain a rich amount of NSS information of natural images, and the problem turns to how to learn explicit prior models from $\{\bm{\overline{X}}_{n}\}$. Considering that Gaussian Mixture Model (GMM) has been successfully used to model the image patch priors in EPLL \cite{epll} and PLE \cite{ple}, we propose to extend patch based GMM to patch group based GMM (PG-GMM) for NSS prior learning.
-\begin{figure}
+\begin{figure}[t!]
 \centering
 \centering
 \includegraphics[width=0.7\linewidth]{images/pgpd/2pgs.png}
@@ -82,7 +82,7 @@ In the M-step, since for each PG $\bm{\overline{X}}_{n}$, $\sum_{m=1}^{M}\bm{\ov
 The calculations of $\pi_{k}=\frac{1}{N}\sum_{n=1}^{N}\gamma_{nk}$ are similar to \cite{Bishop}.
 
 By alternating between the E-step and the M-step, the model parameters will be updated iteratively, and the update in each iteration can guarantee to increase the value of the log-likelihood function (\ref{equ2-5}), and the EM algorithm will converge \cite{Bishop,emconvergence}. Fig. \ref{fig2-3} shows the convergence curve of the proposed PG-GMM algorithm by using the Kodak PhotoCD Dataset (\url{http://r0k.us/graphics/kodak/}) for training.
-\begin{figure}[t]
+\begin{figure}[t!]
 \centering
 \includegraphics[width=0.75\linewidth]{images/pgpd/cvgc.png}
 \caption{The convergence curve of log-likelihood in PG-GMM training on the Kodak PhotoCD Dataset.
@@ -97,9 +97,9 @@ GMM has been used for patch based image prior learning and achieved promising re
 
 First, in patch based GMM, the mean value of each patch is subtracted before learning the Gaussian components. This is to remove the DC (direct current) of each patch but will not change the essential structure of a patch. However, in PG-GMM the mean vector of all patches in a group is calculated and subtracted from each patch, and hence the structure of each patch is changed. As a result, many patches which originally have different local patterns may become similar after group mean subtraction (please refer to Fig. \ref{fig2-2} for an example). This makes the PG-GMM learning process easier and more stable. 
 
-Second, as can be seen in Eq.\ (\ref{equ2-9}), the mean vector of each Gaussian component in PG-GMM is naturally a zero vector.\ This implies that we only need to learn the covariance matrix of each component without considering its mean. However, in patch based GMM \cite{epll}, the mean vectors of Gaussians can only be forced to zero and there is no theoretical guarantee for this.
+Second, as can be seen in Eq.\ (\ref{equ2-9}), the mean vector of each Gaussian component in PG-GMM is naturally a zero vector.\ This implies that we only need to learn the covariance matrix of each component without considering its mean. However, in patch based GMM \cite{epll}, the mean vectors of Gaussians can only be forced to zero and there is no theoretical guarantee.
 
-Third, due to reduction of possible patterns in PG-GMM and the reduced number of variables to learn, we do not need to set a large number of Gaussian components in PG-GMM learning. For example, in EPLL \cite{epll}, 200 Gaussian components are learned to achieve competing denoising performance with BM3D \cite{bm3d}, while in PG-GMM learning only 32 Gaussian components are enough to outperform BM3D (please refer to the experimental section for details).
+Third, due to reduction of possible patterns in PG-GMM and reduced number of variables to learn, we do not need to set a large number of Gaussian components in PG-GMM learning. For example, in EPLL \cite{epll}, 200 Gaussian components are learned to achieve competing denoising performance with BM3D \cite{bm3d}, while in PG-GMM learning only 32 Gaussian components are enough to outperform BM3D (please refer to the experimental section for details).
 %-------------------------------------------------------------------------
 \section{Image Denoising by Patch Group Priors}
 \subsection{Denoising Model}
