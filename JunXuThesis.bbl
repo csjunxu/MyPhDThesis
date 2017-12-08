@@ -452,6 +452,11 @@ U.~Schmidt and S.~Roth.
 \newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
   (CVPR)}, pages 2774--2781, June 2014.
 
+\bibitem{simoncini2016computational}
+V.~Simoncini.
+\newblock Computational methods for linear matrix equations.
+\newblock {\em SIAM Review}, 58(3):377--441, 2016.
+
 \bibitem{curvelet}
 J.~L. Starck, E.~J. Cand{\`e}s, and D.~L. Donoho.
 \newblock The curvelet transform for image denoising.

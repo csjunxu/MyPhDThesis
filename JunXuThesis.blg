@@ -12,50 +12,48 @@ A level-1 auxiliary file: chapter7.aux
 A level-1 auxiliary file: chapter8.aux
 The style file: plain.bst
 Database file #1: bib-refs.bib
-Warning--I didn't find a database entry for "csr"
 Warning--I didn't find a database entry for ""
-Warning--I didn't find a database entry for "simoncini2016computational"
 Warning--to sort, need author or key in commoncamera
 Warning--empty journal in EMVA1288
-You've used 106 entries,
+You've used 107 entries,
             2118 wiz_defined-function locations,
-            1077 strings with 19690 characters,
-and the built_in function-call counts, 39628 in all, are:
-= -- 4018
-> -- 1845
+            1081 strings with 19769 characters,
+and the built_in function-call counts, 39925 in all, are:
+= -- 4050
+> -- 1852
 < -- 28
-+ -- 742
-- -- 618
-* -- 2938
-:= -- 6430
-add.period$ -- 321
-call.type$ -- 106
-change.case$ -- 624
++ -- 745
+- -- 620
+* -- 2960
+:= -- 6479
+add.period$ -- 324
+call.type$ -- 107
+change.case$ -- 628
 chr.to.int$ -- 0
-cite$ -- 108
-duplicate$ -- 1402
-empty$ -- 2949
-format.name$ -- 618
-if$ -- 8268
+cite$ -- 109
+duplicate$ -- 1413
+empty$ -- 2976
+format.name$ -- 620
+if$ -- 8329
 int.to.chr$ -- 0
-int.to.str$ -- 106
-missing$ -- 106
-newline$ -- 534
-num.names$ -- 210
-pop$ -- 550
+int.to.str$ -- 107
+missing$ -- 107
+newline$ -- 539
+num.names$ -- 212
+pop$ -- 552
 preamble$ -- 1
-purify$ -- 521
+purify$ -- 524
 quote$ -- 0
-skip$ -- 1073
+skip$ -- 1080
 stack$ -- 0
-substring$ -- 3049
-swap$ -- 350
+substring$ -- 3079
+swap$ -- 351
 text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 418
+type$ -- 422
 warning$ -- 2
-while$ -- 404
-width$ -- 109
-write$ -- 1152
-(There were 5 warnings)
+while$ -- 408
+width$ -- 110
+write$ -- 1163
+(There were 3 warnings)
