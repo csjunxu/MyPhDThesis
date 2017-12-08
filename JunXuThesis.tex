@@ -154,7 +154,10 @@
       Chapter\ \thechapter. \ \fi ##1}}}
 \fi
 
-\pagestyle{thesis}
+%%% changed by Jun Xu
+%\pagestyle{thesis} % keep the head of each page
+\thispagestyle{plain} % remove the head of each page
+
 % Set up page layout.
 \renewcommand{\baselinestretch}{1.6} % double line-space 1.66
 \setlength{\textheight}{8.5in} % Height of the main body of the text
