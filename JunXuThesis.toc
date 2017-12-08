@@ -37,61 +37,61 @@
 \contentsline {subsection}{\numberline {3.2.2}Guided Internal Prior Learning}{50}{subsection.3.2.2}
 \contentsline {subsubsection}{Internal Subspace Clustering}{50}{section*.30}
 \contentsline {subsubsection}{Guided Orthogonal Dictionary Learning}{51}{section*.31}
-\contentsline {subsection}{\numberline {3.2.3}The Denoising Algorithm}{55}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}The Denoising Algorithm}{54}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Experiments}{55}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Implementation Details}{55}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}The Testing Datasets}{57}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Comparison among external, internal and guided internal priors}{58}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Comparison with State-of-the-Art Denoising Methods}{61}{subsection.3.3.4}
 \contentsline {section}{\numberline {3.4}Conclusion}{69}{section.3.4}
-\contentsline {chapter}{\numberline {4}Multi-channel Weighted Nuclear Norm Minimization for Real Color Image Denoising}{73}{chapter.4}
+\contentsline {chapter}{\numberline {4}Multi-channel Weighted Nuclear Norm Minimization}{73}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{73}{section.4.1}
 \contentsline {section}{\numberline {4.2}The Proposed Color Image Denoising Algorithm}{77}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}The Multi-channel Weighted Nuclear Norm Minimization Model}{77}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}The Setting of Weight Matrix $\mathbf {W}$}{79}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Model Optimization}{80}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}The Denoising Algorithm}{84}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.4}The Denoising Algorithm}{83}{subsection.4.2.4}
 \contentsline {subsection}{\numberline {4.2.5}Complexity Analysis}{84}{subsection.4.2.5}
 \contentsline {section}{\numberline {4.3}Experiments}{85}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Experimental Settings}{85}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Experiments on Synthetic Noisy Color Images}{87}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}Experiments on Synthetic Noisy Color Images}{86}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Experiments on Real Noisy Color Images}{87}{subsection.4.3.3}
-\contentsline {subsubsection}{Results on Dataset \cite {ncwebsite}}{94}{section*.72}
-\contentsline {section}{\numberline {4.4}Conclusion}{101}{section.4.4}
-\contentsline {chapter}{\numberline {5}A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising}{102}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{102}{section.5.1}
-\contentsline {section}{\numberline {5.2}The Proposed Realistic Image Denoising Algorithm}{104}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}The Trilateral Weighted Sparse Coding Model}{104}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}The Setting of Weight Matrices}{106}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Model Optimization}{108}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Convergence Analysis}{110}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}The Denoising Algorithm}{111}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Existence and Faster Solution of Sylvester Equation (\ref {equ5-13})}{112}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Existence of the Unique Solution}{112}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Faster Solution of the Sylvester Equation (\ref {equ5-13})}{113}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Experiments}{114}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Results on Additive White Gaussian Noise Removal}{114}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Results on Realistic Noise Removal}{115}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Conclusion}{125}{section.5.5}
-\contentsline {chapter}{\numberline {6}Real-World Noisy Image Dataset: A New Benchmark}{126}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{126}{section.6.1}
-\contentsline {section}{\numberline {6.2}Existing Datasets}{129}{section.6.2}
-\contentsline {section}{\numberline {6.3}The Proposed Dataset}{132}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Motivation}{132}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}The Construction Process}{134}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Summary of the Dataset}{139}{subsection.6.3.3}
-\contentsline {section}{\numberline {6.4}Experiments}{143}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Benchmark Dataset}{143}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Comparison Methods}{144}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Results and Discussion}{145}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}Conclusion}{150}{section.6.5}
-\contentsline {chapter}{\numberline {7}Conclusions}{152}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusions}{152}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{154}{section.7.2}
-\contentsline {chapter}{\numberline {8}Appendix}{155}{chapter.8}
-\contentsline {section}{\numberline {8.1}Closed-Form Solution of the Weighted Sparse Coding Problem (\ref {equ2-11})}{155}{section.8.1}
-\contentsline {section}{\numberline {8.2}Proof of the Theorem \ref {th3-1}}{156}{section.8.2}
-\contentsline {section}{\numberline {8.3}Proof of the Theorem \ref {th3-2}}{158}{section.8.3}
-\contentsline {section}{\numberline {8.4}Proof of Theorem \ref {th4-1}}{160}{section.8.4}
-\contentsline {section}{\numberline {8.5}Proofs of Theorem \ref {th5-1} and Theorem \ref {th5-2}}{162}{section.8.5}
-\contentsline {chapter}{Bibliography}{167}{theorem.8.5.2}
+\contentsline {subsubsection}{Results on Dataset \cite {ncwebsite}}{91}{section*.72}
+\contentsline {section}{\numberline {4.4}Conclusion}{97}{section.4.4}
+\contentsline {chapter}{\numberline {5}A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising}{100}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{100}{section.5.1}
+\contentsline {section}{\numberline {5.2}The Proposed Realistic Image Denoising Algorithm}{102}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}The Trilateral Weighted Sparse Coding Model}{102}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}The Setting of Weight Matrices}{104}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Model Optimization}{106}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Convergence Analysis}{108}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}The Denoising Algorithm}{109}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Existence and Faster Solution of Sylvester Equation (\ref {equ5-13})}{110}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Existence of the Unique Solution}{110}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Faster Solution of the Sylvester Equation (\ref {equ5-13})}{111}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Experiments}{112}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Results on Additive White Gaussian Noise Removal}{112}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Results on Realistic Noise Removal}{113}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Conclusion}{123}{section.5.5}
+\contentsline {chapter}{\numberline {6}Real-World Noisy Image Dataset: A New Benchmark}{124}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{124}{section.6.1}
+\contentsline {section}{\numberline {6.2}Existing Datasets}{127}{section.6.2}
+\contentsline {section}{\numberline {6.3}The Proposed Dataset}{130}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Motivation}{130}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}The Construction Process}{132}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Summary of the Dataset}{137}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}Experiments}{141}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Benchmark Dataset}{141}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Comparison Methods}{142}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Results and Discussion}{143}{subsection.6.4.3}
+\contentsline {section}{\numberline {6.5}Conclusion}{148}{section.6.5}
+\contentsline {chapter}{\numberline {7}Conclusions}{150}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusions}{150}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{152}{section.7.2}
+\contentsline {chapter}{\numberline {8}Appendix}{153}{chapter.8}
+\contentsline {section}{\numberline {8.1}Closed-Form Solution of the Weighted Sparse Coding Problem (\ref {equ2-11})}{153}{section.8.1}
+\contentsline {section}{\numberline {8.2}Proof of the Theorem \ref {th3-1}}{154}{section.8.2}
+\contentsline {section}{\numberline {8.3}Proof of the Theorem \ref {th3-2}}{156}{section.8.3}
+\contentsline {section}{\numberline {8.4}Proof of Theorem \ref {th4-1}}{158}{section.8.4}
+\contentsline {section}{\numberline {8.5}Proofs of Theorem \ref {th5-1} and Theorem \ref {th5-2}}{160}{section.8.5}
+\contentsline {chapter}{Bibliography}{165}{theorem.8.5.2}

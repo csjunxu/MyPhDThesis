@@ -1,6 +1,6 @@
 % !TEX root = ../XJ_thesis.tex
 %
-\chapter{Multi-channel Weighted Nuclear Norm Minimization for Real Color Image Denoising}
+\chapter{Multi-channel Weighted Nuclear Norm Minimization}
 \label{sec:internallr}
 
 \section{Introduction}
@@ -124,8 +124,6 @@ Let's denote the noisy patch matrix by $\mathbf{Y}=[\mathbf{Y}_{r}^{\top}\ \math
 \hat{\mathbf{X}} 
 &=
 \arg\max_{\mathbf{X}}\ln P(\mathbf{X}|\mathbf{Y},\bm{w})
-\\
-&
 =
 \arg\max_{\mathbf{X}}\{\ln P(\mathbf{Y}|\mathbf{X})+\ln P(\mathbf{X}|\bm{w})\}.
 \end{split}
@@ -158,8 +156,6 @@ Putting (\ref{equ4-7}) and (\ref{equ4-6}) into (\ref{equ4-5}), we have
 \arg\min_{\mathbf{X}}
 \sum_{c\in\{r, g, b\}}
 \frac{1}{\sigma_{c}^{2}}\|(\mathbf{Y}_{c}-\mathbf{X}_{c})\|_{F}^{2}+\|\mathbf{X}\|_{\bm{w},*}
-\\
-&
 =
 \arg\min_{\mathbf{X}}\|\mathbf{W}(\mathbf{Y}-\mathbf{X})\|_{F}^{2}+\|\mathbf{X}\|_{\bm{w},*},
 \end{split}
@@ -206,8 +202,6 @@ Since the objective function is separable w.r.t. the two variables, the problem 
 &\|\mathbf{W}(\mathbf{Y}-\mathbf{X})\|_{F}^{2}
 +
 \|\mathbf{Z}\|_{\bm{w},*}
-\\
-&
 +
 \langle
 \mathbf{A},\mathbf{X}-\mathbf{Z}
@@ -275,8 +269,7 @@ and $(\hat{\sigma}_{1},\hat{\sigma}_{2},...,\hat{\sigma}_{M})$ is the solution t
 (\sigma_{i}-\hat{\sigma}_{i})^{2}
 +
 \frac{2w_{i}}{\rho_{k}}\hat{\sigma}_{i}
-\\
-&
+\quad
 \text{s.t.}
 \quad
 \hat{\sigma}_{1}\ge \hat{\sigma}_{2} \ge...\ge \hat{\sigma}_{M}\ge 0.
@@ -306,7 +299,7 @@ where $c_{1}=\sigma_{i}-\epsilon$, $c_{2} = (\sigma_{i}-\epsilon)^{2}-\frac{8C}{
 
 The above alternative updating steps are repeated until the convergence condition is satisfied or the number of iterations exceeds a preset threshold.\ The convergence condition of the ADMM algorithm is: $\|\mathbf{X}_{k+1}-\mathbf{Z}_{k+1}\|_{F}\le \text{Tol}$, $\|\mathbf{X}_{k+1}-\mathbf{X}_{k}\|_{F}\le \text{Tol}$, and $\|\mathbf{Z}_{k+1}-\mathbf{Z}_{k}\|_{F}\le \text{Tol}$ are simultaneously satisfied, where $\text{Tol}>0$ is a small tolerance number.\ We summarize the updating procedures in Algorithm 1.\ The convergence analysis of the proposed Algorithm 1 is given in Theorem \ref{th4-1}.\ Note that since the weighted nuclear norm is non-convex in general, we employ an unbounded sequence of $\{\rho_{k}\}$ here to make sure that Algorithm 1 converges. 
 
-\begin{table}
+\begin{table}[t!]
 \begin{tabular}{l}
 \hline
 \textbf{Algorithm 1}: Solve MC-WNNM via ADMM
@@ -478,7 +471,7 @@ Given a noisy color image $\mathbf{y}_{c}$, suppose that we have extracted $N$ l
 \\
 3.\quad Search non-local similar patches $\mathbf{Y}_{j}$;
 \\
-4.\quad Apply the MC-WNNM model (\ref{e10}) to $\mathbf{Y}_{j}$ and obtain the estimated $\mathbf{X}_{j}$;
+4.\quad Apply the MC-WNNM model (\ref{equ4-10}) to $\mathbf{Y}_{j}$ and obtain the estimated $\mathbf{X}_{j}$;
 \\
 \quad\textbf{end for}
 \\
@@ -532,9 +525,8 @@ We first compare MC-WNNM with the competing denoising methods \cite{cbm3d,mlp,tn
 
 The PSNR results by competing methods are listed in Tables \ref{tab4-1}-\ref{tab4-3} on these images when the noise standard deviations are $\sigma_{r}=40, \sigma_{g}=20, \sigma_{b}=30$ in Table \ref{tab4-1}, $\sigma_{r}=30, \sigma_{g}=10, \sigma_{b}=50$ in Table \ref{tab4-2} and $\sigma_{r}=5, \sigma_{g}=30, \sigma_{b}=15$ in Table \ref{tab4-3}, respectively. While the best PSNR result for each image is highlighted in bold, one can see that on all the 24 images, our method achieves the highest PSNR values among the competing methods.\ We can see that in all these cases, the proposed MC-WNNM achieves better performance than the other competing methods. For example, in Table \ref{tab4-1}, the proposed MC-WNNM achieves on average 0.47dB, 0.48dB and 1.09dB improvements over WNNM-1, WNNM-2 and WNNM-3, respectively. In Figures \ref{fig4-2}-\ref{fig4-7}, we give the visual comparisons of the denoised images by different methods.
 
-\begin{table}
+\begin{table}[t!]
 \caption{PSNR(dB) results of different denoising methods on the Kodak PhotoCD dataset.}
-\begin{adjustwidth}{-1cm}{}
 \label{tab4-1}
 \begin{center}
 \renewcommand\arraystretch{1.0}
@@ -647,10 +639,10 @@ Image\#
 \hline
 \end{tabular}
 \end{center}
-\end{adjustwidth}
+\vspace{-10mm}
 \end{table}
 
-\begin{table}
+\begin{table}[t!]
 \caption{PSNR(dB) results of different denoising methods on the Kodak PhotoCD dataset.}
 \label{tab4-2}
 \begin{center}
@@ -766,8 +758,7 @@ Image\#
 \end{table}
 
 
-\vspace{5mm}
-\begin{table}[!htbp]
+\begin{table}[t!]
 \caption{PSNR(dB) results of different denoising methods on the Kodak PhotoCD dataset.}
 \label{tab4-3}
 \begin{center}
@@ -882,7 +873,7 @@ Image\#
 \end{center}
 \end{table}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -910,7 +901,7 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_TNRD_nSig402030_kodim01.png}}
 {\footnotesize TNRD 25.74}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -937,12 +928,12 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_CWNNM_ADMM_nSig402030_kodim01.png}}
 {\footnotesize MC-WNNM \textbf{26.66}}
 \end{minipage}
-}
+}\vspace{-3mm}
 \caption{Denoised images and PSNR (dB) results of different methods on the image ``kodim01'' degraded by AWGN with different standard deviations of $\sigma_{r}=40, \sigma_{g}=20, \sigma_{b}=30$ on R, G, B channels, respectively. The images are better to be zoomed in on screen.}
     \label{fig4-2}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -970,7 +961,7 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_TNRD_nSig402030_kodim03.png}}
 {\footnotesize TNRD 31.49}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -997,12 +988,12 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_CWNNM_ADMM_nSig402030_kodim03.png}}
 {\footnotesize MC-WNNM \textbf{32.25}}
 \end{minipage}
-}
+}\vspace{-3mm}
 \caption{Denoised images and PSNR (dB) results of different methods on the image ``kodim03'' degraded by AWGN with different standard deviations of $\sigma_{r}=40, \sigma_{g}=20, \sigma_{b}=30$ on R, G, B channels, respectively. The images are better to be zoomed in on screen.}
     \label{fig4-3}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1030,7 +1021,7 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_TNRD_nSig301050_kodim17.png}}
 {\footnotesize TNRD 30.24}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1057,13 +1048,13 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_CWNNM_ADMM_nSig301050_kodim17.png}}
 {\footnotesize MC-WNNM \textbf{31.08}}
 \end{minipage}
-}
+}\vspace{-3mm}
 \caption{Denoised images and PSNR (dB) results of different methods on the image ``kodim17'' degraded by AWGN with different standard deviations of $\sigma_{r}=30, \sigma_{g}=10, \sigma_{b}=20$ on R, G, B channels, respectively. The images are better to be zoomed in on screen.}
     \label{fig4-4}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1091,7 +1082,7 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_TNRD_nSig301050_kodim19.png}}
 {\footnotesize TNRD 29.39}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1118,13 +1109,13 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_CWNNM_ADMM_nSig301050_kodim19.png}}
 {\footnotesize MC-WNNM \textbf{30.53}}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR (dB) results of different methods on the image ``kodim19'' degraded by AWGN with different standard deviations of $\sigma_{r}=30, \sigma_{g}=10, \sigma_{b}=50$ on R, G, B channels, respectively. The images are better to be zoomed in on screen.}
     \label{fig4-5}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1152,7 +1143,7 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_TNRD_nSig53015_kodim09.png}}
 {\footnotesize TNRD 33.55}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1179,13 +1170,13 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_CWNNM_ADMM_nSig53015_kodim09.png}}
 {\footnotesize MC-WNNM \textbf{34.53}}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR (dB) results of different methods on the image ``kodim09'' degraded by AWGN with different standard deviations of $\sigma_{r}=5, \sigma_{g}=30, \sigma_{b}=15$ on R, G, B channels, respectively. The images are better to be zoomed in on screen.}
     \label{fig4-6}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1213,7 +1204,7 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_TNRD_nSig53015_kodim15.png}}
 {\footnotesize TNRD 33.13}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1240,7 +1231,7 @@ Image\#
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/24images/resize_br_CWNNM_ADMM_nSig53015_kodim15.png}}
 {\footnotesize MC-WNNM \textbf{34.27}}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR (dB) results of different methods on the image ``kodim15'' degraded by AWGN with different standard deviations of $\sigma_{r}=5, \sigma_{g}=30, \sigma_{b}=15$ on R, G, B channels, respectively. The images are better to be zoomed in on screen.}
     \label{fig4-7}
 \end{figure}
@@ -1260,7 +1251,7 @@ The second dataset is provided in \cite{crosschannel2016}, which includes noisy 
 
 Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods.\ It can be seen that CBM3D, MLP, TRND and WNNM-1 tend to generate some noise caused color artifacts.\ Besides, WNNM-2 and WNNM-3 tend to over-smooth much the image.\ These results demonstrate that for color image denoising, neither processing each channel separately nor processing the three channels jointly but ignoring their noise difference is an effective solution.\ Though NC and NI methods are specifically developed for real color image denoising, their performance is not very satisfactory.\ In comparison, the proposed MC-WNNM recovers much better the structures and textures (such as the eye area) than the other competing methods.\ More visual comparisons on this dataset can be found in the Figures \ref{fig4-9} to \ref{fig4-12}.
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1288,7 +1279,7 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_dog.png}}
 {\footnotesize NI}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1315,13 +1306,13 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_dog.png}}
 {\footnotesize MC-WNNM }
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images of the real noisy image ``Dog'' \cite{ncwebsite} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig4-8}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1349,7 +1340,7 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_frog.png}}
 {\footnotesize NI}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1376,13 +1367,13 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_frog.png}}
 {\footnotesize MC-WNNM }
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images of the real noisy image ``Frog'' \cite{ncwebsite} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig4-9}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1410,7 +1401,7 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_chinesegirl.png}}
 {\footnotesize NI}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1437,13 +1428,13 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_chinesegirl.png}}
 {\footnotesize MC-WNNM }
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images of the real noisy image ``Girl'' \cite{ncwebsite} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig4-10}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1471,7 +1462,7 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_circuit.png}}
 {\footnotesize NI}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1498,13 +1489,13 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_circuit.png}}
 {\footnotesize MC-WNNM }
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images of the real noisy image ``Circuit'' \cite{ncwebsite} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig4-11}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1532,7 +1523,7 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_NI_room.png}}
 {\footnotesize NI}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1559,7 +1550,7 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/nc/resize_br_CWNNM_ADMM_NL_room.png}}
 {\footnotesize MC-WNNM }
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images of the real noisy image ``Room'' \cite{ncwebsite} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig4-12}
 \end{figure}
@@ -1567,8 +1558,8 @@ Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods
 
 
 
-\begin{table}
-\begin{adjustwidth}{-2cm}{}
+\begin{table}[t!]
+\begin{adjustwidth}{-1cm}{}
 \caption{PSNR(dB) results and averaged computational time (s) of different methods on 15 cropped real noisy images used in \cite{crosschannel2016}.}
 \label{tab4-4}
 \label{tabb}
@@ -1671,7 +1662,7 @@ Camera Settings
 \end{adjustwidth}
 \end{table}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1699,7 +1690,7 @@ Camera Settings
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_NC_CC15_5dmark3_iso3200_1.png}}
 {\footnotesize NC 36.20}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1726,14 +1717,14 @@ Camera Settings
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_5dmark3_iso3200_1.png}}
 {\footnotesize Mean Image }
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Canon 5D Mark 3 ISO=3200 1'' \cite{crosschannel2016} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig4-13}
 \end{figure}
 
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1761,7 +1752,7 @@ Camera Settings
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_NC_CC15_d600_iso3200_2.png}}
 {\footnotesize NC 35.34}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1788,13 +1779,13 @@ Camera Settings
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_d600_iso3200_2.png}}
 {\footnotesize Mean Image }
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Nikon D600 ISO=3200 2'' \cite{crosschannel2016} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig4-14}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1822,7 +1813,7 @@ Camera Settings
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_NC_CC15_d800_iso1600_2.png}}
 {\footnotesize NC 38.65}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1849,12 +1840,12 @@ Camera Settings
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_d800_iso1600_2.png}}
 {\footnotesize Mean Image }
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Nikon D800 ISO=1600 2'' \cite{crosschannel2016} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig4-15}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1882,7 +1873,7 @@ Camera Settings
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_NC_CC15_d800_iso3200_2.png}}
 {\footnotesize NC 35.76}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1909,14 +1900,14 @@ Camera Settings
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_d800_iso3200_2.png}}
 {\footnotesize Mean Image }
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Nikon D800 ISO=3200 2'' \cite{crosschannel2016} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig4-16}
 \end{figure}
 
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1944,7 +1935,7 @@ Camera Settings
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_NC_CC15_d800_iso6400_2.png}}
 {\footnotesize NC 32.38}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1971,7 +1962,7 @@ Camera Settings
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/cc/resize_br_d800_iso6400_2.png}}
 {\footnotesize Mean Image }
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Nikon D800 ISO=6400 2'' \cite{crosschannel2016} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig4-17}
 \end{figure}

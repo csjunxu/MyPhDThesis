@@ -184,8 +184,7 @@ framework:
 \begin{split}
 \min_{\bm{D}_{\text{I}},\{\bm{\alpha}_{n,m}\}}
 &\sum_{n=1}^{N}\sum_{m=1}^{M}(\|\bm{\overline{y}}_{n,m}-\bm{D}\bm{\alpha}_{n,m}\|_{2}^{2}+\sum_{j=1}^{3p^{2}}\lambda_{j}|\bm{\alpha}_{n,m,j}|)
-\\
-&
+\quad
 \text{s.t.}
 \quad
 \bm{D}=[\bm{D}_{\text{E}}\ \bm{D}_{\text{I}}],\ \bm{D}^{\top}\bm{D} = \bm{I},
@@ -229,8 +228,6 @@ where $\bm{\lambda} = \frac{1}{2}[\lambda_{1},\lambda_{2},...,\lambda_{3p^2}]^{\
 =
 \argmin_{\textbf{D}_{\text{I}}}
 \sum_{n=1}^{N}\sum_{m=1}^{M}\|\bm{\overline{y}}_{n,m}-\bm{D}\bm{\alpha}_{n,m}^{(t+1)}\|_{2}^{2}
-\\
-&
 =
 \argmin_{\textbf{D}_{\text{I}}}
 \|\bm{\overline{Y}}_{n}-\bm{D}\bm{A}^{(t+1)}\|_{F}^{2}
@@ -264,8 +261,6 @@ Let $\mathcal{A}\in \mathbb{R}^{(3p^2-r)\times M}$, $\mathcal{Y}\in \mathbb{R}^{
 &
 \arg\min_{\mathcal{D}}\|\mathcal{Y}-\mathcal{D}\mathcal{A}\|_{F}^{2}
 \quad
-\\
-&
 \text{s.t.}
 \quad
 \mathcal{D}^{\top}\mathcal{D} = \bm{I}_{(3p^2-r)\times (3p^2-r)}, \mathcal{E}^{\top}\mathcal{D} = \bm{0}_{r\times (3p^2-r)}
