@@ -36,57 +36,57 @@ csf,tnrd} learn discriminative models or mapping functions from clean and noisy 
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
 {\footnotesize Noisy 33.30}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CBM3D_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CBM3D_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
 {\footnotesize CBM3D 34.55}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
 {\footnotesize WNNM 35.85}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
 {\footnotesize CSF 35.39}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
 {\footnotesize TNRD 35.97}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
 {\footnotesize DnCNN 34.14}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NI_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NI_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
 {\footnotesize NI 34.39}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NC_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NC_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
 {\footnotesize NC 35.33}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
 {\footnotesize Ours \textbf{37.49}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_3200_A3_66.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-}
+}\vspace{-3mm}
 \caption{Denoised images and PSNR (dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 3200 A3'' \cite{crosschannel2016} by different methods.\ The scene was shot 500 times with the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR index can be computed. The images are better viewed by zooming in on screen.}
     \label{fig3-1}
 \end{figure}
@@ -107,12 +107,13 @@ ncwebsite,neatimage} mentioned above may not perform well on real noisy image de
 This work aims to develop a new paradigm for real noisy image denoising. Different from existing real noisy image denoising methods \cite{fullyblind,rabie2005robust,Liu2008,almapg,crosschannel2016,Zhu_2016_CVPR,noiseclinic,ncwebsite}  which focus on noise modeling, we focus on image prior learning. We argue that with a strong and adaptive prior learning scheme, robust denoising performance on real noisy images can still be obtained. To achieve this goal, we propose to first learn image priors from external clean images, and then employ the learned external priors to guide the learning of internal priors from the given noisy image. The flowchart of the proposed method is illustrated in Fig. \ref{fig3-2}. We first extract millions of patch groups (PGs) from a set of high quality natural images, with which a Gaussian Mixture Model (GMM) is learned as the external image prior. The learned GMM prior model is used to cluster the PGs extracted from the given noisy image, and then an external-internal hybrid orthogonal dictionary is learned as the final prior for each cluster, with which the denoising can be readily performed by weighted sparse coding with closed form solution. Our proposed denoising method is simple and efficient, yet our extensive experiments on real noisy images demonstrate its better denoising performance than the current state-of-the-arts.
 
 
-\begin{figure}
+\begin{figure}[t!]
 \label{fig3-2}
 \centering
 \captionsetup{justification=centering,margin=0.1cm}
 \includegraphics[width=0.8\linewidth]{images/guided/Flowchart.jpg}
 \centering
+\vspace{-3mm}
 \caption{Flowchart of the proposed external prior guided internal prior learning and denoising framework.}
 \end{figure}
 
@@ -164,7 +165,7 @@ for $k=1,...,K$.\ Then $\bm{\overline{Y}}_{n}$ is assigned to the subspace with 
 
 \subsubsection{Guided Orthogonal Dictionary Learning}
 
-Assume that we have assigned all the internal noisy PGs $\{\bm{\overline{Y}}_{n}\}_{n=1}^{N}$ to their corresponding most suitable subspaces in $\{\mathcal{N}(\bm{0},\bm{\Sigma}_{k})\}_{k=1}^{K}$. For the $k$-th subspace, the noisy PGs assigned to it are $\{\bm{\overline{Y}}_{k_{n}}\}_{n=1}^{N_{k}}$, where $\bm{\overline{Y}}_{k_{n}}=[\bm{\overline{y}}_{k_{n},1},...,\bm{\overline{y}}_{k_{n},M}]$ and $\sum_{k=1}^{K}N_{k}=N$.\ We propose to learn an orthogonal dictionary $\bm{D}_{k}$ from each set of PGs $\bm{\overline{Y}}_{k_{n}}$ to characterize the internal PG prior with the guidance of the corresponding external orthogonal dictionary $\bm{U}_{k}$ (Eq.\ (\ref{equ2})). The reasons that we learn orthogonal dictionaries are two-fold.\ Firstly, the PGs $\{\bm{\overline{Y}}_{k_{n}}\}_{n=1}^{N_{k}}$ are in a subspace of the whole space of all PGs; therefore, there is no necessary to learn a redundant over-complete dictionary to characterize it, while an orthonormal dictionary has naturally zero \emph{mutual incoherence} \cite{donoho2001uncertainty}. Secondly, the orthogonality of dictionary can make the patch encoding in the testing stage very efficient, leading to an efficient denoising algorithm (please refer to sub-section III-C for more details).
+Assume that we have assigned all the internal noisy PGs $\{\bm{\overline{Y}}_{n}\}_{n=1}^{N}$ to their corresponding most suitable subspaces in $\{\mathcal{N}(\bm{0},\bm{\Sigma}_{k})\}_{k=1}^{K}$. For the $k$-th subspace, the noisy PGs assigned to it are $\{\bm{\overline{Y}}_{k_{n}}\}_{n=1}^{N_{k}}$, where $\bm{\overline{Y}}_{k_{n}}=[\bm{\overline{y}}_{k_{n},1},...,\bm{\overline{y}}_{k_{n},M}]$ and $\sum_{k=1}^{K}N_{k}=N$.\ We propose to learn an orthogonal dictionary $\bm{D}_{k}$ from each set of PGs $\bm{\overline{Y}}_{k_{n}}$ to characterize the internal PG prior with the guidance of the corresponding external orthogonal dictionary $\bm{U}_{k}$ (Eq.\ (\ref{equ3-2})). The reasons that we learn orthogonal dictionaries are two-fold.\ Firstly, the PGs $\{\bm{\overline{Y}}_{k_{n}}\}_{n=1}^{N_{k}}$ are in a subspace of the whole space of all PGs; therefore, there is no necessary to learn a redundant over-complete dictionary to characterize it, while an orthonormal dictionary has naturally zero \emph{mutual incoherence} \cite{donoho2001uncertainty}. Secondly, the orthogonality of dictionary can make the patch encoding in the testing stage very efficient, leading to an efficient denoising algorithm (please refer to sub-section III-C for more details).
 
 We let the orthogonal dictionary $\bm{D}_{k}$ be 
 \vspace{-2mm}
@@ -406,45 +407,45 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_circuit.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_dog.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_frog.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_room.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_room.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_singer.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_singer.png}}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_bears.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_bears.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_cards.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_cards.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_girl.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_girl.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_palace.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_palace.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_woman.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_woman.png}}
 \end{minipage}
 }
 \caption{Some samples cropped from real noisy images of Dataset 1 \cite{ncwebsite}.}
@@ -456,67 +457,67 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_5dmark3_iso3200_1_real.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_5dmark3_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_5dmark3_iso3200_2_real.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_5dmark3_iso3200_3_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_5dmark3_iso3200_3_real.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d600_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d600_iso3200_1_real.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d600_iso3200_2_real.png}}
-\end{minipage}
-}
-\subfigure{
-\begin{minipage}[t]{0.19\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d600_iso3200_3_real.png}}
-\end{minipage}
-\begin{minipage}[t]{0.19\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso1600_1_real.png}}
-\end{minipage}
-\begin{minipage}[t]{0.19\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso1600_2_real.png}}
-\end{minipage}
-\begin{minipage}[t]{0.19\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso1600_3_real.png}}
-\end{minipage}
-\begin{minipage}[t]{0.19\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d600_iso3200_2_real.png}}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d600_iso3200_3_real.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso3200_3_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso1600_1_real.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso6400_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso1600_2_real.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso6400_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso1600_3_real.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso6400_3_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso3200_1_real.png}}
+\end{minipage}
+}
+\subfigure{
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso3200_2_real.png}}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso3200_3_real.png}}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso6400_1_real.png}}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso6400_2_real.png}}
+\end{minipage}
+\begin{minipage}[t]{0.19\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/mcwnnm/resize_d800_iso6400_3_real.png}}
 \end{minipage}
 }
 \caption{The 15 cropped real noisy images used in \cite{crosschannel2016}.}
@@ -528,45 +529,45 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Canon_EOS_5D_Mark3_ISO_3200_C1_52.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Canon_EOS_5D_Mark3_ISO_3200_C1_52.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Canon_EOS_5D_Mark3_ISO_3200_C2_44.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Canon_EOS_5D_Mark3_ISO_3200_C2_44.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Canon_EOS_5D_Mark3_ISO_3200_C3_26.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Canon_EOS_5D_Mark3_ISO_3200_C3_26.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Canon_EOS_5D_Mark3_ISO_3200_C3_73.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Canon_EOS_5D_Mark3_ISO_3200_C3_73.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D600_ISO_3200_C2_67.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D600_ISO_3200_C2_67.png}}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_1600_B2_80.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_1600_B2_80.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_1600_B3_82.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_1600_B3_82.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_3200_A4_51.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_3200_A4_51.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_6400_B3_95.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_6400_B3_95.png}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_3200_A2_80.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_CC_Noisy_Nikon_D800_ISO_3200_A2_80.png}}
 \end{minipage}
 }
 \caption{Some samples cropped from real noisy images of Dataset 2 \cite{crosschannel2016}.}
@@ -578,45 +579,45 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO800_IMG_9916_part6.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO800_IMG_9916_part6.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO1600_IMG_1056_part2.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO1600_IMG_1056_part2.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO3200_IMG_8701_part8.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO3200_IMG_8701_part8.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO3200_IMG_8793_part10.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO3200_IMG_8793_part10.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO3200_IMG_9133_part4.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO3200_IMG_9133_part4.JPG}}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO3200_IMG_9333_part6.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO3200_IMG_9333_part6.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO6400_IMG_0360_part2.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO6400_IMG_0360_part2.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO6400_IMG_0985_part5.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/Canon_80D_ISO6400_IMG_0985_part5.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/SONY_A7II_ISO12800_DSC02078_part1.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/SONY_A7II_ISO12800_DSC02078_part1.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/SONY_A7II_ISO12800_DSC02383_part8.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/SONY_A7II_ISO12800_DSC02383_part8.JPG}}
 \end{minipage}
 }
     \caption{Some samples cropped from our dataset (Dataset 3).}
@@ -629,27 +630,27 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
 {\footnotesize Noisy 35.89}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Offline_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Offline_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
 {\footnotesize External 39.05}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Online_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Online_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
 {\footnotesize Internal 38.75}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
 {\footnotesize Guided Internal \textbf{39.39}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D600_ISO_3200_C1_96.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 }
@@ -663,27 +664,27 @@ Our dataset provides real noisy images of realistic objects with different ISO s
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
 {\footnotesize Noisy 33.77}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Offline_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Offline_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
 {\footnotesize External 36.97}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Online_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Online_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
 {\footnotesize Internal 37.40}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
 {\footnotesize Guided Internal \textbf{38.01}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D600_ISO_3200_C1_94b.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 }
@@ -704,54 +705,54 @@ We compare the three methods on the 60 cropped images from \cite{crosschannel201
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_dog.png}}
 {\footnotesize Noisy}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_BM3DPoisson_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_BM3DPoisson_dog.png}}
 {\footnotesize GAT-BM3D}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_BM3D_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_BM3D_dog.png}}
 {\footnotesize CBM3D}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_dog.png}}
 {\footnotesize WNNM}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_dog.png}}
 {\footnotesize CSF}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_dog.png}}
 {\footnotesize TNRD}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_dog.png}}
 {\footnotesize DnCNN}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NI_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NI_dog.png}}
 {\footnotesize NI}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NC_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NC_dog.png}}
 {\footnotesize NC}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_dog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_dog.png}}
 {\footnotesize Ours}
 \end{minipage}
 }
@@ -764,54 +765,54 @@ We compare the three methods on the 60 cropped images from \cite{crosschannel201
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_Noisy_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_Noisy_frog.png}}
 {\footnotesize Noisy}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_BM3DPoisson_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_BM3DPoisson_frog.png}}
 {\footnotesize GAT-BM3D}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_CBM3D_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_CBM3D_frog.png}}
 {\footnotesize CBM3D}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_WNNM_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_WNNM_frog.png}}
 {\footnotesize WNNM}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_CSF_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_CSF_frog.png}}
 {\footnotesize CSF}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_TRD_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_TRD_frog.png}}
 {\footnotesize TNRD}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_DnCNN_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_DnCNN_frog.png}}
 {\footnotesize DnCNN}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_NI_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_NI_frog.png}}
 {\footnotesize NI}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_NC_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_NC_frog.png}}
 {\footnotesize NC}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_Guided_frog.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_Guided_frog.png}}
 {\footnotesize Ours}
 \end{minipage}
 }
@@ -824,54 +825,54 @@ We compare the three methods on the 60 cropped images from \cite{crosschannel201
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_Noisy_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_Noisy_circuit.png}}
 {\footnotesize Noisy}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_BM3DPoisson_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_BM3DPoisson_circuit.png}}
 {\footnotesize GAT-BM3D}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_CBM3D_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_CBM3D_circuit.png}}
 {\footnotesize CBM3D}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_WNNM_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_WNNM_circuit.png}}
 {\footnotesize WNNM}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_CSF_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_CSF_circuit.png}}
 {\footnotesize CSF}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_TRD_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_TRD_circuit.png}}
 {\footnotesize TNRD}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_DnCNN_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_DnCNN_circuit.png}}
 {\footnotesize DnCNN}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_NI_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_NI_circuit.png}}
 {\footnotesize NI}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_NC_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_NC_circuit.png}}
 {\footnotesize NC}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_Guided_circuit.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/nc/resize_br_Guided_circuit.png}}
 {\footnotesize Ours}
 \end{minipage}
 }
@@ -1122,54 +1123,54 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_5dmark3_iso3200_1_real.png}}
 {\footnotesize Noisy 37.00}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CBM3D_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CBM3D_5dmark3_iso3200_1_real.png}}
 {\footnotesize CBM3D 39.76}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_5dmark3_iso3200_1_real.png}}
 {\footnotesize WNNM 37.51}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_5dmark3_iso3200_1_real.png}}
 {\footnotesize TNRD 39.51}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_5dmark3_iso3200_1_real.png}}
 {\footnotesize DnCNN 37.26}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NI_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NI_5dmark3_iso3200_1_real.png}}
 {\footnotesize NI 37.68}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NC_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NC_5dmark3_iso3200_1_real.png}}
 {\footnotesize NC 38.76}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CCNoise_5dmark3_iso3200_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CCNoise_5dmark3_iso3200_1.png}}
 {\footnotesize CC 38.37}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_5dmark3_iso3200_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_5dmark3_iso3200_1.png}}
 {\footnotesize Ours \textbf{40.50}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_5dmark3_iso3200_1_real.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 }
@@ -1183,54 +1184,54 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Noisy_5dmark3_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Noisy_5dmark3_iso3200_2_real.png}}
 {\footnotesize Noisy 33.88}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_CBM3D_5dmark3_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_CBM3D_5dmark3_iso3200_2_real.png}}
 {\footnotesize CBM3D 36.40}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_WNNM_5dmark3_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_WNNM_5dmark3_iso3200_2_real.png}}
 {\footnotesize WNNM 33.86}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_TRD_5dmark3_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_TRD_5dmark3_iso3200_2_real.png}}
 {\footnotesize TNRD 36.47}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_DnCNN_5dmark3_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_DnCNN_5dmark3_iso3200_2_real.png}}
 {\footnotesize DnCNN 34.13}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_NI_5dmark3_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_NI_5dmark3_iso3200_2_real.png}}
 {\footnotesize NI 34.87}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_NC_5dmark3_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_NC_5dmark3_iso3200_2_real.png}}
 {\footnotesize NC 35.69}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_CCNoise_5dmark3_iso3200_2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_CCNoise_5dmark3_iso3200_2.png}}
 {\footnotesize CC 35.37}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Guided_5dmark3_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Guided_5dmark3_iso3200_2_real.png}}
 {\footnotesize Ours \textbf{37.05}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Mean_5dmark3_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Mean_5dmark3_iso3200_2_real.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 }
@@ -1243,54 +1244,54 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Noisy_d600_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Noisy_d600_iso3200_2_real.png}}
 {\footnotesize Noisy 33.77}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_CBM3D_d600_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_CBM3D_d600_iso3200_2_real.png}}
 {\footnotesize CBM3D 35.07}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_WNNM_d600_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_WNNM_d600_iso3200_2_real.png}}
 {\footnotesize WNNM 36.09}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_TRD_d600_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_TRD_d600_iso3200_2_real.png}}
 {\footnotesize TNRD 36.37}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_DnCNN_d600_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_DnCNN_d600_iso3200_2_real.png}}
 {\footnotesize DnCNN 34.48}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_NI_d600_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_NI_d600_iso3200_2_real.png}}
 {\footnotesize NI 35.36}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_NC_d600_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_NC_d600_iso3200_2_real.png}}
 {\footnotesize NC \textbf{36.70}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_CCNoise_d600_iso3200_2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_CCNoise_d600_iso3200_2.png}}
 {\footnotesize CC 35.95}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Guided_d600_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Guided_d600_iso3200_2_real.png}}
 {\footnotesize Ours 36.31}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Mean_d600_iso3200_2_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Mean_d600_iso3200_2_real.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 }
@@ -1474,54 +1475,54 @@ Time
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize Noisy 33.60}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CBM3D_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CBM3D_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize CBM3D 35.23}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize WNNM 36.50}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize CSF 36.21}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize TNRD 37.10}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize DnCNN 34.43}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NI_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NI_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize NI 35.02}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NC_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NC_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize NC 36.07}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize Ours \textbf{37.50}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 }
@@ -1534,54 +1535,54 @@ Time
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Noisy_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Noisy_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize Noisy 35.21}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_CBM3D_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_CBM3D_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize CBM3D 37.71}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_WNNM_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_WNNM_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize WNNM 39.61}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_CSF_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_CSF_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize CSF 38.14}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize TNRD 39.04}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_DnCNN_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_DnCNN_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize DnCNN 35.68}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_NI_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_NI_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize NI 37.41}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_NC_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_NC_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize NC 39.53}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Guided_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Guided_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize Ours \textbf{39.96}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 }
@@ -1595,54 +1596,54 @@ Time
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Noisy_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Noisy_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize Noisy 34.02}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_CBM3D_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_CBM3D_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize CBM3D 35.45}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_WNNM_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_WNNM_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize WNNM 34.60}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_CSF_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_CSF_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize CSF 32.94}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize TNRD 33.48}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_DnCNN_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_DnCNN_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize DnCNN 34.30}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_NI_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_NI_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize NI 36.04}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_NC_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_NC_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize NC 35.89}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Guided_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Guided_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize Ours \textbf{37.50}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 } 
@@ -1656,54 +1657,54 @@ Time
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_Canon_80D_ISO12800_IMG_2321_part2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Noisy_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize Noisy 36.51}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CBM3D_Canon_80D_ISO12800_IMG_2321_part2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CBM3D_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize CBM3D 37.91}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_Canon_80D_ISO12800_IMG_2321_part2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_WNNM_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize WNNM 38.23}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_Canon_80D_ISO12800_IMG_2321_part2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_CSF_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize CSF 39.02}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_Canon_80D_ISO12800_IMG_2321_part2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize TNRD 39.26}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_Canon_80D_ISO12800_IMG_2321_part2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize DnCNN 36.52}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NI_Canon_80D_ISO12800_IMG_2321_part2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NI_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize NI 37.52}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NC_Canon_80D_ISO12800_IMG_2321_part2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_NC_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize NC 37.53}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_Canon_80D_ISO12800_IMG_2321_part2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Guided_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize Ours \textbf{39.41}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_Canon_80D_ISO12800_IMG_2321_part2.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 } 
@@ -1716,54 +1717,54 @@ Time
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Noisy_Canon_80D_ISO12800_IMG_2360_part10.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Noisy_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize Noisy 37.25}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_CBM3D_Canon_80D_ISO12800_IMG_2360_part10.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_CBM3D_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize CBM3D 39.39}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_WNNM_Canon_80D_ISO12800_IMG_2360_part10.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_WNNM_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize WNNM 41.24}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_CSF_Canon_80D_ISO12800_IMG_2360_part10.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_CSF_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize CSF 41.71}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_TRD_Canon_80D_ISO12800_IMG_2360_part10.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_TRD_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize TNRD 41.87}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_DnCNN_Canon_80D_ISO12800_IMG_2360_part10.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_DnCNN_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize DnCNN 37.24}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_NI_Canon_80D_ISO12800_IMG_2360_part10.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_NI_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize NI 39.86}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_NC_Canon_80D_ISO12800_IMG_2360_part10.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_NC_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize NC 39.54}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Guided_Canon_80D_ISO12800_IMG_2360_part10.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Guided_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize Ours \textbf{41.95}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Mean_Canon_80D_ISO12800_IMG_2360_part10.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Mean_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 }  
@@ -1776,54 +1777,54 @@ Time
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Noisy_SONY_A7II_ISO6400_DSC03017_part5.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Noisy_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize Noisy 37.35}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_CBM3D_SONY_A7II_ISO6400_DSC03017_part5.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_CBM3D_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize CBM3D 41.95}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_WNNM_SONY_A7II_ISO6400_DSC03017_part5.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_WNNM_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize WNNM 41.92}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_CSF_SONY_A7II_ISO6400_DSC03017_part5.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_CSF_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize CSF 40.92}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_TRD_SONY_A7II_ISO6400_DSC03017_part5.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_TRD_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize TNRD 41.83}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_DnCNN_SONY_A7II_ISO6400_DSC03017_part5.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_DnCNN_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize DnCNN 37.35}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_NI_SONY_A7II_ISO6400_DSC03017_part5.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_NI_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize NI 38.28}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_NC_SONY_A7II_ISO6400_DSC03017_part5.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_NC_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize NC 39.54}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Guided_SONY_A7II_ISO6400_DSC03017_part5.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Guided_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize Ours \textbf{43.11}}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Mean_SONY_A7II_ISO6400_DSC03017_part5.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Mean_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 }
