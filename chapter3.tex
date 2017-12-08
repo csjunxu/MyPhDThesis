@@ -1109,7 +1109,7 @@ Similar to dataset 2 \cite{crosschannel2016}, there is a ``ground truth'' image 
 \textbf{Comparison on speed.}
 Efficiency is an important aspect to evaluate the efficiency of algorithms. We compare the speed of all competing methods except for CC. All experiments are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-5930K CPU of 3.5GHz and 32GB RAM. The average running time (second) of the compared methods on the 100 real noisy images is shown in Table \ref{tab3-5}. The least average running time are highlighted in bold. One can easily see that the commercial software Neat Image (NI) is the fastest method with highly optimized code. For a $512\times512$ image, NI costs about 0.6 second. The other methods cost from 5.2 (TNRD) to 152.2 (WNNM) seconds, while the proposed method costs about 24.1 seconds. It should be noted that GAT-BM3D, CBM3D, TNRD, and NC are implemented with compiled C++ mex-function and with parallelization, while WNNM, MLP, CSF, DnCNN, and the proposed method are implemented purely in Matlab. 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1137,7 +1137,7 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_DnCNN_5dmark3_iso3200_1_real.png}}
 {\footnotesize DnCNN 37.26}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1164,13 +1164,13 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_5dmark3_iso3200_1_real.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-}
+}\vspace{-3mm}
 \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 5D Mark 3 ISO 3200 1'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-12}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
    \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1198,7 +1198,7 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_DnCNN_5dmark3_iso3200_2_real.png}}
 {\footnotesize DnCNN 34.13}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1225,12 +1225,12 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Mean_5dmark3_iso3200_2_real.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 5D Mark 3 ISO 3200 2'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-13}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1258,7 +1258,7 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_DnCNN_d600_iso3200_2_real.png}}
 {\footnotesize DnCNN 34.48}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1285,17 +1285,16 @@ Efficiency is an important aspect to evaluate the efficiency of algorithms. We c
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc15/resize_br_Mean_d600_iso3200_2_real.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D600 ISO 3200 2'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-14}
 \end{figure}
 
 
 \begin{table}
-\begin{adjustwidth}{-1cm}{}
+\begin{adjustwidth}{-.2cm}{}
 \scriptsize
 \caption{Average PSNR(dB) results of different methods on 60 real noisy images cropped from \cite{crosschannel2016}.}
-
 \label{tab3-4}
 \begin{center}
 \renewcommand\arraystretch{1}
@@ -1325,8 +1324,8 @@ PSNR
 
 In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 60 real noisy images cropped from \cite{crosschannel2016}.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR and SSIM can be computed.\ The average SSIM results of GAT-BM3D \cite{makitalo2013optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{tnrd}, DnCNN \cite{dncnn}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, and the proposed method are listed in Table \ref{tab3-4} (CC is not compared since the code of \cite{crosschannel2016} is not available).\ As can be seen from Figures \ref{fig3-6}-\ref{fig3-7}, our proposed method achieves better performance than the competing methods.
 
-\begin{table}[htpb]
-\begin{adjustwidth}{-1cm}{}
+\begin{table}[t!]
+\begin{adjustwidth}{-.2cm}{}
 \scriptsize
 \caption{Average SSIM \cite{ssim} results of different methods on 60 real noisy images cropped from \cite{crosschannel2016}.}
 \label{tab3-5}
@@ -1353,14 +1352,14 @@ SSIM
 \hline
 \end{tabular}
 \end{center}
-\end{adjustwidth}
+\end{adjustwidth}\vspace{-2mm}
 \end{table}
 
 
 
 
-\begin{table}
-\begin{adjustwidth}{-2cm}{}
+\begin{table}[t!]
+\begin{adjustwidth}{-.2cm}{}
 \scriptsize
 \caption{Average PSNR(dB) results of different methods on 100 real noisy images cropped from our new dataset.}
 
@@ -1388,14 +1387,14 @@ PSNR
 \hline
 \end{tabular}
 \end{center}
-\end{adjustwidth}
+\end{adjustwidth}\vspace{-2mm}
 \end{table}
 
 In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 100 real noisy images cropped from the new dataset we constructed.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR and SSIM can be computed.\ The average  SSIM results of GAT-BM3D \cite{makitalo2013optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{tnrd}, DnCNN \cite{dncnn}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, and the proposed method are listed in Table \ref{tab3-7} (CC is not compared since the code of \cite{crosschannel2016} is not available).\ As can be seen from Figure \ref{fig3-12}, our proposed method achieves better performance than the competing methods.
 
 
-\begin{table}[htpb]
-\begin{adjustwidth}{-1cm}{}
+\begin{table}[t!]
+\begin{adjustwidth}{-.2cm}{}
 \scriptsize
 \caption{Average SSIM \cite{ssim} results of different methods on 100 real noisy images cropped from our new dataset.}
 \label{tab3-7}
@@ -1422,16 +1421,15 @@ SSIM
 \hline
 \end{tabular}
 \end{center}
-\end{adjustwidth}
+\end{adjustwidth}\vspace{-2mm}
 \end{table}
 
 
 
-\begin{table}
-\begin{adjustwidth}{-1cm}{}
+\begin{table}[t!]
+\begin{adjustwidth}{-.2cm}{}
 \scriptsize
 \caption{Average Speed (sec.) results of different methods on 100 real noisy images cropped from our new dataset.}
-
 \label{tab3-8}
 \begin{center}
 \renewcommand\arraystretch{1}
@@ -1456,12 +1454,12 @@ Time
 \hline
 \end{tabular}
 \end{center}
-\end{adjustwidth}
+\end{adjustwidth}\vspace{-2mm}
 \end{table}
 
 
 %------------------------------------------------------------------------------------
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1489,7 +1487,7 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize TNRD 37.10}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1516,12 +1514,12 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_3200_A3_96.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 3200 A3'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-15}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1549,7 +1547,7 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize TNRD 39.04}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1576,13 +1574,13 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_1600_B2_109.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-}
+}\vspace{-3mm}
 \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 1600 B2'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-16}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1610,7 +1608,7 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_TRD_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize TNRD 33.48}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1637,13 +1635,13 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/cc60/resize_br_Mean_CC_Noisy_Nikon_D800_ISO_3200_A1_111.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-} 
+} \vspace{-3mm}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Nikon D800 ISO 3200 A1'' \cite{crosschannel2016} by different methods. The images are better to be zoomed in on screen.}
     \label{fig3-17}
 \end{figure}
 
 %------------------------------------------------------------------------------------
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1671,7 +1669,7 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_TRD_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize TNRD 39.26}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1698,12 +1696,12 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/resize_br_Mean_Canon_80D_ISO12800_IMG_2321_part2.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-} 
+} \vspace{-3mm}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 80D ISO 12800 IMG 2321'' in our new dataset by different methods.. The images are better to be zoomed in on screen.}
     \label{fig3-18}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1731,7 +1729,7 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_TRD_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize TNRD 41.87}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1758,12 +1756,12 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Mean_Canon_80D_ISO12800_IMG_2360_part10.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-}  
+}  \vspace{-3mm}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``Canon 80D ISO 12800 IMG2360'' in our new dataset by different methods.. The images are better to be zoomed in on screen.}
     \label{fig3-19}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -1791,7 +1789,7 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_TRD_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize TNRD 41.83}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -1818,7 +1816,7 @@ Time
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/guided/our/resize_br_Mean_SONY_A7II_ISO6400_DSC03017_part5.png}}
 {\footnotesize Mean Image}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR(dB) results of a region cropped from the real noisy image ``SONY A7II ISO 6400 DSC03017'' in our new dataset by different methods.. The images are better to be zoomed in on screen.}
     \label{fig3-20}
 \end{figure}
