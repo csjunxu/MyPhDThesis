@@ -331,9 +331,7 @@ where $\bm{\mu}_{n}$ is the group mean of $\bm{Y}_{n}$. The latent clean image i
 \label{alg3-2}
 \begin{tabular}{l}
 \hline
-\textbf{Algorithm 2}: External Prior Guided Internal Prior Learning for Real 
-\\
-\quad \quad \quad \quad \quad \quad Noisy Image Denoising
+\textbf{Algorithm 2}: External Prior Guided Internal Prior Learning for Real Noisy Image Denoising
 \\
 \hline
 \textbf{Input:} Noisy image $\mathbf{y}$, external PG prior GMM model
@@ -358,17 +356,13 @@ where $\bm{\mu}_{n}$ is the group mean of $\bm{Y}_{n}$. The latent clean image i
 \\
 \quad\textbf{for} the PGs in each subspace \textbf{do}
 \\
-4.\quad External PG prior guided internal orthogonal dictionary learning by
-\\
-\quad \ \ \ solving Eq. (\ref{equ3-5});
+4.\quad External PG prior guided internal orthogonal dictionary learning by solving Eq. (\ref{equ3-5});
 \\
 5.\quad Recover each patch in all PGs via Eq. (\ref{equ3-13});
 \\
 \quad\textbf{end for}
 \\
-6. Aggregate the recovered PGs of all subspaces to form the recovered 
-\\
-\quad image $\hat{\mathbf{x}}^{(Ite)}$;
+6. Aggregate the recovered PGs of all subspaces to form the recovered image $\hat{\mathbf{x}}^{(Ite)}$;
 \\
 \textbf{end for}
 \\

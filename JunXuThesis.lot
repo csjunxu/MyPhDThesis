@@ -9,7 +9,7 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Average PSNR (dB) and Run Time (seconds) of the ``External'', ``Internal'', and ``Guided Internal'' methods on 60 real noisy images (of size $500\times 500\times 3$) cropped from \cite {crosschannel2016}.\relax }}{64}{table.caption.43}
 \contentsline {table}{\numberline {3.2}{\ignorespaces PSNR(dB) results of different methods on 15 cropped real noisy images used in \cite {crosschannel2016}.\relax }}{65}{table.caption.44}
-\contentsline {table}{\numberline {3.3}{\ignorespaces SSIM \cite {ssim} results of different methods on 15 cropped real noisy images used in \cite {crosschannel2016}.\relax }}{66}{table.caption.45}
+\contentsline {table}{\numberline {3.3}{\ignorespaces SSIM \cite {ssim} results of different methods on 15 cropped real noisy images used in \cite {crosschannel2016}.\relax }}{65}{table.caption.45}
 \contentsline {table}{\numberline {3.4}{\ignorespaces Average PSNR(dB) results of different methods on 60 real noisy images cropped from \cite {crosschannel2016}.\relax }}{67}{table.caption.49}
 \contentsline {table}{\numberline {3.5}{\ignorespaces Average SSIM \cite {ssim} results of different methods on 60 real noisy images cropped from \cite {crosschannel2016}.\relax }}{69}{table.caption.50}
 \contentsline {table}{\numberline {3.6}{\ignorespaces Average PSNR(dB) results of different methods on 100 real noisy images cropped from our new dataset.\relax }}{69}{table.caption.51}
