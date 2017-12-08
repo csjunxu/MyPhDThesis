@@ -8717,4 +8717,154 @@ Overfull \hbox (27.06377pt too wide) in paragraph at lines 182--214
 Overfull \hbox (36.00377pt too wide) in paragraph at lines 182--214
 \OMS/txsy/m/n/12 E[]D \OT1/txr/m/n/12 = \OT1/txr/bx/n/12 0[]$\OT1/txr/m/n/12 , 
 we have $[](\OMS/txsy/m/n/12 Y[]DA\OT1/txr/m/n/12 ) = []((\OML/txmi/bx/it/12 I[
-] \OMS/txsy/m/n/12 ^^@ EE[]\OT1/txr/m/n/12 )\O
+] \OMS/txsy/m/n/12 ^^@ EE[]\OT1/txr/m/n/12 )\OMS/txsy/m/n/12 YA[]D[]\OT1/txr/m/
+n/12 ) = [](\OMS/txsy/m/n/12 U\OT1/txr/m/n/12 ^^F\OMS/txsy/m/n/12 V[]D[]\OT1/tx
+r/m/n/12 ) =
+ []
+
+[195] [196]
+Underfull \vbox (badness 1852) has occurred while \output is active []
+
+ [197]
+Overfull \hbox (28.42372pt too wide) in paragraph at lines 336--337
+[]\OT1/txr/m/n/12 2. Sec-ondly, we prove that the se-quence of La-grangian func
+-tion $\OMS/txsy/m/n/12 fL\OT1/txr/m/n/12 (\OML/txmi/bx/it/12 X[]\OML/txmi/m/it
+/12 ; \OML/txmi/bx/it/12 Z[]\OML/txmi/m/it/12 ; \OML/txmi/bx/it/12 A[]\OML/txmi
+/m/it/12 ; ^^Z[]\OT1/txr/m/n/12 )\OMS/txsy/m/n/12 g$
+ []
+
+[198] [199]
+Underfull \vbox (badness 2809) has occurred while \output is active []
+
+ [200]
+Overfull \hbox (26.14372pt too wide) in paragraph at lines 706--707
+[]\OT1/txr/m/n/12 2. Sec-ondly, we prove that the se-quence of La-grangian func
+-tion $\OMS/txsy/m/n/12 fL\OT1/txr/m/n/12 (\OML/txmi/bx/it/12 C[]\OML/txmi/m/it
+/12 ; \OML/txmi/bx/it/12 Z[]\OML/txmi/m/it/12 ; \OT1/txr/bx/n/12 ^^A[]\OML/txmi
+/m/it/12 ; ^^Z[]\OT1/txr/m/n/12 )\OMS/txsy/m/n/12 g$
+ []
+
+[201] [202] [203]
+Underfull \vbox (badness 2875) has occurred while \output is active []
+
+ [204]
+Overfull \hbox (6.58849pt too wide) in paragraph at lines 1105--1123
+[]\OT1/txr/m/n/12 Since $\OML/txmi/bx/it/12 A\OML/txmi/m/it/12 ; \OML/txmi/bx/i
+t/12 B$ \OT1/txr/m/n/12 are sym-met-ric ma-tri-ces, they can be di-ag-o-nal-ize
+d as $\OML/txmi/bx/it/12 A \OT1/txr/m/n/12 = \OML/txmi/bx/it/12 U[]\OT1/txr/bx/
+n/12 ^^F[]\OML/txmi/bx/it/12 U[]$
+ []
+
+) [205]
+No file westernthesis.bnd.
+(./westernthesis.bbl (./westernthesis.brf)
+\tf@brf=\write7
+\openout7 = `westernthesis.brf'.
+
+
+Underfull \hbox (badness 5147) in paragraph at lines 7--7
+[]\OT1/txr/m/n/12 The most com-monly used camera-lens com-bi-na-tions.  [][]$\O
+T1/txtt/m/n/12 https : / /
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [206
+
+
+]
+Missing character: There is no â in font txr!
+Missing character: There is no € in font txr!
+Missing character: There is no ™ in font txr!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [207]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [208]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [209]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [210]
+Missing character: There is no Ã in font txr!
+Missing character: There is no ¼ in font txr!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [211]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [212]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [213]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [214]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [215]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [216]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [217]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [218])
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 554.
+[219]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 554.
+ (./westernthesis.aux (./acknowledgement.aux) (./chapter1.aux)
+(./chapter2.aux) (./chapter3.aux) (./chapter4.aux) (./chapter5.aux)
+(./chapter6.aux) (./chapter7.aux) (./chapter8.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 554.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 554.
+Package rerunfilecheck Info: File `westernthesis.brf' has not changed.
+(rerunfilecheck)             Checksum: CD743205486E278F68CF636BC436F7A3;48425.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 554.
+ ) 
+Here is how much of TeX's memory you used:
+ 14940 strings out of 493091
+ 334698 string characters out of 6134517
+ 421716 words of memory out of 5000000
+ 16609 multiletter control sequences out of 15000+600000
+ 89052 words of font info for 205 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,20n,39p,5322b,817s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Software
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Sof
+tware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c
+:/Software/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/Soft
+ware/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxbmi.pfb><c:/Software
+/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/Software/texli
+ve/2015/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/Software/texlive/20
+15/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/Software/texlive/2015/tex
+mf-dist/fonts/type1/public/txfonts/rtxsc.pfb><c:/Software/texlive/2015/texmf-di
+st/fonts/type1/public/txfonts/txbsy.pfb><c:/Software/texlive/2015/texmf-dist/fo
+nts/type1/public/txfonts/txex.pfb><c:/Software/texlive/2015/texmf-dist/fonts/ty
+pe1/public/txfonts/txsy.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/pu
+blic/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/time
+s/utmb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmbi8a
+.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/
+Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Software/
+texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on westernthesis.pdf (245 pages, 55409992 bytes).
+PDF statistics:
+ 5009 PDF objects out of 5155 (max. 8388607)
+ 3934 compressed objects within 40 object streams
+ 864 named destinations out of 1000 (max. 500000)
+ 3411 words of extra memory for PDF output out of 10000 (max. 10000000)
+
