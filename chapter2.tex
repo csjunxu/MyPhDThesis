@@ -126,7 +126,7 @@ Suppose that the $k$th Gaussian component is selected for PG $\bm{\overline{Y}}$
 \bm{\Sigma} = \bm{D}\bm{\Lambda}\bm{D}^{T},
 \end{equation}
 where $\bm{D}$ is an orthonormal matrix composed by the eigenvectors of $\bm{\Sigma}$ and $\bm{\Lambda}$ is the diagonal matrix of eigenvalues. With PG-GMM, the eigenvectors  in $\bm{D}$ capture the statistical structures of NSS variations in natural images, while the eigenvalues in $\bm{\Lambda}$ represent the significance of these eigenvectors. Fig.\ \ref{fig2-4} shows the eigenvectors for 3 Gaussian components. It can be seen that these eigenvectors encode the possible variations of the PGs. For one Gaussian component, the first eigenvector represents its largest variation, while the last eigenvector represents its smallest variation. For different Gaussian components, we can see that their eigenvectors (with the same index) are very different. Hence, $\bm{D}$ can be used to represent the structural variations of the PGs in that component.
-\begin{figure}[t]
+\begin{figure}[t!]
 \centering
 \includegraphics[width=1\linewidth]{images/pgpd/dics.png}
 \caption{Eigenvectors of 3 Gaussian components from the learned PG-GMM, sorted by the values of corresponding eigenvalues.}
@@ -174,7 +174,7 @@ where $\text{sgn}(\bullet)$ is the sign function, $\odot$ means element-wise mul
 With the solution $\hat{\bm{\alpha}}$ in (\ref{equ2-17}), the clean patch in a PG can be estimated as $\hat{\bm{x}}_{m}=\bm{D}\hat{\bm{\alpha}}+\bm{\mu}_{y}$. Then the clean image $\hat{\bm{x}}$ can be reconstructed by aggregating all the estimated PGs. In practice, we could perform the above denoising procedures for several iterations for better denoising outputs. In iteration $t$, we use the iterative regularization strategy \cite{osher2005iterative} to add back to the recovered image $\hat{\bm{x}}^{(t-1)}$ some estimation residual in iteration $t-1$. The standard deviation of noise in iteration $t$ is adjusted as $\sigma^{(t)} = \eta*\sqrt{\sigma^{2}-\|\bm{y}-\bm{y}^{(t-1)}\|_{2}^{2}}$, where $\eta$ is a constant. The proposed denoising algorithm is summarized in Algorithm 1 (Alg. 1).
 
 In the proposed algorithm, there are $N$ PGs in an image and $M$ patches in each PG. Then the computational cost for Gaussian component selection is $O(p^{6}NMK)$.\ The cost for iterative regularization and noise estimation is negligible. The cost for closed-form weighted sparse coding is $O(p^{4}NM)$. Suppose that there are $T$ iterations, the overall complexity of our denoising algorithm is $O(p^{6}NMKT)$.
-\begin{table}
+\begin{table}[t!]
 \label{alg1}
 \begin{tabular}{l}
 \hline
@@ -216,7 +216,7 @@ $\bm{y}^{(t)}=\hat{\bm{x}}^{(t-1)}+\delta(\bm{y}-\bm{y}^{(t-1)})$;
 \section{Experiments}
 In this section, we perform image denoising experiments on 20 widely used natural images (shown in Fig. \ref{fig2-5}). More experiments on the Berkeley Segmentation Data Set \cite{bsds} can be found in the supplementary file. As a common experimental setting in literature, additive white Gaussian noise with zero mean and standard deviation $\sigma$ is added to the image to test the performance of competing denoising methods. We call our method \textsl{PG Prior based Denoising} (PGPD) in the following experiments. The Matlab source code of our PGPD algorithm can be downloaded at \url{http://www4.comp.polyu.edu.hk/~cslzhang/code/PGPD.zip}.
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.09\textwidth}
