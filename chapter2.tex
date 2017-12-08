@@ -315,7 +315,7 @@ In the denoising stage, there are 3 parameters:\ $c$, $\delta$, and $\eta$.\ In 
 \subsection{Comparison with Patch Prior based Denoising}
 In this section, we compare the PSNR and visual quality of denoised images by the \textsl{Patch Prior based Denoising} (PPD) method and the \textsl{Patch Group Prior based Denoising} (PGPD) method. As can be seen from Table \ref{tab2-1} and Figures \ref{fig2-6}-\ref{fig2-9}, PGPD is much better than PPD both quantitatively and qualitatively. This validates the effectiveness of our learned PG based NSS prior. In the following sections, we will omit the results of the PPD method.
 \begin{table}[t!]
-\begin{adjustwidth}{-1cm}{}
+\begin{adjustwidth}{-1.5cm}{}
 \scriptsize
 \caption{PSNR(dB) results of PPD and PGPD on the 20 natural images.}
 \label{tab2-1}
@@ -428,7 +428,7 @@ Zelda&35.50&35.51    &32.21&32.21  & 30.35 &30.43   &29.07 &29.23   & 28.06& 28.
 \end{figure}
 
 
-\begin{figure}[t!]
+\begin{figure}[ht!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -486,7 +486,7 @@ Zelda&35.50&35.51    &32.21&32.21  & 30.35 &30.43   &29.07 &29.23   & 28.06& 28.
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[ht!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -529,7 +529,7 @@ We evaluate the competing methods from three aspects: PSNR, Speed, and Visual Qu
 \textbf{Visual Quality}. Considering that human subjects are the ultimate judge of the image quality, the visual quality of denoised images is also critical to evaluate a denoising algorithm. In Figures \ref{fig2-10} to \ref{fig2-13}, we show some visual quality comparisons on different testing images. For example, Fig. \ref{fig2-12} and Fig. \ref{fig2-13} show the denoised images of \textsl{Airplane} and \textsl{Cameraman} by the competing methods, respectively. Due to the page limit, the results of PPD are not shown here, and more visual comparisons can be found in the supplementary file.\ We can see that BM3D tends to over-smooth the image, while EPLL, LSSC, NCSR and WNNM are likely to generate artifacts when noise is high. Owe to the learned NSS prior, the proposed PGPD method is more robust against artifacts, and it preserves edge and texture areas much better than the other methods. For example, in image \textsl{Airplane}, PGPD reconstructs the numbers ``01568'' more clearly than all the other methods including WNNM. In image \textsl{Cameraman}, PGPD recoveries more faithfully the fine structures of the camera area. 
 
 In summary, the proposed PGPD method demonstrates powerful denoising ability quantitatively and qualitatively, and it is highly efficient.
-\begin{table}[t]
+\begin{table}[t!]
 \begin{adjustwidth}{-0.5cm}{}
 \caption{PSNR(dB) results of different denoising algorithms on 20 natural images.}
 \label{tab2-2}
@@ -759,7 +759,7 @@ Images&\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&\te
 \end{table}
 
 
-\begin{table}
+\begin{table}[t!]
 \begin{adjustwidth}{-2cm}{}
 \caption{Average run time (seconds) with standard deviation of different methods on images of size $256\times 256$ and $512\times 512$. BM3D uses parallelization and is implemented with compiled C++ mex-function while the other methods are implemented in Matlab.}
 \label{tab2-3}
@@ -829,7 +829,7 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 \end{adjustwidth}
 \end{table}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -879,7 +879,7 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
     \label{fig2-10}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -929,7 +929,7 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
     \label{fig2-11}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -980,7 +980,7 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -1034,7 +1034,7 @@ $\sigma$ &\textbf{BM3D}&\textbf{LSSC}&\textbf{EPLL}&\textbf{NCSR}&\textbf{WNNM}&
 In this section, we give the denoising results (PSNR and visual quality) on the Berkeley Segmentation Data Set \cite{bsds}. This dataset contains 500 images of size $321\times481$. Since EPLL is trained on the 300 images in the training set and validation set, we use the 200 images in the testing set for comparison. 
 
 From Table \ref{tab2-4}, we can see that EPLL is comparable to BM3D and LSSC on the 200 test images. Though the proposed PGPD is trained on the Kodak PhotoCD dataset, in which the images have different resolution and statistics from the images in the Berkeley Segmentation Data Set, it still shows superiority over EPLL and other methods. In Figures \ref{fig2-14}-\ref{fig2-17}, we compare the visual quality of the denoised images by the competing methods. For better visualization, the presented images are cropped to size of $321\times 321$.
-\begin{table}
+\begin{table}[t!]
 \caption{Average PSNR(dB) results of different denoising algorithms on the 200 test images of the Berkeley Segmentation Data Set.}
 \label{tab2-4}
 \begin{center}
@@ -1070,7 +1070,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
 \end{table}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -1121,7 +1121,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -1171,7 +1171,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
     \label{fig2-15}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -1221,7 +1221,7 @@ $\sigma=100$&23.21 &23.12 & 23.15 & 23.00 & 23.37 & 23.29
     \label{fig2-16}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
