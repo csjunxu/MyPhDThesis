@@ -56,7 +56,6 @@
 \contentsline {subsection}{\numberline {4.3.1}Experimental Settings}{85}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Experiments on Synthetic Noisy Color Images}{86}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Experiments on Real Noisy Color Images}{87}{subsection.4.3.3}
-\contentsline {subsubsection}{Results on Dataset \cite {ncwebsite}}{90}{section*.72}
 \contentsline {section}{\numberline {4.4}Conclusion}{99}{section.4.4}
 \contentsline {chapter}{\numberline {5}A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising}{100}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{100}{section.5.1}
@@ -76,22 +75,22 @@
 \contentsline {chapter}{\numberline {6}Real-World Noisy Image Dataset: A New Benchmark}{122}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{122}{section.6.1}
 \contentsline {section}{\numberline {6.2}Existing Datasets}{125}{section.6.2}
-\contentsline {section}{\numberline {6.3}The Proposed Dataset}{128}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Motivation}{128}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.3}The Proposed Dataset}{127}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Motivation}{127}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}The Construction Process}{130}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Summary of the Dataset}{135}{subsection.6.3.3}
-\contentsline {section}{\numberline {6.4}Experiments}{139}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Benchmark Dataset}{139}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Comparison Methods}{140}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Results and Discussion}{141}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}Conclusion}{146}{section.6.5}
-\contentsline {chapter}{\numberline {7}Conclusions}{148}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusions}{148}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{150}{section.7.2}
-\contentsline {chapter}{\numberline {8}Appendix}{151}{chapter.8}
-\contentsline {section}{\numberline {8.1}Closed-Form Solution of the Weighted Sparse Coding Problem (\ref {equ2-11})}{151}{section.8.1}
-\contentsline {section}{\numberline {8.2}Proof of the Theorem \ref {th3-1}}{152}{section.8.2}
-\contentsline {section}{\numberline {8.3}Proof of the Theorem \ref {th3-2}}{154}{section.8.3}
-\contentsline {section}{\numberline {8.4}Proof of Theorem \ref {th4-1}}{156}{section.8.4}
-\contentsline {section}{\numberline {8.5}Proofs of Theorem \ref {th5-1} and Theorem \ref {th5-2}}{158}{section.8.5}
-\contentsline {chapter}{Bibliography}{163}{theorem.8.5.2}
+\contentsline {subsection}{\numberline {6.3.3}Summary of the Dataset}{134}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}Experiments}{135}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Benchmark Dataset}{135}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Comparison Methods}{137}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Results and Discussion}{138}{subsection.6.4.3}
+\contentsline {section}{\numberline {6.5}Conclusion}{141}{section.6.5}
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{147}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusions}{147}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{149}{section.7.2}
+\contentsline {chapter}{\numberline {8}Appendix}{150}{chapter.8}
+\contentsline {section}{\numberline {8.1}Closed-Form Solution of the Weighted Sparse Coding Problem (\ref {equ2-11})}{150}{section.8.1}
+\contentsline {section}{\numberline {8.2}Proof of the Theorem \ref {th3-1}}{151}{section.8.2}
+\contentsline {section}{\numberline {8.3}Proof of the Theorem \ref {th3-2}}{153}{section.8.3}
+\contentsline {section}{\numberline {8.4}Proof of Theorem \ref {th4-1}}{155}{section.8.4}
+\contentsline {section}{\numberline {8.5}Proofs of Theorem \ref {th5-1} and Theorem \ref {th5-2}}{157}{section.8.5}
+\contentsline {chapter}{Bibliography}{162}{theorem.8.5.2}

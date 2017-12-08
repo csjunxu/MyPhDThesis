@@ -1,6 +1,6 @@
 % !TEX root = ../XJ_thesis.tex
 %
-\chapter{Conclusions}
+\chapter{Conclusions and Future Work}
 \label{sec:conclusions}
 
 
@@ -8,13 +8,13 @@
 \label{sec:conclusions:sec1}
 In this thesis, we mainly studied the image denoising problem. we firstly proposed a novel algorithm for denoising the synthetic additive white Gaussian noise (AWGN). Then we transferred to the realistic image denoising problem, in which the noise is much more complex than the AWGN noise. We proposed three novel algorithms for denoising the realistic noise. In summary, we have the following conclusions:
 
-In the first work, we proposed a patch group prior based image denoising (PGPD) method. The proposed PGPD method extended existing patch based learning scheme to patch group based learning scheme. This extension improve the patch based denoising method by considering the non-local self similarity (NSS) property of natural images. This NSS property can make the proposed PGPD method maintains image detail better than patch based methods such as EPLL \cite{epll}. Experiments demonstrate that the proposed PGPD method is both effective and efficient on denoising images corrupted by synthetic additive white Gaussian noise (AWGN).
+In the first work, we proposed a patch group prior based image denoising (PGPD) method. The proposed PGPD method extended existing patch based learning scheme to patch group based learning scheme. This extension improve the patch based denoising method by considering the non-local self similarity (NSS) property of natural images. This NSS property can make the proposed PGPD method maintains image detail better than patch based methods such as EPLL \cite{epll}. Experiments demonstrate that the proposed PGPD method is both effective and efficient on denoising images corrupted by synthetic AWGN noise.
 
 In the second work, we proposed to extend the proposed patch group prior to realistic image denoising problem. we firstly employ the GMM model to learn the patch group prior and then employ the learned prior to guide the dictionary learning for the input noisy image. The learned dictionary can be more adaptive to the input image and hence can be used to remove the nosie in the input image.
 
 In the third work, we proposed a multi-channel model for real color image denoising. The multi-channel scheme helps to consider the different noise statistics in different channels of the sRGB images. Since the weighted nuclear norm minimization (WNNM) model has already achieved state-of-the-art performance on the AWGN noise removal, we extended the WNNM model and the proposed Multi-channel WNNM (MCWNNM) model achieved state-of-the-art performance on both synthetic and real color image denoising problems. 
 
-In the fourth work, we proposed to consider the fact that the noise statistics in different local region of the noisy image. To consider the different noise levels of local region, we introduced two weighting matirces related to the noise statistics of different channels and patches. The proposed trilateral sparse coding scheme can be solved by variable splitting method, and the overall model can be solved alternatively under the famous ADMM framework. The convergence of the ADMM algorithm can be guaranteed since the overall model is convex.
+In the fourth work, we proposed to consider the fact that the noise statistics in different local region of the noisy image. To consider the different noise levels of local region, we introduced two weighting matirces related to the noise statistics of different channels and patches. The proposed trilateral sparse coding scheme can be solved by variable splitting method, and the overall model can be solved alternatively under the famous ADMM framework. The ADMM algorithm is guaranteed to converge since the overall model is convex.
 
 In the final work, we constructed a novel realistic noisy image dataset. In the proposed dataset, we collect 40 images of diffrent scenes. To generate the ``ground truth'' clean images, we captured each scene for over 500 times. The constrcuted dataset is called PolyU Realistic Image dataset. we evaluate the state-of-the-art image denoising methods and the methods developed in this thesis. We evaluate these methods on two previous benchmark datasets and our proposed new one. Extensive experimental results demonstrated that the proposed TWSC method achieved better denoising performance than the other state-of-the-art methods due to the reason of considering the different noise statistics in different local region as well as different channels. Besides, the real-world image denoising problem is still a challenging task and need future study with more promising denoising methods. Our new dataset is a new benchmark for this study direction.
 

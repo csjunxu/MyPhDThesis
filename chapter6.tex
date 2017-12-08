@@ -5,7 +5,7 @@
 
 \section{Introduction}
 
-During the past decades, the statistical property of realistic noise has been extensively studied for CCD and CMOS image sensors \cite{healey1994radiometric,tsin2001statistical,RENOIR2014,crosschannel2016,dnd2017}. The realistic noise related to the CCD or CMOS sensors includes five major sources, including photon shot noise, fixed pattern noise, dark current, readout noise, and quantization noise, etc. The shot noise is one inevitable source of noise and induced by the stochastic arrival process of photons to the sensor. It can be modeled by a Possion process in which the number of photons arriving the sensor follows a Possion distribution. This type of noise is proportional to the mean intensity of the specific pixel and is not stationary across the whole image. The fixed pattern noise include pixel response non-uniformity (PRNU) noise and dark current non-uniformity (DCNU) noise. In PRNU noise, each pixel will have a slightly different output levels or responses for a fixed light level. The major reason for the PRNU noise are the loss of light and color mixture in the neighboring pixels. The DCNU noise are from the electronics within the sensor chip, and it is generated mainly due to thermal agitation, even thouth there is no light reaching the camera sensor. The readout noise and quantization noise are from the discretization of measured signals. The readout noise is mainly generated during the process of Charge-to-voltage conversion, which is inheretantly not accurate. This inaccuracy also happens to generate the quantization noise, in which the readout values are quantizated to be an integer. The final pixel values are only discretization of the original raw pixel values. Other types of noise include CCD specific sources such as transfer efficiency, and CMOS specific sources such as column noise.
+During the past decades, the statistical property of realistic noise has been extensively studied for CCD and CMOS image sensors \cite{healey1994radiometric,tsin2001statistical,RENOIR2014,crosschannel2016,dnd2017}. The realistic noise related to the CCD or CMOS sensors includes five major sources, including photon shot noise, fixed pattern noise, dark current, readout noise, and quantization noise, etc. The shot noise is one inevitable source of noise and induced by the stochastic arrival process of photons to the sensor. It can be modeled by a Possion process in which the number of photons arriving the sensor follows a Possion distribution. This type of noise is proportional to the mean intensity of the specific pixel and is not stationary across the whole image. The fixed pattern noise include pixel response non-uniformity (PRNU) noise and dark current non-uniformity (DCNU) noise. In PRNU noise, each pixel will have a slightly different output levels or responses for a fixed light level. The major reason for the PRNU noise are the loss of light and color mixture in the neighboring pixels. The DCNU noise are from the electronics within the sensor chip, and it is generated mainly due to thermal agitation, even thouth there is no light reaching the camera sensor. The readout noise and quantization noise are from the discretization of measured signals. The readout noise is mainly generated during the process of Charge-to-voltage conversion, which is inheretantly not accurate. This inaccuracy also happens to generate the quantization noise, in which the readout values are quantizated to be an integer. The final pixel values are only discretization of the original raw pixel values. Other noise include CCD specific sources such as transfer efficiency, and CMOS specific sources such as column noise.
 
 As we have presented in previous chapters, the challengings in the image denoising problem are very different in processing the synthetic additive white Gaussian noise (AWGN) and the realistic noise in real-world images captured by CCD or CMOS sensors. One issue about the realistic noise is that, different from the AWGN noise, it is signal dependent, cannot be modeled by an explicit distribution, and will be much more complex after being processed in the camera imaging pipelines. Hence, removing realistic noise from real-world noisy images is a more challenging task than its synthetic AWGN counterpart. Another issue about the realistic image denoising is how to evaluate the quality of the denoised images. The image quality assessment by subjective evaluation would be time-consuming, since it needs huge number of subjectives to take part in the evaluation experiments. To alliviate the dependency on enough subjectives, an alternative way is to resort to the objective evaluation. However, the objective also has its own problems. Since the noisy images with realistic noise has no corresponding ``ground truth'' image, the objective evaluation on the quality of denoised images is very hard, if not impossible. And hence, we have no proper measurement metrics to evaluate the goodness of the existing denoising methods.
 
@@ -20,7 +20,7 @@ Currently, there are several work focus on benchmarking the denoising methods on
 As far as we know, the RENOIR dataset \cite{RENOIR2014} is the first dataset on real-world noisy images with ``ground truth'' noise-free images. The cameras used in this dataset are Canon Rebel T3i, Canon S90, and Xiaomi T3i. The authors takes sets of images of a static scene with different ISO values. However, the post-processing is less refined. Image pairs appear to exhibit spatial misalignment, the intensity transform does not model heteroscedastic noise, and low-frequency bias is not removed. In \cite{RENOIR2014}, experiments have been evaluated to validate that ignoring these sources of error significantly
 affects the realism of the dataset. It is often useful to measure the noise characteristics of a sensor at a certain ISO level. \cite{RENOIR2014} proposes to illuminate the sensor with approximately constant irradiation and subsequently aggregates intensity measurements spatially. This is repeated for different irradiation levels to capture the intensity dependence of the noise. \cite{RENOIR2014} propose a less tedious capture protocol similar to ours, where multiple exposures of a static scene are used to aggregate the measurements at every pixel site temporally. The detailed description of this dataset is listed in Table \ref{tab6-1}.
 
-\begin{table}[ht!]
+\begin{table}[t!]
 \caption{Cameras and camera settings for capturing the dataset \cite{RENOIR2014}.}
 \label{tab6-1}
 \begin{center}
@@ -65,7 +65,7 @@ Xiaomi Mi3 & $4.69\times3.52$ & 40 & 100  & Auto  & 1.6k, 3.2k & Auto
 
 The work of \cite{crosschannel2016} is the second work in this direction, in which 11 static scenes are collected as a dataset including real-world noisy images and the corresponding ``ground truth'' images. For each scene, 500 JPEG images are captured and the mean image of the 500 images is roughly taken as the ``ground truth'' image. Utilizing the mean of temporal images as ``ground truth'' image has also been employed in \cite{Liu2008,liupractical}, in which the authors did not construct a benchmark dataset. In the dataset of \cite{crosschannel2016}, the images are mostly with resolution of $7630\times4912$ captured by Nikon D800 (ISO=1,600, 3,200, and 6,400), Nikon D600 (ISO=3,200), and Canon 5D Mark III (ISO=3,200). There are totally 15 cropped regions of size $512\times512$ provided for evaluating different denoising methods. The major problems of this dataset is that the captured images are almost printed scenes, which share similar nosie statistical property. The camera settings are also somewhat limited such as the ISO values. The detailed description of this dataset is listed in Table \ref{tab6-2}. 
 
-\begin{table}[ht!]
+\begin{table}[t!]
 \caption{The detailed information of the cropped regions from the dataset \cite{crosschannel2016}.}
 \label{tab6-2}
 \begin{center}
@@ -95,11 +95,12 @@ Nikon D800 & 1.6k, 3.2k, 6.4k & 3  & Normal & $512\times512$
 \hline
 \end{tabular*}
 \end{center}
+\vspace{-4mm}
 \end{table}
 
 The work of \cite{dnd2017} is the third work along this direction. In contrast, \cite{dnd2017} employs the Tobit regression which allows to estimate the parameters of the noise process by having access to just two images. In order to obviate the unrealistic setting by developing a methodology for benchmarking denoising techniques on real photographs, the authors in \cite{dnd2017} capture 50 different pairs of images with different ISO settings and shutter speed, in which the image captured with high ISO with shorter shutter speed is taken as the real-world noisy image, while the image captured with low ISO with longer shutter speed is roughly taken as the ``ground truth'' image. To derive better ``ground truth'', careful post-processing is designed in \cite{dnd2017}. The authors correct spatial misalignment, cope with the inaccuracies in the exposure parameters through a linear intensity transform based on a novel heteroscedastic Tobit regression model, and remove residual low-frequency bias that stems from minor illumination changes, etc. The proposed dataset is called the Darmstadt Noise Dataset (DND) \cite{dnd2017}, in which the cameras used for capturing the dataset include the Sony A7R, Olympus E-M10, Sony RX100 IV, and Huawei Nexus 6P. One interesting finding is that various recent techniques that perform well on synthetic noise are clearly outperformed by BM3D \cite{bm3d} on realistic photographs. This benchmark delineates realistic evaluation scenarios that deviate strongly from those commonly used in the scientific literature. The detailed description of this dataset is listed in Table \ref{tab6-3}. The authors of \cite{dnd2017} extract the linear raw intensities from the captured images using the free software \textsl{Dcraw}, and then normalize the image intensities to the range of $[0, 1]$ by scaling with the black and white level.
 
-\begin{table}[ht!]
+\begin{table}[t!]
 \caption{Cameras used for capturing the dataset \cite{dnd2017}.}
 
 \label{tab6-3}
@@ -133,6 +134,7 @@ Huawei Nexus 6P & 12 & $6.17\times4.55$  & 12.3  & 100-6.4k
 \hline
 \end{tabular*}
 \end{center}
+\vspace{-4mm}
 \end{table}
 
 
@@ -159,60 +161,59 @@ Given fixed shutter speed and aperture, enhancing the camera sensitivity will ge
 
 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
-
 \subfigure{
 \begin{minipage}[t]{0.32\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/200_3-5_1-60.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/200_3-5_1-60.jpg}}
 {\footnotesize 200,3.5,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/200_6-7_1-60.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/200_6-7_1-60.jpg}}
 {\footnotesize 200,6.7,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/200_6-7_1-8.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/200_6-7_1-8.jpg}}
 {\footnotesize 200,6.7,1/8}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.32\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/400_6-7_1-60.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/400_6-7_1-60.jpg}}
 {\footnotesize 400,6.7,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/1600_6-7_1-60.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/1600_6-7_1-60.jpg}}
 {\footnotesize 1600,6.7,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/3200_6-7_1-60.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/3200_6-7_1-60.jpg}}
 {\footnotesize 3200,6.7,1/60}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.32\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/6400_6-7_1-60.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/6400_6-7_1-60.jpg}}
 {\footnotesize 6400,6.7,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/6400_6-7_1-350.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/6400_6-7_1-350.jpg}}
 {\footnotesize 6400,6.7,1/350}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/6400_16_1-60.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/6400_16_1-60.jpg}}
 {\footnotesize 6400,16,1/60}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Captured Images with the Sony A7 II camera under different (ISO, Shutter, Aperture) settings.}
     \label{fig6-1}
 \end{figure}
@@ -222,20 +223,20 @@ Given fixed shutter speed and aperture, enhancing the camera sensitivity will ge
 
 To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}, we propose to further construct a new dataset which are: 1) contains more camera brands; 2) contain more carefully designed camera settings; 3) capture more real-world scenes with realistic objects; 4) capture both the raw data and sRGB data for comparison analysis on the noise. In the following we will discuss each advantages in details. The format of our captured images are raw data and JPEG images with uncompressed process. For each scene, we capture it for 500 times, similar to \cite{crosschannel2016}. In Figure \ref{fig6-2}, we show the scene how we capture the static images in indoor environment. The static scene is captured with cameras fixed by tripod. The capture is automatically done with shutter release. Hence, the misalignment problem can be nearly avoided when we capture over 500 images for one scene. We capture images with different camera settings. The cameras are set based on the following rules: the first rule is that the shutter speed should be larger than the blink of the fluorescent lights, otherwise the flickering of the light will make the global illuminances of the captured images very different. The second rule is that we should set the shutter speed, the shutter speed, and the ISO value accordingly so that the scenes are in a naturally lighting condition. Besides, since the DSLRs use mechanical shutter, the shutter speed of each shot is irregular. This small error results in the different brightness of shots. However, we ignored this error in our dataset, so as the \cite{crosschannel2016}.
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/scene.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/scene.jpg}}
 {\footnotesize Capturing static scene}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/scenewithperson.jpg}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/scenewithperson.jpg}}
 {\footnotesize Control shutter release}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{The static scene is captured with cameras fixed by tripod. The capture is automatically done with shutter release.}
     \label{fig6-2}
 \end{figure}
@@ -260,66 +261,66 @@ In our newly constructed dataset, we capture 40 different scenes with comprehens
 
 Since the images we captured are very large, we crop 100 smaller parts from the 40 scenes to evaluated the existing image denoising methods. Some examples of the cropped parts and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-4}. One can see that the cropped parts can represente the captured images in the whole dataset. Besides, one can see ththe ``ground truth'' image parts are clearly demonstrate the noise is removed from the corresponding cropped image parts. Hence, it is reasonable to emply this newly constructed dataset for evaluating the image denoising methods. 
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG}}
 \end{minipage}
-}\vspace{-1mm}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_200_3200_toy_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_200_3200_toy_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG}}
 \end{minipage}
-}\vspace{-1mm}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_8_125_6400_photo_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_8_125_6400_photo_mean.JPG}}
 \end{minipage}
-}\vspace{-1mm}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_3-5_200_1600_classroom_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_3-5_200_1600_classroom_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4-5_125_3200_plant_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4-5_125_3200_plant_mean.JPG}}
 \end{minipage}
-}\vspace{-1mm}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4_200_3200_door_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4_200_3200_door_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_3200_ball_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_3200_ball_mean.JPG}}
 \end{minipage}
-}\vspace{-1mm}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_12800_printer_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_12800_printer_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_6400_comproom_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_6400_comproom_mean.JPG}}
 \end{minipage}
 }
 \caption{Some examples in our newly constructed dataset.}
@@ -331,91 +332,91 @@ Since the images we captured are very large, we crop 100 smaller parts from the 
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_circuit_11_real.JPG}}
-\end{minipage}
-}
-\subfigure{
-\begin{minipage}[t]{0.24\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_reciever_1_mean.JPG}}
-\end{minipage}
-\begin{minipage}[t]{0.24\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG}}
-\end{minipage}
-\begin{minipage}[t]{0.24\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG}}
-\end{minipage}
-\begin{minipage}[t]{0.24\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_200_3200_toy_3_real.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_circuit_11_real.JPG}}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_reciever_1_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon600D_4-5_125_1600_toy_16_real.JPG}}
-\end{minipage}
-}
-\subfigure{
-\begin{minipage}[t]{0.24\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG}}
-\end{minipage}
-\begin{minipage}[t]{0.24\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_5_125_6400_stair_3_real.JPG}}
-\end{minipage}
-\begin{minipage}[t]{0.24\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_6-3_125_5000_plant_1_mean.JPG}}
-\end{minipage}
-\begin{minipage}[t]{0.24\textwidth}
-\centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_6-3_125_5000_plant_1_real.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_200_3200_toy_3_real.JPG}}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_6400_comproom_11_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4-5_125_3200_plant_10_mean.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG}}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4-5_125_3200_plant_10_real.JPG}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon600D_4-5_125_1600_toy_16_real.JPG}}
+\end{minipage}
+}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG}}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_5_125_6400_stair_3_real.JPG}}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_6-3_125_5000_plant_1_mean.JPG}}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_6-3_125_5000_plant_1_real.JPG}}
+\end{minipage}
+}
+\subfigure{
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG}}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG}}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4-5_125_3200_plant_10_mean.JPG}}
+\end{minipage}
+\begin{minipage}[t]{0.24\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4-5_125_3200_plant_10_real.JPG}}
 \end{minipage}
 }
     \caption{Some cropped parts of the ``ground truth'' images (up) and their corresponding realistic images (down) in our newly constructed dataset.}
@@ -424,7 +425,7 @@ Since the images we captured are very large, we crop 100 smaller parts from the 
 
 The detailed description on cameras and camera settings are listed in Table \ref{tab6-4}. One can see that in our dataset, in our dataset the ISO values are more comprehensive than the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}. For better evaluation of image denoising methods, we random crop 10 $512\times512$ regions for each images in this dataset, and select at most 3 more representative regions. After obtaining $40\times3=120$ smaller regions, we then delete 20 regions which contain relatively trivial contents. Finally, we obtain 100 cropped regions as our finally testing set. The detailed information of these cropped images is summarized in Table \ref{tab6-5}.
 
-\begin{table}[ht!]
+\begin{table}[t!]
 \caption{Cameras and camera settings for capturing the our new dataset.}
 
 \label{tab6-4}
@@ -461,11 +462,11 @@ Sony A7II & 7 & $35.8\times23.9$  & 24  & 1.6k,3.2k,6.4k
 \hline
 \end{tabular*}
 \end{center}
+\vspace{-5mm}
 \end{table}
 
-\begin{table}[ht!]
+\begin{table}[t!]
 \caption{Detailed information of the 100 cropped regions from the 40 scenes captured in the our new dataset.}
-
 \label{tab6-5}
 \begin{center}
 \small
@@ -498,6 +499,7 @@ Sony A7II & 12 & $512\times512$ & 1.6k,3.2k,6.4k
 \hline
 \end{tabular*}
 \end{center}
+\vspace{-5mm}
 \end{table}
 
 
@@ -524,7 +526,7 @@ With the proposed dataset, we take a comprehensive evaluation on the state-of-th
 
 \textbf{Results on Dataset 1}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{tab6-6}.\ One can see that the TWSC method performs much better than other competing methods.\ Figure\ \ref{fig6-5} shows the denoised images of a scene captured by Nikon D800 at ISO = 6400.\ One can see that the proposed TWSC method results in not only higher PSNR and SSIM measures, but also much better visual quality than other methods.\ More visual comparisons can be found in the supplementary file.
 
-\begin{table}[hbp]
+\begin{table}[t!]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf{Dataset 1} \cite{crosschannel2016}.}
 \scriptsize
 \label{tab6-6}
@@ -582,103 +584,103 @@ SSIM & 0.8635  &  0.9364 & 0.9126  & 0.8591  & 0.9504 &  0.9542 & \textbf{0.9586
 \end{center}
 \end{table}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png}}
 {\footnotesize Noisy 37.00/0.9345}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png}}
 {\footnotesize CBM3D 39.72/0.9769}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png}}
 {\footnotesize EPLL 37.61/0.9521}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png}}
 {\footnotesize NCSR 37.93/0.9579}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png}}
 {\footnotesize WNNM 37.48/0.9664}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png}}
 {\footnotesize MLP 39.00/0.9695}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real.png}}
 {\footnotesize CSF 35.66/0.9425}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real.png}}
 {\footnotesize TNRD 39.46/0.9733}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png}}
 {\footnotesize DnCNN 37.26/0.9389}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.png}}
 {\footnotesize NC 38.76/0.9689}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.png}}
 {\footnotesize NI 37.68/0.9600}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_PGPD_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_PGPD_5dmark3_iso3200_1_real.png}}
 {\footnotesize PGPD 37.50/0.9457}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_Guided_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_Guided_5dmark3_iso3200_1_real.png}}
 {\footnotesize Guided 40.52/0.9804}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_MCWNNM_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_MCWNNM_5dmark3_iso3200_1_real.png}}
 {\scriptsize MCWNNM 40.71/0.9775}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_TWSC_5dmark3_iso3200_1_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/cc/resize_br_TWSC_5dmark3_iso3200_1_real.png}}
 {\footnotesize TWSC 40.70/0.9796}
 \end{minipage}
-}
+}\vspace{-3mm}
     \caption{Denoised images and PSNR (dB)/SSIM results of the real-world noisy image \textsl{Canon 5D Mark 3 ISO 3200 1} \cite{crosschannel2016} by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig6-5}
 \end{figure}
 
 \textbf{Results on Dataset 2}. In Table \ref{tab6-7}, we list the average PSNR and SSIM results of the competing methods on the 1000 cropped images in the DND dataset \cite{dnd2017}.\ We can see again that the TWSC method achieves much better performance than the other competing methods.\ Note that the ``ground truth'' images of this dataset have not been published, but one can submit the denoised images to the project website and get the PSNR and SSIM results.\ Figure\ \ref{fig6-6} shows the denoised images of a scene captured by a Nexus 6P camera.\ One can still see that the proposed TWSC method results better visual quality than the other denoising methods.
 
-\begin{table}[hbp]
+\begin{table}[t!]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1000 cropped images in \textbf{Dataset 2} \cite{dnd2017}.}
 \scriptsize
 \label{tab6-7}
@@ -742,81 +744,81 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_Noisy_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_Noisy_0001_1.png}}
 {\footnotesize Noisy }
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_CBM3D_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_CBM3D_0001_1.png}}
 {\footnotesize CBM3D}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_EPLL_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_EPLL_0001_1.png}}
 {\footnotesize EPLL}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_NCSR_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_NCSR_0001_1.png}}
 {\footnotesize NCSR}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_WNNM_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_WNNM_0001_1.png}}
 {\footnotesize WNNM}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_MLP_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_MLP_0001_1.png}}
 {\footnotesize MLP}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_CSF_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_CSF_0001_1.png}}
 {\footnotesize CSF}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_TRD_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_TRD_0001_1.png}}
 {\footnotesize TNRD}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_DnCNN_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_DnCNN_0001_1.png}}
 {\footnotesize DnCNN}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_NC_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_NC_0001_1.png}}
 {\footnotesize NC}
 \end{minipage}
 }
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_NI_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_NI_0001_1.png}}
 {\footnotesize NI}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_PGPD_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_PGPD_0001_1.png}}
 {\footnotesize PGPD}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_Guided_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_Guided_0001_1.png}}
 {\footnotesize Guided}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_MCWNNM_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_MCWNNM_0001_1.png}}
 {\scriptsize MCWNNM}
 \end{minipage}
 \begin{minipage}[t]{0.19\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_TWSC_0_3_0001_1.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_TWSC_0_3_0001_1.png}}
 {\footnotesize TWSC}
 \end{minipage}
 }
@@ -827,7 +829,7 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 \textbf{Results on Dataset 3}.
 The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images. Some visual comparisons are listed in Figures \ref{fig6-7}, from which one can see that the TWSC method removes the noise while still maintains the details. 
 
-\begin{table}[hbp]
+\begin{table}[t!]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}).}
 \scriptsize
 \label{tab6-8}
@@ -885,96 +887,96 @@ SSIM & 0.9161 & 0.9449  & 0.9570  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
 \end{center}
 \end{table}
 
-\begin{figure}
+\begin{figure}[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize Mean Image}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_Noisy_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_Noisy_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize Noisy 36.67/0.9619}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_CBM3D_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_CBM3D_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize CBM3D 37.69/0.9737}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_EPLL_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_EPLL_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize EPLL 36.93/0.9682}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_NCSR_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_NCSR_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize NCSR 37.07/0.9699}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_WNNM_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_WNNM_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize WNNM 37.11/0.9703}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_MLP_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_MLP_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize MLP 36.82/0.9623}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_CSF_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_CSF_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize CSF 35.60/0.9465}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_TRD_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_TRD_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize TNRD 37.06/0.9646}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_DnCNN_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_DnCNN_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize DnCNN 36.77/0.9629}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_NC_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_NC_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize NC 36.68/0.9642}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_NI_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_NI_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize NI 37.19/0.9693}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_PGPD_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_PGPD_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize PGPD 36.88/0.9652}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_Guided_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_Guided_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize Guided 37.09/0.9670}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_MCWNNM_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_MCWNNM_Canon80D_8_8_800_GO_11_real.png}}
 {\scriptsize MCWNNM 37.50/0.9705}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.15cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_TWSC_Canon80D_8_8_800_GO_11_real.png}}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/PolyU/resize_br_TWSC_Canon80D_8_8_800_GO_11_real.png}}
 {\footnotesize TWSC 37.09/0.9680}
 \end{minipage}
-}
+}\vspace{-3mm}
 \caption{Denoised images and PSNR (dB)/SSIM results of the real-world noisy image \textsl{Canon80D\_8\_8\_800\_GO\_11} in our new dataset by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig6-7}
 \end{figure}
@@ -989,7 +991,7 @@ The experimental results shown in Tables \ref{tab6-6}-\ref{tab6-8} and Figures \
 
 \item The discriminative learning based methods (e.g., MLP, CSF, TNRD, and DnCNN) are trained on paired clean and noisy images. These methods largely depends on the training dataset, and would achieve inferior performance upon the noise in the testing images is different from the noise in the training images;
 
-\item The performance of existing denoising methods on datasets \cite{crosschannel2016,dnd2017} are very distinct, as we can see from Tables \ref{tab6-6} and \ref{tab6-7}, the highest PSNR in our proposed methods (TWSC) and the highest PSNR in previous methods (TNRD on Dataset 1 and NC on Dataset 2) have a difference of over 1dB. However, on our new dataset, as we can see from Tables \ref{tab6-8}, the highest PSNR in our proposed methods (TWSC) and the highest PSNR in previous methods (TNRD) only have a difference of around 0.3dB. This indicate that in our new dataset, the advantages of our work such as Guided, MCWNNM, and TWSC are small when compared to the previous methods such as TNRD. This is due to the reason that our dataset is more comprehensive in the scene contents and more camera settings. This comparison also shows that our dataset is more challenging than previous two datasets \cite{crosschannel2016,dnd2017}, and future real-world noisy image denoising methods are still needed.
+\item The performance of existing denoising methods on datasets \cite{crosschannel2016,dnd2017} are very distinct, as we can see from Tables \ref{tab6-6} and \ref{tab6-7}, the highest PSNR in our proposed methods (TWSC) and the highest PSNR in previous methods (TNRD on Dataset 1 and NC on Dataset 2) have a difference of over 1dB. However, on our new dataset, as we can see from Tables \ref{tab6-8}, the highest PSNR in our proposed methods (TWSC) and the highest PSNR in previous methods (TNRD) only have a difference of around 0.3dB. This indicate that in our new dataset, the advantages of our work such as Guided, MCWNNM, and TWSC are small when compared to the previous methods such as TNRD. This is due to that our dataset is more comprehensive in the scene contents and more camera settings. This comparison also shows that our dataset is more challenging than previous two datasets \cite{crosschannel2016,dnd2017}, and novel real-world noisy image denoising methods are still needed.
   
 \end{itemize}
 
@@ -997,7 +999,7 @@ The experimental results shown in Tables \ref{tab6-6}-\ref{tab6-8} and Figures \
 
 \section{Conclusion}
 
-To evaluate the existing denoising algorithms on real photographs and further promote new emerging algorithms for processing realistic noise, we construct a novel dataset which contains comprehensive real-world noisy images of different natural scenes. These images are captured by different cameras under different camera settings. I first select the baseline image by computing the average image. Then I delete the images which are not in consistant illumiance with the baseline image. Finally, I delete the images which are in misalignment with the baseline images. The whole process are reasonable with rational operations. I use the 500 images which are close to the baseline image on illuminance. Since the captured images are too large, we cropped smaller region of size $512\times512$ to evaluate the existing denoising methods and the methods we proposed in the previous sections. The whole constructed dataset includes 40 different scenes with 100 cropped smaller region.
+To evaluate the existing denoising algorithms on real photographs and further promote new emerging algorithms for processing realistic noise, we construct a novel dataset which contains comprehensive real-world noisy images of different natural scenes. These images are captured by different cameras under different camera settings. I first select the baseline image by computing the average image. Then I delete the images which are not in consistant illumiance with the baseline image. Finally, I delete the images which are in misalignment with the baseline images. The whole process are reasonable with rational operations. I use the 500 images which are close to the baseline image on illuminance. Since the captured images are too large, we cropped smaller region of size $512\times512$ to evaluate the existing denoising methods and the methods we proposed in the previous sections.
 
 I take comprehensive study on the denoising experimental results by evaluating the existing state-of-the-art denoising methods with our proposed methods. The results demonstrate that the proposed methods are more robust to the existing competing methods on the newly proposed dataset. The experiments also show the effectiveness and efficiency of our proposed TWSC method. We will make the constructed dataset of real photographs publicly available as another benchmark for implementing the exitsing datasets. What's more, our analysis reveals that the existing scientific practice for the image denoising problem is rather limited, and the existing image quality assessment has rather limited relevance for the realistic settings, both of which need huge potential as well as demand for future research.
 

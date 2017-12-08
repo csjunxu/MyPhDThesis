@@ -1247,9 +1247,7 @@ The first dataset is provided in \cite{ncwebsite}, which includes 20 real noisy 
 
 The second dataset is provided in \cite{crosschannel2016}, which includes noisy images of 11 static scenes.\ The noisy images were collected under controlled indoor environment.\ Each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth", with which the PSNR can be computed.\ Since the image size is very large (about $7000\times5000$) and the 11 scenes share repetitive contents, the authors of \cite{crosschannel2016} cropped 15 smaller images of size $512\times512$ for experiments.\ Fig.\ \ref{fig4-2} shows the contents of these images.\ Quantitative comparisons on the 15 cropped images will be reported. 
 
-\subsubsection{Results on Dataset \cite{ncwebsite}}
-
-\quad Since there is no ``ground truth'' for the real noisy images in dataset \cite{ncwebsite}, we only compare the visual quality of the denoised images by the compared methods.\ (Note that the method CC \cite{crosschannel2016} is not compared here since its code is not publically available.)
+\textbf{Results on Dataset \cite{ncwebsite}}. Since there is no ``ground truth'' for the real noisy images in dataset \cite{ncwebsite}, we only compare the visual quality of the denoised images by the compared methods.\ (Note that the method CC \cite{crosschannel2016} is not compared here since its code is not publically available.)
 
 Fig.\ \ref{fig4-8} shows the denoised images of ``Dog'' by the competing methods.\ It can be seen that CBM3D, MLP, TRND and WNNM-1 tend to generate some noise caused color artifacts.\ Besides, WNNM-2 and WNNM-3 tend to over-smooth much the image.\ These results demonstrate that for color image denoising, neither processing each channel separately nor processing the three channels jointly but ignoring their noise difference is an effective solution.\ Though NC and NI methods are specifically developed for real color image denoising, their performance is not very satisfactory.\ In comparison, the proposed MC-WNNM recovers much better the structures and textures (such as the eye area) than the other competing methods.\ More visual comparisons on this dataset can be found in the Figures \ref{fig4-9} to \ref{fig4-12}.
 
@@ -1970,7 +1968,7 @@ Camera Settings
 \end{figure}
 
 
-\quad As described at the beginning of Section 4.3, there is a mean image for each noisy image in dataset \cite{crosschannel2016}, and those mean images can be roughly taken as ``ground truth'' for quantitative evaluation of denoising algorithms.
+\textbf{Results on Dataset \cite{crosschannel2016}}. As described at the beginning of Section 4.3, there is a mean image for each noisy image in dataset \cite{crosschannel2016}, and those mean images can be roughly taken as ``ground truth'' for quantitative evaluation of denoising algorithms.
 
 The results on PSNR and averaged computational time by competing methods (including CC \cite{crosschannel2016} whose results are copied from \cite{crosschannel2016}) are listed in Table \ref{tab4-4}.\ For methods MLP \cite{mlp} and TNRD \cite{tnrd}, both of them achieve the best results when setting the noise level of the trained models at $\sigma=10$.\ The highest PSNR results are highlighted in bold.\ On average, MC-WNNM achieves 1.94dB, 0.44dB, 0.59dB improvements over the three WNNM methods, and significantly outperforms other competing method, including CC \cite{crosschannel2016}.\ On 10 out of the 15 images, the proposed MC-WNNM achieves the highest PSNR values, while WNNM-2 achieves the highest PSNR results on 3 of 15 images.\ It should be noted that in the CC method \cite{crosschannel2016}, a specific model is trained for each camera and camera setting, while the other methods uses the same model for all cases. 
 
