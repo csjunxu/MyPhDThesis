@@ -137,27 +137,15 @@ Basing on the success on the synthetic noise removal, we propose to exploit the 
 
 The structure of this thesis is organized as follows: in the chapter 2, we introduce the fully external method; in the chapter 3, we introduce the external prior guided internal method; in the chapter 4, we introduce the internal method based on low ran model; in the chapter 5, we introduce the internal method based on sparse coding model; in the chapter 6, we introduce the real-world noisy image dataset we construct, and finaly evaluate the proposed methods with the compared competing methods, both for synthetic AWGN or Poisson noise and real noise, including the commercial software designed especially for real noise. 
 
-
-\textbf{Chapter \ref{sec:external}: Patch Group based Self-Similarity Prior Learning for Image Denoising}
-
-\\
-\\
-\textbf{Chapter \ref{sec:guided}: External Prior Guided Internal Prior Learning for Realistic Image Denoising}
-
 In this chapter, we will introduce our work on external prior guided internal prior learning method for real-world noisy image denoising. This work can maintain the advantages of both sides: from the external perspective, the method can preserve the structures of natural images better than the internal methods, while from the perspective of internal method, the proposed method can recover the details of the input noisy image better than the external methods.
-\\
-\\
-\textbf{Chapter \ref{sec:internallr}: Multi-channel Weighted Nuclear Norm Minimization for Realistic Image Denoising}
+
 
 In this chapter, we introduce a multi-channel weighted nuclear norm minimization (MC-WNNM) method. This method regards different channels in RGB images differently to adaptively process the real color noisy images. Besides, this work also propose a new strategy for color image denoising. Experiments demonstrate that the proposed method can achieve better performance on real color image denoising than existing state-of-the-art methods, including some commercial software.
-\\
-\\
-\textbf{Chapter \ref{sec:internalsc}: A Triple Weighted Sparse Coding Scheme for Realistic Image Denoising} 
+
+
 
 In this chapter, we introduce a novel sparse coding based method for real color image denoising. In this method, we regard the noise in each of the local region in the real-world noisy image as a Gaussian, and propose a triplely weighted scheme to deal with the complex real-world noise in real color noisy images. Experiments show that the proposed method performs better and faster than the nuclear norm based method mentioned in previous chapter.
-\\
-\\
-\textbf{Chapter \ref{sec:dataset}: A Realistic Noisy Image Dataset with comprehensive Evaluation}
+
 
 To fully boost the research of real color noisy image denoising, we construct a large benchmark on real color noisy images. This dataset is collected from several representative cameras with comprehensive settings on contents, lighting, ISO, shutter, and aperture, etc. Based on this newly established dataset, we fully evaluated existing denoising methods, including the methods designed for synthetic Gaussian noise and the methods designed especially for real color noise. We believe that this new dataset will largely boost the research of the image denoising especially the real-world image denoising problems.
 
