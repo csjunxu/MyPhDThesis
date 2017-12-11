@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 DEC 2017 17:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 DEC 2017 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8054,12 +8054,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 535.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 535.
 Package rerunfilecheck Info: File `JunXuThesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 855E2CABAC7B66D75002D2CC62D3F309;48650.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 535.
  ) 
 Here is how much of TeX's memory you used:
  15162 strings out of 493091
  338095 string characters out of 6134517
- 404673 words of memory out of 5000000
+ 404670 words of memory out of 5000000
  16869 multiletter control sequences out of 15000+600000
  90750 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -8080,7 +8084,7 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (199 pages, 55351362 bytes).
+Output written on JunXuThesis.pdf (199 pages, 55351376 bytes).
 PDF statistics:
  4746 PDF objects out of 5155 (max. 8388607)
  3723 compressed objects within 38 object streams

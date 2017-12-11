@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {1.1}The Formulation of Image Denoising}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Existing Denoising Methods}{7}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Synthetic Image Denoising}{7}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Realistic Color Image Denoising}{10}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.2}Real-world Image Denoising}{10}{subsection.1.2.2}
 \contentsline {section}{\numberline {1.3}Contribution and Thesis Organization}{12}{section.1.3}
 \contentsline {chapter}{\numberline {2}Patch Group based Prior Learning for Image Denoising}{17}{chapter.2}
 \contentsline {section}{\numberline {2.1}Introduction}{17}{section.2.1}
@@ -43,7 +43,7 @@
 \contentsline {subsection}{\numberline {3.3.3}Comparison among external, internal and guided internal priors}{61}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Comparison with State-of-the-Art Denoising Methods}{62}{subsection.3.3.4}
 \contentsline {section}{\numberline {3.4}Conclusion}{71}{section.3.4}
-\contentsline {chapter}{\numberline {4}Multi-channel Weighted Nuclear Norm Minimization for Realistic Image Denoising}{75}{chapter.4}
+\contentsline {chapter}{\numberline {4}Multi-channel Weighted Nuclear Norm Minimization for Real-world Image Denoising}{75}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{75}{section.4.1}
 \contentsline {section}{\numberline {4.2}The Proposed Color Image Denoising Algorithm}{79}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}The Multi-channel Weighted Nuclear Norm Minimization Model}{79}{subsection.4.2.1}
@@ -56,7 +56,7 @@
 \contentsline {subsection}{\numberline {4.3.2}Experiments on Synthetic Noisy Color Images}{88}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Experiments on Real Noisy Color Images}{90}{subsection.4.3.3}
 \contentsline {section}{\numberline {4.4}Conclusion}{100}{section.4.4}
-\contentsline {chapter}{\numberline {5}A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising}{102}{chapter.5}
+\contentsline {chapter}{\numberline {5}A Trilateral Weighted Sparse Coding Scheme for Real-world Image Denoising}{102}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{102}{section.5.1}
 \contentsline {section}{\numberline {5.2}The Proposed Realistic Image Denoising Algorithm}{104}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}The Trilateral Weighted Sparse Coding Model}{104}{subsection.5.2.1}
@@ -69,9 +69,9 @@
 \contentsline {subsection}{\numberline {5.3.2}Faster Solution of the Sylvester Equation (\ref {equ5-13})}{113}{subsection.5.3.2}
 \contentsline {section}{\numberline {5.4}Experiments}{114}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Results on Additive White Gaussian Noise Removal}{114}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Results on Realistic Noise Removal}{116}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.2}Results on Real-world Noise Removal}{116}{subsection.5.4.2}
 \contentsline {section}{\numberline {5.5}Conclusion}{120}{section.5.5}
-\contentsline {chapter}{\numberline {6}Real-World Noisy Image Dataset: A New Benchmark}{125}{chapter.6}
+\contentsline {chapter}{\numberline {6}Real-world Noisy Image Dataset: A New Benchmark}{125}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{125}{section.6.1}
 \contentsline {section}{\numberline {6.2}Existing Datasets}{128}{section.6.2}
 \contentsline {section}{\numberline {6.3}The Proposed Dataset}{130}{section.6.3}
