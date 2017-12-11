@@ -18,7 +18,7 @@ This chapter will introduce how the noise is modeled in the imaging process, how
 \section{The Formulation of Image Denoising}
 \label{sec:intro:current}
 
-Due to the discrete nature of light and the thermal agitation, the camera sensors will cause inaccurate measurement in camera sensors. The inaccurate measurement is also called image noise. The types of image noise generated during the imaging pipeline are mainly the random noise, the spatial non-uniformity noise, and quantization noise. The random noise includes photon shot noise, dark current, and readout noise. The spatial non-uniformity noise includes the fixed pattern noise (PRNU, DCNU), CCD/CMOS specific noise. During the camera imaging pipeline, the noise will be furtherly made complex than those in the raw images.
+Due to the discrete nature of light and the thermal agitation, the camera sensors will have inaccurate measurement of image pixels. The measurement error is also called image noise. The noise generated during the imaging pipeline can be categorizedinto the random noise, the spatial non-uniformity noise, and quantization noise. The random noise includes photon shot noise, dark current, and readout noise. The spatial non-uniformity noise includes the fixed pattern noise (PRNU, DCNU), CCD/CMOS specific noise. During the camera imaging pipeline, the noise will be furtherly made complex than those in the raw images.
 
 To better analysis the property of the real-world noise quantitatively, we provide a simplified signal acquisition model \cite{Foipractical} including various noise sources (for each pixel) as follows:
 \begin{equation}
