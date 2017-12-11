@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 DEC 2017 16:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  11 DEC 2017 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1079,22 +1079,25 @@ File: images/ThesisOrganization.pdf Graphic file (type pdf)
 Package pdftex.def Info: images/ThesisOrganization.pdf used on input line 114.
 (pdftex.def)             Requested size: 448.07378pt x 316.68954pt.
  [12] [13 <./images/ThesisOrganization.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 145--149
+Underfull \hbox (badness 10000) in paragraph at lines 141--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--154
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 155--159
+Underfull \hbox (badness 10000) in paragraph at lines 146--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--164
+Underfull \vbox (badness 5119) has occurred while \output is active []
+
+ [14]
+Underfull \hbox (badness 10000) in paragraph at lines 151--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--160
 
  []
 
@@ -8061,23 +8064,26 @@ Here is how much of TeX's memory you used:
  90750 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,20n,38p,5320b,825s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Software
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Sof
-tware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c
-:/Software/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/Soft
-ware/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxbmi.pfb><c:/Software
-/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/Software/texli
-ve/2015/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/Software/texlive/20
-15/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/Software/texlive/2015/tex
-mf-dist/fonts/type1/public/txfonts/txbsy.pfb><c:/Software/texlive/2015/texmf-di
-st/fonts/type1/public/txfonts/txex.pfb><c:/Software/texlive/2015/texmf-dist/fon
-ts/type1/public/txfonts/txsy.pfb><c:/Software/texlive/2015/texmf-dist/fonts/typ
-e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
-/times/utmb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
-mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
-><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
-ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (199 pages, 55351566 bytes).
+pdfTeX warning (dest): name{section.1.4} has been referenced but does not exi
+st, replaced by a fixed one
+
+{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Software/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Softw
+are/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/
+Software/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/Softwa
+re/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxbmi.pfb><c:/Software/t
+exlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/Software/texlive
+/2015/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/Software/texlive/2015
+/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/Software/texlive/2015/texmf
+-dist/fonts/type1/public/txfonts/txbsy.pfb><c:/Software/texlive/2015/texmf-dist
+/fonts/type1/public/txfonts/txex.pfb><c:/Software/texlive/2015/texmf-dist/fonts
+/type1/public/txfonts/txsy.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1
+/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/t
+imes/utmb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb
+i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwa
+re/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on JunXuThesis.pdf (199 pages, 55351518 bytes).
 PDF statistics:
  4748 PDF objects out of 5155 (max. 8388607)
  3725 compressed objects within 38 object streams
