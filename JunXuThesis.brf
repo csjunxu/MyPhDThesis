@@ -135,7 +135,7 @@
 \backcite {ncwebsite}{{11}{1.2.2}{subsection.1.2.2}}
 \backcite {noiseclinic}{{11}{1.2.2}{subsection.1.2.2}}
 \backcite {Zhu_2016_CVPR}{{11}{1.2.2}{subsection.1.2.2}}
-\backcite {crosschannel2016}{{11}{1.2.2}{subsection.1.2.2}}
+\backcite {crosschannel2016}{{12}{1.2.2}{subsection.1.2.2}}
 \backcite {kervrann2007bayesian}{{12}{1.2.2}{subsection.1.2.2}}
 \backcite {neatimage}{{12}{1.2.2}{subsection.1.2.2}}
 \backcite {neatimage}{{12}{1.2.2}{subsection.1.2.2}}
@@ -156,10 +156,6 @@
 \backcite {wnnm}{{12}{1.3}{figure.caption.1}}
 \backcite {lssc}{{12}{1.3}{figure.caption.1}}
 \backcite {epll}{{12}{1.3}{figure.caption.1}}
-\backcite {cbm3d}{{13}{1.3}{figure.caption.1}}
-\backcite {mlp}{{13}{1.3}{figure.caption.1}}
-\backcite {bm3d}{{13}{1.3}{figure.caption.1}}
-\backcite {ncsr}{{13}{1.3}{figure.caption.1}}
 \backcite {neatimage}{{14}{1.3}{figure.caption.1}}
 \backcite {Tomasi1998}{{16}{2.1}{figure.caption.2}}
 \backcite {PeronaMalik1990}{{16}{2.1}{figure.caption.2}}
