@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  13 DEC 2017 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  13 DEC 2017 13:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1062,6 +1062,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
+Overfull \hbox (0.77423pt too wide) in paragraph at lines 85--86
+\OT1/txr/m/n/12 In this sec-tion, we will re-view the ex-ist-ing meth-ods of im
+-age de-nois-ing dur-ing the past decades.
+ []
+
 [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1082,10 +1087,10 @@ Package pdftex.def Info: images/ThesisOrganization.pdf used on input line 113.
  [12 <./images/ThesisOrganization.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+ [13])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14])
+ [14]
 [15]
 \openout2 = `chapter2.aux'.
 
@@ -8033,8 +8038,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 535.
 (./chapter6.aux) (./chapter7.aux) (./chapter8.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 535.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 535.
-Package rerunfilecheck Info: File `JunXuThesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 7F6F44ABF0A5010E8A75CC47AD8E6358;48739.
+
+
+Package rerunfilecheck Warning: File `JunXuThesis.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `JunXuThesis.brf':
+(rerunfilecheck)             Before: 7F6F44ABF0A5010E8A75CC47AD8E6358;48739
+(rerunfilecheck)             After:  DE2EAF15314BB6030DF3BED1986F3E03;48737.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 535.
  ) 
 Here is how much of TeX's memory you used:
@@ -8061,7 +8072,7 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (198 pages, 55350080 bytes).
+Output written on JunXuThesis.pdf (198 pages, 55349593 bytes).
 PDF statistics:
  4742 PDF objects out of 5155 (max. 8388607)
  3720 compressed objects within 38 object streams
