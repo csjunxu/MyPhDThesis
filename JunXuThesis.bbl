@@ -330,6 +330,12 @@ J.~Mairal, M.~Elad, and G.~Sapiro.
 \newblock Sparse representation for color image restoration.
 \newblock {\em IEEE Transactions on Image Processing}, 17(1):53--69, 2008.
 
+\bibitem{onlinedl}
+Julien Mairal, Francis Bach, Jean Ponce, and Guillermo Sapiro.
+\newblock Online dictionary learning for sparse coding.
+\newblock In {\em Proceedings of the 26th Annual International Conference on
+  Machine Learning}, ICML, pages 689--696, New York, NY, USA, 2009. ACM.
+
 \bibitem{makitalo2013optimal}
 M.~Makitalo and A.~Foi.
 \newblock Optimal inversion of the generalized anscombe transformation for
