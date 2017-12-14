@@ -422,6 +422,12 @@ Tobias Pl{\"o}tz and Stefan Roth.
 \newblock Benchmarking denoising algorithms with real photographs.
 \newblock {\em CVPR}, 2017.
 
+\bibitem{tid2008}
+Nikolay Ponomarenko, Vladimir Lukin, Alexander Zelensky, and Karen Egiazarian.
+\newblock Tid2008-a database for evaluation of full-reference visual quality
+  assessment metrics.
+\newblock 10(4):30--45, 2009.
+
 \bibitem{fullyblind}
 J.~Portilla.
 \newblock Full blind denoising through noise covariance estimation using
@@ -468,6 +474,13 @@ U.~Schmidt and S.~Roth.
 \newblock Shrinkage fields for effective image restoration.
 \newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
   (CVPR)}, pages 2774--2781, June 2014.
+
+\bibitem{LIVEIQA}
+H.~R. Sheikh, M.~F. Sabir, and A.~C. Bovik.
+\newblock A statistical evaluation of recent full reference image quality
+  assessment algorithms.
+\newblock {\em IEEE Transactions on Image Processing}, 15(11):3440--3451, Nov
+  2006.
 
 \bibitem{simoncini2016computational}
 V.~Simoncini.

@@ -73,13 +73,13 @@
 \contentsline {section}{\numberline {5.5}Conclusion}{119}{section.5.5}
 \contentsline {chapter}{\numberline {6}Real-world Noisy Image Dataset: A New Benchmark}{124}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{124}{section.6.1}
-\contentsline {section}{\numberline {6.2}Existing Datasets}{126}{section.6.2}
+\contentsline {section}{\numberline {6.2}Existing Datasets}{127}{section.6.2}
 \contentsline {section}{\numberline {6.3}The Proposed Dataset}{129}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Motivation}{129}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}The Construction Process}{132}{subsection.6.3.2}
 \contentsline {subsection}{\numberline {6.3.3}Summary of the Dataset}{136}{subsection.6.3.3}
-\contentsline {section}{\numberline {6.4}Experiments}{138}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Benchmark Dataset}{138}{subsection.6.4.1}
+\contentsline {section}{\numberline {6.4}Experiments}{137}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Benchmark Dataset}{137}{subsection.6.4.1}
 \contentsline {subsection}{\numberline {6.4.2}Comparison Methods}{139}{subsection.6.4.2}
 \contentsline {subsection}{\numberline {6.4.3}Results and Discussion}{140}{subsection.6.4.3}
 \contentsline {section}{\numberline {6.5}Conclusion}{143}{section.6.5}
