@@ -12,48 +12,47 @@ A level-1 auxiliary file: chapter7.aux
 A level-1 auxiliary file: chapter8.aux
 The style file: plain.bst
 Database file #1: bib-refs.bib
-Warning--I didn't find a database entry for ""
 Warning--to sort, need author or key in commoncamera
 Warning--empty journal in EMVA1288
-You've used 108 entries,
+You've used 109 entries,
             2118 wiz_defined-function locations,
-            1087 strings with 19990 characters,
-and the built_in function-call counts, 40455 in all, are:
-= -- 4108
-> -- 1875
+            1092 strings with 20040 characters,
+and the built_in function-call counts, 40770 in all, are:
+= -- 4142
+> -- 1882
 < -- 29
-+ -- 754
-- -- 628
-* -- 2996
-:= -- 6557
-add.period$ -- 328
-call.type$ -- 108
-change.case$ -- 635
++ -- 757
+- -- 630
+* -- 3020
+:= -- 6608
+add.period$ -- 331
+call.type$ -- 109
+change.case$ -- 639
 chr.to.int$ -- 0
-cite$ -- 110
-duplicate$ -- 1436
-empty$ -- 3015
-format.name$ -- 628
-if$ -- 8450
+cite$ -- 111
+duplicate$ -- 1447
+empty$ -- 3044
+format.name$ -- 630
+if$ -- 8515
 int.to.chr$ -- 0
-int.to.str$ -- 108
-missing$ -- 108
-newline$ -- 544
-num.names$ -- 214
-pop$ -- 559
+int.to.str$ -- 109
+missing$ -- 109
+newline$ -- 549
+num.names$ -- 216
+pop$ -- 561
 preamble$ -- 1
-purify$ -- 530
+purify$ -- 533
 quote$ -- 0
-skip$ -- 1099
+skip$ -- 1106
 stack$ -- 0
-substring$ -- 3116
-swap$ -- 361
+substring$ -- 3152
+swap$ -- 362
 text.length$ -- 29
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 426
+type$ -- 430
 warning$ -- 2
-while$ -- 413
-width$ -- 111
-write$ -- 1177
-(There were 3 warnings)
+while$ -- 417
+width$ -- 112
+write$ -- 1188
+(There were 2 warnings)

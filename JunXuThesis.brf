@@ -119,7 +119,7 @@
 \backcite {srcolor}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {onlinedl}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {srcvpr}{{9}{1.2.1}{subsection.1.2.1}}
-\backcite {ksvd}{{9}{1.2.1}{subsection.1.2.1}}
+\backcite {csdonoho}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {bm3d}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {ncsr}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {lssc}{{9}{1.2.1}{subsection.1.2.1}}
@@ -177,7 +177,7 @@
 \backcite {Zhu_2016_CVPR}{{11}{1.2.2}{subsection.1.2.2}}
 \backcite {crosschannel2016}{{11}{1.2.2}{subsection.1.2.2}}
 \backcite {kervrann2007bayesian}{{11}{1.2.2}{subsection.1.2.2}}
-\backcite {neatimage}{{11}{1.2.2}{subsection.1.2.2}}
+\backcite {neatimage}{{12}{1.2.2}{subsection.1.2.2}}
 \backcite {neatimage}{{12}{1.2.2}{subsection.1.2.2}}
 \backcite {crosschannel2016}{{12}{1.2.2}{subsection.1.2.2}}
 \backcite {nlm}{{12}{1.2.2}{subsection.1.2.2}}
@@ -404,8 +404,8 @@
 \backcite {foe}{{44}{3.1}{section.3.1}}
 \backcite {pgpd}{{44}{3.1}{section.3.1}}
 \backcite {epll}{{44}{3.1}{section.3.1}}
-\backcite {ncsr}{{44}{3.1}{section.3.1}}
 \backcite {crosschannel2016}{{45}{3.1}{figure.caption.28}}
+\backcite {ncsr}{{45}{3.1}{section.3.1}}
 \backcite {ksvd}{{45}{3.1}{section.3.1}}
 \backcite {lssc}{{45}{3.1}{section.3.1}}
 \backcite {blsgsm}{{45}{3.1}{section.3.1}}
