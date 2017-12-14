@@ -106,29 +106,27 @@ One recent benchmark is reported in \cite{dnd2017}. Different from the other two
 \begin{center}
 \small
 \renewcommand\arraystretch{1.2}
-\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}ccccc}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cccc}
 \hline
 Camera
 &
-\# img.
+\# Scene
 &
 Sensor size (mm)
-&
-Res. (Mpix)
 &
 ISO
 \\
 \hline
-Sony A7R & 13  & $36\times24$  & 36.3  & 100-25.6k
+Sony A7R & 13  & $36\times24$  & 100-25.6k
 \\
 \hline
-Olympus E-M10 & 13  & $17.3\times13$  & 16.1  & 200-25.6k 
+Olympus E-M10 & 13  & $17.3\times13$  & 200-25.6k 
 \\
 \hline   
-Sony RX100 IV & 12 & $13.2\times8.8$  & 20.1  & 125-8k 
+Sony RX100 IV & 12 & $13.2\times8.8$  & 125-8k 
 \\
 \hline   
-Huawei Nexus 6P & 12 & $6.17\times4.55$  & 12.3  & 100-6.4k 
+Huawei Nexus 6P & 12 & $6.17\times4.55$  & 100-6.4k 
 \\
 \hline
 \end{tabular*}
@@ -142,11 +140,11 @@ Huawei Nexus 6P & 12 & $6.17\times4.55$  & 12.3  & 100-6.4k
 \subsection{Motivation}
 As discussed previously, existing real-world noisy image datasets \cite{RENOIR2014,crosschannel2016,dnd2017} have several limitations in evaluating existing and future image denoising methods. These limitations include camera brands, camera settings, and captured scenes, etc.
 
-\textbf{Limited Camera Brands}: In the RENOIR dataset \cite{RENOIR2014}, the authors use two different camera brands such as Canon (T3i and S90), and Xiaomi (Mi3) for image collection. In the dataset \cite{crosschannel2016}, the authors also use these two camera brands, i.e., the Canon (5D) and Nikon (D600 and D800), for image collection. In the DND dataset \cite{dnd2017}, the authors use three different cameras including Sony (A7R and RX100 IV),  Olympus (E-M10), and Huawei (Nexus 6P).
+\textbf{Camera Brands}: In the RENOIR dataset \cite{RENOIR2014}, the authors used two different camera brands, Canon (T3i and S90) and Xiaomi (Mi3), for image collection. In the dataset \cite{crosschannel2016}, the authors also used these two camera brands, i.e., the Canon (5D) and Nikon (D600 and D800), for image collection. In the DND dataset \cite{dnd2017}, the authors used three different cameras including Sony (A7R and RX100 IV), Olympus (E-M10), and Huawei (Nexus 6P).
 
-\textbf{Limited Camera Settings}: In the RENOIR dataset \cite{RENOIR2014}, the ``ground truth'' images are all captured when the ISO is set as 100. The ISO in noisy images are set as follows: for Xiaomi Mi3, the ISO is set as 1,600 or 3,200; for Canon S90, the ISO is set as 640 or 1,000; for Canon T3i, the ISO is set as 3,200 or 6,400. For all the cases except for the reference image of Canon S90, the shutter speed are set as automatic. For Canon S90, the shutter speed is set as 3.2 seconds. In the dataset \cite{crosschannel2016}, three different ISOs (e.g., 1,600, 3,200, and 6,400) are employed when capturing images with Nikon D800, while ISO=3,200 is utilized for Canon 5D and Nikon D600. The DND dataset \cite{dnd2017} contains ISOs of large range. The ranges of ISO are $100\sim25,600$ for Sony A7R, $200\sim25,600$ for Olympus E-M10, $125\sim8,000$ for Sony RX100 IV, and $100\sim6,400$ for Huawei Nexus 6P, respectively. 
+\textbf{Camera Settings}: In the RENOIR dataset \cite{RENOIR2014}, the ``ground truth'' images are all captured by setting the ISO as 100. The ISO in noisy images are set as follows: for Xiaomi Mi3, the ISO is set as 1,600 or 3,200; for Canon S90, the ISO is set as 640 or 1,000; for Canon T3i, the ISO is set as 3,200 or 6,400. For all the cases except for the reference image of Canon S90, the shutter speed is set as automatic. For Canon S90, the shutter speed is set as 3.2 seconds. In the dataset \cite{crosschannel2016}, three different ISOs (e.g., 1,600, 3,200, and 6,400) are employed when capturing images with Nikon D800, while ISO=3,200 is utilized for Canon 5D and Nikon D600. The DND dataset \cite{dnd2017} contains ISOs of large range. The ranges of ISO are $100\sim25,600$ for Sony A7R, $200\sim25,600$ for Olympus E-M10, $125\sim8,000$ for Sony RX100 IV, and $100\sim6,400$ for Huawei Nexus 6P, respectively. 
 
-\textbf{Limited Captured Scenes}: The RENOIR dataset \cite{RENOIR2014} capture 40 scenes for each camera brand, and the overall 120 scenes are included in the dataset.  The dataset \cite{crosschannel2016} contains only 11 indoor scenes, in which the 11 scenes are overlapped by similar contents and objects. 
+\textbf{Captured Scenes}: The RENOIR dataset \cite{RENOIR2014} capture 40 scenes for each camera brand, and overall 120 scenes are included in the dataset. However, the noisy images and corresponding ``ground truth'' images in this dataset have distinct color aberration, which is not caused by real-world noise. The dataset \cite{crosschannel2016} contains only 11 indoor scenes, in which the 11 scenes are overlapped by similar contents and objects. 
 
 
 
