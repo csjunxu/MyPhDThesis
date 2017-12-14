@@ -14,45 +14,45 @@ The style file: plain.bst
 Database file #1: bib-refs.bib
 Warning--to sort, need author or key in commoncamera
 Warning--empty journal in EMVA1288
-You've used 109 entries,
+You've used 110 entries,
             2118 wiz_defined-function locations,
-            1092 strings with 20040 characters,
-and the built_in function-call counts, 40770 in all, are:
-= -- 4142
-> -- 1882
+            1098 strings with 20183 characters,
+and the built_in function-call counts, 41087 in all, are:
+= -- 4175
+> -- 1895
 < -- 29
-+ -- 757
-- -- 630
-* -- 3020
-:= -- 6608
-add.period$ -- 331
-call.type$ -- 109
-change.case$ -- 639
++ -- 763
+- -- 634
+* -- 3044
+:= -- 6661
+add.period$ -- 334
+call.type$ -- 110
+change.case$ -- 644
 chr.to.int$ -- 0
-cite$ -- 111
-duplicate$ -- 1447
-empty$ -- 3044
-format.name$ -- 630
-if$ -- 8515
+cite$ -- 112
+duplicate$ -- 1458
+empty$ -- 3069
+format.name$ -- 634
+if$ -- 8579
 int.to.chr$ -- 0
-int.to.str$ -- 109
-missing$ -- 109
-newline$ -- 549
-num.names$ -- 216
-pop$ -- 561
+int.to.str$ -- 110
+missing$ -- 110
+newline$ -- 554
+num.names$ -- 218
+pop$ -- 564
 preamble$ -- 1
-purify$ -- 533
+purify$ -- 537
 quote$ -- 0
-skip$ -- 1106
+skip$ -- 1114
 stack$ -- 0
-substring$ -- 3152
-swap$ -- 362
+substring$ -- 3177
+swap$ -- 363
 text.length$ -- 29
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 430
+type$ -- 434
 warning$ -- 2
-while$ -- 417
-width$ -- 112
-write$ -- 1188
+while$ -- 421
+width$ -- 113
+write$ -- 1199
 (There were 2 warnings)

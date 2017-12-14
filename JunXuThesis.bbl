@@ -77,6 +77,11 @@ J.~Cai, E.~J. Cand{\`e}s, and Z.~Shen.
 \newblock A singular value thresholding algorithm for matrix completion.
 \newblock {\em SIAM Journal on Optimization}, 20(4):1956--1982, 2010.
 
+\bibitem{candes2008introduction}
+Emmanuel~J Cand{\`e}s and Michael~B Wakin.
+\newblock An introduction to compressive sampling.
+\newblock {\em IEEE signal processing magazine}, 25(2):21--30, 2008.
+
 \bibitem{bayesshrink}
 S.~G. Chang, B.~Yu, and M.~Vetterli.
 \newblock Adaptive wavelet thresholding for image denoising and compression.
