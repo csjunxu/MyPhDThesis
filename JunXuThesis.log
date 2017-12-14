@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  14 DEC 2017 20:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  14 DEC 2017 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7400,7 +7400,7 @@ d on input line 415.
 LaTeX Warning: Float too large for page by 15.02982pt on input line 418.
 
 
-Underfull \vbox (badness 5388) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [136]
 [137] [138]
@@ -8046,17 +8046,14 @@ Package rerunfilecheck Warning: File `JunXuThesis.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
 
 Package rerunfilecheck Info: Checksums for `JunXuThesis.brf':
-(rerunfilecheck)             Before: CDAF49B795905583E805AE4E88273C43;51349
-(rerunfilecheck)             After:  31C8DACBDC931ABCE3A23D61CD9CD4DF;51349.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Before: 31C8DACBDC931ABCE3A23D61CD9CD4DF;51349
+(rerunfilecheck)             After:  02964F993E015CF4036672B310291079;51349.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 535.
  ) 
 Here is how much of TeX's memory you used:
  15197 strings out of 493091
  338664 string characters out of 6134517
- 405593 words of memory out of 5000000
+ 405462 words of memory out of 5000000
  16899 multiletter control sequences out of 15000+600000
  90750 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -8077,10 +8074,10 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (199 pages, 55354399 bytes).
+Output written on JunXuThesis.pdf (199 pages, 55354278 bytes).
 PDF statistics:
- 4846 PDF objects out of 5155 (max. 8388607)
- 3822 compressed objects within 39 object streams
+ 4844 PDF objects out of 5155 (max. 8388607)
+ 3820 compressed objects within 39 object streams
  825 named destinations out of 1000 (max. 500000)
  3411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
