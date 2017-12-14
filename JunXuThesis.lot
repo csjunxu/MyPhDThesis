@@ -28,8 +28,8 @@
 \contentsline {table}{\numberline {6.2}{\ignorespaces The detailed information of the cropped regions from the dataset \cite {crosschannel2016}.\relax }}{128}{table.caption.103}
 \contentsline {table}{\numberline {6.3}{\ignorespaces Cameras used for capturing the dataset \cite {dnd2017}.\relax }}{129}{table.caption.104}
 \contentsline {table}{\numberline {6.4}{\ignorespaces Cameras and camera settings for capturing the our new dataset.\relax }}{137}{table.caption.109}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Detailed information of the 100 cropped regions from the 40 scenes captured in the our new dataset.\relax }}{138}{table.caption.110}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf {Dataset 1} \cite {crosschannel2016}.\relax }}{141}{table.caption.111}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Detailed information of the 100 cropped regions from the 40 scenes captured in the our new dataset.\relax }}{137}{table.caption.110}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf {Dataset 1} \cite {crosschannel2016}.\relax }}{140}{table.caption.111}
 \contentsline {table}{\numberline {6.7}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1000 cropped images in \textbf {Dataset 2} \cite {dnd2017}.\relax }}{141}{table.caption.113}
 \contentsline {table}{\numberline {6.8}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf {Dataset 3}).\relax }}{142}{table.caption.115}
 \addvspace {10\p@ }
