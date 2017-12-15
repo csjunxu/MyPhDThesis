@@ -79,7 +79,7 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Some examples in our newly constructed dataset.\relax }}{143}{figure.caption.107}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Some cropped parts of the ``ground truth'' images (up) and their corresponding realistic images (down) in our newly constructed dataset.\relax }}{144}{figure.caption.108}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Denoised images and PSNR (dB)/SSIM results of the real-world noisy image \textsl {Canon 5D Mark 3 ISO 3200 1} \cite {crosschannel2016} by different methods.\ The images are better to be zoomed in on screen.\relax }}{145}{figure.caption.111}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Denoised images and PSNR (dB) results of the real-world noisy image \textsl {0001\_1} \cite {dnd2017} by different methods.\ The images are better to be zoomed in on screen.\relax }}{146}{figure.caption.113}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Denoised images and PSNR (dB)/SSIM results of the real-world noisy image \textsl {Canon80D\_8\_8\_800\_GO\_11} in our new dataset by different methods.\ The images are better to be zoomed in on screen.\relax }}{147}{figure.caption.115}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Denoised images and PSNR (dB) results of the real-world noisy image \textsl {0001\_1} \cite {dnd2017} by different methods.\ The images are better to be zoomed in on screen.\relax }}{146}{figure.caption.112}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Denoised images and PSNR (dB)/SSIM results of the real-world noisy image \textsl {Canon80D\_8\_8\_800\_GO\_11} in our new dataset by different methods.\ The images are better to be zoomed in on screen.\relax }}{147}{figure.caption.113}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

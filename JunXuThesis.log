@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  15 DEC 2017 08:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  15 DEC 2017 09:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7401,459 +7401,461 @@ Underfull \vbox (badness 3098) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [138]
-<images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png, id=3547, 205.7687
+<images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png, id=3545, 205.7687
 5pt x 205.76875pt>
 File: images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png Graphic file 
 (type png)
 
 <use images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_rea
-l.png used on input line 564.
+l.png used on input line 560.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png, id=3548, 205.768
+<images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png, id=3546, 205.768
 75pt x 205.76875pt>
 File: images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png Graphic file
  (type png)
 
 <use images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_re
-al.png used on input line 564.
+al.png used on input line 560.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png, id=3549, 205.768
+<images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png, id=3547, 205.768
 75pt x 205.76875pt>
 File: images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png Graphic file
  (type png)
 
 <use images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_re
-al.png used on input line 564.
+al.png used on input line 560.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png, id=3550, 205.7687
+<images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png, id=3548, 205.7687
 5pt x 205.76875pt>
 File: images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png Graphic file 
 (type png)
 
 <use images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_rea
-l.png used on input line 564.
+l.png used on input line 560.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png, id=3551, 205.7687
+<images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png, id=3549, 205.7687
 5pt x 205.76875pt>
 File: images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png Graphic file 
 (type png)
 
 <use images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_rea
-l.png used on input line 586.
+l.png used on input line 582.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png, id=3552, 205.7687
+<images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png, id=3550, 205.7687
 5pt x 205.76875pt>
 File: images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png Graphic file 
 (type png)
 
 <use images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_rea
-l.png used on input line 586.
+l.png used on input line 582.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png, id=3553, 205.76875
+<images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png, id=3551, 205.76875
 pt x 205.76875pt>
 File: images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png Graphic file (
 type png)
 
 <use images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real
-.png used on input line 586.
+.png used on input line 582.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real.png, id=3554, 205.76875
+<images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real.png, id=3552, 205.76875
 pt x 205.76875pt>
 File: images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real.png Graphic file (
 type png)
 
 <use images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real
-.png used on input line 586.
+.png used on input line 582.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real.png, id=3555, 205.76875
+<images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real.png, id=3553, 205.76875
 pt x 205.76875pt>
 File: images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real.png Graphic file (
 type png)
 
 <use images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_TRD_5dmark3_iso3200_1_real
-.png used on input line 608.
+.png used on input line 604.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png, id=3556, 205.768
+<images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png, id=3554, 205.768
 75pt x 205.76875pt>
 File: images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png Graphic file
  (type png)
 
 <use images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_DnCNN_5dmark3_iso3200_1_re
-al.png used on input line 608.
+al.png used on input line 604.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.png, id=3557, 205.76875p
+<images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.png, id=3555, 205.76875p
 t x 205.76875pt>
 File: images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.png Graphic file (t
 ype png)
 
 <use images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_NC_5dmark3_iso3200_1_real.
-png used on input line 608.
+png used on input line 604.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.png, id=3558, 205.76875p
+<images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.png, id=3556, 205.76875p
 t x 205.76875pt>
 File: images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.png Graphic file (t
 ype png)
 
 <use images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_NI_5dmark3_iso3200_1_real.
-png used on input line 608.
+png used on input line 604.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_PGPD_5dmark3_iso3200_1_real.png, id=3559, 205.7687
+<images/dataset/cc/resize_br_PGPD_5dmark3_iso3200_1_real.png, id=3557, 205.7687
 5pt x 205.76875pt>
 File: images/dataset/cc/resize_br_PGPD_5dmark3_iso3200_1_real.png Graphic file 
 (type png)
 
 <use images/dataset/cc/resize_br_PGPD_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_PGPD_5dmark3_iso3200_1_rea
-l.png used on input line 630.
+l.png used on input line 626.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_Guided_5dmark3_iso3200_1_real.png, id=3560, 205.76
+<images/dataset/cc/resize_br_Guided_5dmark3_iso3200_1_real.png, id=3558, 205.76
 875pt x 205.76875pt>
 File: images/dataset/cc/resize_br_Guided_5dmark3_iso3200_1_real.png Graphic fil
 e (type png)
 
 <use images/dataset/cc/resize_br_Guided_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_Guided_5dmark3_iso3200_1_r
-eal.png used on input line 630.
+eal.png used on input line 626.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_MCWNNM_5dmark3_iso3200_1_real.png, id=3561, 205.76
+<images/dataset/cc/resize_br_MCWNNM_5dmark3_iso3200_1_real.png, id=3559, 205.76
 875pt x 205.76875pt>
 File: images/dataset/cc/resize_br_MCWNNM_5dmark3_iso3200_1_real.png Graphic fil
 e (type png)
 
 <use images/dataset/cc/resize_br_MCWNNM_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_MCWNNM_5dmark3_iso3200_1_r
-eal.png used on input line 630.
+eal.png used on input line 626.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/cc/resize_br_TWSC_5dmark3_iso3200_1_real.png, id=3562, 205.7687
+<images/dataset/cc/resize_br_TWSC_5dmark3_iso3200_1_real.png, id=3560, 205.7687
 5pt x 205.76875pt>
 File: images/dataset/cc/resize_br_TWSC_5dmark3_iso3200_1_real.png Graphic file 
 (type png)
 
 <use images/dataset/cc/resize_br_TWSC_5dmark3_iso3200_1_real.png>
 Package pdftex.def Info: images/dataset/cc/resize_br_TWSC_5dmark3_iso3200_1_rea
-l.png used on input line 630.
+l.png used on input line 626.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/dnd/resize_br_Noisy_0001_1.png, id=3570, 205.76875pt x 205.7687
+<images/dataset/dnd/resize_br_Noisy_0001_1.png, id=3563, 205.76875pt x 205.7687
 5pt>
 File: images/dataset/dnd/resize_br_Noisy_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_Noisy_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_Noisy_0001_1.png used on 
-input line 724.
+input line 659.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_CBM3D_0001_1.png, id=3571, 205.76875pt x 205.7687
+<images/dataset/dnd/resize_br_CBM3D_0001_1.png, id=3564, 205.76875pt x 205.7687
 5pt>
 File: images/dataset/dnd/resize_br_CBM3D_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_CBM3D_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_CBM3D_0001_1.png used on 
-input line 724.
+input line 659.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_EPLL_0001_1.png, id=3572, 205.76875pt x 205.76875
+<images/dataset/dnd/resize_br_EPLL_0001_1.png, id=3565, 205.76875pt x 205.76875
 pt>
 File: images/dataset/dnd/resize_br_EPLL_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_EPLL_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_EPLL_0001_1.png used on i
-nput line 724.
+nput line 659.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_NCSR_0001_1.png, id=3573, 205.76875pt x 205.76875
+<images/dataset/dnd/resize_br_NCSR_0001_1.png, id=3566, 205.76875pt x 205.76875
 pt>
 File: images/dataset/dnd/resize_br_NCSR_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_NCSR_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_NCSR_0001_1.png used on i
-nput line 724.
+nput line 659.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_WNNM_0001_1.png, id=3574, 205.76875pt x 205.76875
+<images/dataset/dnd/resize_br_WNNM_0001_1.png, id=3567, 205.76875pt x 205.76875
 pt>
 File: images/dataset/dnd/resize_br_WNNM_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_WNNM_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_WNNM_0001_1.png used on i
-nput line 724.
+nput line 659.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_MLP_0001_1.png, id=3575, 205.76875pt x 205.76875p
+<images/dataset/dnd/resize_br_MLP_0001_1.png, id=3568, 205.76875pt x 205.76875p
 t>
 File: images/dataset/dnd/resize_br_MLP_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_MLP_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_MLP_0001_1.png used on in
-put line 751.
+put line 686.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_CSF_0001_1.png, id=3576, 205.76875pt x 205.76875p
+<images/dataset/dnd/resize_br_CSF_0001_1.png, id=3569, 205.76875pt x 205.76875p
 t>
 File: images/dataset/dnd/resize_br_CSF_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_CSF_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_CSF_0001_1.png used on in
-put line 751.
+put line 686.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_TRD_0001_1.png, id=3577, 205.76875pt x 205.76875p
+<images/dataset/dnd/resize_br_TRD_0001_1.png, id=3570, 205.76875pt x 205.76875p
 t>
 File: images/dataset/dnd/resize_br_TRD_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_TRD_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_TRD_0001_1.png used on in
-put line 751.
+put line 686.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_DnCNN_0001_1.png, id=3578, 205.76875pt x 205.7687
+<images/dataset/dnd/resize_br_DnCNN_0001_1.png, id=3571, 205.76875pt x 205.7687
 5pt>
 File: images/dataset/dnd/resize_br_DnCNN_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_DnCNN_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_DnCNN_0001_1.png used on 
-input line 751.
+input line 686.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_NC_0001_1.png, id=3579, 205.76875pt x 205.76875pt
+<images/dataset/dnd/resize_br_NC_0001_1.png, id=3572, 205.76875pt x 205.76875pt
 >
 File: images/dataset/dnd/resize_br_NC_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_NC_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_NC_0001_1.png used on inp
-ut line 751.
+ut line 686.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_NI_0001_1.png, id=3580, 205.76875pt x 205.76875pt
+<images/dataset/dnd/resize_br_NI_0001_1.png, id=3573, 205.76875pt x 205.76875pt
 >
 File: images/dataset/dnd/resize_br_NI_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_NI_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_NI_0001_1.png used on inp
-ut line 778.
+ut line 713.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_PGPD_0001_1.png, id=3581, 205.76875pt x 205.76875
+<images/dataset/dnd/resize_br_PGPD_0001_1.png, id=3574, 205.76875pt x 205.76875
 pt>
 File: images/dataset/dnd/resize_br_PGPD_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_PGPD_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_PGPD_0001_1.png used on i
-nput line 778.
+nput line 713.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_Guided_0001_1.png, id=3582, 205.76875pt x 205.768
+<images/dataset/dnd/resize_br_Guided_0001_1.png, id=3575, 205.76875pt x 205.768
 75pt>
 File: images/dataset/dnd/resize_br_Guided_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_Guided_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_Guided_0001_1.png used on
- input line 778.
+ input line 713.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_MCWNNM_0001_1.png, id=3583, 205.76875pt x 205.768
+<images/dataset/dnd/resize_br_MCWNNM_0001_1.png, id=3576, 205.76875pt x 205.768
 75pt>
 File: images/dataset/dnd/resize_br_MCWNNM_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_MCWNNM_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_MCWNNM_0001_1.png used on
- input line 778.
+ input line 713.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
 
-<images/dataset/dnd/resize_br_TWSC_0_3_0001_1.png, id=3584, 205.76875pt x 205.7
+<images/dataset/dnd/resize_br_TWSC_0_3_0001_1.png, id=3577, 205.76875pt x 205.7
 6875pt>
 File: images/dataset/dnd/resize_br_TWSC_0_3_0001_1.png Graphic file (type png)
  <use images/dataset/dnd/resize_br_TWSC_0_3_0001_1.png>
 Package pdftex.def Info: images/dataset/dnd/resize_br_TWSC_0_3_0001_1.png used 
-on input line 778.
+on input line 713.
 (pdftex.def)             Requested size: 85.1351pt x 85.13496pt.
- [139]
-<images/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_GO_11_real.png, id=3594, 
+
+<images/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_GO_11_real.png, id=3580, 
 205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_GO_11_real.png Graph
 ic file (type png)
 
 <use images/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_G
-O_11_real.png used on input line 867.
+O_11_real.png used on input line 741.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_Noisy_Canon80D_8_8_800_GO_11_real.png, id=3595,
+<images/dataset/PolyU/resize_br_Noisy_Canon80D_8_8_800_GO_11_real.png, id=3581,
  205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_Noisy_Canon80D_8_8_800_GO_11_real.png Grap
 hic file (type png)
 
 <use images/dataset/PolyU/resize_br_Noisy_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_Noisy_Canon80D_8_8_800_
-GO_11_real.png used on input line 867.
+GO_11_real.png used on input line 741.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_CBM3D_Canon80D_8_8_800_GO_11_real.png, id=3596,
+<images/dataset/PolyU/resize_br_CBM3D_Canon80D_8_8_800_GO_11_real.png, id=3582,
  205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_CBM3D_Canon80D_8_8_800_GO_11_real.png Grap
 hic file (type png)
 
 <use images/dataset/PolyU/resize_br_CBM3D_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_CBM3D_Canon80D_8_8_800_
-GO_11_real.png used on input line 867.
+GO_11_real.png used on input line 741.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_EPLL_Canon80D_8_8_800_GO_11_real.png, id=3597, 
+<images/dataset/PolyU/resize_br_EPLL_Canon80D_8_8_800_GO_11_real.png, id=3583, 
 205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_EPLL_Canon80D_8_8_800_GO_11_real.png Graph
 ic file (type png)
 
 <use images/dataset/PolyU/resize_br_EPLL_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_EPLL_Canon80D_8_8_800_G
-O_11_real.png used on input line 867.
+O_11_real.png used on input line 741.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_NCSR_Canon80D_8_8_800_GO_11_real.png, id=3598, 
+<images/dataset/PolyU/resize_br_NCSR_Canon80D_8_8_800_GO_11_real.png, id=3584, 
 205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_NCSR_Canon80D_8_8_800_GO_11_real.png Graph
 ic file (type png)
 
 <use images/dataset/PolyU/resize_br_NCSR_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_NCSR_Canon80D_8_8_800_G
-O_11_real.png used on input line 889.
+O_11_real.png used on input line 763.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_WNNM_Canon80D_8_8_800_GO_11_real.png, id=3599, 
+<images/dataset/PolyU/resize_br_WNNM_Canon80D_8_8_800_GO_11_real.png, id=3585, 
 205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_WNNM_Canon80D_8_8_800_GO_11_real.png Graph
 ic file (type png)
 
 <use images/dataset/PolyU/resize_br_WNNM_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_WNNM_Canon80D_8_8_800_G
-O_11_real.png used on input line 889.
+O_11_real.png used on input line 763.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_MLP_Canon80D_8_8_800_GO_11_real.png, id=3600, 2
+<images/dataset/PolyU/resize_br_MLP_Canon80D_8_8_800_GO_11_real.png, id=3586, 2
 05.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_MLP_Canon80D_8_8_800_GO_11_real.png Graphi
 c file (type png)
 
 <use images/dataset/PolyU/resize_br_MLP_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_MLP_Canon80D_8_8_800_GO
-_11_real.png used on input line 889.
+_11_real.png used on input line 763.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_CSF_Canon80D_8_8_800_GO_11_real.png, id=3601, 2
+<images/dataset/PolyU/resize_br_CSF_Canon80D_8_8_800_GO_11_real.png, id=3587, 2
 05.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_CSF_Canon80D_8_8_800_GO_11_real.png Graphi
 c file (type png)
 
 <use images/dataset/PolyU/resize_br_CSF_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_CSF_Canon80D_8_8_800_GO
-_11_real.png used on input line 889.
+_11_real.png used on input line 763.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_TRD_Canon80D_8_8_800_GO_11_real.png, id=3602, 2
+<images/dataset/PolyU/resize_br_TRD_Canon80D_8_8_800_GO_11_real.png, id=3588, 2
 05.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_TRD_Canon80D_8_8_800_GO_11_real.png Graphi
 c file (type png)
 
 <use images/dataset/PolyU/resize_br_TRD_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_TRD_Canon80D_8_8_800_GO
-_11_real.png used on input line 911.
+_11_real.png used on input line 785.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_DnCNN_Canon80D_8_8_800_GO_11_real.png, id=3603,
+<images/dataset/PolyU/resize_br_DnCNN_Canon80D_8_8_800_GO_11_real.png, id=3589,
  205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_DnCNN_Canon80D_8_8_800_GO_11_real.png Grap
 hic file (type png)
 
 <use images/dataset/PolyU/resize_br_DnCNN_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_DnCNN_Canon80D_8_8_800_
-GO_11_real.png used on input line 911.
+GO_11_real.png used on input line 785.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_NC_Canon80D_8_8_800_GO_11_real.png, id=3604, 20
+<images/dataset/PolyU/resize_br_NC_Canon80D_8_8_800_GO_11_real.png, id=3590, 20
 5.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_NC_Canon80D_8_8_800_GO_11_real.png Graphic
  file (type png)
 
 <use images/dataset/PolyU/resize_br_NC_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_NC_Canon80D_8_8_800_GO_
-11_real.png used on input line 911.
+11_real.png used on input line 785.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_NI_Canon80D_8_8_800_GO_11_real.png, id=3605, 20
+<images/dataset/PolyU/resize_br_NI_Canon80D_8_8_800_GO_11_real.png, id=3591, 20
 5.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_NI_Canon80D_8_8_800_GO_11_real.png Graphic
  file (type png)
 
 <use images/dataset/PolyU/resize_br_NI_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_NI_Canon80D_8_8_800_GO_
-11_real.png used on input line 911.
+11_real.png used on input line 785.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_PGPD_Canon80D_8_8_800_GO_11_real.png, id=3606, 
+<images/dataset/PolyU/resize_br_PGPD_Canon80D_8_8_800_GO_11_real.png, id=3592, 
 205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_PGPD_Canon80D_8_8_800_GO_11_real.png Graph
 ic file (type png)
 
 <use images/dataset/PolyU/resize_br_PGPD_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_PGPD_Canon80D_8_8_800_G
-O_11_real.png used on input line 933.
+O_11_real.png used on input line 807.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_Guided_Canon80D_8_8_800_GO_11_real.png, id=3607
+<images/dataset/PolyU/resize_br_Guided_Canon80D_8_8_800_GO_11_real.png, id=3593
 , 205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_Guided_Canon80D_8_8_800_GO_11_real.png Gra
 phic file (type png)
 
 <use images/dataset/PolyU/resize_br_Guided_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_Guided_Canon80D_8_8_800
-_GO_11_real.png used on input line 933.
+_GO_11_real.png used on input line 807.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_MCWNNM_Canon80D_8_8_800_GO_11_real.png, id=3608
+<images/dataset/PolyU/resize_br_MCWNNM_Canon80D_8_8_800_GO_11_real.png, id=3594
 , 205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_MCWNNM_Canon80D_8_8_800_GO_11_real.png Gra
 phic file (type png)
 
 <use images/dataset/PolyU/resize_br_MCWNNM_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_MCWNNM_Canon80D_8_8_800
-_GO_11_real.png used on input line 933.
+_GO_11_real.png used on input line 807.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-<images/dataset/PolyU/resize_br_TWSC_Canon80D_8_8_800_GO_11_real.png, id=3609, 
+<images/dataset/PolyU/resize_br_TWSC_Canon80D_8_8_800_GO_11_real.png, id=3595, 
 205.76875pt x 205.76875pt>
 File: images/dataset/PolyU/resize_br_TWSC_Canon80D_8_8_800_GO_11_real.png Graph
 ic file (type png)
 
 <use images/dataset/PolyU/resize_br_TWSC_Canon80D_8_8_800_GO_11_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_TWSC_Canon80D_8_8_800_G
-O_11_real.png used on input line 933.
+O_11_real.png used on input line 807.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-Underfull \hbox (badness 2134) in paragraph at lines 934--934
+Underfull \hbox (badness 2134) in paragraph at lines 808--808
 []\OT1/txr/bx/n/10.95 Figure 6.7 \OT1/txr/m/n/10.95 De-noised im-ages and PSNR 
 (dB)/SSIM re-sults of the real-world noisy im-age
  []
 
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 942.
+[139]
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 944.
 
-(c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/omstxr.fd
+ (c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 942.
- [140]
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 944.
+
+[140]
 Underfull \vbox (badness 7012) has occurred while \output is active []
 
  [141])
@@ -8033,14 +8035,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 535.
 (./chapter6.aux) (./chapter7.aux) (./chapter8.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 535.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 535.
-Package rerunfilecheck Info: File `JunXuThesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 9BD70E122F76D967C3DB5C42A5DF405E;51305.
+
+
+Package rerunfilecheck Warning: File `JunXuThesis.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `JunXuThesis.brf':
+(rerunfilecheck)             Before: EB79E5A94244464FCB1072C39FFB7ED6;51299
+(rerunfilecheck)             After:  638F507AAB822EAEAE9BC7007DC2AB1A;51296.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 535.
  ) 
 Here is how much of TeX's memory you used:
  15194 strings out of 493091
  338631 string characters out of 6134517
- 405247 words of memory out of 5000000
+ 405242 words of memory out of 5000000
  16898 multiletter control sequences out of 15000+600000
  90750 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -8061,7 +8072,7 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (198 pages, 55351951 bytes).
+Output written on JunXuThesis.pdf (198 pages, 55351980 bytes).
 PDF statistics:
  4830 PDF objects out of 5155 (max. 8388607)
  3807 compressed objects within 39 object streams
