@@ -478,7 +478,7 @@ With the proposed dataset, we make a comprehensive evaluation on the state-of-th
 
 \subsection{Results and Discussion}
 
-\textbf{Results on Dataset 1}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{tab6-6}.\ One can see that the TWSC method performs much better than other competing methods.\ Figure\ \ref{fig6-5} shows the denoised images of a scene captured by Nikon D800 at ISO = 6400.\ One can see that the proposed TWSC method results in not only higher PSNR and SSIM measures, but also much better visual quality than other methods.
+\textbf{Results on Dataset 1}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{tab6-6}.\ One can see that the proposed TWSC, MCWNNM, and Guided methods perform much better than the other competing methods.\ Figure\ \ref{fig6-5} shows the denoised images of a scene captured by Nikon D800 at ISO = 6400.\ One can see that TWSC, MCWNNM, and Guided result in not only higher PSNR and SSIM measures, but also much better visual quality than other methods.
 
 \begin{table}[t!]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf{Dataset 1} \cite{crosschannel2016}.}
@@ -632,7 +632,7 @@ SSIM & 0.8635  &  0.9364 & 0.9126  & 0.8591  & 0.9504 &  0.9542 & \textbf{0.9586
     \label{fig6-5}
 \end{figure}
 
-\textbf{Results on Dataset 2}. In Table \ref{tab6-7}, we list the average PSNR and SSIM results of the competing methods on the 1000 cropped images in the DND dataset \cite{dnd2017}.\ We can see again that the TWSC method achieves much better performance than the other competing methods.\ Note that the ``ground truth'' images of this dataset have not been published, but one can submit the denoised images to the project website and get the PSNR and SSIM results.\ Figure\ \ref{fig6-6} shows the denoised images of a scene captured by a Nexus 6P camera.\ One can still see that the proposed TWSC method results better visual quality than the other denoising methods.
+\textbf{Results on Dataset 2}. In Table \ref{tab6-7}, we list the average PSNR and SSIM results of the competing methods on the 1000 cropped images in the DND dataset \cite{dnd2017}.\ We can see that on this dataset the TWSC, MCWNNM, and Guided methods achieve much better performance than the other competing methods.\ Note that the ``ground truth'' images of this dataset have not been released, but one can submit the denoised images to the project website and get the PSNR and SSIM results.\ Figure\ \ref{fig6-6} shows the denoised images of a scene captured by a Nexus 6P camera.\ One can see that the TWSC, MCWNNM, and Guided methods result in better visual quality than the other denoising methods.
 
 \begin{table}[t!]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1000 cropped images in \textbf{Dataset 2} \cite{dnd2017}.}
@@ -781,7 +781,7 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 \end{figure}
 
 \textbf{Results on Dataset 3}.
-The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images. Some visual comparisons are listed in Figures \ref{fig6-7}, from which one can see that the TWSC method removes the noise while still maintains the details. 
+The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images. The proposed TWSC, MCWNNM, and Guided methods work much better than previous methods. Some visual comparisons are listed in Figures \ref{fig6-7}, from which one can see that the TWSC method removes the noise while still maintains the details. 
 
 \begin{table}[t!]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}).}

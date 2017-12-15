@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  14 DEC 2017 21:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  15 DEC 2017 08:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7853,78 +7853,83 @@ File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 942.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [140]
-[141]) [142] [143 <./images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG> <./im
-ages/dataset/Canon5D2_5_160_6400_circuit_mean.JPG> <./images/dataset/Canon5D2_5
-_200_3200_toy_mean.JPG> <./images/dataset/NikonD800_4-5_160_1800_classroom_mean
-.JPG> <./images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG> <./images/datase
-t/NikonD800_8_125_6400_photo_mean.JPG> <./images/dataset/Sony_3-5_200_1600_clas
-sroom_mean.JPG> <./images/dataset/Sony_4-5_125_3200_plant_mean.JPG> <./images/d
-ataset/Sony_4_200_3200_door_mean.JPG> <./images/dataset/Canon80D_8_8_3200_ball_
-mean.JPG> <./images/dataset/Canon80D_8_8_12800_printer_mean.JPG> <./images/data
-set/Canon80D_8_8_6400_comproom_mean.JPG>] [144 <./images/dataset/Canon5D2_5_160
-_6400_bicycle_6_mean.JPG> <./images/dataset/Canon5D2_5_160_6400_bicycle_6_real.
-JPG> <./images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG> <./images/datas
-et/Canon5D2_5_160_6400_circuit_11_real.JPG> <./images/dataset/Canon5D2_5_160_64
-00_reciever_1_mean.JPG> <./images/dataset/Canon5D2_5_160_6400_reciever_1_real.J
-PG> <./images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG> <./images/dataset/Can
-on5D2_5_200_3200_toy_3_real.JPG> <./images/dataset/Canon80D_8_8_6400_comproom_1
-1_mean.JPG> <./images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG> <./images
-/dataset/Canon600D_4-5_125_1600_toy_16_mean.JPG> <./images/dataset/Canon600D_4-
-5_125_1600_toy_16_real.JPG> <./images/dataset/NikonD800_5_125_6400_stair_3_mean
-.JPG> <./images/dataset/NikonD800_5_125_6400_stair_3_real.JPG> <./images/datase
-t/NikonD800_6-3_125_5000_plant_1_mean.JPG> <./images/dataset/NikonD800_6-3_125_
-5000_plant_1_real.JPG> <./images/dataset/Sony_3-5_200_1600_classroom_14_mean.JP
-G> <./images/dataset/Sony_3-5_200_1600_classroom_14_real.JPG> <./images/dataset
-/Sony_4-5_125_3200_plant_10_mean.JPG> <./images/dataset/Sony_4-5_125_3200_plant
-_10_real.JPG>] [145 <./images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.
-png (PNG copy)> <./images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png
- (PNG copy)> <./images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png (P
-NG copy)> <./images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png (PNG c
-opy)> <./images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png (PNG copy)
-> <./images/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png (PNG copy)> <.
-/images/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png (PNG copy)> <./imag
-es/dataset/cc/resize_br_CSF_5dmark3_iso3200_1_real.png (PNG copy)> <./images/da
-taset/cc/resize_br_TRD_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset
-/cc/resize_br_DnCNN_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc
-/resize_br_NC_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resiz
-e_br_NI_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_P
-GPD_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_Guide
-d_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_MCWNNM_
-5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_TWSC_5dma
-rk3_iso3200_1_real.png (PNG copy)>] [146 <./images/dataset/dnd/resize_br_Noisy_
-0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_CBM3D_0001_1.png (PNG co
-py)> <./images/dataset/dnd/resize_br_EPLL_0001_1.png (PNG copy)> <./images/data
-set/dnd/resize_br_NCSR_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_W
-NNM_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_MLP_0001_1.png (PNG 
-copy)> <./images/dataset/dnd/resize_br_CSF_0001_1.png (PNG copy)> <./images/dat
-aset/dnd/resize_br_TRD_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_D
-nCNN_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_NC_0001_1.png (PNG 
-copy)> <./images/dataset/dnd/resize_br_NI_0001_1.png (PNG copy)> <./images/data
-set/dnd/resize_br_PGPD_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_G
-uided_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_MCWNNM_0001_1.png 
-(PNG copy)> <./images/dataset/dnd/resize_br_TWSC_0_3_0001_1.png (PNG copy)>]
-[147 <./images/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_GO_11_real.png (PN
-G copy)> <./images/dataset/PolyU/resize_br_Noisy_Canon80D_8_8_800_GO_11_real.pn
-g (PNG copy)> <./images/dataset/PolyU/resize_br_CBM3D_Canon80D_8_8_800_GO_11_re
-al.png (PNG copy)> <./images/dataset/PolyU/resize_br_EPLL_Canon80D_8_8_800_GO_1
-1_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_NCSR_Canon80D_8_8_800_
-GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_WNNM_Canon80D_8_8_
-800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_MLP_Canon80D_8
-_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_CSF_Canon80
-D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_TRD_Cano
-n80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_DnCNN
-_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_
-NC_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_b
-r_NI_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize
-_br_PGPD_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/re
-size_br_Guided_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/Po
-lyU/resize_br_MCWNNM_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/data
-set/PolyU/resize_br_TWSC_Canon80D_8_8_800_GO_11_real.png (PNG copy)>]
+Underfull \vbox (badness 7012) has occurred while \output is active []
+
+ [141])
+[142] [143 <./images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG> <./images/da
+taset/Canon5D2_5_160_6400_circuit_mean.JPG> <./images/dataset/Canon5D2_5_200_32
+00_toy_mean.JPG> <./images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG> <
+./images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG> <./images/dataset/Nikon
+D800_8_125_6400_photo_mean.JPG> <./images/dataset/Sony_3-5_200_1600_classroom_m
+ean.JPG> <./images/dataset/Sony_4-5_125_3200_plant_mean.JPG> <./images/dataset/
+Sony_4_200_3200_door_mean.JPG> <./images/dataset/Canon80D_8_8_3200_ball_mean.JP
+G> <./images/dataset/Canon80D_8_8_12800_printer_mean.JPG> <./images/dataset/Can
+on80D_8_8_6400_comproom_mean.JPG>] [144 <./images/dataset/Canon5D2_5_160_6400_b
+icycle_6_mean.JPG> <./images/dataset/Canon5D2_5_160_6400_bicycle_6_real.JPG> <.
+/images/dataset/Canon5D2_5_160_6400_circuit_11_mean.JPG> <./images/dataset/Cano
+n5D2_5_160_6400_circuit_11_real.JPG> <./images/dataset/Canon5D2_5_160_6400_reci
+ever_1_mean.JPG> <./images/dataset/Canon5D2_5_160_6400_reciever_1_real.JPG> <./
+images/dataset/Canon5D2_5_200_3200_toy_3_mean.JPG> <./images/dataset/Canon5D2_5
+_200_3200_toy_3_real.JPG> <./images/dataset/Canon80D_8_8_6400_comproom_11_mean.
+JPG> <./images/dataset/Canon80D_8_8_6400_comproom_11_real.JPG> <./images/datase
+t/Canon600D_4-5_125_1600_toy_16_mean.JPG> <./images/dataset/Canon600D_4-5_125_1
+600_toy_16_real.JPG> <./images/dataset/NikonD800_5_125_6400_stair_3_mean.JPG> <
+./images/dataset/NikonD800_5_125_6400_stair_3_real.JPG> <./images/dataset/Nikon
+D800_6-3_125_5000_plant_1_mean.JPG> <./images/dataset/NikonD800_6-3_125_5000_pl
+ant_1_real.JPG> <./images/dataset/Sony_3-5_200_1600_classroom_14_mean.JPG> <./i
+mages/dataset/Sony_3-5_200_1600_classroom_14_real.JPG> <./images/dataset/Sony_4
+-5_125_3200_plant_10_mean.JPG> <./images/dataset/Sony_4-5_125_3200_plant_10_rea
+l.JPG>] [145 <./images/dataset/cc/resize_br_Mean_5dmark3_iso3200_1_real.png (PN
+G copy)> <./images/dataset/cc/resize_br_Noisy_5dmark3_iso3200_1_real.png (PNG c
+opy)> <./images/dataset/cc/resize_br_CBM3D_5dmark3_iso3200_1_real.png (PNG copy
+)> <./images/dataset/cc/resize_br_EPLL_5dmark3_iso3200_1_real.png (PNG copy)> <
+./images/dataset/cc/resize_br_NCSR_5dmark3_iso3200_1_real.png (PNG copy)> <./im
+ages/dataset/cc/resize_br_WNNM_5dmark3_iso3200_1_real.png (PNG copy)> <./images
+/dataset/cc/resize_br_MLP_5dmark3_iso3200_1_real.png (PNG copy)> <./images/data
+set/cc/resize_br_CSF_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/c
+c/resize_br_TRD_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/res
+ize_br_DnCNN_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize
+_br_NC_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_NI
+_5dmark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_PGPD_5dm
+ark3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_Guided_5dmar
+k3_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_MCWNNM_5dmark3
+_iso3200_1_real.png (PNG copy)> <./images/dataset/cc/resize_br_TWSC_5dmark3_iso
+3200_1_real.png (PNG copy)>] [146 <./images/dataset/dnd/resize_br_Noisy_0001_1.
+png (PNG copy)> <./images/dataset/dnd/resize_br_CBM3D_0001_1.png (PNG copy)> <.
+/images/dataset/dnd/resize_br_EPLL_0001_1.png (PNG copy)> <./images/dataset/dnd
+/resize_br_NCSR_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_WNNM_000
+1_1.png (PNG copy)> <./images/dataset/dnd/resize_br_MLP_0001_1.png (PNG copy)> 
+<./images/dataset/dnd/resize_br_CSF_0001_1.png (PNG copy)> <./images/dataset/dn
+d/resize_br_TRD_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_DnCNN_00
+01_1.png (PNG copy)> <./images/dataset/dnd/resize_br_NC_0001_1.png (PNG copy)> 
+<./images/dataset/dnd/resize_br_NI_0001_1.png (PNG copy)> <./images/dataset/dnd
+/resize_br_PGPD_0001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_Guided_0
+001_1.png (PNG copy)> <./images/dataset/dnd/resize_br_MCWNNM_0001_1.png (PNG co
+py)> <./images/dataset/dnd/resize_br_TWSC_0_3_0001_1.png (PNG copy)>] [147 <./i
+mages/dataset/PolyU/resize_br_Mean_Canon80D_8_8_800_GO_11_real.png (PNG copy)> 
+<./images/dataset/PolyU/resize_br_Noisy_Canon80D_8_8_800_GO_11_real.png (PNG co
+py)> <./images/dataset/PolyU/resize_br_CBM3D_Canon80D_8_8_800_GO_11_real.png (P
+NG copy)> <./images/dataset/PolyU/resize_br_EPLL_Canon80D_8_8_800_GO_11_real.pn
+g (PNG copy)> <./images/dataset/PolyU/resize_br_NCSR_Canon80D_8_8_800_GO_11_rea
+l.png (PNG copy)> <./images/dataset/PolyU/resize_br_WNNM_Canon80D_8_8_800_GO_11
+_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_MLP_Canon80D_8_8_800_GO
+_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_CSF_Canon80D_8_8_800
+_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_TRD_Canon80D_8_8_
+800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_DnCNN_Canon80D
+_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_NC_Canon8
+0D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_NI_Cano
+n80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_PGPD_
+Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resize_br_G
+uided_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU/resiz
+e_br_MCWNNM_Canon80D_8_8_800_GO_11_real.png (PNG copy)> <./images/dataset/PolyU
+/resize_br_TWSC_Canon80D_8_8_800_GO_11_real.png (PNG copy)>]
 \openout2 = `chapter7.aux'.
 
-
-(./chapter7.tex
+ (./chapter7.tex
 Chapter 7.
 [148
 
@@ -8059,7 +8064,7 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (198 pages, 55352090 bytes).
+Output written on JunXuThesis.pdf (198 pages, 55352116 bytes).
 PDF statistics:
  4834 PDF objects out of 5155 (max. 8388607)
  3811 compressed objects within 39 object streams
