@@ -466,13 +466,13 @@ Sony A7II & 7 & $35.8\times23.9$  & 12  & 1.6k,3.2k,6.4k
 
 \subsection{Benchmark Datasets} 
 
-To better illustrate the effectiveness of existing image denising methods, we apply the competing methods on existing datasets \cite{crosschannel2016,dnd2017} and our proposed new dataset, which contains overall 100 test images. These images share very small (less than $10\%$) overlap at contents. Since the captured real-world noisy images in \cite{RENOIR2014} have clear color difference with corresponding ``ground truth'' images, we do not evaluate the existing image denoising methods on this dataset.
+To better illustrate the effectiveness of existing image denoising methods, we apply the competing methods on existing datasets \cite{crosschannel2016,dnd2017} and our proposed new dataset, which contains overall 100 testing images. These images share very small (less than $10\%$) overlap on contents. Since the captured real-world noisy images in \cite{RENOIR2014} have clear color differences with corresponding ``ground truth'' images, we do not evaluate existing image denoising methods on this dataset.
 
-\textbf{Dataset 1} is provided in \cite{crosschannel2016}, which includes noisy images of 11 static scenes captured by Canon 5D Mark 3, Nikon D600, and Nikon D800 cameras.\ 15 regions of size $512\times512$ were cropped to evaluate the different denoising methods.  
+\textbf{Dataset 1} is provided in \cite{crosschannel2016}, which includes noisy images of 11 static scenes captured by Canon 5D Mark 3, Nikon D600, and Nikon D800 cameras.\ 15 regions of size $512\times512$ were cropped to evaluate different denoising methods.  
 
-\textbf{Dataset 2} is called the Darmstadt Noise Dataset (DND) \cite{dnd2017}, which includes 50 different pairs of images of the same scenes captured by Sony A7R, Olympus E-M10, Sony RX100 IV, and Huawei Nexus 6P.\ The authors cropped 20 bounding boxes of $512\times512$ pixels from each image in the dataset, yielding 1000 test crops in total.\ However, the ``ground truth'' images are not open access, and we can only submit the denoising results to the authors' \href{https://noise.visinf.tu-darmstadt.de/}{Project Website} and get the PSNR and SSIM \cite{ssim} results.
+\textbf{Dataset 2} is called the Darmstadt Noise Dataset (DND) \cite{dnd2017}, which includes 50 different pairs of images of the same scenes captured by Sony A7R, Olympus E-M10, Sony RX100 IV, and Huawei Nexus 6P.\ The authors cropped 20 bounding boxes of $512\times512$ pixels from each image in the dataset, yielding 1,000 testing crops in total.\ However, the ``ground truth'' images are not open access, and we can only submit the denoising results to the authors' \href{https://noise.visinf.tu-darmstadt.de/}{Project Website} and get the PSNR and SSIM \cite{ssim} results.
 
-\textbf{Dataset 3} is our constructed dataset, which includes noisy images of 40 static scenes captured by Canon 5D Mark II, Canon 80D, Canon 600D, Nikon D800, and Sony A7 II cameras.\ 100 regions of size $512\times512$ were cropped to evaluate the different denoising methods.
+\textbf{Dataset 3} is our constructed dataset, which includes noisy images of 40 static scenes captured by Canon 5D Mark II, Canon 80D, Canon 600D, Nikon D800, and Sony A7 II cameras.\ 100 regions of size $512\times512$ were cropped to evaluate different denoising methods.
 
 
 \subsection{Comparison Methods}
