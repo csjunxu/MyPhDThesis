@@ -215,18 +215,14 @@ Given fixed shutter speed and aperture, enhancing the camera sensitivity will ge
 \end{figure}
 
 
-\subsection{The Construction Process}
-
-To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}, we propose to construct a new dataset which could: 1) contain more camera brands; 2) contain more carefully designed camera settings; 3) capture more real-world scenes with realistic objects; 4) capture both the raw data and sRGB data for comparison analysis. The captured images are stored in raw data and JPEG format without compression. For each scene, we capture it for 500 times. Figure \ref{fig6-2} shows how we capture images of a static scens in indoor environment. The camera is fixed by a tripod. The capture is automatically done with shutter release. Hence, the misalignment problem can be nearly avoided in the accquisition process of 500 images for one scene. We capture images with different camera settings. The cameras are set based on the following rules. First, the shutter speed should be faster than the blink of the fluorescent lights, otherwise the flickering of the light will make the global illuminances of the captured images very different. Second, we set the shutter speed, the aperture, and the ISO value to ensure that the scenes are in a naturally lighting condition. Besides, since the digital single-lens reflex cameras (DSLRs) use mechanical shutter, the shutter speed of each shot is a little different. This small difference results in slightly different brightness of different shots. However, we ignore this small difference in our dataset, as that in \cite{crosschannel2016}.
-
 \begin{figure}[t!]
     \centering
 \subfigure{
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/scene.jpg}}
 \end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/scenewithperson.jpg}}
 \end{minipage}
@@ -235,82 +231,73 @@ To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschan
     \label{fig6-2}
 \end{figure}
 
+\subsection{The Construction Process}
+
+To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}, we propose to construct a new dataset which could: 1) contain more camera brands; 2) contain more carefully designed camera settings; 3) capture more real-world scenes with realistic objects; 4) capture both the raw data and sRGB data for comparison analysis. The captured images are stored in raw data and JPEG format without compression. For each scene, we capture it for 500 times. Figure \ref{fig6-2} shows how we capture images of a static scens in indoor environment. The camera is fixed by a tripod. The capture is automatically done with shutter release. Hence, the misalignment problem can be nearly avoided in the accquisition process of 500 images for one scene. We capture images with different camera settings. The cameras are set based on the following rules. First, the shutter speed should be faster than the blink of the fluorescent lights, otherwise the flickering of the light will make the global illuminances of the captured images very different. Second, we set the shutter speed, the aperture, and the ISO value to ensure that the scenes are in a naturally lighting condition. Besides, since the digital single-lens reflex cameras (DSLRs) use mechanical shutter, the shutter speed of each shot is a little different. This small difference results in slightly different brightness of different shots. However, we ignore this small difference in our dataset, as that in \cite{crosschannel2016}.
+
+
 \textbf{More Camera Brands}: In our dataset, we use 5 different cameras of three camera brands, including Canon (Mark 5D, 80D, 600D), Nikon (D800), and Sony (A7 II), to capture real-world noisy images. According to a recent survey \cite{commoncamera}, the three camera brands occupy 48 of 50 most commonly used camera-lens combinations. Hence, our dataset is more comprehensive than the previous datasets in camera brands.
 
 % The other two brands are from the camera brands of Fujifilm and Olympus.
 
-\textbf{More Camera Settings}: In our new dataset, for each camera images are captured with 6 different ISOs, e.g., 800, 1,600, 3,200, 6,400, 12,800, and 25,600. For each ISO value, we carefully adjust the shutter speed and aperture, and choose the most suitable camera setting. With the increase of ISO, the noise levels in the images will also increase. For example, to make the images captured with ISO=25,600 more natural, we set the shutter speed to 1/320 second and aperture to F10.0. Hence, our dataset is more comprehensive at the noise levels than the previous datasets.
-
-\textbf{More Captured Scenes}: We capture the images with indoor normal lighting condition, dark lighting condition, and outdoor normal lighting condition. The scenes we captured are also versaltile (including the buildings, classrooms, caffe rooms, and outdoor scenes). The objects in the scenes include books, pens, bottles, boxes, joys, etc. In summary, we capture totoally 40 different scenes by using 5 different cameras in several different camera settings, including 12 scenes by Canon 5D Mark II, 5 scenes by Canon 80D, 3 scens by Canon 600D, 13 scenes by Nikon D800, 7 scenes by Sony A7 II. Since the images are of large size ($3000\times3000$), we crop some regions from these images and obtain 100 regions of size $512\times512$.
-
-\textbf{Removing Outlier Images}: The outlier images are those images which have misalignment and different illuminance from the base image (we usually choose the first image of the 500 shots as the base image). In the dataset of \cite{crosschannel2016}, the authors did not consider to remove the images with misalignment and different illuminances. In the DND dataset \cite{dnd2017}, the authors considered to correct the misalignment of each image. However, this operation largely depends on the misalignment detection method and the correction method, which may make the corrected images less natural. Besides, the DND dataset \cite{dnd2017} takes the image captured with low ISO as ``ground truth'', and linearly transfer the noisy image captured with high ISO to the scale of the ``ground truth'' image. This step, in our opinion, is problematic since the image pixels are not linearly dependent on the ISO values. In our dataset, we browse the captured images and remove the outlier images with clear misalignment and illuminances. For each scene, three PhD students are employed to do this operation successively, and the remaining images will be used to compute the ``ground truth'' image.
- 
-\textbf{Generating ``Ground Truth'' Image}: The ``ground truth'' images of the RENOIR dataset \cite{RENOIR2014} are generated when the camera is set with ISO=100, while the other settings are the same as those for the noisy images. The ``ground truth'' images of the dataset \cite{crosschannel2016} are generated by averaging the static images captured on the same scene under the same camera settings. The ``ground truth'' images of the DND dataset \cite{dnd2017} is generated mainly by using low ISO values (e.g., ISO=100), and other post-processing steps include linear intensity changes, spatial misalignment, and low-frequency residual correciton, etc. In our dataset, we employ the method of \cite{crosschannel2016} due to its simplisity. We capture images the same of static scenes for many ($500\sim1000$) times and average the captured images to get the clean ``ground truth'' image. 
-
-We first remove the images with misalignment by careful subjective evaluation. The images with several pixels displacement will be deleted. After this stage, we will then remove the images with inconsistant illuminance. The illuminance is affected by two factors. One is that the captured scenes are influenced by the lighting conditions of the environment. The other is that the camera will automatically make up the illuminance when the scene are in a relatively low lighting condition. Since we shot the scene for many times, some shots may have different illumination, though captured under the same lighting condition. To remove the images with outlier illuminance, we first sample 10,000 pixels uniformly (the pixels are on the 100 equidistantly sampled rows and 100 equidistantly sampled columns) from each image, and then compute the mean illuminance of the 10,000 pixels. Each of the captured images will have one value representing its mean illuminances. We sort these values in a descending order. The images with the lowest or highest mean illuminances will be refered as outlier images. We remove these images until the lowest and highest mean illuminances are close enough to the ``center'' of the mean illuminances. Here, ``center'' means the middle of the sorted mean values or mean illuminances. In this way, the images which are much darker or much brighter than the image with the mean illuminance will be removed and the remaining images are very close to each other. The remaining images will be averaged to obtain the mean image, which will be used as the ``ground truth'' image of each scene.
-
-\subsection{Summary of the Dataset}
-
-In our constructed dataset, we captured images from 40 different scenes with different contents and objects. In Figure \ref{fig6-3}, we show some samples of the real-world noisy images we captured in the dataset. For example, we captured the scenes from different types of classrooms, various types of indoor scenes, and versaitile objects under fixed lighting conditions, etc.
-
-\begin{figure}[t!]
+\begin{figure}%[t!]
     \centering
 \subfigure{
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG}}
 \end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG}}
 \end{minipage}
 }\vspace{-3mm}
 \subfigure{
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon5D2_5_200_3200_toy_mean.JPG}}
 \end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG}}
 \end{minipage}
 }\vspace{-3mm}
 \subfigure{
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG}}
 \end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/NikonD800_8_125_6400_photo_mean.JPG}}
 \end{minipage}
 }\vspace{-3mm}
 \subfigure{
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_3-5_200_1600_classroom_mean.JPG}}
 \end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4-5_125_3200_plant_mean.JPG}}
 \end{minipage}
 }\vspace{-3mm}
 \subfigure{
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4_200_3200_door_mean.JPG}}
 \end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_3200_ball_mean.JPG}}
 \end{minipage}
 }\vspace{-3mm}
 \subfigure{
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_12800_printer_mean.JPG}}
 \end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_6400_comproom_mean.JPG}}
 \end{minipage}
@@ -319,7 +306,28 @@ In our constructed dataset, we captured images from 40 different scenes with dif
 \label{fig6-3}
 \end{figure}
 
-\begin{figure}
+\textbf{More Camera Settings}: In our new dataset, for each camera images are captured with 6 different ISOs, e.g., 800, 1,600, 3,200, 6,400, 12,800, and 25,600. For each ISO value, we carefully adjust the shutter speed and aperture, and choose the most suitable camera setting. With the increase of ISO, the noise levels in the images will also increase. For example, to make the images captured with ISO=25,600 more natural, we set the shutter speed to 1/320 second and aperture to F10.0. Hence, our dataset is more comprehensive at the noise levels than the previous datasets.
+
+\textbf{More Captured Scenes}: We capture the images with indoor normal lighting condition, dark lighting condition, and outdoor normal lighting condition. The scenes we captured are also versaltile (including the buildings, classrooms, caffe rooms, and outdoor scenes). The objects in the scenes include books, pens, bottles, boxes, joys, etc. In summary, we capture totoally 40 different scenes by using 5 different cameras in several different camera settings, including 12 scenes by Canon 5D Mark II, 5 scenes by Canon 80D, 3 scens by Canon 600D, 13 scenes by Nikon D800, 7 scenes by Sony A7 II. Since the images are of large size ($3000\times3000$), we crop some regions from these images and obtain 100 regions of size $512\times512$.
+
+\textbf{Removing Outlier Images}: The outlier images are those images which have misalignment and different illuminance from the base image (we usually choose the first image of the 500 shots as the base image). In the dataset of \cite{crosschannel2016}, the authors did not consider to remove the images with misalignment and different illuminances. In the DND dataset \cite{dnd2017}, the authors considered to correct the misalignment of each image. However, this operation largely depends on the misalignment detection method and the correction method, which may make the corrected images less natural. Besides, the DND dataset \cite{dnd2017} takes the image captured with low ISO as ``ground truth'', and linearly transfer the noisy image captured with high ISO to the scale of the ``ground truth'' image. This step, in our opinion, is problematic since the image pixels are not linearly dependent on the ISO values. In our dataset, we browse the captured images and remove the outlier images with clear misalignment and illuminances. For each scene, three PhD students are employed to do this operation successively, and the remaining images will be used to compute the ``ground truth'' image.
+ 
+
+
+\textbf{Generating ``Ground Truth'' Image}: The ``ground truth'' images of the RENOIR dataset \cite{RENOIR2014} are generated when the camera is set with ISO=100, while the other settings are the same as those for the noisy images. The ``ground truth'' images of the dataset \cite{crosschannel2016} are generated by averaging the static images captured on the same scene under the same camera settings. The ``ground truth'' images of the DND dataset \cite{dnd2017} is generated mainly by using low ISO values (e.g., ISO=100), and other post-processing steps include linear intensity changes, spatial misalignment, and low-frequency residual correciton, etc. In our dataset, we employ the method of \cite{crosschannel2016} due to its simplisity. We capture images the same of static scenes for many ($500\sim1000$) times and average the captured images to get the clean ``ground truth'' image. 
+
+We first remove the images with misalignment by careful subjective evaluation. The images with several pixels displacement will be deleted. After this stage, we will then remove the images with inconsistant illuminance. The illuminance is affected by two factors. One is that the captured scenes are influenced by the lighting conditions of the environment. The other is that the camera will automatically make up the illuminance when the scene are in a relatively low lighting condition. Since we shot the scene for many times, some shots may have different illumination, though captured under the same lighting condition. To remove the images with outlier illuminance, we first sample 10,000 pixels uniformly (the pixels are on the 100 equidistantly sampled rows and 100 equidistantly sampled columns) from each image, and then compute the mean illuminance of the 10,000 pixels. Each of the captured images will have one value representing its mean illuminances. We sort these values in a descending order. The images with the lowest or highest mean illuminances will be refered as outlier images. We remove these images until the lowest and highest mean illuminances are close enough to the ``center'' of the mean illuminances. Here, ``center'' means the middle of the sorted mean values or mean illuminances. In this way, the images which are much darker or much brighter than the image with the mean illuminance will be removed and the remaining images are very close to each other. The remaining images will be averaged to obtain the mean image, which will be used as the ``ground truth'' image of each scene.
+
+
+
+\subsection{Summary of the Dataset}
+
+In our constructed dataset, we captured images from 40 different scenes with different contents and objects. In Figure \ref{fig6-3}, we show some samples of the real-world noisy images we captured in the dataset. For example, we captured the scenes from different types of classrooms, various types of indoor scenes, and versaitile objects under fixed lighting conditions, etc.
+
+
+Since the images we captured are very large in size, we crop 100 smaller regions from the 40 scenes to evaluated the existing image denoising methods. Some examples of the cropped regions and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-4}. Besides, one can see that the ``ground truth'' image contains much less noise than the noisy image and has much better visual quality. Hence, this dataset provide us a good platform for evaluating the image denoising methods. The detailed description on cameras and camera settings is listed in Table \ref{tab6-4}. One can see that in our dataset, the ISO values are more comprehensive than the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}. For better evaluation of image denoising methods, we crop 100 regions as our final testing set.
+
+\begin{figure}%[ht!]
 \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -415,9 +423,6 @@ In our constructed dataset, we captured images from 40 different scenes with dif
     \label{fig6-4}
 \end{figure}
 
-
-Since the images we captured are very large, we crop 100 smaller regions from the 40 scenes to evaluated the existing image denoising methods. Some examples of the cropped regions and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-4}. Besides, one can see that the ``ground truth'' image contains much less noise than the noisy image and has much better visual quality. Hence, this dataset provide us a good platform for evaluating the image denoising methods. The detailed description on cameras and camera settings is listed in Table \ref{tab6-4}. One can see that in our dataset, the ISO values are more comprehensive than the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}. For better evaluation of image denoising methods, we crop 100 regions as our final testing set.
-
 \begin{table}[t!]
 \caption{Cameras and camera settings used in our new dataset.}
 \label{tab6-4}
@@ -469,72 +474,12 @@ To better illustrate the effectiveness of existing image denising methods, we ap
 
 \textbf{Dataset 3} is our constructed dataset, which includes noisy images of 40 static scenes captured by Canon 5D Mark II, Canon 80D, Canon 600D, Nikon D800, and Sony A7 II cameras.\ 100 regions of size $512\times512$ were cropped to evaluate the different denoising methods.
 
+
 \subsection{Comparison Methods}
 
 With the proposed dataset, we make a comprehensive evaluation on the state-of-the-art image denoising methods, including the famous CBM3D \cite{cbm3d}, Expected Patch Log Likelihood (EPLL) \cite{epll}, multi-layer perception (MLP) \cite{mlp}, Nonlocally Centralized Sparse Representations (NCSR) \cite{ncsr}, Cascades of Shrinkage Fileds (CSF) \cite{csf}, Weighted Nuclear Norm Minimization (WNNM) \cite{wnnm}, Trainable Nonlinear Reactive Diffusion (TNRD) \cite{tnrd}, the residual network based method DnCNN \cite{dncnn}, the ``Noise Clinic'' method \cite{noiseclinic,ncwebsite}, the commercial software Neat Image \cite{neatimage}, and our proposed methods Patch Group Prior based Denoising (PGPD) \cite{pgpd}, external prior guided internal prior learning for image denoising (Guided) \cite{guided}, Multi-channel Weighted Nuclear Norm Minimization (MCWNNM) \cite{mcwnnm}, the Trilateral Weighted Sparse Coding (TWSC) \cite{twsc}. CBM3D is a state-of-the-art color image denoising method, which assumes that the noise is addtive white Gaussian nosie (AWGN). The EPLL, NCSR, CSF, WNNM, TNRD, DnCNN are state-of-the-art methods for AWGN noise removal on greyscale images, and we apply these methods on each channel of the realsitic color images.  The ``Noise Clnic'' (NC) is a blind image denoising method while Neat Image (NI) is a set of commercial software for image denoising, which has been embedded into Photoshop and Corel Paint Shop. Besides, the method of DnCNN \cite{dncnn} can also deal with real-world noisy images. Our proposed methods includes PGPD, Guided, MCWNNM, and TWSC. The PGPD is proposed for AWGN noise, while the Guided, MCWNNM, and TWSC are proposed for real-world noisy image denoising.
 
-\textbf{Noise level of comparison methods.} For the CBM3D method, the standard deviation of noise on color images should be given as a parameter. For methods of NCSR,  WNNM, MLP, CSF, and TNRD, the noise level in each color channel should be input. For the DnCNN method, it is trained to deal with noise in a range of levels $0\sim55$. We retrain the models of discriminative denoising methods MLP, CSF, and TNRD (using the released codes by the authors) at different noise levels from $\sigma=5$ to $\sigma=50$ with a gap of 5. The denoising is performed by processing each channel with the model trained at the same (or nearest) noise level. The noise levels ($\sigma_{r}, \sigma_{g}, \sigma_{b}$) in R, G, B channels are assumed to be Gaussian and can be estimated via some noise estimation methods \cite{noiselevel,Chen2015ICCV}. In this chapter, we employ the method \cite{noiselevel} to estimate the noise level for each color channel.
-
-
-\begin{table}[t!]
-\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf{Dataset 1} \cite{crosschannel2016}.}
-\scriptsize
-\label{tab6-6}
-\begin{center}
-\renewcommand\arraystretch{1.2}
-\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cccccccc}
-\hline
-Metric
-&
-\textbf{CBM3D}
-&
-\textbf{EPLL}
-&
-\textbf{NCSR}
-&
-\textbf{WNNM}
-&
-\textbf{MLP}
-&
-\textbf{CSF}
-&
-\textbf{TNRD}
-\\
-\hline
-PSNR & 35.19  & 33.66 & 33.46 &  35.77 &  36.46 & 35.33 & 36.61  
-\\
-\hline
-SSIM & 0.8580 & 0.8591  & 0.8512 & 0.9381 &  0.9436  & 0.9250 & 0.9463 
-\\
-\hline
-Metric
-&
-\textbf{DnCNN}
-&
-\textbf{NC}
-&
-\textbf{NI}
-&
-\textbf{PGPD}
-&
-\textbf{Guided}
-&
-\textbf{MCWNNM}
-&
-\textbf{TWSC}
-\\
-\hline
-PSNR &  33.86  & 36.43  & 35.49  & 33.69  &  37.15 &  37.71 &  \textbf{37.81}
-\\
-\hline
-SSIM & 0.8635  &  0.9364 & 0.9126  & 0.8591  & 0.9504 &  0.9542 & \textbf{0.9586}
-\\
-\hline
-\end{tabular*}
-\end{center}
-\end{table}
-
-\begin{figure}[t!]
+\begin{figure}%[t!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -628,7 +573,128 @@ SSIM & 0.8635  &  0.9364 & 0.9126  & 0.8591  & 0.9504 &  0.9542 & \textbf{0.9586
     \label{fig6-5}
 \end{figure}
 
-\begin{figure}[ht!]
+\textbf{Noise level of comparison methods.} For the CBM3D method, the standard deviation of noise on color images should be given as a parameter. For methods of NCSR,  WNNM, MLP, CSF, and TNRD, the noise level in each color channel should be input. For the DnCNN method, it is trained to deal with noise in a range of levels $0\sim55$. We retrain the models of discriminative denoising methods MLP, CSF, and TNRD (using the released codes by the authors) at different noise levels from $\sigma=5$ to $\sigma=50$ with a gap of 5. The denoising is performed by processing each channel with the model trained at the same (or nearest) noise level. The noise levels ($\sigma_{r}, \sigma_{g}, \sigma_{b}$) in R, G, B channels are assumed to be Gaussian and can be estimated via some noise estimation methods \cite{noiselevel,Chen2015ICCV}. In this chapter, we employ the method \cite{noiselevel} to estimate the noise level for each color channel.
+
+
+\begin{table}[t!]
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf{Dataset 1} \cite{crosschannel2016}.}
+\scriptsize
+\label{tab6-6}
+\begin{center}
+\renewcommand\arraystretch{1.2}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cccccccc}
+\hline
+Metric
+&
+\textbf{CBM3D}
+&
+\textbf{EPLL}
+&
+\textbf{NCSR}
+&
+\textbf{WNNM}
+&
+\textbf{MLP}
+&
+\textbf{CSF}
+&
+\textbf{TNRD}
+\\
+\hline
+PSNR & 35.19  & 33.66 & 33.46 &  35.77 &  36.46 & 35.33 & 36.61  
+\\
+\hline
+SSIM & 0.8580 & 0.8591  & 0.8512 & 0.9381 &  0.9436  & 0.9250 & 0.9463 
+\\
+\hline
+Metric
+&
+\textbf{DnCNN}
+&
+\textbf{NC}
+&
+\textbf{NI}
+&
+\textbf{PGPD}
+&
+\textbf{Guided}
+&
+\textbf{MCWNNM}
+&
+\textbf{TWSC}
+\\
+\hline
+PSNR &  33.86  & 36.43  & 35.49  & 33.69  &  37.15 &  37.71 &  \textbf{37.81}
+\\
+\hline
+SSIM & 0.8635  &  0.9364 & 0.9126  & 0.8591  & 0.9504 &  0.9542 & \textbf{0.9586}
+\\
+\hline
+\end{tabular*}
+\end{center}
+\end{table}
+
+
+\begin{table}[t!]
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1000 cropped images in \textbf{Dataset 2} \cite{dnd2017}.}
+\scriptsize
+\label{tab6-7}
+\begin{center}
+\renewcommand\arraystretch{1.2}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cccccccc}
+\hline
+Metric
+&
+\textbf{CBM3D}
+&
+\textbf{EPLL}
+&
+\textbf{NCSR}
+&
+\textbf{WNNM}
+&
+\textbf{MLP}
+&
+\textbf{CSF}
+&
+\textbf{TNRD}
+\\
+\hline
+PSNR & 32.14 &  32.65 & 32.81 & 33.28  & 34.02  & 33.87  & 34.15
+\\
+\hline
+SSIM & 0.7773 & 0.7889  & 0.7912  & 0.8012  &  0.8201 & 0.8128  & 0.8271
+\\
+\hline
+Metric
+
+&
+\textbf{DnCNN}
+&
+\textbf{NC}
+&
+\textbf{NI}
+&
+\textbf{PGPD}
+&
+\textbf{Guided}
+&
+\textbf{MCWNNM}
+&
+\textbf{TWSC}
+\\
+\hline
+PSNR & 32.41 & 36.07 & 35.11 & 33.12 & 36.41 & 37.38 &  \textbf{37.94}
+\\
+\hline
+SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
+\\
+\hline
+\end{tabular*}
+\end{center}
+\end{table}
+
+\begin{figure}%[ht!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -715,7 +781,76 @@ SSIM & 0.8635  &  0.9364 & 0.9126  & 0.8591  & 0.9504 &  0.9542 & \textbf{0.9586
     \label{fig6-6}
 \end{figure}
 
-\begin{figure}[ht!]
+
+\subsection{Results and Discussion}
+
+\textbf{Results on Dataset 1}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{tab6-6}.\ One can see that the proposed TWSC, MCWNNM, and Guided methods perform much better than the other competing methods.\ Figure\ \ref{fig6-5} shows the denoised images of a scene captured by Nikon D800 at ISO = 6400.\ One can see that TWSC, MCWNNM, and Guided result in not only higher PSNR and SSIM measures, but also much better visual quality than other methods.
+
+\textbf{Results on Dataset 2}. In Table \ref{tab6-7}, we list the average PSNR and SSIM results of the competing methods on the 1000 cropped images in the DND dataset \cite{dnd2017}.\ We can see that on this dataset the TWSC, MCWNNM, and Guided methods achieve much better performance than the other competing methods.\ Note that the ``ground truth'' images of this dataset have not been released, but one can submit the denoised images to the project website and get the PSNR and SSIM results.\ Figure\ \ref{fig6-6} shows the denoised images of a scene captured by a Nexus 6P camera.\ One can see that the TWSC, MCWNNM, and Guided methods result in better visual quality than the other denoising methods.
+
+\textbf{Results on Dataset 3}.
+The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images. The proposed TWSC, MCWNNM, and Guided methods work much better than previous methods. Some visual comparisons are listed in Figures \ref{fig6-7}, from which one can see that the TWSC method removes most of the noise while maintaining the details. 
+
+\begin{table}[t!]
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}).}
+\scriptsize
+\label{tab6-8}
+\begin{center}
+\renewcommand\arraystretch{1.2}
+\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cccccccc}
+\hline
+Metric
+&
+\textbf{CBM3D}
+&
+\textbf{EPLL}
+&
+\textbf{NCSR}
+&
+\textbf{WNNM}
+&
+\textbf{MLP}
+&
+\textbf{CSF}
+&
+\textbf{TNRD}
+\\
+\hline
+PSNR & 37.40 & 36.17 & 36.40 & 36.59 & 38.07 & 37.71 & 38.17 
+\\
+\hline
+SSIM & 0.9526 & 0.9216 & 0.9290 & 0.9247 & 0.9615 & 0.9571 & 0.9640
+\\
+\hline
+Metric
+&
+\textbf{DnCNN}
+&
+\textbf{NC}
+&
+\textbf{NI}
+&
+\textbf{PGPD}
+&
+\textbf{Guided}
+&
+\textbf{MCWNNM}
+&
+\textbf{TWSC}
+\\
+\hline
+PSNR & 36.08 & 36.92  &  37.77 & 36.18 & 38.35 & 38.51 & \textbf{38.60}
+\\
+\hline
+SSIM & 0.9161 & 0.9449  & 0.9570  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
+\\
+\hline
+\end{tabular*}
+\end{center}
+\end{table}
+
+
+\begin{figure}%[ht!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
@@ -809,134 +944,6 @@ SSIM & 0.8635  &  0.9364 & 0.9126  & 0.8591  & 0.9504 &  0.9542 & \textbf{0.9586
     \label{fig6-7}
 \end{figure}
 
-\begin{table}[t!]
-\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1000 cropped images in \textbf{Dataset 2} \cite{dnd2017}.}
-\scriptsize
-\label{tab6-7}
-\begin{center}
-\renewcommand\arraystretch{1.2}
-\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cccccccc}
-\hline
-Metric
-&
-\textbf{CBM3D}
-&
-\textbf{EPLL}
-&
-\textbf{NCSR}
-&
-\textbf{WNNM}
-&
-\textbf{MLP}
-&
-\textbf{CSF}
-&
-\textbf{TNRD}
-\\
-\hline
-PSNR & 32.14 &  32.65 & 32.81 & 33.28  & 34.02  & 33.87  & 34.15
-\\
-\hline
-SSIM & 0.7773 & 0.7889  & 0.7912  & 0.8012  &  0.8201 & 0.8128  & 0.8271
-\\
-\hline
-Metric
-
-&
-\textbf{DnCNN}
-&
-\textbf{NC}
-&
-\textbf{NI}
-&
-\textbf{PGPD}
-&
-\textbf{Guided}
-&
-\textbf{MCWNNM}
-&
-\textbf{TWSC}
-\\
-\hline
-PSNR & 32.41 & 36.07 & 35.11 & 33.12 & 36.41 & 37.38 &  \textbf{37.94}
-\\
-\hline
-SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
-\\
-\hline
-\end{tabular*}
-\end{center}
-\end{table}
-
-\subsection{Results and Discussion}
-
-\textbf{Results on Dataset 1}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{tab6-6}.\ One can see that the proposed TWSC, MCWNNM, and Guided methods perform much better than the other competing methods.\ Figure\ \ref{fig6-5} shows the denoised images of a scene captured by Nikon D800 at ISO = 6400.\ One can see that TWSC, MCWNNM, and Guided result in not only higher PSNR and SSIM measures, but also much better visual quality than other methods.
-
-\textbf{Results on Dataset 2}. In Table \ref{tab6-7}, we list the average PSNR and SSIM results of the competing methods on the 1000 cropped images in the DND dataset \cite{dnd2017}.\ We can see that on this dataset the TWSC, MCWNNM, and Guided methods achieve much better performance than the other competing methods.\ Note that the ``ground truth'' images of this dataset have not been released, but one can submit the denoised images to the project website and get the PSNR and SSIM results.\ Figure\ \ref{fig6-6} shows the denoised images of a scene captured by a Nexus 6P camera.\ One can see that the TWSC, MCWNNM, and Guided methods result in better visual quality than the other denoising methods.
-
-\textbf{Results on Dataset 3}.
-The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images. The proposed TWSC, MCWNNM, and Guided methods work much better than previous methods. Some visual comparisons are listed in Figures \ref{fig6-7}, from which one can see that the TWSC method removes most of the noise while maintaining the details. 
-
-\begin{table}[t!]
-\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}).}
-\scriptsize
-\label{tab6-8}
-\begin{center}
-\renewcommand\arraystretch{1.2}
-\begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}cccccccc}
-\hline
-Metric
-&
-\textbf{CBM3D}
-&
-\textbf{EPLL}
-&
-\textbf{NCSR}
-&
-\textbf{WNNM}
-&
-\textbf{MLP}
-&
-\textbf{CSF}
-&
-\textbf{TNRD}
-\\
-\hline
-PSNR & 37.40 & 36.17 & 36.40 & 36.59 & 38.07 & 37.71 & 38.17 
-\\
-\hline
-SSIM & 0.9526 & 0.9216 & 0.9290 & 0.9247 & 0.9615 & 0.9571 & 0.9640
-\\
-\hline
-Metric
-&
-\textbf{DnCNN}
-&
-\textbf{NC}
-&
-\textbf{NI}
-&
-\textbf{PGPD}
-&
-\textbf{Guided}
-&
-\textbf{MCWNNM}
-&
-\textbf{TWSC}
-\\
-\hline
-PSNR & 36.08 & 36.92  &  37.77 & 36.18 & 38.35 & 38.51 & \textbf{38.60}
-\\
-\hline
-SSIM & 0.9161 & 0.9449  & 0.9570  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
-\\
-\hline
-\end{tabular*}
-\end{center}
-\end{table}
-
-
-
 
 \textbf{Discussion}. 
 The experimental results on the three datasets demonstrate that:
@@ -955,11 +962,7 @@ The experimental results on the three datasets demonstrate that:
 
 \section{Conclusion}
 
-To evaluate the existing denoising algorithms on real photographs and further promote new emerging algorithms for processing real-world noise, we construct a novel dataset which contains comprehensive real-world noisy images of different natural scenes. These images are captured by different cameras under different camera settings. We first select the baseline image by computing the average image. Then we delete the images which are not in consistant illumiance with the baseline image. Finally, we delete the images which are in misalignment with the baseline images. The whole process are reasonable with rational operations. We use the 500 images which are close to the baseline image on illuminance. Since the captured images are too large, we cropped smaller region of size $512\times512$ to evaluate the existing denoising methods and the methods we proposed in the previous sections.
-
-We take comprehensive study on the denoising experimental results by evaluating the existing state-of-the-art denoising methods with our proposed methods. The results demonstrate that the proposed methods are more robust to the existing competing methods on the newly proposed dataset. The experiments also show the effectiveness and efficiency of our proposed TWSC method. We will make the constructed dataset of real photographs publicly available as another benchmark for implementing the exitsing datasets. What's more, our analysis reveals that the existing scientific practice for the image denoising problem is rather limited, and the existing image quality assessment has rather limited relevance for the realistic settings, both of which need huge potential as well as demand for future research.
-
-
+To evaluate the existing denoising algorithms on real photographs and promote new emerging algorithms for processing real-world noise, we constructed a novel dataset which contains comprehensive real-world noisy images of different natural scenes. These images were captured by different cameras under different camera settings. Each scene was shot 500 times in a short time. We first selected the images without misalignment to compute the mean image, then deleted the images which are not in consistant illumiance with the baseline image. Since the captured images are too large in size, we cropped smaller region of size $512\times512$ to evaluate the existing denoising methods and the methods we proposed in the previous sections. We evaluated the existing state-of-the-art denoising methods and our proposed methods on the new dataset and previous datasets. The results demonstrated that the proposed methods are more robust than existing competing methods, and the newly proposed dataset is more challenging. We will make the constructed dataset of real photographs publicly available for researchers to investigate new real-world image denoising methods.
 
 
 
