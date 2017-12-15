@@ -573,12 +573,12 @@ With the proposed dataset, we make a comprehensive evaluation on the state-of-th
     \label{fig6-5}
 \end{figure}
 
-\textbf{Noise level of comparison methods.} For the CBM3D method, the standard deviation of noise on color images should be given as a parameter. For methods of NCSR,  WNNM, MLP, CSF, and TNRD, the noise level in each color channel should be input. For the DnCNN method, it is trained to deal with noise in a range of levels $0\sim55$. We retrain the models of discriminative denoising methods MLP, CSF, and TNRD (using the released codes by the authors) at different noise levels from $\sigma=5$ to $\sigma=50$ with a gap of 5. The denoising is performed by processing each channel with the model trained at the same (or nearest) noise level. The noise levels ($\sigma_{r}, \sigma_{g}, \sigma_{b}$) in R, G, B channels are assumed to be Gaussian and can be estimated via some noise estimation methods \cite{noiselevel,Chen2015ICCV}. In this chapter, we employ the method \cite{noiselevel} to estimate the noise level for each color channel.
+\textbf{Noise level of comparison methods.} For the CBM3D method, the standard deviation of noise on color images should be given as a parameter. For methods of NCSR,  WNNM, MLP, CSF, and TNRD, the noise level in each color channel should be input. For the DnCNN method, it is trained to deal with noise in a range of levels $0\sim55$. We retrain the models of discriminative denoising methods MLP, CSF, and TNRD (using the released codes by the authors) at different noise levels from $\sigma=5$ to $\sigma=50$ with a gap of 5. The denoising is performed by processing each channel with the model trained at the same (or nearest) noise level. The noise levels ($\sigma_{r}, \sigma_{g}, \sigma_{b}$) in R, G, B channels are assumed to be Gaussian and can be estimated via some noise estimation methods \cite{noiselevel,Chen2015ICCV}. In this chapter, we employ the method \cite{noiselevel} to estimate the noise level for each channel of the input color image.
 
 
 \begin{table}[t!]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf{Dataset 1} \cite{crosschannel2016}.}
-\scriptsize
+\footnotesize
 \label{tab6-6}
 \begin{center}
 \renewcommand\arraystretch{1.2}
@@ -636,8 +636,8 @@ SSIM & 0.8635  &  0.9364 & 0.9126  & 0.8591  & 0.9504 &  0.9542 & \textbf{0.9586
 
 
 \begin{table}[t!]
-\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1000 cropped images in \textbf{Dataset 2} \cite{dnd2017}.}
-\scriptsize
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1,000 cropped images in \textbf{Dataset 2} \cite{dnd2017}.}
+\footnotesize
 \label{tab6-7}
 \begin{center}
 \renewcommand\arraystretch{1.2}
@@ -694,7 +694,7 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 \end{center}
 \end{table}
 
-\begin{figure}%[ht!]
+\begin{figure}[ht!]
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
@@ -722,7 +722,7 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_WNNM_0001_1.png}}
 {\footnotesize WNNM}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -749,7 +749,7 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/dnd/resize_br_NC_0001_1.png}}
 {\footnotesize NC}
 \end{minipage}
-}
+}\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
 \centering
@@ -784,16 +784,16 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 
 \subsection{Results and Discussion}
 
-\textbf{Results on Dataset 1}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{tab6-6}.\ One can see that the proposed TWSC, MCWNNM, and Guided methods perform much better than the other competing methods.\ Figure\ \ref{fig6-5} shows the denoised images of a scene captured by Nikon D800 at ISO = 6400.\ One can see that TWSC, MCWNNM, and Guided result in not only higher PSNR and SSIM measures, but also much better visual quality than other methods.
+\textbf{Results on Dataset 1}. The average PSNR and SSIM results on the 15 cropped images by competing methods are listed in Table \ref{tab6-6}.\ One can see that the proposed TWSC, MCWNNM, and Guided methods perform much better than the other competing methods.\ Figure\ \ref{fig6-5} shows the denoised images of a scene captured by Canon 5D Mark 3 at ISO = 3200.\ One can see that TWSC, MCWNNM, and Guided result in not only higher PSNR and SSIM measurements, but also much better visual quality than other methods.
 
-\textbf{Results on Dataset 2}. In Table \ref{tab6-7}, we list the average PSNR and SSIM results of the competing methods on the 1000 cropped images in the DND dataset \cite{dnd2017}.\ We can see that on this dataset the TWSC, MCWNNM, and Guided methods achieve much better performance than the other competing methods.\ Note that the ``ground truth'' images of this dataset have not been released, but one can submit the denoised images to the project website and get the PSNR and SSIM results.\ Figure\ \ref{fig6-6} shows the denoised images of a scene captured by a Nexus 6P camera.\ One can see that the TWSC, MCWNNM, and Guided methods result in better visual quality than the other denoising methods.
+\textbf{Results on Dataset 2}. In Table \ref{tab6-7}, we list the average PSNR and SSIM results of the competing methods on the 1,000 cropped images in the DND dataset \cite{dnd2017}.\ We can see that on this dataset the TWSC, MCWNNM, and Guided methods achieve much better performance than the other competing methods.\ Note that the ``ground truth'' images of this dataset have not been released, but one can submit the denoised images to the project website and get the PSNR and SSIM results.\ Figure\ \ref{fig6-6} shows the denoised images of a scene captured by a Nexus 6P camera.\ One can see that the TWSC, MCWNNM, and Guided methods result in better visual quality than the other denoising methods.
 
 \textbf{Results on Dataset 3}.
-The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images. The proposed TWSC, MCWNNM, and Guided methods work much better than previous methods. Some visual comparisons are listed in Figures \ref{fig6-7}, from which one can see that the TWSC method removes most of the noise while maintaining the details. 
+The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for AWGN are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for real-world nosiy images. The proposed TWSC, MCWNNM, and Guided methods work much better than previous methods. Some visual comparisons are listed in Figure \ref{fig6-7}, from which one can see that the TWSC method removes most of the noise while maintaining the details. 
 
 \begin{table}[t!]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}).}
-\scriptsize
+\footnotesize
 \label{tab6-8}
 \begin{center}
 \renewcommand\arraystretch{1.2}
@@ -948,13 +948,13 @@ SSIM & 0.9161 & 0.9449  & 0.9570  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
 \textbf{Discussion}. 
 The experimental results on the three datasets demonstrate that:
 \begin{itemize}
-\item The methods CBM3D, EPLL, NCSR, WNNM, MLP, CSF, TNRD, DnCNN, and PGPD which are designed for additive whit Gaussian noise (AWGN) achieve lower PSNR and SSIM compared with the methods proposed for real-world noisy image denoising;
+\item The methods CBM3D, EPLL, NCSR, WNNM, MLP, CSF, TNRD, DnCNN, and PGPD which are designed for AWGN achieve lower PSNR and SSIM compared with the methods developed for real-world noisy image denoising;
 
-\item The denoising methods EPLL, NCSR, WNNM, and PGPD which are designed for grey scale images would generate much artifacts since they process each channel of the RGB image individually \cite{srcolor}. They cannot deal with the images which have different noise statistics in different channels as well as different local regions. Hence, these methods would fail to process the real-world noisy images which have complex noise statistics;
+\item The denoising methods EPLL, NCSR, WNNM, and PGPD which are designed for grey scale images would generate much artifacts since they process each channel of the RGB image individually \cite{srcolor}. They cannot deal with the images which have different noise statistics in different channels as well as different local patches. Hence, these methods would fail to process the real-world noisy images which have complex noise statistics;
 
 \item The discriminative learning based methods MLP, CSF, TNRD, and DnCNN are trained on paired clean and noisy images. These methods largely depends on the training dataset, and would achieve inferior performance on images whose noise is different from those in the training images;
 
-\item The performance of our proposed denoising methods, i.e., TWSC, MCWNNM, and Guided, on datasets \cite{crosschannel2016,dnd2017} are much better than those of previous denoising methods. As we can see from Tables \ref{tab6-6} and \ref{tab6-7}, the highest PSNR of our proposed methods (TWSC) and the highest PSNR of previous methods (TNRD on Dataset 1 and NC on Dataset 2) have a difference of over 1.2dB. However, on our new dataset, as we can see from Tables \ref{tab6-8}, the highest PSNR of our proposed methods (TWSC) and the highest PSNR of previous methods (TNRD) only have a difference of around 0.4dB. This indicates that on our new dataset, our proposed methods such as Guided, MCWNNM, and TWSC do not show significant advantages over the previous methods such as TNRD. This is because that our dataset is more comprehensive in the scene contents and have more camera settings. This also shows that our dataset is more challenging than previous two datasets \cite{crosschannel2016,dnd2017}, and new real-world noisy image denoising methods are needed.
+\item The performance of our proposed denoising methods, i.e., TWSC, MCWNNM, and Guided, on datasets \cite{crosschannel2016,dnd2017} are much better than those of previous denoising methods. As we can see from Tables \ref{tab6-6} and \ref{tab6-7}, the highest PSNR of our proposed methods (TWSC) and the highest PSNR of previous methods (TNRD on Dataset 1 and NC on Dataset 2) have a difference of over 1.2dB. However, on our new dataset, as we can see from Tables \ref{tab6-8}, the highest PSNR of our proposed methods (TWSC) and the highest PSNR of previous methods (TNRD) only have a difference of around 0.4dB. This indicates that on our new dataset, our proposed methods such as Guided, MCWNNM, and TWSC do not show significant advantages over the previous methods such as TNRD. This is because that our dataset is more comprehensive in the scene contents and have more camera settings. This also shows that our dataset is more challenging than previous two datasets \cite{crosschannel2016,dnd2017}, and new real-world image denoising methods are needed.
   
 \end{itemize}
 
@@ -962,7 +962,7 @@ The experimental results on the three datasets demonstrate that:
 
 \section{Conclusion}
 
-To evaluate the existing denoising algorithms on real photographs and promote new emerging algorithms for processing real-world noise, we constructed a novel dataset which contains comprehensive real-world noisy images of different natural scenes. These images were captured by different cameras under different camera settings. Each scene was shot 500 times in a short time. We first selected the images without misalignment to compute the mean image, then deleted the images which are not in consistant illumiance with the baseline image. Since the captured images are too large in size, we cropped smaller region of size $512\times512$ to evaluate the existing denoising methods and the methods we proposed in the previous sections. We evaluated the existing state-of-the-art denoising methods and our proposed methods on the new dataset and previous datasets. The results demonstrated that the proposed methods are more robust than existing competing methods, and the newly proposed dataset is more challenging. We will make the constructed dataset of real photographs publicly available for researchers to investigate new real-world image denoising methods.
+To evaluate the existing denoising methods on real photographs and promote new emerging methods for processing real-world noise, we constructed a novel dataset which contains comprehensive real-world noisy images of different natural scenes. These images were captured by different cameras under different camera settings. Each scene was shot 500 times in a short time. We first selected the images without misalignment, then deleted the images which are not in consistant illumiance with the baseline image. Since the captured images are too large in size, we cropped smaller regions of size $512\times512$ to evaluate the existing image denoising methods and the methods we proposed in  previous sections. We evaluated the existing state-of-the-art denoising methods and our proposed methods on the new dataset and previous datasets. The results demonstrated that the proposed methods are more robust than existing competing methods, and the newly proposed dataset is more challenging. We will make the constructed dataset of real photographs publicly available for researchers to investigate new real-world image denoising methods.
 
 
 

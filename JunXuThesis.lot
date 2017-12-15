@@ -29,7 +29,7 @@
 \contentsline {table}{\numberline {6.3}{\ignorespaces Cameras and camera settings for capturing the dataset \cite {dnd2017}.\relax }}{129}{table.caption.104}
 \contentsline {table}{\numberline {6.4}{\ignorespaces Cameras and camera settings used in our new dataset.\relax }}{137}{table.caption.109}
 \contentsline {table}{\numberline {6.5}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf {Dataset 1} \cite {crosschannel2016}.\relax }}{142}{table.caption.111}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1000 cropped images in \textbf {Dataset 2} \cite {dnd2017}.\relax }}{142}{table.caption.112}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1,000 cropped images in \textbf {Dataset 2} \cite {dnd2017}.\relax }}{142}{table.caption.112}
 \contentsline {table}{\numberline {6.7}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf {Dataset 3}).\relax }}{144}{table.caption.114}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
