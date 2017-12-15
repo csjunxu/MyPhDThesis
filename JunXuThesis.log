@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  15 DEC 2017 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  15 DEC 2017 14:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7003,7 +7003,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [130]
-<images/dataset/200_3-5_1-60.jpg, id=3413, 416.8665pt x 234.549pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [131]
+<images/dataset/200_3-5_1-60.jpg, id=3417, 416.8665pt x 234.549pt>
 File: images/dataset/200_3-5_1-60.jpg Graphic file (type jpg)
 
 <use images/dataset/200_3-5_1-60.jpg>
@@ -7011,7 +7014,7 @@ Package pdftex.def Info: images/dataset/200_3-5_1-60.jpg used on input line 178
 .
 (pdftex.def)             Requested size: 143.38689pt x 80.67612pt.
 
-<images/dataset/200_6-7_1-60.jpg, id=3414, 416.8665pt x 234.549pt>
+<images/dataset/200_6-7_1-60.jpg, id=3418, 416.8665pt x 234.549pt>
 File: images/dataset/200_6-7_1-60.jpg Graphic file (type jpg)
 
 <use images/dataset/200_6-7_1-60.jpg>
@@ -7019,7 +7022,7 @@ Package pdftex.def Info: images/dataset/200_6-7_1-60.jpg used on input line 178
 .
 (pdftex.def)             Requested size: 143.38689pt x 80.67612pt.
 
-<images/dataset/200_6-7_1-8.jpg, id=3415, 416.8665pt x 234.549pt>
+<images/dataset/200_6-7_1-8.jpg, id=3419, 416.8665pt x 234.549pt>
 File: images/dataset/200_6-7_1-8.jpg Graphic file (type jpg)
 
 <use images/dataset/200_6-7_1-8.jpg>
@@ -7027,7 +7030,7 @@ Package pdftex.def Info: images/dataset/200_6-7_1-8.jpg used on input line 178.
 
 (pdftex.def)             Requested size: 143.38689pt x 80.67612pt.
 
-<images/dataset/400_6-7_1-60.jpg, id=3416, 416.2095pt x 234.2205pt>
+<images/dataset/400_6-7_1-60.jpg, id=3420, 416.2095pt x 234.2205pt>
 File: images/dataset/400_6-7_1-60.jpg Graphic file (type jpg)
 
 <use images/dataset/400_6-7_1-60.jpg>
@@ -7035,7 +7038,7 @@ Package pdftex.def Info: images/dataset/400_6-7_1-60.jpg used on input line 195
 .
 (pdftex.def)             Requested size: 143.38689pt x 80.6882pt.
 
-<images/dataset/1600_6-7_1-60.jpg, id=3417, 416.2095pt x 234.2205pt>
+<images/dataset/1600_6-7_1-60.jpg, id=3421, 416.2095pt x 234.2205pt>
 File: images/dataset/1600_6-7_1-60.jpg Graphic file (type jpg)
 
 <use images/dataset/1600_6-7_1-60.jpg>
@@ -7043,7 +7046,7 @@ Package pdftex.def Info: images/dataset/1600_6-7_1-60.jpg used on input line 19
 5.
 (pdftex.def)             Requested size: 143.38689pt x 80.6882pt.
 
-<images/dataset/3200_6-7_1-60.jpg, id=3418, 416.2095pt x 234.2205pt>
+<images/dataset/3200_6-7_1-60.jpg, id=3422, 416.2095pt x 234.2205pt>
 File: images/dataset/3200_6-7_1-60.jpg Graphic file (type jpg)
 
 <use images/dataset/3200_6-7_1-60.jpg>
@@ -7051,7 +7054,7 @@ Package pdftex.def Info: images/dataset/3200_6-7_1-60.jpg used on input line 19
 5.
 (pdftex.def)             Requested size: 143.38689pt x 80.6882pt.
 
-<images/dataset/6400_6-7_1-60.jpg, id=3419, 416.2095pt x 234.2205pt>
+<images/dataset/6400_6-7_1-60.jpg, id=3423, 416.2095pt x 234.2205pt>
 File: images/dataset/6400_6-7_1-60.jpg Graphic file (type jpg)
 
 <use images/dataset/6400_6-7_1-60.jpg>
@@ -7059,7 +7062,7 @@ Package pdftex.def Info: images/dataset/6400_6-7_1-60.jpg used on input line 21
 2.
 (pdftex.def)             Requested size: 143.38689pt x 80.6882pt.
 
-<images/dataset/6400_6-7_1-350.jpg, id=3420, 416.2095pt x 234.2205pt>
+<images/dataset/6400_6-7_1-350.jpg, id=3424, 416.2095pt x 234.2205pt>
 File: images/dataset/6400_6-7_1-350.jpg Graphic file (type jpg)
 
 <use images/dataset/6400_6-7_1-350.jpg>
@@ -7067,7 +7070,7 @@ Package pdftex.def Info: images/dataset/6400_6-7_1-350.jpg used on input line 2
 12.
 (pdftex.def)             Requested size: 143.38689pt x 80.6882pt.
 
-<images/dataset/6400_16_1-60.jpg, id=3421, 416.8665pt x 234.549pt>
+<images/dataset/6400_16_1-60.jpg, id=3425, 416.8665pt x 234.549pt>
 File: images/dataset/6400_16_1-60.jpg Graphic file (type jpg)
 
 <use images/dataset/6400_16_1-60.jpg>
@@ -7075,9 +7078,6 @@ Package pdftex.def Info: images/dataset/6400_16_1-60.jpg used on input line 212
 .
 (pdftex.def)             Requested size: 143.38689pt x 80.67612pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [131]
 <images/dataset/scene.jpg, id=3426, 1084.05pt x 1445.4pt>
 File: images/dataset/scene.jpg Graphic file (type jpg)
 
@@ -7092,16 +7092,11 @@ File: images/dataset/scenewithperson.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/dataset/scenewithperson.jpg used on input line 
 229.
 (pdftex.def)             Requested size: 156.82855pt x 209.10345pt.
-
-
-LaTeX Warning: Text page 132 contains only floats.
-
-[132 <./images/dataset/200_3-5_1-60.jpg> <./images/dataset/200_6-7_1-60.jpg> <.
-/images/dataset/200_6-7_1-8.jpg> <./images/dataset/400_6-7_1-60.jpg> <./images/
-dataset/1600_6-7_1-60.jpg> <./images/dataset/3200_6-7_1-60.jpg> <./images/datas
-et/6400_6-7_1-60.jpg> <./images/dataset/6400_6-7_1-350.jpg> <./images/dataset/6
-400_16_1-60.jpg> <./images/dataset/scene.jpg> <./images/dataset/scenewithperson
-.jpg>]
+ [132 <./images/dataset/200_3-5_1-60.jpg> <./images/dataset/200_6-7_1-60.jpg> <
+./images/dataset/200_6-7_1-8.jpg> <./images/dataset/400_6-7_1-60.jpg> <./images
+/dataset/1600_6-7_1-60.jpg> <./images/dataset/3200_6-7_1-60.jpg> <./images/data
+set/6400_6-7_1-60.jpg> <./images/dataset/6400_6-7_1-350.jpg> <./images/dataset/
+6400_16_1-60.jpg>]
 <images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG, id=3442, 2794.44pt x 1862
 .96pt>
 File: images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG Graphic file (type jp
@@ -7208,15 +7203,19 @@ d on input line 304.
 
 LaTeX Warning: Float too large for page by 2.8002pt on input line 307.
 
-[133] [134 <./images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG> <./images/da
-taset/Canon5D2_5_160_6400_circuit_mean.JPG> <./images/dataset/Canon5D2_5_200_32
-00_toy_mean.JPG> <./images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG> <
-./images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG> <./images/dataset/Nikon
-D800_8_125_6400_photo_mean.JPG> <./images/dataset/Sony_3-5_200_1600_classroom_m
-ean.JPG> <./images/dataset/Sony_4-5_125_3200_plant_mean.JPG> <./images/dataset/
-Sony_4_200_3200_door_mean.JPG> <./images/dataset/Canon80D_8_8_3200_ball_mean.JP
-G> <./images/dataset/Canon80D_8_8_12800_printer_mean.JPG> <./images/dataset/Can
-on80D_8_8_6400_comproom_mean.JPG>]
+
+Underfull \vbox (badness 2376) has occurred while \output is active []
+
+ [133 <./images/dataset/scene.jpg> <./images/dataset/scenewithperson.jpg>] [134
+ <./images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG> <./images/dataset/Cano
+n5D2_5_160_6400_circuit_mean.JPG> <./images/dataset/Canon5D2_5_200_3200_toy_mea
+n.JPG> <./images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG> <./images/d
+ataset/NikonD800_6-3_125_5000_plant_mean.JPG> <./images/dataset/NikonD800_8_125
+_6400_photo_mean.JPG> <./images/dataset/Sony_3-5_200_1600_classroom_mean.JPG> <
+./images/dataset/Sony_4-5_125_3200_plant_mean.JPG> <./images/dataset/Sony_4_200
+_3200_door_mean.JPG> <./images/dataset/Canon80D_8_8_3200_ball_mean.JPG> <./imag
+es/dataset/Canon80D_8_8_12800_printer_mean.JPG> <./images/dataset/Canon80D_8_8_
+6400_comproom_mean.JPG>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [135]
@@ -7407,7 +7406,7 @@ d on input line 421.
 LaTeX Warning: Float too large for page by 15.02982pt on input line 424.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3098) has occurred while \output is active []
 
  [137]
 [138 <./images/dataset/Canon5D2_5_160_6400_bicycle_6_mean.JPG> <./images/datase
@@ -8039,13 +8038,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 535.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 535.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 535.
 Package rerunfilecheck Info: File `JunXuThesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 5E248B022BD009ABF731AA2910880B3F;51299.
+(rerunfilecheck)             Checksum: 13496E19316BC5EA5C5F5E8789F6BB22;51299.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 535.
  ) 
 Here is how much of TeX's memory you used:
  15194 strings out of 493091
  338631 string characters out of 6134517
- 405148 words of memory out of 5000000
+ 405246 words of memory out of 5000000
  16898 multiletter control sequences out of 15000+600000
  90750 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -8066,10 +8065,10 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (198 pages, 55352247 bytes).
+Output written on JunXuThesis.pdf (198 pages, 55352436 bytes).
 PDF statistics:
- 4829 PDF objects out of 5155 (max. 8388607)
- 3806 compressed objects within 39 object streams
+ 4830 PDF objects out of 5155 (max. 8388607)
+ 3807 compressed objects within 39 object streams
  823 named destinations out of 1000 (max. 500000)
  3411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
