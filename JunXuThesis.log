@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  15 DEC 2017 08:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  15 DEC 2017 08:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7854,10 +7854,13 @@ File: omstxr.fd 2000/12/15 v3.1
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 942.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (2.7649pt too wide) in paragraph at lines 942--943
+[]\OT1/txr/m/n/12 The meth-ods (CBM3D, EPLL, NCSR, WNNM, MLP, CSF, TNRD, DnCNN,
+ and PGPD)
+ []
 
- [140]
-Underfull \vbox (badness 7012) has occurred while \output is active []
+[140]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [141])
 [142] [143 <./images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG> <./images/da
@@ -8064,10 +8067,10 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (198 pages, 55352116 bytes).
+Output written on JunXuThesis.pdf (198 pages, 55351917 bytes).
 PDF statistics:
- 4834 PDF objects out of 5155 (max. 8388607)
- 3811 compressed objects within 39 object streams
+ 4830 PDF objects out of 5155 (max. 8388607)
+ 3807 compressed objects within 39 object streams
  823 named destinations out of 1000 (max. 500000)
  3411 words of extra memory for PDF output out of 10000 (max. 10000000)
 

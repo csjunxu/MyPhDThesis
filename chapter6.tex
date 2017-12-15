@@ -781,7 +781,7 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 \end{figure}
 
 \textbf{Results on Dataset 3}.
-The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images. The proposed TWSC, MCWNNM, and Guided methods work much better than previous methods. Some visual comparisons are listed in Figures \ref{fig6-7}, from which one can see that the TWSC method removes the noise while still maintains the details. 
+The PSNR and SSIM \cite{ssim} results on the 100 cropped images are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for additive white Gaussian noise are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior than the methods designed for realistic nosiy images. The proposed TWSC, MCWNNM, and Guided methods work much better than previous methods. Some visual comparisons are listed in Figures \ref{fig6-7}, from which one can see that the TWSC method removes most of the noise while maintaining the details. 
 
 \begin{table}[t!]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}).}
@@ -937,9 +937,9 @@ SSIM & 0.9161 & 0.9449  & 0.9570  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
 
 
 \textbf{Discussion}. 
-The experimental results shown in Tables \ref{tab6-6}-\ref{tab6-8} and Figures \ref{fig6-5}-\ref{fig6-7} demonstrate that:
+The experimental results on the three datasets demonstrate that:
 \begin{itemize}
-\item The methods (e.g., CBM3D, EPLL, NCSR, WNNM, MLP, CSF, TNRD, DnCNN, and PGPD) designed for additive whit Gaussian noise (AWGN) achieve lower PSNR and SSIM when compared to the methods proposed for real-world noisy image denoising;
+\item The methods (CBM3D, EPLL, NCSR, WNNM, MLP, CSF, TNRD, DnCNN, and PGPD) designed for additive whit Gaussian noise (AWGN) achieve lower PSNR and SSIM when compared to the methods proposed for real-world noisy image denoising;
 
 \item The denoising methods (e.g., EPLL, NCSR, WNNM, and PGPD) designed for grey scale image would generate artifacts since they process each channel of the RGB image individually \cite{srcolor}. They cannot deal with the images which have different noise statistics in different channels as well as different local region. Hence, these methods would fail to process the real-world noisy images captured from real-world scenes;
 
