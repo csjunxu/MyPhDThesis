@@ -373,13 +373,13 @@ We hereby declare that this thesis is my own work and that, to the best of my kn
 %%  ***  Put your Abstract here.   ***
 %% (150 words for M.Sc. and 350 words for Ph.D.)
 
-The nonlocal self-similarity (NSS) prior of natural images has been successfully used in many image restoration methods. In this thesis, we investigate the design of new and more effective NSS models for image denoising tasks, especially real-world image denoising. A new dataset to benchmark the study of real-world image denoising method is also established.
+The nonlocal self-similarity (NSS) prior of natural images has been successfully used in many image restoration methods. In this thesis, we investigate the design of new and more effective NSS models for image denoising, especially real-world image denoising. A new dataset to benchmark the study of real-world image denoising method is also established.
 
 To exploit the NSS prior from the external clean natural images, we propose a patch group (PG) based NSS prior learning scheme to learn explicit NSS models from natural images for high performance denoising. PGs are extracted from training images by putting nonlocal similar patches into groups, and a PG based Gaussian Mixture Model (PG-GMM) learning algorithm is developed to learn the NSS prior. We demonstrate that, owe to the learned PG-GMM, a simple weighted sparse coding model, which has a closed-form solution, can be used to perform image denoising effectively, resulting in high PSNR measure, fast speed, and particularly visually pleasing denoising outputs.
 
 The noise in real-world images captured by digital cameras is hard to be characterized by the additive white Gaussian noise (AWGN) model. Therefore, many denoising methods developed under the AWGN assumption may not work well on real-world noisy images. To exploit the information in both external data and the given noisy image, we develop an external prior guided internal prior learning method for real-world noisy image denoising. We first learn external priors from an independent set of clean natural images. With the aid of learned external priors, we then learn internal priors from the given noisy image to refine the prior model. The external and internal priors are formulated as a set of orthogonal dictionaries to efficiently reconstruct the desired image. Extensive experiments are performed on several real-world noisy image datasets. The proposed method demonstrates highly competitive denoising performance, outperforming state-of-the-art denoising methods including those designed for real-world noisy images.
 
-We then investigate how to utilize solely the internal NSS of noisy images for real-world image denoising task. To this end, we propose a multi-channel (MC) optimization model for real-world color image denoising under the weighted nuclear norm minimization (WNNM) framework. We concatenate the RGB patches to make use of the channel redundancy, and introduce a weight matrix to balance the data fidelity of the three channels in consideration of their different noise statistics. The proposed MC-WNNM model has no analytical solution. We reformulate it into a linear equality-constrained problem and solve it via alternating direction method of multipliers. Each alternative updating step has a closed-form solution and the convergence can be guaranteed. Experiments on both synthetic and real-world noisy image datasets demonstrate the superiority of the proposed MC-WNNM model over state-of-the-art image denoising methods.
+We then investigate how to utilize solely the internal NSS redundancy of noisy images for real-world image denoising task. To this end, we propose a multi-channel (MC) optimization model for real-world color image denoising under the weighted nuclear norm minimization (WNNM) framework. We concatenate the RGB patches to make use of the channel redundancy, and introduce a weight matrix to balance the data fidelity of the three channels in consideration of their different noise statistics. The proposed MC-WNNM model has no analytical solution. We reformulate it into a linear equality-constrained problem and solve it via alternating direction method of multipliers. Each alternative updating step has a closed-form solution and the convergence can be guaranteed. Experiments on both synthetic and real-world noisy image datasets demonstrate the superiority of the proposed MC-WNNM model over state-of-the-art image denoising methods.
 
 We also develop a trilateral weighted sparse coding (TWSC) scheme for robust real-world image denoising. Specifically, we introduce three weight matrices into the data and regularization terms of the sparse coding framework to characterize the statistics of real-world noise and image priors. TWSC can be reformulated as a linear equality-constrained problem and can be solved by the alternating direction method of multipliers. The existence and uniqueness of the solution and convergence of the proposed algorithm are analyzed. Extensive experiments demonstrate that the proposed TWSC scheme outperforms state-of-the-art denoising methods on removing real-world noise.
 
@@ -394,6 +394,13 @@ In summary, in this thesis we investigate in-depth the learning of NSS priors fo
 \addcontentsline{toc}{chapter}{Publication}
 \Large\begin{center}\textbf{List of Publications}\end{center}\normalsize
 
+\textbf{Conference Papers}
+\begin{enumerate}
+  \item \textbf{Jun Xu}, Lei Zhang, David Zhang, Xiangchu Feng, ``Multi-channel Weighted Nuclear Norm Minimization for Real Color Image Denoising''. International Conference on Computer Vision (ICCV), 1096--1104, Venice, Italy, 2017.
+  \item \textbf{Jun Xu}, Lei Zhang, Wangmeng Zuo, David Zhang and Xiangchu Feng, ``Patch Group Based Nonlocal Self-Similarity Prior Learning for Image Denoising''. International Conference on Computer Vision (ICCV), 244--252, Santiago, Chile, 2015.
+\vspace{-2mm}
+\end{enumerate}
+
 \textbf{Journal Papers} (Published and under revision)
 \begin{enumerate}
  \item \textbf{Jun Xu}, Lei Zhang, David Zhang, ``External Prior Guided Internal Prior Learning for Real Noisy Image Denoising''. Major Revision in IEEE Transactions on Image Processing, 2017.
@@ -402,20 +409,12 @@ In summary, in this thesis we investigate in-depth the learning of NSS priors fo
 
 \end{enumerate}
 
-\textbf{Conference Papers}
-\begin{enumerate}
-  \item \textbf{Jun Xu}, Lei Zhang, Wangmeng Zuo, David Zhang and Xiangchu Feng, ``Patch Group Based Nonlocal Self-Similarity Prior Learning for Image Denoising''. International Conference on Computer Vision (ICCV), 244--252, Santiago, Chile, 2015.
-\vspace{-2mm}
-  \item \textbf{Jun Xu}, Lei Zhang, David Zhang, Xiangchu Feng, ``Multi-channel Weighted Nuclear Norm Minimization for Real Color Image Denoising''. International Conference on Computer Vision (ICCV), 1096--1104, Venice, Italy, 2017.
-\end{enumerate}
 
 \textbf{Papers Submitted}
 \begin{enumerate}
  \item \textbf{Jun Xu}, Lei Zhang, David Zhang, ``A Trilateral Weighted Sparse Coding Scheme for Realistic Image Denoising''. Submitted to CVPR 2018.
 \vspace{-2mm}
  \item \textbf{Jun Xu}, Deyu Meng, Lei Zhang, David Zhang, ``Scaled Simplex Representation for Efficient Subspace Clustering''. Submitted to CVPR 2018.
-\vspace{-2mm}
- \item \textbf{Jun Xu}, Lei Zhang, David Zhang, ``Sparse, Collaborative, or Non-negative Representation: Which Helps Pattern Classification?''. Submitted to CVPR 2018.
 \vspace{-2mm}
  \item Zhetong Liang, \textbf{Jun Xu}, David Zhang, Zisheng Cao, Lei Zhang, ``A Hybrid L1-L0 Layer Decomposition Model for Tone Mapping''. Submitted to CVPR 2018.
 \end{enumerate}

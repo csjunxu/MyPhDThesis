@@ -1,9 +1,9 @@
 \contentsline {chapter}{Certificate of Examination}{ii}{Doc-Start}
 \contentsline {chapter}{Abstract}{iii}{Doc-Start}
 \contentsline {chapter}{Publication}{vi}{Doc-Start}
-\contentsline {chapter}{Acknowledgement}{vii}{Item.8}
-\contentsline {chapter}{List of Figures}{xiii}{Item.8}
-\contentsline {chapter}{List of Tables}{xxi}{Item.8}
+\contentsline {chapter}{Acknowledgement}{vii}{Item.7}
+\contentsline {chapter}{List of Figures}{xiii}{Item.7}
+\contentsline {chapter}{List of Tables}{xxi}{Item.7}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}The Formulation of Image Denoising}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Existing Denoising Methods}{7}{section.1.2}

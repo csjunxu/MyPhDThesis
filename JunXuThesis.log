@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  17 DEC 2017 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  20 DEC 2017 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7097,7 +7097,7 @@ Package pdftex.def Info: images/dataset/scenewithperson.jpg used on input line
 /dataset/1600_6-7_1-60.jpg> <./images/dataset/3200_6-7_1-60.jpg> <./images/data
 set/6400_6-7_1-60.jpg> <./images/dataset/6400_6-7_1-350.jpg> <./images/dataset/
 6400_16_1-60.jpg>]
-<images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG, id=3442, 2794.44pt x 1862
+<images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG, id=3441, 2794.44pt x 1862
 .96pt>
 File: images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG Graphic file (type jp
 g)
@@ -7106,7 +7106,7 @@ Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_bicycle_mean.JPG us
 ed on input line 254.
 (pdftex.def)             Requested size: 156.82855pt x 104.55246pt.
 
-<images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG, id=3443, 2794.44pt x 1862
+<images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG, id=3442, 2794.44pt x 1862
 .96pt>
 File: images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG Graphic file (type jp
 g)
@@ -7115,7 +7115,7 @@ Package pdftex.def Info: images/dataset/Canon5D2_5_160_6400_circuit_mean.JPG us
 ed on input line 254.
 (pdftex.def)             Requested size: 156.82855pt x 104.55246pt.
 
-<images/dataset/Canon5D2_5_200_3200_toy_mean.JPG, id=3444, 2794.44pt x 1862.96p
+<images/dataset/Canon5D2_5_200_3200_toy_mean.JPG, id=3443, 2794.44pt x 1862.96p
 t>
 File: images/dataset/Canon5D2_5_200_3200_toy_mean.JPG Graphic file (type jpg)
  <use images/dataset/Canon5D2_5_200_3200_toy_mean.JPG>
@@ -7123,7 +7123,7 @@ Package pdftex.def Info: images/dataset/Canon5D2_5_200_3200_toy_mean.JPG used o
 n input line 264.
 (pdftex.def)             Requested size: 156.82855pt x 104.55246pt.
 
-<images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG, id=3445, 3693.8pt x 
+<images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG, id=3444, 3693.8pt x 
 2465.21pt>
 File: images/dataset/NikonD800_4-5_160_1800_classroom_mean.JPG Graphic file (ty
 pe jpg)
@@ -7132,7 +7132,7 @@ Package pdftex.def Info: images/dataset/NikonD800_4-5_160_1800_classroom_mean.J
 PG used on input line 264.
 (pdftex.def)             Requested size: 156.82855pt x 104.64778pt.
 
-<images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG, id=3446, 3693.8pt x 2465
+<images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG, id=3445, 3693.8pt x 2465
 .21pt>
 File: images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG Graphic file (type j
 pg)
@@ -7141,7 +7141,7 @@ Package pdftex.def Info: images/dataset/NikonD800_6-3_125_5000_plant_mean.JPG u
 sed on input line 274.
 (pdftex.def)             Requested size: 156.82855pt x 104.64778pt.
 
-<images/dataset/NikonD800_8_125_6400_photo_mean.JPG, id=3447, 3693.8pt x 2465.2
+<images/dataset/NikonD800_8_125_6400_photo_mean.JPG, id=3446, 3693.8pt x 2465.2
 1pt>
 File: images/dataset/NikonD800_8_125_6400_photo_mean.JPG Graphic file (type jpg
 )
@@ -7150,7 +7150,7 @@ Package pdftex.def Info: images/dataset/NikonD800_8_125_6400_photo_mean.JPG use
 d on input line 274.
 (pdftex.def)             Requested size: 156.82855pt x 104.64778pt.
 
-<images/dataset/Sony_3-5_200_1600_classroom_mean.JPG, id=3448, 3019.28pt x 1694
+<images/dataset/Sony_3-5_200_1600_classroom_mean.JPG, id=3447, 3019.28pt x 1694
 .33pt>
 File: images/dataset/Sony_3-5_200_1600_classroom_mean.JPG Graphic file (type jp
 g)
@@ -7159,7 +7159,7 @@ Package pdftex.def Info: images/dataset/Sony_3-5_200_1600_classroom_mean.JPG us
 ed on input line 284.
 (pdftex.def)             Requested size: 156.82855pt x 88.00484pt.
 
-<images/dataset/Sony_4-5_125_3200_plant_mean.JPG, id=3449, 3019.28pt x 1694.33p
+<images/dataset/Sony_4-5_125_3200_plant_mean.JPG, id=3448, 3019.28pt x 1694.33p
 t>
 File: images/dataset/Sony_4-5_125_3200_plant_mean.JPG Graphic file (type jpg)
  <use images/dataset/Sony_4-5_125_3200_plant_mean.JPG>
@@ -7167,7 +7167,7 @@ Package pdftex.def Info: images/dataset/Sony_4-5_125_3200_plant_mean.JPG used o
 n input line 284.
 (pdftex.def)             Requested size: 156.82855pt x 88.00484pt.
 
-<images/dataset/Sony_4_200_3200_door_mean.JPG, id=3450, 3019.28pt x 1694.33pt>
+<images/dataset/Sony_4_200_3200_door_mean.JPG, id=3449, 3019.28pt x 1694.33pt>
 File: images/dataset/Sony_4_200_3200_door_mean.JPG Graphic file (type jpg)
 
 <use images/dataset/Sony_4_200_3200_door_mean.JPG>
@@ -7175,14 +7175,14 @@ Package pdftex.def Info: images/dataset/Sony_4_200_3200_door_mean.JPG used on i
 nput line 294.
 (pdftex.def)             Requested size: 156.82855pt x 88.00484pt.
 
-<images/dataset/Canon80D_8_8_3200_ball_mean.JPG, id=3451, 2987.16pt x 1686.3pt>
+<images/dataset/Canon80D_8_8_3200_ball_mean.JPG, id=3450, 2987.16pt x 1686.3pt>
 File: images/dataset/Canon80D_8_8_3200_ball_mean.JPG Graphic file (type jpg)
 <use images/dataset/Canon80D_8_8_3200_ball_mean.JPG>
 Package pdftex.def Info: images/dataset/Canon80D_8_8_3200_ball_mean.JPG used on
  input line 294.
 (pdftex.def)             Requested size: 156.82855pt x 88.51405pt.
 
-<images/dataset/Canon80D_8_8_12800_printer_mean.JPG, id=3452, 2987.16pt x 1686.
+<images/dataset/Canon80D_8_8_12800_printer_mean.JPG, id=3451, 2987.16pt x 1686.
 3pt>
 File: images/dataset/Canon80D_8_8_12800_printer_mean.JPG Graphic file (type jpg
 )
@@ -7191,7 +7191,7 @@ Package pdftex.def Info: images/dataset/Canon80D_8_8_12800_printer_mean.JPG use
 d on input line 304.
 (pdftex.def)             Requested size: 156.82855pt x 88.51405pt.
 
-<images/dataset/Canon80D_8_8_6400_comproom_mean.JPG, id=3453, 2987.16pt x 1686.
+<images/dataset/Canon80D_8_8_6400_comproom_mean.JPG, id=3452, 2987.16pt x 1686.
 3pt>
 File: images/dataset/Canon80D_8_8_6400_comproom_mean.JPG Graphic file (type jpg
 )
@@ -8036,18 +8036,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [174])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 535.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 534.
 
 [175]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 535.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 534.
  (./JunXuThesis.aux (./acknowledgement.aux) (./chapter1.aux)
 (./chapter2.aux) (./chapter3.aux) (./chapter4.aux) (./chapter5.aux)
 (./chapter6.aux) (./chapter7.aux) (./chapter8.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 535.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 535.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 534.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 534.
 Package rerunfilecheck Info: File `JunXuThesis.brf' has not changed.
 (rerunfilecheck)             Checksum: 88659CA9EA8F32D5ACE041058C80D1CF;51299.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 535.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 534.
  ) 
 Here is how much of TeX's memory you used:
  15194 strings out of 493091
@@ -8057,23 +8057,26 @@ Here is how much of TeX's memory you used:
  90750 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,20n,38p,1956b,861s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Software
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Sof
-tware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c
-:/Software/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/Soft
-ware/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxbmi.pfb><c:/Software
-/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/Software/texli
-ve/2015/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/Software/texlive/20
-15/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/Software/texlive/2015/tex
-mf-dist/fonts/type1/public/txfonts/txbsy.pfb><c:/Software/texlive/2015/texmf-di
-st/fonts/type1/public/txfonts/txex.pfb><c:/Software/texlive/2015/texmf-dist/fon
-ts/type1/public/txfonts/txsy.pfb><c:/Software/texlive/2015/texmf-dist/fonts/typ
-e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
-/times/utmb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
-mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
-><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
-ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (198 pages, 55471992 bytes).
+pdfTeX warning (dest): name{Item.8} has been referenced but does not exist, r
+eplaced by a fixed one
+
+{c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Software/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Softw
+are/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/
+Software/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb><c:/Softwa
+re/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxbmi.pfb><c:/Software/t
+exlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb><c:/Software/texlive
+/2015/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb><c:/Software/texlive/2015
+/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb><c:/Software/texlive/2015/texmf
+-dist/fonts/type1/public/txfonts/txbsy.pfb><c:/Software/texlive/2015/texmf-dist
+/fonts/type1/public/txfonts/txex.pfb><c:/Software/texlive/2015/texmf-dist/fonts
+/type1/public/txfonts/txsy.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1
+/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/t
+imes/utmb8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb
+i8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Softwa
+re/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on JunXuThesis.pdf (198 pages, 55471786 bytes).
 PDF statistics:
  4830 PDF objects out of 5155 (max. 8388607)
  3807 compressed objects within 39 object streams
