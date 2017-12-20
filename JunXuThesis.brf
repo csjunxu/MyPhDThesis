@@ -969,10 +969,10 @@
 \backcite {dnd2017}{{138}{6.4.1}{subsection.6.4.1}}
 \backcite {ssim}{{138}{6.4.1}{subsection.6.4.1}}
 \backcite {cbm3d}{{138}{6.4.2}{subsection.6.4.2}}
-\backcite {epll}{{139}{6.4.2}{subsection.6.4.2}}
-\backcite {mlp}{{139}{6.4.2}{subsection.6.4.2}}
-\backcite {ncsr}{{139}{6.4.2}{subsection.6.4.2}}
-\backcite {csf}{{139}{6.4.2}{subsection.6.4.2}}
+\backcite {epll}{{138}{6.4.2}{subsection.6.4.2}}
+\backcite {mlp}{{138}{6.4.2}{subsection.6.4.2}}
+\backcite {ncsr}{{138}{6.4.2}{subsection.6.4.2}}
+\backcite {csf}{{138}{6.4.2}{subsection.6.4.2}}
 \backcite {wnnm}{{139}{6.4.2}{subsection.6.4.2}}
 \backcite {tnrd}{{139}{6.4.2}{subsection.6.4.2}}
 \backcite {dncnn}{{139}{6.4.2}{subsection.6.4.2}}
@@ -986,10 +986,10 @@
 \backcite {dncnn}{{139}{6.4.2}{subsection.6.4.2}}
 \backcite {Chen2015ICCV}{{139}{6.4.2}{figure.caption.110}}
 \backcite {noiselevel}{{139}{6.4.2}{figure.caption.110}}
+\backcite {noiselevel}{{139}{6.4.2}{figure.caption.110}}
 \backcite {crosschannel2016}{{140}{6.5}{figure.caption.110}}
 \backcite {crosschannel2016}{{141}{6.5}{table.caption.111}}
 \backcite {dnd2017}{{141}{6.6}{table.caption.112}}
-\backcite {noiselevel}{{141}{6.4.2}{figure.caption.110}}
 \backcite {dnd2017}{{142}{6.6}{figure.caption.113}}
 \backcite {dnd2017}{{142}{6.4.3}{subsection.6.4.3}}
 \backcite {ssim}{{142}{6.4.3}{subsection.6.4.3}}
