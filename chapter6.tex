@@ -62,7 +62,7 @@ Xiaomi Mi3 & $4.69\times3.52$ & 40 & 100  & Auto  & 1.6k, 3.2k & Auto
 \end{center}
 \end{table}
 
-The second work along this direction is reported in \cite{crosschannel2016}, which involves 11 static scenes. The real-world noisy images and the corresponding ``ground truth'' images are collected. For each scene, 500 JPEG images are captured and the mean image of the 500 images is roughly taken as the ``ground truth'' image. Utilizing the mean of temporal images as ``ground truth'' image has also been employed in \cite{Liu2008,liupractical}, but the authors did not build a benchmark dataset. In the dataset of \cite{crosschannel2016}, the images are mostly with resolution of $7630\times4912$ and captured by Nikon D800 (ISO=1,600, 3,200, and 6,400), Nikon D600 (ISO=3,200), and Canon 5D Mark III (ISO=3,200). There are totally 15 cropped regions of size $512\times512$ provided for evaluating different denoising methods. The major problems of this dataset is that the captured images are almost printed scenes, which share similar nosie statistical property. The camera settings are also somewhat limited such as the ISO values. The detailed description of this dataset is listed in Table \ref{tab6-2}. 
+The second work along this direction is reported in \cite{crosschannel2016}, which involves 11 static scenes. The real-world noisy images and the corresponding ``ground truth'' images are collected. For each scene, 500 JPEG images are captured and the mean image of the 500 images is roughly taken as the ``ground truth'' image. Utilizing the mean of temporal images as ``ground truth'' image has also been employed in \cite{Liu2008,liupractical}, but the authors did not build a benchmark dataset. In the dataset of \cite{crosschannel2016}, the images are mostly with resolution of $7630\times4912$ and captured by Nikon D800 (ISO=1,600, 3,200, and 6,400), Nikon D600 (ISO=3,200), and Canon 5D Mark III (ISO=3,200). There are totally 15 cropped regions of size $512\times512$ provided for evaluating different denoising methods. The major problems of this dataset is that the captured images are almost printed scenes, which share similar nosie statistical property. The camera settings such as the ISO values are also somewhat limited. The detailed description of this dataset is listed in Table \ref{tab6-2}. 
 
 \begin{table}[t!]
 \caption{The detailed information of the cropped regions from the dataset \cite{crosschannel2016}.}
@@ -76,7 +76,7 @@ Camera
 & 
 ISO
 &
-\# Image
+\# of Images
 &
 JPEG
 &
@@ -97,10 +97,10 @@ Nikon D800 & 1.6k, 3.2k, 6.4k & 9  & Normal & $512\times512$
 \vspace{-4mm}
 \end{table}
 
-One recent benchmark is reported in \cite{dnd2017}. Different from the previous two datasets, \cite{dnd2017} employs the Tobit regression which allows to estimate the parameters of the noise process by accessing just two images. In order to obviate the unrealistic setting by developing a methodology for benchmarking denoising techniques on real photographs, the authors in \cite{dnd2017} captured 50 different pairs of images with different ISO settings and shutter speed. The image captured with high ISO and faster shutter speed is taken as the real-world noisy image, while the image captured with low ISO and slower shutter speed is roughly taken as the ``ground truth'' image. To derive better ``ground truth'', careful post-processing is designed in \cite{dnd2017}. The authors corrected spatial misalignment, coped with the inaccuracies in the exposure parameters through a linear intensity transform based on a novel heteroscedastic Tobit regression model, and removed residual low-frequency bias that stems from minor illumination changes, etc. The proposed dataset is called the Darmstadt Noise Dataset (DND) \cite{dnd2017}, in which the cameras used for capturing the dataset include Sony A7R, Olympus E-M10, Sony RX100 IV, and Huawei Nexus 6P. The authors of \cite{dnd2017} extracted the linear raw intensities from the captured images using the free software \textsl{Dcraw}, and then normalized the image intensities to the range of $[0, 1]$ by scaling with the black and white levels. One interesting finding is that various recent techniques that perform well on synthetic noise are clearly outperformed by BM3D \cite{bm3d} on realistic photographs. This benchmark delineates realistic evaluation scenarios that deviate strongly from those commonly used in the scientific literature. The detailed description of this dataset is listed in Table \ref{tab6-3}.
+One recent benchmark is reported in \cite{dnd2017}. Different from the previous two datasets in \cite{RENOIR2014} and \cite{crosschannel2016}, \cite{dnd2017} employs the Tobit regression to estimate the parameters of the noise process by accessing just two images. In order to obviate the unrealistic setting by developing a methodology for benchmarking denoising techniques on real photographs, the authors of \cite{dnd2017} captured 50 different pairs of images with different ISO settings and shutter speeds. The image captured with high ISO and faster shutter speed is taken as the real-world noisy image, while the image captured with low ISO and slower shutter speed is roughly taken as the ``ground truth'' image. To derive better ``ground truth'', careful post-processing is designed in \cite{dnd2017}. The authors corrected spatial misalignment, coped with the inaccurate exposure parameters through a linear intensity transform based on a novel heteroscedastic Tobit regression model, and removed residual low-frequency bias that stems from minor illumination changes, etc. The proposed dataset is called the Darmstadt Noise Dataset (DND) \cite{dnd2017}, in which the cameras used for capturing the dataset include Sony A7R, Olympus E-M10, Sony RX100 IV, and Huawei Nexus 6P. The authors extracted the linear raw intensities from the captured images using the free software \textsl{Dcraw}, and then normalized the image intensities to the range of $[0, 1]$ by scaling the black and white levels. One interesting finding is that various denoising techniques that perform well on synthetic noisy images are clearly outperformed by BM3D \cite{bm3d} on realistic photographs. This benchmark delineates realistic evaluation scenarios that deviate strongly from those commonly used in the scientific literature. The detailed description of this dataset is listed in Table \ref{tab6-3}.
 
 \begin{table}[t!]
-\caption{Cameras and camera settings for capturing the dataset \cite{dnd2017}.}
+\caption{Cameras and camera settings used in the dataset \cite{dnd2017}.}
 
 \label{tab6-3}
 \begin{center}
@@ -110,7 +110,7 @@ One recent benchmark is reported in \cite{dnd2017}. Different from the previous 
 \hline
 Camera
 &
-\# Scene
+\# of Scenes
 &
 Sensor size (mm)
 &
