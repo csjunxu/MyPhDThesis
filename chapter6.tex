@@ -142,14 +142,14 @@ As discussed previously, existing real-world noisy image datasets \cite{RENOIR20
 
 \textbf{Camera Brands}: In the RENOIR dataset \cite{RENOIR2014}, the authors used two different camera brands, Canon (T3i and S90) and Xiaomi (Mi3), for image collection. In the dataset \cite{crosschannel2016}, the authors also used two camera brands, i.e., the Canon (5D) and Nikon (D600 and D800), for image collection. In the DND dataset \cite{dnd2017}, the authors used three different cameras including Sony (A7R and RX100 IV), Olympus (E-M10), and Huawei (Nexus 6P).
 
-\textbf{Camera Settings}: In the RENOIR dataset \cite{RENOIR2014}, the ``ground truth'' images are all captured by setting the ISO as 100. The ISO in noisy images are set as follows: for Xiaomi Mi3, the ISO is set as 1,600 or 3,200; for Canon S90, the ISO is set as 640 or 1,000; for Canon T3i, the ISO is set as 3,200 or 6,400. For all the cases except for the reference image of Canon S90, the shutter speed is set as automatic. For Canon S90, the shutter speed is set as 3.2 seconds. In the dataset \cite{crosschannel2016}, three different ISOs (e.g., 1,600, 3,200, and 6,400) are employed when capturing images with Nikon D800, while ISO=3,200 is utilized for Canon 5D and Nikon D600. The DND dataset \cite{dnd2017} contains ISOs of large range. The ranges of ISO are $100\sim25,600$ for Sony A7R, $200\sim25,600$ for Olympus E-M10, $125\sim8,000$ for Sony RX100 IV, and $100\sim6,400$ for Huawei Nexus 6P, respectively. 
+\textbf{Camera Settings}: In the RENOIR dataset \cite{RENOIR2014}, the ``ground truth'' images are all captured by setting the ISO as 100. The ISO in noisy images are set as follows: for Xiaomi Mi3, the ISO is set as 1,600 or 3,200; for Canon S90, the ISO is set as 640 or 1,000; for Canon T3i, the ISO is set as 3,200 or 6,400. For all the cases except for the reference image of Canon S90, the shutter speed is set as automatic. For Canon S90, the shutter speed is set as 3.2 seconds. In the dataset \cite{crosschannel2016}, three different ISOs (e.g., 1,600, 3,200, and 6,400) are employed when capturing images with Nikon D800, while ISO=3,200 is utilized for Canon 5D and Nikon D600. The DND dataset \cite{dnd2017}, the ranges of ISO are $100\sim25,600$ for Sony A7R, $200\sim25,600$ for Olympus E-M10, $125\sim8,000$ for Sony RX100 IV, and $100\sim6,400$ for Huawei Nexus 6P, respectively. 
 
-\textbf{Captured Scenes}: The RENOIR dataset \cite{RENOIR2014} capture 40 scenes for each camera brand, and overall 120 scenes are included in the dataset. However, the noisy images and corresponding ``ground truth'' images in this dataset have distinct color difference, which is largely caused by inconsistent lighting conditions. The dataset \cite{crosschannel2016} contains only 11 indoor scenes, in which these scenes are overlapped by similar contents and objects. Though containing 50 different scenes, the ``ground truth'' images in the DND dataset \cite{dnd2017} are not accessible. This limits the evaluation of the proposed denoising methods on visual quality.
+\textbf{Captured Scenes}: The RENOIR dataset \cite{RENOIR2014} captures 40 scenes for each camera brand, and overall 120 scenes are included in the dataset. However, the noisy images and corresponding ``ground truth'' images in this dataset have distinct color difference, which is largely caused by inconsistent lighting conditions. The dataset \cite{crosschannel2016} contains only 11 indoor scenes, which are overlapped by similar contents and objects. Though containing 50 different scenes, the ``ground truth'' images in the DND dataset \cite{dnd2017} are not accessible yet. This limits the evaluation of the proposed denoising methods on visual quality.
 
 
-\textbf{Discussion}. Among the above mentioned factors, the camera settings are very important when we capture the real-world noisy images, while the camera brands and captured scenes are relatively easy to improve. The camera settings include mainly ISO value, the shutter speed, and the aperture, etc. In general, the faster the shutter speed, the darker the captured images, when we fix the other settings, and vice versa. Similarly, the smaller the ISO value (or aperture), the darker the captured images, when we fix the other settings, and vice versa. 
+\textbf{Discussion}. Among the above mentioned factors, the camera settings are very important when we capture the real-world noisy images, while the camera brands and captured scenes are relatively easy to improve. The camera settings include mainly ISO value, the shutter speed, and the aperture, etc. In general, the faster the shutter speed, the darker the captured images when we fix the other settings, and vice versa. Similarly, the smaller the ISO value (or aperture), the darker the captured images when we fix the other settings, and vice versa. 
 
-In order to make the image less affected by the change of the environment (e.g., object motion, change of illumination, camera shake, etc.), the shutter speed should be set as faster as possible. The shutter speed of the Sony A7II camera is between 1/80,000 second to 30 seconds. Given suitable aperture and ISO, it is possible to capture images with normal illuminations when we set the shutter speed between 1/100 second and 1 second. The aperture could be set as any value as long as it is in the reasonable range. The aperture of the Sony camera is between F3.5 and F22. Setting the aperture between F3.5 and F15 can allow us to obtain images with normal illumination under the fixed ranges of shutter and ISO. In our capturing process, we fixed the shutter and aperture in a suitable range, and tuned the ISO values according to the given camera. In general, the noise level would be higher when the ISO is higher. We set the ISO values from a low value to a high value with fixed gap to more comprehensively evaluate the denoising methods.
+In order to make the image less affected by the change of environment (e.g., object motion, change of illumination, camera shake, etc.), the shutter speed should be set as faster as possible. For example, the shutter speed of the Sony A7II camera is between 1/80,000 second and 30 seconds. Given suitable aperture and ISO, it is possible to capture images with normal illuminations when we set the shutter speed between 1/100 second and 1 second. The aperture could be set as any value as long as it is in the reasonable range. The aperture of the Sony camera is between F3.5 and F22. Setting the aperture between F3.5 and F15 can allow us to obtain images with normal illumination under the fixed ranges of shutter and ISO. In our capturing process, we fixed the shutter and aperture in a suitable range, and tuned the ISO values according to the given camera. In general, the noise level would be higher when the ISO is higher. We set the ISO values from a low value to a high value with fixed gap to more comprehensively evaluate the denoising methods.
 
 To analyze how ISO, shutter speed, and aperture influence the contents and illumination of the captured images, we perform some heuristic experiments with different camera settings. In Figure \ref{fig6-1}, we show some images captured with different camera settings. Comparing Figures \ref{fig6-1}(a) and \ref{fig6-1}(b) (or \ref{fig6-1}(g) and \ref{fig6-1}(i)), we can find that higher aperture results in darker illumination. Comparing Figures \ref{fig6-1}(b) and \ref{fig6-1}(c) (or \ref{fig6-1}(g) and \ref{fig6-1}(h)), we can find that slower shutter results in brighter illumination. Comparing Figrues \ref{fig6-1}(b), \ref{fig6-1}(d), \ref{fig6-1}(e), \ref{fig6-1}(f), and \ref{fig6-1}(g), we can find that the illumination becomes brighter when the ISO is higher. Besides, given fixed aperture and shutter, the images captured by the camera can avoid the over-exposure or under-exposure when the ISO is set between 400 and 3,200. When ISO=200, the captured images would have the problem of under-exposure, while when ISO=6,400, the captured images would have the problem of over-exposure. However, this can be alleviated by changing the aperture and shutter speed and finally we can obtain images with normal illuminations.
 
@@ -163,58 +163,60 @@ Given fixed shutter speed and aperture, enhancing the camera sensitivity will ge
 \begin{minipage}[t]{0.32\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/200_3-5_1-60.jpg}}
-{\footnotesize 200,3.5,1/60}
+{\footnotesize (a) 200,3.5,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/200_6-7_1-60.jpg}}
-{\footnotesize 200,6.7,1/60}
+{\footnotesize (b) 200,6.7,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/200_6-7_1-8.jpg}}
-{\footnotesize 200,6.7,1/8}
+{\footnotesize (c) 200,6.7,1/8}
 \end{minipage}
 }\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.32\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/400_6-7_1-60.jpg}}
-{\footnotesize 400,6.7,1/60}
+{\footnotesize (d) 400,6.7,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/1600_6-7_1-60.jpg}}
-{\footnotesize 1600,6.7,1/60}
+{\footnotesize (e) 1600,6.7,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/3200_6-7_1-60.jpg}}
-{\footnotesize 3200,6.7,1/60}
+{\footnotesize (f) 3200,6.7,1/60}
 \end{minipage}
 }\vspace{-3mm}
 \subfigure{
 \begin{minipage}[t]{0.32\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/6400_6-7_1-60.jpg}}
-{\footnotesize 6400,6.7,1/60}
+{\footnotesize (g) 6400,6.7,1/60}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/6400_6-7_1-350.jpg}}
-{\footnotesize 6400,6.7,1/350}
+{\footnotesize (h) 6400,6.7,1/350}
 \end{minipage}
 \begin{minipage}[t]{0.32\textwidth}
 \centering
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/6400_16_1-60.jpg}}
-{\footnotesize 6400,16,1/60}
+{\footnotesize (i) 6400,16,1/60}
 \end{minipage}
 }\vspace{-3mm}
     \caption{Captured images with the Sony A7 II camera under different (ISO, Shutter speed, Aperture) settings.}
     \label{fig6-1}
 \end{figure}
 
+\subsection{The Dataset Construction Process}
 
+To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}, we propose to construct a new dataset which could: 1) contain more camera brands; 2) contain more carefully designed camera settings; 3) capture more real-world scenes with realistic objects; 4) capture both the raw data and sRGB data for comparison analysis. The captured images are stored in raw data and JPEG format without compression. For each scene, we capture it for 500 times. Figure \ref{fig6-2} shows how we capture images of a static scens in indoor environment. The camera is fixed by a tripod. The data collection is automatically done with shutter release after the button is pressed by a person. Hence, the misalignment problem can be nearly avoided in the accquisition process of 500 images for one scene. We capture images with different camera settings. The cameras are set based on the following rules. First, the shutter speed should be faster than the blink of the fluorescent lights, otherwise the flickering of the light will make the global luminances of the captured images very different. Second, we set the shutter speed, the aperture, and the ISO value to ensure that the scenes are in a naturally lighting condition. Besides, since the digital single-lens reflex cameras (DSLRs) use mechanical shutter, the shutter speed of each shot is a little different. This small difference results in slightly different brightness of different shots. However, we ignore this small difference in our dataset, as that in \cite{crosschannel2016}.
 \begin{figure}[t!]
     \centering
 \subfigure{
@@ -227,14 +229,9 @@ Given fixed shutter speed and aperture, enhancing the camera sensitivity will ge
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/scenewithperson.jpg}}
 \end{minipage}
 }\vspace{-3mm}
-    \caption{The static scene is captured with cameras fixed by tripod. The capture is automatically done with shutter release after the button is pressed by a person.}
+    \caption{The static scene is captured with a camera fixed by tripod. The data collection is automatically done with shutter release after the button is pressed by a person.}
     \label{fig6-2}
 \end{figure}
-
-\subsection{The Construction Process}
-
-To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}, we propose to construct a new dataset which could: 1) contain more camera brands; 2) contain more carefully designed camera settings; 3) capture more real-world scenes with realistic objects; 4) capture both the raw data and sRGB data for comparison analysis. The captured images are stored in raw data and JPEG format without compression. For each scene, we capture it for 500 times. Figure \ref{fig6-2} shows how we capture images of a static scens in indoor environment. The camera is fixed by a tripod. The capture is automatically done with shutter release after the button is pressed by a person. Hence, the misalignment problem can be nearly avoided in the accquisition process of 500 images for one scene. We capture images with different camera settings. The cameras are set based on the following rules. First, the shutter speed should be faster than the blink of the fluorescent lights, otherwise the flickering of the light will make the global illuminances of the captured images very different. Second, we set the shutter speed, the aperture, and the ISO value to ensure that the scenes are in a naturally lighting condition. Besides, since the digital single-lens reflex cameras (DSLRs) use mechanical shutter, the shutter speed of each shot is a little different. This small difference results in slightly different brightness of different shots. However, we ignore this small difference in our dataset, as that in \cite{crosschannel2016}.
-
 
 \textbf{More Camera Brands}: In our dataset, we use 5 different cameras of three camera brands, including Canon (Mark 5D, 80D, 600D), Nikon (D800), and Sony (A7 II), to capture real-world noisy images. According to a recent survey \cite{commoncamera}, the three camera brands occupy 48 of 50 most commonly used camera-lens combinations. Hence, our dataset is more comprehensive than the previous datasets on camera brands.
 
@@ -302,31 +299,30 @@ To alleviate the limitations of the previous datasets \cite{RENOIR2014,crosschan
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Canon80D_8_8_6400_comproom_mean.JPG}}
 \end{minipage}
 }
-\caption{Some examples in our newly constructed dataset.}
+\caption{Some sample images in our newly constructed dataset.}
 \label{fig6-3}
 \end{figure}
 
-\textbf{More Camera Settings}: In our new dataset, each scene is captured with 6 different ISO values, e.g., 800, 1,600, 3,200, 6,400, 12,800, and 25,600. For each ISO value, we carefully adjust the shutter speed and aperture, and choose the most suitable camera setting. With the increase of ISO, the noise levels in the images will also increase. For example, to make the images captured with ISO=25,600 more natural, we set the shutter speed to 1/320 second and aperture to F10.0. Hence, our dataset is more comprehensive at the noise levels than the previous datasets.
+\textbf{More Camera Settings}: In our new dataset, each scene is captured with 6 different ISO settings, e.g., 800, 1,600, 3,200, 6,400, 12,800, and 25,600. For each ISO setting, we carefully adjust the shutter speed and aperture, and choose other suitable camera settings to make the captured scene not under-exposure nor over-exposure. With the increase of ISO, the luminance of the captured images will also increase, and we need tune the shutter speed and apeture accordingly to capture an image with normal luminance. For example, to make the images captured with ISO=25,600 be normally exposed, we set the shutter speed to 1/320 second and aperture to F10.0.
 
 \textbf{More Captured Scenes}: We capture the images with indoor normal lighting condition, dark lighting condition, and outdoor normal lighting condition. The scenes we captured are also versaltile (including the buildings, classrooms, caffe rooms, and outdoor scenes, etc.). The objects in the scenes include books, pens, bottles, boxes, and joys, etc. In summary, we capture totally 40 different scenes by using 5 different cameras in different camera settings, including 12 scenes captured by Canon 5D Mark II, 5 scenes captured by Canon 80D, 3 scenes captured by Canon 600D, 13 scenes captured by Nikon D800, 7 scenes captured by Sony A7 II. Since the images are of large size ($3000\times3000$), we crop some regions from these images and obtain 100 regions of size $512\times512$.
 
-\textbf{Removing Outlier Images}: The outlier images are those images which have misalignment or different illuminance from the base image (we usually choose the first image of the 500 shots as the base image). In the dataset of \cite{crosschannel2016}, the authors did not remove the images with misalignment or different illuminances. In the DND dataset \cite{dnd2017}, the authors corrected the misalignment of each image. However, this operation largely depends on the misalignment detection method and the correction method, which may make the corrected images less natural. Besides, the DND dataset \cite{dnd2017} takes the image captured with low ISO as ``ground truth'', and linearly transfer the noisy image captured with high ISO to the scale of the ``ground truth'' image. This step, in our opinion, is problematic since the image pixels are not linearly dependent on the ISO values. In our dataset, we browse the captured images and remove the outlier images with clear misalignment or different illuminances. For each scene, three PhD students are employed to do browsing operation successively, and the remaining images are used to compute the ``ground truth'' image.
+\textbf{Removing Outlier Images}: The outlier images are those images which have misalignment or different illuminance from the base image (we usually choose the first image of the 500 shots as the base image). In the dataset of \cite{crosschannel2016}, the authors did not remove the images with misalignment or different luminances. In the DND dataset \cite{dnd2017}, the authors corrected the misalignment of each image. However, this operation largely depends on the misalignment detection method and the correction method, which may make the corrected images less natural. Besides, the DND dataset \cite{dnd2017} takes the image captured with low ISO as ``ground truth'', and linearly transfer the noisy image captured with high ISO to the scale of the ``ground truth'' image. This step, in our opinion, is problematic since the image pixels are not linearly dependent on the ISO values. In our dataset, we browse the captured images and remove the outlier images with clear misalignment or different luminances. For each scene, three volunteers are invited to do the screening successively, and the remaining images are used to compute the ``ground truth'' image.
  
 
 
-\textbf{Generating ``Ground Truth'' Image}: The ``ground truth'' images of the RENOIR dataset \cite{RENOIR2014} are generated when the camera is set with ISO=100, while the other settings are the same as those for the noisy images. The ``ground truth'' images of the dataset \cite{crosschannel2016} are generated by averaging the static images captured on the same scene under the same camera setting. The ``ground truth'' images of the DND dataset \cite{dnd2017} is generated mainly by using low ISO values (e.g., ISO=100), and other post-processing steps include linear intensity changes, spatial misalignment, and low-frequency residual correciton, etc. In our dataset, we employ the method of \cite{crosschannel2016} due to its simplisity. We capture images the same static scenes for many ($500\sim1000$) times and average the captured images to obtain the ``ground truth'' image. 
+\textbf{Generating ``Ground Truth'' Image}: The ``ground truth'' images of the RENOIR dataset \cite{RENOIR2014} are generated when the camera is set with ISO=100, while the other settings are fixed the same as those for the noisy images. The ``ground truth'' images of the dataset \cite{crosschannel2016} are generated by averaging the static images captured on the same scene under the same camera setting. The ``ground truth'' images of the DND dataset \cite{dnd2017} is generated mainly by using low ISO values (e.g., ISO=100), and other post-processing steps include linear intensity changes, spatial misalignment, and low-frequency residual correciton, etc. In our dataset, we employ the same strategy as that method of \cite{crosschannel2016} due to its simplisity. We capture images of the same static scenes for many ($500\sim1000$) times and average the captured images to obtain the ``ground truth'' image. 
 
-We first remove the images with misalignment by careful subjective evaluation. The images with several pixels displacement will be deleted. After this stage, we will then remove the images with inconsistant illuminance. The illuminance is affected by two factors. One is that the captured scenes are influenced by the lighting conditions of the environment. The other is that the camera will automatically make up the illuminance when the scene are in a relatively dark lighting condition. Since we shot the scene for many times, some shots may have different illumination, though captured under the same lighting condition. To remove the images with outlier illuminance, we first sample 10,000 pixels uniformly (the pixels are on the 100 equidistantly sampled rows and 100 equidistantly sampled columns) from each image, and then compute the mean illuminance of the 10,000 pixels. Each of the captured images will have one value representing its mean illuminance. We sort these values in a descending order. The images with the lowest or highest mean illuminances will be referred as outlier images. We remove these images until the lowest and highest mean illuminances are close enough to the ``center'' of the mean illuminances. Here, ``center'' means the middle of the sorted mean illuminances. In this way, the images which are much darker or much brighter than the ``center'' image with the ``center'' illuminance will be deleted, and the remaining images are very close to each other in illuminance. The remaining images will be averaged to obtain the mean image, which will be used as the ``ground truth'' image of each scene.
+We first remove the images with misalignment by careful subjective evaluation. The images with several pixels displacement will be deleted. After this stage, we will remove the images with inconsistant luminance. The luminance is affected by two factors. One is the lighting conditions of the environment. The other is that the camera will automatically make up the illumination when the scene is in a relatively dark lighting condition. Since we shot the scene for many times, some shots may have different illumination, though captured under the same lighting condition. To remove the images with outlier luminance, we first sample 10,000 pixels uniformly (the pixels are on the 100 equidistantly sampled rows and 100 equidistantly sampled columns) from each image, and then compute the mean luminance of the 10,000 pixels. Each of the captured images will have one value representing its mean luminance. We sort these values in a descending order. The images with the lowest or highest mean luminances will be referred as outlier images. We remove these images until the lowest and highest mean luminances are close enough to the ``center'' of the mean luminances. Here, ``center'' means the median of the sorted mean luminances. In this way, the images which are much darker or much brighter than the ``center'' image with the ``center'' luminance will be deleted, and the remaining images are very close to each other in luminance. The remaining images will be averaged to obtain the mean image, which will be used as the ``ground truth'' image of each scene.
 
 
 
 \subsection{Summary of the Dataset}
 
-In our constructed dataset, we captured images from 40 different scenes with different contents and objects. In Figure \ref{fig6-3}, we show some samples of the real-world noisy images we captured in our dataset. For example, we captured the scenes from different types of classrooms, various types of indoor scenes, and versaitile objects under fixed lighting conditions, etc.
+In our constructed dataset, we captured images from 40 different scenes with different contents and objects. Figure \ref{fig6-3} shows some samples of the real-world noisy images in our dataset. The images cover from different types of indoor scenes and versaitile objects, etc.
 
 
-Since the images we captured are very large in size, we crop 100 regions of size $512\times512$ from the 40 scenes to evaluated the existing image denoising methods. Some examples of the cropped regions and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-4}. Besides, one can see that the ``ground truth'' image contains much less noise than the noisy image and has much better visual quality. Hence, this dataset provide us a good platform for evaluating the image denoising methods. The detailed description on cameras and camera settings is listed in Table \ref{tab6-4}. One can see that in our dataset, the ISO values are more comprehensive than the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}. For better evaluation of image denoising methods, we crop 100 regions of size $512\times512$ as our final testing set.
-
+Since the images we captured are very large in size, we crop 100 regions of size $512\times512$ from the 40 scenes to evaluate the existing image denoising methods. Some examples of the cropped regions and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-4}. Besides, one can see that the ``ground truth'' image contains much less noise than the noisy image and has much better visual quality. Hence, this dataset provides us a good platform for evaluating the image denoising methods. The detailed description on cameras and camera settings is listed in Table \ref{tab6-4}. One can see that in our dataset, the ISO values are more comprehensive than the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}. 
 \begin{figure}%[ht!]
 \centering
 \subfigure{
@@ -419,7 +415,7 @@ Since the images we captured are very large in size, we crop 100 regions of size
 \raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/dataset/Sony_4-5_125_3200_plant_10_real.JPG}}
 \end{minipage}
 }
-    \caption{Some cropped parts of the ``ground truth'' images (left) and their corresponding realistic images (right) in our newly constructed dataset.}
+    \caption{Some cropped regions of the ``ground truth'' images (left) and their corresponding noisy images (right) in our constructed dataset.}
     \label{fig6-4}
 \end{figure}
 
@@ -433,11 +429,11 @@ Since the images we captured are very large in size, we crop 100 regions of size
 \hline
 Camera
 &
-\# Scene
+\# of Scenes
 &
 Sensor size (mm)
 &
-\# Image
+\# of Cropped regions
 &
 ISO
 \\
