@@ -905,8 +905,6 @@
 \backcite {bliinds}{{124}{6.1}{section.6.1}}
 \backcite {tid2008}{{124}{6.1}{section.6.1}}
 \backcite {LIVEIQA}{{124}{6.1}{section.6.1}}
-\backcite {tid2008}{{124}{6.1}{section.6.1}}
-\backcite {LIVEIQA}{{124}{6.1}{section.6.1}}
 \backcite {crosschannel2016}{{124}{6.1}{section.6.1}}
 \backcite {RENOIR2014}{{125}{6.1}{section.6.1}}
 \backcite {dnd2017}{{125}{6.1}{section.6.1}}
@@ -933,8 +931,8 @@
 \backcite {dnd2017}{{127}{6.2}{table.caption.103}}
 \backcite {dnd2017}{{127}{6.2}{table.caption.103}}
 \backcite {dnd2017}{{127}{6.2}{table.caption.103}}
+\backcite {dnd2017}{{127}{6.2}{table.caption.103}}
 \backcite {dnd2017}{{128}{6.3}{table.caption.104}}
-\backcite {dnd2017}{{128}{6.2}{table.caption.103}}
 \backcite {bm3d}{{128}{6.2}{table.caption.103}}
 \backcite {RENOIR2014}{{128}{6.3.1}{subsection.6.3.1}}
 \backcite {crosschannel2016}{{128}{6.3.1}{subsection.6.3.1}}
@@ -948,9 +946,9 @@
 \backcite {RENOIR2014}{{129}{6.3.1}{subsection.6.3.1}}
 \backcite {crosschannel2016}{{129}{6.3.1}{subsection.6.3.1}}
 \backcite {dnd2017}{{129}{6.3.1}{subsection.6.3.1}}
-\backcite {RENOIR2014}{{131}{6.3.2}{subsection.6.3.2}}
-\backcite {crosschannel2016}{{131}{6.3.2}{subsection.6.3.2}}
-\backcite {dnd2017}{{131}{6.3.2}{subsection.6.3.2}}
+\backcite {RENOIR2014}{{132}{6.3.2}{subsection.6.3.2}}
+\backcite {crosschannel2016}{{132}{6.3.2}{subsection.6.3.2}}
+\backcite {dnd2017}{{132}{6.3.2}{subsection.6.3.2}}
 \backcite {crosschannel2016}{{132}{6.3.2}{subsection.6.3.2}}
 \backcite {commoncamera}{{132}{6.3.2}{subsection.6.3.2}}
 \backcite {crosschannel2016}{{134}{6.3.2}{figure.caption.107}}

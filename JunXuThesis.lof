@@ -75,7 +75,7 @@
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Denoised images and PSNR (dB) results of the real noisy image \textsl {Nikon D800 ISO 6400 1} \cite {crosschannel2016} by different methods.\ The images are better to be zoomed in on screen.\relax }}{122}{figure.caption.101}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Captured images with the Sony A7 II camera under different (ISO, Shutter speed, Aperture) settings.\relax }}{131}{figure.caption.105}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces The static scene is captured with cameras fixed by tripod. The capture is automatically done with shutter release after the button is pressed by a person.\relax }}{132}{figure.caption.106}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The static scene is captured with cameras fixed by tripod. The capture is automatically done with shutter release after the button is pressed by a person.\relax }}{131}{figure.caption.106}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Some examples in our newly constructed dataset.\relax }}{133}{figure.caption.107}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Some cropped parts of the ``ground truth'' images (left) and their corresponding realistic images (right) in our newly constructed dataset.\relax }}{137}{figure.caption.108}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Denoised images and PSNR (dB)/SSIM results of the real-world noisy image \textsl {Canon 5D Mark 3 ISO 3200 1} \cite {crosschannel2016} by different methods.\ The images are better to be zoomed in on screen.\relax }}{140}{figure.caption.110}
