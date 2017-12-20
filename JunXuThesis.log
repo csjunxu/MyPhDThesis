@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  20 DEC 2017 12:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  20 DEC 2017 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8040,13 +8040,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 534.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 534.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 534.
 Package rerunfilecheck Info: File `JunXuThesis.brf' has not changed.
-(rerunfilecheck)             Checksum: E347820C4C269C8CA13C8C86D417B935;51241.
+(rerunfilecheck)             Checksum: 04631C1E8130F50090CF736669153755;51241.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 534.
  ) 
 Here is how much of TeX's memory you used:
  15193 strings out of 493091
  339185 string characters out of 6134517
- 404022 words of memory out of 5000000
+ 404991 words of memory out of 5000000
  16898 multiletter control sequences out of 15000+600000
  90750 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -8067,10 +8067,10 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (198 pages, 55470580 bytes).
+Output written on JunXuThesis.pdf (198 pages, 55470248 bytes).
 PDF statistics:
- 4821 PDF objects out of 5155 (max. 8388607)
- 3799 compressed objects within 38 object streams
+ 4820 PDF objects out of 5155 (max. 8388607)
+ 3798 compressed objects within 38 object streams
  822 named destinations out of 1000 (max. 500000)
  3411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
