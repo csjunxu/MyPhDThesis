@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  21 DEC 2017 10:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  3 FEB 2018 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7997,12 +7997,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [164]
-Missing character: There is no Ã in font txr!
-Missing character: There is no ¼ in font txr!
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [165]
+Missing character: There is no Ã in font txr!
+Missing character: There is no ¼ in font txr!
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [166]
@@ -8017,37 +8017,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [169]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [170])
+ [170]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [171]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [172])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 534.
 
-[171]
+[173]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 534.
  (./JunXuThesis.aux (./acknowledgement.aux) (./chapter1.aux)
 (./chapter2.aux) (./chapter3.aux) (./chapter4.aux) (./chapter5.aux)
 (./chapter6.aux) (./chapter7.aux) (./chapter8.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 534.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 534.
-
-
-Package rerunfilecheck Warning: File `JunXuThesis.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `JunXuThesis.brf':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  4C768FF27B47252A17FD6B143AD40722;48242.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `JunXuThesis.brf' has not changed.
+(rerunfilecheck)             Checksum: 4C768FF27B47252A17FD6B143AD40722;48242.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 534.
  ) 
 Here is how much of TeX's memory you used:
- 15189 strings out of 493091
- 339153 string characters out of 6134517
- 386448 words of memory out of 5000000
+ 15191 strings out of 493091
+ 339169 string characters out of 6134517
+ 403689 words of memory out of 5000000
  16898 multiletter control sequences out of 15000+600000
  90750 words of font info for 207 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,20n,38p,1947b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,20n,38p,1947b,861s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Software/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Software
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/Sof
 tware/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c
@@ -8064,10 +8061,10 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (194 pages, 55439957 bytes).
+Output written on JunXuThesis.pdf (196 pages, 55463403 bytes).
 PDF statistics:
- 4072 PDF objects out of 4296 (max. 8388607)
- 3058 compressed objects within 31 object streams
- 818 named destinations out of 1000 (max. 500000)
+ 4726 PDF objects out of 5155 (max. 8388607)
+ 3703 compressed objects within 38 object streams
+ 820 named destinations out of 1000 (max. 500000)
  3411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
