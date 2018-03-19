@@ -62,7 +62,7 @@ Xiaomi Mi3 & $4.69\times3.52$ & 40 & 100  & Auto  & 1.6k, 3.2k & Auto
 \end{center}
 \end{table}
 
-The second work along this direction is reported in \cite{crosschannel2016}, which involves 11 static scenes. The real-world noisy images and the corresponding ``ground truth'' images are collected. For each scene, 500 JPEG images are captured and the mean image of the 500 images is roughly taken as the ``ground truth'' image. Utilizing the mean of temporal images as ``ground truth'' image has also been employed in \cite{Liu2008,liupractical}, but the authors did not build a benchmark dataset. In the dataset of \cite{crosschannel2016}, the images are mostly with resolution of $7630\times4912$ and captured by Nikon D800 (ISO=1,600, 3,200, and 6,400), Nikon D600 (ISO=3,200), and Canon 5D Mark III (ISO=3,200). There are totally 15 cropped regions of size $512\times512$ provided for evaluating different denoising methods. The major problems of this dataset is that the captured images are almost printed scenes, which share similar nosie statistical property. The camera settings such as the ISO values are also somewhat limited. The detailed description of this dataset is listed in Table \ref{tab6-2}. 
+The second work along this direction is reported in \cite{crosschannel2016}, which involves 11 static scenes. The real-world noisy images and the corresponding ``ground truth'' images are collected. For each scene, 500 JPEG images are captured and the mean image of the 500 images is roughly taken as the ``ground truth'' image. Utilizing the mean of temporal images as ``ground truth'' image has also been employed in \cite{Liu2008,liupractical}, but the authors did not build a benchmark dataset. In the dataset of \cite{crosschannel2016}, the images are mostly with resolution of $7630\times4912$ and captured by Nikon D800 (ISO=1,600, 3,200, and 6,400), Nikon D600 (ISO=3,200), and Canon 5D Mark III (ISO=3,200). There are totally 15 cropped regions of size $512\times512$ provided for evaluating different denoising methods. The major problems of this dataset is that the captured images are almost printed scenes, which share similar noise statistical property. The camera settings such as the ISO values are also somewhat limited. The detailed description of this dataset is listed in Table \ref{tab6-2}. 
 
 \begin{table}[t!]
 \caption{The detailed information of the cropped regions from the dataset \cite{crosschannel2016}.}
@@ -574,7 +574,7 @@ With the proposed dataset, we make a comprehensive evaluation on the state-of-th
 
 
 \begin{table}[t!]
-\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf{Dataset 1} \cite{crosschannel2016}.}
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf{Dataset 1} \cite{crosschannel2016}. The methods proposed in this thesis is highlighted in bold.}
 \footnotesize
 \label{tab6-6}
 \begin{center}
@@ -583,19 +583,19 @@ With the proposed dataset, we make a comprehensive evaluation on the state-of-th
 \hline
 Metric
 &
-\textbf{CBM3D}
+{CBM3D}
 &
-\textbf{EPLL}
+{EPLL}
 &
-\textbf{NCSR}
+{NCSR}
 &
-\textbf{WNNM}
+{WNNM}
 &
-\textbf{MLP}
+{MLP}
 &
-\textbf{CSF}
+{CSF}
 &
-\textbf{TNRD}
+{TNRD}
 \\
 \hline
 PSNR & 35.19  & 33.66 & 33.46 &  35.77 &  36.46 & 35.33 & 36.61  
@@ -606,11 +606,11 @@ SSIM & 0.8580 & 0.8591  & 0.8512 & 0.9381 &  0.9436  & 0.9250 & 0.9463
 \hline
 Metric
 &
-\textbf{DnCNN}
+{DnCNN}
 &
-\textbf{NC}
+{NC}
 &
-\textbf{NI}
+{NI}
 &
 \textbf{PGPD}
 &
@@ -633,7 +633,7 @@ SSIM & 0.8635  &  0.9364 & 0.9126  & 0.8591  & 0.9504 &  0.9542 & \textbf{0.9586
 
 
 \begin{table}[t!]
-\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1,000 cropped images in \textbf{Dataset 2} \cite{dnd2017}.}
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1,000 cropped images in \textbf{Dataset 2} \cite{dnd2017}. The methods proposed in this thesis is highlighted in bold.}
 \footnotesize
 \label{tab6-7}
 \begin{center}
@@ -642,19 +642,19 @@ SSIM & 0.8635  &  0.9364 & 0.9126  & 0.8591  & 0.9504 &  0.9542 & \textbf{0.9586
 \hline
 Metric
 &
-\textbf{CBM3D}
+{CBM3D}
 &
-\textbf{EPLL}
+{EPLL}
 &
-\textbf{NCSR}
+{NCSR}
 &
-\textbf{WNNM}
+{WNNM}
 &
-\textbf{MLP}
+{MLP}
 &
-\textbf{CSF}
+{CSF}
 &
-\textbf{TNRD}
+{TNRD}
 \\
 \hline
 PSNR & 32.14 &  32.65 & 32.81 & 33.28  & 34.02  & 33.87  & 34.15
@@ -666,11 +666,11 @@ SSIM & 0.7773 & 0.7889  & 0.7912  & 0.8012  &  0.8201 & 0.8128  & 0.8271
 Metric
 
 &
-\textbf{DnCNN}
+{DnCNN}
 &
-\textbf{NC}
+{NC}
 &
-\textbf{NI}
+{NI}
 &
 \textbf{PGPD}
 &
@@ -789,7 +789,7 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 The PSNR and SSIM \cite{ssim} results on 100 images of the cropped regions are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for AWGN are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior to the methods designed for real-world nosiy images. The proposed TWSC, MCWNNM, and Guided methods work much better than previous methods. Some visual comparisons are given in Figure \ref{fig6-7}, from which one can see that the TWSC method removes most of the noise while maintaining the details. The realistic noise is not AWGN, and this point can be valid in our new dataset. In Figure \ref{fig6-8}, we compute the mean noise levels ($\sigma$) with respect to different ISO values (left) and Red, Green, and Blue channels (right) on our real-world noisy image dataset. One can see that, with the increasing of the ISO values, the noise levels will be increased. This trend is also true for each channel of the color images. One possible correlation is that the noise level in Green channel would be lower than the other two channels, i.e., $\sigma_{b},\sigma_{r}\ge\sigma_{g}$.
 
 \begin{table}[t!]
-\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}).}
+\caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}). The methods proposed in this thesis is highlighted in bold.}
 \footnotesize
 \label{tab6-8}
 \begin{center}
@@ -798,19 +798,19 @@ The PSNR and SSIM \cite{ssim} results on 100 images of the cropped regions are l
 \hline
 Metric
 &
-\textbf{CBM3D}
+{CBM3D}
 &
-\textbf{EPLL}
+{EPLL}
 &
-\textbf{NCSR}
+{NCSR}
 &
-\textbf{WNNM}
+{WNNM}
 &
-\textbf{MLP}
+{MLP}
 &
-\textbf{CSF}
+{CSF}
 &
-\textbf{TNRD}
+{TNRD}
 \\
 \hline
 PSNR & 37.40 & 36.17 & 36.40 & 36.59 & 38.07 & 37.71 & 38.17 
@@ -821,11 +821,11 @@ SSIM & 0.9526 & 0.9216 & 0.9290 & 0.9247 & 0.9615 & 0.9571 & 0.9640
 \hline
 Metric
 &
-\textbf{DnCNN}
+{DnCNN}
 &
-\textbf{NC}
+{NC}
 &
-\textbf{NI}
+{NI}
 &
 \textbf{PGPD}
 &

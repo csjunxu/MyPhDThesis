@@ -29,8 +29,8 @@
 \contentsline {table}{\numberline {6.2}{\ignorespaces The detailed information of the cropped regions from the dataset \cite {crosschannel2016}.\relax }}{127}{table.caption.106}
 \contentsline {table}{\numberline {6.3}{\ignorespaces Cameras and camera settings used in the dataset \cite {dnd2017}.\relax }}{128}{table.caption.107}
 \contentsline {table}{\numberline {6.4}{\ignorespaces Cameras and camera settings used in our new dataset.\relax }}{136}{table.caption.112}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf {Dataset 1} \cite {crosschannel2016}.\relax }}{141}{table.caption.114}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1,000 cropped images in \textbf {Dataset 2} \cite {dnd2017}.\relax }}{141}{table.caption.115}
-\contentsline {table}{\numberline {6.7}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf {Dataset 3}).\relax }}{143}{table.caption.117}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 15 cropped images in \textbf {Dataset 1} \cite {crosschannel2016}. The methods proposed in this thesis is highlighted in bold.\relax }}{141}{table.caption.114}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 1,000 cropped images in \textbf {Dataset 2} \cite {dnd2017}. The methods proposed in this thesis is highlighted in bold.\relax }}{141}{table.caption.115}
+\contentsline {table}{\numberline {6.7}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf {Dataset 3}). The methods proposed in this thesis is highlighted in bold.\relax }}{143}{table.caption.117}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

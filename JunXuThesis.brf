@@ -47,7 +47,7 @@
 \backcite {RENOIR2014}{{xxii}{(document)}{Doc-Start}}
 \backcite {crosschannel2016}{{xxii}{(document)}{Doc-Start}}
 \backcite {dnd2017}{{xxii}{(document)}{Doc-Start}}
-\backcite {crosschannel2016}{{xxii}{(document)}{Doc-Start}}
+\backcite {crosschannel2016}{{xxiii}{(document)}{Doc-Start}}
 \backcite {dnd2017}{{xxiii}{(document)}{Doc-Start}}
 \backcite {Foipractical}{{2}{1.1}{section.1.1}}
 \backcite {healey1994radiometric}{{2}{1.1}{section.1.1}}
@@ -547,11 +547,11 @@
 \backcite {crosschannel2016}{{66}{3.3.4}{table.caption.48}}
 \backcite {crosschannel2016}{{67}{3.12}{figure.caption.49}}
 \backcite {crosschannel2016}{{67}{3.13}{figure.caption.50}}
-\backcite {crosschannel2016}{{67}{3.3.4}{table.caption.52}}
 \backcite {crosschannel2016}{{68}{3.14}{figure.caption.51}}
 \backcite {crosschannel2016}{{68}{3.4}{table.caption.52}}
 \backcite {ssim}{{68}{3.5}{table.caption.53}}
 \backcite {crosschannel2016}{{68}{3.5}{table.caption.53}}
+\backcite {crosschannel2016}{{68}{3.3.4}{table.caption.52}}
 \backcite {makitalo2013optimal}{{68}{3.3.4}{table.caption.52}}
 \backcite {bm3d}{{68}{3.3.4}{table.caption.52}}
 \backcite {wnnm}{{68}{3.3.4}{table.caption.52}}
