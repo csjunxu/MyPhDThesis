@@ -322,7 +322,8 @@ We first remove the images with misalignment by careful subjective evaluation. T
 In our constructed dataset, we captured images from 40 different scenes with different contents and objects. Figure \ref{fig6-3} shows some samples of the real-world noisy images in our dataset. The images cover from different types of indoor scenes and versaitile objects, etc.
 
 
-Since the images we captured are very large in size, we crop 100 regions of size $512\times512$ from the 40 scenes to evaluate the existing image denoising methods. Some examples of the cropped regions and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-4}. Besides, one can see that the ``ground truth'' image contains much less noise than the noisy image and has much better visual quality. Hence, this dataset provides us a good platform for evaluating the image denoising methods. The detailed description on cameras and camera settings is listed in Table \ref{tab6-4}. One can see that in our dataset, the ISO values are more comprehensive than the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}. 
+Since the images we captured are very large in size, we crop 100 regions of size $512\times512$ from the 40 scenes to evaluate the existing image denoising methods. Some examples of the cropped regions and their corresponding ``ground truth'' images are listed in Figure \ref{fig6-4}. Besides, one can see that the ``ground truth'' image contains much less noise than the noisy image and has much better visual quality. Hence, this dataset provides us a good platform for evaluating the image denoising methods. The detailed description on cameras and camera settings is listed in Table \ref{tab6-4}. One can see that in our dataset, the ISO values are more comprehensive than the previous datasets \cite{RENOIR2014,crosschannel2016,dnd2017}.
+ 
 \begin{figure}%[ht!]
 \centering
 \subfigure{
@@ -785,7 +786,7 @@ SSIM & 0.7897 & 0.9013 & 0.8778 & 0.8002 & 0.9101 & 0.9294 &  \textbf{0.9403}
 \textbf{Results on Dataset 2}. In Table \ref{tab6-7}, we list the average PSNR and SSIM results of the competing methods on the 1,000 cropped images in the DND dataset \cite{dnd2017}.\ We can see that on this dataset the TWSC, MCWNNM, and Guided methods achieve much better performance than the other competing methods.\ Note that the ``ground truth'' images of this dataset have not been released, but one can submit the denoised images to the project website and get the PSNR and SSIM results.\ Figure\ \ref{fig6-6} shows the denoised images of a scene captured by a Nexus 6P camera.\ One can see that the TWSC, MCWNNM, and Guided methods result in better visual quality than the other denoising methods.
 
 \textbf{Results on Dataset 3}.
-The PSNR and SSIM \cite{ssim} results on 100 images of the cropped regions are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for AWGN are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior to the methods designed for real-world nosiy images. The proposed TWSC, MCWNNM, and Guided methods work much better than previous methods. Some visual comparisons are given in Figure \ref{fig6-7}, from which one can see that the TWSC method removes most of the noise while maintaining the details. 
+The PSNR and SSIM \cite{ssim} results on 100 images of the cropped regions are listed in Table \ref{tab6-8}. We can see that the traditional methods proposed for AWGN are no longer effective enough for the real-world noisy images. The discriminative methods achieve slightly better performance than the traditional methods, while still being inferior to the methods designed for real-world nosiy images. The proposed TWSC, MCWNNM, and Guided methods work much better than previous methods. Some visual comparisons are given in Figure \ref{fig6-7}, from which one can see that the TWSC method removes most of the noise while maintaining the details. The realistic noise is not AWGN, and this point can be valid in our new dataset. In Figure \ref{fig6-8}, we compute the mean noise levels ($\sigma$) with respect to different ISO values (left) and Red, Green, and Blue channels (right) on our real-world noisy image dataset. One can see that, with the increasing of the ISO values, the noise levels will be increased. This trend is also true for each channel of the color images. One possible correlation is that the noise level in Green channel would be lower than the other two channels, i.e., $\sigma_{b},\sigma_{r}\ge\sigma_{g}$.
 
 \begin{table}[t!]
 \caption{Average results on PSNR(dB) and SSIM of different denoising algorithms on the 100 cropped images in our new dataset (\textbf{Dataset 3}).}
@@ -938,6 +939,23 @@ SSIM & 0.9161 & 0.9449  & 0.9570  & 0.9206 & 0.9669 & 0.9671 & \textbf{0.9685}
 }\vspace{-3mm}
 \caption{Denoised images and PSNR (dB)/SSIM results of the real-world noisy image \textsl{Canon5D\_2.5\_160\_6400\_circuit\_3} in our new dataset by different methods.\ The images are better to be zoomed in on screen.}
     \label{fig6-7}
+\end{figure}
+
+\begin{figure}%[ht!]
+\vspace{-6mm}
+    \centering
+\subfigure{
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{response/noise_ISO.png}}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{response/noise_ISO_Channel.png}}
+\end{minipage}
+}\vspace{-1mm}
+\caption{The mean noise levels ($\sigma$) with respect to different ISO values (left) and Red, Green, and Blue channels (right) on our real-world noisy image dataset.}
+\label{fig6-8}
 \end{figure}
 
 

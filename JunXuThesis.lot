@@ -20,7 +20,7 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces PSNR(dB) results of different denoising methods on the Kodak PhotoCD dataset.\relax }}{87}{table.caption.66}
 \contentsline {table}{\numberline {4.2}{\ignorespaces PSNR(dB) results of different denoising methods on the Kodak PhotoCD dataset.\relax }}{88}{table.caption.67}
 \contentsline {table}{\numberline {4.3}{\ignorespaces PSNR(dB) results of different denoising methods on the Kodak PhotoCD dataset.\relax }}{89}{table.caption.68}
-\contentsline {table}{\numberline {4.4}{\ignorespaces PSNR(dB) results and averaged computational time (s) of different methods on 15 cropped real-world noisy images used in \cite {crosschannel2016}.\relax }}{96}{table.caption.80}
+\contentsline {table}{\numberline {4.4}{\ignorespaces PSNR(dB) results and averaged computational time (s) of different methods on 15 cropped real-world noisy images used in \cite {crosschannel2016}.\relax }}{95}{table.caption.80}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising algorithms on 20 gray level images corrupted by AWGN noise.\relax }}{113}{table.caption.89}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Average results on PSNR(dB) and SSIM of different denoising methods on 15 cropped real noisy images used in \cite {crosschannel2016}.\relax }}{117}{table.caption.95}

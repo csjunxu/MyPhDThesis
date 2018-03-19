@@ -47,16 +47,16 @@
 \contentsline {section}{\numberline {3.4}Conclusion}{69}{section.3.4}
 \contentsline {chapter}{\numberline {4}Multi-channel Weighted Nuclear Norm Minimization for Real-world Image Denoising}{73}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{73}{section.4.1}
-\contentsline {section}{\numberline {4.2}The Proposed Color Image Denoising Algorithm}{77}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}The Multi-channel Weighted Nuclear Norm Minimization Model}{77}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}The Setting of Weight Matrix $\mathbf {W}$}{79}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Model Optimization}{80}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.2}The Proposed Color Image Denoising Algorithm}{76}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}The Multi-channel Weighted Nuclear Norm Minimization Model}{76}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}The Setting of Weight Matrix $\mathbf {W}$}{78}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Model Optimization}{79}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}The Denoising Algorithm}{83}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Complexity Analysis}{84}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Experiments}{85}{section.4.3}
+\contentsline {subsection}{\numberline {4.2.5}Complexity Analysis}{83}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Experiments}{84}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Experimental Settings}{85}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Experiments on Synthetic Noisy Color Images}{86}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Experiments on Real-world Noisy Images}{88}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.3}Experiments on Real-world Noisy Images}{86}{subsection.4.3.3}
 \contentsline {section}{\numberline {4.4}Conclusion}{98}{section.4.4}
 \contentsline {chapter}{\numberline {5}A Trilateral Weighted Sparse Coding Scheme for Real-world Image Denoising}{100}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{100}{section.5.1}
@@ -84,7 +84,7 @@
 \contentsline {subsection}{\numberline {6.4.1}Benchmark Datasets}{138}{subsection.6.4.1}
 \contentsline {subsection}{\numberline {6.4.2}Comparison Methods}{138}{subsection.6.4.2}
 \contentsline {subsection}{\numberline {6.4.3}Results and Discussion}{141}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}Conclusion}{145}{section.6.5}
+\contentsline {section}{\numberline {6.5}Conclusion}{146}{section.6.5}
 \contentsline {chapter}{\numberline {7}Conclusions and Future Work}{147}{chapter.7}
 \contentsline {section}{\numberline {7.1}Conclusions}{147}{section.7.1}
 \contentsline {section}{\numberline {7.2}Future Work}{149}{section.7.2}
