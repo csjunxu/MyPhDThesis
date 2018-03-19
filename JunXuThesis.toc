@@ -24,18 +24,19 @@
 \contentsline {subsection}{\numberline {2.3.2}Denoising Algorithm}{26}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Experiments}{28}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Implementation Details}{28}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Comparison with Patch Prior based Denoising}{29}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Comparison With the State-of-the-art Methods}{31}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Results and Discussions}{32}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}Additional Results on the Berkeley Segmentation Data Set}{34}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.2}Comparison With Patch Prior based Denoising}{29}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Comparison With Gaussian Prior based Denoising}{31}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Comparison With the State-of-the-art Methods}{32}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Results and Discussions}{32}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Additional Results on the Berkeley Segmentation Data Set}{34}{subsection.2.4.6}
 \contentsline {section}{\numberline {2.5}Conclusion}{35}{section.2.5}
 \contentsline {chapter}{\numberline {3}External Prior Guided Internal Prior Learning for Real-world Image Denoising}{42}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduction}{42}{section.3.1}
 \contentsline {section}{\numberline {3.2}External Prior Guided Internal Prior Learning for Image Denoising}{47}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Learn External Patch Group Priors}{47}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Guided Internal Prior Learning}{49}{subsection.3.2.2}
-\contentsline {subsubsection}{Internal Subspace Clustering}{49}{subsubsection*.30}
-\contentsline {subsubsection}{Guided Orthogonal Dictionary Learning}{50}{subsubsection*.31}
+\contentsline {subsubsection}{Internal Subspace Clustering}{49}{subsubsection*.31}
+\contentsline {subsubsection}{Guided Orthogonal Dictionary Learning}{50}{subsubsection*.32}
 \contentsline {subsection}{\numberline {3.2.3}The Denoising Algorithm}{53}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Experiments}{54}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Implementation Details}{54}{subsection.3.3.1}
