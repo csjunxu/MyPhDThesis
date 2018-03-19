@@ -992,9 +992,6 @@ Settings
 \end{adjustwidth}
 \end{table}
 
-
-In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 15 cropped real-world noisy images used in \cite{crosschannel2016}.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR and SSIM \cite{ssim} can be computed.\  The average SSIM results of GAT-BM3D \cite{makitalo2013optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{tnrd}, DnCNN \cite{dncnn}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, CC \cite{crosschannel2016}, and the proposed method are listed in Table \ref{tab3-1}. As can be seen from Figures \ref{fig3-3}-\ref{fig3-5}, our proposed method achieves better performance than the the competing methods.
-
 \begin{table}[t!]
 \begin{adjustwidth}{-.6cm}{}
 \caption{SSIM \cite{ssim} results of different methods on 15 cropped real-world noisy images used in \cite{crosschannel2016}.}
@@ -1100,13 +1097,13 @@ As described in section 3.4.2, there is a mean image for each of the 11 scenes u
 
 Figure \ref{fig3-12} shows the denoised images of one scene captured by Canon 5D Mark 3 at ISO = 3200. We can see that GAT-BM3D, CBM3D, WNNM, DnCNN, NC, NI and CC would either remain noise or generate artifacts, while TNRD over-smooths much the image. By using the external prior guided internal priors, our proposed method preserves edges and textures better than other methods, leading to visually pleasant outputs. More comparisons on visual quality and SSIM \cite{ssim} index can be found in the Figures \ref{fig3-13} and \ref{fig3-14}.
 
-We then perform denoising experiments on the 60 images we cropped from \cite{crosschannel2016}. The average PSNR results are listed in Table III (CC is not compared since the code is not available). Again, our proposed method achieves much better PSNR results than the other methods. The improvements of our method over the second best method (TNRD) are 0.43dB on PSNR. Figure \ref{fig3-15} shows the denoised images of one scene captured by Nikon D800 at ISO = 3200. We can see again that the proposed method obtain better visual quality than other competing methods. More comparisons on visual quality and SSIM can be found in the Figures \ref{fig3-16} and \ref{fig3-17}.
+We then perform denoising experiments on the 60 images we cropped from \cite{crosschannel2016}. The average PSNR and SSIM results are listed in Tables \ref{tab3-4} and \ref{tab3-5} (CC is not compared since the code is not available). Again, our proposed method achieves much better PSNR results than the other methods. The improvements of our method over the second best method (TNRD) are 0.43dB on PSNR. Figure \ref{fig3-15} shows the denoised images of one scene captured by Nikon D800 at ISO = 3200. We can see again that the proposed method obtain better visual quality than other competing methods. More comparisons on visual quality and SSIM can be found in the Figures \ref{fig3-16} and \ref{fig3-17}.
 
 \textbf{Results on dataset 3.}
-Similar to dataset 2 \cite{crosschannel2016}, there is a ``ground truth'' image for each of the 10 scenes used in our constructed dataset 3. We perform quantitative comparison on the 100 cropped images. The average PSNR results of competing methods are listed in Table IV. We can see that our proposed method achieves much better PSNR results than the other methods. The improvements of our method over the second best method (TNRD) is 0.16dB on PSNR. Figure \ref{fig3-18} shows the denoised images of one scene captured by Canon 80D at ISO = 12800. We can see again that the proposed method removes the noise while maintains better details (such as the vertical black shadow area) than other competing methods. More comparisons on visual quality and SSIM can be found in the Figures \ref{fig3-19} and \ref{fig3-20}.
+Similar to dataset 2 \cite{crosschannel2016}, there is a ``ground truth'' image for each of the 10 scenes used in our constructed dataset 3. We perform quantitative comparison on the 100 cropped images. The average PSNR and SSIM results of competing methods are listed in Tables \ref{tab3-6} and \ref{tab3-7}. We can see that our proposed method achieves much better PSNR results than the other methods. The improvements of our method over the second best method (TNRD) is 0.16dB on PSNR. Figure \ref{fig3-18} shows the denoised images of one scene captured by Canon 80D at ISO = 12800. We can see again that the proposed method removes the noise while maintains better details (such as the vertical black shadow area) than other competing methods. More comparisons on visual quality and SSIM can be found in the Figures \ref{fig3-19} and \ref{fig3-20}.
 
 \textbf{Comparison on speed.}
-Efficiency is an important aspect to evaluate the efficiency of algorithms. We compare the speed of all competing methods except for CC. All experiments are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-5930K CPU of 3.5GHz and 32GB RAM. The average running time (second) of the compared methods on the 100 real-world noisy images is shown in Table \ref{tab3-5}. The least average running time are highlighted in bold. One can easily see that the commercial software Neat Image (NI) is the fastest method with highly optimized code. For a $512\times512$ image, NI costs about 0.6 second. The other methods cost from 5.2 (TNRD) to 152.2 (WNNM) seconds, while the proposed method costs about 24.1 seconds. It should be noted that GAT-BM3D, CBM3D, TNRD, and NC are implemented with compiled C++ mex-function and with parallelization, while WNNM, MLP, CSF, DnCNN, and the proposed method are implemented purely in Matlab. 
+Efficiency is an important aspect to evaluate the efficiency of algorithms. We compare the speed of all competing methods except for CC. All experiments are run under the Matlab2014b environment on a machine with Intel(R) Core(TM) i7-5930K CPU of 3.5GHz and 32GB RAM. The average running time (second) of the compared methods on the 100 real-world noisy images is shown in Table \ref{tab3-8}. The least average running time are highlighted in bold. One can easily see that the commercial software Neat Image (NI) is the fastest method with highly optimized code. For a $512\times512$ image, NI costs about 0.6 second. The other methods cost from 5.2 (TNRD) to 152.2 (WNNM) seconds, while the proposed method costs about 24.1 seconds. It should be noted that GAT-BM3D, CBM3D, TNRD, and NC are implemented with compiled C++ mex-function and with parallelization, while WNNM, MLP, CSF, DnCNN, and the proposed method are implemented purely in Matlab. 
 
 \begin{figure}[t!]
     \centering
@@ -1321,8 +1318,6 @@ PSNR
 \end{adjustwidth}
 \end{table}
 
-In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 60 real-world noisy images cropped from \cite{crosschannel2016}.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR and SSIM can be computed.\ The average SSIM results of GAT-BM3D \cite{makitalo2013optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{tnrd}, DnCNN \cite{dncnn}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, and the proposed method are listed in Table \ref{tab3-4} (CC is not compared since the code of \cite{crosschannel2016} is not available).\ As can be seen from Figures \ref{fig3-6}-\ref{fig3-7}, our proposed method achieves better performance than the competing methods.
-
 \begin{table}[t!]
 \begin{adjustwidth}{-.2cm}{}
 \scriptsize
@@ -1389,7 +1384,6 @@ PSNR
 \end{adjustwidth}\vspace{-4mm}
 \end{table}
 
-In this section, we provide more comparisons of the proposed method with the state-of-the-art denoising methods on the 100 real-world noisy images cropped from the new dataset we constructed.\ In this dataset, each scene was shot 500 times under the same camera and camera setting.\ The mean image of the 500 shots is roughly taken as the ``ground truth'', with which the PSNR and SSIM can be computed.\ The average  SSIM results of GAT-BM3D \cite{makitalo2013optimal}, CBM3D \cite{bm3d}, WNNM \cite{wnnm}, MLP \cite{mlp}, CSF \cite{csf}, TNRD \cite{tnrd}, DnCNN \cite{dncnn}, NI \cite{neatimage}, NC \cite{noiseclinic,ncwebsite}, and the proposed method are listed in Table \ref{tab3-7} (CC is not compared since the code of \cite{crosschannel2016} is not available).\ As can be seen from Figure \ref{fig3-12}, our proposed method achieves better performance than the competing methods.
 
 
 \begin{table}[t!]
@@ -1762,6 +1756,7 @@ Time
 \end{figure}
 
 \begin{figure}[t!]
+\vspace{-3mm}
     \centering
 \subfigure{
 \begin{minipage}[t]{0.19\textwidth}
