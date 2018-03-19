@@ -523,7 +523,8 @@ Zelda&35.50&35.51    &32.21&32.21  & 30.35 &30.43   &29.07 &29.23   & 28.06& 28.
 
 \subsection{Comparison With Gaussian Prior based Denoising}
 
-The proposed PGPD method is formulated with Laplacian prior in (\ref{equ2-14}), in order to validate the effectiveness of the Laplacian prior, we propose to compare PGPD with Gaussian prior, which can be formulated as a least square regression model with closed form solution. The results are listed in Table \ref{tab2-2}, from which we can see that the proposed PGPD method achieves higher PSNR results when equiped with Laplacian priors. In Figure \ref{}  visual quality comparison 
+The proposed PGPD method is formulated with Laplacian prior in (\ref{equ2-14}), in order to validate the effectiveness of the Laplacian prior, we propose to compare PGPD with Gaussian prior, which can be formulated as a least square regression model with closed form solution. The results are listed in Table \ref{tab2-2}, from which we can see that the proposed PGPD method achieves higher PSNR results when equiped with Laplacian priors. In Figure \ref{fig2-10}, we compare the visual quality of denoised images by PGPD with Laplacian prior and Gaussian prior. One can see that the  PGPD can achieve better visual quality and higher PSNR results with Laplacian prior than Gaussian prior. This demonstrates the effectiveness of the proposed Laplacian prior for PGPD method.
+ 
 \begin{table}[t!]
 \begin{adjustwidth}{-1.0cm}{}
 \scriptsize
@@ -560,35 +561,57 @@ Images
 \end{adjustwidth}
 \end{table}
 
+
 \begin{figure}[ht!]
     \centering
+\footnotesize
 \subfigure{
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/pgpd/pgdpd/br_cameraman.jpg}}
-{\footnotesize Clean}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{response/br_cameraman.png}}
+{Ground Truth}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/pgpd/pgdpd/br_75_cameraman.jpg}}
-{\footnotesize Noisy: 10.60}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{response/br_50_cameraman.png}}
+{Noisy: 14.12dB}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/pgpd/pgdpd/br_GMM65_75_cameraman.jpg}}
-{\footnotesize PPD: 24.36}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{response/br_L_50_cameraman.png}}
+{Laplacian: 26.47dB}
 \end{minipage}
 \begin{minipage}[t]{0.24\textwidth}
 \centering
-\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{images/pgpd/pgdpd/br_our_75_cameraman.jpg}}
-{\footnotesize PGPD: 24.64}
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{response/br_G_50_cameraman.png}}
+{Gaussian: 25.93dB}
 \end{minipage}
 }\vspace{-3mm}
-    \caption{Denoised images and PSNR (dB) results of \textsl{Cameraman} by the PPD method and PGPD method (the standard deviation of noise is $\sigma=75$).}
-    \label{fig2-10}
+\caption{Denoised images and PSNR (dB) results of \textsl{Cameraman} by PGPD with Laplacian prior and Gaussian prior (the standard deviation of noise is $\sigma=50$).}
+   \label{fig2-10}
 \end{figure}
 
 \subsection{Influence of Parameters $c$, $\eta$, and $\delta$}
+The parameters $c$, $\eta$, and $\delta$ are essential for the effectiveness of the proposed PGPD method. Figure \ref{fig2-11} plots the curves of PSNR results w.r.t $c$, $\eta$, and $\delta$ on the 20 widely used images when the noise level is $\sigma=50$. One can see that our proposed method achieves good PSNR performance within a certain range of $c$, $\eta$, and $\delta$ (while fixing the other two parameters).
+\begin{figure}[ht!]
+\footnotesize
+    \centering
+\subfigure{
+\begin{minipage}[t]{0.32\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{response/parameterc.png}}
+\end{minipage}
+\begin{minipage}[t]{0.32\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{response/parametereta.png}}
+\end{minipage}
+\begin{minipage}[t]{0.32\textwidth}
+\centering
+\raisebox{-0.5cm}{\includegraphics[width=1\textwidth]{response/parameterdelta.png}}
+\end{minipage}
+}\vspace{-1mm}
+\caption{PSNR (dB) results of PGPD with respect to the change of parameters $c$, $\eta$, and $\delta$ when $\sigma=50$.}
+\end{figure}
 
 \subsection{Comparison With the State-of-the-art Methods}
 We compare the proposed PGPD algorithm with BM3D \cite{bm3d}, EPLL \cite{epll}, LSSC \cite{lssc}, NCSR \cite{ncsr}, and WNNM \cite{wnnm}, which represent the state-of-the-arts of modern image denoising techniques and all of them exploit image NSS. The source codes of all competing algorithms are downloaded from the authors' websites and we use the default parameter settings.  
