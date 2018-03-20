@@ -88,10 +88,10 @@
 \contentsline {chapter}{\numberline {7}Conclusions and Future Work}{146}{chapter.7}
 \contentsline {section}{\numberline {7.1}Conclusions}{146}{section.7.1}
 \contentsline {section}{\numberline {7.2}Future Work}{148}{section.7.2}
-\contentsline {chapter}{\numberline {8}Appendix}{150}{chapter.8}
-\contentsline {section}{\numberline {8.1}Closed-Form Solution of the Weighted Sparse Coding Problem (\ref {equ2-11})}{150}{section.8.1}
-\contentsline {section}{\numberline {8.2}Proof of the Theorem \ref {th3-1}}{151}{section.8.2}
-\contentsline {section}{\numberline {8.3}Proof of the Theorem \ref {th3-2}}{153}{section.8.3}
-\contentsline {section}{\numberline {8.4}Proof of Theorem \ref {th4-1}}{155}{section.8.4}
-\contentsline {section}{\numberline {8.5}Proofs of Theorem \ref {th5-1} and Theorem \ref {th5-2}}{157}{section.8.5}
+\contentsline {chapter}{\numberline {8}Appendix}{149}{chapter.8}
+\contentsline {section}{\numberline {8.1}Closed-Form Solution of the Weighted Sparse Coding Problem (\ref {equ2-11})}{149}{section.8.1}
+\contentsline {section}{\numberline {8.2}Proof of the Theorem \ref {th3-1}}{150}{section.8.2}
+\contentsline {section}{\numberline {8.3}Proof of the Theorem \ref {th3-2}}{152}{section.8.3}
+\contentsline {section}{\numberline {8.4}Proof of Theorem \ref {th4-1}}{154}{section.8.4}
+\contentsline {section}{\numberline {8.5}Proofs of Theorem \ref {th5-1} and Theorem \ref {th5-2}}{156}{section.8.5}
 \contentsline {chapter}{Bibliography}{}{theorem.8.5.2}
