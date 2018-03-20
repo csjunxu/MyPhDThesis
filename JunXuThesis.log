@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  20 MAR 2018 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  20 MAR 2018 15:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7798,7 +7798,7 @@ g Graphic file (type png)
 <use images/dataset/PolyU/resize_br_Mean_Canon5D2_5_160_6400_circuit_3_real.png
 >
 Package pdftex.def Info: images/dataset/PolyU/resize_br_Mean_Canon5D2_5_160_640
-0_circuit_3_real.png used on input line 873.
+0_circuit_3_real.png used on input line 875.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_Noisy_Canon5D2_5_160_6400_circuit_3_real.png, i
@@ -7809,7 +7809,7 @@ ng Graphic file (type png)
 <use images/dataset/PolyU/resize_br_Noisy_Canon5D2_5_160_6400_circuit_3_real.pn
 g>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_Noisy_Canon5D2_5_160_64
-00_circuit_3_real.png used on input line 873.
+00_circuit_3_real.png used on input line 875.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_CBM3D_Canon5D2_5_160_6400_circuit_3_real.png, i
@@ -7820,7 +7820,7 @@ ng Graphic file (type png)
 <use images/dataset/PolyU/resize_br_CBM3D_Canon5D2_5_160_6400_circuit_3_real.pn
 g>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_CBM3D_Canon5D2_5_160_64
-00_circuit_3_real.png used on input line 873.
+00_circuit_3_real.png used on input line 875.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_EPLL_Canon5D2_5_160_6400_circuit_3_real.png, id
@@ -7831,7 +7831,7 @@ g Graphic file (type png)
 <use images/dataset/PolyU/resize_br_EPLL_Canon5D2_5_160_6400_circuit_3_real.png
 >
 Package pdftex.def Info: images/dataset/PolyU/resize_br_EPLL_Canon5D2_5_160_640
-0_circuit_3_real.png used on input line 873.
+0_circuit_3_real.png used on input line 875.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_NCSR_Canon5D2_5_160_6400_circuit_3_real.png, id
@@ -7842,7 +7842,7 @@ g Graphic file (type png)
 <use images/dataset/PolyU/resize_br_NCSR_Canon5D2_5_160_6400_circuit_3_real.png
 >
 Package pdftex.def Info: images/dataset/PolyU/resize_br_NCSR_Canon5D2_5_160_640
-0_circuit_3_real.png used on input line 895.
+0_circuit_3_real.png used on input line 897.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_WNNM_Canon5D2_5_160_6400_circuit_3_real.png, id
@@ -7853,7 +7853,7 @@ g Graphic file (type png)
 <use images/dataset/PolyU/resize_br_WNNM_Canon5D2_5_160_6400_circuit_3_real.png
 >
 Package pdftex.def Info: images/dataset/PolyU/resize_br_WNNM_Canon5D2_5_160_640
-0_circuit_3_real.png used on input line 895.
+0_circuit_3_real.png used on input line 897.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_MLP_Canon5D2_5_160_6400_circuit_3_real.png, id=
@@ -7863,7 +7863,7 @@ File: images/dataset/PolyU/resize_br_MLP_Canon5D2_5_160_6400_circuit_3_real.png
 
 <use images/dataset/PolyU/resize_br_MLP_Canon5D2_5_160_6400_circuit_3_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_MLP_Canon5D2_5_160_6400
-_circuit_3_real.png used on input line 895.
+_circuit_3_real.png used on input line 897.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_CSF_Canon5D2_5_160_6400_circuit_3_real.png, id=
@@ -7873,7 +7873,7 @@ File: images/dataset/PolyU/resize_br_CSF_Canon5D2_5_160_6400_circuit_3_real.png
 
 <use images/dataset/PolyU/resize_br_CSF_Canon5D2_5_160_6400_circuit_3_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_CSF_Canon5D2_5_160_6400
-_circuit_3_real.png used on input line 895.
+_circuit_3_real.png used on input line 897.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_TRD_Canon5D2_5_160_6400_circuit_3_real.png, id=
@@ -7883,7 +7883,7 @@ File: images/dataset/PolyU/resize_br_TRD_Canon5D2_5_160_6400_circuit_3_real.png
 
 <use images/dataset/PolyU/resize_br_TRD_Canon5D2_5_160_6400_circuit_3_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_TRD_Canon5D2_5_160_6400
-_circuit_3_real.png used on input line 917.
+_circuit_3_real.png used on input line 919.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_DnCNN_Canon5D2_5_160_6400_circuit_3_real.png, i
@@ -7894,7 +7894,7 @@ ng Graphic file (type png)
 <use images/dataset/PolyU/resize_br_DnCNN_Canon5D2_5_160_6400_circuit_3_real.pn
 g>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_DnCNN_Canon5D2_5_160_64
-00_circuit_3_real.png used on input line 917.
+00_circuit_3_real.png used on input line 919.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_NC_Canon5D2_5_160_6400_circuit_3_real.png, id=3
@@ -7904,7 +7904,7 @@ Graphic file (type png)
 
 <use images/dataset/PolyU/resize_br_NC_Canon5D2_5_160_6400_circuit_3_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_NC_Canon5D2_5_160_6400_
-circuit_3_real.png used on input line 917.
+circuit_3_real.png used on input line 919.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_NI_Canon5D2_5_160_6400_circuit_3_real.png, id=3
@@ -7914,7 +7914,7 @@ Graphic file (type png)
 
 <use images/dataset/PolyU/resize_br_NI_Canon5D2_5_160_6400_circuit_3_real.png>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_NI_Canon5D2_5_160_6400_
-circuit_3_real.png used on input line 917.
+circuit_3_real.png used on input line 919.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_PGPD_Canon5D2_5_160_6400_circuit_3_real.png, id
@@ -7925,7 +7925,7 @@ g Graphic file (type png)
 <use images/dataset/PolyU/resize_br_PGPD_Canon5D2_5_160_6400_circuit_3_real.png
 >
 Package pdftex.def Info: images/dataset/PolyU/resize_br_PGPD_Canon5D2_5_160_640
-0_circuit_3_real.png used on input line 939.
+0_circuit_3_real.png used on input line 941.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_Guided_Canon5D2_5_160_6400_circuit_3_real.png, 
@@ -7936,7 +7936,7 @@ png Graphic file (type png)
 <use images/dataset/PolyU/resize_br_Guided_Canon5D2_5_160_6400_circuit_3_real.p
 ng>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_Guided_Canon5D2_5_160_6
-400_circuit_3_real.png used on input line 939.
+400_circuit_3_real.png used on input line 941.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_MCWNNM_Canon5D2_5_160_6400_circuit_3_real.png, 
@@ -7947,7 +7947,7 @@ png Graphic file (type png)
 <use images/dataset/PolyU/resize_br_MCWNNM_Canon5D2_5_160_6400_circuit_3_real.p
 ng>
 Package pdftex.def Info: images/dataset/PolyU/resize_br_MCWNNM_Canon5D2_5_160_6
-400_circuit_3_real.png used on input line 939.
+400_circuit_3_real.png used on input line 941.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
 <images/dataset/PolyU/resize_br_TWSC_Canon5D2_5_160_6400_circuit_3_real.png, id
@@ -7958,10 +7958,10 @@ g Graphic file (type png)
 <use images/dataset/PolyU/resize_br_TWSC_Canon5D2_5_160_6400_circuit_3_real.png
 >
 Package pdftex.def Info: images/dataset/PolyU/resize_br_TWSC_Canon5D2_5_160_640
-0_circuit_3_real.png used on input line 939.
+0_circuit_3_real.png used on input line 941.
 (pdftex.def)             Requested size: 107.54016pt x 107.54039pt.
 
-Underfull \hbox (badness 2134) in paragraph at lines 940--940
+Underfull \hbox (badness 2134) in paragraph at lines 942--942
 []\OT1/txr/bx/n/10.95 Figure 6.7 \OT1/txr/m/n/10.95 De-noised im-ages and PSNR 
 (dB)/SSIM re-sults of the real-world noisy im-age
  []
@@ -7970,27 +7970,24 @@ Underfull \hbox (badness 2134) in paragraph at lines 940--940
 File: response/noise_ISO.png Graphic file (type png)
 
 <use response/noise_ISO.png>
-Package pdftex.def Info: response/noise_ISO.png used on input line 956.
+Package pdftex.def Info: response/noise_ISO.png used on input line 958.
 (pdftex.def)             Requested size: 215.07349pt x 184.30827pt.
 
 <response/noise_ISO_Channel.png, id=3568, 341.8371pt x 292.9344pt>
 File: response/noise_ISO_Channel.png Graphic file (type png)
 
 <use response/noise_ISO_Channel.png>
-Package pdftex.def Info: response/noise_ISO_Channel.png used on input line 956.
+Package pdftex.def Info: response/noise_ISO_Channel.png used on input line 958.
 
 (pdftex.def)             Requested size: 215.07349pt x 184.30827pt.
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 965.
+LaTeX Font Info:    Try loading font information for OMS+txr on input line 967.
 
 
 (c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/omstxr.fd
 File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 965.
-
-Underfull \vbox (badness 1194) has occurred while \output is active []
-
+(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 967.
  [142]
 [143 <./images/dataset/PolyU/resize_br_Mean_Canon5D2_5_160_6400_circuit_3_real.
 png (PNG copy)> <./images/dataset/PolyU/resize_br_Noisy_Canon5D2_5_160_6400_cir
@@ -8186,17 +8183,8 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 538.
 (./chapter5.aux) (./chapter6.aux) (./chapter7.aux) (./chapter8.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 538.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 538.
-
-
-Package rerunfilecheck Warning: File `JunXuThesis.brf' has changed.
-(rerunfilecheck)                Rerun to get bibliographical references right.
-
-Package rerunfilecheck Info: Checksums for `JunXuThesis.brf':
-(rerunfilecheck)             Before: 843CFC8E30D3B0C6FC2155A70FABA462;45761
-(rerunfilecheck)             After:  591D9246E0527E1CCE674F88EAB11803;45761.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `JunXuThesis.brf' has not changed.
+(rerunfilecheck)             Checksum: 591D9246E0527E1CCE674F88EAB11803;45761.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 538.
  ) 
 Here is how much of TeX's memory you used:
@@ -8223,7 +8211,7 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (196 pages, 56046578 bytes).
+Output written on JunXuThesis.pdf (196 pages, 56046675 bytes).
 PDF statistics:
  4666 PDF objects out of 5155 (max. 8388607)
  3635 compressed objects within 37 object streams
