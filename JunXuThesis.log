@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  1 JUN 2018 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  1 JUN 2018 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,6 +1022,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 370--370
 
  []
 
+LaTeX Font Info:    Try loading font information for U+txmia on input line 370.
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 370.
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 370.
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 370.
+
+
+(c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--370
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 370--370
 
@@ -1036,27 +1071,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  (./acknowledgement.tex) [7
 
-] (./JunXuThesis.toc
-LaTeX Font Info:    Try loading font information for U+txmia on input line 1.
-
-(c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/utxmia.fd
-File: utxmia.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 1.
-
-(c:/Software/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 1.
-
-(c:/Software/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 1.
-
-(c:/Software/texlive/2015/texmf-dist/tex/latex/txfonts/utxsyc.fd
-File: utxsyc.fd 2000/12/15 v3.1
-) [8
+] (./JunXuThesis.toc [8
 
 ] [9]
 Underfull \vbox (badness 4454) has occurred while \output is active []
@@ -8244,7 +8259,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 534.
 Here is how much of TeX's memory you used:
  15887 strings out of 493091
  351153 string characters out of 6134517
- 425136 words of memory out of 5000000
+ 425137 words of memory out of 5000000
  17567 multiletter control sequences out of 15000+600000
  92126 words of font info for 209 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -8265,7 +8280,7 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (196 pages, 56046653 bytes).
+Output written on JunXuThesis.pdf (196 pages, 56047029 bytes).
 PDF statistics:
  4671 PDF objects out of 5155 (max. 8388607)
  3636 compressed objects within 37 object streams
