@@ -171,7 +171,7 @@
 \setlength{\evensidemargin}{0.15in} % 1.25"  margin on the right for even pages0.15in
 
 % Marginal notes
-\setlength{\marginparwidth}{.75in} % width of marginal notes
+\setlength{\marginparwidth}{.5in} % width of marginal notes
 \setlength{\marginparsep}{.125in} % space between marginal notes and text
 
 % Make each page fill up the entire page. comment this out if you
@@ -270,7 +270,6 @@
 \newcommand{\gyear}{\number\year}
 \newcommand{\makecoauthor}{
 %Type information about coauthorship here/
-
 }
 \newcommand{\makeacknowlege} {
 %Type in acknowlegements here
@@ -281,6 +280,7 @@
 \addcontentsline{app}{myappendices}{#1}\par}
 
 \renewcommand{\contentsname}{Table of contents}
+
 
 \renewcommand{\maketitle}
 {\begin{titlepage}
@@ -351,6 +351,8 @@ I hereby declare that this thesis is my own work and that, to the best of my kno
 
 \makeatother
 \begin{document}
+
+\includepdf[pages=1-7]{subject}
 
 %% ***   NOTE   ***
 %% You should put all of your '\newcommand', '\newenvironment', and
