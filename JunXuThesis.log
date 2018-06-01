@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  1 JUN 2018 14:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2015.9.12)  1 JUN 2018 14:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -962,42 +962,47 @@ LaTeX Info: Redefining \nameref on input line 353.
 <CoverPage.pdf, id=4, 597.55246pt x 845.07718pt>
 File: CoverPage.pdf Graphic file (type pdf)
  <use CoverPage.pdf>
-Package pdftex.def Info: CoverPage.pdf used on input line 355.
+Package pdftex.def Info: CoverPage.pdf used on input line 365.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: CoverPage.pdf Graphic file (type pdf)
 
 <use CoverPage.pdf>
-Package pdftex.def Info: CoverPage.pdf used on input line 355.
+Package pdftex.def Info: CoverPage.pdf used on input line 365.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
  <CoverPage.pdf, id=7, page=1, 597.55246pt x 845.07718pt>
 File: CoverPage.pdf Graphic file (type pdf)
 
 <use CoverPage.pdf, page 1>
-Package pdftex.def Info: CoverPage.pdf, page1 used on input line 355.
+Package pdftex.def Info: CoverPage.pdf, page1 used on input line 365.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 File: CoverPage.pdf Graphic file (type pdf)
  <use CoverPage.pdf, page 1>
-Package pdftex.def Info: CoverPage.pdf, page1 used on input line 355.
+Package pdftex.def Info: CoverPage.pdf, page1 used on input line 365.
 (pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: CoverPage.pdf Graphic file (type pdf)
 
 <use CoverPage.pdf, page 1>
-Package pdftex.def Info: CoverPage.pdf, page1 used on input line 355.
+Package pdftex.def Info: CoverPage.pdf, page1 used on input line 365.
 (pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: CoverPage.pdf Graphic file (type pdf)
  <use CoverPage.pdf, page 1>
-Package pdftex.def Info: CoverPage.pdf, page1 used on input line 355.
+Package pdftex.def Info: CoverPage.pdf, page1 used on input line 365.
 (pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
 File: CoverPage.pdf Graphic file (type pdf)
 
 <use CoverPage.pdf, page 1>
-Package pdftex.def Info: CoverPage.pdf, page1 used on input line 355.
+Package pdftex.def Info: CoverPage.pdf, page1 used on input line 365.
 (pdftex.def)             Requested size: 562.1644pt x 795.0303pt.
  [1
 
 
- <./CoverPage.pdf>] [1{c:/Software/texlive/2015/texmf-var/fonts/map/pdftex/updm
-ap/pdftex.map}]
+ <./CoverPage.pdf>]pdfTeX warning (ext4): destination with the same identifier 
+(name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.368 \maketitle
+                 [1{c:/Software/texlive/2015/texmf-var/fonts/map/pdftex/updmap/
+pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 370--370
 
  []
@@ -1118,12 +1123,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  (./chapter1.tex
 Chapter 1.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.21 
-      [1
+[1
 
 
 
@@ -8280,7 +8280,7 @@ e1/public/txfonts/txtt.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw
 mbi8a.pfb><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ><c:/Software/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Soft
 ware/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on JunXuThesis.pdf (196 pages, 56047039 bytes).
+Output written on JunXuThesis.pdf (196 pages, 56047029 bytes).
 PDF statistics:
  4671 PDF objects out of 5155 (max. 8388607)
  3636 compressed objects within 37 object streams
