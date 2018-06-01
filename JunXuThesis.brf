@@ -100,8 +100,8 @@
 \backcite {olshausen1997sparse}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {ksvdtsp}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {ksvd}{{9}{1.2.1}{subsection.1.2.1}}
-\backcite {srcolor}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {onlinedl}{{9}{1.2.1}{subsection.1.2.1}}
+\backcite {srcolor}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {mlp}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {tnrd}{{9}{1.2.1}{subsection.1.2.1}}
 \backcite {csf}{{9}{1.2.1}{subsection.1.2.1}}
@@ -260,6 +260,7 @@
 \backcite {noiseclinic}{{43}{3.1}{section.3.1}}
 \backcite {Liu2008}{{43}{3.1}{section.3.1}}
 \backcite {Luisier}{{43}{3.1}{section.3.1}}
+\backcite {tid}{{43}{3.1}{section.3.1}}
 \backcite {lssc}{{43}{3.1}{section.3.1}}
 \backcite {makitalo2013optimal}{{43}{3.1}{section.3.1}}
 \backcite {Montagner}{{43}{3.1}{section.3.1}}

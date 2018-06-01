@@ -1,645 +1,623 @@
-\begin{thebibliography}{100}
+\begin{thebibliography}{}
 
-\bibitem{commoncamera}
-The most commonly used camera-lens combinations.
-\newblock \url{https://explorecams.com/stats/top/models}.
-\newblock Accessed: 2017-09-11.
-
-\bibitem{neatimage}
-Neatlab ABSoft.
+\bibitem[\protect\astroncite{ABSoft}{}]{neatimage}
+ABSoft, N.
 \newblock Neat {I}mage.
 \newblock \url{https://ni.neatvideo.com/home}.
 
-\bibitem{ksvdtsp}
-M.~Aharon, M.~Elad, and A.~Bruckstein.
+\bibitem[\protect\astroncite{Aharon et~al.}{2006}]{ksvdtsp}
+Aharon, M., Elad, M., and Bruckstein, A. (2006).
 \newblock The {K-SVD}: An algorithm for designing overcomplete dictionaries for
   sparse representation.
-\newblock {\em IEEE Transactions on Signal Processing}, 54(11):4311--4322,
-  2006.
+\newblock {\em IEEE Transactions on Signal Processing}, 54(11):4311--4322.
 
-\bibitem{RENOIR2014}
-Josue Anaya and Adrian Barbu.
+\bibitem[\protect\astroncite{Anaya and Barbu}{2014}]{RENOIR2014}
+Anaya, J. and Barbu, A. (2014).
 \newblock Renoir - a dataset for real low-light noise image reduction.
-\newblock {\em arXiv preprint arXiv:1409.8230}, 2014.
+\newblock {\em arXiv preprint arXiv:1409.8230}.
 
-\bibitem{bsds}
-P.~Arbelaez, M.~Maire, C.~Fowlkes, and J.~Malik.
+\bibitem[\protect\astroncite{Arbelaez et~al.}{2011}]{bsds}
+Arbelaez, P., Maire, M., Fowlkes, C., and Malik, J. (2011).
 \newblock Contour detection and hierarchical image segmentation.
-\newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, 33(5):898--916, 2011.
+\newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.}, 33(5):898--916.
 
-\bibitem{EMVA1288}
-European Machine~Vision Association.
+\bibitem[\protect\astroncite{Association}{2012}]{EMVA1288}
+Association, E. M.~V. (2012).
 \newblock Emva standard 1288: Standard for characterization of image sensors
   and cameras.
-\newblock 2012.
 
-\bibitem{barbu2009training}
-Adrian Barbu.
+\bibitem[\protect\astroncite{Barbu}{2009}]{barbu2009training}
+Barbu, A. (2009).
 \newblock Training an active random field for real-time image denoising.
-\newblock {\em IEEE Transactions on Image Processing}, 18(11):2451--2462, 2009.
+\newblock {\em IEEE Transactions on Image Processing}, 18(11):2451--2462.
 
-\bibitem{bareiss1968sylvester}
-E.~Bareiss.
+\bibitem[\protect\astroncite{Bareiss}{1968}]{bareiss1968sylvester}
+Bareiss, E. (1968).
 \newblock Sylvester’s identity and multistep integer-preserving gaussian
   elimination.
-\newblock {\em Mathematics of computation}, 22(103):565--578, 1968.
+\newblock {\em Mathematics of computation}, 22(103):565--578.
 
-\bibitem{Bartels1972}
-R.~H. Bartels and G.~W. Stewart.
+\bibitem[\protect\astroncite{Bartels and Stewart}{1972}]{Bartels1972}
+Bartels, R.~H. and Stewart, G.~W. (1972).
 \newblock Solution of the matrix equation {AX + XB = C}.
-\newblock {\em Commun. ACM}, 15(9):820--826, 1972.
+\newblock {\em Commun. ACM}, 15(9):820--826.
 
-\bibitem{Bishop}
-C.~M. Bishop.
+\bibitem[\protect\astroncite{Bishop}{2006}]{Bishop}
+Bishop, C.~M. (2006).
 \newblock {\em Pattern recognition and machine learning}.
-\newblock New York: Springer, 2006.
+\newblock New York: Springer.
 
-\bibitem{admm}
-S.~Boyd, N.~Parikh, E.~Chu, B.~Peleato, and J.~Eckstein.
+\bibitem[\protect\astroncite{Boyd et~al.}{2011}]{admm}
+Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011).
 \newblock Distributed optimization and statistical learning via the alternating
   direction method of multipliers.
-\newblock {\em Found. Trends Mach. Learn.}, 3(1):1--122, January 2011.
+\newblock {\em Found. Trends Mach. Learn.}, 3(1):1--122.
 
-\bibitem{nlm}
-A.~Buades, B.~Coll, and J.~M. Morel.
+\bibitem[\protect\astroncite{Buades et~al.}{2005}]{nlm}
+Buades, A., Coll, B., and Morel, J.~M. (2005).
 \newblock A non-local algorithm for image denoising.
 \newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
-  (CVPR)}, pages 60--65, 2005.
+  (CVPR)}, pages 60--65.
 
-\bibitem{mlp}
-H.~C. Burger, C.~J. Schuler, and S.~Harmeling.
+\bibitem[\protect\astroncite{Burger et~al.}{2012}]{mlp}
+Burger, H.~C., Schuler, C.~J., and Harmeling, S. (2012).
 \newblock Image denoising: Can plain neural networks compete with {BM3D}?
 \newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
-  (CVPR)}, pages 2392--2399, 2012.
+  (CVPR)}, pages 2392--2399.
 
-\bibitem{cai2010singular}
-J.~Cai, E.~J. Cand{\`e}s, and Z.~Shen.
+\bibitem[\protect\astroncite{Cai et~al.}{2010}]{cai2010singular}
+Cai, J., Cand{\`e}s, E.~J., and Shen, Z. (2010).
 \newblock A singular value thresholding algorithm for matrix completion.
-\newblock {\em SIAM Journal on Optimization}, 20(4):1956--1982, 2010.
+\newblock {\em SIAM Journal on Optimization}, 20(4):1956--1982.
 
-\bibitem{candes2008introduction}
-Emmanuel~J Cand{\`e}s and Michael~B Wakin.
-\newblock An introduction to compressive sampling.
-\newblock {\em IEEE signal processing magazine}, 25(2):21--30, 2008.
-
-\bibitem{bayesshrink}
-S.~G. Chang, B.~Yu, and M.~Vetterli.
+\bibitem[\protect\astroncite{Chang et~al.}{2000}]{bayesshrink}
+Chang, S.~G., Yu, B., and Vetterli, M. (2000).
 \newblock Adaptive wavelet thresholding for image denoising and compression.
-\newblock {\em Image Processing, IEEE Transactions on}, 9(9):1532--1546, 2000.
+\newblock {\em Image Processing, IEEE Transactions on}, 9(9):1532--1546.
 
-\bibitem{external}
-Fei Chen, Lei Zhang, and Huimin Yu.
+\bibitem[\protect\astroncite{Chen et~al.}{2015a}]{external}
+Chen, F., Zhang, L., and Yu, H. (2015a).
 \newblock External patch prior guided internal clustering for image denoising.
 \newblock {\em Proceedings of the IEEE international conference on computer
-  vision}, pages 603--611, 2015.
+  vision}, pages 603--611.
 
-\bibitem{Chen2015ICCV}
-G.~Chen, F.~Zhu, and A.~H. Pheng.
+\bibitem[\protect\astroncite{Chen et~al.}{2015b}]{Chen2015ICCV}
+Chen, G., Zhu, F., and Pheng, A.~H. (2015b).
 \newblock An efficient statistical method for image noise level estimation.
-\newblock {\em IEEE International Conference on Computer Vision (ICCV)},
-  December 2015.
+\newblock {\em IEEE International Conference on Computer Vision (ICCV)}.
 
-\bibitem{tnrd}
-Y.~Chen, W.~Yu, and T.~Pock.
+\bibitem[\protect\astroncite{Chen et~al.}{2015c}]{tnrd}
+Chen, Y., Yu, W., and Pock, T. (2015c).
 \newblock On learning optimized reaction diffusion processes for effective
   image restoration.
 \newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
-  (CVPR)}, pages 5261--5269, 2015.
+  (CVPR)}, pages 5261--5269.
 
-\bibitem{courant1943}
-R.~Courant.
+\bibitem[\protect\astroncite{Courant}{1943}]{courant1943}
+Courant, R. (1943).
 \newblock Variational methods for the solution of problems of equilibrium and
   vibrations.
-\newblock {\em Bull. Amer. Math. Soc.}, 49(1):1--23, 1943.
+\newblock {\em Bull. Amer. Math. Soc.}, 49(1):1--23.
 
-\bibitem{cbm3d}
-K.~Dabov, A.~Foi, V.~Katkovnik, and K.~Egiazarian.
+\bibitem[\protect\astroncite{Dabov et~al.}{2007a}]{cbm3d}
+Dabov, K., Foi, A., Katkovnik, V., and Egiazarian, K. (2007a).
 \newblock Color image denoising via sparse 3{D} collaborative filtering with
   grouping constraint in luminance-chrominance space.
 \newblock {\em IEEE International Conference on Image Processing (ICIP)}, pages
-  313--316, 2007.
+  313--316.
 
-\bibitem{bm3d}
-K.~Dabov, A.~Foi, V.~Katkovnik, and K.~Egiazarian.
+\bibitem[\protect\astroncite{Dabov et~al.}{2007b}]{bm3d}
+Dabov, K., Foi, A., Katkovnik, V., and Egiazarian, K. (2007b).
 \newblock Image denoising by sparse 3-{D} transform-domain collaborative
   filtering.
-\newblock {\em IEEE Transactions on Image Processing}, 16(8):2080--2095, 2007.
+\newblock {\em IEEE Transactions on Image Processing}, 16(8):2080--2095.
 
-\bibitem{em}
-A.~P. Dempster, N.~M. Laird, and D.~B. Rubin.
+\bibitem[\protect\astroncite{Dempster et~al.}{1977}]{em}
+Dempster, A.~P., Laird, N.~M., and Rubin, D.~B. (1977).
 \newblock Maximum likelihood from incomplete data via the {EM} algorithm.
 \newblock {\em Journal of the Royal Statistical Society. Series B
-  (methodological)}, pages 1--38, 1977.
+  (methodological)}, pages 1--38.
 
-\bibitem{ncsr}
-W.~Dong, L.~Zhang, G.~Shi, and X.~Li.
+\bibitem[\protect\astroncite{Dong et~al.}{2013}]{ncsr}
+Dong, W., Zhang, L., Shi, G., and Li, X. (2013).
 \newblock Nonlocally centralized sparse representation for image restoration.
-\newblock {\em IEEE Transactions on Image Processing}, 22(4):1620--1630, 2013.
+\newblock {\em IEEE Transactions on Image Processing}, 22(4):1620--1630.
 
-\bibitem{softthresholding}
-D.~L. Donoho.
+\bibitem[\protect\astroncite{Donoho}{1995}]{softthresholding}
+Donoho, D.~L. (1995).
 \newblock De-noising by soft-thresholding.
-\newblock {\em IEEE Trans. Inf. Theory}, 41(3):613--627, 1995.
+\newblock {\em IEEE Trans. Inf. Theory}, 41(3):613--627.
 
-\bibitem{csdonoho}
-D.~L. Donoho.
-\newblock Compressed sensing.
-\newblock {\em IEEE Transactions on Information Theory}, 52(4):1289--1306,
-  2006.
-
-\bibitem{donoho2001uncertainty}
-D.~L. Donoho and X.~Huo.
+\bibitem[\protect\astroncite{Donoho and Huo}{2001}]{donoho2001uncertainty}
+Donoho, D.~L. and Huo, X. (2001).
 \newblock Uncertainty principles and ideal atomic decomposition.
-\newblock {\em IEEE Transactions on Information Theory}, 47(7):2845--2862,
-  2001.
+\newblock {\em IEEE Transactions on Information Theory}, 47(7):2845--2862.
 
-\bibitem{eckart1936approximation}
-C.~Eckart and G.~Young.
+\bibitem[\protect\astroncite{Eckart and Young}{1936}]{eckart1936approximation}
+Eckart, C. and Young, G. (1936).
 \newblock The approximation of one matrix by another of lower rank.
-\newblock {\em Psychometrika}, 1(3):211--218, 1936.
+\newblock {\em Psychometrika}, 1(3):211--218.
 
-\bibitem{Eckstein1992}
-J.~Eckstein and D.~P. Bertsekas.
+\bibitem[\protect\astroncite{Eckstein and Bertsekas}{1992}]{Eckstein1992}
+Eckstein, J. and Bertsekas, D.~P. (1992).
 \newblock On the {D}ouglas--{R}achford splitting method and the proximal point
   algorithm for maximal monotone operators.
-\newblock {\em Mathematical Programming}, 55(1):293--318, 1992.
+\newblock {\em Mathematical Programming}, 55(1):293--318.
 
-\bibitem{ksvd}
-M.~Elad and M.~Aharon.
+\bibitem[\protect\astroncite{Elad and Aharon}{2006}]{ksvd}
+Elad, M. and Aharon, M. (2006).
 \newblock Image denoising via sparse and redundant representations over learned
   dictionaries.
-\newblock {\em IEEE Transactions on Image Processing}, 15(12):3736--3745, 2006.
+\newblock {\em IEEE Transactions on Image Processing}, 15(12):3736--3745.
 
-\bibitem{noisemeasurement}
-A.~Foi, S.~Alenius, V.~Katkovnik, and K.~Egiazarian.
+\bibitem[\protect\astroncite{ExploreCams}{}]{commoncamera}
+ExploreCams.
+\newblock The most commonly used camera-lens combinations.
+\newblock \url{https://explorecams.com/stats/top/models}.
+\newblock Accessed: 2017-09-11.
+
+\bibitem[\protect\astroncite{Foi et~al.}{2007}]{noisemeasurement}
+Foi, A., Alenius, S., Katkovnik, V., and Egiazarian, K. (2007).
 \newblock Noise measurement for raw-data of digital imaging sensors by
   automatic segmentation of nonuniform targets.
-\newblock {\em IEEE Sensors Journal}, 7(10):1456--1461, 2007.
+\newblock {\em IEEE Sensors Journal}, 7(10):1456--1461.
 
-\bibitem{Foipractical}
-A.~Foi, M.~Trimeche, V.~Katkovnik, and K.~Egiazarian.
+\bibitem[\protect\astroncite{Foi et~al.}{2008}]{Foipractical}
+Foi, A., Trimeche, M., Katkovnik, V., and Egiazarian, K. (2008).
 \newblock Practical poissonian-gaussian noise modeling and fitting for
   single-image raw-data.
-\newblock {\em IEEE Transactions on Image Processing}, 17(10):1737--1754, 2008.
+\newblock {\em IEEE Transactions on Image Processing}, 17(10):1737--1754.
 
-\bibitem{GolubMatrix}
-G.~Golub and C.~Van~Loan.
+\bibitem[\protect\astroncite{Golub and Van~Loan}{1996}]{GolubMatrix}
+Golub, G. and Van~Loan, C. (1996).
 \newblock {\em Matrix Computations (3rd Ed.)}.
-\newblock Johns Hopkins University Press, 1996.
+\newblock Johns Hopkins University Press.
 
-\bibitem{almapg}
-Z.~Gong, Z.~Shen, and K.-C. Toh.
+\bibitem[\protect\astroncite{Gong et~al.}{2014}]{almapg}
+Gong, Z., Shen, Z., and Toh, K.-C. (2014).
 \newblock Image restoration with mixed or unknown noises.
-\newblock {\em Multiscale Modeling \& Simulation}, 12(2):458--487, 2014.
+\newblock {\em Multiscale Modeling \& Simulation}, 12(2):458--487.
 
-\bibitem{wnnmijcv}
-S.~Gu, Q.~Xie, D.~Meng, W.~Zuo, X.~Feng, and L.~Zhang.
+\bibitem[\protect\astroncite{Gu et~al.}{2016}]{wnnmijcv}
+Gu, S., Xie, Q., Meng, D., Zuo, W., Feng, X., and Zhang, L. (2016).
 \newblock Weighted nuclear norm minimization and its applications to low level
   vision.
-\newblock {\em International Journal of Computer Vision}, pages 1--26, 2016.
+\newblock {\em International Journal of Computer Vision}, pages 1--26.
 
-\bibitem{wnnm}
-S.~Gu, L.~Zhang, W.~Zuo, and X.~Feng.
+\bibitem[\protect\astroncite{Gu et~al.}{2014}]{wnnm}
+Gu, S., Zhang, L., Zuo, W., and Feng, X. (2014).
 \newblock Weighted nuclear norm minimization with application to image
   denoising.
 \newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
-  (CVPR)}, pages 2862--2869, 2014.
+  (CVPR)}, pages 2862--2869.
 
-\bibitem{residualnetwork}
-Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\bibitem[\protect\astroncite{He et~al.}{2016}]{residualnetwork}
+He, K., Zhang, X., Ren, S., and Sun, J. (2016).
 \newblock Deep residual learning for image recognition.
 \newblock In {\em Proceedings of the IEEE conference on computer vision and
-  pattern recognition}, pages 770--778, 2016.
+  pattern recognition}, pages 770--778.
 
-\bibitem{healey1994radiometric}
-G.~E Healey and R.~Kondepudy.
+\bibitem[\protect\astroncite{Healey and
+  Kondepudy}{1994}]{healey1994radiometric}
+Healey, G.~E. and Kondepudy, R. (1994).
 \newblock Radiometric {CCD} camera calibration and noise estimation.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  16(3):267--276, 1994.
+  16(3):267--276.
 
-\bibitem{nearcor}
-N.~J. Higham.
+\bibitem[\protect\astroncite{Higham}{2002}]{nearcor}
+Higham, N.~J. (2002).
 \newblock Computing the nearest correlation matrix: a problem from finance.
-\newblock {\em IMA Journal of Numerical Analysis}, 22(3):329, 2002.
+\newblock {\em IMA Journal of Numerical Analysis}, 22(3):329.
 
-\bibitem{Hu2016}
-Haijuan Hu, Bing Li, and Quansheng Liu.
+\bibitem[\protect\astroncite{Hu et~al.}{2016}]{Hu2016}
+Hu, H., Li, B., and Liu, Q. (2016).
 \newblock Removing mixture of gaussian and impulse noise by patch-based
   weighted means.
-\newblock {\em Journal of Scientific Computing}, 67(1):103--129, 2016.
+\newblock {\em Journal of Scientific Computing}, 67(1):103--129.
 
-\bibitem{huber2011robust}
-P.~J. Huber.
+\bibitem[\protect\astroncite{Huber}{2011}]{huber2011robust}
+Huber, P.~J. (2011).
 \newblock {\em Robust statistics}.
-\newblock Springer, 2011.
+\newblock Springer.
 
-\bibitem{nnm}
-H.~Ji, C.~Liu, Z.~Shen, and Y.~Xu.
+\bibitem[\protect\astroncite{Ji et~al.}{2010}]{nnm}
+Ji, H., Liu, C., Shen, Z., and Xu, Y. (2010).
 \newblock Robust video denoising using low rank matrix completion.
-\newblock {\em CVPR}, pages 1791--1798, 2010.
+\newblock {\em CVPR}, pages 1791--1798.
 
-\bibitem{jiang2014mixed}
-Jielin Jiang, Lei Zhang, and Jian Yang.
+\bibitem[\protect\astroncite{Jiang et~al.}{2014}]{jiang2014mixed}
+Jiang, J., Zhang, L., and Yang, J. (2014).
 \newblock Mixed noise removal by weighted encoding with sparse nonlocal
   regularization.
-\newblock {\em IEEE transactions on image processing}, 23(6):2651--2662, 2014.
+\newblock {\em IEEE transactions on image processing}, 23(6):2651--2662.
 
-\bibitem{lcksvd}
-Z.~Jiang, Z.~Lin, and L.~S. Davis.
+\bibitem[\protect\astroncite{Jiang et~al.}{2013}]{lcksvd}
+Jiang, Z., Lin, Z., and Davis, L.~S. (2013).
 \newblock Label consistent k-svd: Learning a discriminative dictionary for
   recognition.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  35(11):2651--2664, 2013.
+  35(11):2651--2664.
 
-\bibitem{karaimer_brown_ECCV_2016}
-H.~C. Karaimer and M.~S. Brown.
+\bibitem[\protect\astroncite{Karaimer and
+  Brown}{2016}]{karaimer_brown_ECCV_2016}
+Karaimer, H.~C. and Brown, M.~S. (2016).
 \newblock A software platform for manipulating the camera imaging pipeline.
-\newblock {\em European Conference on Computer Vision (ECCV)}, October 2016.
+\newblock {\em European Conference on Computer Vision (ECCV)}.
 
-\bibitem{kervrann2007bayesian}
-C.~Kervrann, J.~Boulanger, and P.~Coup{\'e}.
+\bibitem[\protect\astroncite{Kervrann et~al.}{2007}]{kervrann2007bayesian}
+Kervrann, C., Boulanger, J., and Coup{\'e}, P. (2007).
 \newblock Bayesian non-local means filter, image redundancy and adaptive
   dictionaries for noise removal.
 \newblock {\em International Conference on Scale Space and Variational Methods
-  in Computer Vision}, pages 520--532, 2007.
+  in Computer Vision}, pages 520--532.
 
-\bibitem{NewInCamera}
-S.~J. Kim, H.~T. Lin, Z.~Lu, S.~Süsstrunk, S.~Lin, and M.~S. Brown.
-\newblock A new in-camera imaging model for color computer vision and its
-  application.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  34(12):2289--2302, 2012.
-
-\bibitem{Kristof1970515}
-Walter Kristof.
+\bibitem[\protect\astroncite{Kristof}{1970}]{Kristof1970515}
+Kristof, W. (1970).
 \newblock A theorem on the trace of certain matrix products and some
   applications.
-\newblock {\em Journal of Mathematical Psychology}, 7(3):515 -- 530, 1970.
+\newblock {\em Journal of Mathematical Psychology}, 7(3):515 -- 530.
 
-\bibitem{nlbayes}
-M.~Lebrun, A.~Buades, and J.~M. Morel.
+\bibitem[\protect\astroncite{Lebrun et~al.}{2013}]{nlbayes}
+Lebrun, M., Buades, A., and Morel, J.~M. (2013).
 \newblock A nonlocal {B}ayesian image denoising algorithm.
-\newblock {\em SIAM Journal on Imaging Sciences}, 6(3):1665--1688, 2013.
+\newblock {\em SIAM Journal on Imaging Sciences}, 6(3):1665--1688.
 
-\bibitem{ncwebsite}
-M.~Lebrun, M.~Colom, and J.~M. Morel.
+\bibitem[\protect\astroncite{Lebrun et~al.}{}]{ncwebsite}
+Lebrun, M., Colom, M., and Morel, J.~M.
 \newblock The noise clinic: a blind image denoising algorithm.
 \newblock \url{http://www.ipol.im/pub/art/2015/125/}.
 \newblock Accessed 01 28, 2015.
 
-\bibitem{noiseclinic}
-M.~Lebrun, M.~Colom, and J.-M. Morel.
+\bibitem[\protect\astroncite{Lebrun et~al.}{2015}]{noiseclinic}
+Lebrun, M., Colom, M., and Morel, J.-M. (2015).
 \newblock Multiscale image blind denoising.
-\newblock {\em IEEE Transactions on Image Processing}, 24(10):3149--3161, 2015.
+\newblock {\em IEEE Transactions on Image Processing}, 24(10):3149--3161.
 
-\bibitem{Leungtip}
-B.~Leung, G.~Jeon, and E.~Dubois.
+\bibitem[\protect\astroncite{Leung et~al.}{2011}]{Leungtip}
+Leung, B., Jeon, G., and Dubois, E. (2011).
 \newblock Least-squares luma-chroma demultiplexing algorithm for bayer
   demosaicking.
-\newblock {\em IEEE Transactions on Image Processing}, 20(7):1885--1894, 2011.
+\newblock {\em IEEE Transactions on Image Processing}, 20(7):1885--1894.
 
-\bibitem{Liu2008}
-C.~Liu, R.~Szeliski, S.~Bing Kang, C.~L. Zitnick, and W.~T. Freeman.
+\bibitem[\protect\astroncite{Liu et~al.}{2008}]{Liu2008}
+Liu, C., Szeliski, R., Kang, S.~B., Zitnick, C.~L., and Freeman, W.~T. (2008).
 \newblock Automatic estimation and removal of noise from a single image.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  30(2):299--314, 2008.
+  30(2):299--314.
 
-\bibitem{noiselevel}
-X.~Liu, M.~Tanaka, and M.~Okutomi.
+\bibitem[\protect\astroncite{Liu et~al.}{2013}]{noiselevel}
+Liu, X., Tanaka, M., and Okutomi, M. (2013).
 \newblock Single-image noise level estimation for blind denoising.
-\newblock {\em IEEE Transactions on Image Processing}, 22(12):5226--5237, 2013.
+\newblock {\em IEEE Transactions on Image Processing}, 22(12):5226--5237.
 
-\bibitem{liupractical}
-X.~Liu, M.~Tanaka, and M.~Okutomi.
+\bibitem[\protect\astroncite{Liu et~al.}{2014}]{liupractical}
+Liu, X., Tanaka, M., and Okutomi, M. (2014).
 \newblock Practical signal-dependent noise parameter estimation from a single
   noisy image.
-\newblock {\em IEEE Transactions on Image Processing}, 23(10):4361--4371, 2014.
+\newblock {\em IEEE Transactions on Image Processing}, 23(10):4361--4371.
 
-\bibitem{Luisier}
-F.~Luisier, T.~Blu, and M.~Unser.
+\bibitem[\protect\astroncite{Luisier et~al.}{2011}]{Luisier}
+Luisier, F., Blu, T., and Unser, M. (2011).
 \newblock Image denoising in mixed {P}oisson-{G}aussian noise.
-\newblock {\em IEEE Transactions on Image Processing}, 20(3):696--708, 2011.
+\newblock {\em IEEE Transactions on Image Processing}, 20(3):696--708.
 
-\bibitem{tid}
-Enming Luo, Stanley~H Chan, and Truong~Q Nguyen.
+\bibitem[\protect\astroncite{Luo et~al.}{2015}]{tid}
+Luo, E., Chan, S.~H., and Nguyen, T.~Q. (2015).
 \newblock Adaptive image denoising by targeted databases.
-\newblock {\em IEEE Transactions on Image Processing}, 24(7):2167--2181, 2015.
+\newblock {\em IEEE Transactions on Image Processing}, 24(7):2167--2181.
 
-\bibitem{lssc}
-J.~Mairal, F.~Bach, J.~Ponce, G.~Sapiro, and A.~Zisserman.
-\newblock Non-local sparse models for image restoration.
-\newblock {\em IEEE International Conference on Computer Vision (ICCV)}, pages
-  2272--2279, 2009.
-
-\bibitem{srcolor}
-J.~Mairal, M.~Elad, and G.~Sapiro.
-\newblock Sparse representation for color image restoration.
-\newblock {\em IEEE Transactions on Image Processing,}, 17(1):53--69, 2008.
-
-\bibitem{mairal2008sparse}
-J.~Mairal, M.~Elad, and G.~Sapiro.
-\newblock Sparse representation for color image restoration.
-\newblock {\em IEEE Transactions on Image Processing}, 17(1):53--69, 2008.
-
-\bibitem{onlinedl}
-Julien Mairal, Francis Bach, Jean Ponce, and Guillermo Sapiro.
+\bibitem[\protect\astroncite{Mairal et~al.}{2009a}]{onlinedl}
+Mairal, J., Bach, F., Ponce, J., and Sapiro, G. (2009a).
 \newblock Online dictionary learning for sparse coding.
 \newblock In {\em Proceedings of the 26th Annual International Conference on
-  Machine Learning}, ICML, pages 689--696, New York, NY, USA, 2009. ACM.
+  Machine Learning}, ICML, pages 689--696, New York, NY, USA. ACM.
 
-\bibitem{makitalo2013optimal}
-M.~Makitalo and A.~Foi.
+\bibitem[\protect\astroncite{Mairal et~al.}{2009b}]{lssc}
+Mairal, J., Bach, F., Ponce, J., Sapiro, G., and Zisserman, A. (2009b).
+\newblock Non-local sparse models for image restoration.
+\newblock {\em IEEE International Conference on Computer Vision (ICCV)}, pages
+  2272--2279.
+
+\bibitem[\protect\astroncite{Mairal et~al.}{2008a}]{srcolor}
+Mairal, J., Elad, M., and Sapiro, G. (2008a).
+\newblock Sparse representation for color image restoration.
+\newblock {\em IEEE Transactions on Image Processing,}, 17(1):53--69.
+
+\bibitem[\protect\astroncite{Mairal et~al.}{2008b}]{mairal2008sparse}
+Mairal, J., Elad, M., and Sapiro, G. (2008b).
+\newblock Sparse representation for color image restoration.
+\newblock {\em IEEE Transactions on Image Processing}, 17(1):53--69.
+
+\bibitem[\protect\astroncite{Makitalo and Foi}{2013}]{makitalo2013optimal}
+Makitalo, M. and Foi, A. (2013).
 \newblock Optimal inversion of the generalized anscombe transformation for
   poisson-gaussian noise.
-\newblock {\em IEEE Transactions on Image Processing}, 22(1):91--103, 2013.
+\newblock {\em IEEE Transactions on Image Processing}, 22(1):91--103.
 
-\bibitem{glm}
-P.~McCullagh.
+\bibitem[\protect\astroncite{McCullagh}{1984}]{glm}
+McCullagh, P. (1984).
 \newblock Generalized linear models.
-\newblock {\em European Journal of Operational Research}, 16(3):285--292, 1984.
+\newblock {\em European Journal of Operational Research}, 16(3):285--292.
 
-\bibitem{moldovan2006denoising}
-Teodor~Mihai Moldovan, Stefan Roth, and Michael~J Black.
+\bibitem[\protect\astroncite{Moldovan et~al.}{2006}]{moldovan2006denoising}
+Moldovan, T.~M., Roth, S., and Black, M.~J. (2006).
 \newblock Denoising archival films using a learned bayesian model.
 \newblock In {\em Image Processing, 2006 IEEE International Conference on},
-  pages 2641--2644. IEEE, 2006.
+  pages 2641--2644. IEEE.
 
-\bibitem{Montagner}
-Y.~Le Montagner, E.~D. Angelini, and J.~C. Olivo-Marin.
+\bibitem[\protect\astroncite{Montagner et~al.}{2014}]{Montagner}
+Montagner, Y.~L., Angelini, E.~D., and Olivo-Marin, J.~C. (2014).
 \newblock An unbiased risk estimator for image denoising in the presence of
   mixed poisson-gaussian noise.
-\newblock {\em IEEE Transactions on Image Processing}, 23(3):1255--1268, 2014.
+\newblock {\em IEEE Transactions on Image Processing}, 23(3):1255--1268.
 
-\bibitem{biqi}
-Anush~Krishna Moorthy and Alan~Conrad Bovik.
+\bibitem[\protect\astroncite{Moorthy and Bovik}{2010}]{biqi}
+Moorthy, A.~K. and Bovik, A.~C. (2010).
 \newblock A two-step framework for constructing blind image quality indices.
-\newblock {\em IEEE Signal processing letters}, 17(5):513--516, 2010.
+\newblock {\em IEEE Signal processing letters}, 17(5):513--516.
 
-\bibitem{combexin}
-I.~Mosseri, M.~Zontak, and M.~Irani.
+\bibitem[\protect\astroncite{Mosseri et~al.}{2013}]{combexin}
+Mosseri, I., Zontak, M., and Irani, M. (2013).
 \newblock Combining the power of internal and external denoising.
 \newblock {\em IEEE International Conference on Computational Photography
-  (ICCP)}, pages 1--9, 2013.
+  (ICCP)}, pages 1--9.
 
-\bibitem{crosschannel2016}
-S.~Nam, Y.~Hwang, Y.~Matsushita, and S.~J. Kim.
+\bibitem[\protect\astroncite{Nam et~al.}{2016}]{crosschannel2016}
+Nam, S., Hwang, Y., Matsushita, Y., and Kim, S.~J. (2016).
 \newblock A holistic approach to cross-channel image noise modeling and its
   application to image denoising.
 \newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
-  (CVPR)}, pages 1683--1691, 2016.
+  (CVPR)}, pages 1683--1691.
 
-\bibitem{olshausen1996emergence}
-B.~A. Olshausen and D.~J. Field.
+\bibitem[\protect\astroncite{Olshausen and
+  Field}{1996}]{olshausen1996emergence}
+Olshausen, B.~A. and Field, D.~J. (1996).
 \newblock Emergence of simple-cell receptive field properties by learning a
   sparse code for natural images.
-\newblock {\em Nature}, 381(6583):607--609, 1996.
+\newblock {\em Nature}, 381(6583):607--609.
 
-\bibitem{olshausen1997sparse}
-B.~A. Olshausen and D.~J. Field.
+\bibitem[\protect\astroncite{Olshausen and Field}{1997}]{olshausen1997sparse}
+Olshausen, B.~A. and Field, D.~J. (1997).
 \newblock Sparse coding with an overcomplete basis set: {A} strategy employed
   by {V1}?
-\newblock {\em Vision research}, 37(23):3311--3325, 1997.
+\newblock {\em Vision research}, 37(23):3311--3325.
 
-\bibitem{osher2005iterative}
-S.~Osher, M.~Burger, D.~Goldfarb, J.~Xu, and W.~Yin.
+\bibitem[\protect\astroncite{Osher et~al.}{2005}]{osher2005iterative}
+Osher, S., Burger, M., Goldfarb, D., Xu, J., and Yin, W. (2005).
 \newblock An iterative regularization method for total variation-based image
   restoration.
-\newblock {\em Multiscale Modeling \& Simulation}, 4(2):460--489, 2005.
+\newblock {\em Multiscale Modeling \& Simulation}, 4(2):460--489.
 
-\bibitem{PeronaMalik1990}
-P.~Perona and J.~Malik.
+\bibitem[\protect\astroncite{Perona and Malik}{1990}]{PeronaMalik1990}
+Perona, P. and Malik, J. (1990).
 \newblock Scale-space and edge detection using anisotropic diffusion.
 \newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
-  on}, 12(7):629--639, 1990.
+  on}, 12(7):629--639.
 
-\bibitem{nlr}
-G.~Peyr{\'e}, S.~Bougleux, and L.~D. Cohen.
+\bibitem[\protect\astroncite{Peyr{\'e} et~al.}{2011}]{nlr}
+Peyr{\'e}, G., Bougleux, S., and Cohen, L.~D. (2011).
 \newblock Non-local regularization of inverse problems.
-\newblock {\em Inverse Problems and Imaging}, 5(2):511--530, 2011.
+\newblock {\em Inverse Problems and Imaging}, 5(2):511--530.
 
-\bibitem{dnd2017}
-Tobias Pl{\"o}tz and Stefan Roth.
+\bibitem[\protect\astroncite{Pl{\"o}tz and Roth}{2017}]{dnd2017}
+Pl{\"o}tz, T. and Roth, S. (2017).
 \newblock Benchmarking denoising algorithms with real photographs.
-\newblock {\em CVPR}, 2017.
+\newblock {\em CVPR}.
 
-\bibitem{tid2008}
-Nikolay Ponomarenko, Vladimir Lukin, Alexander Zelensky, and Karen Egiazarian.
+\bibitem[\protect\astroncite{Ponomarenko et~al.}{2009}]{tid2008}
+Ponomarenko, N., Lukin, V., Zelensky, A., and Egiazarian, K. (2009).
 \newblock Tid2008-a database for evaluation of full-reference visual quality
   assessment metrics.
-\newblock 10(4):30--45, 2009.
+\newblock 10(4):30--45.
 
-\bibitem{fullyblind}
-J.~Portilla.
+\bibitem[\protect\astroncite{Portilla}{2004}]{fullyblind}
+Portilla, J. (2004).
 \newblock Full blind denoising through noise covariance estimation using
   {Gaussian} scale mixtures in the wavelet domain.
 \newblock {\em IEEE International Conference on Image Processing (ICIP)},
-  2:1217--1220, 2004.
+  2:1217--1220.
 
-\bibitem{blsgsm}
-J.~Portilla, V.~Strela, M.J. Wainwright, and E.P. Simoncelli.
+\bibitem[\protect\astroncite{Portilla et~al.}{2003}]{blsgsm}
+Portilla, J., Strela, V., Wainwright, M., and Simoncelli, E. (2003).
 \newblock Image denoising using scale mixtures of {Gaussians} in the wavelet
   domain.
-\newblock {\em Image Processing, IEEE Transactions on}, 12(11):1338--1351,
-  2003.
+\newblock {\em Image Processing, IEEE Transactions on}, 12(11):1338--1351.
 
-\bibitem{rabie2005robust}
-T.~Rabie.
+\bibitem[\protect\astroncite{Rabie}{2005}]{rabie2005robust}
+Rabie, T. (2005).
 \newblock Robust estimation approach for blind denoising.
-\newblock {\em IEEE Transactions on Image Processing}, 14(11):1755--1765, 2005.
+\newblock {\em IEEE Transactions on Image Processing}, 14(11):1755--1765.
 
-\bibitem{foe}
-S.~Roth and M.~J. Black.
+\bibitem[\protect\astroncite{Roth and Black}{2009}]{foe}
+Roth, S. and Black, M.~J. (2009).
 \newblock Fields of experts.
-\newblock {\em International Journal of Computer Vision}, 82(2):205--229, 2009.
+\newblock {\em International Journal of Computer Vision}, 82(2):205--229.
 
-\bibitem{rudin1992nonlinear}
-L.~I. Rudin, S.~Osher, and E.~Fatemi.
+\bibitem[\protect\astroncite{Rudin et~al.}{1992}]{rudin1992nonlinear}
+Rudin, L.~I., Osher, S., and Fatemi, E. (1992).
 \newblock Nonlinear total variation based noise removal algorithms.
-\newblock {\em Physica D: Nonlinear Phenomena}, 60(1):259--268, 1992.
+\newblock {\em Physica D: Nonlinear Phenomena}, 60(1):259--268.
 
-\bibitem{bliinds}
-Michele~A Saad, Alan~C Bovik, and Christophe Charrier.
+\bibitem[\protect\astroncite{Saad et~al.}{2012}]{bliinds}
+Saad, M.~A., Bovik, A.~C., and Charrier, C. (2012).
 \newblock Blind image quality assessment: A natural scene statistics approach
   in the dct domain.
-\newblock {\em IEEE transactions on Image Processing}, 21(8):3339--3352, 2012.
+\newblock {\em IEEE transactions on Image Processing}, 21(8):3339--3352.
 
-\bibitem{salmon2014}
-Joseph Salmon, Zachary Harmany, Charles-Alban Deledalle, and Rebecca Willett.
+\bibitem[\protect\astroncite{Salmon et~al.}{2014}]{salmon2014}
+Salmon, J., Harmany, Z., Deledalle, C.-A., and Willett, R. (2014).
 \newblock Poisson noise reduction with non-local pca.
-\newblock {\em Journal of mathematical imaging and vision}, 48(2):279--294,
-  2014.
+\newblock {\em Journal of mathematical imaging and vision}, 48(2):279--294.
 
-\bibitem{csf}
-U.~Schmidt and S.~Roth.
+\bibitem[\protect\astroncite{Schmidt and Roth}{2014}]{csf}
+Schmidt, U. and Roth, S. (2014).
 \newblock Shrinkage fields for effective image restoration.
 \newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
-  (CVPR)}, pages 2774--2781, June 2014.
+  (CVPR)}, pages 2774--2781.
 
-\bibitem{LIVEIQA}
-H.~R. Sheikh, M.~F. Sabir, and A.~C. Bovik.
+\bibitem[\protect\astroncite{Sheikh et~al.}{2006}]{LIVEIQA}
+Sheikh, H.~R., Sabir, M.~F., and Bovik, A.~C. (2006).
 \newblock A statistical evaluation of recent full reference image quality
   assessment algorithms.
-\newblock {\em IEEE Transactions on Image Processing}, 15(11):3440--3451, Nov
-  2006.
+\newblock {\em IEEE Transactions on Image Processing}, 15(11):3440--3451.
 
-\bibitem{simoncini2016computational}
-V.~Simoncini.
+\bibitem[\protect\astroncite{Simoncini}{2016}]{simoncini2016computational}
+Simoncini, V. (2016).
 \newblock Computational methods for linear matrix equations.
-\newblock {\em SIAM Review}, 58(3):377--441, 2016.
+\newblock {\em SIAM Review}, 58(3):377--441.
 
-\bibitem{curvelet}
-J.~L. Starck, E.~J. Cand{\`e}s, and D.~L. Donoho.
+\bibitem[\protect\astroncite{Starck et~al.}{2002}]{curvelet}
+Starck, J.~L., Cand{\`e}s, E.~J., and Donoho, D.~L. (2002).
 \newblock The curvelet transform for image denoising.
-\newblock {\em IEEE Transactions on Image Processing}, 11(6):670--684, 2002.
+\newblock {\em IEEE Transactions on Image Processing}, 11(6):670--684.
 
-\bibitem{TenBerge1983}
-Jos M.~F. Ten~Berge.
+\bibitem[\protect\astroncite{Ten~Berge}{1983}]{TenBerge1983}
+Ten~Berge, J. M.~F. (1983).
 \newblock A generalization of kristof's theorem on the trace of certain matrix
   products.
-\newblock {\em Psychometrika}, 48(4):519--523, 1983.
+\newblock {\em Psychometrika}, 48(4):519--523.
 
-\bibitem{lasso}
-Robert Tibshirani.
+\bibitem[\protect\astroncite{Tibshirani}{1996}]{lasso}
+Tibshirani, R. (1996).
 \newblock Regression shrinkage and selection via the lasso.
 \newblock {\em Journal of the Royal Statistical Society. Series B
-  (Methodological)}, pages 267--288, 1996.
+  (Methodological)}, pages 267--288.
 
-\bibitem{Tomasi1998}
-C.~Tomasi and R.~Manduchi.
+\bibitem[\protect\astroncite{Tomasi and Manduchi}{1998}]{Tomasi1998}
+Tomasi, C. and Manduchi, R. (1998).
 \newblock Bilateral filtering for gray and color images.
 \newblock {\em IEEE International Conference on Computer Vision (ICCV)}, pages
-  839--846, 1998.
+  839--846.
 
-\bibitem{tsin2001statistical}
-Y.~Tsin, Visvanathan Ramesh, and Takeo Kanade.
+\bibitem[\protect\astroncite{Tsin et~al.}{2001}]{tsin2001statistical}
+Tsin, Y., Ramesh, V., and Kanade, T. (2001).
 \newblock Statistical calibration of ccd imaging process.
 \newblock {\em IEEE International Conference on Computer Vision (ICCV)},
-  1:480--487, 2001.
+  1:480--487.
 
-\bibitem{nsp}
-S.~Wang, L.~Zhang, and Y.~Liang.
+\bibitem[\protect\astroncite{Wang et~al.}{2013}]{nsp}
+Wang, S., Zhang, L., and Liang, Y. (2013).
 \newblock Non-local spectral prior model for low-level vision.
-\newblock {\em ACCV}, pages 231--244, 2013.
+\newblock {\em ACCV}, pages 231--244.
 
-\bibitem{ssim}
-Z.~Wang, A.~C. Bovik, H.~R. Sheikh, and E.~P. Simoncelli.
+\bibitem[\protect\astroncite{Wang et~al.}{2004}]{ssim}
+Wang, Z., Bovik, A.~C., Sheikh, H.~R., and Simoncelli, E.~P. (2004).
 \newblock Image quality assessment: from error visibility to structural
   similarity.
-\newblock {\em IEEE Transactions on Image Processing}, 13(4):600--612, 2004.
+\newblock {\em IEEE Transactions on Image Processing}, 13(4):600--612.
 
-\bibitem{msssim}
-Zhou Wang, Eero~P Simoncelli, and Alan~C Bovik.
+\bibitem[\protect\astroncite{Wang et~al.}{2003}]{msssim}
+Wang, Z., Simoncelli, E.~P., and Bovik, A.~C. (2003).
 \newblock Multiscale structural similarity for image quality assessment.
 \newblock In {\em Signals, Systems and Computers, 2004. Conference Record of
-  the Thirty-Seventh Asilomar Conference on}, volume~2, pages 1398--1402. IEEE,
-  2003.
+  the Thirty-Seventh Asilomar Conference on}, volume~2, pages 1398--1402. IEEE.
 
-\bibitem{weiss}
-Y.~Weiss and W.~T. Freeman.
+\bibitem[\protect\astroncite{Weiss and Freeman}{2007}]{weiss}
+Weiss, Y. and Freeman, W.~T. (2007).
 \newblock What makes a good model of natural images?
-\newblock {\em CVPR}, pages 1--8, 2007.
+\newblock {\em CVPR}, pages 1--8.
 
-\bibitem{srcvpr}
-J.~Wright, Y.~Ma, J.~Mairal, G.~Sapiro, T.~S. Huang, and S.~Yan.
+\bibitem[\protect\astroncite{Wright et~al.}{2010}]{srcvpr}
+Wright, J., Ma, Y., Mairal, J., Sapiro, G., Huang, T.~S., and Yan, S. (2010).
 \newblock Sparse representation for computer vision and pattern recognition.
-\newblock {\em Proceedings of the IEEE}, 98(6):1031--1044, 2010.
+\newblock {\em Proceedings of the IEEE}, 98(6):1031--1044.
 
-\bibitem{src}
-J.~Wright, A.~Y. Yang, A.~Ganesh, S.~S. Sastry, and Y.~Ma.
+\bibitem[\protect\astroncite{Wright et~al.}{2009}]{src}
+Wright, J., Yang, A.~Y., Ganesh, A., Sastry, S.~S., and Ma, Y. (2009).
 \newblock Robust face recognition via sparse representation.
 \newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  31(2):210--227, 2009.
+  31(2):210--227.
 
-\bibitem{emconvergence}
-C.~F. Wu.
+\bibitem[\protect\astroncite{Wu}{1983}]{emconvergence}
+Wu, C.~F. (1983).
 \newblock On the convergence properties of the {EM} algorithm.
-\newblock {\em The Annals of Statistics}, pages 95--103, 1983.
+\newblock {\em The Annals of Statistics}, pages 95--103.
 
-\bibitem{xie2012image}
-Junyuan Xie, Linli Xu, and Enhong Chen.
+\bibitem[\protect\astroncite{Xie et~al.}{2012}]{xie2012image}
+Xie, J., Xu, L., and Chen, E. (2012).
 \newblock Image denoising and inpainting with deep neural networks.
 \newblock {\em Advances in Neural Information Processing Systems}, pages
-  341--349, 2012.
+  341--349.
 
-\bibitem{xuaccv2016}
-Jun Xu, Dongwei Ren, Lei Zhang, and David Zhang.
+\bibitem[\protect\astroncite{Xu et~al.}{2016}]{xuaccv2016}
+Xu, J., Ren, D., Zhang, L., and Zhang, D. (2016).
 \newblock Patch group based bayesian learning for blind image denoising.
 \newblock {\em Asian Conference on Computer Vision (ACCV) New Trends in Image
-  Restoration and Enhancement Workshop}, pages 79--95, 2016.
+  Restoration and Enhancement Workshop}, pages 79--95.
 
-\bibitem{guided}
-Jun Xu, Lei Zhang, and David Zhang.
+\bibitem[\protect\astroncite{Xu et~al.}{2017a}]{guided}
+Xu, J., Zhang, L., and Zhang, D. (2017a).
 \newblock External prior guided internal prior learning for real noisy image
   denoising.
-\newblock {\em https://arxiv.org/abs/1705.04505}, 2017.
+\newblock {\em https://arxiv.org/abs/1705.04505}.
 
-\bibitem{twsc}
-Jun Xu, Lei Zhang, and David Zhang.
+\bibitem[\protect\astroncite{Xu et~al.}{2017b}]{twsc}
+Xu, J., Zhang, L., and Zhang, D. (2017b).
 \newblock A trilateral weigted sparse coding scheme for robust image denoising.
-\newblock {\em Unpublished Draft}, 2017.
+\newblock {\em Unpublished Draft}.
 
-\bibitem{mcwnnm}
-Jun Xu, Lei Zhang, David Zhang, and Xiangchu Feng.
+\bibitem[\protect\astroncite{Xu et~al.}{2017c}]{mcwnnm}
+Xu, J., Zhang, L., Zhang, D., and Feng, X. (2017c).
 \newblock Multi-channel weighted nuclear norm minimization for real color image
   denoising.
-\newblock In {\em ICCV}, 2017.
+\newblock In {\em ICCV}.
 
-\bibitem{pgpd}
-Jun Xu, Lei Zhang, Wangmeng Zuo, David Zhang, and Xiangchu Feng.
+\bibitem[\protect\astroncite{Xu et~al.}{2015}]{pgpd}
+Xu, J., Zhang, L., Zuo, W., Zhang, D., and Feng, X. (2015).
 \newblock Patch group based nonlocal self-similarity prior learning for image
   denoising.
-\newblock In {\em ICCV}, 2015.
+\newblock In {\em ICCV}.
 
-\bibitem{yang2010image}
-Jianchao Yang, John Wright, Thomas~S Huang, and Yi~Ma.
+\bibitem[\protect\astroncite{Yang et~al.}{2010}]{yang2010image}
+Yang, J., Wright, J., Huang, T.~S., and Ma, Y. (2010).
 \newblock Image super-resolution via sparse representation.
-\newblock {\em IEEE transactions on image processing}, 19(11):2861--2873, 2010.
+\newblock {\em IEEE transactions on image processing}, 19(11):2861--2873.
 
-\bibitem{ple}
-G.~Yu, G.~Sapiro, and S.~Mallat.
+\bibitem[\protect\astroncite{Yu et~al.}{2012}]{ple}
+Yu, G., Sapiro, G., and Mallat, S. (2012).
 \newblock Solving inverse problems with piecewise linear estimators: {From}
   {Gaussian} mixture models to structured sparsity.
-\newblock {\em IEEE Transactions on Image Processing}, 21(5):2481--2499, 2012.
+\newblock {\em IEEE Transactions on Image Processing}, 21(5):2481--2499.
 
-\bibitem{Fadili}
-B.~Zhang, J.~M. Fadili, and J.~L. Starck.
+\bibitem[\protect\astroncite{Zhang et~al.}{2008}]{Fadili}
+Zhang, B., Fadili, J.~M., and Starck, J.~L. (2008).
 \newblock Wavelets, ridgelets, and curvelets for poisson noise removal.
-\newblock {\em IEEE Transactions on Image Processing}, 17(7):1093--1108, 2008.
+\newblock {\em IEEE Transactions on Image Processing}, 17(7):1093--1108.
 
-\bibitem{dncnn}
-K.~Zhang, W.~Zuo, Y.~Chen, D.~Meng, and L.~Zhang.
+\bibitem[\protect\astroncite{Zhang et~al.}{2017}]{dncnn}
+Zhang, K., Zuo, W., Chen, Y., Meng, D., and Zhang, L. (2017).
 \newblock Beyond a gaussian denoiser: Residual learning of deep cnn for image
   denoising.
-\newblock {\em IEEE Transactions on Image Processing}, 2017.
+\newblock {\em IEEE Transactions on Image Processing}.
 
-\bibitem{zhao2014robust}
-Q.~Zhao, D.~Meng, Z.~Xu, W.~Zuo, and L.~Zhang.
+\bibitem[\protect\astroncite{Zhao et~al.}{2014}]{zhao2014robust}
+Zhao, Q., Meng, D., Xu, Z., Zuo, W., and Zhang, L. (2014).
 \newblock Robust principal component analysis with complex noise.
-\newblock {\em ICML}, pages 55--63, 2014.
+\newblock {\em ICML}, pages 55--63.
 
-\bibitem{zhou2012nonparametric}
-Mingyuan Zhou, Haojun Chen, John Paisley, Lu~Ren, Lingbo Li, Zhengming Xing,
-  David Dunson, Guillermo Sapiro, and Lawrence Carin.
+\bibitem[\protect\astroncite{Zhou et~al.}{2012}]{zhou2012nonparametric}
+Zhou, M., Chen, H., Paisley, J., Ren, L., Li, L., Xing, Z., Dunson, D., Sapiro,
+  G., and Carin, L. (2012).
 \newblock Nonparametric bayesian dictionary learning for analysis of noisy and
   incomplete images.
-\newblock {\em IEEE Transactions on Image Processing}, 21(1):130--144, 2012.
+\newblock {\em IEEE Transactions on Image Processing}, 21(1):130--144.
 
-\bibitem{Zhu_2016_CVPR}
-F.~Zhu, G.~Chen, and P.-A. Heng.
+\bibitem[\protect\astroncite{Zhu et~al.}{2016}]{Zhu_2016_CVPR}
+Zhu, F., Chen, G., and Heng, P.-A. (2016).
 \newblock From noise modeling to blind image denoising.
 \newblock {\em IEEE Conference on Computer Vision and Pattern Recognition
-  (CVPR)}, June 2016.
+  (CVPR)}.
 
-\bibitem{epll}
-D.~Zoran and Y.~Weiss.
+\bibitem[\protect\astroncite{Zoran and Weiss}{2011}]{epll}
+Zoran, D. and Weiss, Y. (2011).
 \newblock From learning models of natural image patches to whole image
   restoration.
 \newblock {\em IEEE International Conference on Computer Vision (ICCV)}, pages
-  479--486, 2011.
+  479--486.
 
-\bibitem{gmmnips}
-D.~Zoran and Y.~Weiss.
+\bibitem[\protect\astroncite{Zoran and Weiss}{2012}]{gmmnips}
+Zoran, D. and Weiss, Y. (2012).
 \newblock Natural images, {Gaussian} mixtures and dead leaves.
-\newblock {\em NIPS}, pages 1736--1744, 2012.
+\newblock {\em NIPS}, pages 1736--1744.
 
 \end{thebibliography}

@@ -1,9 +1,9 @@
 \contentsline {chapter}{Certificate of Examination}{ii}{Doc-Start}
 \contentsline {chapter}{Abstract}{iii}{Doc-Start}
 \contentsline {chapter}{Publication}{vi}{Doc-Start}
-\contentsline {chapter}{Acknowledgement}{vii}{Item.8}
-\contentsline {chapter}{List of Figures}{xiii}{Item.8}
-\contentsline {chapter}{List of Tables}{xxi}{Item.8}
+\contentsline {chapter}{Acknowledgement}{vii}{Item.4}
+\contentsline {chapter}{List of Figures}{xiii}{Item.4}
+\contentsline {chapter}{List of Tables}{xxi}{Item.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}The Formulation of Image Denoising}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Existing Denoising Methods}{6}{section.1.2}
@@ -88,7 +88,7 @@
 \contentsline {chapter}{\numberline {7}Conclusions and Future Work}{146}{chapter.7}
 \contentsline {section}{\numberline {7.1}Conclusions}{146}{section.7.1}
 \contentsline {section}{\numberline {7.2}Future Work}{148}{section.7.2}
-\contentsline {chapter}{\numberline {8}Appendix}{149}{chapter.8}
+\contentsline {chapter}{\numberline {8}Appendices}{149}{chapter.8}
 \contentsline {section}{\numberline {8.1}Closed-Form Solution of the Weighted Sparse Coding Problem (\ref {equ2-11})}{149}{section.8.1}
 \contentsline {section}{\numberline {8.2}Proof of the Theorem \ref {th3-1}}{150}{section.8.2}
 \contentsline {section}{\numberline {8.3}Proof of the Theorem \ref {th3-2}}{152}{section.8.3}
